@@ -102,7 +102,7 @@ h3 {
     text-align:center;
     margin: 0 auto;
     padding: 0;
-    width: 650px;
+    width: 850px;
 }
 
 /* HEADER */
@@ -144,7 +144,7 @@ h3 {
 .backhome {
 	padding:10px 0 0 0;
 	text-align:right;
-    width:650px;
+    width:850px;
 }
 
 
@@ -156,7 +156,7 @@ h3 {
     text-align:center;
     padding: 11px 0;
     margin-bottom:9px;
-    width:650px;
+    width:850px;
 }
 
 .flickr img {
@@ -184,20 +184,20 @@ h3 {
     border-bottom: 1px solid #666;
 	padding:18px 0 18px 0;
 	text-align:left;
-    width:650px;
+    width:850px;
 }
 
 .postnoline {
 	padding:18px 0 0 0;
 	text-align:left;
-    width:650px;
+    width:850px;
 }
 
 .postcomment {
 	margin:18px 0 0 0;
     padding: 5px 0 5px 18px;
 	text-align:left;
-    width: 620px;
+    width: 820px;
     color:#666;
     border-left: 5px solid #ccc;
 }
@@ -265,14 +265,14 @@ span.edit a {
 
 .previously {
 	text-align:left;
-    width: 650px;
+    width: 850px;
     padding: 20px 0 3px 0;
     border-top: 1px solid #ccc;
 }
 
 .previously a { font-weight:bold }
 
-.text_area { width: 620px !important; }
+.text_area { width: 820px !important; }
 
 .postform { width:150px; margin: 0;} 
 
