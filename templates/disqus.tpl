@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="Stylesheet" type="text/css" href="%root_path%Public/templates/skinny_disqus.css" />
+	<link rel="Stylesheet" type="text/css" href="%root_path%templates/skinny_disqus.css" />
 	<title>%title%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -15,7 +15,7 @@
 	%content%
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="%root_path%Public/wiki/Main%20Page.html">Main Page</a><br>
+		<a href="%root_path%index.html">Main Page</a><br>
         <a href="#comment" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Leave a comment</a></p>
 	</div>
 <br>
