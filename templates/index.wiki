@@ -1,0 +1,29 @@
+%title Templates for Vimwiki 'Public'
+
+default.tpl
+
+Default template, it loads skinny.css.
+
+disqus.bak.tpl
+
+With Disqus as comment system.
+
+disqus.tpl
+
+It include a javascript "Show/Hide comments".
+
+skinny.css
+
+The CSS file working with default.tpl.
+
+skinny_disqus.css
+
+CSS file used with disqus.tpl.
+
+skinny_style.css
+
+Original file downloaded.
+
+style.css
+
+Original css file of Vimwiki.

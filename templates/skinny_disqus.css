@@ -1,0 +1,391 @@
+/*
+Theme Name:   DePo Skinny
+Theme URI:    http://powazek.com
+Description:  A slender theme for WP by <a href="http://powazek.com">Derek Powazek</a>
+Version:      1
+Author:       Derek Powazek
+Author URI:   http://powazek.com
+*/
+
+* { 
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: "Georgia", "Lucida Grande", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
+}
+
+img#wpstats { width:0px; height:0px; overflow:hidden; }
+
+a { color:#080; text-decoration: none; -webkit-transition: color 0.2s linear; }
+a:hover { color:#666; text-decoration: -webkit-transition: color 0.2s linear; border-bottom: 1px dotted #666;}
+
+
+p, ul, ol, pre, table { 
+    margin-bottom: 16px; 
+}
+
+code, pre {
+    font-size: 80%;
+    line-height: 150%;
+    font-family: Monaco, monospace;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+blockquote { 
+    margin: 0 18px 18px 18px;
+    font-size: 85%;
+    color:#666;
+    padding-left:10px;
+    border-left:1px solid #ccc;
+}
+
+p.author {
+	text-align: right;
+	font-size: 80%;
+	margin-top: -10px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 1em;
+}
+
+ol {
+    margin-left: 1em;
+}
+
+/*
+@font-face {
+font-family:"Graublau Web";src:local("Graublau Web"),local("Graublau Web Regular"),local("GraublauWeb"),local("GraublauWeb-Regular"),url(http://jjgod.org/fonts/graublau-web.otf) format("opentype")}
+
+@font-face{font-family:"Graublau Web";font-weight:700;src:local("Graublau Web Bold"),local("GraublauWeb-Bold"),url(http://jjgod.org/fonts/graublau-web-bold.otf) format("opentype")}
+*/
+
+h1, h2, h3 {
+   font-family: "Georgia", "Lucida Grande", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
+}
+
+
+h1 { 
+	font-weight: bold;
+    font-size: 140%; 
+    line-height: 110%;
+    margin-bottom: 10px; 
+    margin-top: 0px; 
+}
+
+h2 { 
+	font-weight: bold;
+    font-size: 110%; 
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+
+h3 { 
+	font-weight: bold;
+    font-size: 100%; 
+    line-height: 100%;
+    margin-bottom: 10px;
+}
+
+.container {
+    text-align:center;
+    margin: 0 auto;
+    padding: 0;
+    width: 650px;
+}
+
+/* HEADER */
+
+.header {
+    padding: 50px 0 0;
+    text-align:left;
+    border-bottom: 1px solid #666;
+}
+
+.header h1 {
+    font-size: 200%;
+    color: #000;
+    text-shadow: #ddd 1px 1px 1px;
+}
+
+.header span {
+    margin-left: 10px;
+    color: #666;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 40%;
+}
+
+.header a { color: #333; }
+.header a:hover { color: #666; }
+
+.search {
+    padding:11px 0 0 20px;
+    background:url('/home/wp-content/themes/hpc/images/search.gif') 0 14px no-repeat;
+    float:right;
+}
+
+.search input {
+    width:120px;
+}
+
+/* Back to Homepage */
+.backhome {
+	padding:10px 0 0 0;
+	text-align:right;
+    width:650px;
+}
+
+
+
+/* FLICKR */
+
+.flickr {
+    border-bottom: 1px solid #ccc;
+    text-align:center;
+    padding: 11px 0;
+    margin-bottom:9px;
+    width:650px;
+}
+
+.flickr img {
+    width: 59px;
+    height: 59px;
+    margin: 1px 5px;
+    border: 1px solid #666;
+}
+
+.flickr img:hover {
+    width: 75px;
+    height: 75px;
+    margin: -7px -3px;
+    border: 1px solid #000;
+}
+
+.flickr span a { color: #ccc; }
+
+/* POSTS */
+
+.post p a, .post li a { font-weight:bold }
+
+.post {
+	/*border-bottom: 1px solid #ccc;*/
+    border-bottom: 1px solid #666;
+	padding:18px 0 18px 0;
+	text-align:left;
+    width:650px;
+}
+
+.postnoline {
+	padding:18px 0 0 0;
+	text-align:left;
+    width:650px;
+}
+
+.postcomment {
+	margin:18px 0 0 0;
+    padding: 5px 0 5px 18px;
+	text-align:left;
+    width: 620px;
+    color:#666;
+    border-left: 5px solid #ccc;
+}
+
+.commentslnk {
+    font-size: 110%;
+	text-align:center;
+}
+
+p.cmtbyline {
+	margin-top:-10px;
+    margin-bottom: 0;
+    font-size: 90%;
+    color: #555;
+}
+
+p.byline {
+	margin-top:-10px;
+    font-size: 90%;
+    color: #555;
+}
+
+.post img {
+	border:1px solid #000;
+}
+
+.post img.noline {
+	border:0;
+}
+
+.post img.left {
+	float: left;
+	width: 50%;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.post img.right {
+	float: right;
+	width: 50%;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+span.previous { padding: 0 20px 0 0; float: left; }
+    
+span.next { float: right; }
+
+span.edit a { 
+    float:right;
+    font-weight:normal; 
+    font-size: 70%; 
+    color:#666; 
+    border:1px solid #ccc; 
+    padding:0 4px; 
+}
+
+.metainfo {
+    float:left;
+    width: 152px;
+    font-size: 85%;
+    color: #666;
+    padding: 3px 0;
+}
+
+.previously {
+	text-align:left;
+    width: 650px;
+    padding: 20px 0 3px 0;
+    border-top: 1px solid #ccc;
+}
+
+.previously a { font-weight:bold }
+
+.text_area { width: 620px !important; }
+
+.postform { width:150px; margin: 0;} 
+
+.delicious-tags { font-size: 90%; color:#666 }
+.delicious-tags a { font-weight:normal; color:#333 }
+ul.delicious { color:#555 }
+
+
+/* FOOTER */
+
+.footer {
+    font-size: 90%;
+    padding: 22px 0 10px 5px;
+    margin-top: 18px;
+    border-top: 1px solid #666;
+    text-align:left;
+    color: #666;
+}
+
+.footer div {
+    width: 150px;
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+.footer div.first {
+    width: 230px;
+}
+
+.footer img {
+    border:0;
+}
+
+.footer div.last {
+    width:140px;
+    margin: 0 0 0 0;
+}
+
+.copyright {
+    font-size: 90%;
+    margin:12px 0 0 0;
+    padding: 18px 0 10px 0;
+    border-top: 1px solid #666;
+    text-align:right;
+    color: #666;
+}
+
+ul.nav li { margin: 0 }
+
+.footnotes hr { display: none; }
+.footnotes li { 
+	font-color: #666;
+	font-size: 85%;
+}
+
+.wp-caption-text {
+    font-size: 85%;
+    color: #666;
+    text-align: center;
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }   
+
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+    }   
+
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+    }   
+
+.alignright {
+    float: right;
+    }   
+
+.alignleft {
+    float: left;
+    }   
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+/* Show/Hide functionality. */
+.comment {
+  display: none;
+  /*border-top: 0px solid #666; */
+  border-bottom: 1px solid #666; 
+  }
+
+.comment#disqus_thread { text-align: left; }
+
+a.showLink, a.hideLink {
+  background: transparent no-repeat left;
+  }
+
+a.hideLink {
+  background: transparent no-repeat left;
+  }
+
+/* table */
+th, td, table {
+	border-collapse:collapse; 
+	border: 1px solid lightgrey;
+	padding: 0.3em 0.5em;
+}
+

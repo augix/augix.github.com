@@ -1,25 +1,17 @@
 <html>
 <head>
-	<link rel="Stylesheet" type="text/css" href="templates/skinny_disqus.css" />
-	<title>Home</title>
+	<link rel="Stylesheet" type="text/css" href="%root_path%templates/skinny_disqus.css" />
+	<title>%title%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
 <div class="container">
     <div class="header">
-		<h1>Home</h1> 
+		<h1>%title%</h1> 
 	</div><!-- end of header -->
 	<div class="post">
-	
-<p>
-This is the home of augix.github.com.
-</p>
-
-<p>
-<a href="events/Kurt-Eisner/index.html">events/Kurt-Eisner/</a>
-</p>
-
+	%content%
 	</div><!-- end of post -->
 <br>
 
