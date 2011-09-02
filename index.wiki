@@ -1,4 +1,4 @@
 %title Home
-This is the home of augix.github.com.
+This is the home of [http://augix.github.com augix.github.com].
 
 [[events/Kurt-Eisner/]]
