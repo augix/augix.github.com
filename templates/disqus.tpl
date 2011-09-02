@@ -16,8 +16,7 @@
 	</div><!-- end of post -->
 	<div class="backhome">
 		<a href="%root_path%index.html">Main Page</a><br>
-        <a href="#disqus_thread" data-disqus-identifier="%title%">First article</a>
-        <a href="#comment" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comment(s)</a>
+        <a href="#disqus_thread" data-disqus_identifier="%title%" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -53,7 +52,7 @@ function showHide(shID) {
 </script>
 
 
-<a name="comment"></a>
+<a name="disqus_thread"></a>
 <div id="disqus_thread" class="comment"><p align='right'><a href="#top" id="disqus_thread-hide" class="hideLink" onclick="showHide('disqus_thread');return true;">Hide comments</a></p>
 </div>
 
