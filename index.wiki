@@ -1,5 +1,6 @@
 %title Home
-This is the home of [http://augix.github.com augix.github.com].
+
+This is the home of [http://wiki.augix.com wiki.augix.com].
 
 [[./blog/Blog| Blog]]
 

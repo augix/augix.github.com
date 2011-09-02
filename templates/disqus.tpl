@@ -16,7 +16,7 @@
 	</div><!-- end of post -->
 	<div class="backhome">
 		<a href="%root_path%index.html">Main Page</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="%title%" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: %title%" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -40,7 +40,7 @@ function showHide(shID) {
 <!-- javascript to show count of comments -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'evo-devo'; // required: replace example with your forum shortname
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function () {
@@ -58,11 +58,11 @@ function showHide(shID) {
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'evo-devo'; // required: replace example with your forum shortname
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "%title%";
+    var disqus_identifier = "vimwiki: %title%";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
