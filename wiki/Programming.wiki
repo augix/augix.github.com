@@ -5,10 +5,16 @@
 * [[Learning Perl|Perl]]
 * [[PHP]]
 * [[R tips]]
-* [[How to use RSPerl]]
 * [[AppleScript]]
 * [[SQL]]
 * [[Regular expression]]
+
+= Editor =
+[[Vim]]
+
+= Version control =
+[[Git]]
+
 
 = Algorithm =
 * [[Mapping based on position information]]
@@ -18,13 +24,5 @@
 * [[curl|curl - Download multiple URLs from file]]
 * [[wget|wget - Download a file in a website which requires login]]
 
-
-= Editor =
-[[Vim]]
-
-= Version control =
-[[Git]]
-
 = Others =
 * [[VoodooPad]]
-* [[Temp]]

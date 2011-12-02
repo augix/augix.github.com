@@ -60,4 +60,3 @@ $y = &R::call("sum", (1,2,$x));
 print "Sum = $y\n";
 </perl>
 
-[[Category:R]][[Category:Perl]]

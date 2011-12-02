@@ -12,8 +12,6 @@ This wiki covers the following subjects:
 * [[Life]]
 * [[Music]]
 * [[Chinese]]
-* [[Day-by-Day]]
-* [[../Blog/Blog| Blog]]
 
 = Links =
 * [http://www.augix.com Augix.com]

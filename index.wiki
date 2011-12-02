@@ -5,9 +5,10 @@ This is the home of [http://wiki.augix.com wiki.augix.com], this wiki covers mai
 
 = Subjects =
 * [[wiki/Programming|Programming]]
-* [[wiki/IT Notes|IT Notes]]
-* [[wiki/Biology Notes|Biology]]
 * [[wiki/Bioinformatics|Bioinformatics]]
+* [[wiki/IT Notes|OS]]
+
+* [[wiki/Biology Notes|Biology]]
 * [[wiki/Statistics|Statistics]]
 * [[wiki/Foreign Language|Foreign Languages]]
 * [[wiki/Main Page| All subjects]]

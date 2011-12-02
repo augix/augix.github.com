@@ -1,4 +1,3 @@
-[[Category:Perl]]
 <perl>
 #!/usr/bin/perl
 open IN_b, "./first step/candidate_notmatchsanger.txt" or die $!;

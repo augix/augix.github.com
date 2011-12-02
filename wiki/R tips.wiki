@@ -1,4 +1,3 @@
-[[Category:R]]
 
 * [[File Manipulation in R| File Manipulation]]
 * [[How to pass arguments to R scripts]]
@@ -23,3 +22,4 @@
 * [[Curve fitting in R]]
 * [[Notes on Michael's R course]]
 * [[R debugging]]
+* [[How to use RSPerl]]
