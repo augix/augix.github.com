@@ -1,0 +1,12 @@
+<perl>
+#2672442 NM_000258
+selected.trans<-"2672442"
+chr<-"chr3"
+load("/picb/home5/song/2ANOVA.core.probes/exon.CDS/annotation.Rdata")
+trans <- as.numeric(big.ids.detected[,"transcript_cluster_id"])
+exon_ids <- big.ids.detected[trans %in% selected.trans,"exon_id"]
+
+exon_position<-read.table(file=paste("/picb/home5/song/primer_design/output/",chr,"_exon_location.txt",sep=""),header=T)
+exon_chr_position<-exon_position[exon_position$EXON %in% unique(exon_ids),][,4:6]
+write.table(exon_chr_position,file="/picb/home5/song/primer_design/output/outlier.input.txt",col.names=T,quote=F)
+</perl>

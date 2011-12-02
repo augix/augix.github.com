@@ -1,0 +1,91 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Special Variables in Perl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Special Variables in Perl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+<h1 id="toc_1">Special Variables</h1>
+<p>
+&lt;pre&gt;
+ SPECIAL VARIABLES
+ $_    default variable
+ $0    program name
+ $/    input separator
+ $\    output separator
+ $|    autoflush
+ $!    sys/libcall error
+ $@    eval error
+ $$    process ID
+ $.    line number
+ @ARGV command line args
+ @INC  include paths
+ @_    subroutine args
+ %ENV  environment
+&lt;/pre&gt;
+</p>
+
+<p>
+ref: <a href="http://docs.rinet.ru/ProPauk/ch8.htm">http://docs.rinet.ru/ProPauk/ch8.htm</a>
+</p>
+<h1 id="toc_2">$INPUT_RECORD_SEPARATOR</h1>
+<p>
+<b>
+Short Name:          $/
+</b>
+</p>
+<h2 id="toc_2.1">Definition</h2>
+
+<p>
+By default, an input file is split into records, each of which comprises one line. The input-record separator is a newline character. This variable can be set to have no value (in which case entire input files are read in at the same time) or to have other values, as required.
+</p>
+
+<h2 id="toc_2.2">Example</h2>
+
+<p>
+&lt;perl&gt;
+undef $/;
+open(INFILE,"infile.tst");
+$buffer = &lt;INFILE&gt;;
+print "$buffer\n";
+&lt;/perl&gt;
+</p>
+
+<h1 id="toc_3">$INPUT_LINE_NUMBER</h1>
+<p>
+<b>
+Short Name:          $. 
+</b>
+</p>
+<h2 id="toc_3.1">Definition</h2>
+
+<p>
+This variable counts the number of lines of input from a file and is reset when the file is closed. The variable counts lines cumulatively across all input files read with the &lt;&gt; construct because these are not closed explicitly.
+</p>
+
+<h2 id="toc_3.2">Example</h2>
+
+<p>
+&lt;perl&gt;
+print "The last file read had $. lines\n";
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

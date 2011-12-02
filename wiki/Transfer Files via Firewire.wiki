@@ -1,0 +1,8 @@
+* Boot one of the Macs (preferably the lesser model) as a firewire target disk.
+All you have to do is connect the two Macs via a firewire cable, boot the master (preferably the higher model), then boot the other and hold down the '''t''' key until you see a blue screen with a yellow firewire symbol. This Mac will now appear as a normal firewire hard disk on the master's desktop.
+
+http://www.macmerc.com/images/articles/tuesday/target.gif
+
+[http://docs.info.apple.com/article.html?artnum=58583 Ref: How to use FireWire target disk mode]
+
+[http://lifehacker.com/software/networking/geek-to-live-fast-one-wire-network-ip-over-firewire-173973.php Transfer files: IP over FireWire]

@@ -1,0 +1,96 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Min and Max in Perl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Min and Max in Perl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+<a href="http://www.perlmonks.org/?node_id=406883">http://www.perlmonks.org/?node_id=406883</a>
+</p>
+
+<p>
+&lt;perl&gt;
+use List::Util qw[min max];
+</p>
+
+<p>
+print min(1, 2, 3);
+print max(1, 2, 3);
+&lt;/perl&gt;
+</p>
+
+
+<p>
+&lt;perl&gt;
+@mm=(50,2,4,5,100);
+$min=(sort { $a &lt;=&gt; $b } @mm)[0];
+$max=(sort { $a &lt;=&gt; $b } @mm)[-1];
+print $min."\n";
+&lt;/perl&gt;
+</p>
+
+<p>
+&lt;perl&gt;
+@mm=(50,2,4,5);
+$x = 10; $y = 2;
+</p>
+
+<ol>
+<li>
+1
+
+</ol>
+<p>
+$min=(sort { $a &lt;=&gt; $b } @mm)[0];
+</p>
+
+<ol>
+<li>
+2
+
+</ol>
+<p>
+$min = ($x, $y)[$x&gt;$y];
+</p>
+
+<ol>
+<li>
+3
+
+</ol>
+<p>
+sub min ($$) { $<em>[$</em>[0] &gt; $_[1]] };
+$min = min(2,10);
+</p>
+
+<ol>
+<li>
+4
+
+</ol>
+<p>
+$min = ($x + $y - abs($x - $y)) / 2;
+$max = ($x + $y + abs($x - $y)) / 2;
+</p>
+
+<p>
+print $min."\n";
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

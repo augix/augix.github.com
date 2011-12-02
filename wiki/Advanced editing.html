@@ -1,0 +1,1427 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Advanced editing</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Advanced editing</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+For the basics see <a href="Help_Editing.html">Help:Editing</a>.
+</p>
+<h2 id="toc_0.1"><a href="w_Wikitext.html">Wikitext</a> markup&amp;mdash;making your page look the way you want</h2>
+<ul>
+<li>
+If you want to try out things without danger of doing any harm, you can do so in the <a href="{{ns_4}}_Sandbox.html">{{ns:4}}:Sandbox</a>.
+
+<li>
+More information on <a href="Help_Html in wikitext.html">HTML tags in wikitext</a>.
+
+</ul>
+
+<h3 id="toc_0.1.1">Organizing your writing &amp;mdash; sections, paragraphs, lists and lines</h3>
+<p>
+{| border="1" cellpadding="2" cellspacing="0"
+|-
+!What it looks like
+!What you type
+|-
+|
+; Sections and subsections
+Start sections with header lines
+</p>
+
+<p>
+Note: Single equal signs give the highest level heading, like the page title; usually projects have the convention not to use them.
+</p>
+
+<p>
+&lt;!-- This is the original
+</p>
+<h1 id="toc_1">DO NOT USE THIS</h1>
+<h2 id="toc_1.1">New section</h2>
+<h3 id="toc_1.1.1">Subsection</h3>
+<h4 id="toc_1.1.1.1">Sub-subsection</h4>
+<p>
+ --&gt;
+</p>
+
+<p>
+&lt;!-- next set
+&lt;h1&gt; DO NOT USE THIS &lt;/h1&gt;
+&lt;h2&gt; New section &lt;/h2&gt;
+&lt;h3&gt; Subsection &lt;/h3&gt;
+&lt;h4&gt; Sub-subsection &lt;/h4&gt;
+ --&gt;
+</p>
+
+<p>
+&lt;!-- This code prevents confusion in the section editing feature--&gt;
+<b>&lt;font style="font-size:120%"&gt;New section&lt;/font&gt;</b>
+</p>
+
+<p>
+<b>&lt;font style="font-size:110%"&gt;Subsection&lt;/font&gt;</b>
+</p>
+
+<p>
+<b>&lt;font style="font-size:100%"&gt;Sub-subsection&lt;/font&gt;</b>
+</p>
+
+<ul>
+<li>
+Start with a second-level heading (&lt;tt&gt;&lt;nowiki&gt;==&lt;/nowiki&gt;&lt;/tt&gt;); don't use first-level headings (=).
+
+<li>
+Don't skip levels (for example, second-level followed by fourth-level).
+
+<li>
+A <a href="Help_Table_of_contents#Table_of_contents_.28TOC.29.html">table of contents</a> will automatically be added to an article that has four or more sections. 
+
+<li>
+If appropriate, place subsections in order. If listing countries, for example, place them in alphabetical order rather than, say, relative to population of <a href="w_OECD.html">OECD</a> countries, or some random order.
+
+<li>
+If you want to keep headings out of the TOC you have to use HTML heading tags and close them without using a slash e.g. &lt;nowiki&gt;&lt;h4&gt;heading too low level to be in the TOC of large page&lt;h4&gt;&lt;/nowiki&gt;.
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;
+</p>
+
+<h2 id="toc_1.2">New section</h2>
+
+<h3 id="toc_1.2.1">Subsection</h3>
+
+<h4 id="toc_1.2.1.1">Sub-subsection</h4>
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+</p>
+
+<p>
+|-
+|
+; <a href="w_Newline.html">Newline</a>:
+</p>
+
+<p>
+A single
+newline
+has no
+effect on the
+layout.
+</p>
+
+<p>
+But an empty line
+starts a new paragraph, 
+or ends a list or indented part.
+(&lt;nowiki&gt;&lt;p&gt;&lt;/nowiki&gt; disables this paragraphing until &lt;nowiki&gt;&lt;/p&gt;&lt;/nowiki&gt; or the end  of the section)
+</p>
+
+<p>
+(In Cologne Blue, two newlines and a div tag give just one newline; in the order newline, div tag, newline, the result is two newlines.)
+</p>
+
+<p>
+A semicolon at the start of a line is not rendered, but has the effect of rendering the newline. A colon in such a line is not rendered, but has the effect of starting a new, indented line, see definition list.
+</p>
+
+<p>
+You can make the wikitext more readable by putting in newlines.
+You might find this causes future problems&amp;mdash;see <a href="w_Wikipedia_Don't use line breaks.html">w:Wikipedia:Don't use line breaks</a> for details.
+</p>
+
+<ul>
+<li>
+When used in a list, a newline ''does'' affect the layout (See <a href="Help_List.html">Help:List</a>).
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;
+</p>
+
+<p>
+A single
+newline
+has no
+effect on the
+layout.
+</p>
+
+<p>
+But an empty line
+starts a new paragraph.&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|You can break lines<br />
+without starting a new paragraph.&lt;p&gt;
+(The HTML tag &lt;nowiki&gt;<br />&lt;/nowiki> is sufficient. The system produces the XHTML code &lt;nowiki>&lt;br&amp;nbsp;/>&lt;/nowiki>.)&lt;/p>
+</p>
+
+<ul>
+<li>
+Please use this sparingly.
+
+<li>
+Close markup between lines; do not start a <a href="Help_link.html">link</a> or ''italics'' or '''bold''' on one line and close it on the next.
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;You can break lines<br />
+without starting a new paragraph.&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+</p>
+<ul>
+<li>
+''Unordered Lists'' are easy to do:
+
+</ul>
+<p>
+** start every line with a star,
+*** more stars means deeper levels.
+</p>
+<ul>
+<li>
+A newline
+
+<li>
+in a list  
+
+</ul>
+<p>
+marks the end of the list.
+</p>
+<ul>
+<li>
+Of course,
+
+<li>
+you can
+
+<li>
+start again.
+
+</ul>
+
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;* Unordered Lists are easy to do:
+** start every line with a star,
+*** more stars means deeper levels.
+</p>
+<ul>
+<li>
+A newline
+
+<li>
+in a list  
+
+</ul>
+<p>
+marks the end of the list.
+</p>
+<ul>
+<li>
+Of course,
+
+<li>
+you can
+
+<li>
+start again.
+
+</ul>
+
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+</p>
+<ol>
+<li>
+Numbered lists are also good
+
+</ol>
+<p>
+## very organized
+## easy to follow
+</p>
+<ol>
+<li>
+A newline
+
+<li>
+in a list  
+
+</ol>
+<p>
+marks the end of the list.
+</p>
+<ol>
+<li>
+New numbering starts
+
+<li>
+with 1.
+
+</ol>
+
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;# Numbered lists are also good
+## very organized
+## easy to follow
+</p>
+<ol>
+<li>
+A newline
+
+<li>
+in a list  
+
+</ol>
+<p>
+marks the end of the list.
+</p>
+<ol>
+<li>
+New numbering starts
+
+<li>
+with 1.
+
+</ol>
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+</p>
+<ul>
+<li>
+You can even do mixed lists
+
+</ul>
+<p>
+*# and nest them
+<strong>#</strong> or break lines<br />in lists
+|&lt;pre&gt;&lt;nowiki&gt;* You can even do mixed lists
+*# and nest them
+<strong>#</strong> or break lines<br />in lists&lt;/nowiki>&lt;/pre>
+|-
+|'''Definition list'''
+; word : definition of the word
+; longer phrase 
+: phrase defined
+|&lt;pre&gt;&lt;nowiki&gt;; word : definition of the word
+; longer phrase 
+: phrase defined&lt;/nowiki&gt;&lt;/pre&gt;
+</p>
+
+<ul>
+<li>
+One item per line; a newline can appear before the colon, but using a space before the colon improves parsing.
+
+</ul>
+<p>
+|-
+|
+; Indenting
+: A colon at the start of a line indents a paragraph.
+A manual newline starts a new paragraph.
+</p>
+<ul>
+<li>
+This is often used for discussion on <a href="Help_talk page.html">talk page</a>s.
+
+</ul>
+<p>
+In the case of a semicolon and some text in front of the colon, the first colon starts a new line (indented as before) even though it is in the wikitext not at the start of the line, see definition list.
+|&lt;pre&gt;&lt;nowiki&gt;: A colon indents a line or paragraph.
+A manual newline starts a new paragraph.
+&lt;/nowiki&gt;&lt;/pre&gt;
+|- 
+|
+When there is a need for separating a block of text
+&lt;blockquote&gt;
+the '''blockquote''' command will indent both margins when needed instead of the left margin only as the colon does.
+&lt;/blockquote&gt;
+This is useful for (as the name says) inserting blocks of quoted (and cited) text.
+|
+&lt;pre&gt;&lt;nowiki&gt;
+&lt;blockquote&gt;
+The '''blockquote''' command will indent 
+both margins when needed instead of the 
+left margin only as the colon does.
+&lt;/blockquote&gt;
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|<center>Centered text.</center>
+</p>
+<ul>
+<li>
+Please note the US-English spelling of "center".
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;<center>Centered text.</center>&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|A horizontal dividing line: 
+this is above it...
+<hr />
+...and this is below it.
+</p>
+
+<p>
+If you don't use a section header, you don't get a TOC entry.
+|&lt;pre&gt;&lt;nowiki&gt;A horizontal dividing line: 
+this is above it...
+<hr />
+...and this is below it.
+&lt;/nowiki&gt;&lt;/pre&gt;
+|}
+</p>
+
+<h3 id="toc_1.2.2">Links, URLs</h3>
+<p>
+More information at <a href="Help_Link.html">Help:Link</a>
+</p>
+<h4 id="toc_1.2.2.1">Internal links</h4>
+<p>
+General notes:
+</p>
+<ul>
+<li>
+Enclose the '''target name''' in double square brackets&amp;mdash;&lt;nowiki&gt;"<a href="_ and _.html">" and "</a>"&lt;/nowiki&gt;.
+
+<li>
+First letter of target name is automatically capitalized.
+
+<li>
+Spaces are represented as underscores (but don't do underscores yourself).
+
+<li>
+<a href="Like this one.html">Links to nonexistent pages</a> are shown in red&amp;mdash;<a href="Help_Starting a new page.html">Help:Starting a new page</a> tells about creating the page.
+
+<li>
+When the mouse cursor "hovers" over the link, you see a "hover box" containing... hover over links below to see.
+
+</ul>
+<p>
+{| border="1" cellpadding="2" cellspacing="0"
+|-
+!What it looks like
+!What you type
+|-
+|
+; Basic
+Sue is reading the <a href="official position.html">official position</a> 
+(or <a href="Official position.html">Official position</a>s).
+|&lt;pre&gt;&lt;nowiki&gt;Sue is reading the 
+<a href="official position.html">official position</a>
+(or <a href="Official position.html">Official position</a>s).&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Basic + <a href="#Text formatting&amp;mdash;controlling how it looks.html">Text formatting</a>
+You can also ''italicize''/etc. links: e.g., ''<a href="Wikipedia.html">Wikipedia</a>''.
+|&lt;pre&gt;&lt;nowiki&gt; ''<a href="Wikipedia.html">Wikipedia</a>'' &lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Interwiki linking
+A link to the page on another wiki (e.g. the same subject in another language)
+</p>
+<ul>
+<li>
+See <a href="m_Help_Interwiki linking.html">m:Help:Interwiki linking</a>.
+
+<li>
+<a href="_fr_Wikipédia_Aide.html">:fr:Wikipédia:Aide</a>.
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;
+</p>
+<ul>
+<li>
+See <a href="m_Help_Interwiki linking.html">m:Help:Interwiki linking</a>.
+
+<li>
+<a href="_fr_Wikipédia_Aide.html">:fr:Wikipédia:Aide</a>.
+
+</ul>
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Section of page
+</p>
+<ul>
+<li>
+<a href="List of cities by country#Morocco.html">List of cities by country#Morocco</a>
+
+<li>
+<a href="List of cities by country#Norway.html">List of cities by country#Norway</a>
+
+</ul>
+<p>
+If the section doesn't exist, the link goes to the top of the page.
+If there are multiple sections by the same name, link to specific ones by adding how many times that header has already appeared (e.g. if there are 3 sections entitled "Example header," and you wish to link to the third one, then use &lt;nowiki&gt;<a href="#Example section 3.html">#Example section 3</a>&lt;/nowiki&gt;. For more info, see <a href="Help_Editing FAQ#Q_ Can I link to a specific section header if there are multiple section headers of the same name_ If so, how_.html">Help:Editing FAQ</a>.
+|
+&lt;pre&gt;&lt;nowiki&gt;
+</p>
+<ul>
+<li>
+<a href="List of cities by country#Morocco.html">List of cities by country#Morocco</a>
+
+<li>
+<a href="List of cities by country#Norway.html">List of cities by country#Norway</a>
+
+</ul>
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; <a href="Help_Piped link.html">Piped link</a>
+Use a pipe "'''|'''" to create a '''link label''':
+</p>
+<ul>
+<li>
+<a href="Help_Link.html">About Links</a>
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;
+</p>
+<ul>
+<li>
+<a href="Help_Link.html">About Links</a>
+
+</ul>
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|'''"Blank" pipes''' hide:
+</p>
+<ul>
+<li>
+Parentheses: <a href="kingdom (biology).html">kingdom</a>.
+
+<li>
+Colon: <a href="m_Requests for adminship.html">Requests for adminship</a>.
+
+</ul>
+<p>
+After you save, the server automatically fills in the link label.
+|&lt;pre&gt;&lt;nowiki&gt;* Parentheses: <a href="kingdom (biology).html"></a>.
+</p>
+<ul>
+<li>
+Colon: <a href="m_Requests for adminship.html"></a>.&lt;/nowiki&gt;&lt;/pre&gt;
+
+</ul>
+<p>
+|-
+|
+; Links to nonexistent pages
+A red link (<a href="like this one.html">like this one</a>) points to a page
+that doesn't exist yet.
+</p>
+<ul>
+<li>
+You can create it by clicking on the link.
+
+<li>
+Have a look at <a href="Help_starting a new page.html">how to start a page</a> guide and the naming conventions page for your project.
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;
+A red link (<a href="like this one.html">like this one</a>) points to a page
+that doesn't exist yet.
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Link to yourself
+Please "sign" comments on talk pages:
+: Your user name: <a href="User_Example.html">Example</a>
+: Your user name plus timestamp: <a href="User_Example.html">Example</a> 08:10 Oct 5, 2002 (UTC)
+: Five tildes give a timestamp: 17:55, 12 April 2006 (UTC)
+The server will fill in the link after you save.
+|&lt;pre&gt;&lt;nowiki&gt;Please "sign" comments on talk pages:
+: Your user name: ~~~
+: Your user name plus timestamp: ~~~~
+: Five tildes give a timestamp: ~~~~~
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; <a href="Help_Redirect.html">Redirect</a>s
+One article title to another with this special link.
+|&lt;pre&gt;&lt;nowiki&gt;#REDIRECT <a href="United States.html">United States</a>&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; "Magic" links
+</p>
+<ul>
+<li>
+<a href="w_ISBN.html">ISBN</a> links to books: ISBN 0123456789X (See <a href="Help_ISBN links.html">Help:ISBN links</a>)
+
+<li>
+<a href="w_Request for Comments.html">RfC</a> links to Requests for Comments: RFC 123 (See <a href="mediawiki_rfcurl.html">mediawiki:rfcurl</a>)
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;
+ISBN 0123456789X
+RFC 123&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Media links
+To include links to non-image uploads such as sounds, use a "media" link.
+<br /><a href="media_Example.ogg.html">Sound</a>
+|&lt;pre&gt;&lt;nowiki&gt;<a href="media_Example.ogg.html">Sound</a>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Category listing links (these appear at page bottom and list the page in the category)
+To list a page in a category and have a link to the Category at page bottom.<br />
+</p>
+
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;<a href="Category_Wikipedia help.html">Category:Wikipedia help</a>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Category non-listing links (these appear inline ''without'' listing the page in the category)
+To link to a category without causing the page to be listed in the category, '''add a colon'''<br />
+</p>
+
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;<a href="_Category_Wikipedia help.html">:Category:Wikipedia help</a>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Dates:
+Use links for dates, so everyone can set their own display order. Use <a href="Special_Preferences.html">Special:Preferences</a> to change your own date display setting.<br />
+<a href="July 20.html">July 20</a> <a href="1969.html">1969</a>
+<a href="20 July.html">20 July</a> <a href="1969.html">1969</a>
+and <a href="1969.html">1969</a>-<a href="07-20.html">07-20</a>
+|&lt;pre&gt;&lt;nowiki&gt;
+<a href="July 20.html">July 20</a> <a href="1969.html">1969</a>
+<a href="20 July.html">20 July</a> <a href="1969.html">1969</a>
+and <a href="1969.html">1969</a>-<a href="07-20.html">07-20</a>
+&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|
+; Special pages
+"What links here" etc. can be linked as:<br />
+<a href="Special_Whatlinkshere/Help_Editing.html">Special:Whatlinkshere/Help:Editing</a>
+|&lt;pre&gt;
+<a href="Special_Whatlinkshere/Help_Editing.html">Special:Whatlinkshere/Help:Editing</a>
+&lt;/pre&gt;
+|-
+|
+; Linking to old revisions of pages, diffs, and specific history pages
+External link function is used for these as &lt;nowiki&gt;<a href="page.html">page</a>&lt;/nowiki&gt; will not work.<br />
+Open an old revision copy the url and paste it where you want it. <a href="http://meta.wikimedia.org/w/index.php?title=Fotonotes&amp;oldid=482030<br">http://meta.wikimedia.org/w/index.php?title=Fotonotes&amp;oldid=482030<br</a> />
+Open a diff, copy and paste the url <a href="http://meta.wikimedia.org/w/index.php?title=Fotonotes&amp;diff=493810&amp;oldid=482030<br">http://meta.wikimedia.org/w/index.php?title=Fotonotes&amp;diff=493810&amp;oldid=482030<br</a> />
+A specific page from edit history. To do this click the either the (older) or (earliest) button at least once and maneuver to the page you want to link to
+<a href="http://meta.wikimedia.org/w/index.php?title=Help:Wikitext_examples&amp;dir=prev&amp;offset=20060813153343&amp;limit=100&amp;action=history">http://meta.wikimedia.org/w/index.php?title=Help:Wikitext_examples&amp;dir=prev&amp;offset=20060813153343&amp;limit=100&amp;action=history</a>
+|&lt;pre&gt;
+<a href="http://meta.wikimedia.org">http://meta.wikimedia.org</a>
+/w/index.php?title=Fotonotes&amp;oldid=482030
+<a href="http://meta.wikimedia.org/w/index.php">http://meta.wikimedia.org/w/index.php</a>?
+title=Fotonotes&amp;diff=493810&amp;oldid=482030
+<a href="http://meta.wikimedia.org/w/index.php">http://meta.wikimedia.org/w/index.php</a>?
+title=Help:Wikitext_examples&amp;dir=prev&amp;offset
+=20060813153343&amp;limit=100&amp;action=history
+&lt;/pre&gt;
+|}
+</p>
+
+<h4 id="toc_1.2.2.2">External links</h4>
+<p>
+General notes:
+</p>
+<ul>
+<li>
+By default, external links do not open in a new browser window. <a href="http://www.mediawiki.org/wiki/Manual:Opening_external_links_in_a_new_window">http://www.mediawiki.org/wiki/Manual:Opening_external_links_in_a_new_window</a>
+
+</ul>
+<p>
+{| border="1" cellpadding="2" cellspacing="0"
+|-
+|<a href="http://www.nupedia.com">Nupedia</a>, <a href="http://www.nupedia.com">http://www.nupedia.com</a>
+|&lt;pre&gt;&lt;nowiki&gt;
+<a href="http://www.nupedia.com">Nupedia</a>,
+<a href="http://www.nupedia.com">http://www.nupedia.com</a>&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|<a href="mailto:email@example.com">Email Example</a>,
+<a href="mailto:email@example.com">mailto:email@example.com</a>
+|&lt;pre&gt;&lt;nowiki&gt;<a href="mailto:email@example.com">Email Example</a>,
+<a href="mailto:email@example.com">mailto:email@example.com</a>&lt;/nowiki&gt;&lt;/pre&gt;
+|-
+|Or just give the URL: <a href="http://www.nupedia.com">http://www.nupedia.com</a>.
+</p>
+<ul>
+<li>
+In the <a href="m_Help_URL.html">URL</a> all symbols must be among: A-Z a-z 0-9 ._\/~%- &amp;amp;#?!=()@ \x80-\xFF. If a URL contains a different character it should be converted; for example, <sup><small> has to be written </small></sup> (to be looked up in <a href="w_ASCII.html">ASCII</a>). A blank space can also be converted into an underscore.
+
+</ul>
+<p>
+|&lt;pre&gt;&lt;nowiki&gt;Or just give the URL:
+<a href="http://www.nupedia.com.&lt;/nowiki&gt;&lt;/pre&gt;">http://www.nupedia.com.&lt;/nowiki&gt;&lt;/pre&gt;</a>
+|}
+</p>
+
+<h3 id="toc_1.2.3">Text formatting&amp;mdash;controlling how it looks</h3>
+<p>
+&lt;table border="1" cellpadding="2" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;th&gt;What it looks like&lt;/th&gt;
+&lt;th&gt;What you type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;&lt;td&gt;
+''Emphasize'' (italics), '''strongly''' (bold), '''''very strongly''''' (bold italics).
+(These are double and triple apostrophes, not double quotes.)
+</p>
+
+<p>
+&lt;small&gt;Note: this can also be applied to links (e.g., ''<a href="Wikipedia.html">Wikipedia</a>'').&lt;/small&gt;
+&lt;/td&gt;
+&lt;td valign="bottom"&gt;
+&lt;pre&gt;&lt;nowiki&gt;''Emphasize'', '''strongly''',
+'''''very strongly'''''.
+</p>
+
+<p>
+''<a href="Wikipedia.html">Wikipedia</a>''
+&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;&lt;td&gt;
+You can also write <i>italic</i> and <b>bold</b>.
+This is useful in mathematical formulas where you need specific font styles rather than emphasis.
+: <b>F</b> = <i>m</i><b>a</b>
+(The difference between these two methods is not very important for graphical browsers, so most people ignore it). But it may make a big difference for the visually impaired ;-)
+&lt;/td&gt;
+&lt;td&gt;
+&lt;pre&gt;&lt;nowiki&gt;You can also write <i>italic</i> and <b>bold</b>.
+This is useful in mathematical formulas where you 
+need specific font styles rather than emphasis.
+: <b>F</b> = <i>m</i><b>a</b>&lt;/nowiki&gt;&lt;/pre&gt;&lt;!-- that's not a mathematical formula, though -- sure it is, just because it's being applied to physics doesn't make it stop being mathematics --&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;&lt;td&gt;
+You can also write 
+&lt;span style="font-variant:small-caps"&gt;
+in small caps&lt;/span&gt;.
+If the wiki has the templates, this can 
+{{smallcaps|be much simpler to write}}.
+&lt;/td&gt;
+&lt;td&gt;
+&lt;pre&gt;&lt;nowiki&gt;You can also write 
+&lt;span style="font-variant:small-caps"&gt;
+in small caps&lt;/span&gt;.
+If the wiki has the templates, this can 
+{{smallcaps|be much simpler to write}}.&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign=top&gt;
+&lt;td&gt;A typewriter font, sometimes used for 
+&lt;tt&gt;technical terms&lt;/tt&gt; and &lt;code&gt;computer code&lt;/code&gt;.
+&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;A typewriter font, sometimes used for 
+&lt;tt&gt;technical terms&lt;/tt&gt; and &lt;code&gt;computer code&lt;/code&gt;.&lt;/nowiki&gt;&lt;/pre&gt;
+</p>
+<ul>
+<li>
+For semantic reasons, using &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; where applicable is preferable to using &lt;code&gt;&amp;lt;tt&amp;gt;&lt;/code&gt;.
+
+</ul>
+<p>
+&lt;/td&gt;&lt;!-- tt is really 'teletype', not 'technical term' --&gt;
+&lt;/tr&gt;
+&lt;tr valign=top&gt;
+&lt;td&gt;You can use &lt;small&gt;small text&lt;/small&gt; for captions.
+&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;You can use &lt;small&gt;small text&lt;/small&gt; 
+for captions.&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;&lt;td&gt;You can &lt;strike&gt;strike out deleted material&lt;/strike&gt;
+and <u>underline new material</u>.
+</p>
+
+<p>
+You can also mark &lt;del&gt;deleted material&lt;/del&gt; and
+&lt;ins&gt;inserted material&lt;/ins&gt; using logical markup
+rather than visual markup.
+</p>
+<ul>
+<li>
+When editing regular articles, just make your changes and do not mark them up in any special way.
+
+<li>
+When editing your own previous remarks in talk pages, it is sometimes appropriate to mark up deleted or inserted material.
+
+</ul>
+<p>
+&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;You can &lt;strike&gt;strike out deleted material&lt;/strike&gt;
+and <u>underline new material</u>.
+</p>
+
+<p>
+You can also mark &lt;del&gt;deleted material&lt;/del&gt; and
+&lt;ins&gt;inserted material&lt;/ins&gt; using logical markup
+rather than visual markup.
+&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr valign="bottom" id="subscript"&gt;&lt;td&gt;Subscript: x<sub>2</sub><br />
+Superscript: x<sup>2</sup> or x²
+</p>
+
+<p>
+Most browsers have an easier time formatting lines with &amp;amp;sup2; than with &amp;lt;sup&gt;2&amp;lt;/sup&gt;
+</p>
+
+<p>
+ε<sub>0</sub> =
+8.85 &amp;times; 10<sup>&amp;minus;12</sup>
+C² / J m.
+<br /><br />
+1 <a href="hectare.html">hectare</a> = <a href="1 E4 m&amp;sup2;.html">1 E4 m&amp;sup2;</a>
+&lt;/td&gt;
+</p>
+
+<p>
+&lt;td valign="bottom"&gt;&lt;pre&gt;&lt;nowiki&gt;Subscript: x<sub>2</sub>
+Superscript: x<sup>2</sup> or x&amp;amp;sup2;
+&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;nowiki&gt;
+&amp;amp;epsilon;<sub>0</sub> =
+8.85 &amp;amp;times; 10<sup>&amp;amp;minus;12</sup>
+C&amp;amp;sup2; / J m.
+</p>
+
+<p>
+1 <a href="hectare.html">hectare</a> = <a href="1 E4 m&amp;amp;sup2;.html">1 E4 m&amp;amp;sup2;</a>
+&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</p>
+
+<h3 id="toc_1.2.4">Disabling wikitext interpretation and/or reformatting</h3>
+<p>
+&amp;lt;nowiki&amp;gt; and &amp;lt;pre&amp;gt; tags can tell the server and the browser to display things as you typed them.
+&lt;table border="1" cellpadding="2" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+'''regular'''
+</p>
+
+<ul>
+<li>
+interpret special characters
+
+<li>
+interpret special wiki markup
+
+<li>
+reformat text (remove single newlines and multiple spaces, perform automatic wrapping)
+
+<li>
+a double newline gives a new paragraph
+
+</ul>
+
+<p>
+arrow      →
+</p>
+
+<p>
+''italics''
+<a href="link.html">link</a>
+&lt;/td&gt;
+&lt;td valign="bottom"&gt;
+&lt;pre&gt;&lt;nowiki&gt;arrow      &amp;amp;rarr;
+</p>
+
+<p>
+''italics''
+<a href="link.html">link</a>&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td valign="bottom"&gt;
+'''&amp;lt;nowiki&gt;'''
+</p>
+<ul>
+<li>
+interpret special characters
+
+<li>
+don't interpret special wiki markup
+
+<li>
+reformat text
+
+<li>
+ignore even a double newline (no new paragraph); hence has to be applied separately for each paragraph
+
+</ul>
+<p>
+''can be applied in-line:'' &lt;nowiki&gt;
+arrow      &amp;rarr;
+</p>
+
+<p>
+''italics''
+<a href="link.html">link</a>
+&lt;/nowiki&gt; ''<a href="normal.html">normal</a> again''
+&lt;/td&gt;
+&lt;td valign="bottom"&gt;
+&lt;pre&gt;&lt;nowiki&gt;
+''can be applied in-line:'' &lt;nowiki&gt;
+arrow      &amp;amp;rarr;
+</p>
+
+<p>
+''italics''
+<a href="link.html">link</a>
+&lt;/nowiki&gt;&lt;/nowiki&gt;''<a href="normal.html">normal</a> again''&lt;/pre&gt;
+</p>
+
+<p>
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;
+'''&amp;lt;pre&gt;''' 
+</p>
+<ul>
+<li>
+interpret special characters
+
+<li>
+don't interpret special wiki markup
+
+<li>
+don't reformat text (no wrapping)
+
+<li>
+allows CSS for HTML element pre; the default skin gives a box
+
+<li>
+uses a fixed-width font, as specified in the browser settings 
+
+</ul>
+
+<p>
+&lt;pre&gt;arrow      &amp;rarr;
+</p>
+
+<p>
+''italics''
+<a href="link.html">link</a>
+&lt;/pre&gt;
+&lt;/td&gt;
+&lt;td valign="bottom"&gt;
+&lt;pre&gt;&amp;lt;pre&gt;arrow      &amp;amp;rarr;
+</p>
+
+<p>
+''italics''
+<a href="link.html">link</a>&amp;lt;/pre&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;
+'''leading space'''
+</p>
+<ul>
+<li>
+interpret special characters
+
+<li>
+interpret special wiki markup
+
+<li>
+don't reformat text (no wrapping)
+
+<li>
+produces HTML element pre, therefore the font and CSS are the same as when using pre; the default skin gives a box
+
+<li>
+a blank line ends the element pre; if there are more lines with leading space after that, a new pre element starts (in the default skin: a new box)
+
+</ul>
+
+<p>
+ arrow      →
+</p>
+ 
+<p>
+ ''italics''
+ <a href="link.html">link</a>
+&lt;/pre&gt;
+</p>
+
+<p>
+ IF a line of plain text starts with a space
+  it will be formatted exactly
+</p>
+<blockquote>
+as typed
+</blockquote>
+<p>
+  in a  font
+  in a grey dotted-outline box
+  lines won't wrap
+ ENDIF
+ this is useful for:
+</p>
+<ul>
+<li>
+pasting preformatted text;
+
+<li>
+algorithm descriptions;
+
+<li>
+program source code
+
+<li>
+ASCII art;
+
+<li>
+chemical structures;
+
+<li>
+poetry
+
+</ul>
+
+<p>
+WARNING: If you make it wide,
+you <a href="w_page widening.html">force the whole page to be wide</a> and
+hence less readable. Never start ordinary lines with spaces.<br />
+<center>(see also below)</center>&lt;td&gt;
+&lt;pre&gt; &lt;nowiki&gt;arrow      &amp;amp;rarr;
+</p>
+
+<p>
+ ''italics''
+ <a href="link.html">link</a>&lt;/nowiki&gt;&lt;/pre&gt;
+</p>
+
+<p>
+&lt;pre&gt;&lt;nowiki&gt; IF a line of plain text starts with a space
+  it will be formatted exactly
+</p>
+<blockquote>
+as typed
+</blockquote>
+<p>
+  in a fixed-width font
+  in a grey dotted-outline box
+  lines won't wrap
+ ENDIF
+ this is useful for:
+</p>
+<ul>
+<li>
+pasting preformatted text
+
+<li>
+algorithm descriptions
+
+<li>
+program source code
+
+<li>
+ASCII art
+
+<li>
+chemical structures
+
+<li>
+poetry
+
+</ul>
+<p>
+&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;
+'''typewriter font'''
+</p>
+
+<p>
+(does not work beyond the end of a paragraph):
+</p>
+
+<p>
+&lt;tt&gt;arrow      →&lt;/tt&gt;
+</p>
+
+<p>
+&lt;tt&gt;''italics''&lt;/tt&gt;
+&lt;tt&gt;<a href="link.html">link</a>
+</p>
+
+<p>
+New paragraph.&lt;/tt&gt;
+</p>
+
+<p>
+&lt;/td&gt;
+&lt;td valign="bottom"&gt;
+&lt;pre&gt;&lt;nowiki&gt;&lt;tt&gt;arrow      &amp;amp;rarr;&lt;/tt&gt;
+</p>
+
+<p>
+&lt;tt&gt;''italics''&lt;/tt&gt;
+&lt;tt&gt;<a href="link.html">link</a>&lt;/nowiki&gt;
+</p>
+
+<p>
+New paragraph.&lt;/tt&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;
+; Show special character codes:
+</p>
+
+<p>
+→
+&lt;/td&gt;
+&lt;td valign="bottom"&gt;
+&lt;pre&gt;&amp;amp;amp;rarr;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;
+;<a href="Help_Comment tags.html">Comments</a>
+The text between '''here'''
+&lt;!-- comment here --&gt;
+'''and here''' won't be displayed
+&lt;/td&gt;
+&lt;td&gt;
+&lt;pre&gt;&lt;nowiki&gt;The text between '''here'''
+&lt;!-- comment here --&gt;
+'''and here''' won't be displayed&lt;/nowiki&gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</p>
+
+<p>
+For ways to prevent headlines from overlapping the previous text, use the methods described at <a href="WP_BUNCH.html">WP:BUNCH</a>.
+</p>
+
+
+<h3 id="toc_1.2.5">Special characters</h3>
+<p>
+&lt;table border="1" cellpadding="2" cellspacing="0"&gt;
+&lt;tr valign="top"&gt;
+&lt;td&gt;
+'''Umlauts and accents:''' (See <a href="Help_Special characters.html">Help:Special characters</a>)<br />
+À Á Â Ã Ä Å
+Æ Ç È É Ê Ë
+Ì Í Î Ï Ñ Ò
+Ó Ô Õ Ö Ø Ù
+Ú Û Ü ß à á
+â ã ä å æ ç
+è é ê ë ì í
+î ï ñ ò ó ô
+œ õ ö ø ù ú
+û ü ÿ<br />
+<br />
+À Á Â Ã Ä Å<br />
+Æ Ç È É Ê Ë<br />
+Ì Í
+Î Ï Ñ Ò<br />
+Ó Ô Õ
+Ö Ø Ù<br />
+Ú Û Ü ß
+à á<br />
+â ã ä å æ
+ç<br />
+è é ê ë ì í<br />
+î ï ñ ò ó ô<br />
+œ õ
+ö ø ù ú<br />
+û ü ÿ
+&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;
+</p>
+
+<p>
+À Á Â Ã Ä Å
+Æ Ç È É Ê Ë
+Ì Í Î Ï Ñ Ò
+Ó Ô Õ Ö Ø Ù
+Ú Û Ü ß à á
+â ã ä å æ ç
+è é ê ë ì í
+î ï ñ ò ó ô
+œ õ ö ø ù ú
+û ü ÿ
+</p>
+
+<p>
+&amp;amp;Agrave; &amp;amp;Aacute; &amp;amp;Acirc; &amp;amp;Atilde; &amp;amp;Auml; &amp;amp;Aring;
+&amp;amp;AElig; &amp;amp;Ccedil; &amp;amp;Egrave; &amp;amp;Eacute; &amp;amp;Ecirc; &amp;amp;Euml;
+&amp;amp;Igrave; &amp;amp;Iacute; &amp;amp;Icirc; &amp;amp;Iuml; &amp;amp;Ntilde; &amp;amp;Ograve;
+&amp;amp;Oacute; &amp;amp;Ocirc; &amp;amp;Otilde; &amp;amp;Ouml; &amp;amp;Oslash; &amp;amp;Ugrave;
+&amp;amp;Uacute; &amp;amp;Ucirc; &amp;amp;Uuml; &amp;amp;szlig; &amp;amp;agrave; &amp;amp;aacute;
+&amp;amp;acirc; &amp;amp;atilde; &amp;amp;auml; &amp;amp;aring; &amp;amp;aelig; &amp;amp;ccedil;
+&amp;amp;egrave; &amp;amp;eacute; &amp;amp;ecirc; &amp;amp;euml; &amp;amp;igrave; &amp;amp;iacute;
+&amp;amp;icirc; &amp;amp;iuml; &amp;amp;ntilde; &amp;amp;ograve; &amp;amp;oacute; &amp;amp;ocirc;
+&amp;amp;oelig; &amp;amp;otilde; &amp;amp;ouml; &amp;amp;oslash; &amp;amp;ugrave; &amp;amp;uacute;
+&amp;amp;ucirc; &amp;amp;uuml; &amp;amp;yuml;&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign=top&gt;
+&lt;td&gt;
+'''Punctuation:'''<br />
+¿ ¡ « » § ¶
+† ‡ • - – —
+</p>
+
+<p>
+¿ ¡ « » § ¶<br />
+† ‡ • - &amp;ndash; &amp;mdash;
+&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;
+¿ ¡ « » § ¶
+† ‡ • - – —
+</p>
+
+<p>
+&amp;amp;iquest; &amp;amp;iexcl; &amp;amp;laquo; &amp;amp;raquo; &amp;amp;sect; &amp;amp;para;
+&amp;amp;dagger; &amp;amp;Dagger; &amp;amp;bull; - &amp;amp;ndash; &amp;amp;mdash;&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td&gt;
+'''Commercial symbols:'''<br />
+™ © ® ¢ € ¥ £ ¤
+</p>
+
+<p>
+™ © ® ¢ € ¥ £ ¤&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;
+™ © ® ¢ € ¥ £ ¤
+</p>
+
+<p>
+&amp;amp;trade; &amp;amp;copy; &amp;amp;reg; &amp;amp;cent; &amp;amp;euro; &amp;amp;yen; &amp;amp;pound; &amp;amp;curren;
+&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;&lt;td&gt;'''Greek characters:'''<br />
+α β γ δ ε ζ
+η θ ι κ λ μ ν
+ξ ο π ρ σ ς
+τ υ φ χ ψ ω
+Γ Δ Θ Λ Ξ Π
+Σ Φ Ψ Ω
+</p>
+
+<p>
+α β γ δ ε ζ<br />
+η θ ι κ λ μ ν<br />
+ξ ο π ρ σ ς<br />
+τ υ φ χ ψ ω<br />
+Γ Δ Θ Λ Ξ Π<br />
+Σ Φ Ψ Ω
+&lt;/td&gt;
+&lt;td&gt;&lt;pre&gt;&lt;nowiki&gt;
+α β γ δ ε ζ
+η θ ι κ λ μ ν
+ξ ο π ρ σ ς
+τ υ φ χ ψ ω
+Γ Δ Θ Λ Ξ Π
+Σ Φ Ψ Ω
+</p>
+
+<p>
+&amp;amp;alpha; &amp;amp;beta; &amp;amp;gamma; &amp;amp;delta; &amp;amp;epsilon; &amp;amp;zeta;
+&amp;amp;eta; &amp;amp;theta; &amp;amp;iota; &amp;amp;kappa; &amp;amp;lambda; &amp;amp;mu; &amp;amp;nu;
+&amp;amp;xi; &amp;amp;omicron; &amp;amp;pi; &amp;amp;rho; &amp;amp;sigma; &amp;amp;sigmaf;
+&amp;amp;tau; &amp;amp;upsilon; &amp;amp;phi; &amp;amp;chi; &amp;amp;psi; &amp;amp;omega;
+&amp;amp;Gamma; &amp;amp;Delta; &amp;amp;Theta; &amp;amp;Lambda; &amp;amp;Xi; &amp;amp;Pi;
+&amp;amp;Sigma; &amp;amp;Phi; &amp;amp;Psi; &amp;amp;Omega;
+&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td&gt;
+'''Math characters:'''<br />
+∫ ∑ ∏ √ − ± ∞
+≈ ∝ ≡ ≠ ≤ ≥
+× · ÷ ∂ ′ ″
+∇ ‰ ° ∴ ø
+∈ ∩ ∪ ⊂ ⊃ ⊆ ⊇
+¬ ∧ ∨ ∃ ∀ ⇒ ⇔
+→ ↔ ↑
+</p>
+
+<p>
+∫ ∑ ∏ √ &amp;minus; ± ∞<br />
+≈ ∝ ≡ ≠ ≤ ≥<br />
+&amp;times; · ÷ ∂ &amp;prime; &amp;Prime;<br />
+∇ ‰ ° ∴ ø<br />
+∈ ∩ ∪ ⊂ ⊃ ⊆ ⊇<br />
+¬ ∧ ∨ ∃ ∀ ⇒ ⇔<br />
+→ ↔ ↑<br />
+</p>
+
+<p>
+Problem symbols:
+</p>
+
+<p>
+ℵ ∉
+</p>
+
+<p>
+ℵ ∉
+&lt;/td&gt;
+&lt;td valign="middle"&gt;&lt;pre&gt;&lt;nowiki&gt;
+∫ ∑ ∏ √ − ± ∞
+≈ ∝ ≡ ≠ ≤ ≥
+× · ÷ ∂ ′ ″
+∇ ‰ ° ∴ ø
+∈ ∩ ∪ ⊂ ⊃ ⊆ ⊇
+¬ ∧ ∨ ∃ ∀ ⇒ ⇔
+→ ↔ ↑
+</p>
+
+<p>
+&amp;amp;int; &amp;amp;sum; &amp;amp;prod; &amp;amp;radic; &amp;amp;minus; &amp;amp;plusmn; &amp;amp;infin;
+&amp;amp;asymp; &amp;amp;prop; &amp;amp;equiv; &amp;amp;ne; &amp;amp;le; &amp;amp;ge; 
+&amp;amp;times; &amp;amp;middot; &amp;amp;divide; &amp;amp;part; &amp;amp;prime; &amp;amp;Prime;
+&amp;amp;nabla; &amp;amp;permil; &amp;amp;deg; &amp;amp;there4; &amp;amp;oslash;
+&amp;amp;isin; &amp;amp;cap; &amp;amp;cup; &amp;amp;sub; &amp;amp;sup; &amp;amp;sube; &amp;amp;supe;
+&amp;amp;not; &amp;amp;and; &amp;amp;or; &amp;amp;exist; &amp;amp;forall; &amp;amp;rArr; &amp;amp;hArr;
+&amp;amp;rarr; &amp;amp;harr; &amp;amp;uarr;
+</p>
+
+<p>
+Problem symbols:
+</p>
+
+<p>
+ℵ ∉
+</p>
+
+<p>
+&amp;amp;alefsym; &amp;amp;notin;
+&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</p>
+
+<p>
+Writing a symbol over another one:
+</p>
+
+<p>
+&lt;nowiki&gt;&lt;span style="position:absolute;"&gt;o&lt;/span&gt;x&lt;/nowiki&gt; gives &lt;span style="position:absolute;"&gt;o&lt;/span&gt;x.
+</p>
+
+<h3 id="toc_1.2.6">Including another page&amp;mdash;transclusion and templates</h3>
+<p>
+Changing a transcluded file will change every file that transcludes it.
+&lt;table border="1" cellpadding="2" cellspacing="0"&gt;
+&lt;tr valign="bottom"&gt;
+&lt;td&gt;
+; Transclusion
+: Including the contents of another page into the current page. 
+<div style="border: 1pt dashed blue; background: grey; padding: 1em 1em;">
+{{:Help:Transclusion Demo}}</div>&lt;/td&gt;
+&lt;td&gt;
+&lt;pre&gt;&lt;nowiki&gt;{{&lt;/nowiki&gt;:Help:Transclusion Demo&lt;nowiki&gt;}}&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr valign="bottom"&gt;
+&lt;td&gt;
+; <a href="Help_Template.html">Template</a>
+A special kind of page designed for transclusion.  
+These pages are found in the '''Template:''' <a href="Help_namespace.html">namespace</a>
+Templates can even take parameters.
+When you edit a page, all the templates used on the page are listed below the edit box.
+<div style="border: 1pt dashed blue; background: grey; padding: 1em 1em;">
+{{H:title|hovertext|This is underlined}}</div>&lt;/td&gt;
+&lt;td&gt;
+&lt;pre&gt;&lt;nowiki&gt;{{H:title|hovertext|This is underlined}}&lt;/nowiki&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</p>
+
+<h2 id="toc_1.3">Records of edits in the database</h2>
+<p>
+Edits are recorded both in the <a href="mw_revision table.html">revision table</a> and in the <a href="mw_recentchanges table.html">recentchanges table</a> of the database.
+</p>
+
+<p>
+The revision table is used for page histories and user contribution lists. The recentchanges table is used for recent and related changes, watchlists, and (in the case of page creation) for the list of new pages.
+</p>
+
+<p>
+This distinction is relevant in the case that old edits are removed from one of the two tables. For example, if three months of recent changes are kept in the recentchanges table, while nothing is deleted from the revision table, then older edits can be seen in page histories and user contribution lists, but not in recent and related changes, watchlists, and (in the case of page creation) in the list of new pages.
+</p>
+
+<p>
+<a href="Help_Import.html">Import</a> of page revisions adds to the revision table but not to the recentchanges table, so they add to page histories and user contribution lists, but not to recent and related changes, watchlists, and (in the case of page creation) the list of new pages.
+</p>
+
+<h2 id="toc_1.4">Wikipedia-specific help</h2>
+
+<p>
+For more editing help see <a href="Help_Contents/Editing Wikipedia.html">Help:Contents/Editing Wikipedia</a>.
+</p>
+
+<p>
+<a href="Category_Wikipedia help.html"> </a>
+<a href="Category_Editor_handbook.html"> </a>
+</p>
+
+<p>
+<a href="ar_مساعدة_تحرير متقدم.html">ar:مساعدة:تحرير متقدم</a>
+<a href="fa_راهنما_ویرایش پیشرفته.html">fa:راهنما:ویرایش پیشرفته</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

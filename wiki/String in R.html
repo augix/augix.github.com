@@ -1,0 +1,122 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>String in R</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>String in R</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_R.html">Category:R</a>
+</p>
+<h1 id="toc_1">split</h1>
+<p>
+split a string into a vector:
+&lt;R&gt;
+x = "string_x"
+strsplit(x, split="")
+&lt;/R&gt;
+&lt;pre&gt;
+<a href="1.html">1</a>
+[1] "s" "t" "r" "i" "n" "g" "_" "x"
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_2">paste</h1>
+<p>
+&lt;R&gt;
+x = paste("Hello", "World", sep=", ")
+print(x)
+&lt;/R&gt;
+&lt;pre&gt;
+[1] "Hello, World"
+&lt;/pre&gt;
+</p>
+
+<p>
+&lt;R&gt;
+chars = c("m", "e", "r", "g", "e", "d")
+paste(chars, collapse = "")
+&lt;/R&gt;
+</p>
+
+<p>
+&lt;pre&gt;
+[1] "merged"
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_3">toString</h1>
+<p>
+&lt;R&gt;
+x = c("Hello", "World")
+y = toString(x)
+print(y)
+&lt;/R&gt;
+&lt;pre&gt;
+[1] "Hello, World"
+&lt;/pre&gt;
+</p>
+
+<p>
+ps: it seems "format" is also an useful function.
+</p>
+
+<h1 id="toc_4">chartr</h1>
+<p>
+&lt;R&gt;
+x = "ACGTGTGACGT"
+y = chartr("acgtACGT","tgcaTGCA",x)
+print(x);print(y)
+&lt;/R&gt;
+</p>
+
+<p>
+&lt;pre&gt;
+[1] "ACGTGTGACGT"
+[1] "TGCACACTGCA"
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_5">DNA Reverse Complementary</h1>
+<p>
+&lt;R&gt;
+DNA.Rev.Comp &lt;- function(x) {
+	if (is.character(x) &amp;&amp; length(x) == 1) {
+		x = chartr("acgtACGT","tgcaTGCA",x)
+		x = unlist(strsplit(x,split=""))
+		x = rev(x)
+		x = paste(x,collapse="")
+		return(x)
+	}
+	else {
+		warning("Wrong argument type in DNA.Rev.Comp, NA returned")
+		return(NA)
+	}
+}
+</p>
+
+<p>
+DNA.Rev.Comp("ACTGTGACCACGTCGTA")
+&lt;/R&gt;
+</p>
+
+<p>
+&lt;pre&gt;
+[1] "TACGACGTGGTCACAGT"
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

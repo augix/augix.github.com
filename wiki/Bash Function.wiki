@@ -1,0 +1,67 @@
+= Define a function =
+{{{
+<bash>  
+#!/bin/bash 
+
+testfunc () { 
+    echo "$# parameters"; 
+    for i in $@; 
+        do echo $i; 
+    done;
+}
+testfunc a 'b c d'
+
+
+function e {
+	echo $1 
+}  
+e Hello
+e World
+
+</bash>
+}}}
+
+= Send parameter =
+
+[http://www.ibm.com/developerworks/library/l-bash-parameters.html?ca=drs- IBM: bash parameters] 
+
+{{{
+<bash>
+[ian@pinguino ~]$ testfunc () { echo "$# parameters"; echo "$@"; }
+[ian@pinguino ~]$ testfunc
+0 parameters
+
+[ian@pinguino ~]$ testfunc a b c
+3 parameters
+a b c
+[ian@pinguino ~]$ testfunc a "b c"
+2 parameters
+a b c
+
+$ testfunc () { echo "$# parameters"; for i in $@; do echo $i; done;}
+$ testfunc a 'b c d'
+2 parameters
+a
+b
+c
+d
+</bash>
+}}}
+
+= Return value =
+{{{
+<bash>
+function myfunc()
+{
+    local  myresult='some value'
+    echo "$myresult"
+}
+
+result=$(myfunc)   # or result=`myfunc`
+echo $result
+</bash>
+}}}
+
+[http://www.linuxjournal.com/content/return-values-bash-functions Ways to let function returns a value]
+
+

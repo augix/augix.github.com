@@ -1,0 +1,63 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Benjamini and Hochberg FDR control</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Benjamini and Hochberg FDR control</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+the R code
+
+</ul>
+<p>
+&lt;R&gt;
+</p>
+<ol>
+<li>
+this is a Benjamini and Hochberg 1995 FDR control
+
+<li>
+<a href="http://en.wikipedia.org/wiki/False_discovery_rate">http://en.wikipedia.org/wiki/False_discovery_rate</a>
+
+</ol>
+<p>
+BH.FDR.control &lt;- function(q=FDR, p.values) {
+  sort.p &lt;- sort(p.values)
+  m &lt;- length(sort.p)
+  for (i in m:1) {
+</p>
+<blockquote>
+if (sort.p[i] &lt;= q*i/m) { k &lt;- i; cutoff &lt;- sort.p[i]; return(cutoff); }
+</blockquote>
+<p>
+  }
+  return(0)
+}
+</p>
+
+<p>
+example.BH.control() {
+	p.values &lt;- c(rep(1:10,10),10:100)/100
+	FDR &lt;- 0.05
+	cutoff &lt;- BH.FDR.control(FDR, p.values)
+	plot(density(p.values))
+	abline(v=cutoff,col='red')
+}
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

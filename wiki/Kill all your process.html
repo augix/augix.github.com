@@ -1,0 +1,25 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Kill all your process</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Kill all your process</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<pre>
+$ ps -o pid -u $(whoami) | xargs kill
+</pre>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

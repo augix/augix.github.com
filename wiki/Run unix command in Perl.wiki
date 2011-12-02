@@ -1,0 +1,16 @@
+to run a shell command
+
+<perl>
+system("ls > outfile");
+
+open(OF, "outfile") || die $!;
+@data=;
+close(OF);
+
+@dir=`ls`;
+foreach (@dir) {
+ ### process each line individually.
+}
+
+$dir=`ls`;
+</perl>

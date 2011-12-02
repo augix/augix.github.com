@@ -1,0 +1,37 @@
+= Reference =
+* [http://www.ibm.com/developerworks/linux/library/l-awk1/index.html Common threads: Awk by example]
+* [http://www.cs.hmc.edu/qref/awk.html Getting Start with awk]
+
+= Usage =
+<bash>
+awk '$1 > $2 {print $1,$2,$1-$2}' filename
+</bash>
+
+The part outside the curly braces is called the "pattern", and the part inside is the "action". The comparison operators include the ones from C:
+ == != < > <= >= ?:
+If no pattern is given, then the action applies to all lines.
+
+
+= Examples =
+
+* join every two lines in a text file
+<bash>
+awk '{ if ( ( NR % 2 ) == 0 ) { printf("%s\n",$0) } else { printf("%s ",$0) } }' file
+</bash>
+
+* other
+<bash>
+awk -F "\t" '$3 > 18 {print $1}' all_mat.glue
+
+awk -F " " '{ print $2"\t"$3"\t"set $3+25 }' temp2/$i > $i.coordinates
+</bash>
+
+* ENSEMBL to UCSC gene annotation. (chromosome name conversion, strand information conversion)
+<bash>
+grep -vP '\t\t' $i | cut -f 1-6 | awk '{ if ($1!="Chromosome") { if ($6=="1") {printf("chr%s\t+\n",$0)} else {printf("chr%s\t-\n",$0)} } }' | cut -f 1-5,7 | sed 's/chrMT/chrM/' > $out
+</bash>
+
+* misc
+<bash>
+grep -P 'final|total|Index' 0513.log | tr '=' ' ' | awk '{ if (/:/) {print $NF} else { print $1 }}'| awk '{ if (NR%5==0) {printf("%s\n",$1)} else {printf("%s ",$1)} }'
+</bash>

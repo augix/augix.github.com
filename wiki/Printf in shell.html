@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Printf in shell</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Printf in shell</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+ $ seq 1000010 612 1004910
+&lt;pre&gt;
+1.00001e+06
+1.00062e+06
+1.00123e+06
+1.00185e+06
+1.00246e+06
+1.00307e+06
+1.00368e+06
+1.00429e+06
+1.00491e+06
+&lt;/pre&gt;
+</p>
+
+<p>
+ $ seq 1000010 612 1004910 | xargs printf "%10.0f\n"
+&lt;pre&gt;
+   1000010
+   1000620
+   1001230
+   1001850
+   1002460
+   1003070
+   1003680
+   1004290
+   1004910
+&lt;/pre&gt;
+</p>
+
+<p>
+ $ seq 1000010 612 1004910 | xargs printf "%10.2f\n"
+&lt;pre&gt;
+1000010.00
+1000620.00
+1001230.00
+1001850.00
+1002460.00
+1003070.00
+1003680.00
+1004290.00
+1004910.00
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

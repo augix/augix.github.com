@@ -1,0 +1,55 @@
+[[Category:LaTeX]]
+<latex>
+% Augix' LaTeX template
+\documentclass[11pt]{article}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\usepackage{pgf}
+
+\author{Augix G.H. XU\\
+CAS-MPG Partner Institute for Computational Biology \\
+Max Planck Institute for Evolutionary Anthropology
+}
+\date{Dec 4, 2007}
+\title{Thesis Proposal: \\COMPARATIVE ANALYSIS OF PRIMATE ALTERNATIVE SPLICING USING EXON ARRAYS}
+
+\begin{document}
+
+\pagestyle{empty}
+
+%\nocite{*}	%The \nocite command produces no text, but writes key_list, which is a list of one or more citation keys, on the aux file. It can help us to find the references which are not cited.
+
+\maketitle
+
+%\hfill  \today \\
+
+
+The use of alternatively spliced transcript forms among different human tissues is well documented and is estimated to affect 40 - 60\% of all human genes\cite{Johnson:2003}\cite{Kan:2001}\cite{Mironov:1999}\cite{Modrek:2001wd}\cite{Modrek:2002cr} and 74\% of multiexon human genes\cite{Johnson:2003}. Differences in splicing between species, however, are still poorly understood. These differences may include not only conservation of alternative splicing between species, but also differences in splicing of transcripts constitutively spliced within each species. 
+
+In this study, we address both conservation of the alternative splicing between closely related primate species (humans, chimpanzees, orangutans and rhesus macaques), as well as the splicing differences in between the species by measuring expression profiles in four tissues (cortex, cerebellum, liver and testis) using Affymetrix Human Exon Arrays. 
+
+In agreement with previous estimates, about 70\% of all expressed multiexon genes show evidence for alternative splicing among different tissues in humans. This is also the case for chimpanzees. Surprisingly, approximately 15\% of genes are spliced differently in between the species. These differences are not distributed equally among tissues, with testis having the most differences and the two brain tissues the least (Figure~\ref{fig:DS}). Furthermore, our results suggest that less than 3\% of genes show species-specific alternative splicing. 
+
+These results allow us, for the first time, to estimate the extent of splicing differences among closely related species and compare it to the patterns of alternative splicing observed among tissues. Further, using orangutan and rhesus macaque data, we are able to identify splicing differences specific to humans. Given the surprisingly high proportion of differential splicing observed between the species, our results may imply that changes in splicing have contributed substantially to the evolution of human species. 
+
+ \vfill
+
+% Put graphics
+\begin{figure}
+  \begin{center}
+    \label{fig:DS}
+    \caption{Number of differently spliced genes}
+    \includegraphics[scale=0.3]{f1.jpg}
+    \item{Numbers of genes showing evidence of RNA
+                  splicing differences in between human and
+                  chimpanzee in 4 different tissues (cortex,
+                  cerebellum, liver, testis).}
+  \end{center}
+\end{figure}
+
+
+
+\bibliographystyle{amsplain}
+\bibliography{AS}
+
+\end{document}
+</latex>

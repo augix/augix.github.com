@@ -1,0 +1,106 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Compare two text files</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Compare two text files</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+#!/usr/bin/perl
+chdir "/picb/compbio5/augix/cDNA/soap/test";
+open FA, "/picb/compbio5/augix/cDNA/soap/test/hg18.fa" or die $!;
+while (&lt;FA&gt;) {
+  if (/^&gt;/) {
+</p>
+<blockquote>
+/^&gt;(.*)/;
+$chr = $1;
+push @chr, $chr;
+print $chr."\n";
+</blockquote>
+<p>
+  }
+  else {
+</p>
+<blockquote>
+chomp;
+$fa{$chr} .= $_;
+</blockquote>
+<p>
+  }
+</p>
+
+<p>
+}
+close FA;
+</p>
+
+<p>
+sub DNArevcomp {
+  my $dna = $_[0];
+  my $revcomp = reverse($dna);
+  $revcomp =~ tr/ACGTacgt/TGCAtgca/;
+  return $revcomp;
+}
+</p>
+
+
+<p>
+open OUTPUT, "&gt;seq.hg18.fa" or die $!;
+$count=0;
+foreach $chr(@chr) {
+  $l = length $fa{$chr};
+  $n = int ($l / 2800);
+  print "chr: $chr\n
+</p>
+<blockquote>
+length: $l\n
+n: $n\n";
+</blockquote>
+<p>
+  foreach $i(1..$n) {
+</p>
+<blockquote>
+$pos = int rand($l-36);
+$seq = substr $fa{$chr}, $pos, 36;
+next if grep /N/, $seq;
+if ( rand(2) &gt;1 ) {
+$seq = DNArevcomp($seq);
+$strand = "-";
+}
+else {$strand="+"}
+$pos ++;
+print OUTPUT "&gt;$chr:$pos:$strand\n$seq\n";
+$count++;
+print $count."\n";
+exit 0 if $count == 1000000;   # only produce 1000000 sequences
+</blockquote>
+<p>
+  }
+}
+</p>
+
+<p>
+close OUTPUT;
+&lt;/perl&gt;
+</p>
+
+<p>
+second one
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

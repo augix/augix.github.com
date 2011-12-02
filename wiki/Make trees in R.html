@@ -1,0 +1,96 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Make trees in R</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Make trees in R</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+phangorn package
+
+</ul>
+<p>
+&lt;pre&gt;
+data:
+</p>
+<blockquote>
+chimp    human1    human2    rhesus
+</blockquote>
+<p>
+1   256840694 247285839 247285839 240226291
+2    45217564  43683607  43683607  45916995
+3    64398220  62686694  62686694  59634838
+4     1411042   1378486   1378486   1349406
+5    17502943  16721703  16721703  18163003
+&lt;/pre&gt;
+</p>
+
+<p>
+&lt;R&gt;
+</p>
+<ol>
+<li>
+1. distance
+
+</ol>
+<p>
+d &lt;- dist(t(data))
+</p>
+
+<ol>
+<li>
+2. plot
+
+<li>
+2.1 hclust
+
+</ol>
+<p>
+tree &lt;- hclust(d)
+plot(tree)
+</p>
+
+<ol>
+<li>
+2.2 nj and upgma trees
+
+</ol>
+<p>
+library(phangorn)
+</p>
+<ol>
+<li>
+nj tree
+
+</ol>
+<p>
+tree &lt;- nj(d)
+plot(tree,main="nj tree")
+plot(tree,'u',main='nj tree')
+</p>
+<ol>
+<li>
+upgma tree
+
+</ol>
+<p>
+tree = upgma(d)
+plot(tree,main="upgma tree")
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

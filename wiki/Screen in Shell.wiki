@@ -1,0 +1,72 @@
+[http://www.amitu.com/blog/2004/12/screen-howto.html Anything Else: Screen Howto]
+= Start =
+* To start a fresh screen session:
+ $ screen
+
+* It is always a good idea to check the status of your sessions by means of 
+ screen -list
+
+* All screen commands start with 
+ Ctrl-a
+
+= Help =
+Full list of available command can be obtained by doing
+ Ctrl-a ?
+
+= Create =
+* To Open a new screen within the screen session:
+ Ctrl-a c
+
+= Switch =
+* to last accessed screen.
+  Ctrl-a Ctrl-a 
+* to next
+  Ctrl-a n 
+* to previous screens.
+ Ctrl-a p
+
+= Detach =
+To disconnect, leaving the session running in background: 
+ Ctrl-a d.
+
+= Reattach =
+ screen -r
+
+= Info =
+show all window information
+ Ctrl-a w
+
+= Rename =
+rename the current screen to a more meaningful name do a 
+ Ctrl-a A
+
+= Screen Reference Card =
+<pre>
+Basics: 
+ -ctrl a c -> create new window 
+ -ctrl a A -> set window name 
+ -ctrl a w -> show all window 
+ -ctrl a 1|2|3|... -> switch to window n 
+ -ctrl a " -> choose window 
+ -ctrl a ctrl a -> switch between window
+ -ctrl a d -> detach window 
+ -ctrl a ? -> help 
+ -ctrl a [ -> start copy, move cursor to the copy location, press ENTER, select the chars, press ENTER to copy the selected characters to the buffer 
+ -ctrl a ] -> paste from buffer
+
+How to start screen: 
+ -screen -DR -> list of detached screen 
+ -screen -r PID -> attach detached screen session
+ -screen -dmS MySession -> start a detached screen session
+ -screen -r MySession -> attach screen session with name MySession
+
+ 
+Advanced: 
+ -ctrl a S -> create split screen 
+ -ctrl a TAB -> switch between split screens
+If you created a new split screen, the current window is empty. either select an existing window (ctrl a ") or create a new split screen (ctrl a n).   
+ -ctrl a Q -> Kill all regions but the current one.
+ -ctrl a X -> remove active window from split screen
+ -ctrl a O -> logout active window (disable output)
+ -ctrl a I -> login active window (enable output)
+</pre>

@@ -1,0 +1,10 @@
+= in Linux =
+* prepare folder '''R''', '''data'''
+* load scripts in '''R''', load data in '''data'''
+* build the skeleton of package, in R
+  package.skeleton(name='package name', ...)
+* copy c, c++ or other source code into '''src'''
+* copy '''RData''' file into '''data'''
+* modify file '''DESCRIPTION''', and files in '''man'''
+* build package, in Shell
+ R CMD build prepared_folder_of_R_codes

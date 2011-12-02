@@ -1,0 +1,102 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>LWP example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>LWP example</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+#!/usr/bin/perl -w
+</p>
+ 
+<p>
+#use strict;
+use LWP::UserAgent;
+</p>
+
+<p>
+#my $plate = $ARGV[0] || die "Plate to search for?\n";
+#$plate = uc $plate;
+#$plate =~ tr/O/0/;  # we use zero for letter-oh
+#die "$plate is invalid.\n"
+</p>
+<ol>
+<li>
+unless $plate =~ m/^[A-Z0-9]{2,7}$/
+
+<li>
+   and $plate !~ m/^\d+$/;  # no all-digit plates
+
+</ol>
+ 
+
+<p>
+my $browser = LWP::UserAgent-&gt;new;
+</p>
+
+<p>
+#my $response = $browser-&gt;post(
+</p>
+<ol>
+<li>
+ '<a href="http://www.augix.com/cgi-bin/runshellcommand.cgi'">http://www.augix.com/cgi-bin/runshellcommand.cgi'</a>, 'command' =&gt; 'ls ../');
+
+</ol>
+  
+<p>
+my $response = $browser-&gt;post(
+  '<a href="http://www.augix.com/cgi-bin/runshellcommand.cgi'">http://www.augix.com/cgi-bin/runshellcommand.cgi'</a>, 
+  [
+</p>
+<blockquote>
+'command'  =&gt; 'ls ../',
+</blockquote>
+<p>
+  ],
+);
+</p>
+
+
+<p>
+die "Error: ", $response-&gt;status_line
+ unless $response-&gt;is_success;
+</p>
+
+<p>
+$result = $response-&gt;content;
+print $result;
+</p>
+
+
+<p>
+if($response-&gt;content =~ m/wiki/) {
+  print "there's wiki\n";
+} else {
+  print "there's no wiki\n";
+}
+exit;
+</p>
+
+<p>
+&lt;/perl&gt;
+</p>
+
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

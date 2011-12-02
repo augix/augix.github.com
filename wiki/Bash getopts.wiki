@@ -1,0 +1,25 @@
+%template disqus
+
+{{{
+while getopts d:s options
+do	case "$options" in
+	d)	seplist="$OPTARG";;
+	s)	paste=hpaste;;
+	[?])	print >&2 "Usage: $0 [-s] [-d seplist] file ..."
+		exit 1;;
+	esac
+done
+shift $OPTIND-1
+}}}
+
+{{{
+OPTARG 
+    stores the value of the option argument found by getopts.
+
+OPTIND 
+    contains the index of the next argument to be processed.
+}}}
+
+
+[http://www.mkssoftware.com/docs/man1/getopts.1.asp parse options from shell script command line]
+

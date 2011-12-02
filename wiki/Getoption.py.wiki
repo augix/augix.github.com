@@ -1,0 +1,19 @@
+<python>
+#!/usr/bin/env python
+'''An improved getopt module which only treat short options.
+'''
+
+import sys, getopt
+def short(options):
+    try: 
+        opts,args = getopt.getopt(sys.argv[1:], 'i:m:o:')
+    except getopt.GetoptError, err:
+        print str(err)
+    values = [] 
+    for o, a in opts:
+        values.append(a)
+    values.append(args)
+    return values
+</python>
+
+[http://docs.python.org/library/getopt.html reference]

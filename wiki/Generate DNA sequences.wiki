@@ -1,0 +1,26 @@
+<perl>
+sub generator {
+  $length = $_[0];
+  
+  @base = qw(A T G C);
+  $l = 0;
+  
+  @string = ();  push @string, "";
+  while ($l < $length) {
+    @old_string = @string;   @string = ();
+    foreach $old_string(@old_string) {
+      foreach $base(@base) {
+        $string = $old_string.$base;
+        push @string, $string;
+      }
+    }
+    $l ++;
+  }
+  return @string;
+}
+
+@result = generator(5);
+$print = join (" ",@result);
+print ($print);
+</perl>
+[[Category:Perl]]

@@ -1,0 +1,25 @@
+EXAMPLE
+ $ join file1 file2 > file3
+
+If the content of file1 is:
+<pre>
+1 Barbara
+2 Peter
+3 Stan
+4 Marie
+</pre>
+
+and file2 is:
+
+<pre>
+2 Dog
+4 Car
+7 Cat
+</pre>
+
+the resulting file3 would be:
+
+<pre>
+2 Peter Dog
+4 Marie Car
+</pre>

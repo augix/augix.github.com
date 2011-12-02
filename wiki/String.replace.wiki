@@ -1,0 +1,7 @@
+<python>
+id = 'ENSG292782_hg18_chr2_random_23838-3838_-'
+id = string.replace(id, old='_', new=':')
+id = string.replace(id, old=':random', new='_random')
+</python>
+
+ 'ENSG292782:hg18:chr2_random:23838-3838:-'

@@ -1,0 +1,104 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Rf</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Rf</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="http://tolstoy.newcastle.edu.au/R/devel/05/01/1910.html">R devel archive: R as unix filter</a>
+</p>
+
+<p>
+R as unix filter
+</p>
+
+<p>
+<code>Rf' allows unix script programmers to use the statistics program </code>R' as a proper unix filter.
+</p>
+
+<p>
+Basically, Rf allows you to write a little sh-bang script (included in this distribution as file `mean'):
+</p>
+
+<p>
+&lt;bash&gt;
+#!/usr/local/bin/Rf
+</p>
+
+<p>
+x &lt;- scan(.stdin, quiet=T) 
+cat (mean(x))
+&lt;/bash&gt;
+</p>
+
+<p>
+This example script reads number in from stdin (the R character variable `.stdin') and prints the average on standard out. Thus, one could say on the command line:
+</p>
+
+<p>
+ $ seq 10 | mean
+</p>
+
+
+
+<h1 id="toc_1">Installation</h1>
+
+<p>
+This first version assumes the following:
+</p>
+
+<ul>
+<li>
+`r-as-filter' installed in /usr/local/lib
+
+<li>
+`Rf' installed in /usr/local/bin
+
+</ul>
+
+<p>
+Note that you may install Rf anywhere, but if you want to use it in
+shbang context (first line of `executable R script' starting with
+/usr/local/bin/Rf) then this should be a consistent location in order
+to make it more portable.  
+</p>
+
+<p>
+If you can't copy to /usr/local/lib, change the destination in
+`Rf.c'. 
+</p>
+
+<p>
+Make `Rf' by typing
+</p>
+
+<p>
+ $ make Rf
+</p>
+
+<p>
+And then copy
+ $ install Rf /usr/local/bin
+ $ install r-as-filter /usr/local/lib
+</p>
+
+
+<p>
+keywords: R, Rf, argv, stdin
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

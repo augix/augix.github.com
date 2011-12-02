@@ -1,0 +1,3 @@
+* [[R operator]]
+
+[http://zoonek2.free.fr/UNIX/48_R/all.html reference: Statistics with R]

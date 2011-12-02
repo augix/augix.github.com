@@ -1,0 +1,43 @@
+* Write a file named New_Mail_Gowl.scpt in <tt>~/Programming/AppleScript/</tt>
+<applescript>
+on perform_mail_action(info)
+	
+	tell application "Mail"
+		
+		set selectedMessages to |SelectedMessages| of info
+		set theRule to |Rule| of info
+		
+		repeat with eachMessage in selectedMessages
+			set theSubject to subject of eachMessage
+			set theSender to sender of eachMessage
+			
+			tell application "GrowlHelperApp"
+				
+				set the allNotificationsList to ¬
+					{"New Mail"}
+				
+				set the enabledNotificationsList to ¬
+					{"New Mail"}
+				
+				register as application ¬
+					"MailScript" all notifications allNotificationsList ¬
+					default notifications enabledNotificationsList ¬
+					icon of application "Mail"
+				
+				notify with name ¬
+					"New Mail" title ¬
+					"New Mail from " & theSender description ¬
+					theSubject application name "MailScript"
+				
+			end tell
+			
+		end repeat
+	end tell
+end perform_mail_action
+
+</applescript>
+
+* In Mail, add a new rule like:
+If any Recipient Contains augix DOT com AT gmail DOT com,
+Perform the following actions: 
+Run AppleScript: ~/Programming/AppleScript/New_Mail_Gowl.scpt

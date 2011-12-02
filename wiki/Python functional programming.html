@@ -1,0 +1,76 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python functional programming</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python functional programming</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+A function is an object.
+ square = lambda x: x**2
+
+</ul>
+
+<ul>
+<li>
+Functions can be returned as objects
+
+</ul>
+<p>
+&lt;python&gt;
+def build_taxer(rate):
+</p>
+<blockquote>
+def taxer(amount):
+return amount * (float(rate) / 100)
+return taxer
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+<ul>
+<li>
+filter and lambda
+ filter( lambda x: x%2==0, range(10))
+
+</ul>
+
+<ul>
+<li>
+list comprehensions can replace map and filter, but compute the whole list is slow
+ [i**2 for i in range(10) if i%2==0]
+
+</ul>
+
+<ul>
+<li>
+list is slow actually we only need to compute part of the list
+
+</ul>
+<p>
+&lt;python&gt;
+def is_prime(n):
+</p>
+<blockquote>
+return not any(n%k==0 for k in xrange(2,n))
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

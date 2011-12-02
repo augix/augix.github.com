@@ -1,0 +1,14 @@
+* http://www.peter-v.com/126/how-to-install-os-x-leopard-on-a-pc-iatkos-v10i-tutorial/
+* http://hearrain.cn/?p=320
+
+Do a quick search using your favorite torrent search portal for “iATKOS v1.0i” , download it, burn to DVD, pop that puppy into your test computer’s DVD drive and reboot**. During the install process there are a few extra steps so I will list what you need to do below:
+
+# When the Welcome screen pops up click Continue
+# At the Terms & Conditions screen do not click Agree yet, click Utilities on the Apple bar at the top of your screen and then select Disk Utility from the drop down menu (Utilities > Disk Utility).
+# Select your hard drive’s partition on the left hand side then select the Erase tab on the right.
+# Now click the Erase button on the bottom right and click Erase again on the pop-up. When this is complete close the Disk Utility.
+# Now go back up to the Apple menu bar and select Utilities > Darwin_Boot
+# Type Y (yes) to continue, 1 for your HDD number (if your using the main HDD), and 1 again for the partition number OS X will be installed on (if your installing on a different partition enter that partition number instead of 1).
+# Type Y (yes) to install boot efi and type Y (yes) again to confirm. Once it this process in complete it will display [process completed] and you can now exit out of Darwin_boot.
+# Please read the Terms & Conditions for iATKOS v1.0i and click Agree (if you agree).
+# Now your ready to install OS X Leopard on your PC, just follow the on screen guide and your good to go!

@@ -1,0 +1,55 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>bash case</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>bash case</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+Case can determine the range of variable belongs to.
+</p>
+
+<pre>
+# This script does a very simple test for checking disk space.
+
+space=`df -h | awk '{print $5}' | grep % | grep -v Use | sort -n | tail -1 | cut -d "%" -f1 -`
+
+case $space in
+[1-6]*)
+  Message="All is quiet."
+  ;;
+[7-8]*)
+  Message="Start thinking about cleaning out some stuff.  There's a partition that is $space % full."
+  ;;
+9[1-8])
+  Message="Better hurry with that new disk...  One partition is $space % full."
+  ;;
+99)
+  Message="I'm drowning here!  There's a partition at $space %!"
+  ;;
+*)
+  Message="I seem to be running with an nonexistent amount of disk space..."
+  ;;
+esac
+
+echo $Message | mail -s "disk report `date`" anny
+</pre>
+
+<p>
+<a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html">Reference</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

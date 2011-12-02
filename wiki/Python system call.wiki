@@ -1,0 +1,8 @@
+this is almost certainly not the best way to read the output of a python system call.  but, it works.    let’s say i’d like to read the results of a call to ls.  here’s how to do it:
+<python>
+import subprocess
+proc = subprocess .Popen([ls],stdout=sub.PIPE)
+print proc.stdout.read()
+</python>
+
+reference: [http://desk.stinkpot.org:8080/tricks/index.php/2007/12/read-the-output-of-a-system-call-in-python/ read the output of a system call in python]

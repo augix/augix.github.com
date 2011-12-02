@@ -1,0 +1,159 @@
+= Learning Vim=
+* [Graphical vi-vim Cheat Sheet and Tutorial http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html]
+
+* [vim使用进阶: 目录 http://easwy.com/blog/archives/advanced-vim-skills-catalog/]
+
+* indent in multiple lines
+** way1: enter visual mode, use ">" or "<" to increase or decrease indent
+** way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
+
+* '''#'''
+the '''#''' key create a motion jumping from the current word to the same word in the current buffer
+
+* [http://www.zinkwazi.com/unix/notes/vimtips.html Best of VIM tips]
+
+* [http://rosenfeld.heroku.com/en/articles/2010-12-26-achieving-productivity-with-vim-as-ide Achieving Productivity with Vim as IDE]
+ 
+* [http://www.adp-gmbh.ch/vim/vars.html Programming in Vim Variables]
+
+= Moving =
+* Moving around, scroll up and down the screen
+CTRL-F
+CTRL-B
+CTRL-U
+CTRL-D
+CTRL-E
+CTRL-Y
+
+= Jumping =
+One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
+ :ju
+to print the jump list.
+
+= Buffers =
+* switch to previous buffer: `<c-6>`
+
+= Open file =
+{{{
+gf	 open in the same window ("goto file")
+<c-w>f	 open in a new window (Ctrl-w f)
+<c-w>gf	 open in a new tab (Ctrl-w gf)
+}}}
+
+= Files and Tabs =
+* create a new tab
+ :tabnew
+* switch to next tab
+ gt
+or
+ :tabn
+
+= Window =
+Move cursor to other windows.
+{{{
+CTRL-W CTRL-W                       Move to the next window
+CTRL-W j,k,h,l                      Move down, up, lfet, right
+CTRL-W <Down>,<Up>,<Left>,<Right>   Move down, up, lfet, right
+}}}
+
+= Word under cursor =
+{{{
+yaw        yank a word, include leading or trailing white space
+yiw        yank a inner word 
+daw        delete
+diw        delete
+}}}
+
+= Folding =
+{{{
+zi         switch on/off folding
+za         fold/unfold current block
+zr, zm     
+zR, zM
+}}}
+
+= Plugins =
+* How to install a Vimball plugin (with .vba extension)?
+Open the vba file with vim, and type the :source % command right there. The % refers to the current file
+
+* install Taglist plugin: http://vim-taglist.sourceforge.net/installation.html
+* to use TagList correctly, one has to correctly point out the folder contain 'ctags'. For example:
+     let g:Tlist_Ctags_Cmd='~/bin/ctags/bin/ctags'
+
+* folding: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
+
+* echo function: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
+ $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
+
+* the ctgas command line I used in MPI-EVA
+ $ ctags -R ./Programming/ ./Research/
+
+* gvim color scheme, in <tt>~/.gvimrc</tt>
+<pre>
+" by augix
+" color scheme: desert
+colorscheme desert
+</pre>
+
+* python debugger
+[http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290 runscript]
+
+* VOoM
+Show outline table on the left
+
+* VimWiki
+
+personal wiki with vim.
+
+* [[git-vim]]
+ 
+= +Python =
+* [http://python.ubuntu.org.cn/viewtopic.php?f=165&t=180331 增强gvim适合python开发的相关配置]
+* [http://www.yuanma.org/data/2007/0205/article_2237.htm 用vim搭建python开发环境]
+* [http://www.petersblog.org/node/752 Debugging Python in VIM]
+* checking errors: [http://www.vim.org/scripts/script.php?script_id=2441 pyflakes.vim : PyFlakes on-the-fly Python code checking]
+* [http://www.cnblogs.com/renrenqq/archive/2010/09/09/1813669.html Vim as Python IDE]
+
+= .vimrc file =
+* stop loading the current .vim file
+<pre>
+" disable it in MacVim
+if has('gui_macvim')
+	finish
+endif
+</pre>
+
+= VIMRUNTIME =
+set runtimepath=~/vim_local,$VIMRUNTIME
+
+= Colours =
+[http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html screenshots of colorscheme]
+
+= Send selected lines =
+* Install
+One only need to copy send.vim and send2screen.py to the right directory.
+
+http://www.vim.org/scripts/script.php?script_id=2104
+
+http://www.vim.org/scripts/script.php?script_id=1048
+
+http://users.physik.fu-berlin.de/~mgoerz/blog/2008/09/integrating-vim-with-ipython/
+
+
+= Completion =
+{{{
+completeopt	whether to use a popup menu for Insert mode completion
+ 	set cot=menu
+}}}
+
+= Others =
+* change to the directory of the current file: `:cd %:h`
+
+* show the key mappings `:map`
+
+* Show/Hide invisible characters
+ :set list/nolist
+
+* Disable all blinking:
+ :set guicursor+=a:blinkon0
+

@@ -1,0 +1,18 @@
+%template disqus
+
+{{{
+MM <- function(reads, Gm, K){    
+	(Gm * reads)/(K + reads)
+}
+
+model <- nls( y ~ MM(x, Gm, K), data = data.frame(x,y), start = list(Gm = 4000, K = 10))
+coef(summary(model))
+
+xlim = c(min(x),max(x))
+plot(x,y,xlim=xlim)
+
+line.x = seq(xlim[1],xlim[2],length=100)
+line.y = predict(model, newdata=list(x=line.x))
+lines(line.x,line.y,col='red',lty='dotted')
+
+}}}

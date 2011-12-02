@@ -1,0 +1,1 @@
+In bash, one can use <pre>$$</pre> as process ID.

@@ -1,0 +1,111 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Unix Command Summary</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Unix Command Summary</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Reference</h1>
+<p>
+<a href="http://8help.osu.edu/wks/unix_course/intro-137.html">http://8help.osu.edu/wks/unix_course/intro-137.html</a>
+</p>
+
+<p>
+<a href="http://www.ss64.com/bash/">http://www.ss64.com/bash/</a>
+</p>
+
+<p>
+&lt;TABLE BORDER="1"&gt;
+&lt;CAPTION&gt;Unix Commands&lt;/CAPTION&gt;
+&lt;TH&gt;Command/Syntax&lt;/TH&gt;&lt;TH&gt;What it will do&lt;/TH&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;awk/nawk&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;scan for patterns in a file and process the results
+&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;cat&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;concatenate (list) a file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;cd&lt;/B&gt; [directory]&lt;TD&gt;change directory&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;chgrp&lt;/B&gt; [options] &lt;I&gt;group file&lt;/I&gt;&lt;TD&gt;change the group of the file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;chmod&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;change file or directory access permissions&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;chown&lt;/B&gt; [options] &lt;I&gt;owner file&lt;/I&gt;&lt;TD&gt;change the ownership of a file; can only be done by the superuser&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;chsh&lt;/B&gt; (&lt;B&gt;passwd -e/-s&lt;/B&gt;) &lt;I&gt;username login_shell&lt;/I&gt;&lt;TD&gt;change the user's login shell (often only by the superuser)&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;cmp&lt;/B&gt; [options] &lt;I&gt;file1 file2&lt;/I&gt;&lt;TD&gt;compare two files and list where differences occur (text or binary files)&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;compress&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;compress file and save it as &lt;I&gt;file.Z&lt;/I&gt;&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;cp&lt;/B&gt; [options] &lt;I&gt;file1  file2&lt;/I&gt;&lt;TD&gt;copy &lt;I&gt;file1&lt;/I&gt; into &lt;I&gt;file2&lt;/I&gt;; &lt;I&gt;file2&lt;/I&gt; shouldn't already exist.  This command creates or overwrites &lt;I&gt;file2&lt;/I&gt;.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;cut&lt;/B&gt; (options) [&lt;I&gt;file&lt;/I&gt;(s)]&lt;TD&gt;cut specified field(s)/character(s) from lines in file(s)&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;date&lt;/B&gt; [options]&lt;TD&gt;report the current date and time&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;dd&lt;/B&gt; [if=infile] [of=outfile] [operand=value]&lt;TD&gt;copy a file, converting between ASCII and EBCDIC or swapping byte order, as specified&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;diff&lt;/B&gt; [options] &lt;I&gt;file1 file2&lt;/I&gt;&lt;TD&gt;compare the two files and display the differences (text files only)&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;df&lt;/B&gt; [options] [resource]&lt;TD&gt;report the summary of disk blocks and inodes free and in use&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;du&lt;/B&gt; [options] [&lt;I&gt;directory&lt;/I&gt; or &lt;I&gt;file&lt;/I&gt;]&lt;TD&gt;report amount of disk space in use&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;echo&lt;/B&gt; [text string]&lt;TD&gt;echo the text string to stdout&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;ed&lt;/B&gt; or &lt;B&gt;ex&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;Unix line editors&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;emacs&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;full-screen editor&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;expr&lt;/B&gt; &lt;I&gt;arguments&lt;/I&gt;&lt;TD&gt;evaluate the arguments.  Used to do arithmetic, etc. in the shell.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;file&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;classify the file type&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;find directory&lt;/B&gt; [options] [actions]&lt;TD&gt;find files matching a type or pattern&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;finger&lt;/B&gt; [options] &lt;I&gt;user[@hostname]&lt;/I&gt;&lt;TD&gt;report information about users on local and remote machines&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;ftp&lt;/B&gt; [options] &lt;I&gt;host&lt;/I&gt;&lt;TD&gt;transfer file(s) using file transfer protocol&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;grep&lt;/B&gt; [options] 'search string' &lt;I&gt;argument&lt;/I&gt;&lt;P&gt;&lt;B&gt;egrep &lt;/B&gt;[options] 'search string' &lt;I&gt;argument&lt;/I&gt;&lt;P&gt;&lt;B&gt;fgrep &lt;/B&gt;[options] 'search string' &lt;I&gt;argument&lt;/I&gt;&lt;TD&gt;search the argument (in this case probably a file) for all occurrences of the search string, and list them.   &lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;gzip&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;P&gt;&lt;B&gt;gunzip &lt;/B&gt;[options] &lt;I&gt;file&lt;/I&gt;&lt;P&gt;&lt;B&gt;zcat &lt;/B&gt;[options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;compress or uncompress a file.  Compressed files are stored with a .&lt;B&gt;gz&lt;/B&gt; ending&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;head&lt;/B&gt; [-number] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;display the first 10 (or number of) lines of a file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;hostname&lt;/B&gt;&lt;TD&gt;display or set (super-user only) the name of the current machine&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;kill&lt;/B&gt; [options] [-SIGNAL] [pid#] [%job]&lt;TD&gt;send a signal to the process with the process id number (pid#) or job control number (%n).  The default signal is to kill the process.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;ln&lt;/B&gt; [options] &lt;I&gt;source_file target&lt;/I&gt;&lt;TD&gt;link the &lt;I&gt;source_file&lt;/I&gt; to the &lt;I&gt;target&lt;/I&gt;&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;lpq&lt;/B&gt; [options]&lt;P&gt;&lt;B&gt;lpstat&lt;I&gt; &lt;/I&gt;&lt;/B&gt;[options]&lt;TD&gt;show the status of print jobs&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;lpr&lt;/B&gt;  [options] &lt;I&gt;file&lt;/I&gt;&lt;P&gt;&lt;B&gt;lp&lt;I&gt; &lt;/I&gt;&lt;/B&gt;[options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;print to defined printer&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;lprm&lt;/B&gt; [options]&lt;P&gt;&lt;B&gt;cancel &lt;/B&gt;[options]&lt;TD&gt;remove a print job from the print queue&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;ls&lt;/B&gt; [options] [&lt;I&gt;directory&lt;/I&gt; or &lt;I&gt;file&lt;/I&gt;]&lt;TD&gt;list &lt;I&gt;directory&lt;/I&gt; contents or &lt;I&gt;file&lt;/I&gt; permissions&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;mail&lt;/B&gt; [options] [user]&lt;P&gt;&lt;B&gt;mailx &lt;/B&gt;[options] [user]&lt;P&gt;&lt;B&gt;Mail &lt;/B&gt;[options] [user]&lt;TD&gt;simple email utility available on Unix systems.  Type a period as the first character on a new line to send message out, question mark for help.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;man&lt;/B&gt; [options] &lt;I&gt;command&lt;/I&gt;&lt;TD&gt;show the manual (&lt;B&gt;man&lt;/B&gt;) page for a command&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;mkdir&lt;/B&gt; [options] &lt;I&gt;directory&lt;/I&gt;&lt;TD&gt;make a &lt;I&gt;directory&lt;/I&gt;&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;more&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;P&gt;&lt;B&gt;less &lt;/B&gt;[options] &lt;I&gt;file&lt;/I&gt;&lt;P&gt;&lt;B&gt;pg &lt;/B&gt;[options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;page through a text file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;mv&lt;/B&gt; [options] &lt;I&gt;file1  file2&lt;/I&gt;&lt;TD&gt;move &lt;I&gt;file1&lt;/I&gt; into &lt;I&gt;file2&lt;/I&gt;&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;od&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;octal dump a binary file, in octal, ASCII, hex, decimal, or character mode.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;passwd&lt;/B&gt; [options]&lt;TD&gt;set or change your password&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;paste&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;paste field(s) onto the lines in &lt;I&gt;file&lt;/I&gt;&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;pr&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;filter the file and print it on the terminal&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;ps&lt;/B&gt; [options]&lt;TD&gt;show status of active processes&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;pwd&lt;/B&gt;&lt;TD&gt;print working (current) directory&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;rcp&lt;/B&gt; [options] &lt;I&gt;hostname&lt;/I&gt;&lt;TD&gt;remotely copy files from this machine to another machine&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;rlogin&lt;/B&gt; [options] &lt;I&gt;hostname&lt;/I&gt;&lt;TD&gt;login remotely to another machine&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;rm&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;remove (delete) a file or directory  (&lt;B&gt;-r &lt;/B&gt;recursively deletes the directory and its contents) (&lt;B&gt;-i&lt;/B&gt; prompts before removing files)&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;rmdir&lt;/B&gt; [options] &lt;I&gt;directory&lt;/I&gt;&lt;TD&gt;remove a &lt;I&gt;directory&lt;/I&gt;&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;rsh&lt;/B&gt; [options] &lt;I&gt;hostname&lt;/I&gt;&lt;TD&gt;remote shell to run on another machine&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;script&lt;/B&gt; &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;saves everything that appears on the screen to file until &lt;B&gt;exit&lt;/B&gt; is executed&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;sed&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;stream editor for editing files from a script or from the command line&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;sort&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;sort the lines of the &lt;I&gt;file&lt;/I&gt; according to the options chosen&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;source&lt;/B&gt; &lt;I&gt;file&lt;/I&gt;&lt;P&gt;&lt;B&gt;.&lt;/B&gt; &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;read commands from the &lt;I&gt;file&lt;/I&gt; and execute them in the current shell.  &lt;B&gt;source&lt;/B&gt;: C shell, &lt;B&gt;.&lt;/B&gt;: Bourne shell.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;strings&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;report any sequence of 4 or more printable characters ending in &amp;lt;NL&amp;gt; or &amp;lt;NULL&amp;gt;.  Usually used to search binary files for ASCII strings.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;stty&lt;/B&gt; [options] &lt;TD&gt;set or display terminal control options&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;tail&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;display the last few lines (or parts) of a file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;tar&lt;/B&gt; key[options] [&lt;I&gt;file&lt;/I&gt;(s)]&lt;TD&gt;tape archiver--refer to man pages for details on creating, listing, and retrieving from archive files.  Tar files can be stored on tape or disk.&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;tee&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;copy stdout to one or more files&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;telnet&lt;/B&gt; [host [port]]&lt;TD&gt;communicate with another host using telnet protocol&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;touch&lt;/B&gt; [options] [date] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;create an empty file, or update the access time of an existing file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;tr&lt;/B&gt; [options] &lt;I&gt;string1 string2&lt;/I&gt;&lt;TD&gt;translate the characters in string1 from stdin into those in string2 in stdout&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;uncompress&lt;/B&gt; &lt;I&gt;file.Z&lt;/I&gt;&lt;TD&gt;uncompress &lt;I&gt;file.Z&lt;/I&gt; and save it as a file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;uniq&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;remove repeated lines in a file&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;uudecode&lt;/B&gt; [&lt;I&gt;file&lt;/I&gt;]&lt;TD&gt;decode a uuencoded file, recreating the original file  &lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;uuencode&lt;/B&gt; [&lt;I&gt;file&lt;/I&gt;] &lt;I&gt;new_name&lt;/I&gt;&lt;TD&gt;encode binary file to 7-bit ASCII, useful when sending via email, to be decoded as new_name at destination&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;vi&lt;/B&gt; [options] &lt;I&gt;file&lt;/I&gt;&lt;TD&gt;visual, full-screen editor&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;wc&lt;/B&gt; [options] [&lt;I&gt;file&lt;/I&gt;(s)]&lt;TD&gt;display word (or character or line) count for &lt;I&gt;file&lt;/I&gt;(s)&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;whereis&lt;/B&gt; [options] &lt;I&gt;command&lt;/I&gt;&lt;TD&gt;report the binary, source, and man page locations for the command named&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;which&lt;/B&gt; &lt;I&gt;command&lt;/I&gt;&lt;TD&gt;reports  the path to the command or the shell alias in use &lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;who&lt;/B&gt; or &lt;B&gt;w&lt;/B&gt;&lt;TD&gt;report who is logged in and what processes are running&lt;TR&gt;
+&lt;TD&gt;&lt;B&gt;zcat&lt;/B&gt; &lt;I&gt;file.Z&lt;/I&gt;&lt;TD&gt;concatenate (list) uncompressed file to screen, leaving file compressed on disk
+&lt;/TABLE&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

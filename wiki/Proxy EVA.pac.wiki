@@ -1,0 +1,49 @@
+[[Category:Network]] [[Category:Unix]]
+The Source of <tt>Proxy_EVA.pac</tt>
+<bash>
+function FindProxyForURL(url, host)
+{
+    // nur hostname angegeben
+    if (isPlainHostName(host))
+        return "DIRECT";
+
+    // bei ungueltigem Hostnamen direkte Browser Fehlermeldung ausgeben
+    if (!isResolvable(host))
+        return "DIRECT";
+
+    // MPI Netze direkt anzeigen
+    if (isInNet(host,"192.168.0.0","255.255.0.0")||
+	isInNet(host,"194.94.96.0","255.255.255.0")||
+	isInNet(host,"172.16.0.0","255.255.0.0"))
+	return "DIRECT";
+
+    // IZI Netz direkt anzeigen
+    if (dnsDomainIs(host, ".izi.fraunhofer.de"))
+	return DIRECT;
+
+    // MIS direkt anzeigen
+    if (isPlainHostName("hippasos") &&
+	dnsDomainIs(host, ".mis.mpg.de"))
+	return DIRECT;
+
+    // Augix specified net
+    if (dnsDomainIs(host, ".cn") || dnsDomainIs(host, ".local"))
+	return "DIRECT";
+if (shExpMatch(url, "http://10.*")) { return "DIRECT"; }
+if (shExpMatch(url, "http://127.*")) { return "DIRECT"; }
+if (shExpMatch(url, "http://*.local.")) { return "DIRECT"; }
+if (shExpMatch(url, "http://*.local")) { return "DIRECT"; }
+
+    // MPI DNS-Domain
+//    if (dnsDomainIs(host, ".eva.mpg.de")
+//        return "DIRECT";
+
+    if (url.substring(0, 5) == "http:" ||
+        url.substring(0, 6) == "https:"||
+        url.substring(0, 4) == "ftp:"||
+        url.substring(0, 7) == "gopher:")
+        return "PROXY elninjo.eva.mpg.de:3128; DIRECT";
+    else
+        return "DIRECT";
+}
+</bash>

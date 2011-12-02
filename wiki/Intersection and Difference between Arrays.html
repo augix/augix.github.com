@@ -1,0 +1,58 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Intersection and Difference between Arrays</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Intersection and Difference between Arrays</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+How do I compute the difference of two arrays? How do I compute the intersection of two arrays?
+
+</ul>
+
+<p>
+Use a hash. Here's code to do both and more. It assumes that each element is unique in a given array:
+</p>
+
+<p>
+&lt;perl&gt;
+sub difference {
+</p>
+<blockquote>
+my ( @array1, @array2 ) = ( @{$<em>[0]}, @{$</em>[1]} );
+my @difference = (); my @intersection = 0;
+my %count = ();
+foreach my $element (@array1, @array2) { $count{$element}++ }
+foreach my $element (keys %count) {
+push @{ $count{$element} &gt; 1 ? \@intersection : \@difference }, $element;
+}
+return \@difference;
+</blockquote>
+<p>
+}
+&lt;/perl&gt;
+</p>
+
+<p>
+<a href="http://perldoc.perl.org/perlfaq4.html#How-do-I-compute-the-difference-of-two-arrays%3f--How-do-I-compute-the-intersection-of-two-arrays%3f">http://perldoc.perl.org/perlfaq4.html</a>
+</p>
+
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[[Category:Perl]]
+http://www.perlmonks.org/?node_id=406883
+
+<perl>
+use List::Util qw[min max];
+
+print min(1, 2, 3);
+print max(1, 2, 3);
+</perl>
+
+
+<perl>
+@mm=(50,2,4,5,100);
+$min=(sort { $a <=> $b } @mm)[0];
+$max=(sort { $a <=> $b } @mm)[-1];
+print $min."\n";
+</perl>
+
+<perl>
+@mm=(50,2,4,5);
+$x = 10; $y = 2;
+
+# 1
+$min=(sort { $a <=> $b } @mm)[0];
+
+# 2
+$min = ($x, $y)[$x>$y];
+
+# 3
+sub min ($$) { $_[$_[0] > $_[1]] };
+$min = min(2,10);
+
+# 4
+$min = ($x + $y - abs($x - $y)) / 2;
+$max = ($x + $y + abs($x - $y)) / 2;
+
+print $min."\n";
+</perl>

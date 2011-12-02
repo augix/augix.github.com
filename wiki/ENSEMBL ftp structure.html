@@ -1,0 +1,145 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>ENSEMBL ftp structure</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>ENSEMBL ftp structure</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+FTP Site Directories
+<a href="http://www.ensembl.org/info/downloads/ftp_structure.html">Ref Link</a>
+</p>
+
+<p>
+The FTP directory has the following basic structure, although not all information is neccessarily available for each species.
+</p>
+
+<p>
+   |-- embl	      Gene predictions annotated on genomic DNA slices of 1 Mb in EMBL format.
+<table class='center'>
+<tr>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+   |   |-- species
+   |
+   |
+   |-- emf     	      Alignment dumps in EMF format
+<table class='center'>
+<tr>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+   |   |-- pecan                  * Pecan whole genome multiple alignments
+   |   |                            with conservation scores for selected sets
+   |   |-- ensembl_compara        * protein trees and protein multiple alignments
+   |   |                            underlying orthologue/paralogue predictions
+   |   |--species_variation       * resequencing data
+   |
+   | 
+   |-- fasta	      Gene predictions in FASTA datatabase format
+<table class='center'>
+<tr>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+   |   |--species
+<table class='center'>
+<tr>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+   |      |-- cdna         * Transcript (cDNA) predictions
+   |      |-- dna          * Genomic DNA in assembled entities
+   |      |-- pep          * Translation (peptide) predictions
+   |      |-- rna          * Non-coding RNA predictions
+   |
+   |            
+   |-- genbank	      Gene predictions annotated on genomic DNA slices of 1 Mb in GenBank format.
+<table class='center'>
+<tr>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+   |   |-- species
+   |
+   |
+   |-- gtf	      Gene annotation in GTF format
+   |
+   |-- mysql          MySQL database table text dumps
+</p>
+<blockquote>
+|
+|-- core       General genome annotation information
+|
+|                * Genome sequence assembly
+|                * Ensembl gene predictions
+|                * Ab initio gene predictions
+|                * Marker information
+|                * ...
+|
+|-- otherfeatures  Additional genome annotation
+|
+|                * Gene predictions based on EST information
+|                * ...
+|
+|-- variation  Genetic variation information
+|-- vega       Manually curated gene sets
+|-- cdna       cDNA to genome alignments based on the latest EMBL database
+|
+|-- ensembl_compara      Cross-species comparative genomics data:
+|
+|                          * Orthologue/paralogue predictions
+|                          * Protein families
+|                          * Whole genome alignments
+|                          * Synteny information
+|
+|-- ensembl_go           Gene Ontology database
+|
+|-- ensembl_web_user_db  SQL table defintion for server-side user config database
+|
+|-- ensembl_website        Ensembl web site database:
+|                            * Context-sensitive help articles
+|                            * News articles
+|                            * Mini-ads
+|-- compara_mart_homology     Orthologue/paralogue predictions
+|
+|-- compara_mart_multiple_ga  Constrained elements predictions
+|
+|-- compara_mart_pairwise_ga  Whole genome pairwise alignments
+| 
+|-- ensembl_mart              Cross-species data mining tables
+|
+|-- genomic_features_mart     Clone data sets
+|
+|-- sequence_mart             Genome sequences
+|
+|-- snp_mart                  Genetic variation information
+|
+|-- vega_mart                 Manually curated gene sets
+</blockquote>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

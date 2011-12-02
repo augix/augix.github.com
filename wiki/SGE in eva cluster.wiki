@@ -1,0 +1,72 @@
+= Profile =
+User  private  default  request  files  are  processed  under  the  locations $HOME/.sge_request  and  $cwd/.sge_request.  The  working  directory  local default request file has the highest precedence
+
+= E-mail =
+send email when the job ends:
+ -m e
+ -M your@email
+
+= sge script =
+job.sge
+<bash>
+# IMPORTANT: specifies the interpreting shell for this job to be the Bash shell
+#$ -S /bin/sh
+
+# execute the job for the current working directory.
+#$ -cwd
+
+# set the required cpu time of your job
+# HH:MM:SS
+#$ -l h_cpu=20:00:00
+
+# set the required memory:
+# normal:3.7 GB, 72 h, 4 slots per host.
+# bigmem: 7.7 GB, 72 h, 2 slots per host.
+# hugemem: 15.7 GB, 72 h, 1 slot per host.
+#$ -l h_vmem=7000M
+
+# don't flood myself with e-mail
+#$ -m n
+
+# join the error and standard output streams
+#$ -j yes
+
+# Defines or redefines the path used for the standard error  stream 
+# and the standard output stream of the job. 
+#$ -o ./sge.out/
+#$ -e ./sge.out/
+
+# name of the job
+#$ -N mapping_simulation
+
+# all environment variables active within the qsub utility be exported to  the  context
+              of the job.
+#$ -V
+
+# If the value of -b is 'y', then command  may be a binary or script. If  the  value  of -b is 'n' then command needs to be a script and it will be handled as script.
+#$ -b y
+
+echo $1 | ./job.Rf
+</bash>
+
+= submit script =
+<bash>
+for i in `seq 1 100`; do qsub job.sge $i; done
+</bash>
+
+= Other tips =
+== SGE command ==
+* submit jobs
+ qsub
+
+* check the state of jobs
+ qstat
+
+* check the state of a particular job
+ qstat -j JOB_ID
+
+* check the state of severs
+ qstat -g c
+
+* delete jobs
+ qdel -u augix

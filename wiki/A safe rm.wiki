@@ -1,0 +1,29 @@
+[[Category:bash]]
+write a file: <tt> ~/rm.sh </tt>
+<bash>
+#!/bin/bash
+#
+#  A tiny script that moves files to a wastebasket, rather than deleting them
+#+ (and doesn't overwrite previously deleted files of the same name).
+
+[ -d ~/Trash ]
+if [ $? -eq 1 ]; then
+    echo "Creating directory."
+    mkdir ~/Trash;
+fi
+
+random_suffix=$RANDOM
+
+for file in $@; do
+    if [[ -e ~/Trash/$file ]]; then
+        mv $file ~/Trash/${file}.${random_suffix}
+    else mv $file ~/Trash/
+    fi
+done
+</bash>
+
+modify <tt> ~/.bashrc </tt>
+<bash>
+alias remove='/bin/rm'
+alias rm='~/rm.sh'
+</bash>

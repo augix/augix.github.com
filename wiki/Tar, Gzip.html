@@ -1,0 +1,79 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Tar, Gzip</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Tar, Gzip</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+ tar -czvf aps95.tar.gz aps95/
+ tar -xzvf aps95.tar.gz
+</p>
+
+<p>
+or
+</p>
+
+<p>
+ tar -cvf aps95.tar aps95/
+ gzip aps95.tar
+</p>
+
+<p>
+ gunzip aps95.tar.gz
+ tar -xvf aps95.tar
+</p>
+
+<p>
+or 
+</p>
+
+<p>
+ tar -cvf aps95.tar aps95/
+</p>
+
+<p>
+ tar -xvf aps95.tar
+</p>
+
+<p>
+ gunzip &lt; file.tar.gz | tar xvf -
+</p>
+
+<h1 id="toc_1">other</h1>
+
+<ul>
+<li>
+if you don't remember what is
+
+</ul>
+<p>
+inside the compressed archive; this command will show you the contents,
+again without taking apart the whole thing:
+</p>
+
+<p>
+ gunzip -c aps95.tar.gz | tar -tvf -
+</p>
+
+<ul>
+<li>
+extract bz2 files
+ tar xjvf cornbread.tar.bz2
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+%template disqus
+
+= logical operators =
+{{{
+&& 
+
+    and (logical)
+
+    if [ $condition1 ] && [ $condition2 ]
+    # Same as:  if [ $condition1 -a $condition2 ]
+    # Returns true if both condition1 and condition2 hold true...
+
+    if [[ $condition1 && $condition2 ]]    # Also works.
+
+|| 
+
+    or (logical)
+
+    if [ $condition1 ] || [ $condition2 ]
+    # Same as:  if [ $condition1 -o $condition2 ]
+    # Returns true if either condition1 or condition2 holds true...
+
+    if [[ $condition1 || $condition2 ]]    # Also works.
+    # Note that || operator not permitted within [ ... ] construct.
+
+Example:
+    
+    X=1
+    [ $X -ne 0 ] && echo "X isn't zero" || echo "X is zero"
+
+}}}
+
+= reference =
+
+* [http://www.tutorialspoint.com/unix/unix-basic-operators.htm Shell Basic Operators]
+* [http://www.linuxtopia.org/online_books/advanced_bash_scripting_guide/ops.html Advanced Bash-Scripting Guide: Operations]
+
+

@@ -1,0 +1,138 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>SGE in PICB cluster</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>SGE in PICB cluster</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_ R.html">Category: R</a>
+</p>
+
+<h1 id="toc_1">How to submit simple jobs in PICB cluster</h1>
+<p>
+ ls job*.sh | xargs -n1 qsub -q linux.q
+</p>
+
+<h1 id="toc_2">How to run R jobs in parallel in PICB cluster with SGE system</h1>
+<h2 id="toc_2.1">qsub.sh</h2>
+<p>
+&lt;bash&gt;
+#!/bin/sh
+mkdir ./sge.out
+chmod u+x *
+</p>
+
+<p>
+for i in <code>seq 1 100</code>; do
+  qsub -q linux.q test.sge $i;
+done
+&lt;/bash&gt;
+</p>
+
+<h2 id="toc_2.2">test.sge</h2>
+<p>
+&lt;pre&gt;
+#!/bin/sh
+</p>
+
+<ol>
+<li>
+Change to the current working directory upon starting of the job
+
+</ol>
+<p>
+#$ -cwd
+</p>
+
+<ol>
+<li>
+run job on the node with at least a certain size of free memory
+
+</ol>
+<p>
+#$ -l mem_free=8G
+</p>
+
+<ol>
+<li>
+numbers of slots for this job, minimum 2, maximum 4
+
+</ol>
+<p>
+#$ -pe orte-test 2-4
+</p>
+
+<ol>
+<li>
+do not flood myself with e-mail
+
+</ol>
+<p>
+#$ -m n
+</p>
+
+<ol>
+<li>
+join the error and standard output streams
+
+</ol>
+<p>
+#$ -j yes
+</p>
+
+<ol>
+<li>
+Defines or redefines the path used for the standard error  stream and the stan
+
+</ol>
+<p>
+dard output stream of the job. 
+#$ -e ./sge.out/
+#$ -o ./sge.out/
+</p>
+
+<ol>
+<li>
+name of the job
+
+</ol>
+<p>
+#$ -N test_sge_system_in_picb
+</p>
+
+<p>
+/picb/home5/augix/bin/R/bin/Rscript ./test.R $1
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_2.3">test.R</h2>
+<p>
+&lt;R&gt;
+args &lt;- commandArgs(TRUE)
+flag&lt;-args[1]
+print(flag)
+write.table(flag,file=paste(flag,".txt",sep=""))
+q(save="no")
+&lt;/R&gt;
+</p>
+
+<h1 id="toc_3">See Also</h1>
+<p>
+<a href="SGE in eva cluster.html">SGE in eva cluster</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

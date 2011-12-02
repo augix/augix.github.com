@@ -1,0 +1,54 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>X11 on Mac</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>X11 on Mac</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+*<a href="Install X11 on Mac.html">Install X11 on Mac</a>
+</p>
+<ul>
+<li>
+<a href=".Xdefaults on mac.html">.Xdefaults on mac</a>
+
+<li>
+<a href="http://developer.apple.com/opensource/tools/runningX11.html">An important reference about X11 on mac</a>
+
+<li>
+change font of xterm, by customize the xterm command
+ xterm -fa Monaco -fs 10
+
+</ul>
+<p>
+or
+ xterm -fa "Andale mono" -fs 10
+</p>
+<ul>
+<li>
+change fullscreen background of X11 on Mac OS X
+
+</ul>
+<p>
+reference: <a href="http://forums.macosxhints.com/showthread.php?t=32760">http://forums.macosxhints.com/showthread.php?t=32760</a>
+write in your ~/.xinitrc file:
+&lt;bash&gt;
+/usr/X11R6/bin/xsetroot -solid black &amp;
+exec quartz-wm
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

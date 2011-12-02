@@ -1,0 +1,19 @@
+%template default
+This wiki covers the following subjects:
+
+= Subjects =
+* [[Programming]]
+* [[IT Notes]]
+* [[Biology Notes]]
+* [[Bioinformatics]]
+* [[Statistics]]
+* [[Projects]]
+* [[Foreign Language]]
+* [[Life]]
+* [[Music]]
+* [[Chinese]]
+* [[Day-by-Day]]
+* [[../Blog/Blog| Blog]]
+
+= Links =
+* [http://www.augix.com Augix.com]

@@ -1,0 +1,77 @@
+Get Consensus Sequence for Primer Design
+
+Our task is to get the consensus sequence for primer design. The steps in this task are:
+Note: all the input and output files should be in the fold "output" and all the perl scripts are in the fold "perl scripts".
+
+= Get the information about exons (outlier & detected) to form the Input File. =
+The information includes:
+# the refseq ID of the human transcript in which the exons are located;  
+# the name of the chromosome in which the exons are located;
+# the chain of chromosome (+/-)
+# the ID of the outlier exon;
+# the ID and the start/stop position in the chromosome of the exons(including one outlier and other detected exons).  
+
+   Sample:
+   REF_ID NM_000350
+   CHR	chr1
+   CHAIN	-
+   OUTLIER	66741
+   EXON_CLUSTER_ID START STOP
+   66732 94230989 94231380
+   66735 94234253 94234339
+   66737 94236005 94236083   
+   66738 94236107 94236254
+   ...
+
+You can get the positions of the exons from files named <code><chromosome name>_exon_location.txt</code>.
+These files are produced using command: 
+  perl get_exon_id_from_affymatrix.pl <chromosome name>
+
+= Extract the human transcript sequence from Human Refseq Database and find the corresponding positions of the exons in the transcript. =
+run perl command:
+  perl get_human_refseq_exon_position.pl <Input File>
+Two files will be produced: <code><Refseq ID>_seq.fa </code> and <code><Refseq ID>_location.txt</code>. You should put the two files in the fold <code>output</code>.
+
+= Search the chimp and rhesus Refseq Database with human transcript using BLAST. =
+Commands:
+ export PATH=$PATH:/usr/local/blastall
+ blastall -p blastn -d ../rna_database/rna_chimp.fa -i  <Refseq ID>_seq.fa -o <Refseq ID>_chimp.txt -m8 -b1
+ blastall -p blastn -d ../rna_database/rna_rhesus -i <Refseq ID>_seq.fa -o <Refseq ID>_rhesus.txt -m8 -b1
+Two files will be produced: <code><Refseq ID>_chimp.txt</code> and  <code><Refseq ID>_rhesus.txt</code>.
+
+ps: create blast database before lauching blastall
+ formatdb -p F -o F -a F -i ../rna_database/rna_human.fa
+ formatdb -p F -o F -a F -i ../rna_database/rna_chimp.fa
+ formatdb -p F -o F -a F -i ../rna_database/rna_rhesus.fa
+
+= Extract the chimp and rhesus transcript sequences from Chimp Refseq Database and Rhesus Refseq Database respectively. =
+Commands:
+If you want to align human and chimp transcrips, run this:
+ perl get_seqs_for_2alignment.pl <Refseq ID>
+If you wan to align three species (human, chimp and rhesus), run this:
+ perl get_seqs_for_3alignment.pl <Refseq ID>
+A file will be produced: <code><Refseq ID>_for_2alignment.fa</code> or <code><Refseq ID>_for_3alignment.fa</code>.
+
+= Align the transcripts of the species using Soft clustalw. =
+The Soft <code>clustalw</code> is in the folder <code>clustalw1.83</code>. The input file is  <code><Refseq ID>_for_2alignment.fa</code> or <code><Refseq ID>_for_3alignment.fa</code>.
+Two file will be produced: <code><Refseq ID>_for_2alignment.aln</code> or <code><Refseq ID>_for_3alignment.aln</code> and <code><Refseq ID>_for_2alignment.dnd</code> or <code><Refseq ID>_for_2alignment.dnd</code>.
+You should put the first file in fold <code>output</code>.
+
+ sh clustalw_for_2seq.sh <Refseq ID>
+or 
+ sh clustalw_for_3seq.sh <Refseq ID>
+
+= Get the consensus sequence. =
+Command:
+  perl get_consensus_seq.pl <Refseq ID> <2/3>
+A file will be produced: <code>cons_2_<Refseq ID>.txt</code> or <code>cons_3_<Refseq ID>.txt</code>.
+Note: the sequence of the outlier exon will be in capital characters and the start/end of the detected exon sequences will also be in capital characters.
+
+= If you want to allow gaps in the consensus sequence, you should recalculate the positions of the exons. =
+Command:
+ perl get_gapped_position.pl <Refseq ID> <2/3>
+A file will be produced: <code>gapped_<Refseq ID>_location.txt</code>.
+
+= Files =
+*[[get_exon_id_from_affymatrix.pl]]
+*[[get_detected_exon.R]]

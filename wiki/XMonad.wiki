@@ -1,0 +1,33 @@
+%template disqus
+
+= dmenu =
+install dmenu, so that one can use mod-p to open an application-launcher.
+
+= urxvt =
+I only successfully compiled it with option --disable-perl.
+
+= + Gnome =
+* install libghc6-xmonad-dev
+* modify .xmonad/xmonad.hs
+{{{
+import XMonad
+import XMonad.Config.Gnome
+
+main = xmonad gnomeConfig
+    { borderWidth = 1
+    , terminal = "urxvt"
+    , normalBorderColor = "#cccccc"
+    }
+
+}}}
+* modify .xsession
+{{{
+killall metacity ; xmonad &
+}}}
+
+= terminal =
+Use gnome-terminal with colorscheme "green on black". Color palette scheme 'tango'.
+
+reference:
+* http://versia.com/2009/10/xmonad-metacity-gnome/
+* http://upsilon.cc/~zack/blog/posts/2009/04/xmonad_+_gnome_on_Debian/

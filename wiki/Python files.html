@@ -1,0 +1,58 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python files</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python files</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+to get the full pathname to a script that python is executing
+
+</ul>
+<p>
+&lt;python&gt;
+import os, sys
+os.path.abspath(sys.argv[0])
+&lt;/python&gt;
+</p>
+
+<ul>
+<li>
+list all the files in given folder
+
+</ul>
+<p>
+&lt;python&gt;
+import glob
+glob.glob(”/mypath/*.txt”)
+&lt;/python&gt;
+</p>
+
+<ul>
+<li>
+create a folder if it does not exist
+
+</ul>
+<p>
+&lt;python&gt;
+import os
+if not os.path.exists(dir):
+  os.makedir(dir)
+&lt;/python&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

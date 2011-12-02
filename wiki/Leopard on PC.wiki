@@ -1,0 +1,4 @@
+* [[iATKOS]]
+* [[G-Parted]]
+* [[Leopard on AMD PC]]
+[http://www.macgudu.org/viewthread.php?tid=4082 硬盘安装Leopard]

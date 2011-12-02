@@ -1,0 +1,67 @@
+sed 不与初始的文件打交道，所有的改动输出到屏幕或重定向到文件。 
+
+格式为： 
+sed [options] '{command}' [filename] 
+
+= 替换 =
+ 's/{old value}/{new value}/' 
+ $ echo The tiger cubs will meet on Tuesday after school | sed 's/tiger/wolf/' 
+ The wolf cubs will meet on Tuesday after school
+
+= 批量修改文件名 =
+[http://user.it.uu.se/~matkin/documents/shell/ Reference]
+
+Renaming several files at the same time
+If you have a number of files named foo.C, bar.C.gz, etc. and want to rename them to foo.cc, bar.cc.gz, etc. This line will do the trick.
+
+ ls *.C* | sed 's/\(.*\).C\(.*\)/mv & \1.cc\2/' | sh 
+
+= 多次修改 =
+* "-e" 选项，它通知程序使用多条编辑命令。
+ $ echo The tiger cubs will meet on Tuesday after school | sed -e 's/tiger/wolf/' -e's/after/before/' 
+ The wolf cubs will meet on Tuesday before school
+
+* 分号来分隔命令。分号必须紧跟斜线。
+ $ echo The tiger cubs will meet on Tuesday after school | sed 's/tiger/wolf/; s/after/before/' 
+ The wolf cubs will meet on Tuesday before school
+
+= 全局修改 =
+sed 默认非全局，只修改一次。用 g 设置全局。
+ sed 's/line/LINE/g' 
+
+= -n选项 =
+* 只显示1～2行*/
+ $ sed -n '1,2p' test 
+1 line line1 
+2 line line2
+
+* 只显示含有line3行*/ 
+ $ sed -n '/line3/p' test 
+3 line line3
+
+= 删除行 =
+删除1和2行
+ $ sed -n '1,2d' test
+
+= 其他 =
+<pre>
+sed编辑命令 
+p 打印匹配行 
+= 显示文件行号 
+a\ 在定位行号后附加新文本信息 
+i\ 在定位行号后插入新文本信息 
+d 删除定位行 
+c\ 用新文本替换定位文本 
+s 使用替换模式替换相应模式 
+r 从另一个文件中读文本 
+w 写文本到一个文件 
+q 第一个模式匹配完成后推出或立即推出 
+l 显示与八进制ASCII代码等价的控制字符 
+{ } 在定位行执行的命令组 
+n 从另一个文件中读文本下一行，并附加在下一行 
+g 将模式2粘贴到/pattern n/ 
+y 传送字符 
+n 延续到下一输入行；允许跨行的模式匹配语句
+</pre>
+
+[Reference: http://www.cublog.cn/u3/90136/showart_1795318.html]

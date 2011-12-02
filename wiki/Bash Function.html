@@ -1,0 +1,91 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Bash Function</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Bash Function</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Define a function</h1>
+<pre>
+&lt;bash&gt;  
+#!/bin/bash 
+
+testfunc () { 
+    echo "$# parameters"; 
+    for i in $@; 
+        do echo $i; 
+    done;
+}
+testfunc a 'b c d'
+
+
+function e {
+	echo $1 
+}  
+e Hello
+e World
+
+&lt;/bash&gt;
+</pre>
+
+<h1 id="toc_2">Send parameter</h1>
+
+<p>
+<a href="http://www.ibm.com/developerworks/library/l-bash-parameters.html?ca=drs-">IBM: bash parameters</a> 
+</p>
+
+<pre>
+&lt;bash&gt;
+[ian@pinguino ~]$ testfunc () { echo "$# parameters"; echo "$@"; }
+[ian@pinguino ~]$ testfunc
+0 parameters
+
+[ian@pinguino ~]$ testfunc a b c
+3 parameters
+a b c
+[ian@pinguino ~]$ testfunc a "b c"
+2 parameters
+a b c
+
+$ testfunc () { echo "$# parameters"; for i in $@; do echo $i; done;}
+$ testfunc a 'b c d'
+2 parameters
+a
+b
+c
+d
+&lt;/bash&gt;
+</pre>
+
+<h1 id="toc_3">Return value</h1>
+<pre>
+&lt;bash&gt;
+function myfunc()
+{
+    local  myresult='some value'
+    echo "$myresult"
+}
+
+result=$(myfunc)   # or result=`myfunc`
+echo $result
+&lt;/bash&gt;
+</pre>
+
+<p>
+<a href="http://www.linuxjournal.com/content/return-values-bash-functions">Ways to let function returns a value</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Cut paste join</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Cut paste join</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">cut</h1>
+
+<p>
+cut 文件的列，列可以是 tab 分割的列（用 -f 参数），也可以是指定的区段的字符（用 -b 参数）。
+</p>
+
+<h1 id="toc_2">paste</h1>
+<ul>
+<li>
+paste 刚好与 cut 相反，它把多列和在一起。
+
+</ul>
+
+<p>
+example:
+&lt;bash&gt;
+$ cat names
+Tony
+Emanuel
+...
+</p>
+
+<p>
+$ cat numbers
+(307) 555-5356
+(212) 555-3456
+</p>
+
+<p>
+$ cat addresses
+55-23 Vine Street, Miami
+39 University Place, New York
+</p>
+
+<p>
+$ paste names addresses numbers
+Tony    55-23 Vine Street, Miami       (307) 555-5356
+Emanuel 39 University Place, New York  (212) 555-3456
+&lt;/bash&gt;
+</p>
+
+<ul>
+<li>
+将多行数据合并到一行，他们间用tab键隔开
+
+</ul>
+<p>
+&lt;pre&gt;
+$ paste -s names        
+Tony    Emanuel Lucy    Ralph   Fred
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_3">join</h1>
+<p>
+join lines of two files on a common field
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

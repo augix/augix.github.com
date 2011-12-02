@@ -1,0 +1,63 @@
+How to use RSPerl
+
+Source: http://www.omegahat.org/RSPerl/
+
+= How to install RSPerl =
+
+== Download ==
+
+The source RSPerl_0.92-1.tar.gz http://www.omegahat.org/RSPerl/RSPerl_0.92-1.tar.gz.
+
+== Rebuild R as a shared library ==
+
+Note also that to use the R-in-Perl mechanism one must have built R as a shared library. (This is not necessary when calling Perl from R.) You can check if this has been done by checking to see if libR is in the directory $R_HOME/lib/. If this is not there, you are advised to clean the entire R distribution (with make distclean) so as to start from scratch and then configure and compile R using the—enable-R-shlib to R’s configuration script. The following sequence of commands should work.
+
+<pre>
+cd $R_HOME
+make distclean
+./configure --enable-R-shlib
+make
+</pre>
+
+== Installation ==
+
+<pre>
+R CMD INSTALL -c -l <wherever> --configure-args='--with-in-perl' RSPerl_0.92-1.tar.gz
+</pre>
+
+== Configuratioin ==
+
+If we run R inside Perl, we need to find both the R run-time library (libR.so) and also the RSPerl package which will get loaded when the R session is started. We also need to find some additional shared libraries/DLLs in the RSPerl package. For this, we need to make certain the dynamic loader can find all these DLLs.
+
+Perl also needs to find the Perl code, i.e. the R.pm, RReferences.pm and the R.so files. We need to set $PERL5LIB to specify their location.
+
+Additionally, we need to know where the R package is located if it is not installed into $R_HOME/library/. This is done via $R_LIBS
+
+And if we are running R from within Perl we also need to tell the R engine where $R_HOME is.
+
+As Michael Dondrup said, that’s a lot of environment variables to set. Typically we don’t have to set them all. If we install the R package into a personal library, that library is typically where we put lots of R packages and so it is in our $R_LIBS variable already. Similarly, if we install the Perl code into a local Perl library, we will have that specified in our $PERL5LIB environment variable. And if we are running Perl inside R, $R_HOME is already set when we start R and also finding libR.so is done for us.
+
+So the main variables we might have to set are $LD_LIBRARY_PATH and $PERL5LIB if the Perl code is installed into the R package area, We provide two shell scripts to set these variables to the appropriate values. There is one for sh/bash-style shells and another for csh/tcsh-style shells named RSPerl.bsh and RSPerl.csh respectively. They are located in the RSPerl/scripts / directory of the installed package. These are not executable but rather intended to be sourced into an existing shell to set the variables for the remainder of that shell session. 
+
+Use 
+<pre>
+. RSPerl/scripts/RSPerl.bsh 
+</pre>
+or 
+<pre>
+source RSPerl/scripts/RSPerl.csh
+</pre>
+
+= How to use =
+== Launch R from Perl ==
+<perl>
+use lib "/picb/home5/augix/Library/R/RSPerl/perl/x86_64-linux-thread-multi";   #indicate the path for RSPerl module
+use R;
+
+&R::initR("--silent");
+$x = &R::call("sum", (1,2,3));
+$y = &R::call("sum", (1,2,$x));
+print "Sum = $y\n";
+</perl>
+
+[[Category:R]][[Category:Perl]]

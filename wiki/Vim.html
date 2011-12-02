@@ -1,0 +1,336 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Vim</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Vim</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Learning Vim</h1>
+<ul>
+<li>
+[Graphical vi-vim Cheat Sheet and Tutorial <a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html</a>]
+
+</ul>
+
+<ul>
+<li>
+[vim使用进阶: 目录 <a href="http://easwy.com/blog/archives/advanced-vim-skills-catalog/">http://easwy.com/blog/archives/advanced-vim-skills-catalog/</a>]
+
+</ul>
+
+<ul>
+<li>
+indent in multiple lines
+
+</ul>
+<p>
+** way1: enter visual mode, use "&gt;" or "&lt;" to increase or decrease indent
+** way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
+</p>
+
+<ul>
+<li>
+'''#'''
+
+</ul>
+<p>
+the '''#''' key create a motion jumping from the current word to the same word in the current buffer
+</p>
+
+<ul>
+<li>
+<a href="http://www.zinkwazi.com/unix/notes/vimtips.html">Best of VIM tips</a>
+
+</ul>
+
+<ul>
+<li>
+<a href="http://rosenfeld.heroku.com/en/articles/2010-12-26-achieving-productivity-with-vim-as-ide">Achieving Productivity with Vim as IDE</a>
+
+</ul>
+ 
+<ul>
+<li>
+<a href="http://www.adp-gmbh.ch/vim/vars.html">Programming in Vim Variables</a>
+
+</ul>
+
+<h1 id="toc_2">Moving</h1>
+<ul>
+<li>
+Moving around, scroll up and down the screen
+
+</ul>
+<p>
+CTRL-F
+CTRL-B
+CTRL-U
+CTRL-D
+CTRL-E
+CTRL-Y
+</p>
+
+<h1 id="toc_3">Jumping</h1>
+<p>
+One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
+ :ju
+to print the jump list.
+</p>
+
+<h1 id="toc_4">Buffers</h1>
+<ul>
+<li>
+switch to previous buffer: <code>&lt;c-6&gt;</code>
+
+</ul>
+
+<h1 id="toc_5">Open file</h1>
+<pre>
+gf	 open in the same window ("goto file")
+&lt;c-w&gt;f	 open in a new window (Ctrl-w f)
+&lt;c-w&gt;gf	 open in a new tab (Ctrl-w gf)
+</pre>
+
+<h1 id="toc_6">Files and Tabs</h1>
+<ul>
+<li>
+create a new tab
+ :tabnew
+
+<li>
+switch to next tab
+ gt
+
+</ul>
+<p>
+or
+ :tabn
+</p>
+
+<h1 id="toc_7">Window</h1>
+<p>
+Move cursor to other windows.
+</p>
+<pre>
+CTRL-W CTRL-W                       Move to the next window
+CTRL-W j,k,h,l                      Move down, up, lfet, right
+CTRL-W &lt;Down&gt;,&lt;Up&gt;,&lt;Left&gt;,&lt;Right&gt;   Move down, up, lfet, right
+</pre>
+
+<h1 id="toc_8">Word under cursor</h1>
+<pre>
+yaw        yank a word, include leading or trailing white space
+yiw        yank a inner word 
+daw        delete
+diw        delete
+</pre>
+
+<h1 id="toc_9">Folding</h1>
+<pre>
+zi         switch on/off folding
+za         fold/unfold current block
+zr, zm     
+zR, zM
+</pre>
+
+<h1 id="toc_10">Plugins</h1>
+<ul>
+<li>
+How to install a Vimball plugin (with .vba extension)?
+
+</ul>
+<p>
+Open the vba file with vim, and type the :source % command right there. The % refers to the current file
+</p>
+
+<ul>
+<li>
+install Taglist plugin: <a href="http://vim-taglist.sourceforge.net/installation.html">http://vim-taglist.sourceforge.net/installation.html</a>
+
+<li>
+to use TagList correctly, one has to correctly point out the folder contain 'ctags'. For example:
+     let g:Tlist_Ctags_Cmd='~/bin/ctags/bin/ctags'
+
+</ul>
+
+<ul>
+<li>
+folding: <a href="http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx">http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx</a>
+
+</ul>
+
+<ul>
+<li>
+echo function: <a href="http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx">http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx</a>
+ $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
+
+</ul>
+
+<ul>
+<li>
+the ctgas command line I used in MPI-EVA
+ $ ctags -R ./Programming/ ./Research/
+
+</ul>
+
+<ul>
+<li>
+gvim color scheme, in &lt;tt&gt;~/.gvimrc&lt;/tt&gt;
+
+</ul>
+<p>
+&lt;pre&gt;
+" by augix
+" color scheme: desert
+colorscheme desert
+&lt;/pre&gt;
+</p>
+
+<ul>
+<li>
+python debugger
+
+</ul>
+<p>
+<a href="http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290">runscript</a>
+</p>
+
+<ul>
+<li>
+VOoM
+
+</ul>
+<p>
+Show outline table on the left
+</p>
+
+<ul>
+<li>
+VimWiki
+
+</ul>
+
+<p>
+personal wiki with vim.
+</p>
+
+<ul>
+<li>
+<a href="git-vim.html">git-vim</a>
+
+</ul>
+ 
+<h1 id="toc_11">+Python</h1>
+<ul>
+<li>
+<a href="http://python.ubuntu.org.cn/viewtopic.php?f=165&amp;t=180331">增强gvim适合python开发的相关配置</a>
+
+<li>
+<a href="http://www.yuanma.org/data/2007/0205/article_2237.htm">用vim搭建python开发环境</a>
+
+<li>
+<a href="http://www.petersblog.org/node/752">Debugging Python in VIM</a>
+
+<li>
+checking errors: <a href="http://www.vim.org/scripts/script.php?script_id=2441">pyflakes.vim : PyFlakes on-the-fly Python code checking</a>
+
+<li>
+<a href="http://www.cnblogs.com/renrenqq/archive/2010/09/09/1813669.html">Vim as Python IDE</a>
+
+</ul>
+
+<h1 id="toc_12">.vimrc file</h1>
+<ul>
+<li>
+stop loading the current .vim file
+
+</ul>
+<p>
+&lt;pre&gt;
+" disable it in MacVim
+if has('gui_macvim')
+	finish
+endif
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_13">VIMRUNTIME</h1>
+<p>
+set runtimepath=~/vim_local,$VIMRUNTIME
+</p>
+
+<h1 id="toc_14">Colours</h1>
+<p>
+<a href="http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html">screenshots of colorscheme</a>
+</p>
+
+<h1 id="toc_15">Send selected lines</h1>
+<ul>
+<li>
+Install
+
+</ul>
+<p>
+One only need to copy send.vim and send2screen.py to the right directory.
+</p>
+
+<p>
+<a href="http://www.vim.org/scripts/script.php?script_id=2104">http://www.vim.org/scripts/script.php?script_id=2104</a>
+</p>
+
+<p>
+<a href="http://www.vim.org/scripts/script.php?script_id=1048">http://www.vim.org/scripts/script.php?script_id=1048</a>
+</p>
+
+<p>
+<a href="http://users.physik.fu-berlin.de/~mgoerz/blog/2008/09/integrating-vim-with-ipython/">http://users.physik.fu-berlin.de/~mgoerz/blog/2008/09/integrating-vim-with-ipython/</a>
+</p>
+
+
+<h1 id="toc_16">Completion</h1>
+<pre>
+completeopt	whether to use a popup menu for Insert mode completion
+ 	set cot=menu
+</pre>
+
+<h1 id="toc_17">Others</h1>
+<ul>
+<li>
+change to the directory of the current file: <code>:cd %:h</code>
+
+</ul>
+
+<ul>
+<li>
+show the key mappings <code>:map</code>
+
+</ul>
+
+<ul>
+<li>
+Show/Hide invisible characters
+ :set list/nolist
+
+</ul>
+
+<ul>
+<li>
+Disable all blinking:
+ :set guicursor+=a:blinkon0
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

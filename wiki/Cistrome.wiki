@@ -1,0 +1,3 @@
+'''Cistrome''' This term http://cistrome.pbwiki.com was coined by investigators at the Dana-Farber Cancer Institute and Harvard Medical School to define the set of cis-acting targets of a trans-acting factor on a genome scale. Technologies such as Chromatin immunoprecipitation combined with microarray "ChIP-on-chip" or with massively parallel DNA sequencing "Chip-seq" have greatly facilitated the definition of the cistrome of transcription factors and other Chromatin associated proteins.
+
+-- Wikipedia

@@ -1,0 +1,11 @@
+automatically start a list of jobs in a given time
+ at -f joblist now + 1 minutes
+
+<pre>
+$ at now + 25 minutes
+echo ^G > /dev/ttyp4
+^D
+Job c00ceb7fb.00 will be executed using /bin/sh
+</pre>
+
+[http://www.rahul.net/raithel/MyBackPages/crontab.html Introduction to UNIX cron and at Utilities]

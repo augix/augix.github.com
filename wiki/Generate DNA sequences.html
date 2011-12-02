@@ -1,0 +1,60 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Generate DNA sequences</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Generate DNA sequences</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+sub generator {
+  $length = $_[0];
+</p>
+  
+<p>
+  @base = qw(A T G C);
+  $l = 0;
+</p>
+  
+<p>
+  @string = ();  push @string, "";
+  while ($l &lt; $length) {
+</p>
+<blockquote>
+@old_string = @string;   @string = ();
+foreach $old_string(@old_string) {
+foreach $base(@base) {
+$string = $old_string.$base;
+push @string, $string;
+}
+}
+$l ++;
+</blockquote>
+<p>
+  }
+  return @string;
+}
+</p>
+
+<p>
+@result = generator(5);
+$print = join (" ",@result);
+print ($print);
+&lt;/perl&gt;
+<a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+* script
+The `script` simply records the text in and out from the command line. The computer starts recording almost everything appearing on the screen when the user executes `script`, it ends when the user enter `exit`. The resulting text will be save normally as a file named `typescript`.
+
+

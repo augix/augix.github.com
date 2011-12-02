@@ -1,0 +1,495 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python Assignment 1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python Assignment 1</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Strings</h1>
+<h2 id="toc_1.1">Excercise 1</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+seq = raw_input("Enter a DNA sequence: ")
+print "It is", len(seq), "bases long."
+</p>
+
+<p>
+bases = ["adenine", "thymine", "cytosine", "guanine"]
+print bases[0], seq.count('A')
+print bases[1], seq.count('T')
+print bases[2], seq.count('C')
+print bases[3], seq.count('G')
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Enter a DNA sequence: ATTAC
+It is 5 bases long.
+adenine 2
+thymine 2
+cytosine 1
+guanine 0
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_1.2">Exercise 2</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+seq = raw_input("Enter a DNA sequence: ")
+seq = seq.upper()
+print "It is", len(seq), "bases long."
+</p>
+
+<p>
+bases = ["adenine", "thymine", "cytosine", "guanine"]
+print bases[0], seq.count('A')
+print bases[1], seq.count('T')
+print bases[2], seq.count('C')
+print bases[3], seq.count('G')
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Enter a DNA sequence: ATTgtc
+It is 6 bases long.
+adenine 1
+thymine 3
+cytosine 1
+guanine 1
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_1.3">Exercise 3</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+seq = raw_input("Enter a DNA sequence: ")
+seq = seq.upper()
+print "It is", len(seq), "bases long."
+</p>
+
+<p>
+bases = ["adenine", "thymine", "cytosine", "guanine"]
+print bases[0], seq.count('A')
+print bases[1], seq.count('T')
+print bases[2], seq.count('C')
+print bases[3], seq.count('G')
+unknown = len(seq) - seq.count('A') - seq.count('T') - seq.count('C') - seq.count('G')
+print "unknown", str(unknown)
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Enter a DNA sequence: ATTU*gtc
+It is 8 bases long.
+adenine 1
+thymine 3
+cytosine 1
+guanine 1
+unknown 2
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_2">'for' loop</h1>
+<h2 id="toc_2.1">Exercise 1</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+seq = raw_input("Enter a DNA sequence: ")
+for i in range(10):
+</p>
+<blockquote>
+print i, seq
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Enter a DNA sequence: TACG
+0 TACG
+1 TACG
+2 TACG
+3 TACG
+4 TACG
+5 TACG
+6 TACG
+7 TACG
+8 TACG
+9 TACG
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_2.2">Exercise 2</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+seq = raw_input("Enter a DNA sequence: ")
+n = len(seq)
+for i in range(n):
+</p>
+<blockquote>
+print 'base', i, 'is', seq[i]
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Enter a DNA sequence: GTTCAG
+base 0 is G
+base 1 is T
+base 2 is T
+base 3 is C
+base 4 is A
+base 5 is G
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_2.3">Exercise 3</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+restriction_sites = [
+</p>
+<blockquote>
+"GAATTC", # EcoRI
+"GGATCC", # BamHI
+"AAGCTT", # HindIII
+</blockquote>
+<p>
+]
+</p>
+
+<p>
+for site in restriction_sites:
+</p>
+<blockquote>
+print site
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+GAATTC
+GGATCC
+AAGCTT
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_2.4">Exercise 4</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+site2name = {
+</p>
+<blockquote>
+"GAATTC": "EcoRI",
+"GGATCC": "BamHI",
+"AAGCTT": "HindIII"
+</blockquote>
+<p>
+}
+</p>
+
+<p>
+seq = raw_input("Enter your sequence: ")
+for site in site2name.keys():
+</p>
+<blockquote>
+if site in seq:
+print site2name[site], "(", site, ")", "is present"
+else:
+print site2name[site], "(", site, ")", "is not present"
+</blockquote>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Enter your sequence: GAATTCTTTTT
+EcoRI ( GAATTC ) is present
+BamHI ( GGATCC ) is not present
+HindIII ( AAGCTT ) is not present
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_3">'if' loop</h1>
+<h2 id="toc_3.1">Exercise 1</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+seq = raw_input("Enter your sequence: ")
+bases = "ACGT"
+for b in bases:
+</p>
+<blockquote>
+if b in seq:
+print b, 'count:', seq.count(b)
+</blockquote>
+
+<p>
+&lt;/python&gt;
+</p>
+
+
+<p>
+result:&lt;pre&gt;
+Enter your sequence: ACCAGGCA
+A count: 3
+C count: 3
+G count: 2
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_4">Reading files</h1>
+<h2 id="toc_4.1">Exercise 1</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+fn = './10_sequences.seq'
+f = open(fn,'r')
+lines = f.readlines()
+for i,l in enumerate(lines):
+</p>
+<blockquote>
+print i+1, l.rstrip()
+</blockquote>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+1 CCTGTATTAGCAGCAGATTCGATTAGCTTTACAACAATTCAATAAAATAGCTTCGCGCTAA
+2 ATTTTTAACTTTTCTCTGTCGTCGCACAATCGACTTTCTCTGTTTTCTTGGGTTTACCGGAA
+3 TTGTTTCTGCTGCGATGAGGTATTGCTCGTCAGCCTGAGGCTGAAAATAAAATCCGTGGT
+4 CACACCCAATAAGTTAGAGAGAGTACTTTGACTTGGAGCTGGAGGAATTTGACATAGTCGAT
+5 TCTTCTCCAAGACGCATCCACGTGAACCGTTGTAACTATGTTCTGTGC
+6 CCACACCAAAAAAACTTTCCACGTGAACCGAAAACGAAAGTCTTTGGTTTTAATCAATAA
+7 GTGCTCTCTTCTCGGAGAGAGAAGGTGGGCTGCTTGTCTGCCGATGTACTTTATTAAATCCAATAA
+8 CCACACCAAAAAAACTTTCCACGTGTGAACTATACTCCAAAAACGAAGTATTGGTTTATCATAA
+9 TCTGAAAAGTGCAAAGAACGATGATGATGATGATAGAGGAACCTGAGCAGCCATGTCTGAACCTATAGC
+10 GTATTGGTCGTCGTGCGACTAAATTAGGTAAAAAAGTAGTTCTAAGAGATTTTGATGATTCAATGCAAAGTTCTATTAATCGTTCAATTG
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_4.2">Exercise 2</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./10_sequences.seq','r')
+lines = f.readlines()
+motif = 'CTATA'
+for i,l in enumerate(lines):
+</p>
+<blockquote>
+pos = l.find(motif)
+if pos != -1:
+print motif, 'is found in sequence', i+1, 'Position', pos, '(0 based)'
+print i+1, l.rstrip()
+</blockquote>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+CTATA is found in sequence 8 Position 29 (0 based)
+8 CCACACCAAAAAAACTTTCCACGTGTGAACTATACTCCAAAAACGAAGTATTGGTTTATCATAA
+CTATA is found in sequence 9 Position 62 (0 based)
+9 TCTGAAAAGTGCAAAGAACGATGATGATGATGATAGAGGAACCTGAGCAGCCATGTCTGAACCTATAGC
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_5">Advanced exercises</h1>
+<h2 id="toc_5.1">Exercise 1: sum up, csv file</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./numbers1.csv','r')
+lines = f.readlines()
+for l in lines:
+</p>
+<blockquote>
+numbers = l.rstrip().split(',')
+numbers = [ int(i) for i in numbers ]
+row_sum = sum(numbers)
+print row_sum
+</blockquote>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+716
+1139
+11
+1707
+1516
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_5.2">Exercise 2: sum up</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./numbers1.csv','r')
+lines = f.readlines()
+total = 0
+for l in lines:
+</p>
+<blockquote>
+numbers = l.rstrip().split(',')
+numbers = [ int(i) for i in numbers ]
+row_sum = sum(numbers)
+print row_sum
+total += row_sum
+</blockquote>
+<p>
+print 'Total:', total
+</p>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+716
+1139
+11
+1707
+1516
+Total: 5089
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_5.3">Exercise 3: sum up, csv file with quotes</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./numbers2.csv','r')
+lines = f.readlines()
+total = 0
+for l in lines:
+</p>
+<blockquote>
+numbers = l.rstrip().split(',')
+numbers = [ i.strip() for i in numbers ] # remove space
+numbers = [ i.strip('"') for i in numbers ] # remove quotes
+numbers = [ int(i) for i in numbers ]
+row_sum = sum(numbers)
+print row_sum
+total += row_sum
+</blockquote>
+<p>
+print 'Total:', total
+</p>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+716
+1139
+11
+1707
+1516
+Total: 5089
+</p>
+
+<p>
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_5.4">Exercise 4: parse FASTA</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./sample1.fa','r')
+lines = f.readlines()
+for l in lines:
+</p>
+<blockquote>
+l = l.rstrip()
+if not l:
+print 'Header', h, 'refer to sequence', s
+elif l[0] == '&gt;':
+h = l[1:]
+s = ''
+else:
+s += l
+</blockquote>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Header YL069W-1.334 refer to sequence CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACAACCCACTGCCACTTACCCTACCATTACCCTACCATCCACCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAA
+Header YAL068C-7235.2170 refer to sequence TACGAGAATAATTTCTCATCATCCAGCTTTAACACAAAATTCGCACAGTTTTCGTTAAGAGAACTTAACATTTTCTTATGACGTAAATGAAGTTTATATATAAATTTCCTTTTTATTGGATACATTACGTGCAACCAAAAGTGTAAAATGATTGGTTGCAATGTTTCACCTAAATTACTT
+Header YAL070W-223.3355 refer to sequence CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATCTAATATGCCT
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_5.5">Exercise 5: FASTA file with blank lines</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./sample2.fa','r')
+lines = f.readlines()
+fasta = dict()
+for l in lines:
+</p>
+<blockquote>
+l = l.rstrip()
+if not l:
+next
+elif l[0] == '&gt;':
+header = l[1:]
+fasta[header] = ''
+else:
+fasta[header] += l
+</blockquote>
+<p>
+for h,s in fasta.items():
+</p>
+<blockquote>
+print 'Header', h, 'refer to sequence', s
+</blockquote>
+
+<p>
+&lt;/python&gt;
+<br>
+Result:&lt;pre&gt;
+Header YAL070W-223.3355 refer to sequence CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATCTAATATGCCT
+Header YL069W-1.334 refer to sequence CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACAACCCACTGCCACTTACCCTACCATTACCCTACCATCCACCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAA
+Header YAL068C-7235.2170 refer to sequence TACGAGAATAATTTCTCATCATCCAGCTTTAACACAAAATTCGCACAGTTTTCGTTAAGAGAACTTAACATTTTCTTATGACGTAAATGAAGTTTATATATAAATTTCCTTTTTATTGGATACATTACGTGCAACCAAAAGTGTAAAATGATTGGTTGCAATGTTTCACCTAAATTACTT
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

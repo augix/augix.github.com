@@ -1,0 +1,56 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Barplot</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Barplot</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+put text on the top of the bars
+
+</ul>
+
+<p>
+&lt;R&gt;
+a &lt;- round(runif(100)*10)
+y &lt;- table(a)
+x &lt;- barplot(y,ylim=c(0,max(y)*1.1))
+text(x,y,labels=y,pos=3)
+&lt;/R&gt;
+</p>
+
+
+<ul>
+<li>
+cool example
+
+</ul>
+<p>
+&lt;R&gt;
+par(las=2,cex=1.5)
+ha = c(10,20,100,1,34,24,74)
+ca = c(30,20,120,1,44,24,74)
+ma = c(3,2,12,1,4,2,7)
+m = rbind(ha,ca,ma)
+b = c("L1","L2","Alu","r1","r2","r3","rRNA")
+cols = c("red","blue","black")
+barplot(m,names.arg=b,beside=T,horiz=1,col=cols)
+legend("topright",legend=c("human","chimp","rhesus"),pch=15,col=cols)
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

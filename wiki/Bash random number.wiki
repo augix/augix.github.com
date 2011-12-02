@@ -1,0 +1,3 @@
+%template disqus
+
+http://tldp.org/LDP/abs/html/randomvar.html

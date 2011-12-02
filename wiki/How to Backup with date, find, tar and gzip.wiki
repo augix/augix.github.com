@@ -1,0 +1,48 @@
+Reference: http://justinsomnia.org/courses/inls183/3backup.html
+
+= Date =
+Date is one of those quit essential Unix utilities that perform a single simple task, and perform it well. I was familiar with date having used before it find the time:
+ $ date 
+ Tue Sep 26 22:14:34 EDT 2000
+
+ $ date +%d%b
+ 26Sep
+
+ $ date +%d%b%Y
+ 26Sep2007
+
+ # create a new file named 26Sep.bak
+ $ touch `date +%d%b`.bak
+
+= Tar =
+
+ $ tar cf - /Users/augix/Documents/ > /backup/Documents.`date +%d%b`.tar
+
+The 'c' tells tar to create an archive, the 'f' alerts tar to the source of the input, and the '-' (hyphen) causes tar to store the archive on standard output, which is then redirected to the file,  /backup/Documents.`date +%d%b`.tar.
+
+= Gzip =
+I wanted desperately to gzip (compress) the archive immediately after I tarred it. I knew that I could use tar's 'z' option, both when compressing and uncompressing, but using it gave me an error about garbage at the end of the tar file (which bothered me), and I really wanted to maximally compress the archive using "gzip -9". 
+
+ $ tar cf - /Users/augix/Documents/ > /backup/Documents.`date +%d%b`.tar
+ $ gzip -9 /backup/Documents.`date +%d%b`.tar
+
+= Find =
+Now that I figured out the steps necessary for creating a weekly backup of the entire fileshare, I needed to figure out how to backup only those files that had changed in the last day, on a daily basis. 
+
+ $ find /Users/augix/Documents/ -mtime -1 
+
+the command lists both the files that were modified as well as the directories that contain them. I figured out that in order to limit the list to files only, I could use:
+
+ $ find /export/samba/fileshare/ -mtime -1 \! -type d
+ # where the "\! – type d" means: "don't include directories."
+
+= Combine these commands =
+ $ tar cf - `find /Users/augix/Documents/ -mtime -1 \! -type d` > /backup/Documents.`date +%d%b`.tar
+
+But the line above does not work for the files with space in their names. So, the correct command is:
+
+ $ find /Users/augix/Documents/ -mtime -1 \! -type d > /tmp/modified.files
+ $ tar cT /tmp/modified.files > /backup/Documents.`date +%d%b`.tar
+ $ gzip -9 /backup/Documents.`date +%d%b`.tar
+
+This time, find redirected it's output to a file in /tmp/, and tar took this file, using the T option, and successfully created the daily archive of modified files. The lines in text file still had spaces in them, but I assume tar treated each line as a separate file, rather that each chunk of text separated by spaces. [Note: This separation of find and tar could also prove advantageous with an if statement that checks to see if the modified.files file contains anything. If it did, then tar would be invoked; if not, then the script would end, preventing tar from trying to create an empty archive.]

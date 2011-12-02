@@ -1,0 +1,35 @@
+= cut =
+
+cut 文件的列，列可以是 tab 分割的列（用 -f 参数），也可以是指定的区段的字符（用 -b 参数）。
+
+= paste =
+* paste 刚好与 cut 相反，它把多列和在一起。
+
+example:
+<bash>
+$ cat names
+Tony
+Emanuel
+...
+
+$ cat numbers
+(307) 555-5356
+(212) 555-3456
+
+$ cat addresses
+55-23 Vine Street, Miami
+39 University Place, New York
+
+$ paste names addresses numbers
+Tony    55-23 Vine Street, Miami       (307) 555-5356
+Emanuel 39 University Place, New York  (212) 555-3456
+</bash>
+
+* 将多行数据合并到一行，他们间用tab键隔开
+<pre>
+$ paste -s names        
+Tony    Emanuel Lucy    Ralph   Fred
+</pre>
+
+= join =
+join lines of two files on a common field

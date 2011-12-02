@@ -1,0 +1,11 @@
+Insert your OS X Install Disk #1. 
+
+A finder window will open that will show you all the installers and folders on the disk.
+
+You have to double-click on the '''Optional Installs package'''. 
+
+
+PS: However, due to the organization of the icons in the finder window, you must scroll down to find the Optional Install icon.
+
+= Mac OS X Tiger =
+go to http://static.macosforge.org/xquartz/downloads/Tiger/, download the source file, install it on the computer.

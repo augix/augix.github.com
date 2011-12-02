@@ -1,0 +1,26 @@
+<bash>
+#!/bin/sh
+argv=$1
+clustalw <<!
+1
+./$argv
+2
+1
+
+
+
+X
+X
+!
+</bash>
+
+<bash>
+~/bin/clustalw2 -infile=$i -outfile=$outfile -output=fasta > $outfile2;
+</bash>
+clustalw2 parameters
+http://anthrax.zlog.cn/17215.html
+
+or use MUSCLE
+<bash>
+~/bin/src/muscle/muscle -in $i -out $outfile -stable -quiet
+</bash>

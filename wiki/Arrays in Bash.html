@@ -1,0 +1,59 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Arrays in Bash</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Arrays in Bash</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+<a href="http://www.gnu.org/software/bash/manual/bashref.html#Arrays">Bash Reference Manual: Arrays</a>
+
+</ul>
+
+<p>
+Any element of an array may be referenced using ${name[subscript]}. The braces are required to avoid conflicts with the shell's filename expansion operators. If the subscript is ‘@’ or ‘*’, the word expands to all members of the array name. These subscripts differ only when the word appears within double quotes. If the word is double-quoted, ${name[*]} expands to a single word with the value of each array member separated by the first character of the IFS variable, and ${name[@]} expands each element of name to a separate word. When there are no array members, ${name[@]} expands to nothing. If the double-quoted expansion occurs within a word, the expansion of the first parameter is joined with the beginning part of the original word, and the expansion of the last parameter is joined with the last part of the original word. This is analogous to the expansion of the special parameters ‘@’ and ‘*’. ${#name[subscript]} expands to the length of ${name[subscript]}. If subscript is ‘@’ or ‘*’, the expansion is the number of elements in the array. Referencing an array variable without a subscript is equivalent to referencing with a subscript of 0.
+</p>
+
+<ul>
+<li>
+append
+
+</ul>
+<p>
+&lt;bash&gt;
+a=(1 0 7 3)
+echo ${a[@]}
+#1 0 7 3
+b=(${a[@]} 8)
+echo ${b[@]}
+#1 0 7 3 8
+&lt;/bash&gt;
+</p>
+
+<ul>
+<li>
+get a list of file names
+
+</ul>
+<p>
+&lt;bash&gt;
+names=<code>ls /picb/compbio2/funing_protein_data/human_aging_simple_mzxml/</code>
+for name in $names; do echo $name; done
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

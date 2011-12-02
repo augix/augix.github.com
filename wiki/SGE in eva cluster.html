@@ -1,0 +1,168 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>SGE in eva cluster</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>SGE in eva cluster</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Profile</h1>
+<p>
+User  private  default  request  files  are  processed  under  the  locations $HOME/.sge_request  and  $cwd/.sge_request.  The  working  directory  local default request file has the highest precedence
+</p>
+
+<h1 id="toc_2">E-mail</h1>
+<p>
+send email when the job ends:
+ -m e
+ -M your@email
+</p>
+
+<h1 id="toc_3">sge script</h1>
+<p>
+job.sge
+&lt;bash&gt;
+#$ -S /bin/sh
+</p>
+
+<ol>
+<li>
+Change to the current working directory upon starting of the job
+
+</ol>
+<p>
+#$ -cwd
+</p>
+
+<ol>
+<li>
+set the required cpu time of your job
+
+<li>
+HH:MM:SS
+
+</ol>
+<p>
+#$ -l h_cpu=20:00:00
+</p>
+
+<ol>
+<li>
+set the required memory:
+
+<li>
+normal:3.7 GB, 72 h, 4 slots per host.
+
+<li>
+bigmem: 7.7 GB, 72 h, 2 slots per host.
+
+<li>
+hugemem: 15.7 GB, 72 h, 1 slot per host.
+
+</ol>
+<p>
+#$ -l h_vmem=7000M
+</p>
+
+<ol>
+<li>
+don't flood myself with e-mail
+
+</ol>
+<p>
+#$ -m n
+</p>
+
+<ol>
+<li>
+join the error and standard output streams
+
+</ol>
+<p>
+#$ -j yes
+</p>
+
+<ol>
+<li>
+Defines or redefines the path used for the standard error  stream 
+
+<li>
+and the standard output stream of the job. 
+
+</ol>
+<p>
+#$ -e ./sge.out/
+#$ -o ./sge.out/
+</p>
+
+<ol>
+<li>
+name of the job
+
+</ol>
+<p>
+#$ -N mapping_simulation
+</p>
+
+<p>
+echo $1 | ./job.Rf
+&lt;/bash&gt;
+</p>
+
+<h1 id="toc_4">submit script</h1>
+<p>
+&lt;bash&gt;
+for i in <code>seq 1 100</code>; do qsub job.sge $i; done
+&lt;/bash&gt;
+</p>
+
+<h1 id="toc_5">Other tips</h1>
+<h2 id="toc_5.1">SGE command</h2>
+<ul>
+<li>
+submit jobs
+ qsub
+
+</ul>
+
+<ul>
+<li>
+check the state of jobs
+ qstat
+
+</ul>
+
+<ul>
+<li>
+check the state of a particular job
+ qstat -j JOB_ID
+
+</ul>
+
+<ul>
+<li>
+check the state of severs
+ qstat -g c
+
+</ul>
+
+<ul>
+<li>
+delete jobs
+ qdel -u augix
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

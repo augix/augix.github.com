@@ -1,0 +1,29 @@
+%template disqus
+
+= gene detection =
+
+= differential expression detection =
+
+= Illumina RNA-Seq Analysis =
+
+Quote from "Illumina: RNA-Seq Data Comparison with Gene Expression Microarrays"
+
+{{{
+RNA-Seq sequencing reads were aligned to the reference genome by TopHat. Output
+SAM files were converted to gene-level read counts using htseq-count, an
+open-source tool available from EMBL10.  Fold-change ratios (in log space) were
+constructed between samples and differential expression was quantified using a
+Fisher Exact Test on the total number of mapped reads per gene symbol. As with
+the microarray data, a fold-change cutoff of 2 and p-value threshold 0.05 were
+used to determine differential gene expression. A threshold of *10 mapped reads*
+was used to define detection at the gene level.
+}}}
+
+
+
+= RNA-Seq papers =
+ 
+* [http://genomebiology.com/2011/12/3/R22 Improving RNA-Seq expression estimates by correcting for fragment bias]
+* [http://www.ncbi.nlm.nih.gov/pubmed/18550803 RNA-seq: an assessment of technical reproducibility and comparison with gene expression arrays.]
+* [http://bioinformatics.oxfordjournals.org/content/26/4/493.full RNA-Seq gene expression estimation with read mapping uncertainty]
+* [http://en.wikipedia.org/wiki/RNA-Seq RNA-Seq - Wikipedia]

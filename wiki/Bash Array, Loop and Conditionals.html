@@ -1,0 +1,258 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Bash Array, Loop and Conditionals</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Bash Array, Loop and Conditionals</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">For Loop</h1>
+<p>
+&lt;bash&gt;
+jj=(1 4 15 16 32 40 41 58 61 72 73 74 97);
+for j in <code>seq 0 12</code>; do
+  qsub 3way_4tissues.anova.sge.hugemem ${jj[$j]};
+done
+&lt;/bash&gt;
+</p>
+
+<ul>
+<li>
+break, continue
+
+</ul>
+<p>
+The break and continue loop control commands [1] correspond exactly to their counterparts in other programming languages. The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.
+</p>
+
+
+
+<h1 id="toc_2">Case</h1>
+<p>
+&lt;bash&gt;
+case word in
+  pattern1) 
+</p>
+<blockquote>
+list of command
+;;
+</blockquote>
+<p>
+  pattern2)
+</p>
+<blockquote>
+list of command
+;;
+</blockquote>
+<p>
+esac
+&lt;/bash&gt;
+<a href="bash case.html">bash case</a>
+</p>
+
+<h1 id="toc_3">For Array</h1>
+<p>
+&lt;bash&gt;
+mm="2 4";
+dd="random normal X1 link";
+for m in $mm; do
+  for d in $dd; do
+</p>
+<blockquote>
+echo $m.$d;
+</blockquote>
+<p>
+  done;
+done;
+&lt;/bash&gt;
+</p>
+
+<p>
+or
+&lt;bash&gt;
+mm=(2 4);
+dd=(random normal X1 link);
+for m in "${mm[@]}"; do
+  for d in "${dd[@]}"; do
+</p>
+<blockquote>
+echo $m.$d;
+</blockquote>
+<p>
+  done;
+done;
+&lt;/bash&gt;
+</p>
+
+<ul>
+<li>
+convert string to array
+
+</ul>
+<p>
+&lt;bash&gt;
+str='1 2 3 a b c'
+array=($str)
+&lt;/bash&gt;
+</p>
+
+<p>
+reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a>
+</p>
+
+<h1 id="toc_4">while</h1>
+<pre>
+    while [ -e $trash_dir/$newfile ]; do
+		random_suffix=$RANDOM
+		newfile=${file}.${random_suffix}
+	done
+</pre>
+
+<h1 id="toc_5">until</h1>
+<p>
+opposite to while, it does something repeatedly until the condition is ture.
+</p>
+
+<h1 id="toc_6">If conditional</h1>
+
+<p>
+<a href="http://www.thegeekstuff.com/2010/06/bash-conditional-expression/">http://www.thegeekstuff.com/2010/06/bash-conditional-expression/</a>
+</p>
+
+<p>
+<a href="http://steve-parker.org/sh/test.shtml">http://steve-parker.org/sh/test.shtml</a>
+</p>
+
+<pre>
+-e      exist file
+-d      directory exist 
+-eq     equal number
+-ne     not equal
+-gt     a greater than b
+-lt     less than
+-nt     newer than
+-ot     older than
+==      same string
+!=      not same string
+-z      true if string size is zero
+</pre>
+
+<p>
+&lt;bash&gt;
+if [ -e chrX.idx ]; then
+  echo "index file exist!";
+else 
+  nohup ./segemehl.x -d chrX.fa -x chrX.idx
+fi
+&lt;/bash&gt;
+</p>
+
+<p>
+&lt;bash&gt;
+if [ ! -d $outdir ]; then mkdir $outdir; fi
+&lt;/bash&gt;
+</p>
+
+<p>
+for directory:
+&lt;bash&gt;
+if [ -d ./doc/ ]; then
+&lt;/bash&gt;
+</p>
+
+<h2 id="toc_6.1">Nested If conditionals</h2>
+<p>
+&lt;bash&gt;
+	if condition
+	then
+		if condition
+		then
+			.....
+			..
+			do this
+		else
+			....
+			..
+			do this
+		fi
+	else
+		...
+		.....
+		do this
+	fi
+&lt;/bash&gt;
+</p>
+
+<p>
+&lt;bash&gt;
+if [ condition ]
+then 
+</p>
+<blockquote>
+action
+</blockquote>
+<p>
+elif [ condition2 ]
+then
+</p>
+<blockquote>
+action2
+</blockquote>
+<p>
+.
+.
+.
+elif [ condition3 ]
+then
+</p>
+
+<p>
+else
+</p>
+<blockquote>
+actionx
+</blockquote>
+<p>
+fi
+&lt;/bash&gt;
+</p>
+
+<h1 id="toc_7">Condition and string comparison</h1>
+<p>
+&lt;bash&gt;
+S1='name'
+S2='Name'
+if [ $S1 == $S2 ];    # NOTE [with spaces] 
+</p>
+
+<p>
+then
+   echo "$S1 == $S2";
+else
+   echo "$S1 != $S2 ";
+fi
+</p>
+
+<p>
+if [ -e ./tmp.sh ];
+then 
+  echo "file exist\n";
+else
+  echo "no file\n";
+fi
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

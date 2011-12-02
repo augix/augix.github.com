@@ -1,0 +1,66 @@
+[[Category: Mac]]
+<pre>
+####START
+
+## TERMINAL KEY SETTINGS
+## Adjust to OSX Terminal.app behaviour
+*VT100.translations: #override\
+     <Key>Prior:                  scroll-back(1,pages) \n\
+     <Key>Next:                   scroll-forw(1,pages)\n\
+     Meta <KeyPress> K:           clear-saved-lines() \n\
+     Meta <KeyUp> K:              send-signal(int) \n\
+     Meta <KeyPress> P:           print() \n\
+     Meta <KeyPress> minus:       smaller-vt-font() \n\
+     Meta <KeyPress> KP_Subtract: smaller-vt-font() \n\
+     Meta <KeyPress> plus:        larger-vt-font() \n\
+     Meta <KeyPress> KP_Add:      larger-vt-font() \n\
+     Meta <KeyPress> C:           select-cursor-start() \
+                                  select-cursor-end(PRIMARY, CUT_BUFFER0) \n\
+     Meta <KeyPress> V:           insert-selection(PRIMARY, CUT_BUFFER0) \n\
+     Meta <KeyPress> M:           iconify() \n\
+
+
+###END
+####START
+
+*XTerm*deleteIsDEL:               true
+     xterm*saveLines:             10000
+     xterm*scrollBar:             true
+     xterm*rightScrollBar:        false
+     xterm*jumpScroll:            true
+
+     xterm*cursorColor:           red
+     xterm*colorBD:               darkblue
+     xterm*colorBDMode:           true
+     xterm*highlightColor:        yellow
+
+     xterm*Background:            #e8ebf0
+     xterm*Foreground:            Black
+	 xterm*font:                  *-fixed-*-*-*-15-*
+
+
+###END
+</pre>
+
+<b>
+This makes X11 xterm just like the terminal.app. It enables the key shortcuts like cmd-k, cmd-+, cmd-- and others I don't understand yet.
+Another thing to do is modify the preference of X11 on mac, specify the command by 
+ xterm -fa "Andale mono" -fs 10 &
+to have a nice x11 window.
+</b>
+
+Then, I write the xterm startup command in my ~/.xinitrc file like this:
+
+xterm -geometry 80x50+494+51 &
+
+If Apple X11 don't read your .Xdefaults file by default (it does in my case), try by writing in your ~/.xinitrc file:
+
+xrdb ~/.Xdefaults
+
+There are a lot of options in xterm, check man xterm for more, or look the html version with:
+
+open /usr/X11R6/lib/X11/doc/html/xterm.1.html
+or
+launch -l /usr/X11R6/lib/X11/doc/html/xterm.1.html
+
+[http://developer.apple.com/opensource/tools/runningX11.html  An important reference about X11 on mac]

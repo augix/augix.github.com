@@ -1,0 +1,106 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>How to Backup with date, find, tar and gzip</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>How to Backup with date, find, tar and gzip</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+Reference: <a href="http://justinsomnia.org/courses/inls183/3backup.html">http://justinsomnia.org/courses/inls183/3backup.html</a>
+</p>
+
+<h1 id="toc_1">Date</h1>
+<p>
+Date is one of those quit essential Unix utilities that perform a single simple task, and perform it well. I was familiar with date having used before it find the time:
+ $ date 
+ Tue Sep 26 22:14:34 EDT 2000
+</p>
+
+<p>
+ $ date +%d%b
+ 26Sep
+</p>
+
+<p>
+ $ date +%d%b%Y
+ 26Sep2007
+</p>
+
+<ol>
+<li>
+create a new file named 26Sep.bak
+ $ touch <code>date +%d%b</code>.bak
+
+</ol>
+
+<h1 id="toc_2">Tar</h1>
+
+<p>
+ $ tar cf - /Users/augix/Documents/ &gt; /backup/Documents.<code>date +%d%b</code>.tar
+</p>
+
+<p>
+The 'c' tells tar to create an archive, the 'f' alerts tar to the source of the input, and the '-' (hyphen) causes tar to store the archive on standard output, which is then redirected to the file,  /backup/Documents.<code>date +%d%b</code>.tar.
+</p>
+
+<h1 id="toc_3">Gzip</h1>
+<p>
+I wanted desperately to gzip (compress) the archive immediately after I tarred it. I knew that I could use tar's 'z' option, both when compressing and uncompressing, but using it gave me an error about garbage at the end of the tar file (which bothered me), and I really wanted to maximally compress the archive using "gzip -9". 
+</p>
+
+<p>
+ $ tar cf - /Users/augix/Documents/ &gt; /backup/Documents.<code>date +%d%b</code>.tar
+ $ gzip -9 /backup/Documents.<code>date +%d%b</code>.tar
+</p>
+
+<h1 id="toc_4">Find</h1>
+<p>
+Now that I figured out the steps necessary for creating a weekly backup of the entire fileshare, I needed to figure out how to backup only those files that had changed in the last day, on a daily basis. 
+</p>
+
+<p>
+ $ find /Users/augix/Documents/ -mtime -1 
+</p>
+
+<p>
+the command lists both the files that were modified as well as the directories that contain them. I figured out that in order to limit the list to files only, I could use:
+</p>
+
+<p>
+ $ find /export/samba/fileshare/ -mtime -1 \! -type d
+</p>
+<ol>
+<li>
+where the "\! – type d" means: "don't include directories."
+
+</ol>
+
+<h1 id="toc_5">Combine these commands</h1>
+<p>
+ $ tar cf - <code>find /Users/augix/Documents/ -mtime -1 \! -type d</code> &gt; /backup/Documents.<code>date +%d%b</code>.tar
+</p>
+
+<p>
+But the line above does not work for the files with space in their names. So, the correct command is:
+</p>
+
+<p>
+ $ find /Users/augix/Documents/ -mtime -1 \! -type d &gt; /tmp/modified.files
+ $ tar cT /tmp/modified.files &gt; /backup/Documents.<code>date +%d%b</code>.tar
+ $ gzip -9 /backup/Documents.<code>date +%d%b</code>.tar
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

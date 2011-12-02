@@ -1,0 +1,72 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>String in Bash</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>String in Bash</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+special characters:
+
+</ul>
+<p>
+tab and new line:
+&lt;bash&gt;
+augixs-ibook-g4:~ augix$ s=$'\t\n'
+augixs-ibook-g4:~ augix$ echo $s
+</p>
+
+<p>
+augixs-ibook-g4:~ augix$ s='\t\n'
+augixs-ibook-g4:~ augix$ echo $s
+\t\n
+&lt;/bash&gt;
+</p>
+
+<ul>
+<li>
+concatenate two strings:
+
+</ul>
+<p>
+The braces are required for concatenation constructs.
+</p>
+
+<p>
+&lt;pre&gt;
+$p_01
+The value of the variable "p_01".
+</p>
+
+<p>
+${p}_01
+The value of the variable "p" with "_01" pasted onto the end.
+&lt;/pre&gt;
+</p>
+
+<ul>
+<li>
+sub-string
+<pre>
+$ s="astring"
+$ echo ${s:0:1}
+a
+</pre>
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

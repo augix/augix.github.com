@@ -1,0 +1,20 @@
+<perl>
+use lib "/picb/home5/augix/Library/Perl/lib64/perl5/site_perl/5.8.5/x86_64-linux
+-thread-multi";
+use GD;
+$image=new GD::Image(1250,400);
+
+$white=$image->colorAllocate(255,255,255);
+$black=$image->colorAllocate(0,0,0);
+$red=$image->colorAllocate(255,0,0);
+$green=$image->colorAllocate(0,255,0);
+$blue=$image->colorAllocate(0,0,255);
+
+$image->rectangle(175,40,1210,290,$black);
+$image->dashedLine(175,165,1210,165,$blue);
+
+open(STDOUT,">pic.png");
+binmode STDOUT;
+print $image->png;
+</perl>
+[[Category:Perl]]

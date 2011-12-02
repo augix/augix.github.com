@@ -1,0 +1,58 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Hide axis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Hide axis</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+Hide axis
+&lt;R&gt;
+par(xaxt='n')
+&lt;/R&gt;
+or
+&lt;R&gt;
+plot(...,xaxt='n')
+&lt;/R&gt;
+</p>
+
+<p>
+Show the axis
+&lt;R&gt;
+par(xaxt='s')
+&lt;/R&gt;
+</p>
+
+<p>
+Print the x axis
+&lt;R&gt;
+axis(1, at=at, labels=labels)
+&lt;/R&gt;
+</p>
+
+
+<p>
+Example:
+&lt;R&gt;
+par(xaxt='n')
+plot(1:10)
+x = c(1,3,7,10)
+par(xaxt='s')
+axis(1, at=x, labels=x)
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

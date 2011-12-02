@@ -1,0 +1,14 @@
+the directory:
+ scp -r boulo.local:/Applications/xampp /Application/xampp
+
+on boulo.local
+ /Applications/xampp/xamppfiles/bin/mysqldump wikidb -u wikiuser -p --skip-opt > ~/wikidb.sql
+
+copy boulo.local:~/wiki_mysql.bak to Backup/MediaWiki/
+ scp boulo.local:~/wikidb.sql /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql
+
+create a database wikidb
+create a user wikiuser with certain privileges
+
+import
+ /Applications/xampp/xamppfiles/bin/mysql wikidb -u root -p < /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql

@@ -1,0 +1,70 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Get exon id from affymatrix.pl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Get exon id from affymatrix.pl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+#!/usr/bin/perl -w
+</p>
+
+<p>
+if(@ARGV!=1){ die "\nPlease input the chromosome name!\n\n";}
+my $input=$ARGV[0];
+</p>
+
+<p>
+$exon_list="/picb/home5/song/primer_design/gff/".$input.".hg18.gff";
+</p>
+
+<p>
+open EXON_LIST, $exon_list or die "Cannot open $exon_list for read:$!";
+</p>
+
+<p>
+$location_list="../output/".$input."_exon_location.txt";
+</p>
+
+<p>
+open LOCATION_LIST, "&gt;$location_list" or die "Cannot open $location_list for write:$!";
+</p>
+
+<p>
+print LOCATION_LIST "TRANSCRIPT_CLUSTER_ID	CHROM_NAME	Chain	EXON_CLUSTER_ID		START	STOP\n";
+</p>
+
+<p>
+while(&lt;EXON_LIST&gt;){
+</p>
+<blockquote>
+if(/(chr.+)\t.+\texon_cluster\t(\d+)\t(\d+).*\.\s(.)\s\..*transcript_cluster_id\s(\d+).*exon_cluster_id\s(\d+)/){
+#print "$_";
+#print "$5	$1	$4	$6	$2	$3\n";
+print LOCATION_LIST "$5	$1	$4	$6	$2	$3\n";
+}
+</blockquote>
+<p>
+}
+</p>
+
+<p>
+close(EXON_LIST);
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

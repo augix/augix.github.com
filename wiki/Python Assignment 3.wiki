@@ -1,0 +1,225 @@
+= Functions =
+== Exercise 1: validate_bases() ==
+<python>
+#!/usr/bin/env python
+def count_bases(seq):
+    counts = {}
+    for base in seq:
+        counts[base] = counts.get(base, 0) + 1
+    return counts
+
+def validate_bases(seq):
+    seq = seq.upper()
+    length = len(seq)
+    counts = count_bases(seq)
+    ATGC = sum([counts.get(i,0) for i in 'ATGC'])
+    if length == ATGC:
+        return True
+    else:
+        return False
+</python>
+
+== Exercise 2: count_bases() ==
+<python>
+#!/usr/bin/env python
+from seqtools import *
+f = open('./ambiguous_sequences.seq')
+for l in f.readlines():
+    seq = l.rstrip()
+    counts = count_bases(seq)
+    print 'Sequence has', str(len(seq)), 'bases.'
+    for key,value in counts.items():
+        print key, '=', value
+</python>
+<br>
+Result:
+<pre>
+Sequence has 1267 bases.
+A = 287
+C = 306
+B = 1
+G = 389
+R = 1
+T = 282
+Y = 1
+Sequence has 553 bases.
+A = 119
+C = 161
+T = 131
+G = 141
+N = 1
+Sequence has 1521 bases.
+A = 402
+C = 196
+T = 471
+G = 215
+N = 237
+...
+...
+Sequence has 1285 bases.
+A = 327
+Y = 1
+C = 224
+T = 371
+G = 362
+Sequence has 570 bases.
+A = 158
+C = 120
+T = 163
+G = 123
+N = 6
+Sequence has 1801 bases.
+C = 376
+A = 465
+S = 1
+T = 462
+G = 497
+</pre>
+
+== Exercise 3: quadratic roots ==
+<python>
+#!/usr/bin/env python
+from math import sqrt
+def quadratic_roots(a,b,c):
+    discriminant = b*b-4*a*c
+    if discriminant >= 0:
+        x0 = (-b + sqrt(discriminant))/2.0/a
+        x1 = (-b - sqrt(discriminant))/2.0/a
+        return (x0, x1)
+    else:
+        return (None, None)
+
+print quadratic_roots(1,2,1)
+print quadratic_roots(1,4,1)
+print quadratic_roots(3,2,1)
+</python>
+<br>
+Result:
+<pre>
+$ python e3.py
+(-1.0, -1.0)
+(-0.26794919243112281, -3.7320508075688772)
+(None, None)
+</pre>
+
+== Exercise 4: DNA to Protein ==
+seqtools.py
+<python>
+def DNA2protein(seq, frame):
+    ''' This is a DNA to Protein translator.
+        Arguments:
+            seq:    input DNA sequence
+            frame:  reading frame. Allowed values: 0, 1 and 2.
+        Values:
+            Protein sequence.
+    '''
+    codon_table = { 'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L',
+    'TCT': 'S', 'TCC': 'S', 'TCA': 'S', 'TCG': 'S', 'TAT': 'Y',
+    'TAC': 'Y', 'TGT': 'C', 'TGC': 'C', 'TGG': 'W', 'CTT': 'L',
+    'CTC': 'L', 'CTA': 'L', 'CTG': 'L', 'CCT': 'P', 'CCC': 'P',
+    'CCA': 'P', 'CCG': 'P', 'CAT': 'H', 'CAC': 'H', 'CAA': 'Q',
+    'CAG': 'Q', 'CGT': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R',
+    'ATT': 'I', 'ATC': 'I', 'ATA': 'I', 'ATG': 'M', 'ACT': 'T',
+    'ACC': 'T', 'ACA': 'T', 'ACG': 'T', 'AAT': 'N', 'AAC': 'N',
+    'AAA': 'K', 'AAG': 'K', 'AGT': 'S', 'AGC': 'S', 'AGA': 'R',
+    'AGG': 'R', 'GTT': 'V', 'GTC': 'V', 'GTA': 'V', 'GTG': 'V',
+    'GCT': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A', 'GAT': 'D',
+    'GAC': 'D', 'GAA': 'E', 'GAG': 'E', 'GGT': 'G', 'GGC': 'G',
+    'GGA': 'G', 'GGG': 'G' }
+    stop_codons = ['TAA', 'TAG', 'TGA']
+    start_codons = ['TTG', 'CTG', 'ATG']
+    more = dict(zip(stop_codons, '***'))
+    codon_table.update(more)
+    seq = seq[frame:]
+    codons = [seq[i*3:i*3+3] for i in range(len(seq)/3)]
+    assert (codons[0] in start_codons), "First codon is not a start codon."
+    acids = [codon_table.get(codon, '*') for codon in codons]
+    return ''.join(acids)
+</python>
+e4.py
+<python>
+#!/usr/bin/env python
+from seqtools import *
+DNA = raw_input('Enter DNA sequence: ').upper()
+frame = raw_input('Reading frame (only 0, 1 and 2 allowed): ')
+protein = DNA2protein(DNA, int(frame))
+print 'Protein:', protein
+</python>
+<br>
+Result:
+<pre>
+$ python e4.py 
+Enter DNA sequence: atgcagtcagctagctagctagctagctagatcgtacgatcgacatagctcg
+Reading frame (only 0, 1 and 2 allowed): 0
+Protein: MQSAS*LAS*IVRST*L
+</pre>
+
+== Exercise 5: factorial ==
+<python>
+#!/usr/bin/env python
+def factorial(n):
+    assert (n>0), 'n is not positive.'
+    nu = range(n,0,-1)
+    res = 1
+    for i in nu:
+        res = res * i
+    return res
+
+print factorial(1)
+print factorial(2)
+print factorial(3)
+print factorial(4)
+print factorial(5)
+print factorial(6)
+</python>
+<br>
+Result:
+<pre>
+>>> factorial(2)
+2
+>>> factorial(3)
+6
+>>> factorial(4)
+24
+>>> factorial(5)
+120
+>>> factorial(6)
+720
+>>> factorial(1)
+1
+</pre>
+
+= List comprehensive =
+== Exerciese 1: mylen() ==
+<python>
+#!/usr/bin/env python
+def mylen(x):
+    # x is a list
+    y = [1 for i in x]
+    return sum(y)
+</python>
+
+Result:
+<pre>
+>>> print mylen([1,3,7,4,2])
+5
+</pre>
+
+== Exercise 2: flatten() ==
+<python>
+#!/usr/bin/env python
+def flatten(x):
+    y = []
+    [y.extend(i) for i in x]
+    return y
+
+a = [['a', 'b'], ['c'], ['d', 'e', 'f']]
+print flatten(a)
+</python>
+<br>
+Result:
+<pre>
+>>> a = [['a', 'b'], ['c'], ['d', 'e', 'f']]
+>>> print flatten(a)
+['a', 'b', 'c', 'd', 'e', 'f']
+</pre>

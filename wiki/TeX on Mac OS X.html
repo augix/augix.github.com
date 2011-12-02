@@ -1,0 +1,108 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>TeX on Mac OS X</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>TeX on Mac OS X</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Introducation</h1>
+<p>
+To use TeX on Mac OS X, it suffices to install TeXShop and one of BasicTeX, gwTeX, or TeXLive-2007-Dev. For a more complete installation, install MacTeX-2007, but then upgrade TeXShop to the latest version.
+</p>
+
+<h1 id="toc_2">Installation</h1>
+<h2 id="toc_2.1">gwTeX</h2>
+<ol>
+<li>
+I installed gwTeX by i-installer. <a href="http://ii2.sourceforge.net/tex-index.html">Link</a>.
+
+</ol>
+<p>
+## I download and install II2.dmg, 
+## and then install "gwTeX based on TeX Live" in /usr/local/gwTeX, this will also install xelatex in /usr/texbin/ which can be used by TeXShop
+</p>
+<ol>
+<li>
+Install <a href="http://www.uoregon.edu/~koch/texshop/">TeXShop</a>
+
+</ol>
+
+<h2 id="toc_2.2">BasicTeX</h2>
+<p>
+<a href="http://www.tug.org/mactex/morepackages.html">http://www.tug.org/mactex/morepackages.html</a>
+</p>
+
+<h1 id="toc_3">How to put references into an article</h1>
+<p>
+Assume that we have an article named &lt;tt&gt;DNA.tex&lt;/tt&gt; written in Tex, and an file named &lt;tt&gt;DNA.bib&lt;/tt&gt; which exported by a reference manage software (eg: BibDesk). The citations you inserted in the article correspond to the papers in the reference file.
+</p>
+
+<p>
+What we can do by TeXShop is following:
+</p>
+<ol>
+<li>
+latex DNA.tex
+
+</ol>
+<p>
+#:This produce DNA.aux
+</p>
+<ol>
+<li>
+bibtex DNA.aux (or DNA.tex)
+
+</ol>
+<p>
+#:This produce DNA.bbl and DNA.blg
+</p>
+<ol>
+<li>
+latex DNA.tex two more times.
+
+</ol>
+<p>
+#:Finally you get DNA.pdf
+</p>
+
+<p>
+We can also do it in terminal:
+&lt;pre&gt;
+pdflatex DNA.tex
+bibtex DNA.aux
+pdflatex DNA.tex
+pdflatex DNA.tex
+&lt;/pre&gt;
+</p>
+
+<p>
+some explanation for the above procedures: <a href="http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html">http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html</a>
+</p>
+
+<h1 id="toc_4">Reference</h1>
+<p>
+<a href="http://www.mecheng.adelaide.edu.au/%7Ewill/texstart/">TeX on Mac OS X</a>
+</p>
+
+<p>
+<a href="http://www.cs.wright.edu/~jslater/mac-tex/mac-tex-intro/mactexintro.html">Getting Started With TeX</a>
+</p>
+
+<p>
+<a href="Category_LaTeX.html">Category:LaTeX</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

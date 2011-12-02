@@ -1,0 +1,72 @@
+%toc TOC
+= Databases =
+== Genome Browser ==
+http://genome.ucsc.edu/
+
+length information of human chromosomes
+
+http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&chromInfoPage=
+
+== Ensembl ==
+=== biomart ===
+Automatic fetching of gene annotation, structure, function. Comparative genomics analysis.
+
+==== R package ====
+{{{
+mart = useMart("ensembl", dataset="hsapiens_gene_ensembl")
+getGene(id = 'CD44', type = "hgnc_symbol", mart = mart)
+}}}
+
+=== genebuild ===
+
+[http://www.ensembl.org/info/docs/genebuild/genome_annotation.html reference]
+
+Ensembl transcripts displayed on our website are products of the Ensembl automatic pipeline, termed the Ensembl genebuild.
+
+All Ensembl transcripts are based on experimental evidence and thus the automated pipeline relies on the mRNAs and protein sequences deposited into public databases from the scientific community.
+
+Exonerate is a tool for pairwise sequence comparison, used in the Ensembl genebuild to align mRNA to the assembly.
+
+=== Regulatory Build ===
+
+Promoters are not available for most genes in Ensembl.
+
+One can find information on genome-wide studies of regulatory regions in Ensembl Regulatory Build.
+
+== VEGA database ==
+The Vertebrate Genome Annotation (VEGA) database is a central repository for high quality manual annotation of vertebrate finished genome sequence. 
+
+Human, mouse and zebrafish are in the process of being completely annotated.
+
+In other species, the annotation is only of specific genomic regions of particular biological interest.
+
+== Consensus CDS (CCDS) project ==
+
+The CCDS project is a collaborative effort to identify a core set of protein coding regions that are consistently annotated and of high quality. 
+
+Initial results from the Consensus CDS (CCDS) project are now available through the appropriate Ensembl gene pages and from the CCDS project page at NCBI.
+
+
+= Applications =
+== Homology search ==
+* [[BLAST and formatdb]]
+* [[Blat]]
+* [[liftOver]]
+ 
+== Next-Gen Sequencing  ==
+* [[Tophat]]
+* [[SAMTools]]
+
+== Computing ==
+* [[SGE in eva cluster]]
+* [[SGE in PICB cluster]]
+
+== Other ==
+* [http://evolution.genetics.washington.edu/phylip.html PHYLIP]
+* [http://discover.nci.nih.gov/matchminer/index.jsp MatchMiner] is a set of tools that enables the user to translate between disparate ids for the same gene.
+* [http://main.g2.bx.psu.edu/ Galaxy]
+* [http://genometools.org/index.html GenomeTools: versatile open source genome analysis software]
+
+= Topic =
+* [[RNA-Seq]]
+* [[samtools]]

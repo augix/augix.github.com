@@ -1,0 +1,33 @@
+[http://www.vasudevaservice.com/documentation/how-to/converting_dos_and_unix_text_files link:dos2unix]
+
+[http://kb.iu.edu/data/agiz.html link:mac2unix]
+
+<perl>
+perl -pe 's/\\r\\n/\\n/g' dosfile.txt > macfile.txt
+</perl>
+
+<pre>
+  tr '\r' '\n' < macfile.txt > unixfile.txt
+</pre>
+
+<b>Backgroud:</b>
+<pre>
+\n是换行，英文是linefeed，ASCII码是0xA。
+\r是回车，英文是carriage return ,ASCII码是0xD。
+
+如果用过机械打字机，就知道回车和换行的区别了。。。
+  换行就是把滚筒卷一格，不改变水平位置。  
+  回车就是把水平位置复位，不卷动滚筒。
+
+
+但是我们平时按得Enter到底是回车还是换行，不太清楚？？
+看到一种说法：windows下enter是 \n\r,unix下是\n,mac下是\r
+在MS的系统中纯文本格式按一个回车键是输入了两个字符，一个回车一个换行。在LINUX系统中则只是一个回车。
+
+Unix系统里，每行结尾只有“<换行>”，即“\n”；Windows系统里面，每行结尾是“<换行><回
+车>”，即“\n\r”；Mac系统里，每行结尾是“<回车>”。一个直接后果是，Unix/Mac系统下的文件在
+Windows里打
+开的话，所有文字会变成一行；而Windows里的文件在Unix/Mac下打开的话，在每行的结尾可能会多出一个^M符号。Linux和其它Unix类操作系统使用单个字符作为行结束符，这个字符通常被称作“换行符”(LF)或“新行”(NL)。
+
+Dos,Windows和OS2使用两个字符作为行结束符，一个“回车”(CR)和一个LF。
+</pre>

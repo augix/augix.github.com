@@ -1,0 +1,31 @@
+[[Category:Perl]]
+DNA_Rev_Comp.pm
+<perl>
+package DNA_Rev_Comp;
+use strict;
+use vars qw(@ISA @EXPORT $VERSION); 
+use Exporter; 
+$VERSION = 1.00;
+@ISA = qw(Exporter); 
+@EXPORT = qw(DNA_Rev_Comp);
+
+sub DNA_Rev_Comp {
+	my $dna = $_[0];
+	my $revcomp = reverse($dna);
+	$revcomp =~ tr/ACGTacgt/TGCAtgca/;
+	return $revcomp;
+}
+
+1;
+</perl>
+
+DNA_Rev_Comp.pl
+<perl>
+#!/usr/bin/perl
+#use lib "./";
+use DNA_Rev_Comp;
+
+$a = "CAGCTATCTATCAC";
+$b = DNA_Rev_Comp($a);
+warn $b;
+</perl>

@@ -1,0 +1,32 @@
+* RColorBrewer, a package with beautiful colors
+{{{
+library(RColorBrewer)
+display.brewer.all()
+example(RColorBrewer)
+}}}
+
+* rich.colors() in gplots
+{{{
+n = 32
+library(gplots)
+palette(rev(rich.colors(n)))
+plot(1:n,pch=16,cex=1:n,col=1:n)
+}}}
+
+* beautiful combination of colors.
+ cols = c('chocolate3', 'darkgreen', 'blue4', 'lightsalmon1', 'darkseagreen1', 'steelblue2')
+ 
+* transparent colors
+{{{
+alpha = 0.5
+col = rgb(0,1,0,alpha)
+}}}
+
+* palette()
+{{{
+n = 20
+palette(rainbow(n))
+plot(1:n, pch=16, cex=1:n, col=1:n)
+}}}
+
+* reference: http://research.stowers-institute.org/efg/R/Color/Chart/ 

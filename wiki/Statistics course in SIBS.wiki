@@ -1,0 +1,14 @@
+= 第三章 随机变量的数字特征 =
+
+== 随机变量 expected value ==
+
+In probability theory and statistics, the expected value (or expectation value, or mathematical expectation, or mean, or first moment) of a random variable is the integral of the random variable with respect to its probability measure.
+
+The expected value operator (or '''expectation operator''') is linear.
+
+== 方差 variance, deviation ==
+
+In probability theory and statistics, the variance of a random variable or distribution is the expected, or mean, value of the square of the deviation of that variable from its expected value or mean.
+
+== other ==
+协方差 covariance，相关系数 correlation coefficient. If two random variables are independent, their covariance equals to 0.

@@ -1,0 +1,26 @@
+== What is it? ==
+http://www.esm.psu.edu/mac-tex/EquationService/
+ 
+Equation Service is a program that uses pdflatex to produce small PDF files containing equations and other text. You can either do the input and typesetting in the main Equation Service window and then drag and drop the resulting PDF into your application, or highlight text in the other application and run Equation Service on it by typing command-/.
+
+== Requirements ==
+ 
+pdflatex -- you can get this from many places, including Gerben Wierda's webpage:
+http://www.tug.org/applications/pdftex/
+
+I installed gwTeX by i-installer, it contains pdflatex. [http://ii2.sourceforge.net/tex-index.html Link].
+
+By default, the pdflatex is installed in: <code>/usr/local/gwTeX/bin/i386-apple-darwin-current/pdflatex</code>.
+
+== Install ==
+
+Installing Equation Service 1.0 is trivial, simply download the file, decompress it, and drag a copy 
+to your Applications folder. Then open it once, log out, and log back in (restarting will also work, 
+but is not required). 
+
+If you already have a copy of Equation Service 0.1B installed, then you will need to uninstall it first 
+by deleting the application, 
+
+ ∼/Library/Preferences/edu.umn.space.rowland.EquationService.plist
+and 
+ ∼/Library/Application Support/Equation Service

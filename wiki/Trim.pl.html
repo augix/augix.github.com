@@ -1,0 +1,88 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Trim.pl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Trim.pl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+&lt;perl&gt;
+#!/usr/bin/perl -w
+use strict;
+my $adaptor="UCGUAUGCCGUCUUCUGCUUGU";#22nt  
+$adaptor=~tr/U/T/;
+my $filein=$ARGV[0];
+my $fileout="trimed_".$filein;
+open OUT,"&gt;$fileout";
+#my %trimed;
+#my @unable_trim;
+open IN,$filein;
+LABLE:while(&lt;IN&gt;)
+{
+</p>
+<blockquote>
+chomp $_;#raw sequece 36nt
+my($raw1,$count)=split("\t",$_);
+my $raw=substr($raw1,0,35);
+if($raw=~/^[ATGC]+$/)
+{
+for(my $i=22;$i&gt;=1;$i--)
+{
+my $seq=substr($adaptor,0,$i);
+if($raw=~/$seq/)
+{
+my $pos=rindex($raw,$seq);
+my $trimed=substr($raw,0,$pos);
+#$trimed{$trimed}=$count;
+if(length($trimed)&gt;=14)
+{
+print OUT join("\t",$trimed,$count),"\n";
+goto LABLE;
+}
+}
+</blockquote>
+<blockquote>
+}
+}
+</blockquote>
+<p>
+}
+</p>
+
+<p>
+#foreach(sort{$trimed{$b}&lt;=&gt;$trimed{$a}}keys %trimed)
+#{
+</p>
+<ol>
+<li>
+  print OUT join("\t",$<em>,$trimed{$</em>}),"\n";
+
+</ol>
+<p>
+#}
+</p>
+
+<p>
+ #print scalar(@unable_trim),"\n";
+</p>
+ 
+
+<p>
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

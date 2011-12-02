@@ -1,0 +1,90 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>AMule on Mac</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>AMule on Mac</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+用 aMule 上 VeryCD 的设置方法
+</p>
+
+
+<p>
+我经常在verycd上下东西，因为速度较快和资料比较多，但aMule不能自己添加服务器，OS下verycd的东东需要手动添加，
+现在把添加方法说明一下，希望对大家有帮助：
+</p>
+
+
+<p>
+先设置服务器名称，然后服务器设置为：
+</p>
+
+
+<p>
+名称：DonkeyServer No1    地址：62.241.53.2:4242
+名称：华语P2P源动力        地址：61.152.93.254:4661
+名称：Razorback 2            地址：195.245.244.243:4661
+</p>
+
+
+<p>
+然后设置一下浏览器：
+</p>
+
+
+<p>
+firefox：
+在地址栏中键入：about:config，打开配置页。右键点击配置列表，创建“布尔”项 network.protocol-handler.external.ed2k，值为 true，然后在创建一个“字符串”项 network.protocol-handler.app.ed2k，值为 /usr/bin/ed2k.amule。
+</p>
+
+
+<p>
+opera：
+在菜单-&gt;工具-&gt;首选项-&gt;高级-&gt;程序-&gt;选择其他协议的帮助程序中，添加一项，协议为 ed2k，程序为 /usr/bin/ed2k.amule。
+</p>
+
+
+<p>
+然后退出aMule，再进入，到verycd，找到想下载的资源，狠狠地电下去就可以了。
+但我这里只能单个地点击，多选后点击“下载选中的文件” 就只能下载所选的最后一个文件，原因不明，有高手知道望能告知。
+</p>
+
+
+<p>
+有些朋友使用中出现了问题，请确认amule和浏览器是否为最新版本，我自己用的是firefox 2.0 和amule CVS。
+用Safari只能手动粘贴链接，比较麻烦，最好还是用firefox 2.0。
+</p>
+
+
+<p>
+在verycd下载的关键是添加服务器。
+</p>
+
+
+<p>
+为了方便以后的使用，大家最好下面几个常用的服务器也添加上：
+</p>
+
+
+<p>
+名称：DonkeyServer2         地址：62.241.53.16:4242
+名称：DonkeyServer1         地址：62.241.53.2:4242
+名称：Donkix1.0                地址：83.149.98.3:4661
+名称：www.UseNeXT.to     地址：212.112.243.146:4661
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

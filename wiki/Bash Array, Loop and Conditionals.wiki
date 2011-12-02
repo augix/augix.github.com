@@ -1,0 +1,171 @@
+= For Loop =
+<bash>
+jj=(1 4 15 16 32 40 41 58 61 72 73 74 97);
+for j in `seq 0 12`; do
+  qsub 3way_4tissues.anova.sge.hugemem ${jj[$j]};
+done
+</bash>
+
+* break, continue
+The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.
+
+= Case =
+<bash>
+case word in
+  pattern1) 
+    list of command
+    ;;
+  pattern2)
+    list of command
+    ;;
+esac
+</bash>
+[[bash case]]
+
+= For Array =
+<bash>
+mm="2 4";
+dd="random normal X1 link";
+for m in $mm; do
+  for d in $dd; do
+    echo $m.$d;
+  done;
+done;
+</bash>
+
+or
+<bash>
+mm=(2 4);
+dd=(random normal X1 link);
+for m in "${mm[@]}"; do
+  for d in "${dd[@]}"; do
+    echo $m.$d;
+  done;
+done;
+</bash>
+
+* convert string to array
+<bash>
+str='1 2 3 a b c'
+array=($str)
+</bash>
+
+reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
+
+= while =
+{{{
+    while [ -e $trash_dir/$newfile ]; do
+		random_suffix=$RANDOM
+		newfile=${file}.${random_suffix}
+	done
+}}}
+
+= until =
+opposite to while, it does something repeatedly until the condition is ture.
+
+= If conditional =
+
+<bash>
+if COMMANDS ; then 
+COMMANDS; 
+[ elif COMMANDS; then COMMANDS ; ]... 
+[ else COMMANDS; ] 
+fi
+</bash>
+
+http://www.thegeekstuff.com/2010/06/bash-conditional-expression/
+
+In the above web page, example 6 explains the difference between [ and [[ (single square bracket and double square bracket). The [[ is an enhanced version of [, in contrast to [ which is a command like "test", [[ is a keyword, it is only recognized in korn and bash.
+
+http://steve-parker.org/sh/test.shtml
+
+{{{
+-e      exist file
+-d      directory exist 
+-eq     equal number
+-ne     not equal
+-gt     a greater than b
+-lt     less than
+-nt     newer than
+-ot     older than
+==      same string
+!=      not same string
+-z      true if string size is zero
+}}}
+
+ps: == only works in bash, run 'bash script.sh' instead of 'sh script.sh'.
+
+<bash>
+if [ -e chrX.idx ]; then
+  echo "index file exist!";
+else 
+  nohup ./segemehl.x -d chrX.fa -x chrX.idx
+fi
+</bash>
+
+<bash>
+if [ ! -d $outdir ]; then mkdir $outdir; fi
+</bash>
+
+for directory:
+<bash>
+if [ -d ./doc/ ]; then
+</bash>
+
+== Nested If conditionals ==
+<bash>
+	if condition
+	then
+		if condition
+		then
+			.....
+			..
+			do this
+		else
+			....
+			..
+			do this
+		fi
+	else
+		...
+		.....
+		do this
+	fi
+</bash>
+
+<bash>
+if [ condition ]
+then 
+        action
+elif [ condition2 ]
+then
+        action2
+.
+.
+.
+elif [ condition3 ]
+then
+
+else
+        actionx
+fi
+</bash>
+
+= Condition and string comparison =
+<bash>
+S1='name'
+S2='Name'
+if [ $S1 == $S2 ];    # NOTE [with spaces] 
+then
+   echo "$S1 == $S2";
+else
+   echo "$S1 != $S2 ";
+fi
+
+if [ -e ./tmp.sh ];
+then 
+  echo "file exist\n";
+else
+  echo "no file\n";
+fi
+</bash>

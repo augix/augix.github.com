@@ -1,0 +1,109 @@
+[[Category:R]]
+
+<R>
+# transabi.R
+# statistics on abi expression data set
+#
+
+library("Hmisc")
+library("lattice")
+library("cluster")
+library("gdata") #nobs
+library("RColorBrewer")
+
+polysection <- function(a,b,dist=dnorm,col="blue",n=11){
+    dx <- seq(a,b,length.out=n)
+	polygon(c(a,dx,b),c(0,dist(dx),0),border=NA,col=col)
+}
+
+polysection.funct <- function(a, b, x, y, col="blue",n=5) {
+	sx <- seq(a, b, 5);
+	polygon(c(x[a],x[sx],x[b]),c(0,y[sx],0),
+				border=NA,col=col);
+		
+}
+
+
+nice.dnorm <- function() {
+
+x <- seq(-4,4,.1)
+plot(x,dnorm(x),type="n",xaxs="i",yaxs="i",ylim=c(0,.4),bty="l",xaxt="n")
+library(RColorBrewer)
+cols<-rev(brewer.pal(4,"Blues"))
+for(i in 0:3){
+   polysection(i,i+1,col=cols[i+1])
+   polysection(-i-1,-i,col=cols[i+1])
+}
+
+sx <- -3:3
+segments(sx,0,sx,dnorm(sx),col="white")
+lines(x,dnorm(x))
+axis(1,sx,sx)
+
+}
+
+density.integrand <- function(x, dens){
+	return(dens$y[x]);
+}
+
+integrate.density <- function(a, b, dens) {
+	loc_a <- which(dens$x <= a);
+	if (length(loc_a) == 0) loc_a <- 1;
+	loc_b <- which(dens$x <= b);
+	if (length(loc_b) == 0) loc_b <- 1;
+	p <- loc_a[length(loc_a)];
+	q <- loc_b[length(loc_b)];
+
+	int<-integrate(density.integrand, lower=p, upper=q, dens=dens,
+		subdivisions=1000);
+	
+}
+
+nice.density <-function(df, ...) {
+
+	m <- mean(df);
+	d <- density(as.double(as.matrix(df)));
+	plot(d, ...);
+
+	w <- which(d$x <= m);
+	loc <- w[length(w)];
+
+	sx <- seq(loc, length(d$x), 50);
+	sy <- seq(loc, 0, -50);
+
+
+	
+	segments(d$x[sx], 0, d$x[sx], d$y[sx], col="lightblue");
+	segments(d$x[sy], 0, d$x[sy], d$y[sy], col="lightblue");
+
+	library(RColorBrewer)
+	cols<-rev(brewer.pal(length(sx),"Blues"))
+	int <- integrate(density.integrand, lower=1, upper=length(d$x), 
+		dens=d, subdivisions=10000);
+	
+	
+	for (i in 1:(length(sx)-1)) {
+		sub<-integrate(density.integrand, lower=sx[i], upper=sx[i+1], 
+		dens=d, subdivisions=50000);
+	
+		polysection.funct(sx[i],sx[i+1], d$x, d$y, col=cols[i]);
+		val<-as.character(round(sub$value/int$value, digits=3));	
+		text((d$x[sx[i]]+d$x[sx[i+1]])/2, 0.2, val);
+	}
+
+	for (i in 1:(length(sy)-1)) {
+		sub<-integrate(density.integrand, lower=sy[i+1], upper=sy[i], 
+		dens=d, subdivisions=50000);
+	
+		polysection.funct(sy[i+1],sy[i], d$x, d$y, col=cols[i]);
+		val<-as.character(round(sub$value/int$value, digits=3));	
+		text((d$x[sy[i]]+d$x[sy[i+1]])/2, 0.2, val);
+	}
+	text(d$x[loc], 0.5, paste("mean=", round(m,digits=3)));
+}
+
+### example
+nice.dnorm()
+nice.density(runif(1000))
+
+</R>

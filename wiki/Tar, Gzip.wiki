@@ -1,0 +1,29 @@
+ tar -czvf aps95.tar.gz aps95/
+ tar -xzvf aps95.tar.gz
+
+or
+
+ tar -cvf aps95.tar aps95/
+ gzip aps95.tar
+
+ gunzip aps95.tar.gz
+ tar -xvf aps95.tar
+
+or 
+
+ tar -cvf aps95.tar aps95/
+
+ tar -xvf aps95.tar
+
+ gunzip < file.tar.gz | tar xvf -
+
+= other =
+
+* if you don't remember what is
+inside the compressed archive; this command will show you the contents,
+again without taking apart the whole thing:
+
+ gunzip -c aps95.tar.gz | tar -tvf -
+
+* extract bz2 files
+ tar xjvf cornbread.tar.bz2

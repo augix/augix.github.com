@@ -1,0 +1,49 @@
+Installing Perl modules
+
+http://www.perlmonks.org/index.pl?node_id=128077
+
+Perl modules may be installed using the CPAN module or from source.
+
+= CPAN method =
+
+ perl -MCPAN -e shell # (to get an interactive CPAN shell)
+ perl -MCPAN -e 'install Time::JulianDay' # (if you know the name of the module, you can install it directly without interacting with the CPAN shell)
+
+Within the CPAN shell:
+ i /expression/ # will search for a Perl module containing expression, and
+ install module # will install the module.
+
+Example:
+ perl -MCPAN -e shell
+ i /JulianDay/
+ install Time::JulianDay
+
+Note: if you are behind a firewall, you may wish to use passive FTP with Perl's Net::FTP module. Set the environment variable FTP_PASSIVE 1 (or any non-zero value) to use passive FTP when downloading Perl modules through CPAN.
+
+= Manual installation =
+
+To manually install a Perl module:
+
+# Download the Perl module from CPAN or other site.
+# Extract the tarball.
+# Run perl Makefile.PL
+ perl Makefile.PL PREFIX=~/lib LIB=~/lib# Run make
+# Run make test
+# Run make install
+
+Note: you should use the same compiler to build Perl modules that you used to build Perl. For example, if you are building Perl modules with gcc and are using a version of Perl that was supplied with your distribution (ex. Solaris 8 includes Perl 5.005_03), you may run into errors.
+Example: building Perl DBI with gcc on Solaris 8 system with Perl 5.005 (part of the Solaris 8 release).
+cc: unrecognized option `-KPIC'
+cc: language depend not recognized
+
+The Makefile for Perl modules is created using flags for SUNWspro (the compiler used to build Perl 5.005 for the Solaris 8 release), not gcc. As a workaround, you could build Perl from source using the gcc compiler, or obtain a packaged version of Perl that is built with gcc, such as those at Sunfreeware. This comp.lang.perl.modules post has more information. 
+
+= Checking for existence of a Perl module =
+
+An easy way to check for the existence of a Perl module on your system (technically, in Perl's @INC array, a list of directories Perl searches when attempting to load modules) is to run perl -e 'use module;'
+
+Example:
+
+ perl -e 'use HTML::Parser;'
+
+If nothing is returned, Perl was able to locate the module. Otherwise, you will see Can't locate HTML/Parser.pm in @INC.

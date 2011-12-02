@@ -1,0 +1,138 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Install Mac OS X Leopard and Windows XP on a PC</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Install Mac OS X Leopard and Windows XP on a PC</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">What I used</h1>
+<ul>
+<li>
+a PC with a Intel CPU, one Hard Disk.
+
+<li>
+iATKOS v1.0i DVD (we can download it from minivoa and burn it)
+
+<li>
+Windows XP install CD
+
+<li>
+PQ Magic (already in the Windows install CD)
+
+</ul>
+
+<h1 id="toc_2">Installation</h1>
+<ul>
+<li>
+Make 2 partitions on the Hard Disk, say disk0s1 and disk0s2. Active the first one.
+
+<li>
+Install Windows XP on disk0s1.
+
+<li>
+Boot with PQ magic CD, active disk0s2.
+
+<li>
+Boot with iATKOS DVD
+
+<li>
+After seen the Mac OS Welcome screen, do not click Agree, click Utilities &gt; Disk Utilities on the Apple bar at the top of screen.
+
+<li>
+Select the partition disk0s2, change the format of this partition and erase it. Quit Disk Utilities.
+
+<li>
+Go back to the Apple menu bar and select Utilities &gt; Darwin_Boot
+
+<li>
+Type Y (yes) to contitue, type 1 for Hard Disk number, type 2 for the partition number, so that's disk0s2.
+
+<li>
+Type Y to install boot efi if the CPU is Intel Dual Core. Quit Darwin_boot if no error message.
+
+<li>
+Read the Terms &amp; Conditions for iATKOS v1.0i and click Agree.
+
+<li>
+Select packages you want to install, I only select 
+ MBIOS.KEXT.NETKES
+ REMOTE.APPLE.NEL.CPU.POWER.Management.KEXT 
+ and driver for the graphic card. I didn't select a driver for network card.
+
+<li>
+Now the installation of Leopard begins, it needs 20-30 min. After all of these, you can use Leopard, but you can not get into Windows XP.
+
+</ul>
+
+<h1 id="toc_3">Dual Boot of Leopard and XP</h1>
+<ul>
+<li>
+Boot with PQ Magic, active the disk0s1 which has Windows XP installed
+
+<li>
+Reboot, and log in the Windows XP
+
+<li>
+Copy CHAIN0 from iATKOS DVD to the root of disk0s1
+
+<li>
+Edit boot.ini, put one line at the end of the file:
+ C:\chain0="Mac OS X Leopard"
+
+<li>
+Reboot, now you have a menu with two options, one is Windows, one is the Leopard, after selected Leopard, you have to click F8 to enter the system.
+
+</ul>
+
+<h1 id="toc_4">Done!</h1>
+
+<h1 id="toc_5">Caution</h1>
+<ul>
+<li>
+Don't change Hard Disk Partition Map with Disk Utilities (from iATKOS DVD), Disk Utilities can only be use to change the partition format and erase partition.
+
+<li>
+If one operation system can not be booted (like the blink cursor error), normally you need to active the partition of system.
+
+</ul>
+
+<h1 id="toc_6">Other things</h1>
+<ul>
+<li>
+If you don't have PQ magic, it's also ok, you can type some commands mentioned in other manual.
+
+</ul>
+
+<h1 id="toc_7">Reference</h1>
+<ul>
+<li>
+<a href="http://inihilist.wordpress.com/2008/01/07/easy-installation-guide-dual-boot-windows-vista-and-mac-os-x-105-real-quick-and-fool-proof/">http://inihilist.wordpress.com/2008/01/07/easy-installation-guide-dual-boot-windows-vista-and-mac-os-x-105-real-quick-and-fool-proof/</a>
+
+<li>
+<a href="http://wiki.osx86project.org">http://wiki.osx86project.org</a>
+
+<li>
+<a href="http://forum.insanelymac.com">http://forum.insanelymac.com</a>
+
+<li>
+<a href="http://www.vistafans.com/">远景论坛</a>
+
+<li>
+<a href="http://forum.insanelymac.com/index.php?showtopic=73952">GUID partition scheme support EFI, With dual booting</a>
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

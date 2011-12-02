@@ -1,0 +1,4 @@
+ {{{
+ $ ps -o pid -u $(whoami) | xargs kill
+ }}}
+ 

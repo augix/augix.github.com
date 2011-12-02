@@ -1,0 +1,6 @@
+<python>
+def split_len(seq, length):
+    return [seq[i:i+length] for i in range(0, len(seq), length)]
+</python>
+
+[http://code.activestate.com/recipes/496784/ Reference: Split String into n-size pieces]

@@ -1,0 +1,44 @@
+[[Category:Perl]]
+<perl>
+#!/usr/bin/perl
+open IN_b, "./first step/candidate_notmatchsanger.txt" or die $!;
+open IN_s, "pat_1_result26.txt" or die $!;
+open(OUT,">./first step/26.txt")||die "cannot open the dest:$!";
+
+$length = 26;
+
+while(<IN_b>) {
+  chomp;
+  ($chr,$start,$end,$id,$strand) = split /,/;
+  #print $id."\n";
+  
+  $b_chr = "chr".$chr.$strand;
+  push @{ $id{$b_chr} }, $id;
+  $start{$id} = $start;
+  $end{$id} = $end;
+}
+
+
+while(<IN_s>) {
+  chomp;
+  ($chr,$id,$start,$strand,$tmp) = split;
+  #print $id."\n";
+
+
+  $s_chr = $chr.$strand;
+  $s_start = $start; 
+  $s_end = $start + $length;
+
+  $ss = $s_chr;
+  foreach $b_id(@{ $id{$ss} }) {
+    if ($s_start > $start{$b_id} and $s_end < $end{$b_id}) {
+      print OUT "$id\t$b_id\n";
+    }
+    else {
+      #print "$s_start\t$start{$b_id}\t$s_end\t$end{$b_id}\n";
+    }
+  }
+  
+}
+
+</perl>

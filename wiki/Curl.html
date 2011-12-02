@@ -1,0 +1,58 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Curl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Curl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+ $ cat url.txt | xargs -n1 curl -O
+</p>
+
+<p>
+or
+</p>
+
+<p>
+ $ curl -K urls.txt
+</p>
+
+<p>
+&lt;blockquote&gt;
+where urls.txt is in this format
+<br>
+url = "<a href="http://......"">http://......"</a>
+&lt;/blockquote&gt;
+</p>
+
+<p>
+or
+ $ wget -i urls.txt
+</p>
+
+
+<p>
+Download files from a web which requires login
+&lt;bash&gt;
+curl -D headers_and_cookies -d "logon=augix.com%40gmail.com&amp;password=PASSWORD&amp;x=0&amp;y=0" <a href="http://www.affymetrix.com/site/processLogin.jsp">http://www.affymetrix.com/site/processLogin.jsp</a>
+</p>
+
+<p>
+curl -b headers_and_cookies <a href="http://www.affymetrix.com/Auth/support/downloads/demo_data/HuEx-1_0-st-v2.tissue-mixture-data-set.gcos-files.zip">http://www.affymetrix.com/Auth/support/downloads/demo_data/HuEx-1_0-st-v2.tissue-mixture-data-set.gcos-files.zip</a>
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

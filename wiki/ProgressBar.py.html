@@ -1,0 +1,214 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>ProgressBar.py</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>ProgressBar.py</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+'''
+</p>
+<blockquote>
+NAME: progressBar.py
+AUTHOR: Augix
+DATE: 2009-05-20
+</blockquote>
+<blockquote>
+FUNCTION: this module prints a progress bar to show how much time you have to wait until the program finish.
+It simply reads a percentage to update the progress bar.
+</blockquote>
+<blockquote>
+USAGE: from progressBar import progressBar
+bar = progressBar(min=0, max=200, barLength=None, output=sys.stderr)
+for i in range(200):
+bar.update(i)
+time.sleep(0.1)
+</blockquote>
+<blockquote>
+Reference: <a href="http://code.activestate.com/recipes/168639/">http://code.activestate.com/recipes/168639/</a>
+</blockquote>
+<p>
+'''
+</p>
+
+<ol>
+<li>
+=== Dependencies ===
+
+</ol>
+<p>
+import sys, time
+</p>
+
+<ol>
+<li>
+=== variables ===
+
+</ol>
+
+<ol>
+<li>
+=== functions ===
+
+</ol>
+
+<ol>
+<li>
+=== classes ===
+
+</ol>
+<p>
+class progressBar:
+</p>
+<blockquote>
+def _<em>init</em>_(self, min = 0, max = 100, barLength = None, output=sys.stderr):
+self.output = output
+self.progBar = "[]"   # This holds the progress bar string
+self.min = min
+self.max = max - 1
+self.span = self.max - self.min + 1
+self.barLength = self.calBarLength(barLength)
+self.percentDone = 0
+self.timeStart = time.time()
+self.timePrevious = self.timeStart
+self.timePass = 0
+self.finish = False
+self.update(0)  # Build progress bar string
+</blockquote>
+<blockquote>
+def calBarLength(self, barLength):
+if barLength == None:
+from fcntl import ioctl
+from termios import TIOCGWINSZ
+from array import array
+a = ioctl(self.output,TIOCGWINSZ,'\0'*8)
+h,w=array('h',a)[:2]
+return w
+else: return barLength
+</blockquote>
+<blockquote>
+def calPercent(self, newAmount):
+diffFromMin = float(newAmount - self.min + 1)
+percentDone = (diffFromMin / float(self.span)) * 100.0
+return percentDone
+</blockquote>
+<blockquote>
+def calWaitingTime(self):
+self.timePass = time.time() - self.timeStart
+timeWait = self.timePass / float(self.percentDone) * (100.0 - self.percentDone)
+return timeWait
+</blockquote>
+<blockquote>
+def formatTime(self, seconds):
+seconds = int(round(seconds))
+hour = seconds / 3600
+if hour == 0: hour = ""
+else: hour = " " + str(hour) + " hour"
+minute = seconds % 3600 / 60
+if minute == 0: minute = ""
+else: minute = " " + str(minute) + " min"
+second = seconds % 60
+second = " " + str(second) + " sec"
+s = hour + minute + second
+return s
+</blockquote>
+<blockquote>
+def formatPercent(self, percent):
+i = str(int(round(percent)))
+s = " "*(3-len(i)) + i + "%"
+return s
+</blockquote>
+<blockquote>
+def update(self, newAmount = 0):
+timeNow = time.time()
+if timeNow - self.timePrevious &lt; 0.5:
+if newAmount &lt; self.max: return None
+self.timePrevious = timeNow
+</blockquote>
+<ol>
+<li>
+Calculate the percentage finished
+        if newAmount &lt; self.min: newAmount = self.min
+        if newAmount &gt;= self.max: newAmount = self.max; self.finish = True;
+        self.percentDone = self.calPercent(newAmount)
+        printPercent = self.formatPercent(self.percentDone)
+
+</ol>
+        
+<ol>
+<li>
+Calculate the waiting time
+        if self.percentDone == 0: printETA = ""
+        elif self.finish == True: printETA = self.formatTime(self.timePass) + " used"
+        else:
+            timeWait = self.calWaitingTime()
+            printETA = self.formatTime(timeWait) + " left"
+
+</ol>
+       
+<ol>
+<li>
+Figure out how many '=' and spaces the bar should be
+        spaceAndEqual = self.barLength - 11 - len(printETA)
+        numEqual = (self.percentDone / 100.0) * spaceAndEqual
+        numEqual = int(round(numEqual))
+
+</ol>
+        
+<ol>
+<li>
+the rotating thing
+        animation = '\|/-'
+        printAnimation = animation[int(timeNow % 4)]
+
+</ol>
+        
+<ol>
+<li>
+build a progress bar with "=" and spaces
+        self.progBar = " " + printPercent + " [" + printAnimation + '='<strong>numEqual + "&gt;" + ' '</strong>(spaceAndEqual-numEqual) + "] " + printETA
+        if self.finish == True:
+            self.output.write(self.progBar + "\n")
+        else:
+            self.output.write(self.progBar + "\r")
+
+</ol>
+<blockquote>
+def _<em>str</em>_(self):
+return str(self.progBar)
+</blockquote>
+
+<ol>
+<li>
+=== Main ===
+
+</ol>
+<p>
+if _<em>name</em>_ == '_<em>main</em>_':
+</p>
+<blockquote>
+bar = progressBar(max=200)
+for i in range(200):
+bar.update(i)
+time.sleep(0.1)
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+= Progress Bar =
+ [[progressBar.py]]
+
+= enumerate =
+<python>
+>>> for i,w in enumerate('hello world'):
+...   print i, w
+... 
+0 h
+1 e
+2 l
+3 l
+4 o
+5  
+6 w
+7 o
+8 r
+9 l
+10 d
+
+>>> for i in enumerate('hello world'):
+...     print i
+...
+(0, 'h')
+(1, 'e')
+(2, 'l')
+(3, 'l')
+(4, 'o')
+(5, ' ')
+(6, 'w')
+(7, 'o')
+(8, 'r')
+(9, 'l')
+(10, 'd')
+</python>
+
+
+= make matrix =
+ref: http://stackoverflow.com/questions/974931/multiply-operator-applied-to-listdata-structure
+
+<python>
+def make_matrix(rows, columns):
+"""
+  >>> make_matrix(4, 2)
+  [[0, 0], [0, 0], [0, 0], [0, 0]]
+  >>> m = make_matrix(4, 2)
+  >>> m[1][1] = 7
+  >>> m
+  [[0, 0], [0, 7], [0, 0], [0, 0]]
+"""
+matrix = []
+for row in range(rows):
+    matrix += [[0] * columns]
+return matrix
+</python>
+
+= formated printing =
+<python>
+items = ['a', 'abcd', 'abcdefg', 'abcdefghijklmn']
+for i in items:
+    print "Name: %s Price: %s" % (i, i)
+
+for i in items:
+    print "Name: %-20s Price: %10.10s" % (i, i)
+</python>
+
+formated printing:
+<pre>
+Name: a                    Price:          a
+Name: abcd                 Price:       abcd
+Name: abcdefg              Price:    abcdefg
+Name: abcdefghijklmn       Price: abcdefghij
+</pre>
+
+read file with while loop
+<python>
+    f = open(file)
+    while True:
+        l = f.readline()
+        print l
+        if not l: break
+    print "finished.\n"
+</python>
+
+
+= uniquify a list =
+== elements hashable ==
+ alist = list(set(alist))
+== elements unhashable ==
+ alist = [k for k,v in itertools.groupby(sorted(alist))]

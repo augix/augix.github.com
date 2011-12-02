@@ -1,0 +1,124 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Change File Name by Shell</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Change File Name by Shell</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Description</h1>
+<p>
+When you want change file names in the Unix Shell, you can use '''#''' and '''%''' to match a part of the file name and replace this part with other strings you want.
+</p>
+
+<h1 id="toc_2">Principle</h1>
+<p>
+'''#''' does the match from the '''left''' part of our string variable, and it simply remove the matched part. (minimum matching)
+</p>
+
+<p>
+'''##''' does the match from the '''left''' part of our string variable, and it simply remove the matched part. (maximum matching)
+</p>
+
+<p>
+'''%''' does the match from the '''right''' part of our string variable, and it simply remove the matched part. (minimum matching)
+</p>
+
+<p>
+'''%%''' does the match from the '''right''' part of our string variable, and it simply remove the matched part. (maximum matching)
+</p>
+
+<p>
+&lt;pre&gt;
+old="human.fa"
+new=chimp${old#human}
+echo $old $new
+&lt;/pre&gt;
+</p>
+
+<p>
+the result is
+ human.fa chimp.fa
+</p>
+
+<p>
+&lt;pre&gt;
+old="music.mp3"
+new=${old%mp3}wav
+echo $old $new
+&lt;/pre&gt;
+</p>
+
+<p>
+the result is
+ music.mp3 music.wav
+</p>
+
+<h1 id="toc_3">with the help of '''*'''</h1>
+<p>
+You can also use the '''*''' to help '''#''' and '''%''' match variable things. Let's see some examples:
+</p>
+
+<h2 id="toc_3.1">Change extension of a lot files</h2>
+<p>
+ for i in <strong>.wav; do echo $i ${i%.</strong>}.mp3; done
+</p>
+
+<p>
+the result is:
+&lt;pre&gt;
+a.wav a.mp3
+b.wav b.mp3
+c.wav c.mp3
+&lt;/pre&gt;
+</p>
+ 
+<p>
+ for i in *.wav; do mv "$i" "${i%%.wav}.mp3"; done
+</p>
+
+<h2 id="toc_3.2">Change the first underline to dot</h2>
+<p>
+ for i in <strong><em></strong>; do echo $i ${i%%</em><strong>}.${i#</strong>_}; done
+</p>
+
+<p>
+result:
+&lt;pre&gt;
+ha1_r1_fa ha1.r1_fa
+ha1_r2_fa ha1.r2_fa
+ha2_r1_fa ha2.r1_fa
+ha2_r2_fa ha2.r2_fa
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_3.3">Change the last underline to dot</h2>
+<p>
+ for i in <strong><em></strong>; do echo $i ${i%</em><strong>}.${i##</strong>_}; done
+</p>
+
+<p>
+result:
+&lt;pre&gt;
+ha1_r1_fa ha1_r1.fa
+ha1_r2_fa ha1_r2.fa
+ha2_r1_fa ha2_r1.fa
+ha2_r2_fa ha2_r2.fa
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_3.4">Change file name from upper to lower case</h2>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

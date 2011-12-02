@@ -1,0 +1,5 @@
+* Linkage disequilibrium
+In population genetics, linkage disequilibrium is the non-random association of alleles at two or more loci, not necessarily on the same chromosome. It is not the same as linkage, which describes the association of two or more loci on a chromosome with limited recombination between them. Linkage disequilibrium describes a situation in which some combinations of alleles or genetic markers occur more or less frequently in a population than would be expected from a random formation of haplotypes from alleles based on their frequencies. Non-random associations between polymorphisms at different loci are measured by the degree of linkage disequilibrium (LD).
+
+* Selective sweep
+A selective sweep is the reduction or elimination of variation among the nucleotides in neighbouring DNA of a mutation as the result of recent and strong positive natural selection.

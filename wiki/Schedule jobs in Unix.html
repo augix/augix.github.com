@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Schedule jobs in Unix</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Schedule jobs in Unix</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+automatically start a list of jobs in a given time
+ at -f joblist now + 1 minutes
+</p>
+
+<p>
+&lt;pre&gt;
+$ at now + 25 minutes
+echo ^G &gt; /dev/ttyp4
+^D
+Job c00ceb7fb.00 will be executed using /bin/sh
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

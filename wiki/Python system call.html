@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python system call</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python system call</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+this is almost certainly not the best way to read the output of a python system call.  but, it works.    let’s say i’d like to read the results of a call to ls.  here’s how to do it:
+&lt;python&gt;
+import subprocess
+proc = subprocess .Popen([ls],stdout=sub.PIPE)
+print proc.stdout.read()
+&lt;/python&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Make trees in R, test its stability by bootstrapping</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Make trees in R, test its stability by bootstrapping</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_ R.html">Category: R</a>
+</p>
+<ul>
+<li>
+my boot.tree.R
+
+</ul>
+<p>
+&lt;R&gt;
+boot.tree &lt;- function(data, B = 100, tree = "upgma") {
+	library(phangorn)
+	func &lt;- function(x) upgma(dist(x, method = "euclidean"), method="average")
+	if (tree == "nj") {
+		func &lt;- function(x) nj(dist(x, method = "euclidean"))
+	}
+	if (tree == "hclust") {
+		func &lt;- function(x) {
+			tr = hclust(dist(x, method = "euclidean"))
+			tr = as.phylo(tr)
+			return(tr)
+		}
+	}
+	tr_real = func(data)
+	plot(tr_real)
+	library(ape)
+	bp &lt;- boot.phylo(tr_real, data, FUN=func, B=B)
+	nodelabels(bp)
+	return(bp)
+}
+</p>
+
+<p>
+data = t(USArrests) # columns are the branches
+boot.tree(data, B=1000, tree='hclust')
+</p>
+
+
+<ol>
+<li>
+Description:
+
+<li>
+This function builds a upgma or nj tree and tests its stability by bootstrapping. It returns a tree, and bootstrap result.
+
+</ol>
+<p>
+#
+</p>
+<ol>
+<li>
+Usage:
+
+<li>
+boot.tree(data, B = 100, tree = "upgma")
+
+</ol>
+<p>
+#
+</p>
+<ol>
+<li>
+Arguments:
+
+<li>
+data: a numeric matrix, data fram
+
+<li>
+
+
+<li>
+B: the number of bootstrap replicates. (100 by default).
+
+</ol>
+<p>
+#
+</p>
+<ol>
+<li>
+tree: tree type. It could be "upgma", or "nj". ("upgma" by default.)
+
+</ol>
+<p>
+#
+</p>
+<ol>
+<li>
+Values:
+
+<li>
+It return a numeric vector which _i_th element is the times that we observe the _i_th node of the real tree.
+
+</ol>
+<p>
+#
+</p>
+<ol>
+<li>
+Examples:
+
+<li>
+# compare it with the hclust
+
+<li>
+par(ask = TRUE)
+
+<li>
+plot(hclust(dist(t(USJudgeRatings))))
+
+<li>
+boot.tree(t(USJudgeRatings), 100) 
+
+</ol>
+<p>
+&lt;/R&gt;
+</p>
+
+<p>
+<a href="Image:boot_tree.png"><img src="Image:boot_tree.png" /></a>
+</p>
+
+
+
+<ul>
+<li>
+a script from ape package
+
+</ul>
+<p>
+&lt;R&gt;
+install.packages("ape")
+library(ape)
+data(woodmouse)
+d &lt;- dist.dna(woodmouse)
+tr &lt;- nj(d)
+bp &lt;- boot.phylo(tr, woodmouse, function(xx) nj(dist.dna(xx)))
+plot(tr)
+nodelabels(bp)
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

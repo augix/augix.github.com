@@ -1,0 +1,16 @@
+%template disqus
+
+= read specific line in a file =
+{{{
+awk NR==3 file1
+
+# or
+ 
+line_number=7
+sed -n "${line_number}p" file_name
+}}}
+
+= iterate through every line in a file =
+{{{
+while read -r LINE ; do printf "$LINE\n" ; done < some-text-file
+}}}

@@ -1,0 +1,95 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Configure MediaWiki</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Configure MediaWiki</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Changes made in LocalSetting.php</h1>
+<p>
+ $wgLogo = "$wgScriptPath/images/wiki_home.jpg";
+</p>
+
+<p>
+ $wgEnableUploads = true;
+</p>
+
+<p>
+for GeSHiHighlight, insert:
+</p>
+
+<p>
+&lt;pre&gt;
+## START: changes made by Augix
+include("extensions/GeSHiHighlight.php");
+$wgAllowCopyUploads = true;
+$wgFileExtensions[] = 'doc';
+$wgFileExtensions[] = 'pdf';
+$wgFileExtensions[] = 'ppt';
+## END
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_2">Changes made in somewhere else</h1>
+<h2 id="toc_2.1">Permissions</h2>
+<p>
+to block all the visitors from modifying the wiki or creating account.
+</p>
+
+<p>
+in &lt;code&gt;/Applications/xampp/htdocs/wk/includes/DefaultSettings.php&lt;/code&gt;
+&lt;pre&gt;
+$wgGroupPermissions['*'    ]['createaccount']   = false;
+$wgGroupPermissions['*'    ]['read']            = true;
+$wgGroupPermissions['*'    ]['edit']            = false;
+$wgGroupPermissions['*'    ]['createpage']      = false;
+$wgGroupPermissions['*'    ]['createtalk']      = false;
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_2.2">Upload files</h2>
+<p>
+in &lt;code&gt;/Applications/xampp/xamppfiles/etc/php.ini&lt;/code&gt;
+&lt;pre&gt;
+; Maximum allowed size for uploaded files.
+upload_max_filesize = 20M
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_3">Export MediaWiki pages</h1>
+<p>
+*<a href="mw2html.html">mw2html</a>
+:<a href="http://barnesc.blogspot.com/2005/10/mw2html-export-mediawiki-to-static.html">http://barnesc.blogspot.com/2005/10/mw2html-export-mediawiki-to-static.html</a>
+</p>
+<ul>
+<li>
+<a href="Special_Export.html">Special:Export</a>
+
+</ul>
+
+<h1 id="toc_4">Other configuration</h1>
+<p>
+<a href="Enable Tex in Wiki.html">Enable Tex in Wiki</a>
+</p>
+
+<h1 id="toc_5">See also</h1>
+<ul>
+<li>
+<a href="http://www.mediawiki.org/wiki/Help:Configuration_settings">Configuration settings list</a>
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

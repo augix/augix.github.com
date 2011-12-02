@@ -1,0 +1,66 @@
+[[Category: R]]
+* my boot.tree.R
+<R>
+boot.tree <- function(data, B = 100, tree = "upgma") {
+	library(phangorn)
+	func <- function(x) upgma(dist(x, method = "euclidean"), method="average")
+	if (tree == "nj") {
+		func <- function(x) nj(dist(x, method = "euclidean"))
+	}
+	if (tree == "hclust") {
+		func <- function(x) {
+			tr = hclust(dist(x, method = "euclidean"))
+			tr = as.phylo(tr)
+			return(tr)
+		}
+	}
+	tr_real = func(data)
+	plot(tr_real)
+	library(ape)
+	bp <- boot.phylo(tr_real, data, FUN=func, B=B)
+	nodelabels(bp)
+	return(bp)
+}
+
+data = t(USArrests) # columns are the branches
+boot.tree(data, B=1000, tree='hclust')
+
+
+# Description:
+#	This function builds a upgma or nj tree and tests its stability by bootstrapping. It returns a tree, and bootstrap result.
+#
+# Usage:
+#	boot.tree(data, B = 100, tree = "upgma")
+#
+# Arguments:
+#	data: a numeric matrix, data fram
+#	
+#	B: the number of bootstrap replicates. (100 by default).
+#
+#	tree: tree type. It could be "upgma", or "nj". ("upgma" by default.)
+#
+# Values:
+#	It return a numeric vector which _i_th element is the times that we observe the _i_th node of the real tree.
+#
+# Examples:
+#	# compare it with the hclust
+#	par(ask = TRUE)
+#	plot(hclust(dist(t(USJudgeRatings))))
+#	boot.tree(t(USJudgeRatings), 100) 
+</R>
+
+[[Image:boot_tree.png]]
+
+
+
+* a script from ape package
+<R>
+install.packages("ape")
+library(ape)
+data(woodmouse)
+d <- dist.dna(woodmouse)
+tr <- nj(d)
+bp <- boot.phylo(tr, woodmouse, function(xx) nj(dist.dna(xx)))
+plot(tr)
+nodelabels(bp)
+</R>

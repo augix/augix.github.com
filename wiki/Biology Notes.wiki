@@ -1,0 +1,21 @@
+* [[Human Evolution]]
+* [[Population Genetics]]
+* [[Biotechnology]]
+
+<hr>
+
+* [[ENSEMBL ftp structure]]
+* [[ENSEMBL ftp structure v57]]
+* [[Biochemistry]]
+* [[CpG island]]
+* [http://ocw.mit.edu/OcwWeb/Biology/index.htm MIT Open Course: Biology]
+
+* [[Neutral Evolution]]
+
+* [[Human gene structure]]
+* [[Repeat class]]
+
+* [[List of UCSC genome releases]]
+
+* lengths of human chromosomes
+http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&chromInfoPage=

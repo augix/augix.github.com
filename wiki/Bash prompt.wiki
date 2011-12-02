@@ -1,0 +1,13 @@
+%template disqus
+
+= How do I prompt for input in a Linux shell script? =
+
+{{{
+read -e -p "Enter the path to the file: " -i "/usr/local/etc/" FILEPATH
+
+# one can also use "select"
+}}}
+
+Note: Since BASH4, you can now suggest an answer (-i), so the user only have to press return to enter it :
+
+http://stackoverflow.com/questions/226703/how-do-i-prompt-for-input-in-a-linux-shell-script

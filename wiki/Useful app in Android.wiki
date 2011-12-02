@@ -1,0 +1,24 @@
+* AppControl
+ it backup things into /backups/apps/
+* ASTRO
+* Backup
+* Compass
+* fring
+* G-backup Full
+* Nesoid
+* Nimbuzz
+* Pure Grid calendar widgets
+* RepliGo Reader
+* Ringo Pro
+* Root Booter
+* SD Share
+* SMS Backup
+* TasKiller
+* Weather Widgets
+* Where’s My Droid
+* 双人反应
+* colaQQ
+* 子午播放器
+* 火兔
+* 超级记事本 NoteEverthing
+* 金山词霸

@@ -1,0 +1,19 @@
+[[Category:Perl]]
+<perl>
+#!/usr/bin/perl -w
+use strict;
+
+# add your ~/lib dir to @INC
+use lib '/picb/home5/augix/Programming/Perl/Modules/lib/perl5/site_perl/5.8.5/';
+use Hash::AsObject;
+my $hash = Hash::AsObject->new;
+
+$hash->{foo} = 42;
+print $hash->foo, "\n";
+
+$hash->bar( 137 );
+print $hash->bar, "\n";
+
+$hash->{baz}{quux} = 149;
+print $hash->baz->quux, "\n";
+</perl>

@@ -1,0 +1,151 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>R.php</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>R.php</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;php&gt;
+&lt;?php
+/*************************************************************************************
+</p>
+<ul>
+<li>
+R.php
+
+<li>
+--------
+ ************************************************************************************/
+
+</ul>
+
+<p>
+$language_data = array (
+	'LANG_NAME' =&gt; 'R',
+	'COMMENT_SINGLE' =&gt; array(1 =&gt; '#'),
+	'COMMENT_MULTI' =&gt; array( '=pod' =&gt; '=cut'),
+	'CASE_KEYWORDS' =&gt; GESHI_CAPS_NO_CHANGE,
+	'QUOTEMARKS' =&gt; array('"'),
+	'HARDQUOTE' =&gt; array("'", "'"),		    // An optional 2-element array defining the beginning and end of a hard-quoted string
+	'HARDESCAPE' =&gt; array('\\\'', "\\\\"),	    // Things that must still be escaped inside a hard-quoted string
+</p>
+<blockquote>
+// If HARDQUOTE is defined, HARDESCAPE must be defined
+// This will not work unless the first character of each element is either in the
+// QUOTEMARKS array or is the ESCAPE_CHAR
+</blockquote>
+<p>
+	'ESCAPE_CHAR' =&gt; '\\',
+	'KEYWORDS' =&gt; array(
+		1 =&gt; array(
+			'case', 'do', 'else', 'elsif', 'for', 'if', 'then', 'until', 'while', 'foreach', 'my',
+			'or', 'and', 'unless', 'next', 'last', 'redo', 'not', 'our',
+			'reset', 'continue','and', 'cmp', 'ne'
+			),
+		2 =&gt; array(
+			'use', 'sub', 'new', '_<em>END</em><em>', '</em><em>DATA</em><em>', '</em><em>DIE</em><em>', '</em><em>WARN</em>_', 'BEGIN',
+			'STDIN', 'STDOUT', 'STDERR'
+			),
+		3 =&gt; array(
+'abbreviate', 'abline', 'abs', 'acos', 'acosh', 'all', 'all.names', 'all.vars', 'anova', 'anova.glm', 'anova.lm', 'any', 'aperm', 'append', 'apply', 'approx', 'approxfun', 'apropos', 'Arg', 'args', 'Arithmetic', 'array', 'arrows', 'as.array', 'as.call', 'as.character', 'as.complex', 'as.data.frame', 'as.double', 'as.expression', 'as.factor', 'asin', 'asinh', 'as.integer', 'as.list', 'as.logical', 'as.matrix', 'as.na', 'as.name', 'as.null', 'as.numeric', 'as.ordered', 'as.qr', 'as.real', 'assign', 'as.ts', 'as.vector', 'atan', 'atan2', 'atanh', 'attach', 'attr', 'attributes', 'autoload', '.AutoloadEnv', 'axis', 'backsolve', 'barplot', 'beta', 'binomial', 'box', 'boxplot', 'boxplot.stats', 'break', 'browser', 'bw.bcv', 'bw.sj', 'bw.ucv', 'bxp', 'c', '.C', 'call', 'cat', 'cbind', 'ceiling', 'character', 'charmatch', 'chisq.test', 'chol', 'chol2inv', 'choose', 'class', 'class', 'codes', 'coef', 'coefficients', 'coefficients.glm', 'coefficients.lm', 'co.intervals', 'col', 'colnames', 'colors', 'colours', 'Comparison', 'complete.cases', 'complex', 'Conj', 'contour', 'contrasts', 'contr.helmert', 'contr.poly', 'contr.sum', 'contr.treatment', 'convolve', 'cooks.distance', 'coplot', 'cor', 'cos', 'cosh', 'count.fields', 'cov', 'covratio', 'crossprod', 'cummax', 'cummin', 'cumprod', 'cumsum', 'curve', 'cut', 'D', 'data', 'data.class', 'data.entry', 'dataentry', 'data.frame', 'data.matrix', 'dbeta', 'dbinom', 'dcauchy', 'dchisq', 'de', 'debug', 'delay', 'demo', 'de.ncols', 'density', 'deparse', 'de.restore', 'deriv', 'deriv.default', 'deriv.formula', 'de.setup', 'detach', 'deviance', 'deviance.glm', 'deviance.lm', 'device', 'Devices', 'dev.off', 'dexp', 'df', 'dfbetas', 'dffits', 'df.residual', 'df.residual.glm', 'df.residual.lm', 'dgamma', 'dgeom', 'dget', 'dhyper', 'diag', 'diff', 'digamma', 'dim', 'dim', 'dimnames', 'dimnames', 'dlnorm', 'dlogis', 'dnbinom', 'dnchisq', 'dnorm', 'do.call', 'dotplot', 'double', 'dpois', 'dput', 'drop', 'dt', 'dump', 'dunif', 'duplicated', 'dweibull', 'dyn.load', 'edit', 'effects.glm', 'effects.lm', 'eigen', 'else', 'emacs', 'end', 'environment', 'environment', 'eval', 'exists', 'exp', 'expression', 'Extract', 'factor', 'family', 'family.glm', 'fft', 'finite', 'fitted', 'fitted.values', 'fitted.values.glm', 'fitted.values.lm', 'fivenum', 'fix', 'floor', 'for', 'formals', 'format', 'formatC', 'format.default', 'formula.default', 'formula.formula', 'formula.terms', '.Fortran', 'frame', 'frequency', 'function', 'Gamma', 'gamma', 'gaussian', 'gc', 'gcinfo', 'get', 'getenv', 'gl', 'glm', 'glm.control', 'glm.fit', '.GlobalEnv', 'graphics.off', 'gray', 'grep', 'grid', 'gsub', 'hat', 'heat.colors', 'help', 'hist', 'hsv', 'identify', 'if', 'ifelse', 'Im', 'image', '%in%', 'influence.measures', 'inherits', 'integer', 'interactive', '.Internal', 'inverse.gaussian', 'invisible', 'invisible', 'IQR', 'is.array', 'is.atomic', 'is.call', 'is.character', 'is.complex', 'is.data.frame', 'is.double', 'is.environment', 'is.expression', 'is.factor', 'is.function', 'is.integer', 'is.language', 'is.list', 'is.loaded', 'is.logical', 'is.matrix', 'is.na', 'is.name', 'is.null', 'is.numeric', 'is.ordered', 'is.qr', 'is.real', 'is.recursive', 'is.single', 'is.ts', 'is.unordered', 'is.vector', 'lapply', 'lbeta', 'lchoose', 'legend', 'length', 'LETTERS', 'letters', 'levels', 'levels', 'lgamma', '.lib.loc', '.Library', 'library', 'library.dynam', 'license', 'lines', 'lines.default', 'list', 'lm', 'lm.fit', 'lm.influence', 'lm.wfit', 'load', 'locator', 'log', 'log10', 'log2', 'Logic', 'logical', 'lower.tri', 'lowess', 'ls', 'ls.diag', 'lsfit', 'lsf.str', 'ls.print', 'ls.str', '.Machine', 'Machine', 'machine', 'macintosh', 'mad', 'match', 'match.arg', 'match.call', 'matlines', 'mat.or.vec', 'matplot', 'matpoints', 'matrix', 'max', 'mean', 'median', 'menu', 'methods', 'min', 'missing', 'Mod', 'mode', 'mode', 'model.frame', 'model.frame.default', 'model.matrix', 'model.matrix.default', 'month.abb', 'month.name', 'mtext', 'mvfft', 'NA', 'na.action', 'na.action.default', 'na.fail', 'names', 'na.omit', 'nargs', 'nchar', 'NCOL', 'ncol', 'next', 'NextMethod', 'nextn', 'nlevels', 'nlm', '[.noquote', 'noquote', 'NROW', 'nrow', 'NULL', 'numeric', 'objects', 'on.exit', 'optimize', 'options', 'order', 'ordered', 'outer', 'pairs', 'palette', 'par', 'parse', 'paste', 'pbeta', 'pbinom', 'pcauchy', 'pchisq', 'pentagamma', 'pexp', 'pf', 'pgamma', 'pgeom', 'phyper', 'pi', 'pictex', 'piechart', 'plnorm', 'plogis', 'plot', 'plot.default', 'plot.density', 'plot.ts', 'plot.xy', 'pmatch', 'pmax', 'pmin', 'pnbinom', 'pnchisq', 'pnorm', 'points', 'points.default', 'poisson', 'polygon', 'polyroot', 'postscript', 'ppoints', 'ppois', 'pretty', 'print', 'print.anova.glm', 'print.anova.lm', 'print.data.frame', 'print.default', 'print.density', 'print.formula', 'print.glm', 'print.lm', 'print.noquote', 'print.plot', 'print.summary.glm', 'print.summary.lm', 'print.terms', 'print.ts', 'proc.time', 'prod', 'prompt', 'prompt.default', 'prop.test', 'provide', '.Provided', 'ps.options', 'pt', 'punif', 'pweibull', 'q', 'qbeta', 'qbinom', 'qcauchy', 'qchisq', 'qexp', 'qf', 'qgamma', 'qgeom', 'qhyper', 'qlnorm', 'qlogis', 'qnbinom', 'qnchisq', 'qnorm', 'qpois', 'qqline', 'qqnorm', 'qqplot', 'qr', 'qr.coef', 'qr.fitted', 'qr.Q', 'qr.qty', 'qr.qy', 'qr.R', 'qr.resid', 'qr.solve', 'qr.X', 'qt', 'quantile', 'quasi', 'quit', 'qunif', 'quote', 'qweibull', 'rainbow', '.Random.seed', 'range', 'rank', 'rbeta', 'rbind', 'rbinom', 'rcauchy', 'rchisq', 'Re', 'readline', 'read.table', 'real', 'rect', 'remove', 'rep', 'repeat', 'replace', 'require', 'resid', 'residuals', 'residuals.glm', 'residuals.lm', 'return', 'rev', 'rexp', 'rf', 'rgamma', 'rgb', 'rgeom', 'rhyper', 'RLIBS', 'rlnorm', 'rlogis', 'rm', 'rnbinom', 'rnchisq', 'rnorm', 'round', 'row', 'row.names', 'rownames', 'rpois', 'rstudent', 'rt', 'runif', 'rweibull', 'sample', 'sapply', 'save', 'save.plot', 'scale', 'scan', 'sd', 'segments', 'seq', 'sequence', 'sign', 'signif', 'sin', 'sinh', 'sink', 'solve', 'solve.qr', 'sort', 'source', 'spline', 'splinefun', 'split', 'sqrt', 'start', 'stem', 'stop', 'storage.mode', 'storage.mode', 'str', 'str.data.frame', 'str.default', 'strheight', 'stripplot', 'strsplit', 'structure', 'strwidth', 'sub', 'Subscript', 'substitute', 'substr', 'substring', 'sum', 'summary', 'summary.glm', 'summary.lm', 'svd', 'sweep', 'switch', 'symbol.C', 'symbol.For', 'symnum', 'sys.call', 'sys.calls', 'sys.frame', 'sys.frames', 'sys.function', 'sys.nframe', 'sys.on.exit', 'sys.parent', 'sys.parents', 'system', 'system.date', 'system.time', 't', 'table', 'tabulate', 'tan', 'tanh', 'tapply', 'tempfile', 'terms', 'terms.default', 'terms.formula', 'terms.terms', 'terrain.colors', 'tetragamma', 'text', 'time', 'title', 'topo.colors', 'trace', 'traceback', 'trigamma', 'trunc', 'ts', 'tsp', 't.test', 'typeof', 'unclass', 'undebug', 'unique', 'uniroot', 'unlink', 'unlist', 'untrace', 'update', 'update.formula', 'update.glm', 'update.lm', 'upper.tri', 'UseMethod', 'var', 'vector', 'Version', 'version', 'vi', 'warning', 'weighted.mean', 'weights.lm', 'while', 'window', 'windows', 'write', 'x11', 'xedit', 'xemacs', 'xinch', 'xor', 'xy.coords', 'yinch'
+			)
+		),
+	'SYMBOLS' =&gt; array(
+		'(', ')', '[', ']', '!', '@', '%', '&amp;', '*', '|', '/', '&lt;', '&gt;','&lt;-','&lt;&lt;-','=','==','{','}'
+		),
+	'CASE_SENSITIVE' =&gt; array(
+		GESHI_COMMENTS =&gt; true,
+		1 =&gt; true,
+		2 =&gt; true,
+		3 =&gt; true,
+		),
+	'STYLES' =&gt; array(
+		'KEYWORDS' =&gt; array(
+			1 =&gt; 'color: #b1b100;',
+			2 =&gt; 'color: #000000; font-weight: bold;',
+			3 =&gt; 'color: #000066;'
+			),
+		'COMMENTS' =&gt; array(
+			1 =&gt; 'color: #808080; font-style: italic;',
+			'MULTI' =&gt; 'color: #808080; font-style: italic;'
+			),
+		'ESCAPE_CHAR' =&gt; array(
+			0 =&gt; 'color: #000099; font-weight: bold;'
+			),
+		'STRINGS' =&gt; array(
+			0 =&gt; 'color: #ff0000;'
+			),
+		'NUMBERS' =&gt; array(
+			0 =&gt; 'color: #cc66cc;'
+			),
+		'METHODS' =&gt; array(
+			1 =&gt; 'color: #006600;',
+			2 =&gt; 'color: #006600;'
+			),
+		'SYMBOLS' =&gt; array(
+			0 =&gt; 'color: #66cc66;'
+			),
+		'BRACKETS' =&gt; array(
+			0 =&gt; 'color: #66cc66;'
+			),
+		'REGEXPS' =&gt; array(
+			0 =&gt; 'color: #0000ff;',
+			4 =&gt; 'color: #009999;',
+			),
+		'SCRIPT' =&gt; array(
+			)
+		),
+	'URLS' =&gt; array(
+		3 =&gt; '<a href="http://www.math.montana.edu/Rweb/Rhelp/{FNAME}.html'">http://www.math.montana.edu/Rweb/Rhelp/{FNAME}.html'</a>
+		),
+	'OOLANG' =&gt; true,
+	'OBJECT_SPLITTERS' =&gt; array(
+		1 =&gt; '-&amp;gt;',
+		2 =&gt; '::'
+		),
+	'REGEXPS' =&gt; array(
+		0 =&gt; '[\\$%@]+[a-zA-Z_][a-zA-Z0-9_]*',
+		4 =&gt; '&amp;lt;[a-zA-Z_][a-zA-Z0-9_]*&amp;gt;',
+		),
+	'STRICT_MODE_APPLIES' =&gt; GESHI_NEVER,
+	'SCRIPT_DELIMITERS' =&gt; array(
+		),
+	'HIGHLIGHT_STRICT_BLOCK' =&gt; array(
+		)
+);
+</p>
+
+<p>
+?&gt;
+&lt;/php&gt;
+</p>
+
+<p>
+The R functions in the script can be linked to Rhelp webpage, this is done by a small part of the above php file, the small part is:
+&lt;php&gt;
+	'URLS' =&gt; array(
+		3 =&gt; '<a href="http://www.math.montana.edu/Rweb/Rhelp/{FNAME}.html'">http://www.math.montana.edu/Rweb/Rhelp/{FNAME}.html'</a>
+		),
+&lt;/php&gt;
+</p>
+
+<p>
+The R functions' names are copied from this webpage:
+<a href="http://www.math.montana.edu/Rweb/Rhelp/00Index.html">http://www.math.montana.edu/Rweb/Rhelp/00Index.html</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

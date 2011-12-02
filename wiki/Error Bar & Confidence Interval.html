@@ -1,0 +1,124 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Error Bar %title% Confidence Interval</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Error Bar %title% Confidence Interval</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_R.html">Category:R</a>
+ref: <a href="http://www.cyclismo.org/tutorial/R/confidence.html">http://www.cyclismo.org/tutorial/R/confidence.html</a>
+</p>
+
+<ul>
+<li>
+Calculating a 95% Confidence Interval from a t Distribution
+
+</ul>
+
+<p>
+&lt;R&gt;
+values = iris$Sepal.Length
+</p>
+
+<p>
+n = length(values)
+m = mean(values)
+s = sd(values)
+</p>
+
+<p>
+error = qt(0.975,df=n-1)*s/sqrt(n)
+lower_limit = m - error
+upper_limit = m + error
+</p>
+
+<p>
+plot(density(values))
+abline( v = c(lower_limit, upper_limit), col="red" )
+&lt;/R&gt;
+</p>
+
+<ul>
+<li>
+Calculating a 95% Confidence Interval from a Normal Distribution
+
+</ul>
+
+<p>
+&lt;R&gt;
+values = iris$Sepal.Length
+</p>
+
+<p>
+n = length(values)
+m = mean(values)
+s = sd(values)
+</p>
+
+<p>
+error = qnorm(0.975)*s/sqrt(n)
+lower_limit = m - error
+upper_limit = m + error
+</p>
+
+<p>
+plot(density(values))
+abline( v = c(lower_limit, upper_limit), col="red" )
+&lt;/R&gt;
+</p>
+
+
+<ul>
+<li>
+How to Calculate Confidence Interval from a Normal distribution
+ 95% C. I. = M ± (1.96 * SE)
+
+</ul>
+
+<ul>
+<li>
+How to plot Error Bars
+
+</ul>
+<p>
+&lt;R&gt;
+bardata &lt;- 1:3 # create some data
+bar &lt;- barplot(bardata, ylim = c(0,4)) # store location of bars in bar, and
+</p>
+<ol>
+<li>
+plot the barplot. ylim is used to
+
+<li>
+make room for the error bar later
+
+</ol>
+<p>
+error &lt;- c(.2,.4,.7) # create imaginary standard error
+arrows(bar, bardata + error, bar, bardata - error,
+</p>
+<blockquote>
+length = 0.10, # width of the arrowhead
+angle = 90, # angle of the arrowhead
+code = 3 # arrowhead in both ends
+</blockquote>
+<p>
+)
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

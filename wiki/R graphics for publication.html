@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>R graphics for publication</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>R graphics for publication</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+In order to produce figures that fit to the journal, we make small figures with big labels.
+&lt;R&gt;
+pdf("Fig1a.pdf", family="Helvetica", width=4, height=4,
+paper="special", pagecentre=F)
+par(mgp=c(1.5,0.3,0), bty="l", tcl=NA, tck = -0.01, las = 1)
+plot(density(rnorm(100)), xlab="X lab", ylab="Y lab", main="")
+dev.off()
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

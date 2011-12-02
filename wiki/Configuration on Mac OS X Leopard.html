@@ -1,0 +1,453 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Configuration on Mac OS X Leopard</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Configuration on Mac OS X Leopard</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+Configurations done after created a new account on Mac OS X Leopard:
+</p>
+
+<h1 id="toc_1">System Preferences</h1>
+
+<ul>
+<li>
+Create '''~/Documents/Preferences'''
+
+</ul>
+
+<ul>
+<li>
+Create '''~/Documents/Preferences/<a href="Proxy_EVA.pac.html">Proxy_EVA.pac</a>''', and Modify the '''System Preferences: NetWork''' to use this proxy file.
+
+</ul>
+
+<ul>
+<li>
+Turn off the '''System Preferences: Web Sharing''' in order to make XAMPP work
+
+</ul>
+
+
+<h1 id="toc_2">System</h1>
+
+<h2 id="toc_2.1">Share mouse and keyboard</h2>
+<ul>
+<li>
+<a href="Share mouse and keyboard.html">Share mouse and keyboard</a>
+
+</ul>
+
+<h2 id="toc_2.2">Finder</h2>
+<ul>
+<li>
+Install '''NuFile''' &lt;tt&gt;Softwares/System/System Utilities/NuFileInstaller2-0.pkg&lt;/tt&gt; which put '''new file''' list to the right-click menu
+
+<li>
+'''Customize Toolbar''', put '''Path''', '''New Folder''', '''Connect''' on the Toolbar
+
+</ul>
+<h3 id="toc_2.2.1">sshfs</h3>
+<ul>
+<li>
+sshfs integrate the sftp directory with Finder
+
+<li>
+Download sshfs (or macfuse) and install it in /Applications/sshfs
+
+<li>
+run &lt;bash&gt;/Applications/sshfs/bin/mount_sshfs augix@biocomp2 ~/picb/home5/&lt;/bash&gt;
+
+</ul>
+
+<h2 id="toc_2.3">Sapiens</h2>
+<ul>
+<li>
+Install Sapiens 
+
+</ul>
+
+<h2 id="toc_2.4">Rootkit-Hunter</h2>
+<ul>
+<li>
+Install it to search security issues
+
+</ul>
+
+<h2 id="toc_2.5">Stuffit Deluxe</h2>
+<ul>
+<li>
+Install from &lt;tt&gt;boulo.local.:Softwares/System/Zip tool/StuffItDeluxe11.0.1Serial/StuffIt Deluxe 11.0.1.dmg&lt;/tt&gt; to &lt;tt&gt;~/Applications/&lt;/tt&gt;
+
+</ul>
+
+<h2 id="toc_2.6">Screen Sharing</h2>
+<p>
+<a href="http://www.usingmac.com/2008/1/3/killer-leopard-trick-finder-screen-sharing">Link: Usingmac.com</a>
+</p>
+
+<ul>
+<li>
+Make an alias for &lt;tt&gt;/System/Library/CoreServices/Screen Sharing.app&lt;/tt&gt;, put it in &lt;tt&gt;~/Applications.&lt;/tt&gt;
+
+</ul>
+
+<ul>
+<li>
+Run &lt;bash&gt;defaults write com.apple.ScreenSharing ShowBonjourBrowser_Debug 1&lt;/bash&gt; to enable Bonjour Browser for Screen Sharing.
+
+</ul>
+
+<ul>
+<li>
+Run &lt;bash&gt;defaults write com.apple.ScreenSharing 'NSToolbar Configuration ControlToolbar' -dict-add 'TB Item Identifiers' '(Scale,Control,Share,Curtain,Capture,FullScreen,GetClipboard,SendClipboard,Quality)'&lt;/bash&gt; to enable the Secret Toolbar. This toolbar contains:
+
+</ul>
+<p>
+**Switch between control and observe mode
+**Share mouse and keyboard with user
+**Lock computer screen while you control
+**Capture screen to a file
+**Fit screen to full display
+**Image Quality
+</p>
+
+<h2 id="toc_2.7">Growl</h2>
+<ul>
+<li>
+Install
+
+<li>
+<a href="New_Mail_Gowl.scpt.html">New_Mail_Gowl.scpt</a>
+
+</ul>
+
+<h2 id="toc_2.8">Fonts</h2>
+<ul>
+<li>
+Copy Augix.collection and Chinese.collection from  boulo.local.:~/Library/FontCollections/ to ~/Library/FontCollections/
+
+</ul>
+
+<h1 id="toc_3">Unix</h1>
+<ul>
+<li>
+Write &lt;tt&gt;~/.bashrc&lt;/tt&gt;. <a href=".bashrc on Mac OS X.html">.bashrc on Mac OS X</a>
+
+<li>
+Write &lt;tt&gt;~/.ssh/config&lt;/tt&gt;. <a href="ssh_config.html">ssh_config</a>
+
+<li>
+Vim
+ cp /usr/share/vim/vim70/vimrc_example.vim ~/.vimrc
+
+</ul>
+
+<h2 id="toc_3.1">Terminal</h2>
+<p>
+Change preferred window style to '''Novel''', change font to '''Andale Mono 13 pt.'''.
+</p>
+
+<h1 id="toc_4">Work related</h1>
+
+<h2 id="toc_4.1">'''Projects''' folder</h2>
+<ul>
+<li>
+Copy &lt;tt&gt;boulo.local.:~/Projects/&lt;/tt&gt; to &lt;tt&gt;~/Projects/&lt;/tt&gt;.
+
+<li>
+Copy &lt;tt&gt;boulo.local.:~/Programming/&lt;/tt&gt; to &lt;tt&gt;~/Programming/&lt;/tt&gt;.
+
+</ul>
+
+<h2 id="toc_4.2">Coda</h2>
+<ul>
+<li>
+Install Coda from &lt;tt&gt;&lt;/tt&gt; to &lt;tt&gt;~/Applications/&lt;/tt&gt;
+
+<li>
+Copy &lt;tt&gt;boulo.local.:~/Library/Application Support/Coda/&lt;/tt&gt; to &lt;tt&gt;~/Library/Application Support/&lt;/tt&gt;, this copy the "Modes" folder for Coda.
+
+<li>
+Create a Site named "RZG", that's the garching machine.
+
+</ul>
+
+<h2 id="toc_4.3">iTerm</h2>
+<ul>
+<li>
+Install iTerm &lt;tt&gt;/Volumes/mac/augix/Softwares/Network/Remote control/iTerm_0.9.5.dmg&lt;/tt&gt; into &lt;tt&gt;/Users/augix/Applications/&lt;/tt&gt;
+
+<li>
+The '''Terminal''' is improved in Leopard. So, there's no need to install iTerm.
+
+</ul>
+
+<h2 id="toc_4.4">Yummy FTP</h2>
+<ul>
+<li>
+Copy &lt;tt&gt;Yummy FTP&lt;/tt&gt; from &lt;tt&gt;Softwares/Network/Download/&lt;/tt&gt; to &lt;tt&gt;~/Applications/&lt;/tt&gt;
+
+<li>
+Make a bookmark for eva001.opt.rzg.mpg.de:/nfs/eva/augix/cDNA using <a href="SSH Tunelling.html">SSH Tunelling</a>
+
+</ul>
+<p>
+** server: localhost
+** port: 7777
+** username: augix
+** password: ********
+** initial path: /nfs/eva/augix/cDNA
+</p>
+<ul>
+<li>
+Make a bookmark for ftp.rzg.mpg.de
+
+</ul>
+<h2 id="toc_4.5">R</h2>
+<ul>
+<li>
+Install R from &lt;tt&gt;Softwares/Science/R-2.6.1.dmg&lt;/tt&gt; to &lt;tt&gt;/Applications&lt;/tt&gt;
+
+</ul>
+
+<h1 id="toc_5">Office</h1>
+<ul>
+<li>
+Install '''Microsoft Office 2008''' on /Applications/. source: &lt;tt&gt;Softwares/Office/Office2008.dmg&lt;/tt&gt;
+
+</ul>
+<h2 id="toc_5.1">Voodoopad</h2>
+<ul>
+<li>
+Install VoodooPad Pro 3.2.3 into &lt;tt&gt;~/Applications/&lt;/tt&gt;. source: &lt;tt&gt;Softwares/Office/VoodooPadPro3.2.3.dmg&lt;/tt&gt;
+
+</ul>
+<h2 id="toc_5.2">BibDesk</h2>
+<ul>
+<li>
+Copy &lt;tt&gt;boulo.local.:/Applications/BibDesk.app&lt;/tt&gt; to &lt;tt&gt;~/Applications/&lt;/tt&gt;
+
+<li>
+Copy &lt;tt&gt;boulo.local.:/Users/augix/Documents/BibDesk/&lt;/tt&gt; to &lt;tt&gt;~/Documents/&lt;/tt&gt;
+
+<li>
+Configuration: File papers in fixed location: ~/Documents/BibDesk/Papers/
+
+</ul>
+<h2 id="toc_5.3">Dictionary</h2>
+<ul>
+<li>
+One can install new dictionaries in the application '''Dictionary''' by using a software called '''DictUnifier'''.
+
+</ul>
+<p>
+ref: <a href="http://www.elesson.com.cn/forum/viewthread.php?tid=8086&amp;page=1#pid127923">http://www.elesson.com.cn/forum/viewthread.php?tid=8086&amp;page=1#pid127923</a>
+</p>
+
+<h1 id="toc_6">Personal</h1>
+<h2 id="toc_6.1">Address Book</h2>
+<ul>
+<li>
+Extract the Address Book Data in Tiger.
+
+</ul>
+
+<p>
+*Birthday in iCal and Address Book
+Turns out iCal has a preference called 'Show Birthdays Calendar' which pulls its data from the 'birthday' field in the address book  (the birthday field is not in the default template, we have to add it).
+</p>
+
+<h2 id="toc_6.2">Mail</h2>
+<ul>
+<li>
+Create my email accounts
+
+<li>
+Open Mail, click &lt;tt&gt;File - Import Mailboxes&lt;/tt&gt; to import mails from &lt;tt&gt;Boulo.local.:~/Mail/&lt;/tt&gt;
+
+<li>
+<a href="Backup Mail Preferences.html">Backup Mail Preferences</a>: Accounts, Rules, Signatures...
+
+<li>
+<a href="New_Mail_Gowl.scpt.html">New_Mail_Gowl.scpt</a>
+
+</ul>
+
+<h2 id="toc_6.3">Delicious Library</h2>
+<ul>
+<li>
+Install it
+
+<li>
+Copy files in old library: ~/Library/Application Support/Delicious Library/
+
+</ul>
+
+<h1 id="toc_7">Internet life</h1>
+<h2 id="toc_7.1">Safari</h2>
+<ul>
+<li>
+Copy &lt;tt&gt;boulo.local.:Users/augix/Library/Safari/Bookmarks.plist&lt;/tt&gt; to &lt;tt&gt;~/Library/Safari/Bookmarks.plist&lt;/tt&gt;
+
+</ul>
+
+<h2 id="toc_7.2">IM</h2>
+<ul>
+<li>
+Install '''LumaQQ''' ~/Applications/. source: &lt;tt&gt;Softwares/Network/IM/LumaQQ.dmg&lt;/tt&gt;
+
+</ul>
+
+<h2 id="toc_7.3">Fluid</h2>
+<ul>
+<li>
+Install Fluid in ~/Applications/.
+
+<li>
+Make &lt;tt&gt;Augix' Wiki&lt;/tt&gt; as an application.
+
+</ul>
+
+
+<h1 id="toc_8">Multimedia</h1>
+<h2 id="toc_8.1">RealPlayer</h2>
+<ul>
+<li>
+Install RealPlayer from &lt;tt&gt;Softwares/Multimedia/Video/RealPlayer10GOLD.dmg&lt;/tt&gt; to &lt;tt&gt;~/Applications/&lt;/tt&gt;
+
+</ul>
+<h2 id="toc_8.2">Windows Media® Components for QuickTime</h2>
+<ul>
+<li>
+<a href="http://www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx">http://www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx</a>
+
+</ul>
+<h2 id="toc_8.3">VLC</h2>
+<ul>
+<li>
+source: Softwares/Multimedia/Video/vlc-0.8.6c.dmg
+
+</ul>
+
+<h1 id="toc_9">Server</h1>
+
+<h2 id="toc_9.1">XAMPP</h2>
+<p>
+ref: <a href="http://www.squidoo.com/XAMPP-on-Mac">http://www.squidoo.com/XAMPP-on-Mac</a>
+</p>
+<ul>
+<li>
+Install '''XAMPP''' on /Applications/.
+
+</ul>
+<p>
+** Turn off the '''System Preferences: Web Sharing''' in order to make XAMPP work
+** Run &lt;bash&gt;sudo /Applications/xampp/xamppfiles/mampp start&lt;/bash&gt;
+** <a href="Fix XAMPP security weaknesses.html">Fix XAMPP security weaknesses</a>
+** Modify /Applications/xampp/xamppfiles/phpmyadmin/config.inc.php
+*** &lt;pre&gt;$cfg['Servers'][$i]['password'] = 'PASSWORD';&lt;/pre&gt;
+*** test phpMyAdmin
+</p>
+
+<h2 id="toc_9.2">MediaWiki</h2>
+<ul>
+<li>
+Install '''MediaWiki'''
+
+</ul>
+<p>
+** Copy '''mediawiki-1.6.10''' form &lt;tt&gt;Softwares/Network/Server/mediawiki-1.6.10.tar&lt;/tt&gt; into &lt;tt&gt;/Applications/xampp/xamppfiles/htdocs/&lt;/tt&gt;, untar it. Delete mediawiki-1.6.10.tar.
+** change folder name from '''mediawiki-1.6.10''' to '''wk'''
+** Open Safari, go to <a href="http://localhost/wk/">http://localhost/wk/</a>
+** &lt;bash&gt;cd /Applications/xampp/xamppfiles/htdocs/wk&lt;/bash&gt;
+** &lt;bash&gt;chmod a+w config&lt;/bash&gt;
+** Open Safari, go to <a href="http://localhost/wk/">http://localhost/wk/</a>, and fill the form '''Site config'''
+** Move the config/LocalSettings.php file into the parent directory
+** Delete &lt;tt&gt;/Applications/xampp/xamppfiles/htdocs/wk/config&lt;/tt&gt;
+</p>
+
+<ul>
+<li>
+Configure '''MediaWiki'''
+
+</ul>
+<p>
+** Replace &lt;tt&gt;/Applications/xampp/xamppfiles/htdocs/wk/images&lt;/tt&gt; by &lt;tt&gt;Boulo.local:/Applications/xampp/xamppfiles/htdocs/wk/images&lt;/tt&gt;
+** <a href="Move MediaWiki from Boulo.local to the new machine.html">Move MediaWiki from Boulo.local to the new machine</a>.
+</p>
+
+<h2 id="toc_9.3">CGI-Executables</h2>
+<p>
+ scp -r boulo.local:/Library/WebServer/CGI-Executables/*  /Applications/xampp/xamppfiles/cgi-bin/
+</p>
+
+<h1 id="toc_10">Backup</h1>
+
+<h2 id="toc_10.1">iWeb</h2>
+<ul>
+<li>
+Copy files in boulo.local.:~/Application Support/iWeb/ to ~/Sites/iWeb
+
+</ul>
+<h2 id="toc_10.2">MarsEdit and NetNewsWire</h2>
+<ul>
+<li>
+Copy files from boulo.local:~/Library/Application Support/ to ~/Library/Application Support/
+
+<li>
+These two applications need to be installed
+
+</ul>
+<h2 id="toc_10.3">Keychains</h2>
+<ul>
+<li>
+How to backup this? I don't know yet.
+
+</ul>
+<h2 id="toc_10.4">Widgets</h2>
+<ul>
+<li>
+It's in ~/Library/Widgets/, just copy and paste
+
+</ul>
+<h2 id="toc_10.5">Keynote</h2>
+<ul>
+<li>
+Themes in ~/Library/Application Support/iWork/Keynote/Themes/
+
+</ul>
+<h2 id="toc_10.6">aMule</h2>
+<ul>
+<li>
+Make sure that ~/Library/Application Support/aMule/server.met is backupped
+
+</ul>
+<h2 id="toc_10.7">Yojimbo</h2>
+<ul>
+<li>
+~/Library/Application Support/Yojimbo/
+
+</ul>
+<h2 id="toc_10.8">pearLyrics</h2>
+<ul>
+<li>
+~/Library/Application Support/pearLyrics/
+
+</ul>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+Configurations done after created a new account on Mac OS X Leopard:
+
+= System Preferences =
+
+* Create '''~/Documents/Preferences'''
+
+* Create '''~/Documents/Preferences/[[Proxy_EVA.pac]]''', and Modify the '''System Preferences: NetWork''' to use this proxy file.
+
+* Turn off the '''System Preferences: Web Sharing''' in order to make XAMPP work
+
+
+= System =
+
+== Share mouse and keyboard ==
+* [[Share mouse and keyboard]]
+
+== Finder == 
+* Install '''NuFile''' <tt>Softwares/System/System Utilities/NuFileInstaller2-0.pkg</tt> which put '''new file''' list to the right-click menu
+* '''Customize Toolbar''', put '''Path''', '''New Folder''', '''Connect''' on the Toolbar
+=== sshfs ===
+* sshfs integrate the sftp directory with Finder
+* Download sshfs (or macfuse) and install it in /Applications/sshfs
+* run <bash>/Applications/sshfs/bin/mount_sshfs augix@biocomp2 ~/picb/home5/</bash>
+
+== Sapiens ==
+* Install Sapiens 
+
+== Rootkit-Hunter ==
+* Install it to search security issues
+
+== Stuffit Deluxe ==
+* Install from <tt>boulo.local.:Softwares/System/Zip tool/StuffItDeluxe11.0.1Serial/StuffIt Deluxe 11.0.1.dmg</tt> to <tt>~/Applications/</tt>
+
+== Screen Sharing ==
+[http://www.usingmac.com/2008/1/3/killer-leopard-trick-finder-screen-sharing Link: Usingmac.com]
+
+* Make an alias for <tt>/System/Library/CoreServices/Screen Sharing.app</tt>, put it in <tt>~/Applications.</tt>
+
+* Run <bash>defaults write com.apple.ScreenSharing ShowBonjourBrowser_Debug 1</bash> to enable Bonjour Browser for Screen Sharing.
+
+* Run <bash>defaults write com.apple.ScreenSharing 'NSToolbar Configuration ControlToolbar' -dict-add 'TB Item Identifiers' '(Scale,Control,Share,Curtain,Capture,FullScreen,GetClipboard,SendClipboard,Quality)'</bash> to enable the Secret Toolbar. This toolbar contains:
+**Switch between control and observe mode
+**Share mouse and keyboard with user
+**Lock computer screen while you control
+**Capture screen to a file
+**Fit screen to full display
+**Image Quality
+
+== Growl ==
+* Install
+* [[New_Mail_Gowl.scpt]]
+
+== Fonts ==
+* Copy Augix.collection and Chinese.collection from  boulo.local.:~/Library/FontCollections/ to ~/Library/FontCollections/
+
+= Unix = 
+* Write <tt>~/.bashrc</tt>. [[.bashrc on Mac OS X]]
+* Write <tt>~/.ssh/config</tt>. [[ssh_config]]
+* Vim
+ cp /usr/share/vim/vim70/vimrc_example.vim ~/.vimrc
+
+== Terminal == 
+Change preferred window style to '''Novel''', change font to '''Andale Mono 13 pt.'''.
+
+= Work related =
+
+== '''Projects''' folder ==
+* Copy <tt>boulo.local.:~/Projects/</tt> to <tt>~/Projects/</tt>.
+* Copy <tt>boulo.local.:~/Programming/</tt> to <tt>~/Programming/</tt>.
+
+== Coda ==
+* Install Coda from <tt></tt> to <tt>~/Applications/</tt>
+* Copy <tt>boulo.local.:~/Library/Application Support/Coda/</tt> to <tt>~/Library/Application Support/</tt>, this copy the "Modes" folder for Coda.
+* Create a Site named "RZG", that's the garching machine.
+
+== iTerm ==
+* Install iTerm <tt>/Volumes/mac/augix/Softwares/Network/Remote control/iTerm_0.9.5.dmg</tt> into <tt>/Users/augix/Applications/</tt>
+* The '''Terminal''' is improved in Leopard. So, there's no need to install iTerm.
+
+== Yummy FTP ==
+* Copy <tt>Yummy FTP</tt> from <tt>Softwares/Network/Download/</tt> to <tt>~/Applications/</tt>
+* Make a bookmark for eva001.opt.rzg.mpg.de:/nfs/eva/augix/cDNA using [[SSH Tunelling]]
+** server: localhost
+** port: 7777
+** username: augix
+** password: ********
+** initial path: /nfs/eva/augix/cDNA
+* Make a bookmark for ftp.rzg.mpg.de
+== R ==
+* Install R from <tt>Softwares/Science/R-2.6.1.dmg</tt> to <tt>/Applications</tt>
+
+= Office =
+* Install '''Microsoft Office 2008''' on /Applications/. source: <tt>Softwares/Office/Office2008.dmg</tt>
+== Voodoopad ==
+* Install VoodooPad Pro 3.2.3 into <tt>~/Applications/</tt>. source: <tt>Softwares/Office/VoodooPadPro3.2.3.dmg</tt>
+== BibDesk ==
+* Copy <tt>boulo.local.:/Applications/BibDesk.app</tt> to <tt>~/Applications/</tt>
+* Copy <tt>boulo.local.:/Users/augix/Documents/BibDesk/</tt> to <tt>~/Documents/</tt>
+* Configuration: File papers in fixed location: ~/Documents/BibDesk/Papers/
+== Dictionary ==
+* One can install new dictionaries in the application '''Dictionary''' by using a software called '''DictUnifier'''.
+ref: http://www.elesson.com.cn/forum/viewthread.php?tid=8086&page=1#pid127923
+
+= Personal =
+== Address Book ==
+* Extract the Address Book Data in Tiger.
+
+*Birthday in iCal and Address Book
+Turns out iCal has a preference called 'Show Birthdays Calendar' which pulls its data from the 'birthday' field in the address book  (the birthday field is not in the default template, we have to add it).
+
+== Mail ==
+* Create my email accounts
+* Open Mail, click <tt>File - Import Mailboxes</tt> to import mails from <tt>Boulo.local.:~/Mail/</tt>
+* [[Backup Mail Preferences]]: Accounts, Rules, Signatures...
+* [[New_Mail_Gowl.scpt]]
+
+== Delicious Library ==
+* Install it
+* Copy files in old library: ~/Library/Application Support/Delicious Library/
+
+= Internet life =
+== Safari ==
+* Copy <tt>boulo.local.:Users/augix/Library/Safari/Bookmarks.plist</tt> to <tt>~/Library/Safari/Bookmarks.plist</tt>
+
+== IM ==
+* Install '''LumaQQ''' ~/Applications/. source: <tt>Softwares/Network/IM/LumaQQ.dmg</tt>
+
+== Fluid ==
+* Install Fluid in ~/Applications/.
+* Make <tt>Augix' Wiki</tt> as an application.
+
+
+= Multimedia =
+== RealPlayer ==
+* Install RealPlayer from <tt>Softwares/Multimedia/Video/RealPlayer10GOLD.dmg</tt> to <tt>~/Applications/</tt>
+== Windows Media® Components for QuickTime ==
+* http://www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx
+== VLC ==
+* source: Softwares/Multimedia/Video/vlc-0.8.6c.dmg
+
+= Server =
+
+== XAMPP ==
+ref: http://www.squidoo.com/XAMPP-on-Mac
+* Install '''XAMPP''' on /Applications/.
+** Turn off the '''System Preferences: Web Sharing''' in order to make XAMPP work
+** Run <bash>sudo /Applications/xampp/xamppfiles/mampp start</bash>
+** [[Fix XAMPP security weaknesses]]
+** Modify /Applications/xampp/xamppfiles/phpmyadmin/config.inc.php
+*** <pre>$cfg['Servers'][$i]['password'] = 'PASSWORD';</pre>
+*** test phpMyAdmin
+
+== MediaWiki ==
+* Install '''MediaWiki'''
+** Copy '''mediawiki-1.6.10''' form <tt>Softwares/Network/Server/mediawiki-1.6.10.tar</tt> into <tt>/Applications/xampp/xamppfiles/htdocs/</tt>, untar it. Delete mediawiki-1.6.10.tar.
+** change folder name from '''mediawiki-1.6.10''' to '''wk'''
+** Open Safari, go to http://localhost/wk/
+** <bash>cd /Applications/xampp/xamppfiles/htdocs/wk</bash>
+** <bash>chmod a+w config</bash>
+** Open Safari, go to http://localhost/wk/, and fill the form '''Site config'''
+** Move the config/LocalSettings.php file into the parent directory
+** Delete <tt>/Applications/xampp/xamppfiles/htdocs/wk/config</tt>
+
+* Configure '''MediaWiki'''
+** Replace <tt>/Applications/xampp/xamppfiles/htdocs/wk/images</tt> by <tt>Boulo.local:/Applications/xampp/xamppfiles/htdocs/wk/images</tt>
+** [[Move MediaWiki from Boulo.local to the new machine]].
+
+== CGI-Executables ==
+ scp -r boulo.local:/Library/WebServer/CGI-Executables/*  /Applications/xampp/xamppfiles/cgi-bin/
+
+= Backup =
+
+== iWeb ==
+* Copy files in boulo.local.:~/Application Support/iWeb/ to ~/Sites/iWeb
+== MarsEdit and NetNewsWire ==
+* Copy files from boulo.local:~/Library/Application Support/ to ~/Library/Application Support/
+* These two applications need to be installed
+== Keychains ==
+* How to backup this? I don't know yet.
+== Widgets ==
+* It's in ~/Library/Widgets/, just copy and paste
+== Keynote ==
+* Themes in ~/Library/Application Support/iWork/Keynote/Themes/
+== aMule ==
+* Make sure that ~/Library/Application Support/aMule/server.met is backupped
+== Yojimbo ==
+* ~/Library/Application Support/Yojimbo/
+== pearLyrics ==
+* ~/Library/Application Support/pearLyrics/

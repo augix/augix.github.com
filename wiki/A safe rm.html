@@ -1,0 +1,75 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>A safe rm</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>A safe rm</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_bash.html">Category:bash</a>
+write a file: &lt;tt&gt; ~/rm.sh &lt;/tt&gt;
+&lt;bash&gt;
+#!/bin/bash
+#
+</p>
+<ol>
+<li>
+ A tiny script that moves files to a wastebasket, rather than deleting them
+
+</ol>
+<p>
+#+ (and doesn't overwrite previously deleted files of the same name).
+</p>
+
+<p>
+[ -d ~/Trash ]
+if [ $? -eq 1 ]; then
+</p>
+<blockquote>
+echo "Creating directory."
+mkdir ~/Trash;
+</blockquote>
+<p>
+fi
+</p>
+
+<p>
+random_suffix=$RANDOM
+</p>
+
+<p>
+for file in $@; do
+</p>
+<blockquote>
+if <a href=" -e ~/Trash/$file .html"> -e ~/Trash/$file </a>; then
+mv $file ~/Trash/${file}.${random_suffix}
+else mv $file ~/Trash/
+fi
+</blockquote>
+<p>
+done
+&lt;/bash&gt;
+</p>
+
+<p>
+modify &lt;tt&gt; ~/.bashrc &lt;/tt&gt;
+&lt;bash&gt;
+alias remove='/bin/rm'
+alias rm='~/rm.sh'
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

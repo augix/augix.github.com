@@ -1,0 +1,31 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Register globals</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Register globals</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+when the option register_globals is off, you can't use the variable name in FORM as the variable name in PHP. If you want to continue use it, you should add a line of script in every PHP program.
+</p>
+
+<p>
+&lt;php&gt;
+?php if(!empty($_POST)) extract($_POST);  //added by augix
+&lt;/php&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

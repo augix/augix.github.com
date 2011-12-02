@@ -1,0 +1,87 @@
+= Parsing a FASTA file with Biopython =
+== Exercise 1 ==
+<python>
+#!/usr/bin/env python
+from Bio import SeqIO, SeqUtils
+import re
+handle = open('./exons.fasta', 'r')
+records = SeqIO.parse(handle, 'fasta')
+q1 = 0
+len2id = dict()
+seq2time = dict()
+exon2GC = dict()
+# iterate through records
+for r in records:
+    q1 += 1
+    # sequence
+    seq = str(r.seq)
+    # length
+    l = str(len(seq))
+    try:
+        len2id[l].append(r.id)
+    except KeyError:
+        len2id[l] = [r.id]
+    # repeats
+    pattern = r'A{20,}|C{20,}|G{20,}|T{20,}'
+    q5 = re.findall(pattern, seq.upper())
+    q5 = len(q5)
+    # identical sequence
+    try:
+        seq2time[seq] += 1
+    except KeyError:
+        seq2time[seq] = 1
+    # q7 and q8
+    ids = r.id.split('|')
+    if ids[0] == 'ENSG00000006831':
+        exon = ids[-1]
+        GC = SeqUtils.GC(seq)
+        exon2GC[exon] = GC
+
+# calculate
+q2 = len(len2id['3408'])
+lengths = map(int, len2id.keys())
+q3a = len2id[str(min(lengths))]
+q3b = len(q3a) > 1
+q4a = len2id[str(max(lengths))]
+q4b = len(q4a) > 1
+times = seq2time.values()
+q6 = any([time > 1 for time in times])
+q7b = exon2GC.keys()
+q7a = len(q7b)
+maxGC = max(exon2GC.values())
+q8 = [(exon, exon2GC[exon]) for exon in q7b if exon2GC[exon] == maxGC]
+
+# print results
+print '1. How many records are in the file?\nAnswer:', q1
+print '2. How many records have a sequence length of 3408?\nAnswer:', q2
+print '3. What is the header for the record with the shortest sequence? Is there more than one record with that length?\nAnswer:', q3a, '\nAnswer:', q3b
+print '4. What is the title for the record with the longest sequence? Is there more than one record with that length?\nAnswer:', q4a, '\nAnswer:', q4b
+print '5. How many records have sequences which contain 20-nucleotide repeats (the same nucleotide repeated at least 20 consecutive times) in their sequences?\nAnswer:', q5
+print '6. Do any records contain 100% identical sequences?\nAnswer:', q6
+print '7. The records in the file represent exons. How many exons can you find for the gene with Ensembl id ENSG00000006831? What are their exon IDs?\nAnswer:', q7a, '\nAnswer', q7b
+print '8. Which of the exons of ENSG00000006831 has the highest GC content?\nAnswer:', q8
+</python>
+<br>
+result:
+<pre>
+[bionc01: Assignment5] python e1.py
+1. How many records are in the file?
+Answer: 212645
+2. How many records have a sequence length of 3408?
+Answer: 4
+3. What is the header for the record with the shortest sequence? Is there more than one record with that length?
+Answer: ['ENSG00000139737|ENST00000358679|13|78272023|78338377|1|ENSE00001735712', 'ENSG00000157224|ENST00000394605|7|90013035|90142716|1|ENSE00001702414'] 
+Answer: True
+4. What is the title for the record with the longest sequence? Is there more than one record with that length?
+Answer: ['ENSG00000124942|ENST00000378024|11|62201016|62314332|-1|ENSE00001475929'] 
+Answer: False
+5. How many records have sequences which contain 20-nucleotide repeats (the same nucleotide repeated at least 20 consecutive times) in their sequences?
+Answer: 0
+6. Do any records contain 100% identical sequences?
+Answer: True
+7. The records in the file represent exons. How many exons can you find for the gene with Ensembl id ENSG00000006831? What are their exon IDs?
+Answer: 8 
+Answer ['ENSE00001426014', 'ENSE00001402644', 'ENSE00000712257', 'ENSE00001334428', 'ENSE00000816807', 'ENSE00000816806', 'ENSE00001334430', 'ENSE00000816808']
+8. Which of the exons of ENSG00000006831 has the highest GC content?
+Answer: [('ENSE00001426014', 76.36363636363636)]
+</pre>

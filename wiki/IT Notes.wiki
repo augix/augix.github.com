@@ -1,0 +1,44 @@
+%template disqus
+= Mac =
+== General ==
+* [[Configuration on Mac OS X Leopard]]
+* [[Mac Tips]]
+* [[How to run IE through WINE on Mac]]
+* [[Transfer Files via Firewire]]
+* [[Howto change the file type of captured screen]]
+* [[Join two PDF files on Mac]]
+* [[Watch TV on Mac]]
+* [[Change the font setting of xterm]]
+* [[X11 on Mac]]
+== Download ==
+* [[aMule on Mac]]
+== Tex ==
+* [[TeX on Mac OS X]]
+* [[TeX templates]]
+* [[Draw Mathematical Formula]]
+== Useful Applications ==
+* [[VoodooPad]]
+
+= Unix =
+== Shell ==
+* [[.bashrc on Mac OS X]]
+* [[.profile on Mac OS X Leopard]]
+== Network ==
+* [[Setting up HTTP proxy]]
+== SSH ==
+* [[Password-less SSH]]
+* [[Keep ssh connection alive]]
+* [[SSH Tunelling]]
+== Graphics ==
+* [[XMonad]]
+ 
+= PC =
+* [[Leopard on PC]]
+
+= Android =
+* [[Useful app in Android]]
+
+= Whatever OS =
+* [[Vimwiki]]: a personal wiki on VIM
+* [[Share mouse and keyboard]]
+

@@ -1,0 +1,145 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python examples</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python examples</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Progress Bar</h1>
+<p>
+ <a href="progressBar.py">progressBar.py</a>
+</p>
+
+<h1 id="toc_2">enumerate</h1>
+<p>
+&lt;python&gt;
+&gt;&gt;&gt; for i,w in enumerate('hello world'):
+...   print i, w
+... 
+0 h
+1 e
+2 l
+3 l
+4 o
+5  
+6 w
+7 o
+8 r
+9 l
+10 d
+</p>
+
+<p>
+&gt;&gt;&gt; for i in enumerate('hello world'):
+...     print i
+...
+(0, 'h')
+(1, 'e')
+(2, 'l')
+(3, 'l')
+(4, 'o')
+(5, ' ')
+(6, 'w')
+(7, 'o')
+(8, 'r')
+(9, 'l')
+(10, 'd')
+&lt;/python&gt;
+</p>
+
+
+<h1 id="toc_3">make matrix</h1>
+<p>
+ref: <a href="http://stackoverflow.com/questions/974931/multiply-operator-applied-to-listdata-structure">http://stackoverflow.com/questions/974931/multiply-operator-applied-to-listdata-structure</a>
+</p>
+
+<p>
+&lt;python&gt;
+def make_matrix(rows, columns):
+"""
+  &gt;&gt;&gt; make_matrix(4, 2)
+  <a href="0, 0], [0, 0], [0, 0], [0, 0.html">0, 0], [0, 0], [0, 0], [0, 0</a>
+  &gt;&gt;&gt; m = make_matrix(4, 2)
+  &gt;&gt;&gt; m[1][1] = 7
+  &gt;&gt;&gt; m
+  <a href="0, 0], [0, 7], [0, 0], [0, 0.html">0, 0], [0, 7], [0, 0], [0, 0</a>
+"""
+matrix = []
+for row in range(rows):
+</p>
+<blockquote>
+matrix += [[0] * columns]
+</blockquote>
+<p>
+return matrix
+&lt;/python&gt;
+</p>
+
+<h1 id="toc_4">formated printing</h1>
+<p>
+&lt;python&gt;
+items = ['a', 'abcd', 'abcdefg', 'abcdefghijklmn']
+for i in items:
+</p>
+<blockquote>
+print "Name: %s Price: %s" % (i, i)
+</blockquote>
+
+<p>
+for i in items:
+</p>
+<blockquote>
+print "Name: %-20s Price: %10.10s" % (i, i)
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+<p>
+formated printing:
+&lt;pre&gt;
+Name: a                    Price:          a
+Name: abcd                 Price:       abcd
+Name: abcdefg              Price:    abcdefg
+Name: abcdefghijklmn       Price: abcdefghij
+&lt;/pre&gt;
+</p>
+
+<p>
+read file with while loop
+&lt;python&gt;
+</p>
+<blockquote>
+f = open(file)
+while True:
+l = f.readline()
+print l
+if not l: break
+print "finished.\n"
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+
+<h1 id="toc_5">uniquify a list</h1>
+<h2 id="toc_5.1">elements hashable</h2>
+<p>
+ alist = list(set(alist))
+</p>
+<h2 id="toc_5.2">elements unhashable</h2>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

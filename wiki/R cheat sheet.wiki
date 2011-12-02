@@ -1,0 +1,4 @@
+%template disqus
+
+coef(summary(aov.output))
+

@@ -1,0 +1,72 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>VoodooPad</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>VoodooPad</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Create new page</h1>
+<h2 id="toc_1.1">Lua Plugin: Make a new page with selected text</h2>
+<p>
+Put the following codes in ~/Library/Application Support/VoodooPad/Script PlugIns/Make_Link_With_Selected_Text.lua
+&lt;lua&gt;
+--[[
+VPLanguage = lua
+VPScriptMenuTitle = Make Link With Selected Text
+VPShortcutKey = l
+VPShortcutMask = command
+VPEndConfig
+--]]
+textView = windowController:textView()
+pageName = textView:objc_string():substringWithRange(textView:selectedRange())
+document:createNewPageWithName(pageName)
+&lt;/lua&gt;
+</p>
+
+<p>
+AppleScript:
+&lt;applescript&gt;
+tell application "VoodooPad Pro"
+	tell document 1 to create page with title "title"
+end tell
+&lt;/applescript&gt;
+</p>
+
+<p>
+and, 
+there is an hyper link which calls applescript editor, you can put this code either in VoodooPad or in Safari as a bookmarklet.
+</p>
+
+<p>
+&lt;code&gt;
+applescript://com.apple.scripteditor?action=new&amp;script=%0D%0Atell%20application%20%22VoodooPad%20Pro%22%0D%0A%20%20tell%20document%201%20to%20create%20page%20with%20title%20%22title%22%20%0D%0Aend%20tell
+&lt;/code&gt;
+</p>
+
+<h1 id="toc_2">NewPageTemplate</h1>
+<p>
+&lt;pre&gt;
+$title$
+Description
+Created on $date$
+↑  Up
+</p>
+
+<p>
+&lt;pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

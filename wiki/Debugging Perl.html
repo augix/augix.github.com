@@ -1,0 +1,99 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Debugging Perl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Debugging Perl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+##!/usr/bin/perl -w
+#use strict;
+</p>
+
+<p>
+print "I'm in main code, caller returns: ", join(", ", caller()), "\n\n\n";
+print "Call a()\n";
+a();
+print "Call b()-&gt;a()\n";
+b();
+print "Call c()-&gt;b()-&gt;a()\n";
+c();
+</p>
+
+<p>
+sub a {
+	print "caller( ) returns: ", join(", ", caller()), "\n";
+	print "caller(1) returns: ", join(", ", caller(1)), "\n";
+	print "caller(2) returns: ", join(", ", caller(2)), "\n";
+	print "caller(3) returns: ", join(", ", caller(3)), "\n";
+	print "\n\n\n";
+}
+</p>
+
+<p>
+sub b {
+	a();
+}
+</p>
+
+<p>
+sub c {
+	b();
+}
+</p>
+
+<p>
+1;
+&lt;/perl&gt;
+</p>
+
+<p>
+&lt;pre&gt;
+I'm in main code, caller returns: 
+</p>
+
+
+<p>
+Call a()
+caller( ) returns: main, caller.pl, 6
+caller(1) returns: 
+caller(2) returns: 
+caller(3) returns: 
+</p>
+
+
+
+<p>
+Call b()-&gt;a()
+caller( ) returns: main, caller.pl, 21
+caller(1) returns: main, caller.pl, 8, main::b, 1, , , , 0, 
+caller(2) returns: 
+caller(3) returns: 
+</p>
+
+
+
+<p>
+Call c()-&gt;b()-&gt;a()
+caller( ) returns: main, caller.pl, 21
+caller(1) returns: main, caller.pl, 25, main::b, 1, , , , 0, 
+caller(2) returns: main, caller.pl, 10, main::c, 1, , , , 0, 
+caller(3) returns: 
+&lt;/per&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

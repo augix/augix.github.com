@@ -1,0 +1,1 @@
+[http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chinese/ 简明Python教程]

@@ -1,0 +1,10 @@
+<bash>
+$ basename /the/path/to/thisfile.txt
+thisfile.txt
+$ basename thisfile.txt .txt
+thisfile
+$ basename /the/path/to/thisfile.txt .txt
+thisfile
+</bash>
+
+[http://liquidat.wordpress.com/2007/09/29/short-tip-get-file-extension-in-shell-script/ ref]

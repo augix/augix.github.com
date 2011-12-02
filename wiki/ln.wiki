@@ -1,0 +1,18 @@
+%title ln
+%% 
+
+= Usage =
+{{{
+ln source_file hardlink
+ln -s source_file symlink
+}}}
+
+= Difference between symbolic and hard links =
+
+* Hard link can only be created for a file.
+* Symbolic link can link to a directory (folder).
+* If you remove the hard link or the symlink itself, the source file will stay intact.
+* Removing the source file that your hard link points to does not remove the hardlink itself; the hardlink still provides the content of the underlying file.
+* Removing the source file does not remove the attached symbolic link or symlink, but without the source file, the symlink is useless (the same concept like Windows shortcut).
+
+[http://www.maxi-pedia.com/difference+between+symbolic+link+and+hard+link Reference]

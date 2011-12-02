@@ -1,0 +1,44 @@
+<perl>
+#!/usr/bin/perl -w
+ 
+#use strict;
+use LWP::UserAgent;
+
+#my $plate = $ARGV[0] || die "Plate to search for?\n";
+#$plate = uc $plate;
+#$plate =~ tr/O/0/;  # we use zero for letter-oh
+#die "$plate is invalid.\n"
+# unless $plate =~ m/^[A-Z0-9]{2,7}$/
+#    and $plate !~ m/^\d+$/;  # no all-digit plates
+ 
+
+my $browser = LWP::UserAgent->new;
+
+#my $response = $browser->post(
+#  'http://www.augix.com/cgi-bin/runshellcommand.cgi', 'command' => 'ls ../');
+  
+my $response = $browser->post(
+  'http://www.augix.com/cgi-bin/runshellcommand.cgi', 
+  [
+    'command'  => 'ls ../',
+  ],
+);
+
+
+die "Error: ", $response->status_line
+ unless $response->is_success;
+
+$result = $response->content;
+print $result;
+
+
+if($response->content =~ m/wiki/) {
+  print "there's wiki\n";
+} else {
+  print "there's no wiki\n";
+}
+exit;
+
+</perl>
+
+[[Category:Perl]]

@@ -1,0 +1,6 @@
+<R>
+library(gplots)
+col = redgreen(100)
+
+heatmap(as.matrix(USJudgeRatings),Colv=NA,col=col)
+</R>

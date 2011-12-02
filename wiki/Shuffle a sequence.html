@@ -1,0 +1,43 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Shuffle a sequence</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Shuffle a sequence</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+use List::Util 'shuffle';
+</p>
+
+<p>
+my $str = "TGCAAATAGACACCAAAAATGAGAAGGAATACCTAT";
+my @str = split (//,$str);
+my @new_str = shuffle(@str);
+my $new_str = join ("",@new_str);
+</p>
+
+<p>
+print "$new_str";
+print "\n";
+&lt;/perl&gt;
+</p>
+
+<p>
+<a href="Category_ Perl.html">Category: Perl</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+* [http://www.youtube.com/watch?v=TagaAeIHKks Youtube: R ggplot2 Graphics Scatter Plots]
+This is a very good demo in learning ggplot
+
+* [http://learnr.wordpress.com/2009/03/17/ggplot2-barplots/ Ref: ggplot Barplots]

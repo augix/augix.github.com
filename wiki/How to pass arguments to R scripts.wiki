@@ -1,0 +1,43 @@
+If you just want to run a file `foo.R' of R commands, the recommended way is to use R CMD
+BATCH foo.R. If you want to run this in the background or as a batch job use OS-specific
+facilities to do so: for example in most shells on Unix-alike OSes R CMD BATCH foo.R & runs a
+background job.
+
+You can pass parameters to scripts via additional arguments on the command line: for example
+
+<code>R CMD BATCH --args arg1 arg2 foo.R &</code>
+<p style="color:red">It seems this command does not work.</p>
+
+will pass arguments to a script which can be retrieved as a character vector by
+
+<code>args <- commandArgs(TRUE)</code>
+
+This is made simpler by the alternative front-end Rscript, which can be invoked by
+
+<code>Rscript foo.R arg1 arg2</code>
+<p style="color:red">This works.</p>
+
+and this can also be used to write executable script files like (at least on Unix-alikes, and in
+some Windows shells)
+<bash>
+#! /path/to/Rscript
+args <- commandArgs(TRUE)
+...
+q(status=<exit status code>)
+</bash>
+If this is entered into a text file `runfoo' and this is made executable (by chmod 755 runfoo),
+it can be invoked for different arguments by
+
+<code>runfoo arg1 arg2</code>
+
+= Example: test_arguments.R =
+<R>
+args <- commandArgs(TRUE)
+write.table(args[1],file="test.out")
+q(save="no")
+</R>
+
+= Another way: Rf =
+[[Rf]]
+
+[[Category:R]]

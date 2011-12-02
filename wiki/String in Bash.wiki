@@ -1,0 +1,114 @@
+= string length =
+{{{
+a=abcABC123ABCabc
+
+echo ${#a}          # 15
+expr length $a      # 15
+}}}
+
+= special characters: =
+tab and new line:
+<bash>
+augixs-ibook-g4:~ augix$ s=$'\t\n'
+augixs-ibook-g4:~ augix$ echo $s
+
+augixs-ibook-g4:~ augix$ s='\t\n'
+augixs-ibook-g4:~ augix$ echo $s
+\t\n
+</bash>
+
+= concatenate two strings: =
+The braces are required for concatenation constructs.
+
+<pre>
+$p_01
+The value of the variable "p_01".
+
+${p}_01
+The value of the variable "p" with "_01" pasted onto the end.
+</pre>
+
+= Substring Extraction =
+
+${string:position}
+
+{{{
+stringZ=abcABC123ABCabc
+#       0123456789.....
+#       0-based indexing.
+
+echo ${stringZ:0}                            # abcABC123ABCabc
+echo ${stringZ:1}                            # bcABC123ABCabc
+echo ${stringZ:7}                            # 23ABCabc
+
+echo ${stringZ:7:3}                          # 23A
+                                             # Three characters of substring.
+
+# Is it possible to index from the right end of the string?
+    
+echo ${stringZ:-4}                           # abcABC123ABCabc
+# Defaults to full string, as in ${parameter:-default}.
+# However . . .
+
+echo ${stringZ:(-4)}                         # Cabc 
+echo ${stringZ: -4}                          # Cabc
+
+}}}
+
+
+= Substring Replacement =
+
+${string/substring/replacement}
+
+    Replace first match of $substring with $replacement. [2] 
+${string//substring/replacement}
+
+    Replace all matches of $substring with $replacement.
+
+{{{
+stringZ=abcABC123ABCabc
+
+echo ${stringZ/abc/xyz}       # xyzABC123ABCabc
+                              # Replaces first match of 'abc' with 'xyz'.
+
+echo ${stringZ//abc/xyz}      # xyzABC123ABCxyz
+                              # Replaces all matches of 'abc' with # 'xyz'.
+
+echo  ---------------
+echo "$stringZ"               # abcABC123ABCabc
+echo  ---------------
+                              # The string itself is not altered!
+
+# Can the match and replacement strings be parameterized?
+match=abc
+repl=000
+echo ${stringZ/$match/$repl}  # 000ABC123ABCabc
+#              ^      ^         ^^^
+echo ${stringZ//$match/$repl} # 000ABC123ABC000
+# Yes!          ^      ^        ^^^         ^^^
+
+echo
+
+# What happens if no $replacement string is supplied?
+echo ${stringZ/abc}           # ABC123ABCabc
+echo ${stringZ//abc}          # ABC123ABC
+# A simple deletion takes place.
+}}}
+
+= change file name =
+[http://www.debian-administration.org/articles/150 Easily rename file]
+
+{{{
+# method 1
+i=a.JPG
+mv $i ${i/.JPG/}.jpg
+
+# method 2, check rename by "man rename"
+rename 's/\.JPG/\.jpg/' a.JPG
+
+}}}
+
+= Reference =
+
+* http://tldp.org/LDP/abs/html/string-manipulation.html
+* http://www.thegeekstuff.com/2010/07/bash-string-manipulation/

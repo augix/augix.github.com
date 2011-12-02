@@ -1,0 +1,8 @@
+= Remainder from Division 余数，求余 =
+<R>
+10 %% 3
+</R>
+
+<pre>
+[1] 1
+</pre>

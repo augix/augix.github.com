@@ -1,0 +1,91 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Regular expression in Python</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Regular expression in Python</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+How to get all the positions of multiple matches
+
+</ul>
+<p>
+&lt;python&gt;
+import re
+p = re.compile("ab", re.IGNORECASE)
+for m in p.finditer("abcdefgAbdc"):
+</p>
+<blockquote>
+print m.start(), m.group()
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+<p>
+&lt;pre&gt;
+0 ab
+7 ab
+&lt;/pre&gt;
+</p>
+
+<ul>
+<li>
+Substitution
+
+</ul>
+<p>
+&lt;python&gt;
+import re
+test = "&lt;h1&gt;title&lt;/h1&gt;"
+test
+re.sub("\&lt;.*?\&gt;","",test)
+&lt;/python&gt;
+&lt;pre&gt;
+&gt;&gt;&gt; test = "&lt;h1&gt;title&lt;/h1&gt;"
+&gt;&gt;&gt; test
+'&lt;h1&gt;title&lt;/h1&gt;'
+&gt;&gt;&gt; re.sub("\&lt;.*?\&gt;","",test)
+'title'
+&lt;/pre&gt;
+</p>
+
+<ul>
+<li>
+Minimal matching
+
+</ul>
+<p>
+&lt;python&gt;
+import re
+test = "&lt;h1&gt;title&lt;/h1&gt;"
+test
+re.sub("\&lt;.*\&gt;","",test)
+re.sub("\&lt;.*?\&gt;","",test)
+&lt;/python&gt;
+&lt;pre&gt;
+&gt;&gt;&gt; test = "&lt;h1&gt;title&lt;/h1&gt;"
+&gt;&gt;&gt; test
+'&lt;h1&gt;title&lt;/h1&gt;'
+&gt;&gt;&gt; re.sub("\&lt;.*\&gt;","",test)
+''
+&gt;&gt;&gt; re.sub("\&lt;.*?\&gt;","",test)
+'title'
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

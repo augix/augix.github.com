@@ -1,0 +1,48 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Send email attahment</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Send email attahment</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="http://episteme.arstechnica.com/eve/forums/a/tpc/f/6330927813/m/312004411831">Shell Script - Sending email attachment - Topic Powered by eve community</a>
+</p>
+
+<p>
+I usually use "mail" for sending plain emails and "mutt" for sending attachments.
+ echo "This is a message" | mail -s "Subject" foo@bar.com
+</p>
+
+<p>
+ echo "This is a message w/ attachment" | mutt -a file.gz -s "Subject" foo@bar.com
+</p>
+
+<p>
+<a href="http://www.experts-exchange.com/Programming/Programming_Platforms/Unix_Programming/Q_21930761.html">Unix Programming: How to Attach file to email sent from shell</a>
+</p>
+
+<p>
+Select whatever you like, each of the belowing does more or less what you want:
+ metasend -t you@to.tld -s metasend -f yourfile -b -m text/plain -e base64
+ pine you@to.tld -attach file -I^X
+ elm -s ok you@to.tld -A y 
+ echo <code>cat yourfile</code>| mutt -a y -s mutt you@to.tld
+ echo "attached file: xxx.txt"|uuenview -b -a -m you@to.tld -s subjet xxx.txt
+ mpack -s "file" yourfile you@to.tld
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

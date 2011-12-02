@@ -1,0 +1,15 @@
+%template disqus
+
+= remove elements from a list =
+
+http://stackoverflow.com/questions/652136/how-can-i-remove-an-element-from-a-list
+
+{{{
+myList[[5]] = NULL
+
+# or
+
+x <- list("a", "b", "c", "d", "e"); # example list
+x[-2];       # without 2nd element
+x[-c(2, 3)]; # without 2nd and 3rd
+}}}

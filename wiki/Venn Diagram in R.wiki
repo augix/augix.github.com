@@ -1,0 +1,22 @@
+%template disqus
+
+One can use functions in limma pacakge to plot a Venn diagram in R.
+
+{{{
+biocLite("limma")
+library(limma)
+hsb2<-read.table("http://www.ats.ucla.edu/stat/R/notes/hsb2.csv", sep=',', header=T)
+attach(hsb2)
+
+hw<-(write>=60)
+hm<-(math >=60)
+hr<-(read >=60)
+c3<-cbind(hw, hm, hr)
+# c3 is a matrix with logical values.
+a <- vennCounts(c3)
+vennDiagram(a)
+}}}
+
+Reference:
+http://www.ats.ucla.edu/stat/r/faq/venn.htm
+

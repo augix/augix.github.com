@@ -1,0 +1,55 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Multi-level Hash</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Multi-level Hash</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+&lt;perl&gt;
+#!/usr/bin/perl -w
+use strict;
+</p>
+
+<ol>
+<li>
+add your ~/lib dir to @INC
+
+</ol>
+<p>
+use lib '/picb/home5/augix/Programming/Perl/Modules/lib/perl5/site_perl/5.8.5/';
+use Hash::AsObject;
+my $hash = Hash::AsObject-&gt;new;
+</p>
+
+<p>
+$hash-&gt;{foo} = 42;
+print $hash-&gt;foo, "\n";
+</p>
+
+<p>
+$hash-&gt;bar( 137 );
+print $hash-&gt;bar, "\n";
+</p>
+
+<p>
+$hash-&gt;{baz}{quux} = 149;
+print $hash-&gt;baz-&gt;quux, "\n";
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

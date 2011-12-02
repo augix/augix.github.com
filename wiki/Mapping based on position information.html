@@ -1,0 +1,88 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Mapping based on position information</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Mapping based on position information</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+&lt;perl&gt;
+#!/usr/bin/perl
+open IN_b, "./first step/candidate_notmatchsanger.txt" or die $!;
+open IN_s, "pat_1_result26.txt" or die $!;
+open(OUT,"&gt;./first step/26.txt")||die "cannot open the dest:$!";
+</p>
+
+<p>
+$length = 26;
+</p>
+
+<p>
+while(&lt;IN_b&gt;) {
+  chomp;
+  ($chr,$start,$end,$id,$strand) = split /,/;
+  #print $id."\n";
+</p>
+  
+<p>
+  $b_chr = "chr".$chr.$strand;
+  push @{ $id{$b_chr} }, $id;
+  $start{$id} = $start;
+  $end{$id} = $end;
+}
+</p>
+
+
+<p>
+while(&lt;IN_s&gt;) {
+  chomp;
+  ($chr,$id,$start,$strand,$tmp) = split;
+  #print $id."\n";
+</p>
+
+
+<p>
+  $s_chr = $chr.$strand;
+  $s_start = $start; 
+  $s_end = $start + $length;
+</p>
+
+<p>
+  $ss = $s_chr;
+  foreach $b_id(@{ $id{$ss} }) {
+</p>
+<blockquote>
+if ($s_start &gt; $start{$b_id} and $s_end &lt; $end{$b_id}) {
+print OUT "$id\t$b_id\n";
+}
+else {
+#print "$s_start\t$start{$b_id}\t$s_end\t$end{$b_id}\n";
+}
+</blockquote>
+<p>
+  }
+</p>
+  
+<p>
+}
+</p>
+
+<p>
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+[http://www.w3.org/Amaya/User/Proxy.html Proxy support in Amaya]
+
+= UNIX tcsh =
+For example, under the UNIX tcsh shell, you can set them up as
+follows:
+
+ setenv http_proxy http://groucho.marx.edu:1028
+ setenv no_proxy harpo.marx.edu zeppo.marx.edu chico.marx.edu
+
+= MS-Windows =
+One way to do this under MS-Windows is to add the following lines to your
+autoexec.bat file:
+
+ set http_proxy=http://groucho.marx.edu:1028
+ set no_proxy=harpo.marx.edu zeppo.marx.edu chico.marx.edu
+
+if the server requires password:
+ http_proxy=http://username:password@proxy.example.org:8080
+
+
+[http://wiki.noreply.org/noreply/TheOnionRouter/TorifyHOWTO TheOnionRouter/TorifyHOWTO - Noreply Wiki]
+
+= Unix and GNU/Linux =
+Under Unix and GNU/Linux, most HTTP capable applications, like lynx, wget and curl, will honor the value of the http_proxy environment variable. Some applications use all lower case, some all upper, so specify both to be safe. 
+Add the following lines to your $HOME/.bash_profile, $HOME/.bashrc, or env settings: 
+
+ http_proxy=http://127.0.0.1:8118/
+ HTTP_PROXY=$http_proxy
+ export http_proxy HTTP_PROXY
+
+
+[http://ory.ph.biu.ac.il/manuals/proxy/ Setting up HTTP proxy]
+
+= Bash =
+If you are using Bourne-style shell (sh, bash, ksh) type the following
+command: 
+ http_proxy=http://bcproxy.ac.il:8080/ ; export http_proxy
+
+= Csh =
+For C-shell (csh, tcsh) type
+ setenv http_proxy=http://bcproxy.ac.il:8080/
+
+You may wish to add apropriatecommand into your .profile (Bourne-style shell users) or .login (C-shell users)
+files.
+
+[http://aspn.activestate.com/ASPN/docs/ActivePerl/5.8/faq/ActivePerl-faq2.html ActivePerl 5.8 - Online Docs: Using PPM]
+
+
+= Mac OS X =
+
+The http_proxy should be set in two places on OS X:
+
+
+Shell: Add a line like the following in .bash_profile (/Users/<name>/.bash_profile):
+
+ http_proxy=http://username:password@hostname:port;  export http_proxy
+
+This setting applies to PPM when it is launched from or used at the command line.
+
+Desktop: Add an entry like the following in your environment.plist file
+  (/Users/<name>/.MacOSX/environment.plist):
+
+      <key>http_proxy</key>
+      <string>http://username:password@hostname:port</string>
+  
+This setting applies to PPM when it is launched by clicking the PPM icon.
+
+
+= Linux, Solaris or HP-UX =
+
+Set the http_proxy environment variable using the command specific to your shell (e.g. set or export). To make this change persistent, add the command to the appropriate profile file for the shell.  For example, in bash, add a line like the following to your .bash_profile or .bashrc file:
+
+      http_proxy=http://username:password@hostname:port;  export http_proxy

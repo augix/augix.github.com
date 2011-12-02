@@ -1,0 +1,46 @@
+[http://tolstoy.newcastle.edu.au/R/devel/05/01/1910.html R devel archive: R as unix filter]
+
+R as unix filter
+
+`Rf' allows unix script programmers to use the statistics program `R' as a proper unix filter.
+
+Basically, Rf allows you to write a little sh-bang script (included in this distribution as file `mean'):
+
+<bash>
+#!/usr/local/bin/Rf
+
+x <- scan(.stdin, quiet=T) 
+cat (mean(x))
+</bash>
+
+This example script reads number in from stdin (the R character variable `.stdin') and prints the average on standard out. Thus, one could say on the command line:
+
+ $ seq 10 | mean
+
+
+
+= Installation =
+
+This first version assumes the following:
+
+ * `r-as-filter' installed in /usr/local/lib
+ * `Rf' installed in /usr/local/bin
+
+Note that you may install Rf anywhere, but if you want to use it in
+shbang context (first line of `executable R script' starting with
+/usr/local/bin/Rf) then this should be a consistent location in order
+to make it more portable.  
+
+If you can't copy to /usr/local/lib, change the destination in
+`Rf.c'. 
+
+Make `Rf' by typing
+
+ $ make Rf
+
+And then copy
+ $ install Rf /usr/local/bin
+ $ install r-as-filter /usr/local/lib
+
+
+keywords: R, Rf, argv, stdin

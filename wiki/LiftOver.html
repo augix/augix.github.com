@@ -1,0 +1,87 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>LiftOver</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>LiftOver</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+liftOver program is installed in:
+ /picb/home5/augix/bin/liftOver
+</p>
+
+<p>
+Directly run it, you'll see the help information.
+</p>
+
+<p>
+the program need you specify the following things:
+1. -minMatch, minimal percentage of the matched part.
+2. the file with coordinates in one species. I call it the oldFile, it's in BED format, check UCSC Genome Browser to understand more about BED format.
+3. the chain file, this file contains the coordinate mapping information from one species to another.
+4. the output file name, I call it the newFile.
+</p>
+
+
+<p>
+Now it comes my bash code:
+&lt;bash&gt;
+chain_h2c=/picb/compbio6/limingfeng/data/liftover/chain_file/hg18ToPanTro2.over.chain
+chain_h2r=/picb/compbio6/limingfeng/data/liftover/chain_file/hg18ToRheMac2.over.chain
+</p>
+
+<p>
+outdir=./0.8
+if [ ! -d $outdir ]; then mkdir $outdir; fi
+</p>
+
+<p>
+oldFile=../1.BED/human.promoter.bed
+</p>
+
+<p>
+newFile=$outdir/chimp.promoter.bed
+~/bin/liftOver -minMatch=0.80 $oldFile $chain_h2c $newFile unMapped
+</p>
+
+<p>
+newFile=$outdir/rhesus.promoter.bed
+~/bin/liftOver -minMatch=0.80 $oldFile $chain_h2r $newFile unMapped
+&lt;/bash&gt;
+</p>
+
+<p>
+I also provide an example of file in BED format.
+&lt;pre&gt;
+$ head human.promoter.bed 
+chr7	157955020	157956019	ENSG00000208234	0	+
+chr17	15981912	15982911	ENSG00000199674	0	-
+chr9	134883755	134884754	ENSG00000221622	0	+
+chr6	52116106	52117105	ENSG00000207604	0	+
+chr6	111436273	111437272	ENSG00000207431	0	-
+chr6	65740007	65741006	ENSG00000221312	0	+
+chr20	18187496	18188495	ENSG00000223135	0	-
+chr5	29983692	29984691	ENSG00000223136	0	+
+chr14	91340071	91341070	ENSG00000200159	0	-
+chr9	108481079	108482078	ENSG00000200131	0	+
+&lt;/pre&gt;
+</p>
+
+<p>
+the columns are: chromosome name, start, end, gene id, score, strand.
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

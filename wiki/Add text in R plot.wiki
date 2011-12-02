@@ -1,0 +1,11 @@
+%template disqus
+
+= add main title =
+{{{
+text = "Main title of the plot"
+par(mfrow=c(1,1),oma=c(0,0,2,0),las=1)
+mtext( text, side=3,outer=T )
+}}}
+
+
+

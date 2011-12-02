@@ -1,0 +1,77 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Fetch URLs from a HTML file</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Fetch URLs from a HTML file</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+<ul>
+<li>
+Fetch the URL list of mp3 files in a webpage:
+ $ perl -pe 's/.<strong>?(http\:\/\/.</strong>?\.mp3).<strong>?/\1\n/gi or s/.</strong>\n//gi;' source.html
+
+</ul>
+
+<ul>
+<li>
+get_url.pl: simplify one html file into another one with only links inside.
+
+</ul>
+<p>
+&lt;perl&gt;
+#!/usr/bin/perl
+#use strict;
+#use warnings;
+#use utf8;
+</p>
+
+<p>
+#binmode(STDOUT, ":utf8");
+</p>
+
+<p>
+open OUTPUT,$ARGV[1] or die $!;
+</p>
+
+<p>
+open HTML,$ARGV[0] or die $!;
+while ($line=&lt;HTML&gt;) {
+</p>
+<blockquote>
+$line=~s/\&lt;\/a\&gt;.*?\&lt;a/\&lt;\/a\&gt;\&lt;a/g;
+$line=~s/.*?[^a]\&gt;\&lt;a/\&lt;a/g;
+$line=~s/\/a\&gt;\&lt;[^a].*?$/\/a\&gt;/g;
+while ($line=~/(\&lt;a.*?\&lt;\/a\&gt;)/g) {
+$print{$1}=1;
+}
+</blockquote>
+<p>
+}
+foreach $key(keys %print) {
+</p>
+<blockquote>
+print OUTPUT $key."&amp;nbsp;&amp;nbsp;\n";
+</blockquote>
+<p>
+}
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

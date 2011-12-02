@@ -1,0 +1,21 @@
+* the R code
+<R>
+# this is a Benjamini and Hochberg 1995 FDR control
+# http://en.wikipedia.org/wiki/False_discovery_rate
+BH.FDR.control <- function(q=FDR, p.values) {
+  sort.p <- sort(p.values)
+  m <- length(sort.p)
+  for (i in m:1) {
+    if (sort.p[i] <= q*i/m) { k <- i; cutoff <- sort.p[i]; return(cutoff); }
+  }
+  return(0)
+}
+
+example.BH.control() {
+	p.values <- c(rep(1:10,10),10:100)/100
+	FDR <- 0.05
+	cutoff <- BH.FDR.control(FDR, p.values)
+	plot(density(p.values))
+	abline(v=cutoff,col='red')
+}
+</R>

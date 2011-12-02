@@ -1,0 +1,30 @@
+%template disqus
+= Programming Language =
+* [[Learning Shell|Shell]]
+* [[Python]]
+* [[Learning Perl|Perl]]
+* [[PHP]]
+* [[R tips]]
+* [[How to use RSPerl]]
+* [[AppleScript]]
+* [[SQL]]
+* [[Regular expression]]
+
+= Algorithm =
+* [[Mapping based on position information]]
+
+= Network =
+* [[Fetch URLs from a HTML file]]
+* [[curl|curl - Download multiple URLs from file]]
+* [[wget|wget - Download a file in a website which requires login]]
+
+
+= Editor =
+[[Vim]]
+
+= Version control =
+[[Git]]
+
+= Others =
+* [[VoodooPad]]
+* [[Temp]]

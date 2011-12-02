@@ -1,0 +1,45 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Compare two files line by line</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Compare two files line by line</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Examples</h1>
+<p>
+&lt;bash&gt;
+diff -U 0 oldFile newFile
+&lt;/bash&gt;
+</p>
+
+<p>
+or compare corresponding files in both directories, in alphabetical order.
+&lt;bash&gt;
+diff -U 0 oneDirectory anotherDirectory
+&lt;/bash&gt;
+</p>
+
+<h1 id="toc_2">Options</h1>
+<p>
+&lt;pre&gt;
+-B = Ignore changes that just insert or delete blank lines.
+-b = Ignore changes in amount of white space.
+-r = When comparing directories, recursively compare any subdirectories found.
+-q = Report only whether the files differ, not the details of the differences.
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

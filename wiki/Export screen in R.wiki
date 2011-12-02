@@ -1,0 +1,7 @@
+<R>
+a = matrix(1:24,4)
+sink(file='./test.sink.txt')
+a
+summary(a)
+sink()
+</R>

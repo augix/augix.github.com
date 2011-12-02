@@ -1,0 +1,40 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Convert newline between systems</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Convert newline between systems</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+The new line characters are different in different operation systems. In order to convert them between systems, we should use the following command.
+</p>
+
+<p>
+&lt;pre&gt;
+<a href="http://en.wikipedia.org/wiki/Newline">http://en.wikipedia.org/wiki/Newline</a>
+</p>
+
+<p>
+sed -e 's/$/\r/' inputfile &gt; outputfile                # UNIX to DOS  (adding CRs)
+sed -e 's/\r$//' inputfile &gt; outputfile                # DOS  to UNIX (removing CRs)
+perl -pe 's/\r\n|\n|\r/\r\n/g' inputfile &gt; outputfile  # Convert to DOS
+perl -pe 's/\r\n|\n|\r/\n/g'   inputfile &gt; outputfile  # Convert to UNIX
+perl -pe 's/\r\n|\n|\r/\r/g'   inputfile &gt; outputfile  # Convert to old Mac
+perl -pe 's/\r\n|\n|\r/\n/g'   inputfile &gt; outputfile  # Convert to new Mac
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Test GD.pl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Test GD.pl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+use lib "/picb/home5/augix/Library/Perl/lib64/perl5/site_perl/5.8.5/x86_64-linux
+-thread-multi";
+use GD;
+$image=new GD::Image(1250,400);
+</p>
+
+<p>
+$white=$image-&gt;colorAllocate(255,255,255);
+$black=$image-&gt;colorAllocate(0,0,0);
+$red=$image-&gt;colorAllocate(255,0,0);
+$green=$image-&gt;colorAllocate(0,255,0);
+$blue=$image-&gt;colorAllocate(0,0,255);
+</p>
+
+<p>
+$image-&gt;rectangle(175,40,1210,290,$black);
+$image-&gt;dashedLine(175,165,1210,165,$blue);
+</p>
+
+<p>
+open(STDOUT,"&gt;pic.png");
+binmode STDOUT;
+print $image-&gt;png;
+&lt;/perl&gt;
+<a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

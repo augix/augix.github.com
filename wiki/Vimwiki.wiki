@@ -1,0 +1,194 @@
+%toc Table of Content 
+= Install =
+Download the latest source code of Vimwiki with Mercurial:
+
+{{{
+hg clone https://code.google.com/p/vimwiki/
+}}}
+
+This will create a folder named 'vimwiki' in the current directory, and download files into that folder.
+
+Copy content of vimwiki folder into ~/.vim/.
+
+= Syntax =
+== font ==
+
+| {{{*粗体文本*}}}         | *粗体文本*         |
+| {{{_斜体文本_}}}         | _斜体文本_         |
+| {{{~~删除线~~}}}         | ~~删除线~~         |
+| ``code``                 | `code`             |
+| {{{^上标^文字,,下标,,}}} | ^上标^文字,,下标,, |
+
+== link ==
+
+=== 外部链接 ===
+
+`[http://augix.com augix的主页]`
+
+[http://augix.com augix的主页]
+
+=== 内部链接 ===
+Write relative path :: 
+:: Remember that the paths (absolute or relative) written in wiki file will be extactly the same in the resulting html file.
+:: This apply to links to any kind of files.
+:: Therefor one might need to change PWD to the directory of current wiki file by `:cd %:h`
+    
+Create folder of wiki file :: 
+:: If the file or folder you entered doesn't exist, vimwiki will create it, after that your PWD will change back to root path.
+
+*Example*
+
+`[[local_folder/]]`
+
+[[local_folder/]]
+
+`[[链接源地址|链接描述]]`
+
+[[链接源地址|链接描述]]
+
+=== 图片及图片链接 ===
+
+`[[../img/eva.jpg|A photo taken in institute]]`
+
+[[../img/eva.jpg|A photo taken in institute]]
+
+[[../img/eva.jpg][hey][height:10px]]
+
+`[[../img/eva.jpg]]`
+
+[[../img/eva.jpg]]
+
+== title ==
+`%title Tips on VimWiki`
+
+== list ==
+
+=== 无序列表 ===
+{{{
+* 列表项 1 
+* 列表项 2
+}}}
+ 
+* 列表项 1 
+* 列表项 2
+
+=== 有序列表 ===
+{{{
+# 编号列表项 1
+# 编号列表项 2
+}}}
+ 
+# 编号列表项 1
+# 编号列表项 2
+
+
+=== 定义列表 ===
+{{{
+术语 1 :: 定义 1
+
+术语 2 :: 
+:: 定义 2
+:: 定义 3 
+}}}
+
+术语 1 :: 定义 1
+
+术语 2 :: 
+:: 定义 2
+:: 定义 3 
+
+== table ==
+ | 表格 | 表格 | 表格 |
+ | 表格 | 表格 | 表格 |
+ | 表格 | 表格 | 表格 |
+
+== 预定于化文本 ==
+
+ {{{
+ 文本
+ 文本
+ 文本
+ }}}
+
+== quote ==
+
+     四个以上空格开始的文本，就是一个应用块
+
+         我就是块级引用～～ 
+
+== Comments ==
+Use %% to leave comment in the wiki files.
+    %% this is comment.
+
+== To do list ==
+Pressing <C-Space> on the third list item will toggle it and all of it's
+{{{
+parent items:
+== Toggleable list of todo items ==
+  * [.] Toggle list item on/off.
+    * [ ] Simple toggling between [ ] and [X].
+    * [X] All list's subitems should be toggled on/off appropriately.
+    * [ ] Toggle child subitems only if current line is list item
+    * [ ] Parent list item should be toggled depending on it's child items.
+  * [ ] Make numbered list items toggleable too
+  * [ ] Add highlighting to list item boxes
+  * [ ] Add [ ] to the next created with o, O and <CR> list item.
+
+Parent items could be toggled by its child items. Symbol inside [ ] depends on
+percentage of toggled child items(see also |g:vimwiki_listsyms|): >
+    [ ] -- 0%
+    [.] -- 1-33%
+    [o] -- 34-66%
+    [O] -- 67-99%
+    [X] -- 100%
+}}}
+
+== table of content ==
+添加目录到wiki页面 %toc 
+
+= Keyboard shortcuts =
+
+{{{
+                        *vimwiki_=*
+=                       Add header level. Create if needed.
+                        There is nothing to indent with '==' command in
+                        vimwiki, so it should be ok to use '=' here.
+
+                        *vimwiki_-*
+-                       Remove header level.
+ 
+<C-Up>                  Open the previous day's diary link if available.
+                        See |:VimwikiDiaryPrevDay|
+
+                        *vimwiki_<C-Down>*
+<C-Down>                Open the next day's diary link if available.
+                        See |:VimwikiDiaryNextDay|
+
+<2-LeftMouse> or <Enter>   
+                        Follow wiki link (create target wiki page if needed).
+
+<S-2-LeftMouse> or <S-Enter>        
+                        Split and follow wiki link (create target wiki page if
+                        needed).
+                        
+<C-2-LeftMouse> or <C-Enter>
+                        Vertical split and follow wiki link (create target
+                        wiki page if needed).
+}}}
+
+
+= Other =
+== jump ==
+{{{
+<TAB>, S-<TAB>        jump among links within a page
+<BS>                  back to previous page
+<C-o>, <C-i>          
+}}}
+
+== Turn off saving message ==
+comment line 195 in ~/.vim/ftplugin/vimwiki.vim
+{{{
+"\ echo 'HTML conversion is done.'
+}}}
+
+

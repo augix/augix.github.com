@@ -1,0 +1,407 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python Assignment 4</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python Assignment 4</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Classes</h1>
+<h2 id="toc_1.1">Exercise 1: import Sequence</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+from sequence import Sequence
+f = open('./ambiguous_sequences.seq','r')
+for l in f.readlines():
+</p>
+<blockquote>
+s = Sequence(l.rstrip())
+print 'Sequence has', s._<em>len</em>_(), 'bases.'
+counts = s.letter_counts()
+for base, count in counts.items():
+print base, '=', count
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+Sequence has 1267 bases.
+A = 287
+C = 306
+B = 1
+G = 389
+R = 1
+T = 282
+Y = 1
+Sequence has 553 bases.
+A = 119
+C = 161
+T = 131
+G = 141
+N = 1
+Sequence has 1521 bases.
+A = 402
+C = 196
+T = 471
+G = 215
+N = 237
+...
+...
+Sequence has 1285 bases.
+A = 327
+Y = 1
+C = 224
+T = 371
+G = 362
+Sequence has 570 bases.
+A = 158
+C = 120
+T = 163
+G = 123
+N = 6
+Sequence has 1801 bases.
+C = 376
+A = 465
+S = 1
+T = 462
+G = 497
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_1.2">Exercise 2: Sequence.to_protein()</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+from sequence import Sequence
+DNA = raw_input('Enter DNA sequence: ').upper()
+seq = Sequence(DNA)
+for frame in (1, 2, 3):
+</p>
+<blockquote>
+protein = seq.to_protein(rf=frame)
+print 'Frame %d: %s' % (frame, protein)
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+$  python e2.py 
+Enter DNA sequence: ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA
+Frame 1: &lt;START&gt;PK&lt;START&gt;NSVEGF&lt;STOP&gt;
+Frame 2: CPS&lt;STOP&gt;IA&lt;STOP&gt;RGF
+Frame 3: AQAE&lt;STOP&gt;RRGVL
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_2">Standard Library</h1>
+<h2 id="toc_2.1">Exercise 1: find modules</h2>
+<p>
+Which module or modules do you think would be useful if you were faced with the following problems?
+</p>
+<ul>
+<li>
+You need to get a list of files in a particular directory?
+ Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname)
+
+</ul>
+
+<ul>
+<li>
+You need to grab a file from a website in an automated fashion?
+ Answer: urllib.
+
+</ul>
+<p>
+&lt;python&gt;
+import urllib
+res = urllib.urlopen('<a href="http://augix.com'">http://augix.com'</a>)
+res.read()
+&lt;/python&gt;
+</p>
+
+<ul>
+<li>
+You need to time how long a particular operation takes to complete?
+ Answer: timeit.
+
+</ul>
+<p>
+&lt;python&gt;
+import timeit
+timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
+&lt;/python&gt;
+</p>
+
+<ul>
+<li>
+You need to do calculations using rational numbers (i.e. numbers which are represented as fractions like 1/3)?
+ Answer: module 'fractions', 'math'.
+
+</ul>
+
+<h2 id="toc_2.2">Exercise 2: sys.argv</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+import sys
+print 'Argument 1 was:', sys.argv[1]
+print 'Argument 2 was:', sys.argv[2]
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+$ python e2.py sequences.seq motifs.txt
+Argument 1 was: sequences.seq
+Argument 2 was: motifs.txt
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_2.3">Exercise 3</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+import sys
+f = open(sys.argv[1],'r')
+lines = f.readlines()
+for l in lines:
+</p>
+<blockquote>
+seq = l.rstrip()
+counts = {}
+for s in seq:
+counts[s] = counts.get(s, 0) + 1
+print 'Sequence has', str(len(seq)), 'bases.'
+for key, value in counts.items():
+print key, '=', value
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+$ ./e3.py ../../Assignment2/1.Dict/ambiguous_sequences.seq 
+Sequence has 1267 bases.
+A = 287
+C = 306
+B = 1
+...
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_3">Using modules</h1>
+<h2 id="toc_3.1">Exercise 1: csv module</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+f = open('./numbers1.csv','r')
+import csv
+lines = csv.reader(f)
+for l in lines:
+</p>
+<blockquote>
+print sum(map(int,l))
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+$ ./e1.py 
+716
+1139
+11
+1707
+1516
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_3.2">Exercise 2: csv.Sniffer()</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+csvfile = open('./numbers2.csv','r')
+import csv
+dialect = csv.Sniffer().sniff(csvfile.read(20))
+csvfile.seek(0)
+lines = csv.reader(csvfile,dialect)
+for l in lines:
+</p>
+<blockquote>
+print sum(map(int,l))
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+$ ./e2.py 
+716
+1139
+11
+1707
+1516
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_4">Regular expressions</h1>
+<h2 id="toc_4.1">Exercise 1</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+</p>
+
+<p>
+import re
+</p>
+
+<p>
+match = ['pit', 'spot', 'spate', 'slap two', 'respite']
+no_match = ['', 'Pit', 'peat', 'part', 'sport']
+</p>
+
+<p>
+pattern = r"p.t"   # This is your regex pattern!
+</p>
+
+<p>
+regex = re.compile(pattern)
+</p>
+
+<p>
+for S in match:
+  if not regex.search(S):
+</p>
+<blockquote>
+print "Your regex doesn't match", S
+</blockquote>
+
+<p>
+for N in no_match:
+  if regex.search(N):
+</p>
+<blockquote>
+print "Your regex matches", N
+</blockquote>
+<p>
+&lt;/python&gt;
+</p>
+
+<h2 id="toc_4.2">Exercise 2: Sentence endings</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+</p>
+
+<p>
+import re
+</p>
+
+<p>
+match = ["assumes word senses. Within",
+</p>
+<blockquote>
+"does the clustering. In the",
+"but when? It was hard to tell",
+'he arrive." After she had',
+"mess! He did not let it",
+"it wasn't hers!' She replied",
+"always thought so.) Then"]
+</blockquote>
+
+<p>
+no_match = ["in the U.S.A., people often",
+</p>
+<blockquote>
+'John?", he often thought, but',
+"weighed 17.5 grams",
+"well ... they'd better not",
+"A.I. has long been a very",
+'like that", he thought',
+"but W. G. Grace never had much"]
+</blockquote>
+
+<p>
+pattern = r"\w\w[\.?!]{1}[\'\"\)]?\s"        # This is your regex pattern!
+</p>
+
+<p>
+regex = re.compile(pattern)
+</p>
+
+<p>
+for S in match:
+  if not regex.search(S):
+</p>
+<blockquote>
+print "Your regex doesn't match", S
+</blockquote>
+
+<p>
+for N in no_match:
+  if regex.search(N):
+</p>
+<blockquote>
+print "Your regex matches", N
+</blockquote>
+<p>
+&lt;/python&gt;
+<br>
+</p>
+
+
+<h2 id="toc_4.3">Exercise 3: ORF</h2>
+<p>
+&lt;python&gt;
+#!/usr/bin/env python
+def ORF(seq):
+</p>
+<blockquote>
+import re
+pattern = r'ATG([ACGT]{3})+(TAA|TAG|TGA)'
+regex = re.compile(pattern)
+res = regex.search(seq)
+if res:
+frame = res.start() % 3 + 1
+length = len(res.group(0))
+print 'In sequence:\n', seq, '\nFrame', frame, 'contains the longest open reading frame with', length, 'nucleotides.'
+return (frame, length)
+else:
+print 'In sequence:\n', seq, '\nNo ORF found!'
+return None
+</blockquote>
+
+<p>
+seq = 'ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA'
+ORF(seq)
+seq = 'ACGATGCTGCACATGCAACTTGACGACGAC'
+ORF(seq)
+&lt;/python&gt;
+<br>
+Result:
+&lt;pre&gt;
+$ python e3.py 
+In sequence:
+ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA 
+Frame 1 contains the longest open reading frame with 33 nucleotides.
+In sequence:
+ACGATGCTGCACATGCAACTTGACGACGAC 
+No ORF found!
+&lt;/pre&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

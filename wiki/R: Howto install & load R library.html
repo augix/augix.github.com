@@ -1,0 +1,56 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>R: Howto install %title% load R library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>R: Howto install %title% load R library</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_ R.html">Category: R</a>
+&lt;bash&gt;
+$ mkdir ~/Library/R/
+$ cd ~/Library/R/
+</p>
+
+<p>
+$ R CMD INSTALL -l ~/Library/R/ seqinr_1.0-6.tar.gz
+&gt; library(seqinr, lib.loc="~/Library/R/")
+</p>
+
+
+<ol>
+<li>
+or you can
+
+</ol>
+<p>
+$ R CMD INSTALL -l seqinr seqinr_1.0-6.tar.gz
+&gt; library(seqinr, lib.loc="~/Library/R/seqinr")
+</p>
+
+<p>
+&lt;/bash&gt;
+</p>
+
+<p>
+Don't have to specify '''lib.loc''' if the variable '''$R_LIBS''' is already set in the '''~/.bashrc''' like this:
+&lt;bash&gt;
+R_LIBS=~/Library/R/
+export R_LIBS 
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

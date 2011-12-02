@@ -1,0 +1,2 @@
+* [[register_globals]]
+* [[PHP warning]]

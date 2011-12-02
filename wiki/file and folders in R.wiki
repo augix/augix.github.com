@@ -1,0 +1,11 @@
+%template disqus
+
+{{{
+list.files(path)
+
+dir.create(path, showWarnings = TRUE, ...)
+
+file.exists(path)
+basename(path)
+dirname(path)
+}}}

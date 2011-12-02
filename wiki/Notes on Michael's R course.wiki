@@ -1,0 +1,36 @@
+%template disqus
+
+{{{
+option(width=40)
+outer(1:4,1:4,"*")
+p = function(...) paste(...,sep='')
+replicate(10, sample(1:6,1))
+image(matrix(1:63,7))
+ifelse()
+<<- # only affect one level up
+repeat and break
+sapply() works for a vector or matrix if appropriate.
+sapply() returns a list if lengthes are different.
+sapply(x, func, args) # you can give additional arguments to sapply function
+order()
+system.time()
+args()	# instead of ?, we use args to only see the args the function taks.
+cumsum	# accumulated sum.
+rbinom, dbinom, pbinom, qbinom
+pbinom(5, 20, prob=0.5) # what is the probability to see 5 heads.
+nchar()	# number of characters in a string.
+ppois(x,...,lower.tail=F)	# lower.tail=F give probability of seen x or > x.
+rexp	# how long do you need to wait till you see the next one.
+rhyper	# 
+lapply(pop,sample,rep=T) # pop could be a list with items with different lengthes.
+plot(type='n') # plot blank
+browser() # debug. command in browser environment: n, c, Q
+debug() # put a browser() line at the beginning of the function.
+traceback() # trace back the error
+options(error=recover) # go back inside the function with error.
+methods(plot) # methods of plot for different kinds of objects.
+# print and plot function depends on the class of objects.
+rowSums(), colSums(), rowMeans(), colMeans() #
+xor() # logical switch
+}}}
+

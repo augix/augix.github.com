@@ -1,0 +1,46 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Move MediaWiki from Boulo.local to the new machine</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Move MediaWiki from Boulo.local to the new machine</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+the directory:
+ scp -r boulo.local:/Applications/xampp /Application/xampp
+</p>
+
+<p>
+on boulo.local
+ /Applications/xampp/xamppfiles/bin/mysqldump wikidb -u wikiuser -p --skip-opt &gt; ~/wikidb.sql
+</p>
+
+<p>
+copy boulo.local:~/wiki_mysql.bak to Backup/MediaWiki/
+ scp boulo.local:~/wikidb.sql /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql
+</p>
+
+<p>
+create a database wikidb
+create a user wikiuser with certain privileges
+</p>
+
+<p>
+import
+ /Applications/xampp/xamppfiles/bin/mysql wikidb -u root -p &lt; /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

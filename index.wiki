@@ -1,10 +1,20 @@
 %title Home
+%% they are published to internet
 
 This is the home of [http://wiki.augix.com wiki.augix.com].
 
-[[./blog/Blog| Blog]]
+This wiki covers mainly the following subjects:
 
-[[./entries/China_US_values/| China-US value comparison]]
+= Subjects =
+* [[wiki/Programming|Programming]]
+* [[wiki/IT Notes|IT Notes]]
+* [[wiki/Biology Notes|Biology]]
+* [[wiki/Bioinformatics|Bioinformatics]]
+* [[wiki/Statistics|Statistics]]
+* [[wiki/Foreign Language|Foreign Languages]]
+* [[wiki/Main Page| All subjects]]
 
-[[./entries/Kurt-Eisner/| Flat on Kurt-Eisner Str.]]
+
+%% [[./blog/Blog]]
+%% [[./entries/]] 
 

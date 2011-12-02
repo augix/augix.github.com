@@ -1,0 +1,222 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Syntax Highlighting for MediaWiki: GeSHiHighlight</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Syntax Highlighting for MediaWiki: GeSHiHighlight</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Document</h1>
+<p>
+<a href="http://www.mediawiki.org/wiki/Extension:GeSHiHighlight">http://www.mediawiki.org/wiki/Extension:GeSHiHighlight</a>
+</p>
+
+<h1 id="toc_2">Demo</h1>
+<p>
+The codes writing in MediaWiki:
+&lt;pre&gt;&lt;perl&gt;foreach(@myarr){print $_;}&lt;/perl&gt; 
+&lt;java&gt;public class foo{ /* .... */ }&lt;/java&gt;
+&lt;/pre&gt;
+The Highlighted codes:
+&lt;perl&gt;foreach(@myarr){print $_;}&lt;/perl&gt; 
+&lt;java&gt;public class foo{ /* .... */ }&lt;/java&gt;
+</p>
+
+<h1 id="toc_3">Installation</h1>
+<ul>
+<li>
+Download GeSHi (found here: <a href="http://qbnz.com/highlighter/index.php">http://qbnz.com/highlighter/index.php</a>)
+
+<li>
+You'd better delete its doc and contrib folder, put geshi.php and geshi folder directly in the extension folder of MediaWiki.
+
+<li>
+Copy &amp; paste the following code to a file called GeSHiHighlight.php
+
+<li>
+Put GeSHiHighlight.php in your MediaWiki installations' extensions folder
+
+</ul>
+<p>
+** this php file enables the tag, tag is much more convenient. this script also search the available syntax file in the geshi folder.
+</p>
+<ul>
+<li>
+Add: &lt;php&gt;include("extensions/GeSHiHighlight.php");&lt;/php&gt; to LocalSettings.php in your MediaWiki folder
+
+</ul>
+
+<h2 id="toc_3.1">GeSHiHighlight.php</h2>
+<p>
+&lt;php&gt;
+&lt;?php
+</p>
+<ol>
+<li>
+GeSHiHighlight.php
+
+<li>
+
+
+<li>
+By: E. Rogan Creswick (aka: Largos)
+
+<li>
+creswick@gmail.com
+
+<li>
+wiki.ciscavate.org
+
+</ol>
+<p>
+#
+</p>
+<ol>
+<li>
+License: GeSHi Highlight is released under the Gnu Public License (GPL), and comes with no warranties.
+
+<li>
+The text of the GPL can be found here: <a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>
+
+<li>
+Loosely based on SyntaxHighlight.php by Coffman, (www.wickle.com)
+
+</ol>
+
+<ol>
+<li>
+you want to change the below two lines
+
+</ol>
+<p>
+require_once("geshi.php"); // i asume geshi.php is in the same directory as GeSHiHighlight.php (that is 'extensions' dir)
+</p>
+
+<p>
+define("GESHI_PATH","extensions/geshi");// definition where are stored geshi language parsing files
+</p>
+
+
+<ol>
+<li>
+ok, end of editing :)
+
+</ol>
+
+
+<p>
+class SyntaxSettings {};
+</p>
+				 
+<p>
+$wgSyntaxSettings = new SyntaxSettings; 
+$wgExtensionFunctions[] = "wfSyntaxExtension"; 
+</p>
+									 
+<p>
+function wfSyntaxExtension() { 
+	global $wgParser;
+	$langArray = geshi_list_languages(GESHI_PATH);
+</p>
+<ol>
+<li>
+$langArray = array("actionscript","ada","apache","asm","asp","bash",
+
+<li>
+"caddcl","cadlisp","c","cpp","css","delphi",
+
+<li>
+"html4strict","java","javascript","lisp", "lua",
+
+<li>
+"nsis","oobas","pascal","perl","php-brief","php",
+
+<li>
+"python","qbasic","sql","vb","visualfoxpro","xml");
+	foreach ( $langArray as $lang ){
+		if ($lang == "" || $lang == "div") continue; 
+		$wgParser-&gt;setHook( $lang, 
+		create_function( '$text', '$geshi = new GeSHi(rtrim(ltrim($text,"\n\r")), "' ."$lang". '", GESHI_PATH);
+		return $geshi-&gt;parse_code();')); 
+	} 
+
+</ol>
+<p>
+} 
+</p>
+
+<p>
+/**
+</p>
+<ul>
+<li>
+function: geshi_list_languages
+
+<li>
+-------------------------
+
+<li>
+List supported languages by reading the files in the geshi/geshi subdirectory
+
+<li>
+(added by JeffK -- Jeff, any more contact info?) -- I haven't tested the code is is, will do that shortly. -Rogan
+
+</ul>
+<p>
+*
+*/
+function geshi_list_languages ( $path = 'geshi/' )
+{
+	$lang_list = array();
+	if ($handle = opendir($path)) {
+		while (false !== ($file = readdir($handle))) {	// Loop over the directory. 
+			if(is_dir($file)) continue;					// Drop anything that is a directory, cause we want files only
+			if( ".php" == substr($file, strrpos($file, "."),4)) // process only .php files
+			{
+			$lang_list[]= substr($file, 0, strrpos($file, "."));
+			}
+		}
+</p>
+
+<p>
+		closedir($handle);
+	}
+	sort($lang_list); //sort the output, i like ordered lists in Wiki Version page :)
+	return $lang_list;
+} 
+?&gt;
+&lt;/php&gt;
+</p>
+
+<h1 id="toc_4">for R</h1>
+<p>
+In this GeSHiHighlight library, there is a file name perl.php, based on this file, I wrote a file named R.php which help wiki to highlight a R script.
+</p>
+<ul>
+<li>
+<a href="R.php">R.php</a>
+
+</ul>
+
+<h1 id="toc_5">Todo</h1>
+<p>
+Improving Highlighter, for example: display line number.
+</p>
+
+<p>
+<a href="Category_MediaWiki Configuration.html">Category:MediaWiki Configuration</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

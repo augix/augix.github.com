@@ -1,0 +1,761 @@
+[[Category: Python]]
+%toc TOC
+
+reference: http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chinese/index.html
+
+= Basic stuff =
+
+== Hello World! ==
+
+<python>
+print 'Hello World!'
+</python>
+
+== Quit python ==
+
+Use <tt>control-D</tt> to quit python.
+
+== Help ==
+
+<python>
+help(str)
+</python>
+
+Press <tt>q</tt> to exit help.
+
+== 字符串 ==
+
+* 首先，单双引号是一样的
+
+*使用引号
+你可以用单引号指示字符串，就如同'Quote me on this'这样。所有的空白，即空格和制表符都照原样保留。
+
+*使用三引号（'''或"""）
+利用三引号，你可以指示一个多行的字符串。你可以在三引号中自由的使用单引号和双引号。例如：
+<python>
+'''This is a multi-line string. This is the first line.
+This is the second line.
+"What's your name?," I asked.
+He said "Bond, James Bond."
+'''
+</python>
+
+== 语句行 ==
+分号表示一个逻辑行/语句的结束。
+<python>
+i = 5; print i;
+</python>
+
+下面是一个在多个物理行中写一个逻辑行的例子。
+<python>
+print \
+i
+</python>
+
+== 缩进 ==
+
+空白在Python中是重要的。事实上行首的空白是重要的。它称为缩进。在逻辑行首的空白（空格和制表符）用来决定逻辑行的缩进层次，从而用来决定语句的分组。
+
+这意味着同一层次的语句必须有相同的缩进。每一组这样的语句称为一个块。我们将在后面的章节中看到有关块的用处的例子。
+
+你需要记住的一样东西是错误的缩进会引发错误。
+
+== 运算符 ==
+<pre>
+运算符	名称	说明	例子
++	加	两个对象相加	3 + 5得到8。'a' + 'b'得到'ab'。
+-	减	得到负数或是一个数减去另一个数	-5.2得到一个负数。50 - 24得到26。
+*	乘	两个数相乘或是返回一个被重复若干次的字符串	2 * 3得到6。'la' * 3得到'lalala'。
+**	幂	
+返回x的y次幂
+
+3 ** 4得到81（即3 * 3 * 3 * 3）
+/	除	x除以y	4/3得到1（整数的除法得到整数结果）。4.0/3或4/3.0得到1.3333333333333333
+//	取整除	返回商的整数部分	4 // 3.0得到1.0
+%	取模	返回除法的余数	8%3得到2。-25.5%2.25得到1.5
+<<	左移	把一个数的比特向左移一定数目（每个数在内存中都表示为比特或二进制数字，即0和1）	2 << 2得到8。——2按比特表示为10
+>>	右移	把一个数的比特向右移一定数目	11 >> 1得到5。——11按比特表示为1011，向右移动1比特后得到101，即十进制的5。
+&	按位与	数的按位与	5 & 3得到1。
+|	按位或	数的按位或	5 | 3得到7。
+^	按位异或	数的按位异或	5 ^ 3得到6
+~	按位翻转	x的按位翻转是-(x+1)	~5得到6。
+<	小于	返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。注意，这些变量名的大写。	5 < 3返回0（即False）而3 < 5返回1（即True）。比较可以被任意连接：3 < 5 < 7返回True。
+>	大于	返回x是否大于y	5 > 3返回True。如果两个操作数都是数字，它们首先被转换为一个共同的类型。否则，它总是返回False。
+<=	小于等于	返回x是否小于等于y	x = 3; y = 6; x <= y返回True。
+>=	大于等于	返回x是否大于等于y	x = 4; y = 3; x >= y返回True。
+==	等于	比较对象是否相等	x = 2; y = 2; x == y返回True。x = 'str'; y = 'stR'; x == y返回False。x = 'str'; y = 'str'; x == y返回True。
+!=	不等于	比较两个对象是否不相等	x = 2; y = 3; x != y返回True。
+not	布尔“非”	如果x为True，返回False。如果x为False，它返回True。	x = True; not y返回False。
+and	布尔“与”	如果x为False，x and y返回False，否则它返回y的计算值。	x = False; y = True; x and y，由于x是False，返回False。在这里，Python不会计算y，因为它知道这个表达式的值肯定是False（因为x是False）。这个现象称为短路计算。
+or	布尔“或”	如果x是True，它返回True，否则它返回y的计算值。	x = True; y = False; x or y返回True。短路计算在这里也适用。
+</pre>
+
+== 除法 ==
+首先要说的是python中的除法运算，在python 2.5版本中存在两种除法运算，即所谓的true除法和floor除法。当使用x/y形式进行除法运算时，如果x和y都是整形，那么运算的会对结果进行截取，取运算的整数部分，比如2/3的运算结果是0；如果x和y中有一个是浮点数，那么会进行所谓的true除法，比如2.0/3的结果是 0.66666666666666663。
+
+<python>
+from __future__ import division  
+a=2/3                  
+</python>
+
+如果要更精确的出发，那就要用到decimal模块。
+<python>
+import decimal
+a = 1
+c = a/3
+print c
+# 0
+
+c = float(a)/3
+print c
+# 0.3333333333333333333333333333
+
+type(c)
+# <type 'float'>
+
+c = decimal.Decimal(a)/3
+print c
+# 0.3333333333333333333333333333
+
+type(c)
+# <class 'decimal.Decimal'>
+</python>
+
+= 控制流 control =
+
+== if, elif, else ==
+<python>
+number = 23
+guess = int(raw_input('Enter an integer : '))
+
+if guess == number:
+    print 'Congratulations, you guessed it.' 
+    print "(but you do not win any prizes!)" 
+elif guess < number:
+    print 'No, it is a little higher than that'
+else:
+    print 'No, it is a little lower than that' 
+</python>
+
+<python>
+if True:
+    print 'Yes, it is true'
+</python>
+
+== while ==
+只要在一个条件为真的情况下，while语句允许你重复执行一块语句。while语句是所谓 循环 语句的一个例子。while语句有一个可选的else从句。
+<python>
+number = 23
+running = True
+
+while running:
+    guess = int(raw_input('Enter an integer : '))
+
+    if guess == number:
+        print 'Congratulations, you guessed it.' 
+        running = False # this causes the while loop to stop
+    elif guess < number:
+        print 'No, it is a little higher than that' 
+    else:
+        print 'No, it is a little lower than that' 
+else:
+    print 'The while loop is over.' 
+    # Do anything else you want to do here
+</python>
+
+
+== for循环 ==
+for..in是另外一个循环语句，它在一序列的对象上 递归 即逐一使用队列中的每个项目。for也可以有else相对应。
+<python>
+for i in range(1, 5):
+    print i
+else:
+    print 'The for loop is over'
+</python>
+
+output:
+<pre>
+$ python for.py
+1
+2
+3
+4
+The for loop is over
+</pre>
+
+== break ==
+break语句是用来 终止 循环语句的，即哪怕循环条件没有称为False或序列还没有被完全递归，也停止执行循环语句。
+
+一个重要的注释是，如果你从for或while循环中 终止 ，任何对应的循环else块将不执行。
+
+== continue语句 ==
+
+continue语句被用来告诉Python‘’‘跳过’‘’当前循环块中的剩余语句，然后 ‘’‘继续’‘’ 进行下一轮循环。
+<python>
+while True:
+    s = raw_input('Enter something : ')
+    if s == 'quit':
+        break
+    if len(s) < 3:
+        continue
+    print 'Input is of sufficient length'
+    # Do other kinds of processing here...
+</python>
+
+output:
+<pre>
+$ python continue.py
+Enter something : a
+Enter something : 12
+Enter something : abc
+Input is of sufficient length
+Enter something : quit
+</pre>
+
+= 函数 function =
+
+== 定义函数 ==
+函数通过def关键字定义。def关键字后跟一个函数的 标识符 名称，然后跟一对圆括号。圆括号之中可以包括一些变量名，该行以冒号结尾。接下来是一块语句，它们是函数体。下面这个例子将说明这事实上是十分简单的：
+
+<python>
+def sayHello():
+    print 'Hello World!' # block belonging to the function
+
+sayHello() # call the function
+</python>
+
+
+== 传参数 ==
+<python>
+def printMax(a, b):
+    if a > b:
+        print a, 'is maximum'
+    else:
+        print b, 'is maximum'
+
+printMax(3, 4) # directly give literal values
+
+x = 5
+y = 7
+
+printMax(x, y) # give variables as arguments
+</python>
+
+output:
+<pre>
+$ python func_param.py
+4 is maximum
+7 is maximum
+</pre>
+
+== 默认参数值 ==
+<python>
+def say(message, times = 1):
+    print message * times
+
+say('Hello')
+say('World', 5)
+</python>
+
+output:
+<pre>
+$ python func_default.py
+Hello
+WorldWorldWorldWorldWorld
+</pre>
+
+== 局部变量 ==
+
+当你在函数定义内声明变量的时候，它们与函数外具有相同名称的其他变量没有任何关系，即变量名称对于函数来说是 局部 的。这称为变量的 作用域 。所有变量的作用域是它们被定义的块，从它们的名称被定义的那点开始。
+
+<python>
+def func(x):
+    print 'x is', x
+    x = 2
+    print 'Changed local x to', x
+
+x = 50
+func(x)
+print 'x is still', x
+</python>
+
+<pre>
+$ python func_local.py
+x is 50
+Changed local x to 2
+x is still 50
+</pre>
+
+== 全局变量 ==
+如果你想要为一个定义在函数外的变量赋值，那么你就得告诉Python这个变量名不是局部的，而是 全局 的。我们使用global语句完成这一功能。没有global语句，是不可能为定义在函数外的变量赋值的。
+
+你可以使用定义在函数外的变量的值（假设在函数内没有同名的变量）。然而，我并不鼓励你这样做，并且你应该尽量避免这样做，因为这使得程序的读者会不清楚这个变量是在哪里定义的。使用global语句可以清楚地表明变量是在外面的块定义的。
+
+<python>
+def func():
+    global x
+
+    print 'x is', x
+    x = 2
+    print 'Changed local x to', x
+
+x = 50
+func()
+print 'Value of x is', x
+</python>
+
+output:
+<pre>
+$ python func_global.py
+x is 50
+Changed global x to 2
+Value of x is 2
+</pre>
+
+你可以使用同一个global语句指定多个全局变量。例如<python>global x, y, z</python>
+
+== 返回值 ==
+return语句用来从一个函数 返回 即跳出函数。我们也可选从函数 返回一个值 。
+python可以返回多个变量值
+<python>
+def myfunction(lines):
+    return dict,list
+
+(dict,list) = myfunction(lines)
+</python>
+
+== DocStrings函数 ==
+Python有一个很奇妙的特性，称为 文档字符串 ，它通常被简称为 docstrings 。DocStrings是一个重要的工具，它被调用的时候，函数的文档字符串将被打印出来。文档字符串的一般是函数里头的一个多行字符串。
+
+<python>
+def printMax(x, y):
+    '''Prints the maximum of two numbers.
+
+    The two values must be integers.'''
+    x = int(x) # convert to integers, if possible
+    y = int(y)
+
+    if x > y:
+        print x, 'is maximum'
+    else:
+        print y, 'is maximum'
+
+printMax(3, 5)
+print printMax.__doc__
+</python>
+
+output:
+<pre>
+$ python func_doc.py
+5 is maximum
+Prints the maximum of two numbers.
+
+        The two values must be integers.
+</pre>
+
+= 模块 Module =
+
+== 导入模块 ==
+导入模块是python里面非常重要的一件事。使用模块的目的是为了使用你们的函数，完成某件事情。
+<python>
+import math
+math.log(2)
+# 0.69314718055994529
+</python>
+
+事实上，我们也可以导入模块里头的数据。比如导入string模块的一个数据：52个字母：
+<python>
+import string
+string.letters
+#'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+</python>
+
+== 更多关于“导入 import” ==
+* import导入不只是可以导入系统安装的模块，还可以导入任何一个用户写的python脚本，里面的函数和变量都会被导入。使用储存器模块，更快速地导入（import）和输出（dump）。
+<python>
+#!/usr/bin/python
+# Filename: pickling.py
+
+import cPickle as p
+#import pickle as p
+
+shoplistfile = 'shoplist.data'
+# the name of the file where we will store the object
+
+shoplist = ['apple', 'mango', 'carrot']
+
+# Write to the file
+f = file(shoplistfile, 'w')
+p.dump(shoplist, f) # dump the object to a file
+f.close()
+
+del shoplist # remove the shoplist
+
+# Read back from the storage
+f = file(shoplistfile)
+storedlist = p.load(f)
+print storedlist
+</python>
+
+* 改变搜索module的路径
+The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not set. You can modify it using standard list operations:
+<python>
+import sys
+sys.path.append('/ufs/guido/lib/python')
+</python>
+
+
+
+== 模块的__name__ ==
+
+每个模块都有一个名称，在模块中可以通过语句来找出模块的名称。
+
+<python>
+#!/usr/bin/python
+# Filename: using_name.py
+
+if __name__ == '__main__':
+    print 'This program is being run by itself'
+else:
+    print 'I am being imported from another module'
+</python>
+
+output:
+<pre>
+$ python using_name.py
+This program is being run by itself
+
+$ python
+>>> import using_name
+I am being imported from another module
+>>>
+</pre>
+
+== __init__方法 ==
+
+<python>
+#!/usr/bin/python
+# Filename: objvar.py
+
+class Person:
+    '''Represents a person.'''
+    population = 0
+
+    def __init__(self, name):
+        '''Initializes the person's data.'''
+        self.name = name
+        print '(Initializing %s)' % self.name
+
+        # When this person is created, he/she
+        # adds to the population
+        Person.population += 1
+
+    def __del__(self):
+        '''I am dying.'''
+        print '%s says bye.' % self.name
+
+        Person.population -= 1
+
+        if Person.population == 0:
+            print 'I am the last one.'
+        else:
+            print 'There are still %d people left.' % Person.population
+
+    def sayHi(self):
+        '''Greeting by the person.
+
+        Really, that's all it does.'''
+        print 'Hi, my name is %s.' % self.name
+
+    def howMany(self):
+        '''Prints the current population.'''
+        if Person.population == 1:
+            print 'I am the only person here.'
+        else:
+            print 'We have %d persons here.' % Person.population
+
+swaroop = Person('Swaroop')
+swaroop.sayHi()
+swaroop.howMany()
+
+kalam = Person('Abdul Kalam')
+kalam.sayHi()
+kalam.howMany()
+
+swaroop.sayHi()
+swaroop.howMany()
+</python>
+
+output:
+<pre>
+$ python objvar.py
+(Initializing Swaroop)
+Hi, my name is Swaroop.
+I am the only person here.
+(Initializing Abdul Kalam)
+Hi, my name is Abdul Kalam.
+We have 2 persons here.
+Hi, my name is Swaroop.
+We have 2 persons here.
+Abdul Kalam says bye.
+There are still 1 people left.
+Swaroop says bye.
+I am the last one.
+</pre>
+
+== 继承 ==
+<python>
+#!/usr/bin/python
+# Filename: inherit.py
+
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print '(Initialized SchoolMember: %s)' % self.name
+
+    def tell(self):
+        '''Tell my details.'''
+        print 'Name:"%s" Age:"%s"' % (self.name, self.age),
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print '(Initialized Teacher: %s)' % self.name
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print 'Salary: "%d"' % self.salary
+
+class Student(SchoolMember):
+    '''Represents a student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print '(Initialized Student: %s)' % self.name
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print 'Marks: "%d"' % self.marks
+
+t = Teacher('Mrs. Shrividya', 40, 30000)
+s = Student('Swaroop', 22, 75)
+
+print # prints a blank line
+
+members = [t, s]
+for member in members:
+    member.tell() # works for both Teachers and Students
+</python>
+
+output:
+<pre>
+$ python inherit.py
+(Initialized SchoolMember: Mrs. Shrividya)
+(Initialized Teacher: Mrs. Shrividya)
+(Initialized SchoolMember: Swaroop)
+(Initialized Student: Swaroop)
+
+Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
+Name:"Swaroop" Age:"22" Marks: "75"
+</pre>
+
+== dir()函数 ==
+
+你可以使用内建的dir函数来列出模块定义的标识符。标识符有函数、类和变量。
+
+当你为dir()提供一个模块名的时候，它返回模块定义的名称列表。如果不提供参数，它返回当前模块中定义的名称列表。
+
+<python>
+>>> import sys
+>>> dir(sys) # get list of attributes for sys module
+['__displayhook__', '__doc__', '__excepthook__', '__name__', '__stderr__',
+'__stdin__', '__stdout__', '_getframe', 'api_version', 'argv',
+......
+'copyright', 'displayhook', 'exc_clear', 'exc_info', 'exc_type',
+'version', 'version_info', 'warnoptions']
+>>>
+>>> dir() # get list of attributes for current module
+['__builtins__', '__doc__', '__name__', 'sys']
+>>>
+>>> a = 5 # create a new variable 'a'
+>>> dir()
+['__builtins__', '__doc__', '__name__', 'a', 'sys']
+>>>
+>>> del a # delete/remove a name
+>>>
+>>> dir()
+['__builtins__', '__doc__', '__name__', 'sys']
+</python>
+
+= 数据类型 =
+== 列表 List ==
+Python从0开始计数，而非从1开始
+
+<python>
+x = [1.2,4,'a',6]
+type(x)
+# <type 'list'>
+
+x.append(2)
+print x
+# [1.2, 4, 'a', 6, 2]
+
+seq = ["A", "T", "G", "C"]
+L = list(nt+"1" for nt in seq)
+
+len(L) # get the list length
+</python>
+
+ref: http://effbot.org/zone/python-list.htm
+
+== Dict ==
+{{{
+a = ['Adam', 'Bruce', 'David']
+b = [170, 190, 180]
+d = dict(zip(a,b))
+>>> d
+{'Bruce': 190, 'Adam': 170, 'David': 180}
+>>> d['Adam']
+170
+>>> d.get('Eric',170)
+170
+>>> d['Eric']=170
+>>> d
+{'Bruce': 190, 'Eric': 170, 'Adam': 170, 'David': 180}
+}}}
+
+
+= 类 Class =
+== 新建类 ==
+<python>
+class Person:
+  def __init__(self,name,weight,height):
+    self.name=name
+    self.weight=weight
+    self.height=height
+  def bmi(self):
+    return self.weight/self.height/self.height
+p = Person("andrew",99,1.8)
+print(p.bmi())
+print(p.name)
+</python>
+
+== 实例 instance ==
+
+= 文件 IO =
+== The glob module ==
+It provides a function for making file lists from dictionary wildcards search.
+<python>
+glob(path)
+>>>import glob
+>>>glob.glob('*.txt')
+['mudlog.txt','\xc3\xc.txt']
+</python>
+
+== os 模块 ==
+<pre>
+1．获得当前路径
+os.getcwd()   该函数不需要传递参数，它返回当前的目录。
+  
+>>> import os
+>>> print 'current directory is ',os.getcwd()
+current directory is  D:\Python25\Lib\site-packages\pythonwin
+#这里是PythonWin的安装目录
+
+2．获得目录中的内容
+os.listdir(path)     path：要获得内容目录的路径。
+
+>>> import os
+>>> os.listdir(os.getcwd())    # 获得当前目录中的内容
+['dde.pyd', 'license.txt', 'Pythonwin.exe', 'scintilla.dll', 'win32ui.pyd',
+'win32uiole.pyd', 'pywin']
+
+3．创建目录
+os.mkdir(path)    path：要创建目录的路径。
+
+>>> import os
+>>> os.mkdir('E:\\book\\temp')   # 使用os.mkdir创建目录
+
+4．删除目录
+os.rmdir(path)   path：要删除的目录的路径。
+
+>>> import os
+>>> os.rmdir('E:\\book\\temp')   # 删除目录
+
+需要说明的是，使用os.rmdir删除的目录必须为空目录，否则函数出错。
+
+若想删除非空目录，先删除目录下的文件，然后再删除目录，递归过程。
+
+5．判断是否是目录
+os.path.isdir(path)    path：要进行判断的路径。
+
+>>> import os
+>>> os.path.isdir('E:\\book\\temp')  # 判断E:\book\temp是否为目录
+True           # 表E:\book\temp是目录
+
+6．判断是否为文件
+os.path.isfile(path)   path：要进行判断的路径。
+
+>>> import os
+>>> os.path.isfile('E:\\book\\temp')  # 判断是否为文件
+False           # 表示E:\book\temp不是文件
+</pre>
+
+= 其他内容 =
+== print ==
+格式化输出浮点数(float)
+<python>
+import math
+#default
+print "PI = %f" % math.pi
+#width = 10,precise = 3,align = left
+print "PI = %10.3f" % math.pi
+#width = 10,precise = 3,align = rigth
+print "PI = %-10.3f" % math.pi
+#前面填充字符
+print "PI = %06d" % int(math.pi)
+ 
+#输出结果
+#PI = 3.141593
+#PI =      3.142
+#PI = 3.142
+#PI = 000003
+#浮点数的格式化，精度、度和
+</python>
+
+== Python Path ==
+Appending to Your Python Path 
+<python>
+import sys
+sys.path.append("/home/me/mypy")
+</python>
+
+== Functional programming in Python ==
+* A function is an object.
+ square = lambda x: x**2
+
+* Functions can be returned as objects
+<python>
+def build_taxer(rate):
+    def taxer(amount):
+        return amount * (float(rate) / 100)
+    return taxer
+</python>
+
+* filter and lambda
+ filter( lambda x: x%2==0, range(10))
+
+* list comprehensions can replace map and filter, but compute the whole list is slow
+ [i**2 for i in range(10) if i%2==0]
+
+* list is slow actually we only need to compute part of the list
+<python>
+def is_prime(n):
+    retun not any(n%k==0 for k in xrange(2,n))
+</python>
+
+    * in contrast to any(seq), all(seq) returns true if all elements of the sequence are true

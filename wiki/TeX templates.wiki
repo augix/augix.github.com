@@ -1,0 +1,4 @@
+*[[A simple TeX example]]
+*[[Biostatistics on TeX]]
+
+[[Category:LaTeX]]

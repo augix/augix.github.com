@@ -1,0 +1,16 @@
+%template disqus
+* ls
+{{{
+  -l	 print details. Default order: Name. Default time: Modification.
+  -t	 sort. Default: Modification time. 
+  -lt	 print and sort by modification time.
+  -u	 access time.
+  -lu	 print access time.
+  -tu	 sort by access time.
+  -ltu	 print and sort by access time.
+  -s	 print size.
+  -S     sort by size.
+  -m     with a comma separated list of entries.
+  -r     reverse order while sorting.
+}}}
+

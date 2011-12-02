@@ -1,0 +1,4 @@
+ref: http://research.stowers-institute.org/efg/R/Graphics/Basics/mar-oma/index.htm
+
+* Modify the size of space between axis and labels
+ par(mgp=c(3,1,0))

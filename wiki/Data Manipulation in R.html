@@ -1,0 +1,33 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Data Manipulation in R</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Data Manipulation in R</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;R&gt;
+DF &lt;- data.frame(x = c(1, 2, 3), y = c(0, 10, NA))
+DF
+## remove the lines with NA
+na.omit(DF)
+## remove the lines with 0
+DF[DF == 0] = NA
+na.omit(DF)
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

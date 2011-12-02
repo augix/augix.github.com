@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Minimum matching</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Minimum matching</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_ Perl.html">Category: Perl</a>
+<a href="http://www.zdnet.com.cn/developer/webdevelop/story/0,3800067013,39252123,00.htm">Builder.com.cn-Web技术-perl理解贪婪匹配和最小匹配之间的区别</a>
+</p>
+
+<p>
+正则表达式的新手经常将贪婪匹配和最小匹配理解错误。默认情况下，Perl 的正则表达式是“贪婪地”，也就是说它们将尽可能多地匹配字符。
+</p>
+        
+<p>
+下面的脚本打印出“matched defgabcdef”，因为它尽可能多地匹配模式，直至结尾的‘g’。
+</p>
+
+<p>
+&lt;perl&gt;
+$data = 'abcdefgabcdefg';
+$data =~ /abc(.+)g/i;
+print "matched $1\n"; 
+&lt;/perl&gt;
+</p>
+
+<p>
+要改变匹配特点，只须简单地在量词（加号[+]或星号[*]）后面加一个问号（?）即可。在上面的程序中把模式改为在‘+’之后包含一个‘?’。
+</p>
+
+<p>
+ $data =~ /abc(.+?)g/i;
+</p>
+
+<p>
+输出变成“matched def”，因为模式不再贪婪，而在允许模式匹配的同时匹配最少数目的字符。
+</p>
+
+<p>
+对于可能得到的匹配多于期望的匹配的情况，最小匹配是必要的。下面是一个例子：
+</p>
+
+<p>
+&lt;perl&gt;
+$data = 'MSFT +5% $86 IBM +2% $124';
+print "matched $1 $2\n"  while ($data =~
+/(\w+).+\$(\d+)/g); 
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+= Description =
+Performs one and two sample Wilcoxon tests on vectors of data for possibly tied observations.
+Compare to normal wilcox.test, it can deal with the tie problem.
+
+= Package =
+It's in the package '''exactRankTests'''.
+
+= Usage =
+<R>
+     ## Default S3 method:
+     wilcox.exact(x, y = NULL, alternative = c("two.sided", "less", "greater"),
+                  mu = 0, paired = FALSE, exact = NULL,  
+                  conf.int = FALSE, conf.level = 0.95, ...)
+     ## S3 method for class 'formula':
+     wilcox.exact(formula, data, subset, na.action, ...)
+</R>

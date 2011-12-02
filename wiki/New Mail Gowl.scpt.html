@@ -1,0 +1,94 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>New Mail Gowl.scpt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>New Mail Gowl.scpt</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+Write a file named New_Mail_Gowl.scpt in &lt;tt&gt;~/Programming/AppleScript/&lt;/tt&gt;
+
+</ul>
+<p>
+&lt;applescript&gt;
+on perform_mail_action(info)
+</p>
+	
+<p>
+	tell application "Mail"
+</p>
+		
+<p>
+		set selectedMessages to |SelectedMessages| of info
+		set theRule to |Rule| of info
+</p>
+		
+<p>
+		repeat with eachMessage in selectedMessages
+			set theSubject to subject of eachMessage
+			set theSender to sender of eachMessage
+</p>
+			
+<p>
+			tell application "GrowlHelperApp"
+</p>
+<blockquote>
+set the allNotificationsList to ¬
+{"New Mail"}
+</blockquote>
+<blockquote>
+set the enabledNotificationsList to ¬
+{"New Mail"}
+</blockquote>
+<blockquote>
+register as application ¬
+"MailScript" all notifications allNotificationsList ¬
+default notifications enabledNotificationsList ¬
+icon of application "Mail"
+</blockquote>
+<blockquote>
+notify with name ¬
+"New Mail" title ¬
+"New Mail from " &amp; theSender description ¬
+theSubject application name "MailScript"
+</blockquote>
+				
+<p>
+			end tell
+</p>
+			
+<p>
+		end repeat
+	end tell
+end perform_mail_action
+</p>
+
+<p>
+&lt;/applescript&gt;
+</p>
+
+<ul>
+<li>
+In Mail, add a new rule like:
+
+</ul>
+<p>
+If any Recipient Contains augix DOT com AT gmail DOT com,
+Perform the following actions: 
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

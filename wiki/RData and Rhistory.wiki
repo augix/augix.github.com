@@ -1,0 +1,4 @@
+%template disqus
+
+I can save command history by 'savehistory' command. I can also 'save' whole R session with variables to RData file.
+

@@ -1,0 +1,32 @@
+%template disqus
+
+{{{ 
+samtools view -X <bam file>
+    Convert bitwise FLAG to human readable FLAG.
+    
+samtools flagstat <bam file>
+    Print number of mapped reads and so on.
+    
+samtools view -H <bam file>
+    check if the bam files is sorted. 
+    http://biostar.stackexchange.com/questions/5273/is-my-bam-file-sorted  
+
+}}}
+
+[http://samtools.sourceforge.net/samtools.shtml Manual Reference Pages  - samtools]
+
+= how to extract unique hits from bam files =
+{{{
+samtools view -q 1 <bam file>
+
+        You can use samtools view -q 1 to only output uniquely mapped reads
+        (and omit both unmapped and ambiguous ones). Ambiguous reads that can
+        be mapped to different locations with the same score have mapping
+        quality 0 in BWA.
+        
+samtools view bwa.bam | grep "XT:A:U" 
+
+        BWA outputs have XT tag set to "U". 
+}}}
+
+http://seqanswers.com/forums/showthread.php?t=8334

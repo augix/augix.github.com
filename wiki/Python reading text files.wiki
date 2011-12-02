@@ -1,0 +1,11 @@
+<python>
+file = open("sample.txt", 'r')
+
+while True:
+    line = file.readline()
+    if not line:
+        break
+    pass # do something
+</python>
+
+[http://effbot.org/zone/readline-performance.htm Reference: Reading text files]

@@ -1,0 +1,89 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>How to pass arguments to R scripts</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>How to pass arguments to R scripts</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+If you just want to run a file `foo.R' of R commands, the recommended way is to use R CMD
+BATCH foo.R. If you want to run this in the background or as a batch job use OS-specific
+facilities to do so: for example in most shells on Unix-alike OSes R CMD BATCH foo.R &amp; runs a
+background job.
+</p>
+
+<p>
+You can pass parameters to scripts via additional arguments on the command line: for example
+</p>
+
+<p>
+&lt;code&gt;R CMD BATCH --args arg1 arg2 foo.R &amp;&lt;/code&gt;
+&lt;p style="color:red"&gt;It seems this command does not work.&lt;/p&gt;
+</p>
+
+<p>
+will pass arguments to a script which can be retrieved as a character vector by
+</p>
+
+<p>
+&lt;code&gt;args &lt;- commandArgs(TRUE)&lt;/code&gt;
+</p>
+
+<p>
+This is made simpler by the alternative front-end Rscript, which can be invoked by
+</p>
+
+<p>
+&lt;code&gt;Rscript foo.R arg1 arg2&lt;/code&gt;
+&lt;p style="color:red"&gt;This works.&lt;/p&gt;
+</p>
+
+<p>
+and this can also be used to write executable script files like (at least on Unix-alikes, and in
+some Windows shells)
+&lt;bash&gt;
+#! /path/to/Rscript
+args &lt;- commandArgs(TRUE)
+...
+q(status=&lt;exit status code&gt;)
+&lt;/bash&gt;
+If this is entered into a text file `runfoo' and this is made executable (by chmod 755 runfoo),
+it can be invoked for different arguments by
+</p>
+
+<p>
+&lt;code&gt;runfoo arg1 arg2&lt;/code&gt;
+</p>
+
+<h1 id="toc_1">Example: test_arguments.R</h1>
+<p>
+&lt;R&gt;
+args &lt;- commandArgs(TRUE)
+write.table(args[1],file="test.out")
+q(save="no")
+&lt;/R&gt;
+</p>
+
+<h1 id="toc_2">Another way: Rf</h1>
+<p>
+<a href="Rf.html">Rf</a>
+</p>
+
+<p>
+<a href="Category_R.html">Category:R</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

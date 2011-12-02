@@ -1,0 +1,94 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Proxy EVA.pac</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Proxy EVA.pac</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_Network.html">Category:Network</a> <a href="Category_Unix.html">Category:Unix</a>
+The Source of &lt;tt&gt;Proxy_EVA.pac&lt;/tt&gt;
+&lt;bash&gt;
+function FindProxyForURL(url, host)
+{
+</p>
+<blockquote>
+// nur hostname angegeben
+if (isPlainHostName(host))
+return "DIRECT";
+</blockquote>
+<blockquote>
+// bei ungueltigem Hostnamen direkte Browser Fehlermeldung ausgeben
+if (!isResolvable(host))
+return "DIRECT";
+</blockquote>
+<blockquote>
+// MPI Netze direkt anzeigen
+if (isInNet(host,"192.168.0.0","255.255.0.0")||
+</blockquote>
+<p>
+	isInNet(host,"194.94.96.0","255.255.255.0")||
+	isInNet(host,"172.16.0.0","255.255.0.0"))
+	return "DIRECT";
+</p>
+<blockquote>
+// IZI Netz direkt anzeigen
+if (dnsDomainIs(host, ".izi.fraunhofer.de"))
+</blockquote>
+<p>
+	return DIRECT;
+</p>
+<blockquote>
+// MIS direkt anzeigen
+if (isPlainHostName("hippasos") &amp;&amp;
+</blockquote>
+<p>
+	dnsDomainIs(host, ".mis.mpg.de"))
+	return DIRECT;
+</p>
+<blockquote>
+// Augix specified net
+if (dnsDomainIs(host, ".cn") || dnsDomainIs(host, ".local"))
+</blockquote>
+<p>
+	return "DIRECT";
+if (shExpMatch(url, "<a href="http://10.*"">http://10.*"</a>)) { return "DIRECT"; }
+if (shExpMatch(url, "<a href="http://127.*"">http://127.*"</a>)) { return "DIRECT"; }
+if (shExpMatch(url, "<a href="http://*.local."">http://*.local."</a>)) { return "DIRECT"; }
+if (shExpMatch(url, "<a href="http://*.local"">http://*.local"</a>)) { return "DIRECT"; }
+</p>
+<blockquote>
+// MPI DNS-Domain
+</blockquote>
+<p>
+//    if (dnsDomainIs(host, ".eva.mpg.de")
+//        return "DIRECT";
+</p>
+<blockquote>
+if (url.substring(0, 5) == "http:" ||
+url.substring(0, 6) == "https:"||
+url.substring(0, 4) == "ftp:"||
+url.substring(0, 7) == "gopher:")
+return "PROXY elninjo.eva.mpg.de:3128; DIRECT";
+else
+return "DIRECT";
+</blockquote>
+<p>
+}
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

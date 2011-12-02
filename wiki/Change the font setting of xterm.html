@@ -1,0 +1,57 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Change the font setting of xterm</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Change the font setting of xterm</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="http://lists.apple.com/archives/X11-users/2005/May/msg00112.html">http://lists.apple.com/archives/X11-users/2005/May/msg00112.html</a>
+</p>
+
+<p>
+I have in my ~/.Xdefaults file...
+</p>
+
+<p>
+&lt;pre&gt;
+XTerm*Tek*background: MintCream
+XTerm*jumpScroll: on
+XTerm*pointerShape: arrow
+XTerm*cursorColorBackground: blue
+XTerm*font: <strong>-fixed-</strong>-<strong>-</strong>-20-*
+XTerm*boldFont: <strong>-fixed-</strong>-<strong>-</strong>-20-*
+XTerm*scrollKey: on
+XTerm*foreground: black
+XTerm*pointerColor: navyblue
+XTerm*pointerColorBackground: White
+XTerm*background: PaleTurquoise
+XTerm*scrollBar: on
+XTerm*borderColor: RoyalBlue
+XTerm*highlight: RoyalBlue
+XTerm*saveLines: 500
+XTerm*loginShell: on
+XTerm*cursorColor: black
+XTerm*vt100*geometry: 80x36
+&lt;/pre&gt;
+</p>
+
+<p>
+After added the entries you want, you may have to do an xrdb -merge 
+~/.Xdefaults
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

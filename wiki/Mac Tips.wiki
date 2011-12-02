@@ -1,0 +1,34 @@
+= Move home directory =
+'''How to Move home directory to another volume of hard disk?'''
+
+Only 1 lines of commands can finish this task, after the moving, every program works fine with files in the new directory.
+
+If the user name is augix, we want to move augix' home directory /Users/augix/ to another place, for example move to /Volumes/ExternalDisk/.
+
+We just need to open Terminal, and type:
+
+<bash>
+sudo niutil -createprop / /Users/augix home /Volumes/ExternalDisk/augix
+</bash>
+
+Done, changes made, all you need to do is logging in and delete the original directory.
+
+[http://docs.info.apple.com/article.html?artnum=30760 For more info: Mac OS X Server: niutil Utility]
+
+
+
+= X11 =
+[[X11 on Mac]]
+
+= aMule on Mac =
+#download aMule
+#replace ~/Library/Application Support/aMule/
+
+
+= unix =
+
+== Unlock the files in Mac OS X ==
+
+http://www.macosxhints.com/article.php?story=20010328105037397
+
+ chflags -R nouchg ~/

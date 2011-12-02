@@ -1,0 +1,13 @@
+* Create a uniquely-named folder on your desktop (or other favorite location). For example, you might call it "Mail Prefs Backups May_15_2005" (adding a date is a good idea).
+* Quit Mail if it's running.
+* In the Finder choose Home from the Go menu.
+* Open the Library folder.
+* Open the Preferences folder.
+* Copy the "com.apple.mail.plist" file to the folder you made in step 1 by Option-dragging the file. Don't remove the original file from its current location (this file contains your Mail accounts information).
+* Close the Preferences folder.
+* Open the Mail folder.
+* Copy the "MessageRules.plist" file to the folder you made in step 1 by Option-dragging the file (this file contains your Mail rules).
+* Copy the "SmartMailboxes.plist" file to the folder you made in step 1 by Option-dragging the file (you guessed it, this file contains Smart Mailboxes information).
+* Finally, copy the Signatures folder to the folder you made in step 1 by Option-dragging the folder. (Your custom signatures, if you use them, are stored here.)
+
+[http://docs.info.apple.com/article.html?artnum=301239 How to back up and restore your important Mac OS X 10.4 files]

@@ -1,0 +1,22 @@
+[[Category: Perl]]
+eg: 
+ Query=  378.txt WGF.0.8  gi|15228342
+ GO:0004023  GO:0005507   GO:0006445
+
+In fact, 1 "gi" corresponds 1 or 1 or multiple "go". so you can use a hash of arrays when you want to look up each array (a bunch of "go" record) by the particular string (gi record) rather than merely by an index number. eg:
+
+<perl>
+%hash = (
+        "gi|15228342" => [ "GO:0004023", "GO:0005507", "GO:0006445"],
+);
+</perl>
+
+to access and print a hash of arrays.  just follow this code below:
+
+<perl>
+foreach $gi( keys %hash ) {
+        print "$gi\n @{ $hash{$gi} }\n";
+}
+</perl>
+
+also see: Programming perl, chapter 9.2. Hashes of Arrays

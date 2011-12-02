@@ -1,0 +1,56 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Clustalw.sh</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Clustalw.sh</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;bash&gt;
+#!/bin/sh
+argv=$1
+clustalw &lt;&lt;!
+1
+./$argv
+2
+1
+</p>
+
+
+
+<p>
+X
+X
+!
+&lt;/bash&gt;
+</p>
+
+<p>
+&lt;bash&gt;
+~/bin/clustalw2 -infile=$i -outfile=$outfile -output=fasta &gt; $outfile2;
+&lt;/bash&gt;
+clustalw2 parameters
+<a href="http://anthrax.zlog.cn/17215.html">http://anthrax.zlog.cn/17215.html</a>
+</p>
+
+<p>
+or use MUSCLE
+&lt;bash&gt;
+~/bin/src/muscle/muscle -in $i -out $outfile -stable -quiet
+&lt;/bash&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

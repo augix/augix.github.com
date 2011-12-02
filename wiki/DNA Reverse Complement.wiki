@@ -1,0 +1,12 @@
+<perl>
+
+sub revdnacomp {
+  my $dna = @_;
+  my $revcomp = reverse($dna);
+
+  $revcomp =~ tr/ACGTacgt/TGCAtgca/;
+
+  return $revcomp;
+}
+
+</perl>

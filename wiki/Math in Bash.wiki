@@ -1,0 +1,39 @@
+{{{
+# method 1
+i=5000
+ 
+# method 2: ((
+(( n=10 ))
+(( n = n + 10 ))
+(( n = $n + 10 ))
+a=$(( 2*100+1 ))
+
+# method 3: let
+let "z=5*3"
+let "z = 5 * 4"
+let "z=5**3"
+let "z=z+1"
+let "z=$z+1"
+let "z++"
+
+# method 4: expr
+expr 37 + 2     # space required
+expr 37 \* 2
+expr 37 / 2
+expr 37 % 2
+expr length "a_string"
+ 
+# operators
++ - * / ** %
+** is the exponentiation
++= -= *= /= %=
+    let "var += 5"
+
+# decompose an integer into prime factors.
+$ factor 27417
+27417: 3 13 19 37
+
+}}}
+
+= References =
+* http://www.linuxtopia.org/online_books/advanced_bash_scripting_guide/ops.html

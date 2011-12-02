@@ -1,0 +1,18 @@
+%template disqus
+
+There are many ways in Bash in randomizing lines in a file.
+
+{{{
+
+$ shuf origin.txt > randomized.txt
+
+$ sort -R origin.txt > randomized.txt
+
+sort -R will only work if the lines are unique.
+
+$ cat -n origin.txt | sort -R | cut -f 2-
+
+$ for i in `cat origin.txt`; do echo "$RANDOM $i"; done | sort | sed -r 's/^[0-9]+ //' > randomized.txt
+
+}}}
+

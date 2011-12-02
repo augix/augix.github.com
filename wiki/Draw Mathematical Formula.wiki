@@ -1,0 +1,11 @@
+[[Category:LaTeX]]
+== Equation Service ==
+
+*[[Equation Service]]: a program that uses pdflatex to produce small PDF files containing equations and other text.
+
+
+== Grapher ==
+
+Use the pre-installed Grapher in /Applications/Utilities/. It's free and can be used as an input device for math formulas, as this screenshot shows: [http://www.uoregon.edu/~noeckel/Keynote.html link]
+
+http://www.uoregon.edu/~noeckel/computernotes/GrapherScreenShot.jpg

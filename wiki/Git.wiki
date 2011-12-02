@@ -1,0 +1,211 @@
+%title Git
+
+= Basic topics =
+{{{
+# Initiate a repository.
+git init
+ 
+# Show status including unstaged changes.
+git status
+
+# Add files.
+git add
+
+# Commit a change.
+git commit
+
+# Show commits log
+git log
+ 
+# A much good-looking log
+git reflog
+
+# Show list of files in committed changes
+git whatchanged
+
+# Show file differences between commits
+# Show uncommitted file changes if without commits specified.
+git diff
+ 
+# Show various committed changes
+git show
+
+# Show change history of a file
+git log -p filename
+
+# Show the file's entire history, including history beyond renames.
+git log --follow -p bar 
+ 
+# Show change history of a file line by line
+git blame filename
+
+# Show branches
+git branch
+git br
+
+# Checkout a branch
+git checkout [branch]
+git co [branch]
+
+* Download a branch from remote 
+git checkout -b newlocalbranchname origin/branch-name
+
+* Show information about files in the index and the working tree
+git ls-files
+git ls
+
+* Recursively add *.wiki files in the current directory and its sub-directories. --all add all files, -u only stage the files previously tracked.
+find . -name "*.wiki" -print0 | xargs -0 git add --all
+find . -name "*.wiki" -print0 | xargs -0 git add -u
+
+* Remove files from index but keep them in working tree.
+find . -name "*.html" -print0 | xargs -0 git rm --cached
+
+* Retrieve a single file from secific revision
+git show master:test/test.png > ~/tmp/test.png
+
+* Undo changes in a file; Revert one file to a specific commit
+git checkout -- filename # revert one file to last commit
+git checkout origin/master -- filename
+git checkout HEAD -- filename # the version from the most recent commit
+git checkout HEAD^ -- filename # the version before the most recent commit
+}}}
+
+= Examples =
+
+{{{
+mkdir newproject
+cd newproject
+git init
+
+echo "Hello world" > hello
+echo "Silly example" > example
+git add hello example
+
+git status
+git commit -m "Initial commit of git repository"
+
+git branch robin
+git checkout robin
+
+echo "It's a new day for git" >> hello
+git show
+git diff
+
+git commit -am "new day for git"
+
+git diff master robin
+
+git tag mytag f0af6283824688f9d23426031734657661b54388
+
+git checkout -f foo.c # i don't understand this
+}}}
+
+= Extended topics =
+* Find Git repository 
+{{{
+find . -name .git
+}}}
+
+* Amendment
+{{{
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+}}}
+ The 2nd commit overwrite the 1st.
+
+* Git remote
+{{{
+# add a remote
+git remote add <remote name> <url>
+
+# get a clone
+git clone <from repository> <to directory>
+git clone -b <branch> <remote_repo> <to directory>
+
+# push local branch to remote
+git push <remote name> <local branch>
+ 
+# Download objects and refs from another repository
+git fetch <remote name>
+
+# list remote branches
+git branch –r
+
+# show differences between local and remote branches
+git diff <local branch> <remote name>/<remote branch>
+
+# checkout a remote branch
+git checkout -b <local branch> <remote name>/<remote branch>
+git clone -b <branch> <remote_repo> <to directory>
+
+# Fetch from and merge with another repository or a local branch
+git pull <remote name> <remote branch>
+
+# Different from checkout, pull does 'merge'.
+}}}
+
+* Git + Dropbox
+{{{
+cd ~
+git init
+git add .vimrc .gvimrc .bashrc
+git commit -m "Git repos 'home' initiated. Files (.vimrc ...) added."
+
+mkdir ~/Dropbox/git
+mkdir ~/Dropbox/git/home.git
+cd ~/Dropbox/git/home.git
+git init --bare
+
+cd ~
+git remote add dropbox ~/Dropbox/git/home.git
+git push dropbox master
+}}}
+
+= Customize = 
+{{{
+$ git config color.ui true
+$ git config format.pretty oneline
+}}}
+
+.gitconfig
+
+{{{
+[color]
+  ui = true
+
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dc = diff --cached
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+
+  # Show files ignored by git:
+  ign = ls-files -o -i --exclude-standard
+}}}
+
+= Branch specific configuration =
+[http://stackoverflow.com/questions/1836742/using-git-how-do-i-ignore-a-file-in-one-branch-but-have-it-committed-in-another how do I ignore a file in one branch but have it committed in another branch?]
+
+
+= Git on Mac OS X =
+[http://shiningthrough.co.uk/Mac-OS-X-Git-Clients-Roundup Mac OS Git Clients Roundup]
+
+= github web hosting =
+http://pages.github.com/
+
+https://github.com/blog/272-github-pages
+
+= References =
+
+* [http://progit.org/book/zh/ Pro Git 中文]
+* [http://www.linuxsir.org/main/doc/git/gittutorcn.htm Git中文教程]
+* [http://stackoverflow.com/questions/1960799/using-gitdropbox-together-effectively Git+Dropbox]
+

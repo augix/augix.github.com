@@ -1,0 +1,37 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Get detected exon.R</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Get detected exon.R</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+#2672442 NM_000258
+selected.trans&lt;-"2672442"
+chr&lt;-"chr3"
+load("/picb/home5/song/2ANOVA.core.probes/exon.CDS/annotation.Rdata")
+trans &lt;- as.numeric(big.ids.detected[,"transcript_cluster_id"])
+exon_ids &lt;- big.ids.detected[trans %in% selected.trans,"exon_id"]
+</p>
+
+<p>
+exon_position&lt;-read.table(file=paste("/picb/home5/song/primer_design/output/",chr,"_exon_location.txt",sep=""),header=T)
+exon_chr_position&lt;-exon_position[exon_position$EXON %in% unique(exon_ids),][,4:6]
+write.table(exon_chr_position,file="/picb/home5/song/primer_design/output/outlier.input.txt",col.names=T,quote=F)
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

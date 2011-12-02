@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Overlapped Histograms</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Overlapped Histograms</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;R&gt;
+alpha = 0.5
+col = rgb(0,1,0,alpha)
+hist(rnorm(1000),nclass=50,col=col,xlim=c(-3,6))
+</p>
+
+<p>
+alpha = 0.5
+col = rgb(1,0,0,alpha)
+hist(3+rnorm(1000),nclass=50,col=col,add=T)
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

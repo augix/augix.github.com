@@ -1,0 +1,82 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Blat</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Blat</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="http://genome.ucsc.edu/goldenPath/help/blatSpec.html">BLAT Program Specifications</a>
+</p>
+
+<p>
+download blatSrc.zip
+unzip blatSrc.zip
+</p>
+
+<p>
+ echo $MACHTYPE
+ MACHTYPE=i386
+ export MACHTYPE
+ mkdir ~/bin/$MACHTYPE
+ make
+ cd ~/bin/i386/
+</p>
+
+<p>
+ faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/hg18/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit
+</p>
+
+<p>
+ faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/panTro2/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit
+</p>
+
+<p>
+ gfServer start localhost 17779 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit &amp;
+ gfServer start localhost 17780 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit &amp;
+</p>
+
+<p>
+ gfClient localhost 17779 \
+  /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/ \
+  probe_fa/3040440.fa blat.3040440.hg.psl
+</p>
+
+<p>
+ more probe_fa/3040440.fa
+  &gt;3040440
+  caagaggttgacagactcgatgacg
+</p>
+
+<p>
+in R:
+&lt;R&gt;
+library(seqinr)
+c2s(rev(comp(s2c("caagaggttgacagactcgatgacg"))))
+[1] "cgtcatcgagtctgtcaacctcttg"
+&lt;/R&gt;
+</p>
+
+<p>
+ echo "16180964/50" | bc
+</p>
+
+<p>
+ cat /tmp/augix/hg18/chr19.fa | head -n 323623 | tail |\
+  perl -pe "chomp;" | grep -i "cgtcatcgagtctgtcaacctcttg"
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

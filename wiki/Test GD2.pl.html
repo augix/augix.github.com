@@ -1,0 +1,92 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Test GD2.pl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Test GD2.pl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+&lt;perl&gt;
+</p>
+<blockquote>
+use GD;
+</blockquote>
+
+<ol>
+<li>
+create a new image
+    $im = new GD::Image(100,100);
+
+</ol>
+
+<ol>
+<li>
+allocate some colors
+    $white = $im-&gt;colorAllocate(255,255,255);
+    $black = $im-&gt;colorAllocate(0,0,0);       
+    $red = $im-&gt;colorAllocate(255,0,0);      
+    $blue = $im-&gt;colorAllocate(0,0,255);
+
+</ol>
+
+<ol>
+<li>
+make the background transparent and interlaced
+    $im-&gt;transparent($white);
+    $im-&gt;interlaced('true');
+
+</ol>
+
+<ol>
+<li>
+Put a black frame around the picture
+    $im-&gt;rectangle(0,0,99,99,$black);
+
+</ol>
+
+<ol>
+<li>
+Draw a blue oval
+    $im-&gt;arc(50,50,95,75,0,360,$blue);
+
+</ol>
+
+<ol>
+<li>
+And fill it with red
+    $im-&gt;fill(50,50,$red);
+
+</ol>
+
+<ol>
+<li>
+make sure we are writing to a binary stream
+    open(STDOUT,"&gt;pic2.png");
+    binmode STDOUT;
+
+</ol>
+
+<ol>
+<li>
+Convert the image to PNG and print it on standard output
+    print $im-&gt;png;
+
+</ol>
+<p>
+&lt;/perl&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

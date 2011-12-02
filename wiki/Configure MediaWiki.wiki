@@ -1,0 +1,49 @@
+= Changes made in LocalSetting.php =
+ $wgLogo = "$wgScriptPath/images/wiki_home.jpg";
+
+ $wgEnableUploads = true;
+
+for GeSHiHighlight, insert:
+
+<pre>
+## START: changes made by Augix
+include("extensions/GeSHiHighlight.php");
+$wgAllowCopyUploads = true;
+$wgFileExtensions[] = 'doc';
+$wgFileExtensions[] = 'pdf';
+$wgFileExtensions[] = 'ppt';
+## END
+</pre>
+
+= Changes made in somewhere else =
+== Permissions ==
+to block all the visitors from modifying the wiki or creating account.
+
+in <code>/Applications/xampp/htdocs/wk/includes/DefaultSettings.php</code>
+<pre>
+$wgGroupPermissions['*'    ]['createaccount']   = false;
+$wgGroupPermissions['*'    ]['read']            = true;
+$wgGroupPermissions['*'    ]['edit']            = false;
+$wgGroupPermissions['*'    ]['createpage']      = false;
+$wgGroupPermissions['*'    ]['createtalk']      = false;
+</pre>
+
+== Upload files ==
+in <code>/Applications/xampp/xamppfiles/etc/php.ini</code>
+<pre>
+; Maximum allowed size for uploaded files.
+upload_max_filesize = 20M
+</pre>
+
+= Export MediaWiki pages =
+*[[mw2html]]
+:http://barnesc.blogspot.com/2005/10/mw2html-export-mediawiki-to-static.html
+* [[Special:Export]]
+
+= Other configuration =
+[[Enable Tex in Wiki]]
+
+= See also =
+* [http://www.mediawiki.org/wiki/Help:Configuration_settings Configuration settings list]
+
+[[Category:MediaWiki Configuration]]

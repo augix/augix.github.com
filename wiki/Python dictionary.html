@@ -1,0 +1,89 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python dictionary</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python dictionary</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+Python dictionary can only use immutable elements as keys, therefore list can not be used as keys, but tuples with immutable elements can.
+
+</ul>
+
+<ul>
+<li>
+create dictionary
+ l = dict(a=1,b=2,c=3)
+ l = dict(zip(['a','b','c'],[1,2,3]))
+ dict(zip('abc',[1,2,3]))
+
+</ul>
+
+<ul>
+<li>
+Iterating Through a Dictionary
+
+</ul>
+<p>
+&lt;python&gt;
+&gt;&gt;&gt; import os
+&gt;&gt;&gt; for k, v in os.environ.items():     
+...     print "%s=%s" % (k, v)
+&lt;/python&gt;
+</p>
+
+
+<ul>
+<li>
+Double dictionary
+
+</ul>
+<p>
+reference: <a href="http://desk.stinkpot.org:8080/tricks/index.php/2006/04/create-a-double-dictionary-in-python/">create a double dictionary in python</a>
+</p>
+
+<p>
+the following WON'T work
+&lt;python&gt;
+&gt;&gt;&gt; x = dict()
+&gt;&gt;&gt; x[1][1] = “foo”
+&lt;/python&gt;
+instead, one can use this:
+&lt;python&gt;
+&gt;&gt;&gt; x = dict()
+&gt;&gt;&gt; x[1,1] = “foo”
+&lt;/python&gt;
+</p>
+
+<p>
+note that, tuple (1,1) is used as key.
+</p>
+
+
+<ul>
+<li>
+find the key to the max and min value
+
+</ul>
+<p>
+suppose d is the dict.
+&lt;python&gt;
+max(d,key = lambda a: d.get(a))
+&lt;/python&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

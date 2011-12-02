@@ -1,0 +1,13 @@
+<perl>
+use List::Util 'shuffle';
+
+my $str = "TGCAAATAGACACCAAAAATGAGAAGGAATACCTAT";
+my @str = split (//,$str);
+my @new_str = shuffle(@str);
+my $new_str = join ("",@new_str);
+
+print "$new_str";
+print "\n";
+</perl>
+
+[[Category: Perl]]

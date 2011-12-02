@@ -1,0 +1,3 @@
+= Chromosome Random =
+In the human genome sequencing result, some sequences can not be assembled, they are put together into files like chr1_random.fa.
+These random pieces occupied 0.5% of the total genome. In the Chimp genome, the percentage is about 3.5%.

@@ -1,0 +1,24 @@
+[[Category:Perl]]
+<perl>
+#!/bin/perl
+@animation = qw( \ | / - );
+
+$arrow="";
+for ($i=1;$i<100;$i++) {
+
+$percent= "    "."$i%"." [";
+$arrow.="=";
+
+	foreach $a(@animation) {
+		print STDERR $percent;
+		print STDERR $arrow.'>';
+		print STDERR $a."\n";
+		print STDERR "\e[A";
+		sleep 1;
+
+	}
+
+}
+
+print STDERR "\n";
+</perl>

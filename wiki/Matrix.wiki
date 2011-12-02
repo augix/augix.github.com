@@ -1,0 +1,4 @@
+= Functions =
+* [[Convert a list to a matrix]]
+* structure
+* melt

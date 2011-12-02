@@ -1,0 +1,40 @@
+= Introducation =
+To use TeX on Mac OS X, it suffices to install TeXShop and one of BasicTeX, gwTeX, or TeXLive-2007-Dev. For a more complete installation, install MacTeX-2007, but then upgrade TeXShop to the latest version.
+
+= Installation =
+== gwTeX ==
+# I installed gwTeX by i-installer. [http://ii2.sourceforge.net/tex-index.html Link].
+## I download and install II2.dmg, 
+## and then install "gwTeX based on TeX Live" in /usr/local/gwTeX, this will also install xelatex in /usr/texbin/ which can be used by TeXShop
+# Install [http://www.uoregon.edu/~koch/texshop/ TeXShop]
+
+== BasicTeX ==
+http://www.tug.org/mactex/morepackages.html
+
+= How to put references into an article =
+Assume that we have an article named <tt>DNA.tex</tt> written in Tex, and an file named <tt>DNA.bib</tt> which exported by a reference manage software (eg: BibDesk). The citations you inserted in the article correspond to the papers in the reference file.
+
+What we can do by TeXShop is following:
+# latex DNA.tex
+#:This produce DNA.aux
+# bibtex DNA.aux (or DNA.tex)
+#:This produce DNA.bbl and DNA.blg
+# latex DNA.tex two more times.
+#:Finally you get DNA.pdf
+
+We can also do it in terminal:
+<pre>
+pdflatex DNA.tex
+bibtex DNA.aux
+pdflatex DNA.tex
+pdflatex DNA.tex
+</pre>
+
+some explanation for the above procedures: http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html
+
+= Reference =
+[http://www.mecheng.adelaide.edu.au/%7Ewill/texstart/ TeX on Mac OS X]
+
+[http://www.cs.wright.edu/~jslater/mac-tex/mac-tex-intro/mactexintro.html Getting Started With TeX]
+
+[[Category:LaTeX]]

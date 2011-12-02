@@ -1,0 +1,65 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Python translate</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Python translate</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<ul>
+<li>
+delete ":"
+
+</ul>
+<p>
+&lt;python&gt;
+import string
+allchars = string.maketrans('','')
+options = options.translate(allchars, ':')
+&lt;/python&gt;
+</p>
+
+<ul>
+<li>
+Replace 'e' with 'a', delete 'o'
+
+</ul>
+<p>
+&lt;python&gt;
+import string
+aTob = string.maketrans('e','a') 
+s = 'hello python' 
+print s.translate(aTob, 'o') 
+&lt;/python&gt;
+</p>
+
+<p>
+Output:
+&lt;pre&gt;
+hall pythn 
+&lt;/pre&gt;
+</p>
+
+
+<p>
+<a href="http://blog.donews.com/tinylee/archive/2007/06/14/1175344.aspx">Python Cook 1.9 简化使用string的translate方法</a>
+</p>
+
+<p>
+See Also
+<a href="string.replace.html">string.replace</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

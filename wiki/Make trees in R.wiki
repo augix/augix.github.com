@@ -1,0 +1,30 @@
+* phangorn package
+<pre>
+data:
+        chimp    human1    human2    rhesus
+1   256840694 247285839 247285839 240226291
+2    45217564  43683607  43683607  45916995
+3    64398220  62686694  62686694  59634838
+4     1411042   1378486   1378486   1349406
+5    17502943  16721703  16721703  18163003
+</pre>
+
+<R>
+# 1. distance
+d <- dist(t(data))
+
+# 2. plot
+# 2.1 hclust
+tree <- hclust(d)
+plot(tree)
+
+# 2.2 nj and upgma trees
+library(phangorn)
+# nj tree
+tree <- nj(d)
+plot(tree,main="nj tree")
+plot(tree,'u',main='nj tree')
+# upgma tree
+tree = upgma(d)
+plot(tree,main="upgma tree")
+</R>

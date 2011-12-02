@@ -1,0 +1,197 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Density plot with shadow colored</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Density plot with shadow colored</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="Category_R.html">Category:R</a>
+</p>
+
+<p>
+&lt;R&gt;
+</p>
+<ol>
+<li>
+transabi.R
+
+<li>
+statistics on abi expression data set
+
+</ol>
+<p>
+#
+</p>
+
+<p>
+library("Hmisc")
+library("lattice")
+library("cluster")
+library("gdata") #nobs
+library("RColorBrewer")
+</p>
+
+<p>
+polysection &lt;- function(a,b,dist=dnorm,col="blue",n=11){
+</p>
+<blockquote>
+dx &lt;- seq(a,b,length.out=n)
+</blockquote>
+<p>
+	polygon(c(a,dx,b),c(0,dist(dx),0),border=NA,col=col)
+}
+</p>
+
+<p>
+polysection.funct &lt;- function(a, b, x, y, col="blue",n=5) {
+	sx &lt;- seq(a, b, 5);
+	polygon(c(x[a],x[sx],x[b]),c(0,y[sx],0),
+</p>
+<blockquote>
+border=NA,col=col);
+</blockquote>
+		
+<p>
+}
+</p>
+
+
+<p>
+nice.dnorm &lt;- function() {
+</p>
+
+<p>
+x &lt;- seq(-4,4,.1)
+plot(x,dnorm(x),type="n",xaxs="i",yaxs="i",ylim=c(0,.4),bty="l",xaxt="n")
+library(RColorBrewer)
+cols&lt;-rev(brewer.pal(4,"Blues"))
+for(i in 0:3){
+   polysection(i,i+1,col=cols[i+1])
+   polysection(-i-1,-i,col=cols[i+1])
+}
+</p>
+
+<p>
+sx &lt;- -3:3
+segments(sx,0,sx,dnorm(sx),col="white")
+lines(x,dnorm(x))
+axis(1,sx,sx)
+</p>
+
+<p>
+}
+</p>
+
+<p>
+density.integrand &lt;- function(x, dens){
+	return(dens$y[x]);
+}
+</p>
+
+<p>
+integrate.density &lt;- function(a, b, dens) {
+	loc_a &lt;- which(dens$x &lt;= a);
+	if (length(loc_a) == 0) loc_a &lt;- 1;
+	loc_b &lt;- which(dens$x &lt;= b);
+	if (length(loc_b) == 0) loc_b &lt;- 1;
+	p &lt;- loc_a[length(loc_a)];
+	q &lt;- loc_b[length(loc_b)];
+</p>
+
+<p>
+	int&lt;-integrate(density.integrand, lower=p, upper=q, dens=dens,
+		subdivisions=1000);
+</p>
+	
+<p>
+}
+</p>
+
+<p>
+nice.density &lt;-function(df, ...) {
+</p>
+
+<p>
+	m &lt;- mean(df);
+	d &lt;- density(as.double(as.matrix(df)));
+	plot(d, ...);
+</p>
+
+<p>
+	w &lt;- which(d$x &lt;= m);
+	loc &lt;- w[length(w)];
+</p>
+
+<p>
+	sx &lt;- seq(loc, length(d$x), 50);
+	sy &lt;- seq(loc, 0, -50);
+</p>
+
+
+	
+<p>
+	segments(d$x[sx], 0, d$x[sx], d$y[sx], col="lightblue");
+	segments(d$x[sy], 0, d$x[sy], d$y[sy], col="lightblue");
+</p>
+
+<p>
+	library(RColorBrewer)
+	cols&lt;-rev(brewer.pal(length(sx),"Blues"))
+	int &lt;- integrate(density.integrand, lower=1, upper=length(d$x), 
+		dens=d, subdivisions=10000);
+</p>
+	
+	
+<p>
+	for (i in 1:(length(sx)-1)) {
+		sub&lt;-integrate(density.integrand, lower=sx[i], upper=sx[i+1], 
+		dens=d, subdivisions=50000);
+</p>
+	
+<p>
+		polysection.funct(sx[i],sx[i+1], d$x, d$y, col=cols[i]);
+		val&lt;-as.character(round(sub$value/int$value, digits=3));	
+		text((d$x[sx[i]]+d$x[sx[i+1]])/2, 0.2, val);
+	}
+</p>
+
+<p>
+	for (i in 1:(length(sy)-1)) {
+		sub&lt;-integrate(density.integrand, lower=sy[i+1], upper=sy[i], 
+		dens=d, subdivisions=50000);
+</p>
+	
+<p>
+		polysection.funct(sy[i+1],sy[i], d$x, d$y, col=cols[i]);
+		val&lt;-as.character(round(sub$value/int$value, digits=3));	
+		text((d$x[sy[i]]+d$x[sy[i+1]])/2, 0.2, val);
+	}
+	text(d$x[loc], 0.5, paste("mean=", round(m,digits=3)));
+}
+</p>
+
+<p>
+### example
+nice.dnorm()
+nice.density(runif(1000))
+</p>
+
+<p>
+&lt;/R&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

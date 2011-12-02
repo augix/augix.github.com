@@ -1,0 +1,36 @@
+%template disqus
+
+If received an error message, one can use taceback function to find out in which function the bug is:
+
+{{{
+> traceback()
+}}}
+
+After located the specific function, one can use debug funtion to find the specific line of code containing bug. For example, the function name is SS.
+
+{{{
+> debug(SS)
+> SS(2, x)
+
+Browser[1]>
+}}}
+
+One is now in what is called the "browser". Here one can enter 1 of 4 basic debug commands (n, c, where, Q).
+
+{{{
+n 
+    executes the current line and prints the next one. 
+c
+    executes the rest of the function without stopping and causes the function to return. 
+    This is useful if you are done debugging in the middle of a function and don't want 
+    to step throught the rest of the lines. 
+Q 
+    quits debugging and completely halts execution of the function. 
+where
+    you can type where to show where you are in the function call stack.
+}}}
+
+
+= References =
+* http://www.stats.uwo.ca/faculty/murdoch/software/debuggingR/debug.shtml
+* http://www.biostat.jhsph.edu/~rpeng/docs/R-debug-tools.pdf

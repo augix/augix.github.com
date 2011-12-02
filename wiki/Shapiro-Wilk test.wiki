@@ -1,0 +1,13 @@
+In [[statistics]], the '''Shapiro-Wilk test''' tests the [[null hypothesis]] that a [[statistical sample|sample]] ''x''<sub>1</sub>, ..., ''x''<sub>''n''</sub> came from a [[normal distribution|normally distributed]] population. It was published in 1965 by [[Samuel Shapiro (statistician)|Samuel Shapiro]] and [[Martin Wilk]].
+
+The [[test statistic]] is{{Fact|date=December 2008}}
+
+The user may reject the null hypothesis if ''W'' is too small.{{Fact|date=December 2008}}
+
+
+==References==
+
+* Shapiro, S. S. and Wilk, M. B. (1965). "An analysis of variance test for normality (complete samples)", ''Biometrika'', 52, 3 and 4, pages 591-611. [http://www.jstor.org/view/00063444/di992333/99p0027o/0]
+* [http://lib.stat.cmu.edu/apstat/R94 Algorithm AS R94 (Shapiro Wilk) FORTRAN code]
+* [http://cran.us.r-project.org/doc/manuals/R-intro.html#Examining-the-distribution-of-a-set-of-data Shapiro-Wilk Normality Test in CRAN]
+* [http://cran.us.r-project.org/sources.html C code in CRAN (look for swilk.c)]

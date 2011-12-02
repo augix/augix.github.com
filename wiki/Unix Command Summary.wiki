@@ -1,0 +1,83 @@
+= Reference =
+http://8help.osu.edu/wks/unix_course/intro-137.html
+
+http://www.ss64.com/bash/
+
+<TABLE BORDER="1">
+<CAPTION>Unix Commands</CAPTION>
+<TH>Command/Syntax</TH><TH>What it will do</TH>
+<TR>
+<TD><B>awk/nawk</B> [options] <I>file</I><TD>scan for patterns in a file and process the results
+<TR>
+<TD><B>cat</B> [options] <I>file</I><TD>concatenate (list) a file<TR>
+<TD><B>cd</B> [directory]<TD>change directory<TR>
+<TD><B>chgrp</B> [options] <I>group file</I><TD>change the group of the file<TR>
+<TD><B>chmod</B> [options] <I>file</I><TD>change file or directory access permissions<TR>
+<TD><B>chown</B> [options] <I>owner file</I><TD>change the ownership of a file; can only be done by the superuser<TR>
+<TD><B>chsh</B> (<B>passwd -e/-s</B>) <I>username login_shell</I><TD>change the user's login shell (often only by the superuser)<TR>
+<TD><B>cmp</B> [options] <I>file1 file2</I><TD>compare two files and list where differences occur (text or binary files)<TR>
+<TD><B>compress</B> [options] <I>file</I><TD>compress file and save it as <I>file.Z</I><TR>
+<TD><B>cp</B> [options] <I>file1  file2</I><TD>copy <I>file1</I> into <I>file2</I>; <I>file2</I> shouldn't already exist.  This command creates or overwrites <I>file2</I>.<TR>
+<TD><B>cut</B> (options) [<I>file</I>(s)]<TD>cut specified field(s)/character(s) from lines in file(s)<TR>
+<TD><B>date</B> [options]<TD>report the current date and time<TR>
+<TD><B>dd</B> [if=infile] [of=outfile] [operand=value]<TD>copy a file, converting between ASCII and EBCDIC or swapping byte order, as specified<TR>
+<TD><B>diff</B> [options] <I>file1 file2</I><TD>compare the two files and display the differences (text files only)<TR>
+<TD><B>df</B> [options] [resource]<TD>report the summary of disk blocks and inodes free and in use<TR>
+<TD><B>du</B> [options] [<I>directory</I> or <I>file</I>]<TD>report amount of disk space in use<TR>
+<TD><B>echo</B> [text string]<TD>echo the text string to stdout<TR>
+<TD><B>ed</B> or <B>ex</B> [options] <I>file</I><TD>Unix line editors<TR>
+<TD><B>emacs</B> [options] <I>file</I><TD>full-screen editor<TR>
+<TD><B>expr</B> <I>arguments</I><TD>evaluate the arguments.  Used to do arithmetic, etc. in the shell.<TR>
+<TD><B>file</B> [options] <I>file</I><TD>classify the file type<TR>
+<TD><B>find directory</B> [options] [actions]<TD>find files matching a type or pattern<TR>
+<TD><B>finger</B> [options] <I>user[@hostname]</I><TD>report information about users on local and remote machines<TR>
+<TD><B>ftp</B> [options] <I>host</I><TD>transfer file(s) using file transfer protocol<TR>
+<TD><B>grep</B> [options] 'search string' <I>argument</I><P><B>egrep </B>[options] 'search string' <I>argument</I><P><B>fgrep </B>[options] 'search string' <I>argument</I><TD>search the argument (in this case probably a file) for all occurrences of the search string, and list them.   <TR>
+<TD><B>gzip</B> [options] <I>file</I><P><B>gunzip </B>[options] <I>file</I><P><B>zcat </B>[options] <I>file</I><TD>compress or uncompress a file.  Compressed files are stored with a .<B>gz</B> ending<TR>
+<TD><B>head</B> [-number] <I>file</I><TD>display the first 10 (or number of) lines of a file<TR>
+<TD><B>hostname</B><TD>display or set (super-user only) the name of the current machine<TR>
+<TD><B>kill</B> [options] [-SIGNAL] [pid#] [%job]<TD>send a signal to the process with the process id number (pid#) or job control number (%n).  The default signal is to kill the process.<TR>
+<TD><B>ln</B> [options] <I>source_file target</I><TD>link the <I>source_file</I> to the <I>target</I><TR>
+<TD><B>lpq</B> [options]<P><B>lpstat<I> </I></B>[options]<TD>show the status of print jobs<TR>
+<TD><B>lpr</B>  [options] <I>file</I><P><B>lp<I> </I></B>[options] <I>file</I><TD>print to defined printer<TR>
+<TD><B>lprm</B> [options]<P><B>cancel </B>[options]<TD>remove a print job from the print queue<TR>
+<TD><B>ls</B> [options] [<I>directory</I> or <I>file</I>]<TD>list <I>directory</I> contents or <I>file</I> permissions<TR>
+<TD><B>mail</B> [options] [user]<P><B>mailx </B>[options] [user]<P><B>Mail </B>[options] [user]<TD>simple email utility available on Unix systems.  Type a period as the first character on a new line to send message out, question mark for help.<TR>
+<TD><B>man</B> [options] <I>command</I><TD>show the manual (<B>man</B>) page for a command<TR>
+<TD><B>mkdir</B> [options] <I>directory</I><TD>make a <I>directory</I><TR>
+<TD><B>more</B> [options] <I>file</I><P><B>less </B>[options] <I>file</I><P><B>pg </B>[options] <I>file</I><TD>page through a text file<TR>
+<TD><B>mv</B> [options] <I>file1  file2</I><TD>move <I>file1</I> into <I>file2</I><TR>
+<TD><B>od</B> [options] <I>file</I><TD>octal dump a binary file, in octal, ASCII, hex, decimal, or character mode.<TR>
+<TD><B>passwd</B> [options]<TD>set or change your password<TR>
+<TD><B>paste</B> [options] <I>file</I><TD>paste field(s) onto the lines in <I>file</I><TR>
+<TD><B>pr</B> [options] <I>file</I><TD>filter the file and print it on the terminal<TR>
+<TD><B>ps</B> [options]<TD>show status of active processes<TR>
+<TD><B>pwd</B><TD>print working (current) directory<TR>
+<TD><B>rcp</B> [options] <I>hostname</I><TD>remotely copy files from this machine to another machine<TR>
+<TD><B>rlogin</B> [options] <I>hostname</I><TD>login remotely to another machine<TR>
+<TD><B>rm</B> [options] <I>file</I><TD>remove (delete) a file or directory  (<B>-r </B>recursively deletes the directory and its contents) (<B>-i</B> prompts before removing files)<TR>
+<TD><B>rmdir</B> [options] <I>directory</I><TD>remove a <I>directory</I><TR>
+<TD><B>rsh</B> [options] <I>hostname</I><TD>remote shell to run on another machine<TR>
+<TD><B>script</B> <I>file</I><TD>saves everything that appears on the screen to file until <B>exit</B> is executed<TR>
+<TD><B>sed</B> [options] <I>file</I><TD>stream editor for editing files from a script or from the command line<TR>
+<TD><B>sort</B> [options] <I>file</I><TD>sort the lines of the <I>file</I> according to the options chosen<TR>
+<TD><B>source</B> <I>file</I><P><B>.</B> <I>file</I><TD>read commands from the <I>file</I> and execute them in the current shell.  <B>source</B>: C shell, <B>.</B>: Bourne shell.<TR>
+<TD><B>strings</B> [options] <I>file</I><TD>report any sequence of 4 or more printable characters ending in &lt;NL&gt; or &lt;NULL&gt;.  Usually used to search binary files for ASCII strings.<TR>
+<TD><B>stty</B> [options] <TD>set or display terminal control options<TR>
+<TD><B>tail</B> [options] <I>file</I><TD>display the last few lines (or parts) of a file<TR>
+<TD><B>tar</B> key[options] [<I>file</I>(s)]<TD>tape archiver--refer to man pages for details on creating, listing, and retrieving from archive files.  Tar files can be stored on tape or disk.<TR>
+<TD><B>tee</B> [options] <I>file</I><TD>copy stdout to one or more files<TR>
+<TD><B>telnet</B> [host [port]]<TD>communicate with another host using telnet protocol<TR>
+<TD><B>touch</B> [options] [date] <I>file</I><TD>create an empty file, or update the access time of an existing file<TR>
+<TD><B>tr</B> [options] <I>string1 string2</I><TD>translate the characters in string1 from stdin into those in string2 in stdout<TR>
+<TD><B>uncompress</B> <I>file.Z</I><TD>uncompress <I>file.Z</I> and save it as a file<TR>
+<TD><B>uniq</B> [options] <I>file</I><TD>remove repeated lines in a file<TR>
+<TD><B>uudecode</B> [<I>file</I>]<TD>decode a uuencoded file, recreating the original file  <TR>
+<TD><B>uuencode</B> [<I>file</I>] <I>new_name</I><TD>encode binary file to 7-bit ASCII, useful when sending via email, to be decoded as new_name at destination<TR>
+<TD><B>vi</B> [options] <I>file</I><TD>visual, full-screen editor<TR>
+<TD><B>wc</B> [options] [<I>file</I>(s)]<TD>display word (or character or line) count for <I>file</I>(s)<TR>
+<TD><B>whereis</B> [options] <I>command</I><TD>report the binary, source, and man page locations for the command named<TR>
+<TD><B>which</B> <I>command</I><TD>reports  the path to the command or the shell alias in use <TR>
+<TD><B>who</B> or <B>w</B><TD>report who is logged in and what processes are running<TR>
+<TD><B>zcat</B> <I>file.Z</I><TD>concatenate (list) uncompressed file to screen, leaving file compressed on disk
+</TABLE>

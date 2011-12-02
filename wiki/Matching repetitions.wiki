@@ -1,0 +1,11 @@
+* a? = match 'a' 1 or 0 times
+
+* a* = match 'a' 0 or more times, i.e., any number of times
+
+* a+ = match 'a' 1 or more times, i.e., at least once
+
+* a{n,m} = match at least n times, but not more than m times.
+
+* a{n,} = match at least n or more times
+
+* a{n} = match exactly n times

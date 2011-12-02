@@ -1,0 +1,9 @@
+Just create a file:
+
+ $HOME/.ssh/config
+
+and put:
+
+ ServerAliveInterval 60
+
+in it.

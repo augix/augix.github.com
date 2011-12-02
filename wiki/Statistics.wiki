@@ -1,0 +1,7 @@
+* [http://pbil.univ-lyon1.fr/R/enseignement.html R and Statistics course in Lyon]
+* [http://www.cons-dev.org/elearning/stat/ Statistique Non Paramétrique]
+* [[Unbalanced ANOVA]]
+* [[Shapiro-Wilk test]]
+* [[希腊字母读法]]
+* [[Statistics course in SIBS| Statistics course in SIBS 2010]]
+* [[Benjamini and Hochberg FDR control]]

@@ -1,0 +1,7 @@
+The standard way to pause between plots is to set 'par(ask = TRUE)'
+before your first plot, which will then prompt you to continue after
+each new plot. See ?par for more information.
+
+<R>
+par(ask = TRUE)
+</R>

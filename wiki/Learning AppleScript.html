@@ -1,0 +1,77 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Learning AppleScript</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Learning AppleScript</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Here are some examples of AppleScript</h1>
+<p>
+<a href="http://wayfly3.spaces.live.com/default.aspx">Ref1</a>
+</p>
+
+<p>
+<a href="http://flyingmeat.com/fs/flystashweb.cgi/6073cece-d0b5-01d9-13d8-c0cbe4c4a707">VoodooPad: AppleScript</a>
+</p>
+
+<p>
+Create a new page:
+&lt;applescript&gt;
+tell application "VoodooPad"
+  tell document 1 to create page with title "new page" with contents "This is a new page."
+end tell
+&lt;/applescript&gt;
+</p>
+
+<p>
+Export to iPod:
+&lt;applescript&gt;
+tell application "VoodooPad"  
+  -- this is the path to your document.
+  open "srv:Users:gus:Desktop:astest.vdoc" as alias
+  tell front document
+</p>
+<blockquote>
+export to ipod
+</blockquote>
+<p>
+  end tell
+end tell
+&lt;/applescript&gt;
+</p>
+
+<p>
+Reading a Text file Into an AppleScript Variable
+&lt;applescript&gt;
+set theFile to (choose file with prompt "Select a file to read:" of type {"TEXT"})
+open for access theFile
+set fileContents to (read theFile)
+close access theFile
+&lt;/applescript&gt;
+</p>
+
+<p>
+Writing an AppleScript Variable to a Text File
+&lt;applescript&gt;
+set newFile to new file with prompt "Output file:" default name "My New File"
+open for access newFile with write permission
+-- if you want to overwrite an existing file use set eof of newFile to 0 first.
+write "something useful" to newFile
+close access newFile
+&lt;/applescript&gt;
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

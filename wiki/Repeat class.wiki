@@ -1,0 +1,30 @@
+= Genome Browser =
+*Short interspersed nuclear elements (SINE), which include ALUs
+*Long interspersed nuclear elements (LINE)
+*Long terminal repeat elements (LTR), which include retroposons
+*DNA repeat elements (DNA)
+*Simple repeats (micro-satellites)
+*Low complexity repeats
+*Satellite repeats
+*RNA repeats (including RNA, tRNA, rRNA, snRNA, scRNA, srpRNA)
+*Other repeats, which includes class RC (Rolling Circle)
+*Unknown
+
+
+
+= DNA Repeat types =
+DNA Repeat types: Tandemly repeated DNA & Interspersed repetitive DNA
+*Tandemly repeated DNA
+**Repeats often associated with disease syndromes
+**Telomeres
+***Contain long arrays of TTAGGG repeats
+***Repeats form nucleoprotein complex: Associate with TERF proteins  
+***Repeat function
+*Interspersed repetitive DNA
+**Short Interspersed Nuclear Elements (SINEs)
+***Alu
+***Mariner (Mariner-like) elements
+**Long Interspersed Nuclear Elements (LINEs)
+**Transposable elements with Long Terminal Repeats
+**DNA Transposons
+*Transposable repeat elements: Possible adverse effects

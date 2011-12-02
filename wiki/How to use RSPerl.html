@@ -1,0 +1,117 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>How to use RSPerl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>How to use RSPerl</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+How to use RSPerl
+</p>
+
+<p>
+Source: <a href="http://www.omegahat.org/RSPerl/">http://www.omegahat.org/RSPerl/</a>
+</p>
+
+<h1 id="toc_1">How to install RSPerl</h1>
+
+<h2 id="toc_1.1">Download</h2>
+
+<p>
+The source RSPerl_0.92-1.tar.gz <a href="http://www.omegahat.org/RSPerl/RSPerl_0.92-1.tar.gz">http://www.omegahat.org/RSPerl/RSPerl_0.92-1.tar.gz</a>.
+</p>
+
+<h2 id="toc_1.2">Rebuild R as a shared library</h2>
+
+<p>
+Note also that to use the R-in-Perl mechanism one must have built R as a shared library. (This is not necessary when calling Perl from R.) You can check if this has been done by checking to see if libR is in the directory $R_HOME/lib/. If this is not there, you are advised to clean the entire R distribution (with make distclean) so as to start from scratch and then configure and compile R using the—enable-R-shlib to R’s configuration script. The following sequence of commands should work.
+</p>
+
+<p>
+&lt;pre&gt;
+cd $R_HOME
+make distclean
+./configure --enable-R-shlib
+make
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_1.3">Installation</h2>
+
+<p>
+&lt;pre&gt;
+R CMD INSTALL -c -l &lt;wherever&gt; --configure-args='--with-in-perl' RSPerl_0.92-1.tar.gz
+&lt;/pre&gt;
+</p>
+
+<h2 id="toc_1.4">Configuratioin</h2>
+
+<p>
+If we run R inside Perl, we need to find both the R run-time library (libR.so) and also the RSPerl package which will get loaded when the R session is started. We also need to find some additional shared libraries/DLLs in the RSPerl package. For this, we need to make certain the dynamic loader can find all these DLLs.
+</p>
+
+<p>
+Perl also needs to find the Perl code, i.e. the R.pm, RReferences.pm and the R.so files. We need to set $PERL5LIB to specify their location.
+</p>
+
+<p>
+Additionally, we need to know where the R package is located if it is not installed into $R_HOME/library/. This is done via $R_LIBS
+</p>
+
+<p>
+And if we are running R from within Perl we also need to tell the R engine where $R_HOME is.
+</p>
+
+<p>
+As Michael Dondrup said, that’s a lot of environment variables to set. Typically we don’t have to set them all. If we install the R package into a personal library, that library is typically where we put lots of R packages and so it is in our $R_LIBS variable already. Similarly, if we install the Perl code into a local Perl library, we will have that specified in our $PERL5LIB environment variable. And if we are running Perl inside R, $R_HOME is already set when we start R and also finding libR.so is done for us.
+</p>
+
+<p>
+So the main variables we might have to set are $LD_LIBRARY_PATH and $PERL5LIB if the Perl code is installed into the R package area, We provide two shell scripts to set these variables to the appropriate values. There is one for sh/bash-style shells and another for csh/tcsh-style shells named RSPerl.bsh and RSPerl.csh respectively. They are located in the RSPerl/scripts / directory of the installed package. These are not executable but rather intended to be sourced into an existing shell to set the variables for the remainder of that shell session. 
+</p>
+
+<p>
+Use 
+&lt;pre&gt;
+. RSPerl/scripts/RSPerl.bsh 
+&lt;/pre&gt;
+or 
+&lt;pre&gt;
+source RSPerl/scripts/RSPerl.csh
+&lt;/pre&gt;
+</p>
+
+<h1 id="toc_2">How to use</h1>
+<h2 id="toc_2.1">Launch R from Perl</h2>
+<p>
+&lt;perl&gt;
+use lib "/picb/home5/augix/Library/R/RSPerl/perl/x86_64-linux-thread-multi";   #indicate the path for RSPerl module
+use R;
+</p>
+
+<p>
+&amp;R::initR("--silent");
+$x = &amp;R::call("sum", (1,2,3));
+$y = &amp;R::call("sum", (1,2,$x));
+print "Sum = $y\n";
+&lt;/perl&gt;
+</p>
+
+<p>
+<a href="Category_R.html">Category:R</a><a href="Category_Perl.html">Category:Perl</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

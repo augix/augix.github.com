@@ -1,0 +1,61 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Print Directory tree</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Print Directory tree</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="http://www.centerkey.com/tree/">Reference Link</a>
+</p>
+
+<p>
+ $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[<sup><small>-][</small></sup>\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+</p>
+
+<p>
+&lt;pre&gt;
+   |-Application Support
+   |---AddressBook
+   |-----Images
+   |---Adium 2.0
+   |-----Contact List
+   |-----Emoticons
+   |-----Message Styles
+   |-----PlugIns
+   |-----Scripts
+&lt;/pre&gt;
+</p>
+
+<p>
+One may also save this command line as ~/bin/tree then one can just type
+ $ tree ./
+</p>
+
+<p>
+What I did is making an alias:
+&lt;pre&gt;
+ $ vi ~/.bashrc
+ alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[<sup><small>-][</small></sup>\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+ $ tree
+&lt;/pre&gt;
+</p>
+
+<p>
+only display the folders with depth &lt; 3
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

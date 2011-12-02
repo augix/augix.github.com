@@ -1,0 +1,139 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>Setting up HTTP proxy</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>Setting up HTTP proxy</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<p>
+<a href="http://www.w3.org/Amaya/User/Proxy.html">Proxy support in Amaya</a>
+</p>
+
+<h1 id="toc_1">UNIX tcsh</h1>
+<p>
+For example, under the UNIX tcsh shell, you can set them up as
+follows:
+</p>
+
+<p>
+ setenv http_proxy <a href="http://groucho.marx.edu:1028">http://groucho.marx.edu:1028</a>
+ setenv no_proxy harpo.marx.edu zeppo.marx.edu chico.marx.edu
+</p>
+
+<h1 id="toc_2">MS-Windows</h1>
+<p>
+One way to do this under MS-Windows is to add the following lines to your
+autoexec.bat file:
+</p>
+
+<p>
+ set http_proxy=<a href="http://groucho.marx.edu:1028">http://groucho.marx.edu:1028</a>
+ set no_proxy=harpo.marx.edu zeppo.marx.edu chico.marx.edu
+</p>
+
+<p>
+if the server requires password:
+ http_proxy=<a href="http://username:password@proxy.example.org:8080">http://username:password@proxy.example.org:8080</a>
+</p>
+
+
+<p>
+<a href="http://wiki.noreply.org/noreply/TheOnionRouter/TorifyHOWTO">TheOnionRouter/TorifyHOWTO - Noreply Wiki</a>
+</p>
+
+<h1 id="toc_3">Unix and GNU/Linux</h1>
+<p>
+Under Unix and GNU/Linux, most HTTP capable applications, like lynx, wget and curl, will honor the value of the http_proxy environment variable. Some applications use all lower case, some all upper, so specify both to be safe. 
+Add the following lines to your $HOME/.bash_profile, $HOME/.bashrc, or env settings: 
+</p>
+
+<p>
+ http_proxy=<a href="http://127.0.0.1:8118/">http://127.0.0.1:8118/</a>
+ HTTP_PROXY=$http_proxy
+ export http_proxy HTTP_PROXY
+</p>
+
+
+<p>
+<a href="http://ory.ph.biu.ac.il/manuals/proxy/">Setting up HTTP proxy</a>
+</p>
+
+<h1 id="toc_4">Bash</h1>
+<p>
+If you are using Bourne-style shell (sh, bash, ksh) type the following
+command: 
+ http_proxy=<a href="http://bcproxy.ac.il:8080/">http://bcproxy.ac.il:8080/</a> ; export http_proxy
+</p>
+
+<h1 id="toc_5">Csh</h1>
+<p>
+For C-shell (csh, tcsh) type
+ setenv http_proxy=<a href="http://bcproxy.ac.il:8080/">http://bcproxy.ac.il:8080/</a>
+</p>
+
+<p>
+You may wish to add apropriatecommand into your .profile (Bourne-style shell users) or .login (C-shell users)
+files.
+</p>
+
+<p>
+<a href="http://aspn.activestate.com/ASPN/docs/ActivePerl/5.8/faq/ActivePerl-faq2.html">ActivePerl 5.8 - Online Docs: Using PPM</a>
+</p>
+
+
+<h1 id="toc_6">Mac OS X</h1>
+
+<p>
+The http_proxy should be set in two places on OS X:
+</p>
+
+
+<p>
+Shell: Add a line like the following in .bash_profile (/Users/&lt;name&gt;/.bash_profile):
+</p>
+
+<p>
+ http_proxy=<a href="http://username:password@hostname:port;">http://username:password@hostname:port;</a>  export http_proxy
+</p>
+
+<p>
+This setting applies to PPM when it is launched from or used at the command line.
+</p>
+
+<p>
+Desktop: Add an entry like the following in your environment.plist file
+  (/Users/&lt;name&gt;/.MacOSX/environment.plist):
+</p>
+<blockquote>
+&lt;key&gt;http_proxy&lt;/key&gt;
+&lt;string&gt;<a href="http://username:password@hostname:port&lt;/string&gt;">http://username:password@hostname:port&lt;/string&gt;</a>
+</blockquote>
+  
+<p>
+This setting applies to PPM when it is launched by clicking the PPM icon.
+</p>
+
+
+<h1 id="toc_7">Linux, Solaris or HP-UX</h1>
+
+<p>
+Set the http_proxy environment variable using the command specific to your shell (e.g. set or export). To make this change persistent, add the command to the appropriate profile file for the shell.  For example, in bash, add a line like the following to your .bash_profile or .bashrc file:
+</p>
+<blockquote>
+http_proxy=<a href="http://username:password@hostname:port;">http://username:password@hostname:port;</a>  export http_proxy
+</blockquote>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>

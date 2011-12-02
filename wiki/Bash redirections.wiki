@@ -1,0 +1,10 @@
+%template disqus
+
+Write error messages to a file.
+
+{{{
+some_program 2> stderr.txt
+}}}
+
+= Reference =
+* http://linuxconfig.org/Bash_scripting_Tutorial#18-redirections

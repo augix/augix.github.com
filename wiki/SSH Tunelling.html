@@ -1,0 +1,80 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../../Public/templates/skinny_disqus.css" />
+	<title>SSH Tunelling</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+		<h1>SSH Tunelling</h1> 
+	</div><!-- end of header -->
+	<div class="post">
+	
+<h1 id="toc_1">Create Tunel</h1>
+<p>
+In &lt;tt&gt;~/.bashrc&lt;/tt&gt;
+&lt;bash&gt;
+## localhost:7777 -&gt; gate -&gt; eva001:22
+alias sshrzg='ssh -l augix -L 7777:eva001.opt.rzg.mpg.de:22 gate.rzg.mpg.de cat -'
+alias eva='ssh -p 7777 localhost'
+&lt;/bash&gt;
+</p>
+
+<p>
+After typing
+ sshrzg
+You forwarded localhost:7777 to eva001.opt.rzg.mpg.de:22
+</p>
+
+<p>
+&lt;tt&gt;localhost:7777 -&gt; eva001:22&lt;/tt&gt;
+</p>
+
+<h1 id="toc_2">Use Tunel</h1>
+<ul>
+<li>
+to connect:
+ eva
+
+</ul>
+
+<ul>
+<li>
+to copy files
+
+</ul>
+<p>
+&lt;bash&gt;
+scp -P 7777 localhost:/nfs/eva/augix/cDNA/simulation/sub.sh ~/Projects/cDNA/simulation/sub.sh
+scp -P 7777 ~/Projects/cDNA/simulation/sub.sh localhost:/nfs/eva/augix/cDNA/simulation/sub.sh
+&lt;/bash&gt;
+</p>
+
+<h2 id="toc_2.1">Use &lt;tt&gt;Yummy FTP&lt;/tt&gt; or any other FTP client</h2>
+<ul>
+<li>
+Make a bookmark for eva001.opt.rzg.mpg.de:/nfs/eva/augix/cDNA
+
+</ul>
+<p>
+** server: localhost
+** port: 7777
+** username: augix
+** password: ********
+** initial path: /nfs/eva/augix/cDNA
+</p>
+
+<h1 id="toc_3">Reference</h1>
+<p>
+<a href="http://www.rzg.mpg.de/networkservices/ssh-tunnelling-port-forwarding/?searchterm=configure">SSH Tunnelling (Port Forwarding) - RZG</a>
+</p>
+
+	</div><!-- end of post -->
+<br>
+
+</div><!-- end of container -->
+
+</body>
+</html>
