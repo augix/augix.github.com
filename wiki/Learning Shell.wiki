@@ -1,9 +1,3 @@
-= Tutorials =
-* [http://www.linuxtopia.org/online_books/advanced_bash_scripting_guide/index.html Advanced Bash-Scripting Guide]
-* [http://mercury.chem.pitt.edu/~sasha/LinuxFocus/English/September2001/article216.shtml lf216, UNIX Basics: Shell Programming]
-* [http://www.grymoire.com/Unix/Sh.html Sh - the Bourne Shell]
-* [http://tldp.org/LDP/abs/html/ Advanced Bash-Scripting Guide by Mendel Cooper]
-
 = Tips = 
 * [[Change File Name by Shell]]
 * [[Get file name in Shell|Get file's base name]]
@@ -64,3 +58,11 @@
 
 = Scripts = 
 * [[Clustalw.sh]]
+
+= References and Tutorials =
+* [http://www.linuxtopia.org/online_books/advanced_bash_scripting_guide/index.html Advanced Bash-Scripting Guide]
+* [http://mercury.chem.pitt.edu/~sasha/LinuxFocus/English/September2001/article216.shtml lf216, UNIX Basics: Shell Programming]
+* [http://www.grymoire.com/Unix/Sh.html Sh - the Bourne Shell]
+* [http://tldp.org/LDP/abs/html/ Advanced Bash-Scripting Guide by Mendel Cooper]
+
+ 
