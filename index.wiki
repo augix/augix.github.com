@@ -1,9 +1,7 @@
 %title Home
 %% they are published to internet
 
-This is the home of [http://wiki.augix.com wiki.augix.com].
-
-This wiki covers mainly the following subjects:
+This is the home of [http://wiki.augix.com wiki.augix.com], this wiki covers mainly the following subjects:
 
 = Subjects =
 * [[wiki/Programming|Programming]]
@@ -13,6 +11,8 @@ This wiki covers mainly the following subjects:
 * [[wiki/Statistics|Statistics]]
 * [[wiki/Foreign Language|Foreign Languages]]
 * [[wiki/Main Page| All subjects]]
+
+Please leave a comment if you found an error.
 
 
 %% [[./blog/Blog]]
