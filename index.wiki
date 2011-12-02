@@ -4,3 +4,7 @@ This is the home of [http://wiki.augix.com wiki.augix.com].
 
 [[./blog/Blog| Blog]]
 
+[[./entries/China_US_values/]]
+
+[[./entries/Kurt-Eisner/]]
+
