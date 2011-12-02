@@ -4,7 +4,7 @@ This is the home of [http://wiki.augix.com wiki.augix.com].
 
 [[./blog/Blog| Blog]]
 
-[[./entries/China_US_values/]]
+[[./entries/China_US_values/| China-US value comparison]]
 
-[[./entries/Kurt-Eisner/]]
+[[./entries/Kurt-Eisner/| Flat on Kurt-Eisner Str.]]
 
