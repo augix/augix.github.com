@@ -1,0 +1,222 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+	<title>A Bioinformatician's UNIX Toolbox</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<a name='top'></a>
+<div class="container">
+    <div class="header">
+		<h1>A Bioinformatician's UNIX Toolbox</h1> 
+	</div><!-- end of header -->
+	<div class="post"><!-- start of post -->
+	
+<p>
+<a href="http://www.sanger.ac.uk/Users/lh3/biounix.shtml">ref</a>
+</p>
+
+<p>
+Most of bioinformaticians know how to analyze data with Perl or Python programming. However, not all of them realize that it is not always necessary to write programs. Sometimes, using UNIX commands is much more convenient and can save a lot of time spent on some trivial, yet tedious, routines.
+</p>
+
+<p>
+Here are some UNIX commands I frequently use in data analyses. I do not mean to give a complete reference to these commands, but aim to introduce their most useful bits with examples.
+</p>
+
+<h1 id="toc_1">Xargs</h1>
+<p>
+Xargs is one of my most frequently used UNIX commands. Unfortunately, many UNIX users overlook how powerful it is.
+</p>
+
+<p>
+*delete all *.txt files in a directory:
+ find . -name "*.txt" | xargs rm
+*package all *.pl files in a directory:
+ find . -name "*.pl" | xargs tar -zcf pl.tar.gz
+*kill all processes that match "something":
+ ps -u <code>whoami</code> | awk '/something/{print $1}' | xargs kill
+*rename all *.txt as *.bak:
+ find . -name "*.txt" | sed "s/\.txt$//" | xargs -i echo mv {}.txt {}.bak | sh
+*run the same command for 100 times (in case of bootstraing, for example):
+ perl -e 'print "$_\n"for(1..100)' | xargs -i bsub echo bsub -o {}.out -e {}.err some_cmd | sh
+*submit all commands in a command file (one command per line):
+ cat my_cmds.sh | xargs -i echo bsub {} | sh
+The last three examples only work with GNU xargs. BSD xargs does not accept '-i'.
+</p>
+
+<h1 id="toc_2">Find</h1>
+<p>
+In a directory, find command finds all the files that meet certain criteria. You can write very complex rules at the command line, but I think the following examples are most useful:
+</p>
+
+<p>
+<strong>find all files with extension as "</strong>.txt" (files can exist in subdirectory):
+ find . -name "*.txt"
+*find all directories:
+ find . -type d
+</p>
+
+<h1 id="toc_3">Awk</h1>
+<p>
+Awk is a programming language that is specifically designed for quickly manipulating space delimited data. Although you can achieve all its functionality with Perl, awk is simpler in many practical cases. You can find a lot of online tutorials, but here I will only show a few examples which cover most of my daily uses of awk.
+</p>
+
+<p>
+*choose rows where column 3 is larger than column 5:
+ awk '$3&gt;$5' input.txt &gt; output.txt
+*extract column 2,4,5:
+ awk '{print $2,$4,$5}' input.txt &gt; output.txt
+ awk 'BEGIN{OFS="\t"}{print $2,$4,$5}' input.txt
+*show rows between 20th and 80th:
+ awk 'NR&gt;=20&amp;&amp;NR&lt;=80' input.txt &gt; output.txt
+*calculate the average of column 2:
+ awk '{x+=$2}END{print x/NR}' input.txt
+*regex (egrep):
+ awk '/^test[0-9]+/' input.txt
+*calculate the sum of column 2 and 3 and put it at the end of a row or replace the first column:
+ awk '{print $0,$2+$3}' input.txt
+ awk '{$1=$2+$3;print}' input.txt
+*join two files on column 1:
+ awk 'BEGIN{while((getline&lt;"file1.txt")&gt;0)l[$1]=$0}$1 in l{print $0"\t"l[$1]}' file2.txt &gt; output.txt
+*count number of occurrence of column 2 (uniq -c):
+ awk '{l[$2]++}END{for (x in l) print x,l[x]}' input.txt
+*apply "uniq" on column 2, only printing the first occurrence (uniq):
+ awk '!($2 in l){print;l[$2]=1}' input.txt
+*count different words (wc):
+ awk '{for(i=1;i!=NF;++i)c[$i]++}END{for (x in c) print x,c[x]}' input.txt
+*deal with simple CSV:
+ awk -F, '{print $1,$2}'
+*substitution (sed is simpler in this case):
+ awk '{sub(/test/, "no", $0);print}' input.txt
+</p>
+
+<h1 id="toc_4">Cut</h1>
+<p>
+Cut cuts specified columns. The default delimiter is a single TAB.
+</p>
+
+<p>
+*cut the 1st, 2nd, 3rd, 5th, 7th and following columns:
+ cut -f1-3,5,7- input.txt
+*cut the 3rd column with columns separated by a single space:
+ cut -d" " -f 3 input.txt
+Note that awk, like Perl's split, takes continuous blank characters as the delimiter, but cut only takes a single character as the delimiter.
+</p>
+
+<h1 id="toc_5">Split</h1>
+<p>
+Split a file into pieces.
+</p>
+
+<ul>
+<li>
+split every 10 lines of '''input''' into several files with prefix '''output''' and numeric suffixes.
+ split -l 10 -d input output
+
+</ul>
+
+<h1 id="toc_6">Sort</h1>
+<p>
+Almost all the scripting languages have built-in sort, but none of them are so flexible as sort command. In addition, GNU sort is also space efficient. I used to sort a 20Gb file with less than 2Gb memory. It is not trivial to implement so powerful a sort by yourself.
+</p>
+
+<p>
+*sort a space-delimited file based on its first column, then the second if the first is the same, and so on:
+ sort input.txt
+*sort a huge file (GNU sort ONLY):
+ sort -S 1500M -t $HOME/tmp input.txt &gt; sorted.txt
+*sort starting from the third column, skipping the first two columns:
+ sort +2 input.txt
+*sort the second column as numbers, descending order; if identical, sort the 3rd as strings, ascending order:
+ sort -k2,2nr -k3,3 input.txt
+*sort starting from the 4th character at column 2, as numbers:
+ sort -k2.4n input.txt
+</p>
+
+<h1 id="toc_7">Other Tips</h1>
+<p>
+*use brackets:
+ (echo hello; echo world; cat foo.txt) &gt; output.txt
+ (cd foo; ls bar.txt)
+*save stderr output to a file:
+ some_cmd 2&gt; output.err
+*direct stderr output to stdout:
+ some_cmd 2&gt;&amp;1 | more
+ some_cmd &gt;output.outerr 2&gt;&amp;1
+*view a text file using 4 as a TAB size and without line wrapping:
+ less -S -x4 text.txt
+*[sed] substitute 'foo(\d+)' as "(\d+)bar":
+ sed "s/foo\([0-9]*\)/\1bar/g"
+ perl -pe 's/foo(\d+)/$1bar/g"
+*[uniq] count the occurrence of different strings at column 2:
+ cut -f2 input.txt | uniq -c
+*grep "--enable" in a file (use "--" to prevent grep from parsing command options):
+</p>
+
+	</div><!-- end of post -->
+	<div class="backhome">
+		<a href="../index.html">Main Page</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: A Bioinformatician's UNIX Toolbox" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+	</div>
+<br>
+
+<!-- javascript to hide comments -->
+<script language="javascript" type="text/javascript">
+/*** JavaScript: Show/Hide Content ***/
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<!-- javascript to show count of comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+
+<a name="disqus_thread"></a>
+<div id="disqus_thread" class="comment"><p align='right'><a href="#top" id="disqus_thread-hide" class="hideLink" onclick="showHide('disqus_thread');return true;">Hide Comments</a></p>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    var disqus_identifier = "vimwiki: A Bioinformatician's UNIX Toolbox";
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div><!-- end of container -->
+
+</body>
+</html>

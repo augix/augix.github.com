@@ -1,0 +1,150 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+	<title>Rdbi - database access for R</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<a name='top'></a>
+<div class="container">
+    <div class="header">
+		<h1>Rdbi - database access for R</h1> 
+	</div><!-- end of header -->
+	<div class="post"><!-- start of post -->
+	
+<p>
+<a href="http://rdbi.sourceforge.net/">Rdbi Home Page</a>
+</p>
+
+<h1 id="toc_1">Download</h1>
+<p>
+ Rdbi
+ RdbiPgSQL
+these two packages from <a href="http://www.bioconductor.org/repository/release1.5/package/html/index.html">http://www.bioconductor.org/repository/release1.5/package/html/index.html</a>
+</p>
+
+<h1 id="toc_2">Install</h1>
+<p>
+ R CMD INSTALL ~/Library/R/ rdbi.tar.gz
+or
+&lt;R&gt;
+&gt; install.packages("rdbi",lib="~/Library/R/")
+</p>
+
+<p>
+&gt; library(Rdbi)
+&gt; library(RdbiPgSQL)
+&gt; conn &lt;- dbConnect(PgSQL(), host = "10.10.118.118", dbname = "expression")
+&gt; res &lt;- dbSendQuery(conn,"select * from exonarray.probe limit 10;")
+&gt; mydata &lt;- dbGetResult(res)
+&gt; mydata
+</p>
+<blockquote>
+id probesetid coordinates                  sequence crosshybridizes
+</blockquote>
+<p>
+1   494998    2315101   (917,193) cacgggaagtctgggctaagagaca            TRUE
+2  1734213    2315101  (1092,677) acaggggccagaagatgaacaatgg            TRUE
+3  4767517    2315101  (796,1862) attaagttacatgcagacaacaggg            TRUE
+4  4286427    2315101  (986,1674) tgcctggttgtggtattaagttaca            TRUE
+5  5760145    2315102  (144,2250) tcggccgtcgtcttctgcagctctg            TRUE
+6   671410    2315102   (689,262) aagtcggccgtcgtcttctgcagct            TRUE
+7  4275780    2315102  (579,1670) tccaagtcggccgtcgtcttctgca            TRUE
+8  4293462    2315102  (341,1677) tgtgatccaagtcggccgtcgtctt            TRUE
+9     5388    2315103     (267,2) ctgtctgtcgacccagctggaggca            TRUE
+10 6528805    2315103  (804,2550) ccctgtctgtcgacccagctggagg            TRUE
+&lt;/R&gt;
+</p>
+
+
+<p>
+Functions in Rdbi
+&lt;pre&gt;
+Function	Description
+dbAppendTable	Appends data to a database table
+dbClearResult	Clears resources associated with a query result
+dbColumnInfo	Returns type information about a result column
+dbConnect	Connect to a database
+dbConnectionInfo	Returns a list of connection status attributes
+dbDisconnect	Closes a database connection
+dbGetQuery	Submit a query string and fetch results
+dbGetResult	Fetch results from a query
+dbListTables	Lists database tables
+dbReadTable	Reads a table into a data frame
+dbReconnect	Reopens a connection to a database
+dbResultInfo	Returns information about a query result
+dbSendQuery	Submits a query string to the database backend
+dbWriteTable	Writes a data frame to a database table
+&lt;/pre&gt;
+</p>
+
+<p>
+<a href="Category_R.html">Category:R</a>
+</p>
+
+	</div><!-- end of post -->
+	<div class="backhome">
+		<a href="../index.html">Main Page</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Rdbi - database access for R" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+	</div>
+<br>
+
+<!-- javascript to hide comments -->
+<script language="javascript" type="text/javascript">
+/*** JavaScript: Show/Hide Content ***/
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<!-- javascript to show count of comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+
+<a name="disqus_thread"></a>
+<div id="disqus_thread" class="comment"><p align='right'><a href="#top" id="disqus_thread-hide" class="hideLink" onclick="showHide('disqus_thread');return true;">Hide Comments</a></p>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    var disqus_identifier = "vimwiki: Rdbi - database access for R";
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div><!-- end of container -->
+
+</body>
+</html>

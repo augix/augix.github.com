@@ -1,0 +1,477 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+	<title>Web interface: GC shift mapping</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<a name='top'></a>
+<div class="container">
+    <div class="header">
+		<h1>Web interface: GC shift mapping</h1> 
+	</div><!-- end of header -->
+	<div class="post"><!-- start of post -->
+	
+<p>
+<a href="Category_Perl.html">Category:Perl</a>
+GC_shift_mapping.cgi
+&lt;perl&gt;
+#!/usr/bin/perl
+$TITLE =     'No title';
+$WEBMASTER = 'Any problems or suggestions please contact &lt;img src="<a href="http://www.augix.com/html/img/Gmail.png"&gt;';">http://www.augix.com/html/img/Gmail.png"&gt;';</a>
+alarm(600); # Timeout: generate SIGALRM after 10 min.
+$SIG{'INT'} = $SIG{'TERM'} = 
+</p>
+<blockquote>
+$SIG{'STOP'} = $SIG{'QUIT'} = $SIG{'ALRM'} = '&amp;stop';
+</blockquote>
+<p>
+if ($ENV{'REQUEST_METHOD'} eq "POST") {
+</p>
+<blockquote>
+read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
+%FORM = &amp;parse($buffer);
+&amp;run;
+</blockquote>
+<p>
+} else {
+</p>
+<blockquote>
+&amp;print_form;
+</blockquote>
+<p>
+}
+exit;
+sub parse { # parse parameters
+</p>
+<blockquote>
+local(%form, @pairs, $name, $value);
+@pairs = split(/&amp;/,$_[0]);
+foreach (@pairs) {
+</blockquote>
+<p>
+	($name, $value) = split /=/;
+	$value =~ tr/\+/ /;
+	$value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+	$form{$name} = $value;
+</p>
+<blockquote>
+}
+return %form;
+</blockquote>
+<p>
+}
+sub run {
+</p>
+<blockquote>
+$|=1; 			# force flush buffer
+print "Content-Type: text/html\n\n";
+print "&lt;title&gt;$TITLE&lt;/title&gt;\n";
+print "&lt;body bgcolor=\"#eeeeee\"&gt;\n";
+print "&lt;pre&gt;";
+</blockquote>
+<ol>
+<li>
+if ($FORM{'times'}=~/\D/) { print 'Go back! Check the "time(s)" value !'; &amp;stop; }
+
+<li>
+if ($FORM{'signal'}=~/[^ACGTacgt]/) { print "Go back! Check your signal. [ACGT] allowed only!"; &amp;stop; }
+
+<li>
+if (!$FORM{'sequence'}) { print 'Go back! Paste your data (FASTA format) and try again!'; &amp;stop; }
+	($r_species,$r_chr,$r_draw,$c_species,$c_chr,$c_draw)=($FORM{'$r_species'},$FORM{'$r_chr'},$FORM{'$r_draw'},$FORM{'$c_species'},$FORM{'$c_chr'},$FORM{'$c_draw'});
+
+</ol>
+
+<p>
+	$draw_par="
+plot( 0, xlim=c(0,250000000), ylim=c(1,22), xlab= 'position', ylab= '', )\n
+title(main = list("no title", cex=1.5, col="red", font=3))\n
+</p>
+
+<p>
+segments( 0, 0, chr.length.$r_species[$r_chr,2], 0 )\n
+text(-2000000,0,labels=as.character(chr.length.$r_species[$r_chr,1]))\n
+";
+</p>
+
+
+<p>
+	if ($r_draw eq "shift") { $draw_r="
+ref_plus  &lt;- subset(ref, shift.$r_species &gt; 0)\n
+ref_moins &lt;- subset(ref, shift.$r_species &lt; 0)\n
+segments( ref_plus$inf.$r_species, ref_plus$chr.$r_species, ref_plus$sup.$r_species, 0 + ref_plus$shift.$r_species, col='red' )\n
+segments( ref_moins$inf.$r_species, ref_moins$chr.$r_species, ref_moins$sup.$r_species, 0 + ref_moins$shift.$r_species, col='blue' )\n
+";}
+</p>
+
+<p>
+	if ($r_draw eq "gc3") {	$draw_r="
+segments( ref$inf.$r_species, ref$chr.$r_species, ref$sup.$r_species, 0 + 0.5, col=ref$gc3.$r_species*100 )\n
+";}
+</p>
+
+<p>
+	if ($r_draw eq "pos") { $draw_r="
+centro.$r_species &lt;- read.table('/bge/augix/minorshift/etape5/$r_species Centromeres.txt')\n
+telo.$r_species &lt;- read.table('/bge/augix/minorshift/etape5/$r_species Telomeres.txt')\n
+</p>
+
+<p>
+arm_p.$r_species &lt;- subset(ref, inf.$r_species &lt; centro.$r_species[shift$chr.$r_species,2])\n
+arm_q.$r_species &lt;- subset(ref, inf.$r_species &gt; centro.$r_species[shift$chr.$r_species,3])\n
+</p>
+
+<p>
+if (length(arm_p.$r_species$inf.$r_species)&gt;0) arm_p.$r_species$col= (centro.$r_species[arm_p.$r_species$chr.$r_species,2] - arm_p.$r_species$inf.$r_species)*100 / centro.$r_species[arm_p.$r_species$chr.$r_species,2]\n 
+if (length(arm_p.$r_species$inf.$r_species)&gt;0) segments(arm_p.$r_species$inf.$r_species, 0, arm_p.$r_species$sup.$r_species,0+0.5,col= arm_p.$r_species$col )\n
+</p>
+
+<p>
+if (length(arm_q.$r_species$inf.$r_species)&gt;0) arm_q.$r_species$col=(arm_q.$r_species$inf.$r_species-centro.$r_species[arm_q.$r_species$chr.$r_species,3])*100/(telo.$r_species[arm_q.$r_species$chr.$r_species,3]-centro.$r_species[arm_q.$r_species$chr.$r_species,3])\n
+if (length(arm_q.$r_species$inf.$r_species)&gt;0) segments(arm_q.$r_species$inf.$r_species,0 ,arm_q.$r_species$sup.$r_species,0+0.5,col=arm_q.$r_species$col)\n
+";}
+</p>
+
+
+<p>
+print &lt;&lt;"HTML";
+Content-Type: text/html
+</p>
+
+<p>
+&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;$TITLE&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor="#eeeeee"&gt;
+&lt;h1 align="left"&gt;&lt;font size="7" color="#000080"&gt;$TITLE&lt;/font&gt;&lt;/h1&gt;
+&lt;h4 align="center"&gt;$WEBMASTER<br>&lt;/h4&gt;
+</p>
+
+<p>
+<br>
+&lt;form action="<a href="http://www.augix.com/cgi-bin/Bioinfo/shift_karyotype.cgi"">http://www.augix.com/cgi-bin/Bioinfo/shift_karyotype.cgi"</a> method="POST" name="Microsatellites" class="style2"&gt;
+</p>
+
+<p>
+<center>
+</p>
+
+<p>
+&lt;FORM onSubmit = "return checkData(this)" action="<a href="http://pbil.univ-lyon1.fr/cgi-bin/Rweb/Rweb.cgi"">http://pbil.univ-lyon1.fr/cgi-bin/Rweb/Rweb.cgi"</a> enctype="multipart/form-data" method="post"&gt;
+&lt;TEXTAREA NAME="Rcode" ROWS=5 COLS=80&gt;
+</p>
+
+<p>
+chr.length.homo &lt;- read.table("/bge/augix/minorshift/etape5/chr.length.homo")
+chr.length.mus &lt;- read.table("/bge/augix/minorshift/etape5/chr.length.mus")
+shift &lt;- read.table("/bge/augix/minorshift/etape5/shift")
+cl &lt;- rainbow(100,s=1,v=1,start=0.6,end=1,gamma=1)
+palette(cl)
+</p>
+
+<p>
+r_species &lt;- $r_species
+r_chr &lt;- $r_chr
+r_draw &lt;- $r_draw
+c_species &lt;- $c_species
+c_chr &lt;- $c_chr
+c_draw &lt;- $c_draw
+</p>
+
+<p>
+r_chr &lt;- $r_chr
+ref &lt;- subset(shift, chr.$r_species == r_chr)
+</p>
+
+<p>
+$draw_par
+$draw_r
+</p>
+
+
+
+
+
+<p>
+&lt;/TEXTAREA&gt;<br>
+&lt;INPUT TYPE="submit" VALUE="Plot it"&gt;&lt;/FORM&gt;
+</p>
+
+<p>
+<hr>
+</center>
+</p>
+
+<p>
+HTML
+</p>
+	
+<p>
+}
+</p>
+
+
+<p>
+sub stop { exit 1; }
+</p>
+
+
+
+<p>
+sub print_form {
+print &lt;&lt;"HTML";
+Content-Type: text/html
+</p>
+
+<p>
+&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;$TITLE&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor="#eeeeee"&gt;
+&lt;h1 align="left"&gt;&lt;font size="7" color="#000080"&gt;$TITLE&lt;/font&gt;&lt;/h1&gt;
+&lt;h4 align="center"&gt;$WEBMASTER<br>&lt;/h4&gt;
+</p>
+
+<p>
+<br>
+&lt;form action="<a href="http://www.augix.com/cgi-bin/Bioinfo/shift_karyotype.cgi"">http://www.augix.com/cgi-bin/Bioinfo/shift_karyotype.cgi"</a> method="POST" name="Microsatellites" class="style2"&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Reference Chromosome:<br>
+Species :&amp;nbsp &lt;input name="r_species" size="6" value="mus"&gt; Chromosome &lt;input name="r_chr" size="6" value="1"&gt;, draw &lt;select name="r_draw"&gt;
+  &lt;option value="shift"&gt;	1. shift
+  &lt;option value="gc3"&gt;	2. GC3
+  &lt;option value=pos"&gt; 3. position between telo and centromere
+&lt;/select&gt;
+<br>
+<br>
+<br>
+Compared Chromosome:
+Species :&amp;nbsp &lt;input name="c_species" size="6" value="homo"&gt; Chromosome &lt;input name="c_chr" size="30" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24"&gt;, draw &lt;select name="c_draw"&gt;
+  &lt;option value="shift"&gt;	1. shift
+  &lt;option value="gc3"&gt;	2. GC3
+  &lt;option value=pos"&gt; 3. position between telo and centromere
+&lt;/select&gt;
+<br><br>
+</p>
+
+
+
+<p>
+&lt;input TYPE=submit VALUE="Run"&gt;	  &lt;input TYPE=reset VALUE="Clear Input"&gt;
+&lt;/form&gt;
+<br>
+&lt;/body&gt;
+&lt;/html&gt;
+</p>
+
+<p>
+HTML
+}
+&lt;/perl&gt;
+</p>
+
+<p>
+simple.php
+&lt;php&gt;
+&lt;!--
+Title: GC shift mapping
+Author: Augix G.H. Xu
+--&gt;
+&lt;?PHP
+$TITLE =     'GC shift mapping';
+$Description = 'This program allows user to retrieve the information of GC content and GC change for vertebrate orthologous genes, and to map these information on the chromosomes according to the gene position.';
+$WEBMASTER = 'Any problems or suggestions please contact &lt;img src="/~augix/img/Gmail.png"&gt;';
+?&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;&lt;?php print $TITLE;?&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#eeeeee"&gt;
+&lt;h1 align="left"&gt;&lt;font size="7" color="#000080"&gt;&lt;?php print $TITLE;?&gt;&lt;/font&gt;&lt;/h1&gt;
+&lt;h4 align="left"&gt;&lt;?php print $Description;?&gt;<br>&lt;/h4&gt;
+&lt;h4 align="center"&gt;&lt;?php print $WEBMASTER;?&gt;<br>&lt;/h4&gt;
+</p>
+
+<p>
+&lt;form method="POST" action=""&lt;? print $_SERVER["PHP_SELF"]; ?&gt;""&gt;
+&lt;p&gt;
+Reference Chromosome:<br>
+Species :&amp;nbsp &lt;input name="r_species" size="6" value="mus"&gt; Chromosome &lt;input name="r_chr" size="6" value="1"&gt;, draw &lt;select name="r_draw"&gt;
+  &lt;option value="shift"&gt;	1. shift
+  &lt;option value="gc3"&gt;	2. GC3
+  &lt;option value="pos"&gt; 3. position between telo and centromere
+&lt;/select&gt;
+<br>
+<br>
+<br>
+Compared Chromosome:<br>
+Species :&amp;nbsp &lt;input name="c_species" size="6" value="homo"&gt; Chromosome &lt;input name="c_chr" size="30" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24"&gt;, draw &lt;select name="c_draw"&gt;
+  &lt;option value="shift"&gt;	1. shift
+  &lt;option value="gc3"&gt;	2. GC3
+  &lt;option value=pos"&gt; 3. position between telo and centromere
+&lt;/select&gt;
+<br><br>
+&lt;input TYPE=submit VALUE="Run"&gt;	  &lt;input TYPE=reset VALUE="Clear Input"&gt;
+&lt;/form&gt;
+</p>
+
+<p>
+&lt;?php
+if ($_POST) {
+</p>
+
+<p>
+$r_chr=$_POST["r_chr"];
+</p>
+
+<p>
+print &lt;&lt;&lt;END
+&lt;FORM onSubmit = "return checkData(this)" action="<a href="http://pbil.univ-lyon1.fr/cgi-bin/Rweb/Rweb.cgi"">http://pbil.univ-lyon1.fr/cgi-bin/Rweb/Rweb.cgi"</a> enctype="multipart/form-data" method="post"&gt;
+&lt;TEXTAREA NAME="Rcode" ROWS=10 COLS=80&gt;
+</p>
+
+<p>
+chr.length.homo &lt;- read.table("/bge/augix/minorshift/etape5/chr.length.homo")
+chr.length.mus &lt;- read.table("/bge/augix/minorshift/etape5/chr.length.mus")
+shift &lt;- read.table("/bge/augix/minorshift/etape5/shift")
+cl=rainbow(105,s=1,v=1,start=0.6,end=1,gamma=1)
+palette(cl)
+species="mus"
+chr=$r_chr
+</p>
+
+
+<p>
+series1 &lt;- subset(shift, shift\$chr.mus==chr)
+plot( 0, xlim=c(0,250000000), ylim=c(0,max(series1\$chr.homo)), xlab= 'position', ylab= '',cex=0.1 )
+title(main = list(paste(species,' chromosome ',chr), cex=1.5, col="red", font=3))
+</p>
+
+<p>
+segments(0,0,chr.length.mus[chr,2],0)
+segments( 0,series1\$chr.homo,chr.length.homo[series1\$chr.homo,2],series1\$chr.homo)
+</p>
+
+<p>
+$draw_in
+</p>
+
+
+<p>
+centro.homo &lt;- read.table("/bge/augix/minorshift/etape5/Human Centromeres.txt")
+telo.homo &lt;- read.table("/bge/augix/minorshift/etape5/Human Telomeres.txt")
+arm_p.homo &lt;- subset(series1, inf.homo &lt; centro.homo[shift\$chr.homo,2])
+arm_q.homo &lt;- subset(series1, inf.homo &gt; centro.homo[shift\$chr.homo,3])
+</p>
+
+<p>
+if (length(arm_p.homo\$inf.homo)&gt;0) arm_p.homo\$col= (centro.homo[arm_p.homo\$chr.homo,2] - arm_p.homo\$inf.homo)*100 / centro.homo[arm_p.homo\$chr.homo,2] 
+if (length(arm_p.homo\$inf.homo)&gt;0) segments(arm_p.homo\$inf.homo,arm_p.homo\$chr.homo,arm_p.homo\$sup.homo,arm_p.homo\$chr.homo+0.5,col= arm_p.homo\$col )
+</p>
+
+<p>
+if (length(arm_q.homo\$inf.homo)&gt;0) arm_q.homo\$col=(arm_q.homo\$inf.homo-centro.homo[arm_q.homo\$chr.homo,3])*100/(telo.homo[arm_q.homo\$chr.homo,3]-centro.homo[arm_q.homo\$chr.homo,3])
+if (length(arm_q.homo\$inf.homo)&gt;0) segments(arm_q.homo\$inf.homo,arm_q.homo\$chr.homo,arm_q.homo\$sup.homo,arm_q.homo\$chr.homo+0.5,col=arm_q.homo\$col)
+</p>
+
+<p>
+text( -2000000,c(1:(length(chr.length.homo[,1]))),labels=as.character(chr.length.homo[,1]))
+</p>
+
+<p>
+###relationship
+segments(series1\$inf.mus,0.8,series1\$inf.homo,series1\$chr.homo,lty=3,lwd=0.5)
+</p>
+
+<p>
+&lt;/TEXTAREA&gt;<br>
+&lt;INPUT TYPE="submit" VALUE="Plot it"&gt;&lt;/FORM&gt;
+</p>
+
+<p>
+<hr>
+</center>
+END;
+}
+</p>
+
+<p>
+?&gt;
+</p>
+
+<p>
+<br>
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/php&gt;
+</p>
+
+	</div><!-- end of post -->
+	<div class="backhome">
+		<a href="../index.html">Main Page</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Web interface: GC shift mapping" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+	</div>
+<br>
+
+<!-- javascript to hide comments -->
+<script language="javascript" type="text/javascript">
+/*** JavaScript: Show/Hide Content ***/
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<!-- javascript to show count of comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+
+<a name="disqus_thread"></a>
+<div id="disqus_thread" class="comment"><p align='right'><a href="#top" id="disqus_thread-hide" class="hideLink" onclick="showHide('disqus_thread');return true;">Hide Comments</a></p>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    var disqus_identifier = "vimwiki: Web interface: GC shift mapping";
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div><!-- end of container -->
+
+</body>
+</html>
