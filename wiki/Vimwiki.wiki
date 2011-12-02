@@ -23,9 +23,9 @@ Copy content of vimwiki folder into ~/.vim/.
 
 === 外部链接 ===
 
-`[http://augix.com augix的主页]`
+`[http://www.augix.com augix的主页]`
 
-[http://augix.com augix的主页]
+[http://www.augix.com augix的主页]
 
 === 内部链接 ===
 Write relative path :: 
