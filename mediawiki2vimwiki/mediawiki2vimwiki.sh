@@ -1,7 +1,11 @@
+#!/bin/bash
 dir1="../wiki"
-dir2="../new
+dir2="../new"
+IFS="
+"
 for i in ../wiki/*.wiki; do
-    sed -n 's/<pre>/{{{/p'
+    grep -H "<pre>" $i
+    sed -n 's/<pre>/{{{/p' $i
 done
 
 

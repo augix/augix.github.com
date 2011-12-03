@@ -10,7 +10,7 @@
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushXML.js"></script>
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
     </script> 
