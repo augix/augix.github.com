@@ -1,3 +1,5 @@
+[http://www.grymoire.com/Unix/Sed.html Sed - An Introduction and Tutorial by Bruce Barnett]
+
 sed 不与初始的文件打交道，所有的改动输出到屏幕或重定向到文件。 
 
 格式为： 

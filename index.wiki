@@ -18,4 +18,5 @@ Please leave a comment if you found an error.
 
 %% [[./blog/Blog]]
 %% [[./entries/]] 
+%% [[./test/html_code]]
 

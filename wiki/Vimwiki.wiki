@@ -1,4 +1,5 @@
 %toc Table of Content 
+
 = Install =
 Download the latest source code of Vimwiki with Mercurial:
 
@@ -11,6 +12,8 @@ This will create a folder named 'vimwiki' in the current directory, and download
 Copy content of vimwiki folder into ~/.vim/.
 
 = Syntax =
+http://code.google.com/p/vimwiki/wiki/Syntax
+
 == font ==
 
 | {{{*粗体文本*}}}         | *粗体文本*         |
@@ -110,6 +113,55 @@ Create folder of wiki file ::
  文本
  }}}
 
+== code ==
+referece: http://gvimmanual.blogspot.com/2010/12/vimwiki-option-nestedsyntaxes.html
+in vimrc:
+{{{
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+}}}
+
+in .wiki file:
+{{{class="brush: python"
+for i in range(5):
+    print i
+}}}
+
+
+outcome in .html file:
+{{{class="brush: python"
+for i in range(5):
+    print i
+}}}
+
+== Syntax Highlighting ==
+* Download SyntaxHighlighter http://alexgorbatchev.com/SyntaxHighlighter/
+* Unpack scripts and styles folders into ~/vimwiki_html/ (vimwiki template folder in my case). 
+* modify .vimrc
+{{{
+let wiki.nested_syntaxes = {'python': 'python', 'R': 'R', 'bash': 'sh', 'perl': 'perl'}
+}}}
+* modify template file
+{{{class="brush: xml"
+<html>
+  <head>
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="%root_path%templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="%root_path%templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
+  </head>
+  <body>
+}}}
+
+
 == quote ==
 
      四个以上空格开始的文本，就是一个应用块
@@ -176,7 +228,6 @@ percentage of toggled child items(see also |g:vimwiki_listsyms|): >
                         wiki page if needed).
 }}}
 
-
 = Other =
 == jump ==
 {{{
@@ -191,4 +242,13 @@ comment line 195 in ~/.vim/ftplugin/vimwiki.vim
 "\ echo 'HTML conversion is done.'
 }}}
 
+== Accepted HTML code ==
+{{{class="brush: xml"
+<br>
+<hr>
+<u>underline</u>
+<sup>2</sup>
+<sub>0</sub>
+<b>bold</b> 
+}}}
 

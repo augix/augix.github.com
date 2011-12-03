@@ -1,22 +1,7 @@
 <html>
 <head>
-	<link rel="Stylesheet" type="text/css" href="templates/skinny_disqus.css" />
-
-    <!-- SyntaxHighlighter start -->
-    <link type="text/css" rel="stylesheet" href="templates/SyntaxHighlighter/styles/shCore.css" /> 
-    <link type="text/css" rel="stylesheet" href="templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
-    <script type="text/javascript" src="templates/SyntaxHighlighter/scripts/shCore.js"></script> 
-    <script type="text/javascript" src="templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
-    <script type="text/javascript" src="templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
-    <script type="text/javascript" src="templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
-    <script type="text/javascript" src="templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
-    <script type="text/javascript" src="templates/SyntaxHighlighter/scripts/shBrushXML.js"></script>
-    <script type="text/javascript">
-      SyntaxHighlighter.all();
-    </script> 
-    <!-- SyntaxHighlighter end -->
-
-	<title>Home</title>
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+	<title>getoption</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
@@ -24,51 +9,33 @@
 <a name='top'></a>
 <div class="container">
     <div class="header">
-		<h1>Home</h1> 
+		<h1>getoption</h1> 
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-
-<p>
-This is the home of <a href="http://wiki.augix.com">wiki.augix.com</a>, this wiki covers mainly the following subjects:
-</p>
-
-<h1 id="toc_1">Subjects</h1>
-<ul>
-<li>
-<a href="wiki/Programming.html">Programming</a>
-
-<li>
-<a href="wiki/Bioinformatics.html">Bioinformatics</a>
-
-<li>
-<a href="wiki/IT Notes.html">OS</a>
-
-</ul>
-
-<ul>
-<li>
-<a href="wiki/Biology Notes.html">Biology</a>
-
-<li>
-<a href="wiki/Statistics.html">Statistics</a>
-
-<li>
-<a href="wiki/Foreign Language.html">Foreign Languages</a>
-
-<li>
-<a href="wiki/Main Page.html"> All subjects</a>
-
-</ul>
-
-<p>
-Please leave a comment if you found an error.
-</p>
+<pre>
+#!/usr/bin/env python
+'''An improved getopt module which only treat short options.
+'''
+ 
+  import sys, getopt
+   def short(options):
+        try: 
+                     opts,args = getopt.getopt(sys.argv[1:], 'i:m:o:')
+                                      except getopt.GetoptError, err:
+                                                               print str(err)
+                                                                                            values = [] 
+                                                                                                                             for o, a in opts:
+                                                                                                                                                                      values.append(a)
+                                                                                                                                                                                                                   values.append(args)
+                                                                                                                                                                                                                                                                    return values
+                                                                                                                                                                                                                                                                    An
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="index.html">Main Page</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Home" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+		<a href="../index.html">Main Page</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: getoption" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -114,7 +81,7 @@ function showHide(shID) {
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "vimwiki: Home";
+    var disqus_identifier = "vimwiki: getoption";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */

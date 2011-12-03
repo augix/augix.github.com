@@ -1,3 +1,4 @@
+%template default
 = Description =
 When you want change file names in the Unix Shell, you can use '''#''' and '''%''' to match a part of the file name and replace this part with other strings you want.
 
@@ -32,7 +33,11 @@ the result is
 You can also use the '''*''' to help '''#''' and '''%''' match variable things. Let's see some examples:
 
 == Change extension of a lot files ==
- for i in *.wav; do echo $i ${i%.*}.mp3; done
+{{{class="brush: bash"
+for i in *.wav; do 
+    echo $i ${i%.*}.mp3; 
+done
+}}}
 
 the result is:
 <pre>

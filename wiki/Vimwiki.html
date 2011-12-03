@@ -1,6 +1,21 @@
 <html>
 <head>
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXML.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
 	<title>Vimwiki</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -35,19 +50,23 @@
 </ul>
 <li><a href="#toc_2.5">table</a>
 <li><a href="#toc_2.6">预定于化文本</a>
-<li><a href="#toc_2.7">quote</a>
-<li><a href="#toc_2.8">Comments</a>
-<li><a href="#toc_2.9">To do list</a>
-<li><a href="#toc_2.10">table of content</a>
+<li><a href="#toc_2.7">code</a>
+<li><a href="#toc_2.8">Syntax Highlighting</a>
+<li><a href="#toc_2.9">quote</a>
+<li><a href="#toc_2.10">Comments</a>
+<li><a href="#toc_2.11">To do list</a>
+<li><a href="#toc_2.12">table of content</a>
 </ul>
 <li><a href="#toc_3">Keyboard shortcuts</a>
 <li><a href="#toc_4">Other</a>
 <ul>
 <li><a href="#toc_4.1">jump</a>
 <li><a href="#toc_4.2">Turn off saving message</a>
+<li><a href="#toc_4.3">Accepted HTML code</a>
 </ul>
 </ul>
 </div>
+
 <h1 id="toc_1">Install</h1>
 <p>
 Download the latest source code of Vimwiki with Mercurial:
@@ -66,6 +85,10 @@ Copy content of vimwiki folder into ~/.vim/.
 </p>
 
 <h1 id="toc_2">Syntax</h1>
+<p>
+<a href="http://code.google.com/p/vimwiki/wiki/Syntax">http://code.google.com/p/vimwiki/wiki/Syntax</a>
+</p>
+
 <h2 id="toc_2.1">font</h2>
 
 <table>
@@ -281,7 +304,72 @@ Copy content of vimwiki folder into ~/.vim/.
 文本
 </pre>
 
-<h2 id="toc_2.7">quote</h2>
+<h2 id="toc_2.7">code</h2>
+<p>
+referece: <a href="http://gvimmanual.blogspot.com/2010/12/vimwiki-option-nestedsyntaxes.html">http://gvimmanual.blogspot.com/2010/12/vimwiki-option-nestedsyntaxes.html</a>
+in vimrc:
+</p>
+<pre>
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+</pre>
+
+<p>
+in .wiki file:
+</p>
+<pre class="brush: python">
+for i in range(5):
+    print i
+</pre>
+
+
+<p>
+outcome in .html file:
+</p>
+<pre class="brush: python">
+for i in range(5):
+    print i
+</pre>
+
+<h2 id="toc_2.8">Syntax Highlighting</h2>
+<ul>
+<li>
+Download SyntaxHighlighter <a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a>
+
+<li>
+Unpack scripts and styles folders into ~/vimwiki_html/ (vimwiki template folder in my case). 
+
+<li>
+modify .vimrc
+<pre>
+let wiki.nested_syntaxes = {'python': 'python', 'R': 'R', 'bash': 'sh', 'perl': 'perl'}
+</pre>
+
+<li>
+modify template file
+<pre class="brush: xml">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- SyntaxHighlighter start --&gt;
+    &lt;link type="text/css" rel="stylesheet" href="%root_path%templates/SyntaxHighlighter/styles/shCore.css" /&gt; 
+    &lt;link type="text/css" rel="stylesheet" href="%root_path%templates/SyntaxHighlighter/styles/shThemeDefault.css" /&gt; 
+    &lt;script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shCore.js"&gt;&lt;/script&gt; 
+    &lt;script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPython.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPerl.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushBash.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushR.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+      SyntaxHighlighter.all();
+    &lt;/script&gt; 
+    &lt;!-- SyntaxHighlighter end --&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+</pre>
+
+</ul>
+
+
+<h2 id="toc_2.9">quote</h2>
 <blockquote>
 四个以上空格开始的文本，就是一个应用块
 </blockquote>
@@ -289,12 +377,12 @@ Copy content of vimwiki folder into ~/.vim/.
 我就是块级引用～～ 
 </blockquote>
 
-<h2 id="toc_2.8">Comments</h2>
+<h2 id="toc_2.10">Comments</h2>
 <p>
 Use %% to leave comment in the wiki files.
 </p>
 
-<h2 id="toc_2.9">To do list</h2>
+<h2 id="toc_2.11">To do list</h2>
 <p>
 Pressing &lt;C-Space&gt; on the third list item will toggle it and all of it's
 </p>
@@ -319,7 +407,7 @@ percentage of toggled child items(see also |g:vimwiki_listsyms|): &gt;
     [X] -- 100%
 </pre>
 
-<h2 id="toc_2.10">table of content</h2>
+<h2 id="toc_2.12">table of content</h2>
 <p>
 添加目录到wiki页面 %toc 
 </p>
@@ -354,7 +442,6 @@ percentage of toggled child items(see also |g:vimwiki_listsyms|): &gt;
                         wiki page if needed).
 </pre>
 
-
 <h1 id="toc_4">Other</h1>
 <h2 id="toc_4.1">jump</h2>
 <pre>
@@ -369,6 +456,16 @@ comment line 195 in ~/.vim/ftplugin/vimwiki.vim
 </p>
 <pre>
 "\ echo 'HTML conversion is done.'
+</pre>
+
+<h2 id="toc_4.3">Accepted HTML code</h2>
+<pre class="brush: xml">
+<br>
+<hr>
+<u>underline</u>
+<sup>2</sup>
+<sub>0</sub>
+<b>bold</b> 
 </pre>
 
 	</div><!-- end of post -->

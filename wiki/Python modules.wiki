@@ -1,1 +1,1 @@
-* [[getoption.py]]
+* [[getoption]]
