@@ -1,4 +1,3 @@
-[[Category: Perl]]
 [http://www.zdnet.com.cn/developer/webdevelop/story/0,3800067013,39252123,00.htm Builder.com.cn-Web技术-perl理解贪婪匹配和最小匹配之间的区别]
 
 正则表达式的新手经常将贪婪匹配和最小匹配理解错误。默认情况下，Perl 的正则表达式是“贪婪地”，也就是说它们将尽可能多地匹配字符。

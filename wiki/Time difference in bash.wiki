@@ -1,5 +1,5 @@
 %template disqus
-{{{
+{{{class="brush: bash"
 #!/bin/bash
 START=$(date +%s)
 # do something

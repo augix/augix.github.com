@@ -1,5 +1,5 @@
 = string length =
-{{{
+{{{class="brush: bash"
 a=abcABC123ABCabc
 
 echo ${#a}          # 15
@@ -20,7 +20,7 @@ augixs-ibook-g4:~ augix$ echo $s
 = concatenate two strings: =
 The braces are required for concatenation constructs.
 
-{{{
+{{{class="brush: text"
 $p_01
 The value of the variable "p_01".
 
@@ -32,7 +32,7 @@ The value of the variable "p" with "_01" pasted onto the end.
 
 ${string:position}
 
-{{{
+{{{class="brush: bash"
 stringZ=abcABC123ABCabc
 #       0123456789.....
 #       0-based indexing.
@@ -57,6 +57,7 @@ echo ${stringZ: -4}                          # Cabc
 
 = Substring Replacement =
 
+{{{class="brush: bash"
 ${string/substring/replacement}
 
     Replace first match of $substring with $replacement. [2] 
@@ -64,7 +65,6 @@ ${string//substring/replacement}
 
     Replace all matches of $substring with $replacement.
 
-{{{
 stringZ=abcABC123ABCabc
 
 echo ${stringZ/abc/xyz}       # xyzABC123ABCabc
@@ -97,7 +97,7 @@ echo ${stringZ//abc}          # ABC123ABC
 = change file name =
 [http://www.debian-administration.org/articles/150 Easily rename file]
 
-{{{
+{{{class="brush: bash"
 # method 1
 i=a.JPG
 mv $i ${i/.JPG/}.jpg

@@ -23,9 +23,9 @@ $ tree ./
 
 What I did is making an alias:
 {{{
- $ vi ~/.bashrc
- alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
- $ tree
+$ vi ~/.bashrc
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+$ tree
 }}}
 
 only display the folders with depth < 3

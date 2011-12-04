@@ -1,5 +1,5 @@
 = Create Tunel =
-In <tt>~/.bashrc</tt>
+In ~/.bashrc
 {{{class="brush: bash"
 ## localhost:7777 -> gate -> eva001:22
 alias sshrzg='ssh -l augix -L 7777:eva001.opt.rzg.mpg.de:22 gate.rzg.mpg.de cat -'
@@ -12,7 +12,7 @@ sshrzg
 }}}
 You forwarded localhost:7777 to eva001.opt.rzg.mpg.de:22
 
-<tt>localhost:7777 -> eva001:22</tt>
+localhost:7777 -> eva001:22
 
 = Use Tunel =
 * to connect:
@@ -24,7 +24,7 @@ scp -P 7777 localhost:/nfs/eva/augix/cDNA/simulation/sub.sh ~/Projects/cDNA/simu
 scp -P 7777 ~/Projects/cDNA/simulation/sub.sh localhost:/nfs/eva/augix/cDNA/simulation/sub.sh
 }}}
 
-== Use <tt>Yummy FTP</tt> or any other FTP client ==
+== Use Yummy FTP or any other FTP client ==
 * Make a bookmark for eva001.opt.rzg.mpg.de:/nfs/eva/augix/cDNA
 	* server: localhost
 	* port: 7777

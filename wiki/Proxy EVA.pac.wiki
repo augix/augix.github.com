@@ -1,5 +1,4 @@
-[[Category:Network]] [[Category:Unix]]
-The Source of <tt>Proxy_EVA.pac</tt>
+The Source of Proxy_EVA.pac
 {{{class="brush: bash"
 function FindProxyForURL(url, host)
 {

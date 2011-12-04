@@ -4,14 +4,14 @@
 [http://flyingmeat.com/fs/flystashweb.cgi/6073cece-d0b5-01d9-13d8-c0cbe4c4a707 VoodooPad: AppleScript]
 
 Create a new page:
-{{{
+{{{class="brush: applescript"
 tell application "VoodooPad"
   tell document 1 to create page with title "new page" with contents "This is a new page."
 end tell
 }}}
 
 Export to iPod:
-{{{
+{{{class="brush: applescript"
 tell application "VoodooPad"  
   -- this is the path to your document.
   open "srv:Users:gus:Desktop:astest.vdoc" as alias
@@ -22,7 +22,7 @@ end tell
 }}}
 
 Reading a Text file Into an AppleScript Variable
-{{{
+{{{class="brush: applescript"
 set theFile to (choose file with prompt "Select a file to read:" of type {"TEXT"})
 open for access theFile
 set fileContents to (read theFile)
@@ -30,7 +30,7 @@ close access theFile
 }}}
 
 Writing an AppleScript Variable to a Text File
-{{{
+{{{class="brush: applescript"
 set newFile to new file with prompt "Output file:" default name "My New File"
 open for access newFile with write permission
 -- if you want to overwrite an existing file use set eof of newFile to 0 first.

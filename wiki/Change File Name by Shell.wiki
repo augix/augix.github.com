@@ -1,4 +1,16 @@
-%template default
+%template disqus
+= Update 2011 Dec. 14 =
+{{{class="brush: text"
+replace jpg with JPG with ${i/jpg}JPG
+}}}
+
+{{{class="brush: bash"
+for i in *.jpg; do
+    j=${i/jpg}JPG
+    echo "$i $j"
+done
+}}}
+
 = Description =
 When you want change file names in the Unix Shell, you can use <b>#</b> and <b>%</b> to match a part of the file name and replace this part with other strings you want.
 
@@ -18,18 +30,18 @@ echo $old $new
 }}}
 
 the result is
-{{{
+{{{class="brush: text"
 human.fa chimp.fa
 }}}
 
-{{{
+{{{class="brush: text"
 old="music.mp3"
 new=${old%mp3}wav
 echo $old $new
 }}}
 
 the result is
-{{{
+{{{class="brush: text"
 music.mp3 music.wav
 }}}
 
@@ -44,23 +56,23 @@ done
 }}}
 
 the result is:
-{{{
+{{{class="brush: text"
 a.wav a.mp3
 b.wav b.mp3
 c.wav c.mp3
 }}}
  
-{{{
+{{{class="brush: text"
 for i in *.wav; do mv "$i" "${i%%.wav}.mp3"; done
 }}}
 
 == Change the first underline to dot ==
-{{{
+{{{class="brush: text"
 for i in *_*; do echo $i ${i%%_*}.${i#*_}; done
 }}}
 
 result:
-{{{
+{{{class="brush: text"
 ha1_r1_fa ha1.r1_fa
 ha1_r2_fa ha1.r2_fa
 ha2_r1_fa ha2.r1_fa
@@ -68,12 +80,12 @@ ha2_r2_fa ha2.r2_fa
 }}}
 
 == Change the last underline to dot ==
-{{{
+{{{class="brush: text"
 for i in *_*; do echo $i ${i%_*}.${i##*_}; done
 }}}
 
 result:
-{{{
+{{{class="brush: text"
 ha1_r1_fa ha1_r1.fa
 ha1_r2_fa ha1_r2.fa
 ha2_r1_fa ha2_r1.fa

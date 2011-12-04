@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -31,9 +32,7 @@
 	<div class="post"><!-- start of post -->
 	
 <h1 id="toc_1">Define a function</h1>
-<pre>
-{{{class="brush: bash"
-  
+<pre class="brush: bash">
 #!/bin/bash 
 
 testfunc () { 
@@ -50,12 +49,7 @@ function e {
 }  
 e Hello
 e World
-
-
 </pre>
-<p>
-}}}
-</p>
 
 <h1 id="toc_2">Send parameter</h1>
 
@@ -63,9 +57,7 @@ e World
 <a href="http://www.ibm.com/developerworks/library/l-bash-parameters.html?ca=drs-">IBM: bash parameters</a> 
 </p>
 
-<pre>
-{{{class="brush: bash"
-
+<pre class="brush: bash">
 [ian@pinguino ~]$ testfunc () { echo "$# parameters"; echo "$@"; }
 [ian@pinguino ~]$ testfunc
 0 parameters
@@ -85,14 +77,9 @@ b
 c
 d
 </pre>
-<p>
-}}}
-</p>
 
 <h1 id="toc_3">Return value</h1>
-<pre>
-{{{class="brush: bash"
-
+<pre class="brush: bash">
 function myfunc()
 {
     local  myresult='some value'
@@ -102,9 +89,6 @@ function myfunc()
 result=$(myfunc)   # or result=`myfunc`
 echo $result
 </pre>
-<p>
-}}}
-</p>
 
 <p>
 <a href="http://www.linuxjournal.com/content/return-values-bash-functions">Ways to let function returns a value</a>

@@ -39,8 +39,8 @@ for old in $dir1/*.wiki; do
          s|</pre>|\n}}}|g;
          s|<code>|{{{\n|g;
          s|</code>|\n}}}|g;
-         s|<t>|{{{\n|g;
-         s|</t>|\n}}}|g;
+         s|<tt>|{{{\n|g;
+         s|</tt>|\n}}}|g;
          s|\*\*\*|\t\t\*|g;
          s|\*\*|\t\*|g;
          ' <"$tmp2"\

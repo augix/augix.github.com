@@ -15,7 +15,7 @@ Configurations done after created a new account on Mac OS X Leopard:
 * [[Share mouse and keyboard]]
 
 == Finder == 
-* Install <b>NuFile</b> <tt>Softwares/System/System Utilities/NuFileInstaller2-0.pkg</tt> which put <b>new file</b> list to the right-click menu
+* Install <b>NuFile</b> Softwares/System/System Utilities/NuFileInstaller2-0.pkg which put <b>new file</b> list to the right-click menu
 * <b>Customize Toolbar</b>, put <b>Path</b>, <b>New Folder</b>, <b>Connect</b> on the Toolbar
 === sshfs ===
 * sshfs integrate the sftp directory with Finder
@@ -31,12 +31,12 @@ Configurations done after created a new account on Mac OS X Leopard:
 * Install it to search security issues
 
 == Stuffit Deluxe ==
-* Install from <tt>boulo.local.:Softwares/System/Zip tool/StuffItDeluxe11.0.1Serial/StuffIt Deluxe 11.0.1.dmg</tt> to <tt>~/Applications/</tt>
+* Install from boulo.local.:Softwares/System/Zip tool/StuffItDeluxe11.0.1Serial/StuffIt Deluxe 11.0.1.dmg to ~/Applications/
 
 == Screen Sharing ==
 [http://www.usingmac.com/2008/1/3/killer-leopard-trick-finder-screen-sharing Link: Usingmac.com]
 
-* Make an alias for <tt>/System/Library/CoreServices/Screen Sharing.app</tt>, put it in <tt>~/Applications.</tt>
+* Make an alias for /System/Library/CoreServices/Screen Sharing.app, put it in ~/Applications.
 
 * Run {{{class="brush: bash"
 defaults write com.apple.ScreenSharing ShowBonjourBrowser_Debug 1
@@ -60,8 +60,8 @@ defaults write com.apple.ScreenSharing 'NSToolbar Configuration ControlToolbar' 
 * Copy Augix.collection and Chinese.collection from  boulo.local.:~/Library/FontCollections/ to ~/Library/FontCollections/
 
 = Unix = 
-* Write <tt>~/.bashrc</tt>. [[.bashrc on Mac OS X]]
-* Write <tt>~/.ssh/config</tt>. [[ssh_config]]
+* Write ~/.bashrc. [[.bashrc on Mac OS X]]
+* Write ~/.ssh/config. [[ssh_config]]
 * Vim
 {{{
 cp /usr/share/vim/vim70/vimrc_example.vim ~/.vimrc
@@ -73,20 +73,20 @@ Change preferred window style to <b>Novel</b>, change font to <b>Andale Mono 13 
 = Work related =
 
 == <b>Projects</b> folder ==
-* Copy <tt>boulo.local.:~/Projects/</tt> to <tt>~/Projects/</tt>.
-* Copy <tt>boulo.local.:~/Programming/</tt> to <tt>~/Programming/</tt>.
+* Copy boulo.local.:~/Projects/ to ~/Projects/.
+* Copy boulo.local.:~/Programming/ to ~/Programming/.
 
 == Coda ==
-* Install Coda from <tt></tt> to <tt>~/Applications/</tt>
-* Copy <tt>boulo.local.:~/Library/Application Support/Coda/</tt> to <tt>~/Library/Application Support/</tt>, this copy the "Modes" folder for Coda.
+* Install Coda from  to ~/Applications/
+* Copy boulo.local.:~/Library/Application Support/Coda/ to ~/Library/Application Support/, this copy the "Modes" folder for Coda.
 * Create a Site named "RZG", that's the garching machine.
 
 == iTerm ==
-* Install iTerm <tt>/Volumes/mac/augix/Softwares/Network/Remote control/iTerm_0.9.5.dmg</tt> into <tt>/Users/augix/Applications/</tt>
+* Install iTerm /Volumes/mac/augix/Softwares/Network/Remote control/iTerm_0.9.5.dmg into /Users/augix/Applications/
 * The <b>Terminal</b> is improved in Leopard. So, there's no need to install iTerm.
 
 == Yummy FTP ==
-* Copy <tt>Yummy FTP</tt> from <tt>Softwares/Network/Download/</tt> to <tt>~/Applications/</tt>
+* Copy Yummy FTP from Softwares/Network/Download/ to ~/Applications/
 * Make a bookmark for eva001.opt.rzg.mpg.de:/nfs/eva/augix/cDNA using [[SSH Tunelling]]
 	* server: localhost
 	* port: 7777
@@ -95,15 +95,15 @@ Change preferred window style to <b>Novel</b>, change font to <b>Andale Mono 13 
 	* initial path: /nfs/eva/augix/cDNA
 * Make a bookmark for ftp.rzg.mpg.de
 == R ==
-* Install R from <tt>Softwares/Science/R-2.6.1.dmg</tt> to <tt>/Applications</tt>
+* Install R from Softwares/Science/R-2.6.1.dmg to /Applications
 
 = Office =
-* Install <b>Microsoft Office 2008</b> on /Applications/. source: <tt>Softwares/Office/Office2008.dmg</tt>
+* Install <b>Microsoft Office 2008</b> on /Applications/. source: Softwares/Office/Office2008.dmg
 == Voodoopad ==
-* Install VoodooPad Pro 3.2.3 into <tt>~/Applications/</tt>. source: <tt>Softwares/Office/VoodooPadPro3.2.3.dmg</tt>
+* Install VoodooPad Pro 3.2.3 into ~/Applications/. source: Softwares/Office/VoodooPadPro3.2.3.dmg
 == BibDesk ==
-* Copy <tt>boulo.local.:/Applications/BibDesk.app</tt> to <tt>~/Applications/</tt>
-* Copy <tt>boulo.local.:/Users/augix/Documents/BibDesk/</tt> to <tt>~/Documents/</tt>
+* Copy boulo.local.:/Applications/BibDesk.app to ~/Applications/
+* Copy boulo.local.:/Users/augix/Documents/BibDesk/ to ~/Documents/
 * Configuration: File papers in fixed location: ~/Documents/BibDesk/Papers/
 == Dictionary ==
 * One can install new dictionaries in the application <b>Dictionary</b> by using a software called <b>DictUnifier</b>.
@@ -118,7 +118,7 @@ Turns out iCal has a preference called 'Show Birthdays Calendar' which pulls its
 
 == Mail ==
 * Create my email accounts
-* Open Mail, click <tt>File - Import Mailboxes</tt> to import mails from <tt>Boulo.local.:~/Mail/</tt>
+* Open Mail, click File - Import Mailboxes to import mails from Boulo.local.:~/Mail/
 * [[Backup Mail Preferences]]: Accounts, Rules, Signatures...
 * [[New_Mail_Gowl.scpt]]
 
@@ -128,19 +128,19 @@ Turns out iCal has a preference called 'Show Birthdays Calendar' which pulls its
 
 = Internet life =
 == Safari ==
-* Copy <tt>boulo.local.:Users/augix/Library/Safari/Bookmarks.plist</tt> to <tt>~/Library/Safari/Bookmarks.plist</tt>
+* Copy boulo.local.:Users/augix/Library/Safari/Bookmarks.plist to ~/Library/Safari/Bookmarks.plist
 
 == IM ==
-* Install <b>LumaQQ</b> ~/Applications/. source: <tt>Softwares/Network/IM/LumaQQ.dmg</tt>
+* Install <b>LumaQQ</b> ~/Applications/. source: Softwares/Network/IM/LumaQQ.dmg
 
 == Fluid ==
 * Install Fluid in ~/Applications/.
-* Make <tt>Augix' Wiki</tt> as an application.
+* Make Augix' Wiki as an application.
 
 
 = Multimedia =
 == RealPlayer ==
-* Install RealPlayer from <tt>Softwares/Multimedia/Video/RealPlayer10GOLD.dmg</tt> to <tt>~/Applications/</tt>
+* Install RealPlayer from Softwares/Multimedia/Video/RealPlayer10GOLD.dmg to ~/Applications/
 == Windows Media® Components for QuickTime ==
 * http://www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx
 == VLC ==
@@ -164,7 +164,7 @@ $cfg['Servers'][$i]['password'] = 'PASSWORD';
 
 == MediaWiki ==
 * Install <b>MediaWiki</b>
-	* Copy <b>mediawiki-1.6.10</b> form <tt>Softwares/Network/Server/mediawiki-1.6.10.tar</tt> into <tt>/Applications/xampp/xamppfiles/htdocs/</tt>, untar it. Delete mediawiki-1.6.10.tar.
+	* Copy <b>mediawiki-1.6.10</b> form Softwares/Network/Server/mediawiki-1.6.10.tar into /Applications/xampp/xamppfiles/htdocs/, untar it. Delete mediawiki-1.6.10.tar.
 	* change folder name from <b>mediawiki-1.6.10</b> to <b>wk</b>
 	* Open Safari, go to http://localhost/wk/
 	* {{{class="brush: bash"
@@ -175,10 +175,10 @@ chmod a+w config
 }}}
 	* Open Safari, go to http://localhost/wk/, and fill the form <b>Site config</b>
 	* Move the config/LocalSettings.php file into the parent directory
-	* Delete <tt>/Applications/xampp/xamppfiles/htdocs/wk/config</tt>
+	* Delete /Applications/xampp/xamppfiles/htdocs/wk/config
 
 * Configure <b>MediaWiki</b>
-	* Replace <tt>/Applications/xampp/xamppfiles/htdocs/wk/images</tt> by <tt>Boulo.local:/Applications/xampp/xamppfiles/htdocs/wk/images</tt>
+	* Replace /Applications/xampp/xamppfiles/htdocs/wk/images by Boulo.local:/Applications/xampp/xamppfiles/htdocs/wk/images
 	* [[Move MediaWiki from Boulo.local to the new machine]].
 
 == CGI-Executables ==

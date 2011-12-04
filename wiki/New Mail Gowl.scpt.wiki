@@ -1,4 +1,4 @@
-* Write a file named New_Mail_Gowl.scpt in <tt>~/Programming/AppleScript/</tt>
+* Write a file named New_Mail_Gowl.scpt in ~/Programming/AppleScript/
 {{{
 on perform_mail_action(info)
 	

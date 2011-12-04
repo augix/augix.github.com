@@ -17,10 +17,12 @@ X
 {{{class="brush: bash"
 ~/bin/clustalw2 -infile=$i -outfile=$outfile -output=fasta > $outfile2;
 }}}
+
 clustalw2 parameters
 http://anthrax.zlog.cn/17215.html
 
 or use MUSCLE
+
 {{{class="brush: bash"
 ~/bin/src/muscle/muscle -in $i -out $outfile -stable -quiet
 }}}

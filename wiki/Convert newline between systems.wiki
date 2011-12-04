@@ -1,8 +1,8 @@
 The new line characters are different in different operation systems. In order to convert them between systems, we should use the following command.
 
-{{{
 http://en.wikipedia.org/wiki/Newline
 
+{{{class="brush: bash"
 sed -e 's/$/\r/' inputfile > outputfile                # UNIX to DOS  (adding CRs)
 sed -e 's/\r$//' inputfile > outputfile                # DOS  to UNIX (removing CRs)
 perl -pe 's/\r\n|\n|\r/\r\n/g' inputfile > outputfile  # Convert to DOS

@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -34,7 +35,8 @@
 <h2 id="toc_1.1">Lua Plugin: Make a new page with selected text</h2>
 <p>
 Put the following codes in ~/Library/Application Support/VoodooPad/Script PlugIns/Make_Link_With_Selected_Text.lua
-&lt;lua&gt;
+</p>
+<pre class="brush text">
 --[[
 VPLanguage = lua
 VPScriptMenuTitle = Make Link With Selected Text
@@ -45,13 +47,9 @@ VPEndConfig
 textView = windowController:textView()
 pageName = textView:objc_string():substringWithRange(textView:selectedRange())
 document:createNewPageWithName(pageName)
-&lt;/lua&gt;
-</p>
+</pre>
 
-<p>
-AppleScript:
-</p>
-<pre>
+<pre class="brush applescript">
 tell application "VoodooPad Pro"
 	tell document 1 to create page with title "title"
 end tell
@@ -62,7 +60,7 @@ and,
 there is an hyper link which calls applescript editor, you can put this code either in VoodooPad or in Safari as a bookmarklet.
 </p>
 
-<pre>
+<pre class="brush text">
 applescript://com.apple.scripteditor?action=new&amp;script=%0D%0Atell%20application%20%22VoodooPad%20Pro%22%0D%0A%20%20tell%20document%201%20to%20create%20page%20with%20title%20%22title%22%20%0D%0Aend%20tell
 </pre>
 

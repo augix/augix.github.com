@@ -1,9 +1,7 @@
 automatically start a list of jobs in a given time
 {{{
-at -f joblist now + 1 minutes
-}}}
+$ at -f joblist now + 1 minutes
 
-{{{
 $ at now + 25 minutes
 echo ^G > /dev/ttyp4
 ^D

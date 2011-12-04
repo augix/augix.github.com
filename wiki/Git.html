@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -32,7 +33,7 @@
 	
 
 <h1 id="toc_1">Basic topics</h1>
-<pre>
+<pre class="brush: text">
 # Initiate a repository.
 git init
  
@@ -104,7 +105,7 @@ git checkout HEAD^ -- filename # the version before the most recent commit
 
 <h1 id="toc_2">Examples</h1>
 
-<pre>
+<pre class="brush: text">
 mkdir newproject
 cd newproject
 git init
@@ -136,7 +137,7 @@ git checkout -f foo.c # i don't understand this
 <ul>
 <li>
 Find Git repository 
-<pre>
+<pre class="brush: text">
 find . -name .git
 </pre>
 
@@ -145,7 +146,7 @@ find . -name .git
 <ul>
 <li>
 Amendment
-<pre>
+<pre class="brush: text">
 $ git commit -m 'initial commit'
 $ git add forgotten_file
 $ git commit --amend
@@ -159,7 +160,7 @@ The 2nd commit overwrite the 1st.
 <ul>
 <li>
 Git remote
-<pre>
+<pre class="brush: text">
 # add a remote
 git remote add &lt;remote name&gt; &lt;url&gt;
 
@@ -194,7 +195,7 @@ git pull &lt;remote name&gt; &lt;remote branch&gt;
 <ul>
 <li>
 Git + Dropbox
-<pre>
+<pre class="brush: text">
 cd ~
 git init
 git add .vimrc .gvimrc .bashrc
@@ -213,7 +214,7 @@ git push dropbox master
 </ul>
 
 <h1 id="toc_4">Customize</h1>
-<pre>
+<pre class="brush: text">
 $ git config color.ui true
 $ git config format.pretty oneline
 </pre>
@@ -222,7 +223,7 @@ $ git config format.pretty oneline
 .gitconfig
 </p>
 
-<pre>
+<pre class="brush: text">
 [color]
   ui = true
 

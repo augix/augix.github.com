@@ -1,7 +1,7 @@
 %title Git
 
 = Basic topics =
-{{{
+{{{class="brush: text"
 # Initiate a repository.
 git init
  
@@ -73,7 +73,7 @@ git checkout HEAD^ -- filename # the version before the most recent commit
 
 = Examples =
 
-{{{
+{{{class="brush: text"
 mkdir newproject
 cd newproject
 git init
@@ -103,12 +103,12 @@ git checkout -f foo.c # i don't understand this
 
 = Extended topics =
 * Find Git repository 
-{{{
+{{{class="brush: text"
 find . -name .git
 }}}
 
 * Amendment
-{{{
+{{{class="brush: text"
 $ git commit -m 'initial commit'
 $ git add forgotten_file
 $ git commit --amend
@@ -116,7 +116,7 @@ $ git commit --amend
 The 2nd commit overwrite the 1st.
 
 * Git remote
-{{{
+{{{class="brush: text"
 # add a remote
 git remote add <remote name> <url>
 
@@ -147,7 +147,7 @@ git pull <remote name> <remote branch>
 }}}
 
 * Git + Dropbox
-{{{
+{{{class="brush: text"
 cd ~
 git init
 git add .vimrc .gvimrc .bashrc
@@ -164,14 +164,14 @@ git push dropbox master
 }}}
 
 = Customize = 
-{{{
+{{{class="brush: text"
 $ git config color.ui true
 $ git config format.pretty oneline
 }}}
 
 .gitconfig
 
-{{{
+{{{class="brush: text"
 [color]
   ui = true
 

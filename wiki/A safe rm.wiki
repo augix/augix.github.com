@@ -1,28 +1,43 @@
-[[Category:bash]]
-write a file: <tt> ~/rm.sh </tt>
+write a file: ~/rm.sh.
 {{{class="brush: bash"
 #!/bin/bash
 #
-#  A tiny script that moves files to a wastebasket, rather than deleting them
-#+ (and doesn't overwrite previously deleted files of the same name).
+#  move files to trash bin, rather than deleting them
+#  (and doesn't overwrite previously deleted files of the same name).
 
-[ -d ~/Trash ]
-if [ $? -eq 1 ]; then
-    echo "Creating directory."
-    mkdir ~/Trash;
+OS=$(uname -s)
+case $OS in
+	'Darwin')
+		trash_dir="$HOME/.Trash"
+		;;
+	'Linux')
+		trash_dir="$HOME/.local/share/Trash/files"
+		;;
+esac		
+
+if [ ! -d $trash_dir ]; then
+    echo "Creating Trash directory $trash_dir."
+    mkdir $trash_dir
 fi
 
-random_suffix=$RANDOM
+# change delimiter $IFS to newline
+IFS='
+'
 
 for file in $@; do
-    if [[ -e ~/Trash/$file ]]; then
-        mv $file ~/Trash/${file}.${random_suffix}
-    else mv $file ~/Trash/
-    fi
+	base=$(basename "$file")
+    newfile=$base
+    while [ -e $trash_dir/$newfile ]; do
+		random_suffix=$RANDOM
+		newfile=${base}.${random_suffix}
+	done
+	mv "$file" "$trash_dir/$newfile"
 done
+
+unset IFS
 }}}
 
-modify <tt> ~/.bashrc </tt>
+modify ~/.bashrc.
 {{{class="brush: bash"
 alias remove='/bin/rm'
 alias rm='~/rm.sh'

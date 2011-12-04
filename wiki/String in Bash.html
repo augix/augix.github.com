@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -31,7 +32,7 @@
 	<div class="post"><!-- start of post -->
 	
 <h1 id="toc_1">string length</h1>
-<pre>
+<pre class="brush: bash">
 a=abcABC123ABCabc
 
 echo ${#a}          # 15
@@ -56,7 +57,7 @@ augixs-ibook-g4:~ augix$ echo $s
 The braces are required for concatenation constructs.
 </p>
 
-<pre>
+<pre class="brush: text">
 $p_01
 The value of the variable "p_01".
 
@@ -70,7 +71,7 @@ The value of the variable "p" with "_01" pasted onto the end.
 ${string:position}
 </p>
 
-<pre>
+<pre class="brush: bash">
 stringZ=abcABC123ABCabc
 #       0123456789.....
 #       0-based indexing.
@@ -95,20 +96,14 @@ echo ${stringZ: -4}                          # Cabc
 
 <h1 id="toc_5">Substring Replacement</h1>
 
-<p>
+<pre class="brush: bash">
 ${string/substring/replacement}
-</p>
-<blockquote>
-Replace first match of $substring with $replacement. [2] 
-</blockquote>
-<p>
-${string//substring/replacement}
-</p>
-<blockquote>
-Replace all matches of $substring with $replacement.
-</blockquote>
 
-<pre>
+    Replace first match of $substring with $replacement. [2] 
+${string//substring/replacement}
+
+    Replace all matches of $substring with $replacement.
+
 stringZ=abcABC123ABCabc
 
 echo ${stringZ/abc/xyz}       # xyzABC123ABCabc
@@ -143,7 +138,7 @@ echo ${stringZ//abc}          # ABC123ABC
 <a href="http://www.debian-administration.org/articles/150">Easily rename file</a>
 </p>
 
-<pre>
+<pre class="brush: bash">
 # method 1
 i=a.JPG
 mv $i ${i/.JPG/}.jpg

@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -34,9 +35,11 @@
 The new line characters are different in different operation systems. In order to convert them between systems, we should use the following command.
 </p>
 
-<pre>
-http://en.wikipedia.org/wiki/Newline
+<p>
+<a href="http://en.wikipedia.org/wiki/Newline">http://en.wikipedia.org/wiki/Newline</a>
+</p>
 
+<pre class="brush: bash">
 sed -e 's/$/\r/' inputfile &gt; outputfile                # UNIX to DOS  (adding CRs)
 sed -e 's/\r$//' inputfile &gt; outputfile                # DOS  to UNIX (removing CRs)
 perl -pe 's/\r\n|\n|\r/\r\n/g' inputfile &gt; outputfile  # Convert to DOS

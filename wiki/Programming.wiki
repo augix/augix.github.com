@@ -15,7 +15,6 @@
 = Version control =
 [[Git]]
 
-
 = Algorithm =
 * [[Mapping based on position information]]
 

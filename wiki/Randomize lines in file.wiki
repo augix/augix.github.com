@@ -2,7 +2,7 @@
 
 There are many ways in Bash in randomizing lines in a file.
 
-{{{
+{{{class="brush: bash"
 $ shuf origin.txt > randomized.txt
 
 $ sort -R origin.txt > randomized.txt

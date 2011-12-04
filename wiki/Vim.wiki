@@ -1,7 +1,7 @@
 = Learning Vim=
-* [Graphical vi-vim Cheat Sheet and Tutorial http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html]
+* [http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html Graphical vi-vim Cheat Sheet and Tutorial]
 
-* [vim使用进阶: 目录 http://easwy.com/blog/archives/advanced-vim-skills-catalog/]
+* [http://easwy.com/blog/archives/advanced-vim-skills-catalog/ vim使用进阶: 目录]
 
 * indent in multiple lines
 	* way1: enter visual mode, use ">" or "<" to increase or decrease indent
@@ -18,12 +18,14 @@ the <b>#</b> key create a motion jumping from the current word to the same word 
 
 = Moving =
 * Moving around, scroll up and down the screen
+{{{
 CTRL-F
 CTRL-B
 CTRL-U
 CTRL-D
 CTRL-E
 CTRL-Y
+}}}
 
 = Jumping =
 One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
@@ -100,7 +102,7 @@ $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cD
 $ ctags -R ./Programming/ ./Research/
 }}}
 
-* gvim color scheme, in <tt>~/.gvimrc</tt>
+* gvim color scheme, in ~/.gvimrc
 {{{
 " by augix
 " color scheme: desert

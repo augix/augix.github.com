@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -38,29 +39,23 @@ Reference: <a href="http://justinsomnia.org/courses/inls183/3backup.html">http:/
 <p>
 Date is one of those quit essential Unix utilities that perform a single simple task, and perform it well. I was familiar with date having used before it find the time:
 </p>
-<pre>
+<pre class="brush: bash">
 $ date 
 Tue Sep 26 22:14:34 EDT 2000
-</pre>
 
-<pre>
 $ date +%d%b
 26Sep
-</pre>
 
-<pre>
 $ date +%d%b%Y
 26Sep2007
-</pre>
 
-<pre>
 # create a new file named 26Sep.bak
 $ touch `date +%d%b`.bak
 </pre>
 
 <h1 id="toc_2">Tar</h1>
 
-<pre>
+<pre class="brush: bash">
 $ tar cf - /Users/augix/Documents/ &gt; /backup/Documents.`date +%d%b`.tar
 </pre>
 
@@ -73,7 +68,7 @@ The 'c' tells tar to create an archive, the 'f' alerts tar to the source of the 
 I wanted desperately to gzip (compress) the archive immediately after I tarred it. I knew that I could use tar's 'z' option, both when compressing and uncompressing, but using it gave me an error about garbage at the end of the tar file (which bothered me), and I really wanted to maximally compress the archive using "gzip -9". 
 </p>
 
-<pre>
+<pre class="brush: bash">
 $ tar cf - /Users/augix/Documents/ &gt; /backup/Documents.`date +%d%b`.tar
 $ gzip -9 /backup/Documents.`date +%d%b`.tar
 </pre>
@@ -83,7 +78,7 @@ $ gzip -9 /backup/Documents.`date +%d%b`.tar
 Now that I figured out the steps necessary for creating a weekly backup of the entire fileshare, I needed to figure out how to backup only those files that had changed in the last day, on a daily basis. 
 </p>
 
-<pre>
+<pre class="brush: bash">
 $ find /Users/augix/Documents/ -mtime -1 
 </pre>
 
@@ -91,13 +86,13 @@ $ find /Users/augix/Documents/ -mtime -1
 the command lists both the files that were modified as well as the directories that contain them. I figured out that in order to limit the list to files only, I could use:
 </p>
 
-<pre>
+<pre class="brush: bash">
 $ find /export/samba/fileshare/ -mtime -1 \! -type d
 # where the "\! – type d" means: "don't include directories."
 </pre>
 
 <h1 id="toc_5">Combine these commands</h1>
-<pre>
+<pre class="brush: bash">
 $ tar cf - `find /Users/augix/Documents/ -mtime -1 \! -type d` &gt; /backup/Documents.`date +%d%b`.tar
 </pre>
 
@@ -105,7 +100,7 @@ $ tar cf - `find /Users/augix/Documents/ -mtime -1 \! -type d` &gt; /backup/Docu
 But the line above does not work for the files with space in their names. So, the correct command is:
 </p>
 
-<pre>
+<pre class="brush: bash">
 $ find /Users/augix/Documents/ -mtime -1 \! -type d &gt; /tmp/modified.files
 $ tar cT /tmp/modified.files &gt; /backup/Documents.`date +%d%b`.tar
 $ gzip -9 /backup/Documents.`date +%d%b`.tar

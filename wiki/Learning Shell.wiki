@@ -27,8 +27,8 @@
 * [[Sed]]
 * [[Tar, Gzip]]
 * [[Cut paste join]]
-* [[tr]]
-* [[find]]
+* [[Tr|tr]]
+* [[Find|find]]
 * [[Join in UNIX]]
 * [[Printf in shell]]
 * [[Screen in Shell]]
@@ -43,7 +43,7 @@
 * [[Bash Function]]
 * [[How to Backup with date, find, tar and gzip]]
 * [[Math in Bash]]
-* [[Scheduled Jobs in Unix]]
+* [[Schedule jobs in Unix]]
 * [[Variable in shell]]
 * [[Find a file]]
 * [[String in Bash]]
@@ -57,12 +57,10 @@
 * [[Bash random number]]
 
 = Scripts = 
-* [[Clustalw.sh]]
+* [[Clustalw|Clustalw.sh]]
 
 = References and Tutorials =
 * [http://www.linuxtopia.org/online_books/advanced_bash_scripting_guide/index.html Advanced Bash-Scripting Guide]
 * [http://mercury.chem.pitt.edu/~sasha/LinuxFocus/English/September2001/article216.shtml lf216, UNIX Basics: Shell Programming]
 * [http://www.grymoire.com/Unix/Sh.html Sh - the Bourne Shell]
 * [http://tldp.org/LDP/abs/html/ Advanced Bash-Scripting Guide by Mendel Cooper]
-
- 

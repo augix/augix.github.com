@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
     <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
@@ -34,10 +35,8 @@
 automatically start a list of jobs in a given time
 </p>
 <pre>
-at -f joblist now + 1 minutes
-</pre>
+$ at -f joblist now + 1 minutes
 
-<pre>
 $ at now + 25 minutes
 echo ^G &gt; /dev/ttyp4
 ^D

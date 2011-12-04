@@ -1,4 +1,3 @@
-[[Category:Perl]]
 If you want to find the position of a match in an incoming string, simply check the length of <b>$`</b> (That's $PREMATCH if you've chosen to use English;) to check where it starts, and add the length of <b>$&</b> (that's $MATCH) to find where it ends.
 
 Let's say I want to find all the URLs refered to in a web page that's loaded into the variable $html. I could write:

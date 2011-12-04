@@ -12,7 +12,7 @@ To use TeX on Mac OS X, it suffices to install TeXShop and one of BasicTeX, gwTe
 http://www.tug.org/mactex/morepackages.html
 
 = How to put references into an article =
-Assume that we have an article named <tt>DNA.tex</tt> written in Tex, and an file named <tt>DNA.bib</tt> which exported by a reference manage software (eg: BibDesk). The citations you inserted in the article correspond to the papers in the reference file.
+Assume that we have an article named DNA.tex written in Tex, and an file named DNA.bib which exported by a reference manage software (eg: BibDesk). The citations you inserted in the article correspond to the papers in the reference file.
 
 What we can do by TeXShop is following:
 # latex DNA.tex
