@@ -1,0 +1,3 @@
+* ./mediawiki2vimwiki.sh
+* ./convert.line.starts.with.a.whitespace.py
+* ./convert.emphasize.quotes.py
