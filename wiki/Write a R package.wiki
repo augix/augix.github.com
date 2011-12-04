@@ -8,4 +8,5 @@
 * modify file <b>DESCRIPTION</b>, and files in <b>man</b>
 * build package, in Shell
 {{{
-R CMD build prepared_folder_of_R_codes}}}
+R CMD build prepared_folder_of_R_codes
+}}}

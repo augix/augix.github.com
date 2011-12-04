@@ -20,8 +20,8 @@
 
 = Network =
 * [[Fetch URLs from a HTML file]]
-* [[curl|curl - Download multiple URLs from file]]
-* [[wget|wget - Download a file in a website which requires login]]
+* [[Curl|curl - Download multiple URLs from file]]
+* [[Wget|wget - Download a file in a website which requires login]]
 
 = Others =
 * [[VoodooPad]]

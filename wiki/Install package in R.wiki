@@ -24,7 +24,7 @@ export R_LIBS
 $ R CMD INSTALL -h
 }}}
 
-= in R ==
+= in R =
 {{{
 install.packages("affy",lib="~/Library/R",dependencies=TRUE)
 }}}
