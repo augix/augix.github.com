@@ -29,7 +29,7 @@ for old in $dir1/*.wiki; do
          s|</php>|\n}}}|g;
          s|<python>|{{{class="brush: python"\n|g;
          s|</python>|\n}}}|g;
-         s|<R>|{{{class="brush: R"\n|g;
+         s|<R>|{{{class="brush: r"\n|g;
          s|</R>|\n}}}|g;
          s|<latex>|{{{class="brush: latex"\n|g;
          s|</latex>|\n}}}|g;

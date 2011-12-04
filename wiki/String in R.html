@@ -38,7 +38,7 @@
 <p>
 split a string into a vector:
 </p>
-<pre class="brush: R">
+<pre class="brush: r">
 x = "string_x"
 strsplit(x, split="")
 </pre>
@@ -48,7 +48,7 @@ strsplit(x, split="")
 </pre>
 
 <h1 id="toc_2">paste</h1>
-<pre class="brush: R">
+<pre class="brush: r">
 x = paste("Hello", "World", sep=", ")
 print(x)
 </pre>
@@ -56,7 +56,7 @@ print(x)
 [1] "Hello, World"
 </pre>
 
-<pre class="brush: R">
+<pre class="brush: r">
 chars = c("m", "e", "r", "g", "e", "d")
 paste(chars, collapse = "")
 </pre>
@@ -66,7 +66,7 @@ paste(chars, collapse = "")
 </pre>
 
 <h1 id="toc_3">toString</h1>
-<pre class="brush: R">
+<pre class="brush: r">
 x = c("Hello", "World")
 y = toString(x)
 print(y)
@@ -80,7 +80,7 @@ ps: it seems "format" is also an useful function.
 </p>
 
 <h1 id="toc_4">chartr</h1>
-<pre class="brush: R">
+<pre class="brush: r">
 x = "ACGTGTGACGT"
 y = chartr("acgtACGT","tgcaTGCA",x)
 print(x);print(y)
@@ -92,7 +92,7 @@ print(x);print(y)
 </pre>
 
 <h1 id="toc_5">DNA Reverse Complementary</h1>
-<pre class="brush: R">
+<pre class="brush: r">
 DNA.Rev.Comp &lt;- function(x) {
 	if (is.character(x) &amp;&amp; length(x) == 1) {
 		x = chartr("acgtACGT","tgcaTGCA",x)

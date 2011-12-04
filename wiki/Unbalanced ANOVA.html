@@ -59,7 +59,7 @@
 
 
 <h1 id="toc_1">How to do unbalanced anova in R</h1>
-<pre class="brush: R">
+<pre class="brush: r">
 library(car,lib.loc="~/Library/R/")
 mod &lt;- lm(value~factor1*factor2, contrasts=list(factor1=contr.sum, factor2=contr.sum))
 anova.result &lt;- Anova(mod,type="III")
