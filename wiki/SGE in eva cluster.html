@@ -38,11 +38,11 @@ User  private  default  request  files  are  processed  under  the  locations $H
 <h1 id="toc_2">E-mail</h1>
 <p>
 send email when the job ends:
-{{
+</p>
+<pre>
 -m e
 -M your@email
-}}}
-</p>
+</pre>
 
 <h1 id="toc_3">sge script</h1>
 <p>
@@ -99,57 +99,47 @@ for i in `seq 1 100`; do qsub job.sge $i; done
 <ul>
 <li>
 submit jobs
+<pre>
+qsub
+</pre>
 
 </ul>
-<p>
-{{
-qsub
-}}}
-</p>
 
 <ul>
 <li>
 check the state of jobs
+<pre>
+qstat
+</pre>
 
 </ul>
-<p>
-{{
-qstat
-}}}
-</p>
 
 <ul>
 <li>
 check the state of a particular job
+<pre>
+qstat -j JOB_ID
+</pre>
 
 </ul>
-<p>
-{{
-qstat -j JOB_ID
-}}}
-</p>
 
 <ul>
 <li>
 check the state of severs
+<pre>
+qstat -g c
+</pre>
 
 </ul>
-<p>
-{{
-qstat -g c
-}}}
-</p>
 
 <ul>
 <li>
 delete jobs
+<pre>
+qdel -u augix
+</pre>
 
 </ul>
-<p>
-{{
-qdel -u augix
-}}}
-</p>
 
 	</div><!-- end of post -->
 	<div class="backhome">

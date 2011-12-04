@@ -36,16 +36,14 @@
 
 <p>
 I usually use "mail" for sending plain emails and "mutt" for sending attachments.
-{{
+</p>
+<pre>
 echo "This is a message" | mail -s "Subject" foo@bar.com
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 echo "This is a message w/ attachment" | mutt -a file.gz -s "Subject" foo@bar.com
-}}}
-</p>
+</pre>
 
 <p>
 <a href="http://www.experts-exchange.com/Programming/Programming_Platforms/Unix_Programming/Q_21930761.html">Unix Programming: How to Attach file to email sent from shell</a>
@@ -53,14 +51,15 @@ echo "This is a message w/ attachment" | mutt -a file.gz -s "Subject" foo@bar.co
 
 <p>
 Select whatever you like, each of the belowing does more or less what you want:
-{{
+</p>
+<pre>
 metasend -t you@to.tld -s metasend -f yourfile -b -m text/plain -e base64
 pine you@to.tld -attach file -I^X
 elm -s ok you@to.tld -A y 
-echo <code>cat yourfile</code>| mutt -a y -s mutt you@to.tld
+echo `cat yourfile`| mutt -a y -s mutt you@to.tld
 echo "attached file: xxx.txt"|uuenview -b -a -m you@to.tld -s subjet xxx.txt
 mpack -s "file" yourfile you@to.tld}}}
-</p>
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">

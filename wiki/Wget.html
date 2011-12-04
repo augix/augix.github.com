@@ -70,11 +70,9 @@ curl -b headers_and_cookies http://www.affymetrix.com/Auth/support/downloads/dem
 
 
 <h1 id="toc_4">Download all the files form FTP site by Wget</h1>
-<p>
-{{
-echo "wget -r -l2 --no-parent -A.bz2 <a href="ftp://ftp.hgsc.bcm.tmc.edu/pub/data/Rmacaque/fasta/"">ftp://ftp.hgsc.bcm.tmc.edu/pub/data/Rmacaque/fasta/"</a> | at now
-}}}
-</p>
+<pre>
+echo "wget -r -l2 --no-parent -A.bz2 ftp://ftp.hgsc.bcm.tmc.edu/pub/data/Rmacaque/fasta/" | at now
+</pre>
 
 <p>
 You want to download all the GIFs from a directory on an HTTP server. You tried 

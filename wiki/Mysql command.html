@@ -31,31 +31,35 @@
 	<div class="post"><!-- start of post -->
 	
 <h1 id="toc_1">Login</h1>
-<p>
-{{
+<pre>
 mysql –u root –p 123456
-}}}
-</p>
+</pre>
 
 <h1 id="toc_2">SQL command</h1>
 <p>
 创建数据库
-{{
-create database dataBaseName;
-}}}
-选择数据库
-{{
-use dataBaseName
-}}}
-删除数据库
-{{
-drop database databaseName;
-}}}
-创建表
-{{
-create table tableName ( ID int  not null auto_increment,
-}}}
 </p>
+<pre>
+create database dataBaseName;
+</pre>
+<p>
+选择数据库
+</p>
+<pre>
+use dataBaseName
+</pre>
+<p>
+删除数据库
+</p>
+<pre>
+drop database databaseName;
+</pre>
+<p>
+创建表
+</p>
+<pre>
+create table tableName ( ID int  not null auto_increment,
+</pre>
 <blockquote>
 stuID int,
 courseID int ,
@@ -65,12 +69,15 @@ primary key (ID),
 </blockquote>
 <p>
 向表中插入信息
-{{
+</p>
+<pre>
 INSERT INTO tableName VALUES (1,'admin','admin');
-}}}
+</pre>
+<p>
 (注意字段类型为数字的就直接用数字，为字符的要加上单引号)
 选取信息
-{{
+</p>
+<pre>
 select * from tableName;
 select itemName from tableName;
 select itemName1,itemName2 from tableName;
@@ -84,8 +91,7 @@ Select itemName from tableName having name &gt; 10;(选取条件为指定条件)
 select itemName from tableName limit m; m（为返回记录的最大数目）
 select itemName from tableName limit n,m;（n为要返回的记录的第一行的偏移量，m为返回记录的最大数目）
 select * into Outfile ‘fileName.sql’ from tableName;(从数据库中导出信息到文件中)
-}}}
-</p>
+</pre>
 
 <p>
 修改表结构
@@ -94,29 +100,30 @@ select * into Outfile ‘fileName.sql’ from tableName;(从数据库中导出�
 
 <p>
 删除表
-{{
+</p>
+<pre>
 drop table tableName;
-}}}
+</pre>
+<p>
 恢复数据
-{{
+</p>
+<pre>
 load data infile ‘fileName.sql’ into table tableName;(从文件导入信息到数据库表中)
 mysqladmin –u root –p 123456 create dataBaseName 
 mysql –u root –p 123456 dataBaseName  &lt; backup-file.sql;
-}}}
-</p>
+</pre>
 
 <h1 id="toc_3">DOS</h1>
 <p>
 DOS进入MYSQL命令
-{{
+</p>
+<pre>
 c:\&gt;mysql -h 127.0.0.1 -u root -penter password 
 &gt;
 mysql&gt; 进入完成   
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 建立数据库：create database databasename; 
 使用指定数据库进行操作： 方法1：use database databasename; 方法2：mysql&gt; databsename; 
 查询当前数据库名称：select database();   
@@ -125,8 +132,7 @@ mysql&gt; 进入完成
 查看数据表结构describe tablename;   
 查询当前数据库名称：select database();
 查询当前数据库所有数据表名称：show tables;
-}}}
-</p>
+</pre>
 
 <h1 id="toc_4">Reference</h1>
 <p>

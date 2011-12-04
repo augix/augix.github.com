@@ -40,12 +40,10 @@ For example, under the UNIX tcsh shell, you can set them up as
 follows:
 </p>
 
-<p>
-{{
-setenv http_proxy <a href="http://groucho.marx.edu:1028">http://groucho.marx.edu:1028</a>
+<pre>
+setenv http_proxy http://groucho.marx.edu:1028
 setenv no_proxy harpo.marx.edu zeppo.marx.edu chico.marx.edu
-}}}
-</p>
+</pre>
 
 <h1 id="toc_2">MS-Windows</h1>
 <p>
@@ -53,19 +51,17 @@ One way to do this under MS-Windows is to add the following lines to your
 autoexec.bat file:
 </p>
 
-<p>
-{{
-set http_proxy=<a href="http://groucho.marx.edu:1028">http://groucho.marx.edu:1028</a>
+<pre>
+set http_proxy=http://groucho.marx.edu:1028
 set no_proxy=harpo.marx.edu zeppo.marx.edu chico.marx.edu
-}}}
-</p>
+</pre>
 
 <p>
 if the server requires password:
-{{
-http_proxy=<a href="http://username:password@proxy.example.org:8080">http://username:password@proxy.example.org:8080</a>
-}}}
 </p>
+<pre>
+http_proxy=http://username:password@proxy.example.org:8080
+</pre>
 
 
 <p>
@@ -78,13 +74,11 @@ Under Unix and GNU/Linux, most HTTP capable applications, like lynx, wget and cu
 Add the following lines to your $HOME/.bash_profile, $HOME/.bashrc, or env settings: 
 </p>
 
-<p>
-{{
-http_proxy=<a href="http://127.0.0.1:8118/">http://127.0.0.1:8118/</a>
+<pre>
+http_proxy=http://127.0.0.1:8118/
 HTTP_PROXY=$http_proxy
 export http_proxy HTTP_PROXY
-}}}
-</p>
+</pre>
 
 
 <p>
@@ -95,18 +89,18 @@ export http_proxy HTTP_PROXY
 <p>
 If you are using Bourne-style shell (sh, bash, ksh) type the following
 command: 
-{{
-http_proxy=<a href="http://bcproxy.ac.il:8080/">http://bcproxy.ac.il:8080/</a> ; export http_proxy
-}}}
 </p>
+<pre>
+http_proxy=http://bcproxy.ac.il:8080/ ; export http_proxy
+</pre>
 
 <h1 id="toc_5">Csh</h1>
 <p>
 For C-shell (csh, tcsh) type
-{{
-setenv http_proxy=<a href="http://bcproxy.ac.il:8080/">http://bcproxy.ac.il:8080/</a>
-}}}
 </p>
+<pre>
+setenv http_proxy=http://bcproxy.ac.il:8080/
+</pre>
 
 <p>
 You may wish to add apropriatecommand into your .profile (Bourne-style shell users) or .login (C-shell users)
@@ -129,11 +123,9 @@ The http_proxy should be set in two places on OS X:
 Shell: Add a line like the following in .bash_profile (/Users/&lt;name&gt;/.bash_profile):
 </p>
 
-<p>
-{{
-http_proxy=<a href="http://username:password@hostname:port;">http://username:password@hostname:port;</a>  export http_proxy
-}}}
-</p>
+<pre>
+http_proxy=http://username:password@hostname:port;  export http_proxy
+</pre>
 
 <p>
 This setting applies to PPM when it is launched from or used at the command line.

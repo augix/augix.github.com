@@ -30,24 +30,18 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<p>
-{{
+<pre>
 grep --colour
 grep -i pattern files ：不区分大小写地搜索，默认情况区分大小写。  
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 grep -v pattern files ：查找不包括pattern的行。  grep -n pattern files ：显示行号
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 grep -C number pattern files ：匹配的上下文分别显示[number]行。 
-}}}
-</p>
+</pre>
 
 <ul>
 <li>
@@ -57,10 +51,10 @@ grep -C number pattern files ：匹配的上下文分别显示[number]行。 
 <p>
 在当前目录下所有.doc文件中查找字符串“sort”
 命令为：
-{{
-grep -l "sort" *.doc
-}}}
 </p>
+<pre>
+grep -l "sort" *.doc
+</pre>
 
 <ul>
 <li>
@@ -69,10 +63,10 @@ grep -l "sort" *.doc
 </ul>
 <p>
 命令为：
-{{
-grep -v "^48" data.list
-}}}
 </p>
+<pre>
+grep -v "^48" data.list
+</pre>
 
 <ul>
 <li>
@@ -81,10 +75,10 @@ grep -v "^48" data.list
 </ul>
 <p>
 命令为：
-{{
-grep "4.*4" data.list
-}}}
 </p>
+<pre>
+grep "4.*4" data.list
+</pre>
 
 <ul>
 <li>
@@ -93,21 +87,19 @@ grep "4.*4" data.list
 </ul>
 <p>
 命令为：
-{{
-grep -nv ^$ data.list
-}}}
 </p>
+<pre>
+grep -nv ^$ data.list
+</pre>
 
 <ul>
 <li>
 匹配多个关键字
+<pre>
+grep -E 'perl|java|python|sql' ./ebooks/*
+</pre>
 
 </ul>
-<p>
-{{
-grep -E 'perl|java|python|sql' ./ebooks/*
-}}}
-</p>
 
 	</div><!-- end of post -->
 	<div class="backhome">

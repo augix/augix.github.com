@@ -39,48 +39,40 @@ download blatSrc.zip
 unzip blatSrc.zip
 </p>
 
-<p>
-{{
+<pre>
 echo $MACHTYPE
 MACHTYPE=i386
 export MACHTYPE
 mkdir ~/bin/$MACHTYPE
 make
 cd ~/bin/i386/
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/hg18/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/panTro2/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 gfServer start localhost 17779 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit &amp;
 gfServer start localhost 17780 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit &amp;
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 gfClient localhost 17779 \
-}}}
+</pre>
+<p>
   /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/ \
   probe_fa/3040440.fa blat.3040440.hg.psl
 </p>
 
-<p>
-{{
+<pre>
 more probe_fa/3040440.fa
-}}}
+</pre>
+<p>
   &gt;3040440
   caagaggttgacagactcgatgacg
 </p>
@@ -94,16 +86,14 @@ c2s(rev(comp(s2c("caagaggttgacagactcgatgacg"))))
 [1] "cgtcatcgagtctgtcaacctcttg"
 </pre>
 
-<p>
-{{
+<pre>
 echo "16180964/50" | bc
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 cat /tmp/augix/hg18/chr19.fa | head -n 323623 | tail |\
-}}}
+</pre>
+<p>
   perl -pe "chomp;" | grep -i "cgtcatcgagtctgtcaacctcttg"
 </p>
 

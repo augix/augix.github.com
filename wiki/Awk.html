@@ -47,9 +47,11 @@ awk '$1 &gt; $2 {print $1,$2,$1-$2}' filename
 
 <p>
 The part outside the curly braces is called the "pattern", and the part inside is the "action". The comparison operators include the ones from C:
-{{
+</p>
+<pre>
 == != &lt; &gt; &lt;= &gt;= ?:
-}}}
+</pre>
+<p>
 If no pattern is given, then the action applies to all lines.
 </p>
 

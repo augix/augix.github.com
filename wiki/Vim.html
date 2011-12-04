@@ -102,9 +102,11 @@ CTRL-Y
 <h1 id="toc_3">Jumping</h1>
 <p>
 One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
-{{
+</p>
+<pre>
 :ju
-}}}
+</pre>
+<p>
 to print the jump list.
 </p>
 
@@ -126,27 +128,23 @@ gf	 open in the same window ("goto file")
 <ul>
 <li>
 create a new tab
-
-</ul>
-<p>
-{{
+<pre>
 :tabnew
-}}}
-</p>
-<ul>
+</pre>
+
 <li>
 switch to next tab
+<pre>
+gt
+</pre>
 
 </ul>
 <p>
-{{
-gt
-}}}
 or
-{{
-:tabn
-}}}
 </p>
+<pre>
+:tabn
+</pre>
 
 <h1 id="toc_7">Window</h1>
 <p>
@@ -203,24 +201,20 @@ folding: <a href="http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx">ht
 <ul>
 <li>
 echo function: <a href="http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx">http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx</a>
+<pre>
+$ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
+</pre>
 
 </ul>
-<p>
-{{
-$ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
-}}}
-</p>
 
 <ul>
 <li>
 the ctgas command line I used in MPI-EVA
+<pre>
+$ ctags -R ./Programming/ ./Research/
+</pre>
 
 </ul>
-<p>
-{{
-$ ctags -R ./Programming/ ./Research/
-}}}
-</p>
 
 <ul>
 <li>
@@ -354,24 +348,20 @@ show the key mappings <code>:map</code>
 <ul>
 <li>
 Show/Hide invisible characters
+<pre>
+:set list/nolist
+</pre>
 
 </ul>
-<p>
-{{
-:set list/nolist
-}}}
-</p>
 
 <ul>
 <li>
 Disable all blinking:
+<pre>
+:set guicursor+=a:blinkon0
+</pre>
 
 </ul>
-<p>
-{{
-:set guicursor+=a:blinkon0
-}}}
-</p>
 
 	</div><!-- end of post -->
 	<div class="backhome">

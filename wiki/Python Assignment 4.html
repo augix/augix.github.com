@@ -120,28 +120,24 @@ Which module or modules do you think would be useful if you were faced with the 
 <ul>
 <li>
 You need to get a list of files in a particular directory?
+<pre>
+Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname)
+</pre>
 
 </ul>
-<p>
-{{
-Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname)
-}}}
-</p>
 
 <ul>
 <li>
 You need to grab a file from a website in an automated fashion?
-
-</ul>
-<p>
-{{
+<pre>
 Answer: urllib.
-</p>
-<pre class="brush: python">
+{{{class="brush: python"
 import urllib
 res = urllib.urlopen('http://augix.com')
 res.read()
 </pre>
+
+</ul>
 <p>
 }}}
 </p>
@@ -149,16 +145,14 @@ res.read()
 <ul>
 <li>
 You need to time how long a particular operation takes to complete?
-
-</ul>
-<p>
-{{
+<pre>
 Answer: timeit.
-</p>
-<pre class="brush: python">
+{{{class="brush: python"
 import timeit
 timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
 </pre>
+
+</ul>
 <p>
 }}}
 </p>
@@ -166,13 +160,11 @@ timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
 <ul>
 <li>
 You need to do calculations using rational numbers (i.e. numbers which are represented as fractions like 1/3)?
+<pre>
+Answer: module 'fractions', 'math'.
+</pre>
 
 </ul>
-<p>
-{{
-Answer: module 'fractions', 'math'.
-}}}
-</p>
 
 <h2 id="toc_2.2">Exercise 2: sys.argv</h2>
 <pre class="brush: python">

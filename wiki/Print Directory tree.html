@@ -34,11 +34,9 @@
 <a href="http://www.centerkey.com/tree/">Reference Link</a>
 </p>
 
-<p>
-{{
-$ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[<sup><small>-][</small></sup>\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
-}}}
-</p>
+<pre>
+$ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+</pre>
 
 <pre>
    |-Application Support
@@ -54,10 +52,10 @@ $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[<sup><small>-][</small></sup>\/]*\/
 
 <p>
 One may also save this command line as ~/bin/tree then one can just type
-{{
-$ tree ./
-}}}
 </p>
+<pre>
+$ tree ./
+</pre>
 
 <p>
 What I did is making an alias:
@@ -70,9 +68,10 @@ What I did is making an alias:
 
 <p>
 only display the folders with depth &lt; 3
-{{
-tree | perl -pe "s/<sup><small>.<strong>\|-{5,}[</small></sup>-].</strong>\n//;" | grep "-"}}}
 </p>
+<pre>
+tree | perl -pe "s/^.*\|-{5,}[^-].*\n//;" | grep "-"}}}
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">

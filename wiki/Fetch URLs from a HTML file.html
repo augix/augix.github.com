@@ -34,13 +34,11 @@
 <ul>
 <li>
 Fetch the URL list of mp3 files in a webpage:
+<pre>
+$ perl -pe 's/.*?(http\:\/\/.*?\.mp3).*?/\1\n/gi or s/.*\n//gi;' source.html
+</pre>
 
 </ul>
-<p>
-{{
-$ perl -pe 's/.<strong>?(http\:\/\/.</strong>?\.mp3).<strong>?/\1\n/gi or s/.</strong>\n//gi;' source.html
-}}}
-</p>
 
 <ul>
 <li>

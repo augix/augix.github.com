@@ -57,11 +57,9 @@ cat (mean(x))
 This example script reads number in from stdin (the R character variable `.stdin') and prints the average on standard out. Thus, one could say on the command line:
 </p>
 
-<p>
-{{
+<pre>
 $ seq 10 | mean
-}}}
-</p>
+</pre>
 
 
 
@@ -71,20 +69,10 @@ $ seq 10 | mean
 This first version assumes the following:
 </p>
 
-<p>
-{{
-</p>
-<ul>
-<li>
-`r-as-filter' installed in /usr/local/lib
-
-<li>
-`Rf' installed in /usr/local/bin
-
-</ul>
-<p>
-}}}
-</p>
+<pre>
+* `r-as-filter' installed in /usr/local/lib
+* `Rf' installed in /usr/local/bin
+</pre>
 
 <p>
 Note that you may install Rf anywhere, but if you want to use it in
@@ -102,19 +90,17 @@ If you can't copy to /usr/local/lib, change the destination in
 Make `Rf' by typing
 </p>
 
-<p>
-{{
+<pre>
 $ make Rf
-}}}
-</p>
+</pre>
 
 <p>
 And then copy
-{{
+</p>
+<pre>
 $ install Rf /usr/local/bin
 $ install r-as-filter /usr/local/lib
-}}}
-</p>
+</pre>
 
 
 <p>

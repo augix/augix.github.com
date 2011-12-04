@@ -33,13 +33,11 @@
 <ul>
 <li>
 A function is an object.
+<pre>
+square = lambda x: x	*2
+</pre>
 
 </ul>
-<p>
-{{
-square = lambda x: x	*2
-}}}
-</p>
 
 <ul>
 <li>
@@ -56,24 +54,20 @@ def build_taxer(rate):
 <ul>
 <li>
 filter and lambda
+<pre>
+filter( lambda x: x%2==0, range(10))
+</pre>
 
 </ul>
-<p>
-{{
-filter( lambda x: x%2==0, range(10))
-}}}
-</p>
 
 <ul>
 <li>
 list comprehensions can replace map and filter, but compute the whole list is slow
+<pre>
+[i	*2 for i in range(10) if i%2==0]
+</pre>
 
 </ul>
-<p>
-{{
-[i	*2 for i in range(10) if i%2==0]
-}}}
-</p>
 
 <ul>
 <li>

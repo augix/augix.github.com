@@ -32,24 +32,24 @@
 	
 <p>
 the directory:
-{{
-scp -r boulo.local:/Applications/xampp /Application/xampp
-}}}
 </p>
+<pre>
+scp -r boulo.local:/Applications/xampp /Application/xampp
+</pre>
 
 <p>
 on boulo.local
-{{
-/Applications/xampp/xamppfiles/bin/mysqldump wikidb -u wikiuser -p --skip-opt &gt; ~/wikidb.sql
-}}}
 </p>
+<pre>
+/Applications/xampp/xamppfiles/bin/mysqldump wikidb -u wikiuser -p --skip-opt &gt; ~/wikidb.sql
+</pre>
 
 <p>
 copy boulo.local:~/wiki_mysql.bak to Backup/MediaWiki/
-{{
-scp boulo.local:~/wikidb.sql /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql
-}}}
 </p>
+<pre>
+scp boulo.local:~/wikidb.sql /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql
+</pre>
 
 <p>
 create a database wikidb
@@ -58,9 +58,10 @@ create a user wikiuser with certain privileges
 
 <p>
 import
-{{
-/Applications/xampp/xamppfiles/bin/mysql wikidb -u root -p &lt; /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql}}}
 </p>
+<pre>
+/Applications/xampp/xamppfiles/bin/mysql wikidb -u root -p &lt; /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql}}}
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">

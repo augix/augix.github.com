@@ -44,13 +44,11 @@ sed [options] '{command}' [filename]
 </p>
 
 <h1 id="toc_1">替换</h1>
-<p>
-{{
+<pre>
 's/{old value}/{new value}/' 
 $ echo The tiger cubs will meet on Tuesday after school | sed 's/tiger/wolf/' 
 The wolf cubs will meet on Tuesday after school
-}}}
-</p>
+</pre>
 
 <h1 id="toc_2">批量修改文件名</h1>
 <p>
@@ -62,55 +60,49 @@ Renaming several files at the same time
 If you have a number of files named foo.C, bar.C.gz, etc. and want to rename them to foo.cc, bar.cc.gz, etc. This line will do the trick.
 </p>
 
-<p>
-{{
-ls <strong>.C</strong> | sed 's/\(.<strong>\).C\(.</strong>\)/mv &amp; \1.cc\2/' | sh 
-}}}
-</p>
+<pre>
+ls *.C* | sed 's/\(.*\).C\(.*\)/mv &amp; \1.cc\2/' | sh 
+</pre>
 
 <h1 id="toc_3">多次修改</h1>
 <ul>
 <li>
 "-e" 选项，它通知程序使用多条编辑命令。
-
-</ul>
-<p>
-{{
+<pre>
 $ echo The tiger cubs will meet on Tuesday after school | sed -e 's/tiger/wolf/' -e's/after/before/' 
 The wolf cubs will meet on Tuesday before school
-}}}
-</p>
+</pre>
+
+</ul>
 
 <ul>
 <li>
 分号来分隔命令。分号必须紧跟斜线。
-
-</ul>
-<p>
-{{
+<pre>
 $ echo The tiger cubs will meet on Tuesday after school | sed 's/tiger/wolf/; s/after/before/' 
 The wolf cubs will meet on Tuesday before school
-}}}
-</p>
+</pre>
+
+</ul>
 
 <h1 id="toc_4">全局修改</h1>
 <p>
 sed 默认非全局，只修改一次。用 g 设置全局。
-{{
-sed 's/line/LINE/g' 
-}}}
 </p>
+<pre>
+sed 's/line/LINE/g' 
+</pre>
 
 <h1 id="toc_5">-n选项</h1>
 <ul>
 <li>
 只显示1～2行*/
+<pre>
+$ sed -n '1,2p' test 
+</pre>
 
 </ul>
 <p>
-{{
-$ sed -n '1,2p' test 
-}}}
 1 line line1 
 2 line line2
 </p>
@@ -118,22 +110,22 @@ $ sed -n '1,2p' test
 <ul>
 <li>
 只显示含有line3行*/ 
+<pre>
+$ sed -n '/line3/p' test 
+</pre>
 
 </ul>
 <p>
-{{
-$ sed -n '/line3/p' test 
-}}}
 3 line line3
 </p>
 
 <h1 id="toc_6">删除行</h1>
 <p>
 删除1和2行
-{{
-$ sed -n '1,2d' test
-}}}
 </p>
+<pre>
+$ sed -n '1,2d' test
+</pre>
 
 <h1 id="toc_7">其他</h1>
 <pre>

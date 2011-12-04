@@ -39,17 +39,16 @@
 <p>
 The codes writing in MediaWiki:
 </p>
-<pre class="brush: perl">
-&lt;perl&gt;
+<pre>
+{{{class="brush: perl"
 foreach(@myarr){print $_;}
-&lt;/perl&gt;
 </pre>
-
 <pre class="brush: java">
-&lt;java&gt;
 public class foo{ /* .... */ }
-&lt;/java&gt;
 </pre>
+<p>
+}}}
+</p>
 
 <p>
 The Highlighted codes:
@@ -57,7 +56,6 @@ The Highlighted codes:
 <pre class="brush: perl">
 foreach(@myarr){print $_;}
 </pre>
-
 <pre class="brush: java">
 public class foo{ /* .... */ }
 </pre>
@@ -76,18 +74,19 @@ Copy &amp; paste the following code to a file called GeSHiHighlight.php
 <li>
 Put GeSHiHighlight.php in your MediaWiki installations' extensions folder
 
-</ul>
-<p>
-** this php file enables the tag, tag is much more convenient. this script also search the available syntax file in the geshi folder.
-</p>
 <ul>
 <li>
-Add following lines to LocalSettings.php in your MediaWiki folder
-<pre class="brush: php">
-include("extensions/GeSHiHighlight.php");
-</pre>
+this php file enables the tag, tag is much more convenient. this script also search the available syntax file in the geshi folder.
 
 </ul>
+<li>
+Add: {{{class="brush: php"
+
+</ul>
+<p>
+include("extensions/GeSHiHighlight.php");
+}}} to LocalSettings.php in your MediaWiki folder
+</p>
 
 <h2 id="toc_3.1">GeSHiHighlight.php</h2>
 <pre class="brush: php">
@@ -132,7 +131,7 @@ function wfSyntaxExtension() {
 	} 
 } 
 
-/**
+/	*
 * function: geshi_list_languages
 * -------------------------
 * List supported languages by reading the files in the geshi/geshi subdirectory
@@ -157,7 +156,6 @@ function geshi_list_languages ( $path = 'geshi/' )
 	return $lang_list;
 } 
 ?&gt;
-
 </pre>
 
 <h1 id="toc_4">for R</h1>

@@ -99,11 +99,13 @@ output
 <h1 id="toc_3">Search the chimp and rhesus Refseq Database with human transcript using BLAST.</h1>
 <p>
 Commands:
-{{
+</p>
+<pre>
 export PATH=$PATH:/usr/local/blastall
 blastall -p blastn -d ../rna_database/rna_chimp.fa -i  &lt;Refseq ID&gt;_seq.fa -o &lt;Refseq ID&gt;_chimp.txt -m8 -b1
 blastall -p blastn -d ../rna_database/rna_rhesus -i &lt;Refseq ID&gt;_seq.fa -o &lt;Refseq ID&gt;_rhesus.txt -m8 -b1
-}}}
+</pre>
+<p>
 Two files will be produced: {{{
 &lt;Refseq ID&gt;_chimp.txt
 }}} and  {{{
@@ -113,24 +115,28 @@ Two files will be produced: {{{
 
 <p>
 ps: create blast database before lauching blastall
-{{
+</p>
+<pre>
 formatdb -p F -o F -a F -i ../rna_database/rna_human.fa
 formatdb -p F -o F -a F -i ../rna_database/rna_chimp.fa
 formatdb -p F -o F -a F -i ../rna_database/rna_rhesus.fa
-}}}
-</p>
+</pre>
 
 <h1 id="toc_4">Extract the chimp and rhesus transcript sequences from Chimp Refseq Database and Rhesus Refseq Database respectively.</h1>
 <p>
 Commands:
 If you want to align human and chimp transcrips, run this:
-{{
+</p>
+<pre>
 perl get_seqs_for_2alignment.pl &lt;Refseq ID&gt;
-}}}
+</pre>
+<p>
 If you wan to align three species (human, chimp and rhesus), run this:
-{{
+</p>
+<pre>
 perl get_seqs_for_3alignment.pl &lt;Refseq ID&gt;
-}}}
+</pre>
+<p>
 A file will be produced: {{{
 &lt;Refseq ID&gt;_for_2alignment.fa
 }}} or {{{
@@ -163,15 +169,15 @@ output
 }}}.
 </p>
 
-<p>
-{{
+<pre>
 sh clustalw_for_2seq.sh &lt;Refseq ID&gt;
-}}}
+</pre>
+<p>
 or 
-{{
-sh clustalw_for_3seq.sh &lt;Refseq ID&gt;
-}}}
 </p>
+<pre>
+sh clustalw_for_3seq.sh &lt;Refseq ID&gt;
+</pre>
 
 <h1 id="toc_6">Get the consensus sequence.</h1>
 <p>
@@ -188,9 +194,11 @@ Note: the sequence of the outlier exon will be in capital characters and the sta
 <h1 id="toc_7">If you want to allow gaps in the consensus sequence, you should recalculate the positions of the exons.</h1>
 <p>
 Command:
-{{
+</p>
+<pre>
 perl get_gapped_position.pl &lt;Refseq ID&gt; &lt;2/3&gt;
-}}}
+</pre>
+<p>
 A file will be produced: {{{
 gapped_&lt;Refseq ID&gt;_location.txt
 }}}.

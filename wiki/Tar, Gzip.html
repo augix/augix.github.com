@@ -30,52 +30,40 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<p>
-{{
+<pre>
 tar -czvf aps95.tar.gz aps95/
 tar -xzvf aps95.tar.gz
-}}}
-</p>
+</pre>
 
 <p>
 or
 </p>
 
-<p>
-{{
+<pre>
 tar -cvf aps95.tar aps95/
 gzip aps95.tar
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 gunzip aps95.tar.gz
 tar -xvf aps95.tar
-}}}
-</p>
+</pre>
 
 <p>
 or 
 </p>
 
-<p>
-{{
+<pre>
 tar -cvf aps95.tar aps95/
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 tar -xvf aps95.tar
-}}}
-</p>
+</pre>
 
-<p>
-{{
+<pre>
 gunzip &lt; file.tar.gz | tar xvf -
-}}}
-</p>
+</pre>
 
 <h1 id="toc_1">other</h1>
 
@@ -89,21 +77,18 @@ inside the compressed archive; this command will show you the contents,
 again without taking apart the whole thing:
 </p>
 
-<p>
-{{
+<pre>
 gunzip -c aps95.tar.gz | tar -tvf -
-}}}
-</p>
+</pre>
 
 <ul>
 <li>
 extract bz2 files
+<pre>
+tar xjvf cornbread.tar.bz2}}}
 
 </ul>
-<p>
-{{
-tar xjvf cornbread.tar.bz2}}}
-</p>
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">

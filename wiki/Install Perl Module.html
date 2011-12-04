@@ -44,29 +44,27 @@ Perl modules may be installed using the CPAN module or from source.
 
 <h1 id="toc_1">CPAN method</h1>
 
-<p>
-{{
+<pre>
 perl -MCPAN -e shell # (to get an interactive CPAN shell)
 perl -MCPAN -e 'install Time::JulianDay' # (if you know the name of the module, you can install it directly without interacting with the CPAN shell)
-}}}
-</p>
+</pre>
 
 <p>
 Within the CPAN shell:
-{{
+</p>
+<pre>
 i /expression/ # will search for a Perl module containing expression, and
 install module # will install the module.
-}}}
-</p>
+</pre>
 
 <p>
 Example:
-{{
+</p>
+<pre>
 perl -MCPAN -e shell
 i /JulianDay/
 install Time::JulianDay
-}}}
-</p>
+</pre>
 
 <p>
 Note: if you are behind a firewall, you may wish to use passive FTP with Perl's Net::FTP module. Set the environment variable FTP_PASSIVE 1 (or any non-zero value) to use passive FTP when downloading Perl modules through CPAN.
@@ -87,14 +85,10 @@ Extract the tarball.
 
 <li>
 Run perl Makefile.PL
-
-</ol>
-<p>
-{{
+<pre>
 perl Makefile.PL PREFIX=~/lib LIB=~/lib# Run make
-}}}
-</p>
-<ol>
+</pre>
+
 <li>
 Run make test
 
@@ -124,11 +118,9 @@ An easy way to check for the existence of a Perl module on your system (technica
 Example:
 </p>
 
-<p>
-{{
+<pre>
 perl -e 'use HTML::Parser;'
-}}}
-</p>
+</pre>
 
 <p>
 If nothing is returned, Perl was able to locate the module. Otherwise, you will see Can't locate HTML/Parser.pm in @INC.
