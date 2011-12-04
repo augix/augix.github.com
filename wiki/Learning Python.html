@@ -30,6 +30,8 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
+<p>
+<a href="Category_ Python.html">Category: Python</a>
 <h1>TOC</h1>
 <div class="toc">
 <ul>
@@ -94,6 +96,7 @@
 </ul>
 </ul>
 </div>
+</p>
 
 <p>
 reference: <a href="http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chinese/index.html">http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chinese/index.html</a>
@@ -624,11 +627,11 @@ I am being imported from another module
 # Filename: objvar.py
 
 class Person:
-    <b>Represents a person.</b>
+    '''Represents a person.'''
     population = 0
 
     def __init__(self, name):
-        <b>Initializes the person's data.</b>
+        '''Initializes the person's data.'''
         self.name = name
         print '(Initializing %s)' % self.name
 
@@ -637,7 +640,7 @@ class Person:
         Person.population += 1
 
     def __del__(self):
-        <b>I am dying.</b>
+        '''I am dying.'''
         print '%s says bye.' % self.name
 
         Person.population -= 1
@@ -654,7 +657,7 @@ class Person:
         print 'Hi, my name is %s.' % self.name
 
     def howMany(self):
-        <b>Prints the current population.</b>
+        '''Prints the current population.'''
         if Person.population == 1:
             print 'I am the only person here.'
         else:
@@ -697,18 +700,18 @@ I am the last one.
 # Filename: inherit.py
 
 class SchoolMember:
-    <b>Represents any school member.</b>
+    '''Represents any school member.'''
     def __init__(self, name, age):
         self.name = name
         self.age = age
         print '(Initialized SchoolMember: %s)' % self.name
 
     def tell(self):
-        <b>Tell my details.</b>
+        '''Tell my details.'''
         print 'Name:"%s" Age:"%s"' % (self.name, self.age),
 
 class Teacher(SchoolMember):
-    <b>Represents a teacher.</b>
+    '''Represents a teacher.'''
     def __init__(self, name, age, salary):
         SchoolMember.__init__(self, name, age)
         self.salary = salary
@@ -719,7 +722,7 @@ class Teacher(SchoolMember):
         print 'Salary: "%d"' % self.salary
 
 class Student(SchoolMember):
-    <b>Represents a student.</b>
+    '''Represents a student.'''
     def __init__(self, name, age, marks):
         SchoolMember.__init__(self, name, age)
         self.marks = marks
@@ -941,11 +944,13 @@ sys.path.append("/home/me/mypy")
 <ul>
 <li>
 A function is an object.
-<pre>
- square = lambda x: x	*2
-</pre>
 
 </ul>
+<p>
+{{
+square = lambda x: x	*2
+}}}
+</p>
 
 <ul>
 <li>
@@ -962,20 +967,24 @@ def build_taxer(rate):
 <ul>
 <li>
 filter and lambda
-<pre>
- filter( lambda x: x%2==0, range(10))
-</pre>
 
 </ul>
+<p>
+{{
+filter( lambda x: x%2==0, range(10))
+}}}
+</p>
 
 <ul>
 <li>
 list comprehensions can replace map and filter, but compute the whole list is slow
-<pre>
- [i	*2 for i in range(10) if i%2==0]
-</pre>
 
 </ul>
+<p>
+{{
+[i	*2 for i in range(10) if i%2==0]
+}}}
+</p>
 
 <ul>
 <li>

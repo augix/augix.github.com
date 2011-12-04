@@ -1,0 +1,339 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
+	<title>Python Assignment 3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<a name='top'></a>
+<div class="container">
+    <div class="header">
+		<h1>Python Assignment 3</h1> 
+	</div><!-- end of header -->
+	<div class="post"><!-- start of post -->
+	
+<h1 id="toc_1">Functions</h1>
+<h2 id="toc_1.1">Exercise 1: validate_bases()</h2>
+<pre class="brush: python">
+#!/usr/bin/env python
+def count_bases(seq):
+    counts = {}
+    for base in seq:
+        counts[base] = counts.get(base, 0) + 1
+    return counts
+
+def validate_bases(seq):
+    seq = seq.upper()
+    length = len(seq)
+    counts = count_bases(seq)
+    ATGC = sum([counts.get(i,0) for i in 'ATGC'])
+    if length == ATGC:
+        return True
+    else:
+        return False
+</pre>
+
+<h2 id="toc_1.2">Exercise 2: count_bases()</h2>
+<pre class="brush: python">
+#!/usr/bin/env python
+from seqtools import *
+f = open('./ambiguous_sequences.seq')
+for l in f.readlines():
+    seq = l.rstrip()
+    counts = count_bases(seq)
+    print 'Sequence has', str(len(seq)), 'bases.'
+    for key,value in counts.items():
+        print key, '=', value
+</pre>
+<p>
+<br>
+Result:
+</p>
+<pre>
+Sequence has 1267 bases.
+A = 287
+C = 306
+B = 1
+G = 389
+R = 1
+T = 282
+Y = 1
+Sequence has 553 bases.
+A = 119
+C = 161
+T = 131
+G = 141
+N = 1
+Sequence has 1521 bases.
+A = 402
+C = 196
+T = 471
+G = 215
+N = 237
+...
+...
+Sequence has 1285 bases.
+A = 327
+Y = 1
+C = 224
+T = 371
+G = 362
+Sequence has 570 bases.
+A = 158
+C = 120
+T = 163
+G = 123
+N = 6
+Sequence has 1801 bases.
+C = 376
+A = 465
+S = 1
+T = 462
+G = 497
+</pre>
+
+<h2 id="toc_1.3">Exercise 3: quadratic roots</h2>
+<pre class="brush: python">
+#!/usr/bin/env python
+from math import sqrt
+def quadratic_roots(a,b,c):
+    discriminant = b*b-4*a*c
+    if discriminant &gt;= 0:
+        x0 = (-b + sqrt(discriminant))/2.0/a
+        x1 = (-b - sqrt(discriminant))/2.0/a
+        return (x0, x1)
+    else:
+        return (None, None)
+
+print quadratic_roots(1,2,1)
+print quadratic_roots(1,4,1)
+print quadratic_roots(3,2,1)
+</pre>
+<p>
+<br>
+Result:
+</p>
+<pre>
+$ python e3.py
+(-1.0, -1.0)
+(-0.26794919243112281, -3.7320508075688772)
+(None, None)
+</pre>
+
+<h2 id="toc_1.4">Exercise 4: DNA to Protein</h2>
+<p>
+seqtools.py
+</p>
+<pre class="brush: python">
+def DNA2protein(seq, frame):
+    ''' This is a DNA to Protein translator.
+        Arguments:
+            seq:    input DNA sequence
+            frame:  reading frame. Allowed values: 0, 1 and 2.
+        Values:
+            Protein sequence.
+    '''
+    codon_table = { 'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L',
+    'TCT': 'S', 'TCC': 'S', 'TCA': 'S', 'TCG': 'S', 'TAT': 'Y',
+    'TAC': 'Y', 'TGT': 'C', 'TGC': 'C', 'TGG': 'W', 'CTT': 'L',
+    'CTC': 'L', 'CTA': 'L', 'CTG': 'L', 'CCT': 'P', 'CCC': 'P',
+    'CCA': 'P', 'CCG': 'P', 'CAT': 'H', 'CAC': 'H', 'CAA': 'Q',
+    'CAG': 'Q', 'CGT': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R',
+    'ATT': 'I', 'ATC': 'I', 'ATA': 'I', 'ATG': 'M', 'ACT': 'T',
+    'ACC': 'T', 'ACA': 'T', 'ACG': 'T', 'AAT': 'N', 'AAC': 'N',
+    'AAA': 'K', 'AAG': 'K', 'AGT': 'S', 'AGC': 'S', 'AGA': 'R',
+    'AGG': 'R', 'GTT': 'V', 'GTC': 'V', 'GTA': 'V', 'GTG': 'V',
+    'GCT': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A', 'GAT': 'D',
+    'GAC': 'D', 'GAA': 'E', 'GAG': 'E', 'GGT': 'G', 'GGC': 'G',
+    'GGA': 'G', 'GGG': 'G' }
+    stop_codons = ['TAA', 'TAG', 'TGA']
+    start_codons = ['TTG', 'CTG', 'ATG']
+    more = dict(zip(stop_codons, '		*'))
+    codon_table.update(more)
+    seq = seq[frame:]
+    codons = [seq[i*3:i*3+3] for i in range(len(seq)/3)]
+    assert (codons[0] in start_codons), "First codon is not a start codon."
+    acids = [codon_table.get(codon, '*') for codon in codons]
+    return ''.join(acids)
+</pre>
+<p>
+e4.py
+</p>
+<pre class="brush: python">
+#!/usr/bin/env python
+from seqtools import *
+DNA = raw_input('Enter DNA sequence: ').upper()
+frame = raw_input('Reading frame (only 0, 1 and 2 allowed): ')
+protein = DNA2protein(DNA, int(frame))
+print 'Protein:', protein
+</pre>
+<p>
+<br>
+Result:
+</p>
+<pre>
+$ python e4.py 
+Enter DNA sequence: atgcagtcagctagctagctagctagctagatcgtacgatcgacatagctcg
+Reading frame (only 0, 1 and 2 allowed): 0
+Protein: MQSAS*LAS*IVRST*L
+</pre>
+
+<h2 id="toc_1.5">Exercise 5: factorial</h2>
+<pre class="brush: python">
+#!/usr/bin/env python
+def factorial(n):
+    assert (n&gt;0), 'n is not positive.'
+    nu = range(n,0,-1)
+    res = 1
+    for i in nu:
+        res = res * i
+    return res
+
+print factorial(1)
+print factorial(2)
+print factorial(3)
+print factorial(4)
+print factorial(5)
+print factorial(6)
+</pre>
+<p>
+<br>
+Result:
+</p>
+<pre>
+&gt;&gt;&gt; factorial(2)
+2
+&gt;&gt;&gt; factorial(3)
+6
+&gt;&gt;&gt; factorial(4)
+24
+&gt;&gt;&gt; factorial(5)
+120
+&gt;&gt;&gt; factorial(6)
+720
+&gt;&gt;&gt; factorial(1)
+1
+</pre>
+
+<h1 id="toc_2">List comprehensive</h1>
+<h2 id="toc_2.1">Exerciese 1: mylen()</h2>
+<pre class="brush: python">
+#!/usr/bin/env python
+def mylen(x):
+    # x is a list
+    y = [1 for i in x]
+    return sum(y)
+</pre>
+
+<p>
+Result:
+</p>
+<pre>
+&gt;&gt;&gt; print mylen([1,3,7,4,2])
+5
+</pre>
+
+<h2 id="toc_2.2">Exercise 2: flatten()</h2>
+<pre class="brush: python">
+#!/usr/bin/env python
+def flatten(x):
+    y = []
+    [y.extend(i) for i in x]
+    return y
+
+a = [['a', 'b'], ['c'], ['d', 'e', 'f']]
+print flatten(a)
+</pre>
+<p>
+<br>
+Result:
+</p>
+<pre>
+&gt;&gt;&gt; a = [['a', 'b'], ['c'], ['d', 'e', 'f']]
+&gt;&gt;&gt; print flatten(a)
+['a', 'b', 'c', 'd', 'e', 'f']
+</pre>
+
+	</div><!-- end of post -->
+	<div class="backhome">
+		<a href="../index.html">Main Page</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Python Assignment 3" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+	</div>
+<br>
+
+<!-- javascript to hide comments -->
+<script language="javascript" type="text/javascript">
+/*** JavaScript: Show/Hide Content ***/
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<!-- javascript to show count of comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+
+<a name="disqus_thread"></a>
+<div id="disqus_thread" class="comment"><p align='right'><a href="#top" id="disqus_thread-hide" class="hideLink" onclick="showHide('disqus_thread');return true;">Hide Comments</a></p>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    var disqus_identifier = "vimwiki: Python Assignment 3";
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div><!-- end of container -->
+
+</body>
+</html>

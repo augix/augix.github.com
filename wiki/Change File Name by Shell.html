@@ -59,10 +59,11 @@ echo $old $new
 
 <p>
 the result is
-</p>
-<pre>
+{{
 human.fa chimp.fa
-</pre>
+}}}
+</p>
+
 <pre>
 old="music.mp3"
 new=${old%mp3}wav
@@ -71,10 +72,11 @@ echo $old $new
 
 <p>
 the result is
+{{
+music.mp3 music.wav
+}}}
 </p>
-<pre>
- music.mp3 music.wav
-</pre>
+
 <h1 id="toc_3">with the help of <b>*</b></h1>
 <p>
 You can also use the <b>*</b> to help <b>#</b> and <b>%</b> match variable things. Let's see some examples:
@@ -96,13 +98,19 @@ b.wav b.mp3
 c.wav c.mp3
 </pre>
  
-<pre>
- for i in *.wav; do mv "$i" "${i%%.wav}.mp3"; done
-</pre>
+<p>
+{{
+for i in *.wav; do mv "$i" "${i%%.wav}.mp3"; done
+}}}
+</p>
+
 <h2 id="toc_3.2">Change the first underline to dot</h2>
-<pre>
- for i in *_*; do echo $i ${i%%_*}.${i#*_}; done
-</pre>
+<p>
+{{
+for i in <strong><em></strong>; do echo $i ${i%%</em><strong>}.${i#</strong>_}; done
+}}}
+</p>
+
 <p>
 result:
 </p>
@@ -114,9 +122,12 @@ ha2_r2_fa ha2.r2_fa
 </pre>
 
 <h2 id="toc_3.3">Change the last underline to dot</h2>
-<pre>
- for i in *_*; do echo $i ${i%_*}.${i##*_}; done
-</pre>
+<p>
+{{
+for i in <strong><em></strong>; do echo $i ${i%</em><strong>}.${i##</strong>_}; done
+}}}
+</p>
+
 <p>
 result:
 </p>

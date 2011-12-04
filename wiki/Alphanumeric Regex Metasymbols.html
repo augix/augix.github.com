@@ -1,0 +1,459 @@
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
+	<title>Alphanumeric Regex Metasymbols</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<a name='top'></a>
+<div class="container">
+    <div class="header">
+		<h1>Alphanumeric Regex Metasymbols</h1> 
+	</div><!-- end of header -->
+	<div class="post"><!-- start of post -->
+	
+<h1 id="toc_1">Table 5.7. Alphanumeric Regex Metasymbols</h1>
+
+<p>
+&lt;table border="1"&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Atomic&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+</p>
+
+
+
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\0&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the null character (ASCII NUL).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\&lt;/tt&gt;<em class="replaceable">NNN</em>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the character given in octal, up to &lt;tt class="literal"&gt;\377&lt;/tt&gt;.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\&lt;/tt&gt;<em class="replaceable">n</em>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match <em class="replaceable">n</em>th previously captured string (decimal).&lt;/p>
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\a&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the alarm character (BEL).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\A&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;True at the beginning of a string.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\b&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the backspace character (BS).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\b&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;True at word boundary.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\B&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;True when not at word boundary.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\c&lt;/tt&gt;<em class="replaceable">X</em>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Match the control character Control-<em class="replaceable">X</em> (&lt;tt class="literal">\cZ&lt;/tt>, &lt;tt class="literal">\c[&lt;/tt>, etc.).&lt;/td>
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\C&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Match one byte (C &lt;tt class="literal"&gt;char&lt;/tt&gt;) even in utf8 (dangerous).&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\d&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any digit character.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\D&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any nondigit character.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\e&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Match the escape character (ASCII ESC, not backslash).&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\E&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;End case (&lt;tt class="literal"&gt;\L&lt;/tt&gt;, &lt;tt class="literal"&gt;\U&lt;/tt&gt;) or metaquote (&lt;tt class="literal"&gt;\Q&lt;/tt&gt;) translation.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\f&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the form feed character (FF).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\G&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;True at end-of-match position of prior &lt;tt class="literal"&gt;m//g&lt;/tt&gt;.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\l&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Lowercase the next character only.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\L&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Lowercase till &lt;tt class="literal"&gt;\E&lt;/tt&gt;.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\n&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Match the newline character (usually NL, but CR on Macs).&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\N{&lt;/tt&gt;<em class="replaceable">NAME</em>&lt;tt class="literal">}&lt;/tt>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the named char (&lt;tt class="literal"&gt;\N{greek:Sigma}&lt;/tt&gt;).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\p{&lt;/tt&gt;<em class="replaceable">PROP</em>&lt;tt class="literal">}&lt;/tt>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any character with the named property.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\P{&lt;/tt&gt;<em class="replaceable">PROP</em>&lt;tt class="literal">}&lt;/tt>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Match any character without the named property.&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\Q&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Quote (de-meta) metacharacters till &lt;tt class="literal"&gt;\E&lt;/tt&gt;.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\r&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the return character (usually CR, but NL on Macs).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\s&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any whitespace character.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\S&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any nonwhitespace character.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\t&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the tab character (HT).&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\u&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Titlecase next character only.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\U&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Uppercase (not titlecase) till &lt;tt class="literal"&gt;\E&lt;/tt&gt;.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\w&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any "word" character (alphanumerics plus "_").&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\W&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match any nonword character.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\x{&lt;/tt&gt;<em class="replaceable">abcd</em>&lt;tt class="literal">}&lt;/tt>&lt;/td>
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match the character given in hexadecimal.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\X&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Match Unicode "combining character sequence" string.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\z&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;True at end of string only.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+<p>
+&lt;tr&gt;
+&lt;td&gt;&lt;tt class="literal"&gt;\Z&lt;/tt&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;True at end of string or before optional newline.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</p>
+
+
+<p>
+&lt;/table&gt;
+</p>
+
+	</div><!-- end of post -->
+	<div class="backhome">
+		<a href="../index.html">Main Page</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Alphanumeric Regex Metasymbols" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+	</div>
+<br>
+
+<!-- javascript to hide comments -->
+<script language="javascript" type="text/javascript">
+/*** JavaScript: Show/Hide Content ***/
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<!-- javascript to show count of comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+
+<a name="disqus_thread"></a>
+<div id="disqus_thread" class="comment"><p align='right'><a href="#top" id="disqus_thread-hide" class="hideLink" onclick="showHide('disqus_thread');return true;">Hide Comments</a></p>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'augix-wiki'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    var disqus_identifier = "vimwiki: Alphanumeric Regex Metasymbols";
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div><!-- end of container -->
+
+</body>
+</html>
