@@ -1,25 +1,25 @@
 Hide axis
-{{{class="brush: R"
+{{{class="brush: r"
 par(xaxt='n')
 }}}
 or
-{{{class="brush: R"
+{{{class="brush: r"
 plot(...,xaxt='n')
 }}}
 
 Show the axis
-{{{class="brush: R"
+{{{class="brush: r"
 par(xaxt='s')
 }}}
 
 Print the x axis
-{{{class="brush: R"
+{{{class="brush: r"
 axis(1, at=at, labels=labels)
 }}}
 
 
 Example:
-{{{class="brush: R"
+{{{class="brush: r"
 par(xaxt='n')
 plot(1:10)
 x = c(1,3,7,10)

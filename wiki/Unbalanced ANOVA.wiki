@@ -12,7 +12,7 @@
 
 
 = How to do unbalanced anova in R =
-{{{class="brush: R"
+{{{class="brush: r"
 library(car,lib.loc="~/Library/R/")
 mod <- lm(value~factor1*factor2, contrasts=list(factor1=contr.sum, factor2=contr.sum))
 anova.result <- Anova(mod,type="III")

@@ -1,5 +1,5 @@
 = Remainder from Division 余数，求余 =
-{{{class="brush: R"
+{{{class="brush: r"
 10 %% 3
 }}}
 

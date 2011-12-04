@@ -1,4 +1,4 @@
-{{{class="brush: R"
+{{{class="brush: r"
 file.create(..., showWarnings = TRUE)
 file.exists(...)
 file.remove(...)

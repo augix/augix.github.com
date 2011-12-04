@@ -6,7 +6,7 @@ Compare to normal wilcox.test, it can deal with the tie problem.
 It's in the package <b>exactRankTests</b>.
 
 = Usage =
-{{{class="brush: R"
+{{{class="brush: r"
      ## Default S3 method:
      wilcox.exact(x, y = NULL, alternative = c("two.sided", "less", "greater"),
                   mu = 0, paired = FALSE, exact = NULL,  

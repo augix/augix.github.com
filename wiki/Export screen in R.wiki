@@ -1,4 +1,4 @@
-{{{class="brush: R"
+{{{class="brush: r"
 a = matrix(1:24,4)
 sink(file='./test.sink.txt')
 a

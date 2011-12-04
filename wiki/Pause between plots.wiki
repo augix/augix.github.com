@@ -2,6 +2,6 @@ The standard way to pause between plots is to set 'par(ask = TRUE)'
 before your first plot, which will then prompt you to continue after
 each new plot. See ?par for more information.
 
-{{{class="brush: R"
+{{{class="brush: r"
 par(ask = TRUE)
 }}}

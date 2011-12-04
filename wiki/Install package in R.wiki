@@ -36,7 +36,7 @@ install.packages("affy",lib="~/Library/R",dependencies=TRUE,contriburl="http://b
 = Packages from Bioconductor =
 
 in R
-{{{class="brush: R"
+{{{class="brush: r"
 source("http://bioconductor.org/biocLite.R")
 biocLite("affy")
 }}}

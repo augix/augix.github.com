@@ -48,7 +48,7 @@ dard output stream of the job.
 }}}
 
 == test.R ==
-{{{class="brush: R"
+{{{class="brush: r"
 args <- commandArgs(TRUE)
 flag<-args[1]
 print(flag)

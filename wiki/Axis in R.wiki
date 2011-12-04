@@ -2,7 +2,7 @@
 * [[Hide axis]]
 
 * Place the labels at a given angle
-{{{class="brush: R"
+{{{class="brush: r"
 x = 1:10
 y = x*x
 par(yaxt="n", xaxt="n")

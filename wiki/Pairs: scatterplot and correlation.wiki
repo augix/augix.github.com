@@ -1,5 +1,5 @@
 Example:
-{{{class="brush: R"
+{{{class="brush: r"
 data = USArrests
 pairs(data)
 source("~/Programming/R/pairs3.R")
@@ -8,7 +8,7 @@ pairs3.spearman(data)
 }}}
 
 source of <b>pairs3.R</b>
-{{{class="brush: R"
+{{{class="brush: r"
  ## panel.smooth
  panel.smooth <- function (x, y, col = par("col"), bg = NA, pch = par("pch"), 
     cex = 1, col.smooth = "red", span = 2/3, iter = 3, ...) 

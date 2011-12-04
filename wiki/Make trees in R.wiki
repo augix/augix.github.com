@@ -9,7 +9,7 @@ data:
 5    17502943  16721703  16721703  18163003
 }}}
 
-{{{class="brush: R"
+{{{class="brush: r"
 # 1. distance
 d <- dist(t(data))
 

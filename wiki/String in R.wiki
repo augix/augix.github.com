@@ -1,7 +1,7 @@
 [[Category:R]]
 = split =
 split a string into a vector:
-{{{class="brush: R"
+{{{class="brush: r"
 x = "string_x"
 strsplit(x, split="")
 }}}
@@ -11,7 +11,7 @@ strsplit(x, split="")
 }}}
 
 = paste =
-{{{class="brush: R"
+{{{class="brush: r"
 x = paste("Hello", "World", sep=", ")
 print(x)
 }}}
@@ -19,7 +19,7 @@ print(x)
 [1] "Hello, World"
 }}}
 
-{{{class="brush: R"
+{{{class="brush: r"
 chars = c("m", "e", "r", "g", "e", "d")
 paste(chars, collapse = "")
 }}}
@@ -29,7 +29,7 @@ paste(chars, collapse = "")
 }}}
 
 = toString =
-{{{class="brush: R"
+{{{class="brush: r"
 x = c("Hello", "World")
 y = toString(x)
 print(y)
@@ -41,7 +41,7 @@ print(y)
 ps: it seems "format" is also an useful function.
 
 = chartr =
-{{{class="brush: R"
+{{{class="brush: r"
 x = "ACGTGTGACGT"
 y = chartr("acgtACGT","tgcaTGCA",x)
 print(x);print(y)
@@ -53,7 +53,7 @@ print(x);print(y)
 }}}
 
 = DNA Reverse Complementary =
-{{{class="brush: R"
+{{{class="brush: r"
 DNA.Rev.Comp <- function(x) {
 	if (is.character(x) && length(x) == 1) {
 		x = chartr("acgtACGT","tgcaTGCA",x)

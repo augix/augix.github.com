@@ -1,6 +1,6 @@
 [[Category: R]]
 * my boot.tree.R
-{{{class="brush: R"
+{{{class="brush: r"
 boot.tree <- function(data, B = 100, tree = "upgma") {
 	library(phangorn)
 	func <- function(x) upgma(dist(x, method = "euclidean"), method="average")
@@ -54,7 +54,7 @@ boot.tree(data, B=1000, tree='hclust')
 
 
 * a script from ape package
-{{{class="brush: R"
+{{{class="brush: r"
 install.packages("ape")
 library(ape)
 data(woodmouse)

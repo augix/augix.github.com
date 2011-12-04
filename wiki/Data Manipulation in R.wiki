@@ -1,4 +1,4 @@
-{{{class="brush: R"
+{{{class="brush: r"
 DF <- data.frame(x = c(1, 2, 3), y = c(0, 10, NA))
 DF
 ## remove the lines with NA

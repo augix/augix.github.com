@@ -1,6 +1,6 @@
 [[Category:R]]
 
-{{{class="brush: R"
+{{{class="brush: r"
 # transabi.R
 # statistics on abi expression data set
 #

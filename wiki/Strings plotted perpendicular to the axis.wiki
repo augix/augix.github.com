@@ -1,4 +1,4 @@
 [[Category:R]]
-{{{class="brush: R"
+{{{class="brush: r"
 par(las=2)
 }}}

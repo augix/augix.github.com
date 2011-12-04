@@ -12,7 +12,7 @@ these two packages from http://www.bioconductor.org/repository/release1.5/packag
 R CMD INSTALL ~/Library/R/ rdbi.tar.gz
 }}}
 or
-{{{class="brush: R"
+{{{class="brush: r"
 > install.packages("rdbi",lib="~/Library/R/")
 
 > library(Rdbi)

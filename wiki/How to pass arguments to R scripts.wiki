@@ -39,7 +39,7 @@ runfoo arg1 arg2
 }}}
 
 = Example: test_arguments.R =
-{{{class="brush: R"
+{{{class="brush: r"
 args <- commandArgs(TRUE)
 write.table(args[1],file="test.out")
 q(save="no")

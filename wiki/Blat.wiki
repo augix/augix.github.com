@@ -38,7 +38,7 @@ more probe_fa/3040440.fa
   caagaggttgacagactcgatgacg
 
 in R:
-{{{class="brush: R"
+{{{class="brush: r"
 library(seqinr)
 c2s(rev(comp(s2c("caagaggttgacagactcgatgacg"))))
 [1] "cgtcatcgagtctgtcaacctcttg"
