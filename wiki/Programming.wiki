@@ -3,7 +3,6 @@
 * [[Learning Shell|Shell]]
 * [[Python]]
 * [[Learning Perl|Perl]]
-* [[PHP]]
 * [[R tips]]
 * [[AppleScript]]
 * [[SQL]]
