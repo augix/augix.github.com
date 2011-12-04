@@ -74,6 +74,7 @@ Install <b>NuFile</b> Softwares/System/System Utilities/NuFileInstaller2-0.pkg w
 <b>Customize Toolbar</b>, put <b>Path</b>, <b>New Folder</b>, <b>Connect</b> on the Toolbar
 
 </ul>
+ 
 <h3 id="toc_2.2.1">sshfs</h3>
 <ul>
 <li>
@@ -83,13 +84,12 @@ sshfs integrate the sftp directory with Finder
 Download sshfs (or macfuse) and install it in /Applications/sshfs
 
 <li>
-run {{{class="brush: bash"
+run 
+<pre class="brush: bash">
+/Applications/sshfs/bin/mount_sshfs augix@biocomp2 ~/picb/home5/
+</pre>
 
 </ul>
-<p>
-/Applications/sshfs/bin/mount_sshfs augix@biocomp2 ~/picb/home5/
-}}}
-</p>
 
 <h2 id="toc_2.3">Sapiens</h2>
 <ul>
@@ -125,29 +125,47 @@ Make an alias for /System/Library/CoreServices/Screen Sharing.app, put it in ~/A
 
 <ul>
 <li>
-Run {{{class="brush: bash"
+Run 
+<pre class="brush: bash">
+defaults write com.apple.ScreenSharing ShowBonjourBrowser_Debug 1
+</pre>
 
 </ul>
 <p>
-defaults write com.apple.ScreenSharing ShowBonjourBrowser_Debug 1
-}}} to enable Bonjour Browser for Screen Sharing.
+to enable Bonjour Browser for Screen Sharing.
 </p>
 
 <ul>
 <li>
-Run {{{class="brush: bash"
+Run 
+<pre class="brush: bash">
+defaults write com.apple.ScreenSharing 'NSToolbar Configuration ControlToolbar' -dict-add 'TB Item Identifiers' '(Scale,Control,Share,Curtain,Capture,FullScreen,GetClipboard,SendClipboard,Quality)'
+</pre>
 
 </ul>
 <p>
-defaults write com.apple.ScreenSharing 'NSToolbar Configuration ControlToolbar' -dict-add 'TB Item Identifiers' '(Scale,Control,Share,Curtain,Capture,FullScreen,GetClipboard,SendClipboard,Quality)'
-}}} to enable the Secret Toolbar. This toolbar contains:
-	*Switch between control and observe mode
-	*Share mouse and keyboard with user
-	*Lock computer screen while you control
-	*Capture screen to a file
-	*Fit screen to full display
-	*Image Quality
+to enable the Secret Toolbar. This toolbar contains:
 </p>
+<ul>
+<li>
+Switch between control and observe mode
+
+<li>
+Share mouse and keyboard with user
+
+<li>
+Lock computer screen while you control
+
+<li>
+Capture screen to a file
+
+<li>
+Fit screen to full display
+
+<li>
+Image Quality
+
+</ul>
 
 <h2 id="toc_2.7">Growl</h2>
 <ul>
@@ -172,11 +190,11 @@ Copy Augix.collection and Chinese.collection from  boulo.local.:~/Library/FontCo
 Write ~/.bashrc. <a href=".bashrc on Mac OS X.html">.bashrc on Mac OS X</a>
 
 <li>
-Write ~/.ssh/config. <a href="ssh_config.html">ssh_config</a>
+Write ~/.ssh/config. <a href="ssh config.html">ssh config</a>
 
 <li>
 Vim
-<pre>
+<pre class="brush: bash">
 cp /usr/share/vim/vim70/vimrc_example.vim ~/.vimrc
 </pre>
 
@@ -392,15 +410,11 @@ Install <b>XAMPP</b> on /Applications/.
 Turn off the <b>System Preferences: Web Sharing</b> in order to make XAMPP work
 
 <li>
-Run {{{class="brush: bash"
-
-</ul>
-</ul>
-<p>
+Run 
+<pre class="brush: bash">
 sudo /Applications/xampp/xamppfiles/mampp start
-}}}
-</p>
-<ul>
+</pre>
+
 <li>
 <a href="Fix XAMPP security weaknesses.html">Fix XAMPP security weaknesses</a>
 
@@ -409,18 +423,16 @@ Modify /Applications/xampp/xamppfiles/phpmyadmin/config.inc.php
 
 <ul>
 <li>
-{{{
-
-</ul>
-</ul>
-<p>
+run
+<pre>
 $cfg['Servers'][$i]['password'] = 'PASSWORD';
-}}}
-</p>
-<ul>
+</pre>
+
 <li>
 test phpMyAdmin
 
+</ul>
+</ul>
 </ul>
 
 <h2 id="toc_9.2">MediaWiki</h2>
@@ -439,24 +451,17 @@ change folder name from <b>mediawiki-1.6.10</b> to <b>wk</b>
 Open Safari, go to <a href="http://localhost/wk/">http://localhost/wk/</a>
 
 <li>
-{{{class="brush: bash"
-
-</ul>
-</ul>
-<p>
+run
+<pre class="brush: bash">
 cd /Applications/xampp/xamppfiles/htdocs/wk
-}}}
-</p>
-<ul>
-<li>
-{{{class="brush: bash"
+</pre>
 
-</ul>
-<p>
+<li>
+run
+<pre class="brush: bash">
 chmod a+w config
-}}}
-</p>
-<ul>
+</pre>
+
 <li>
 Open Safari, go to <a href="http://localhost/wk/">http://localhost/wk/</a>, and fill the form <b>Site config</b>
 
@@ -466,6 +471,7 @@ Move the config/LocalSettings.php file into the parent directory
 <li>
 Delete /Applications/xampp/xamppfiles/htdocs/wk/config
 
+</ul>
 </ul>
 
 <ul>
@@ -483,7 +489,7 @@ Replace /Applications/xampp/xamppfiles/htdocs/wk/images by Boulo.local:/Applicat
 </ul>
 
 <h2 id="toc_9.3">CGI-Executables</h2>
-<pre>
+<pre class="brush: bash">
 scp -r boulo.local:/Library/WebServer/CGI-Executables/*  /Applications/xampp/xamppfiles/cgi-bin/
 </pre>
 

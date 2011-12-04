@@ -1,6 +1,7 @@
 FTP Site Directories
 [http://www.ensembl.org/info/downloads/ftp_structure.html Ref Link]
 
+{{{class="brush: text"
 The FTP directory has the following basic structure, although not all information is neccessarily available for each species.
 
    |-- embl	      Gene predictions annotated on genomic DNA slices of 1 Mb in EMBL format.
@@ -83,3 +84,5 @@ The FTP directory has the following basic structure, although not all informatio
        |-- snp_mart                  Genetic variation information
        |
        |-- vega_mart                 Manually curated gene sets
+
+}}}

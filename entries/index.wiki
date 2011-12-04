@@ -2,4 +2,6 @@
 
 [[Kurt-Eisner/| Flat on Kurt-Eisner Str.]]
 
+[[./mediawiki2vimwiki/|Convert Mediawiki pages to Vimwiki]]
+
 

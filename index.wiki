@@ -15,8 +15,6 @@ This is the home of [http://wiki.augix.com wiki.augix.com], this wiki covers mai
 
 Please leave a comment if you found an error.
 
-
 %% [[./blog/Blog]]
 %% [[./entries/]] 
-%% [[./test/html_code]]
 

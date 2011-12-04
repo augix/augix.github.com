@@ -22,4 +22,4 @@ hall pythn
 [http://blog.donews.com/tinylee/archive/2007/06/14/1175344.aspx Python Cook 1.9 简化使用string的translate方法]
 
 See Also
-[[string.replace]]
+[[String.replace]]
