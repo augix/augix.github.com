@@ -34,7 +34,7 @@ curl -b headers_and_cookies http://www.affymetrix.com/Auth/support/downloads/dem
 
 
 = Download all the files form FTP site by Wget =
-{{
+{{{
 echo "wget -r -l2 --no-parent -A.bz2 ftp://ftp.hgsc.bcm.tmc.edu/pub/data/Rmacaque/fasta/" | at now
 }}}
 

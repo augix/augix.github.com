@@ -1,7 +1,7 @@
 [[Category: R]]
 
 = How to submit simple jobs in PICB cluster =
-{{
+{{{
 ls job*.sh | xargs -n1 qsub -q linux.q
 }}}
 

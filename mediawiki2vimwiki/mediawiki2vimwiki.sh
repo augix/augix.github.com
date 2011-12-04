@@ -1,8 +1,8 @@
 #!/bin/bash
 cd `dirname $0`
 
-dir1="../wiki"
-dir2="../new"
+dir1="../mediawiki"
+dir2="../wiki"
 dir3="../tmp1"
 dir4="../tmp2"
 [ -d $dir2 ] || mkdir $dir2
@@ -12,11 +12,11 @@ dir4="../tmp2"
 IFS="
 "
 
-for old in ../wiki/*.wiki; do
+for old in $dir1/*.wiki; do
     new=$dir2/`basename $old`
     tmp1=$dir3/`basename $old`
     tmp2=$dir4/`basename $old`
-    python ./convert.line.starts.with.a.white.space.py "$old" "$tmp1"
+    python ./convert.line.starts.with.a.whitespace.py "$old" "$tmp1"
     python ./convert.emphasize.quotes.py "$tmp1" "$tmp2"
     perl -pe \
         's|<bash>|{{{class="brush: bash"\n|g;
@@ -47,4 +47,8 @@ for old in ../wiki/*.wiki; do
     | sed '/{{{/ { N; s/\n$//; }'\
     | sed '/^$/ { N; s/\n}}}/}}}/; }' >"$new" 
 done  
+
+[ -d $dir3 ] && rm -rf $dir3
+[ -d $dir4 ] && rm -rf $dir4
 cd -
+

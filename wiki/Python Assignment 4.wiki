@@ -80,12 +80,12 @@ Frame 3: AQAE<STOP>RRGVL
 == Exercise 1: find modules ==
 Which module or modules do you think would be useful if you were faced with the following problems?
 * You need to get a list of files in a particular directory?
-{{
+{{{
 Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname)
 }}}
 
 * You need to grab a file from a website in an automated fashion?
-{{
+{{{
 Answer: urllib.
 {{{class="brush: python"
 import urllib
@@ -95,7 +95,7 @@ res.read()
 }}}
 
 * You need to time how long a particular operation takes to complete?
-{{
+{{{
 Answer: timeit.
 {{{class="brush: python"
 import timeit
@@ -104,7 +104,7 @@ timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
 }}}
 
 * You need to do calculations using rational numbers (i.e. numbers which are represented as fractions like 1/3)?
-{{
+{{{
 Answer: module 'fractions', 'math'.
 }}}
 

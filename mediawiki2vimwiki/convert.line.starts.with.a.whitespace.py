@@ -32,14 +32,21 @@ def convert(lines):
     for l in lines:
         is_code = is_code_line(l)
         inside = inside_existing_code(inside, l)
-        if not inside and is_code and not openState:
-            l = "{{{\n" + l[1:]
-            openState = True
-        if not inside and is_code and openState:
-            l = l[1:]
-        if not inside and not is_code and openState:
-            l = "}}}\n" + l
-            openState = False
+        if not inside:
+            if is_code:
+                l = l[1:]
+                if openState:
+                    pass
+                else:
+                    l = '{{{\n' + l
+                    openState = True
+            else:
+                if openState:
+                    l = '}}}\n' + l
+                    openState = False
+                else:
+                    pass
+        else: pass
         outs.append(l)
     if openState: outs.append("}}}\n")
     return outs

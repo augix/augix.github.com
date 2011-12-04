@@ -1,5 +1,5 @@
 = Progress Bar =
-{{
+{{{
 [[progressBar.py]]
 }}}
 
@@ -87,9 +87,9 @@ read file with while loop
 
 = uniquify a list =
 == elements hashable ==
-{{
+{{{
 alist = list(set(alist))
 }}}
 == elements unhashable ==
-{{
+{{{
 alist = [k for k,v in itertools.groupby(sorted(alist))]}}}

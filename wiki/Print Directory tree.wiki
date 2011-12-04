@@ -1,6 +1,6 @@
 [http://www.centerkey.com/tree/ Reference Link]
 
-{{
+{{{
 $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 }}}
 
@@ -17,7 +17,7 @@ $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 
 }}}
 
 One may also save this command line as ~/bin/tree then one can just type
-{{
+{{{
 $ tree ./
 }}}
 
@@ -29,5 +29,5 @@ What I did is making an alias:
 }}}
 
 only display the folders with depth < 3
-{{
+{{{
 tree | perl -pe "s/^.*\|-{5,}[^-].*\n//;" | grep "-"}}}

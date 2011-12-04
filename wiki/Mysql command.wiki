@@ -1,23 +1,23 @@
 = Login =
-{{
+{{{
 mysql –u root –p 123456
 }}}
 
 = SQL command =
 创建数据库
-{{
+{{{
 create database dataBaseName;
 }}}
 选择数据库
-{{
+{{{
 use dataBaseName
 }}}
 删除数据库
-{{
+{{{
 drop database databaseName;
 }}}
 创建表
-{{
+{{{
 create table tableName ( ID int  not null auto_increment,
 }}}
                                                stuID int,
@@ -26,12 +26,12 @@ create table tableName ( ID int  not null auto_increment,
                                                primary key (ID),
                                             );
 向表中插入信息
-{{
+{{{
 INSERT INTO tableName VALUES (1,'admin','admin');
 }}}
 (注意字段类型为数字的就直接用数字，为字符的要加上单引号)
 选取信息
-{{
+{{{
 select * from tableName;
 select itemName from tableName;
 select itemName1,itemName2 from tableName;
@@ -51,11 +51,11 @@ select * into Outfile ‘fileName.sql’ from tableName;(从数据库中导出�
  
 
 删除表
-{{
+{{{
 drop table tableName;
 }}}
 恢复数据
-{{
+{{{
 load data infile ‘fileName.sql’ into table tableName;(从文件导入信息到数据库表中)
 mysqladmin –u root –p 123456 create dataBaseName 
 mysql –u root –p 123456 dataBaseName  < backup-file.sql;
@@ -63,13 +63,13 @@ mysql –u root –p 123456 dataBaseName  < backup-file.sql;
 
 = DOS =
 DOS进入MYSQL命令
-{{
+{{{
 c:\>mysql -h 127.0.0.1 -u root -penter password 
 >
 mysql> 进入完成   
 }}}
 
-{{
+{{{
 建立数据库：create database databasename; 
 使用指定数据库进行操作： 方法1：use database databasename; 方法2：mysql> databsename; 
 查询当前数据库名称：select database();   

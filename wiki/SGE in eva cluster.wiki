@@ -3,7 +3,7 @@ User  private  default  request  files  are  processed  under  the  locations $H
 
 = E-mail =
 send email when the job ends:
-{{
+{{{
 -m e
 -M your@email
 }}}
@@ -59,26 +59,26 @@ for i in `seq 1 100`; do qsub job.sge $i; done
 = Other tips =
 == SGE command ==
 * submit jobs
-{{
+{{{
 qsub
 }}}
 
 * check the state of jobs
-{{
+{{{
 qstat
 }}}
 
 * check the state of a particular job
-{{
+{{{
 qstat -j JOB_ID
 }}}
 
 * check the state of severs
-{{
+{{{
 qstat -g c
 }}}
 
 * delete jobs
-{{
+{{{
 qdel -u augix
 }}}

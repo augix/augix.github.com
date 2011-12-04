@@ -2,11 +2,11 @@
 * [[.Xdefaults on mac]]
 * [http://developer.apple.com/opensource/tools/runningX11.html  An important reference about X11 on mac]
 * change font of xterm, by customize the xterm command
-{{
+{{{
 xterm -fa Monaco -fs 10
 }}}
 or
-{{
+{{{
 xterm -fa "Andale mono" -fs 10
 }}}
 * change fullscreen background of X11 on Mac OS X

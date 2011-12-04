@@ -23,9 +23,9 @@ but is not required).
 If you already have a copy of Equation Service 0.1B installed, then you will need to uninstall it first 
 by deleting the application, 
 
-{{
+{{{
 ∼/Library/Preferences/edu.umn.space.rowland.EquationService.plist
 }}}
 and 
-{{
+{{{
 ∼/Library/Application Support/Equation Service}}}

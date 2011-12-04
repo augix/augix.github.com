@@ -1,9 +1,9 @@
 = Changes made in LocalSetting.php =
-{{
+{{{
 $wgLogo = "$wgScriptPath/images/wiki_home.jpg";
 }}}
 
-{{
+{{{
 $wgEnableUploads = true;
 }}}
 

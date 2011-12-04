@@ -2,7 +2,7 @@ http://www.computing.net/unix/wwwboard/forum/6497.html
 
 There's a little known device called /dev/zero which can quickly create a file of known size. This command:
 
-{{
+{{{
 dd if=/dev/zero of=myfile bs=1024 count=10
 }}}
 

@@ -42,7 +42,7 @@ output
 
 = Search the chimp and rhesus Refseq Database with human transcript using BLAST. =
 Commands:
-{{
+{{{
 export PATH=$PATH:/usr/local/blastall
 blastall -p blastn -d ../rna_database/rna_chimp.fa -i  <Refseq ID>_seq.fa -o <Refseq ID>_chimp.txt -m8 -b1
 blastall -p blastn -d ../rna_database/rna_rhesus -i <Refseq ID>_seq.fa -o <Refseq ID>_rhesus.txt -m8 -b1
@@ -54,7 +54,7 @@ Two files will be produced: {{{
 }}}.
 
 ps: create blast database before lauching blastall
-{{
+{{{
 formatdb -p F -o F -a F -i ../rna_database/rna_human.fa
 formatdb -p F -o F -a F -i ../rna_database/rna_chimp.fa
 formatdb -p F -o F -a F -i ../rna_database/rna_rhesus.fa
@@ -63,11 +63,11 @@ formatdb -p F -o F -a F -i ../rna_database/rna_rhesus.fa
 = Extract the chimp and rhesus transcript sequences from Chimp Refseq Database and Rhesus Refseq Database respectively. =
 Commands:
 If you want to align human and chimp transcrips, run this:
-{{
+{{{
 perl get_seqs_for_2alignment.pl <Refseq ID>
 }}}
 If you wan to align three species (human, chimp and rhesus), run this:
-{{
+{{{
 perl get_seqs_for_3alignment.pl <Refseq ID>
 }}}
 A file will be produced: {{{
@@ -99,11 +99,11 @@ You should put the first file in fold {{{
 output
 }}}.
 
-{{
+{{{
 sh clustalw_for_2seq.sh <Refseq ID>
 }}}
 or 
-{{
+{{{
 sh clustalw_for_3seq.sh <Refseq ID>
 }}}
 
@@ -119,7 +119,7 @@ Note: the sequence of the outlier exon will be in capital characters and the sta
 
 = If you want to allow gaps in the consensus sequence, you should recalculate the positions of the exons. =
 Command:
-{{
+{{{
 perl get_gapped_position.pl <Refseq ID> <2/3>
 }}}
 A file will be produced: {{{

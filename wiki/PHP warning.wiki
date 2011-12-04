@@ -1,5 +1,5 @@
 * Header already sent
-{{
+{{{
 Warning: Cannot modify header information - headers already sent by
 }}}
 The "headers already sent" error is usually caused by having white space before or after the opening and closing PHP tags (<?php . . . ?>).

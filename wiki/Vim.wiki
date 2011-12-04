@@ -27,7 +27,7 @@ CTRL-Y
 
 = Jumping =
 One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
-{{
+{{{
 :ju
 }}}
 to print the jump list.
@@ -44,15 +44,15 @@ gf	 open in the same window ("goto file")
 
 = Files and Tabs =
 * create a new tab
-{{
+{{{
 :tabnew
 }}}
 * switch to next tab
-{{
+{{{
 gt
 }}}
 or
-{{
+{{{
 :tabn
 }}}
 
@@ -91,12 +91,12 @@ Open the vba file with vim, and type the :source % command right there. The % re
 * folding: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
 
 * echo function: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
-{{
+{{{
 $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
 }}}
 
 * the ctgas command line I used in MPI-EVA
-{{
+{{{
 $ ctags -R ./Programming/ ./Research/
 }}}
 
@@ -164,11 +164,11 @@ completeopt	whether to use a popup menu for Insert mode completion
 * show the key mappings `:map`
 
 * Show/Hide invisible characters
-{{
+{{{
 :set list/nolist
 }}}
 
 * Disable all blinking:
-{{
+{{{
 :set guicursor+=a:blinkon0
 }}}

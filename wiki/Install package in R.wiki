@@ -2,7 +2,7 @@
 
 == in Shell ==
 * download package (source code, eg: gem_1.0.tar.gz)
-{{
+{{{
 wget http://pbil.univ-lyon1.fr/gem/r_package/gem_1.0-0.tar.gz
 }}}
 
@@ -25,11 +25,11 @@ $ R CMD INSTALL -h
 }}}
 
 = in R ==
-{{
+{{{
 install.packages("affy",lib="~/Library/R",dependencies=TRUE)
 }}}
 or
-{{
+{{{
 install.packages("affy",lib="~/Library/R",dependencies=TRUE,contriburl="http://bioconductor.org/packages/2.1/bioc/src/contrib/")
 }}}
 

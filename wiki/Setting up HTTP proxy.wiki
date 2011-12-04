@@ -4,7 +4,7 @@
 For example, under the UNIX tcsh shell, you can set them up as
 follows:
 
-{{
+{{{
 setenv http_proxy http://groucho.marx.edu:1028
 setenv no_proxy harpo.marx.edu zeppo.marx.edu chico.marx.edu
 }}}
@@ -13,13 +13,13 @@ setenv no_proxy harpo.marx.edu zeppo.marx.edu chico.marx.edu
 One way to do this under MS-Windows is to add the following lines to your
 autoexec.bat file:
 
-{{
+{{{
 set http_proxy=http://groucho.marx.edu:1028
 set no_proxy=harpo.marx.edu zeppo.marx.edu chico.marx.edu
 }}}
 
 if the server requires password:
-{{
+{{{
 http_proxy=http://username:password@proxy.example.org:8080
 }}}
 
@@ -30,7 +30,7 @@ http_proxy=http://username:password@proxy.example.org:8080
 Under Unix and GNU/Linux, most HTTP capable applications, like lynx, wget and curl, will honor the value of the http_proxy environment variable. Some applications use all lower case, some all upper, so specify both to be safe. 
 Add the following lines to your $HOME/.bash_profile, $HOME/.bashrc, or env settings: 
 
-{{
+{{{
 http_proxy=http://127.0.0.1:8118/
 HTTP_PROXY=$http_proxy
 export http_proxy HTTP_PROXY
@@ -42,13 +42,13 @@ export http_proxy HTTP_PROXY
 = Bash =
 If you are using Bourne-style shell (sh, bash, ksh) type the following
 command: 
-{{
+{{{
 http_proxy=http://bcproxy.ac.il:8080/ ; export http_proxy
 }}}
 
 = Csh =
 For C-shell (csh, tcsh) type
-{{
+{{{
 setenv http_proxy=http://bcproxy.ac.il:8080/
 }}}
 
@@ -65,7 +65,7 @@ The http_proxy should be set in two places on OS X:
 
 Shell: Add a line like the following in .bash_profile (/Users/<name>/.bash_profile):
 
-{{
+{{{
 http_proxy=http://username:password@hostname:port;  export http_proxy
 }}}
 

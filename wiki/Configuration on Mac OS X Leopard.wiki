@@ -63,7 +63,7 @@ defaults write com.apple.ScreenSharing 'NSToolbar Configuration ControlToolbar' 
 * Write <tt>~/.bashrc</tt>. [[.bashrc on Mac OS X]]
 * Write <tt>~/.ssh/config</tt>. [[ssh_config]]
 * Vim
-{{
+{{{
 cp /usr/share/vim/vim70/vimrc_example.vim ~/.vimrc
 }}}
 
@@ -182,7 +182,7 @@ chmod a+w config
 	* [[Move MediaWiki from Boulo.local to the new machine]].
 
 == CGI-Executables ==
-{{
+{{{
 scp -r boulo.local:/Library/WebServer/CGI-Executables/*  /Applications/xampp/xamppfiles/cgi-bin/
 }}}
 

@@ -1,10 +1,10 @@
-{{
+{{{
 $ cat url.txt | xargs -n1 curl -O
 }}}
 
 or
 
-{{
+{{{
 $ curl -K urls.txt
 }}}
 

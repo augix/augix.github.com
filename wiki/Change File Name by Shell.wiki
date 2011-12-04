@@ -18,7 +18,7 @@ echo $old $new
 }}}
 
 the result is
-{{
+{{{
 human.fa chimp.fa
 }}}
 
@@ -29,7 +29,7 @@ echo $old $new
 }}}
 
 the result is
-{{
+{{{
 music.mp3 music.wav
 }}}
 
@@ -50,12 +50,12 @@ b.wav b.mp3
 c.wav c.mp3
 }}}
  
-{{
+{{{
 for i in *.wav; do mv "$i" "${i%%.wav}.mp3"; done
 }}}
 
 == Change the first underline to dot ==
-{{
+{{{
 for i in *_*; do echo $i ${i%%_*}.${i#*_}; done
 }}}
 
@@ -68,7 +68,7 @@ ha2_r2_fa ha2.r2_fa
 }}}
 
 == Change the last underline to dot ==
-{{
+{{{
 for i in *_*; do echo $i ${i%_*}.${i##*_}; done
 }}}
 

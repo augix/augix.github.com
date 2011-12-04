@@ -1,6 +1,6 @@
 
 * Fetch the URL list of mp3 files in a webpage:
-{{
+{{{
 $ perl -pe 's/.*?(http\:\/\/.*?\.mp3).*?/\1\n/gi or s/.*\n//gi;' source.html
 }}}
 

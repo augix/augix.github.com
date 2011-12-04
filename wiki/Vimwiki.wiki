@@ -100,7 +100,7 @@ Create folder of wiki file ::
 :: 定义 3 
 
 == table ==
-{{
+{{{
 | 表格 | 表格 | 表格 |
 | 表格 | 表格 | 表格 |
 | 表格 | 表格 | 表格 |
@@ -108,7 +108,7 @@ Create folder of wiki file ::
 
 == 预定于化文本 ==
 
-{{
+{{{
 {{{
 文本
 文本

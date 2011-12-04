@@ -16,7 +16,7 @@
 * Type Y to install boot efi if the CPU is Intel Dual Core. Quit Darwin_boot if no error message.
 * Read the Terms & Conditions for iATKOS v1.0i and click Agree.
 * Select packages you want to install, I only select 
-{{
+{{{
 MBIOS.KEXT.NETKES
 REMOTE.APPLE.NEL.CPU.POWER.Management.KEXT 
 and driver for the graphic card. I didn't select a driver for network card.
@@ -28,7 +28,7 @@ and driver for the graphic card. I didn't select a driver for network card.
 * Reboot, and log in the Windows XP
 * Copy CHAIN0 from iATKOS DVD to the root of disk0s1
 * Edit boot.ini, put one line at the end of the file:
-{{
+{{{
 C:\chain0="Mac OS X Leopard"
 }}}
 * Reboot, now you have a menu with two options, one is Windows, one is the Leopard, after selected Leopard, you have to click F8 to enter the system.

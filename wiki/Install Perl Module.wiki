@@ -6,19 +6,19 @@ Perl modules may be installed using the CPAN module or from source.
 
 = CPAN method =
 
-{{
+{{{
 perl -MCPAN -e shell # (to get an interactive CPAN shell)
 perl -MCPAN -e 'install Time::JulianDay' # (if you know the name of the module, you can install it directly without interacting with the CPAN shell)
 }}}
 
 Within the CPAN shell:
-{{
+{{{
 i /expression/ # will search for a Perl module containing expression, and
 install module # will install the module.
 }}}
 
 Example:
-{{
+{{{
 perl -MCPAN -e shell
 i /JulianDay/
 install Time::JulianDay
@@ -33,7 +33,7 @@ To manually install a Perl module:
 # Download the Perl module from CPAN or other site.
 # Extract the tarball.
 # Run perl Makefile.PL
-{{
+{{{
 perl Makefile.PL PREFIX=~/lib LIB=~/lib# Run make
 }}}
 # Run make test
@@ -52,7 +52,7 @@ An easy way to check for the existence of a Perl module on your system (technica
 
 Example:
 
-{{
+{{{
 perl -e 'use HTML::Parser;'
 }}}
 

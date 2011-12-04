@@ -1,7 +1,7 @@
 * Python dictionary can only use immutable elements as keys, therefore list can not be used as keys, but tuples with immutable elements can.
 
 * create dictionary
-{{
+{{{
 l = dict(a=1,b=2,c=3)
 l = dict(zip(['a','b','c'],[1,2,3]))
 dict(zip('abc',[1,2,3]))

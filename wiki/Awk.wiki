@@ -8,7 +8,7 @@ awk '$1 > $2 {print $1,$2,$1-$2}' filename
 }}}
 
 The part outside the curly braces is called the "pattern", and the part inside is the "action". The comparison operators include the ones from C:
-{{
+{{{
 == != < > <= >= ?:
 }}}
 If no pattern is given, then the action applies to all lines.

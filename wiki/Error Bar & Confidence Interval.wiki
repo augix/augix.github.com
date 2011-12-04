@@ -37,7 +37,7 @@ abline( v = c(lower_limit, upper_limit), col="red" )
 
 
 * How to Calculate Confidence Interval from a Normal distribution
-{{
+{{{
 95% C. I. = M ± (1.96 * SE)
 }}}
 

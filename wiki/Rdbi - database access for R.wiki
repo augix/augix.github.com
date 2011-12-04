@@ -1,14 +1,14 @@
 [http://rdbi.sourceforge.net/ Rdbi Home Page]
 
 = Download =
-{{
+{{{
 Rdbi
 RdbiPgSQL
 }}}
 these two packages from http://www.bioconductor.org/repository/release1.5/package/html/index.html
 
 = Install =
-{{
+{{{
 R CMD INSTALL ~/Library/R/ rdbi.tar.gz
 }}}
 or

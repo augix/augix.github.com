@@ -7,5 +7,5 @@
 * copy <b>RData</b> file into <b>data</b>
 * modify file <b>DESCRIPTION</b>, and files in <b>man</b>
 * build package, in Shell
-{{
+{{{
 R CMD build prepared_folder_of_R_codes}}}
