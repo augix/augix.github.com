@@ -1,16 +1,16 @@
 = Usage =
-<bash>
+{{{class="brush: bash"
 sh this_script.sh <URL>
-</bash>
+}}}
 
 = Example =
-<bash>
+{{{class="brush: bash"
 sh this_script.sh http://www.affymetrix.com/Auth/support/downloads/library_files/HuEx-1_0-st-v2_libraryfile.zip
-</bash>
+}}}
 
 = Download a file in a website which requires login =
 wget
-<bash>
+{{{class="brush: bash"
 #need wget version > 1.10
 
 #1. get cookie
@@ -22,22 +22,26 @@ wget
 
 ~/bin/bin/wget --no-check-certificate  --cookies=on --load-cookies=cookies.txt \
 --keep-session-cookies $1
-</bash>
+}}}
 
 
 curl
-<bash>
+{{{class="brush: bash"
 curl -D headers_and_cookies -d "logon=augix.com%40gmail.com&password=PASSWORD&x=0&y=0" http://www.affymetrix.com/site/processLogin.jsp
 
 curl -b headers_and_cookies http://www.affymetrix.com/Auth/support/downloads/demo_data/HuEx-1_0-st-v2.tissue-mixture-data-set.gcos-files.zip
-</bash>
+}}}
 
 
 = Download all the files form FTP site by Wget =
- echo "wget -r -l2 --no-parent -A.bz2 ftp://ftp.hgsc.bcm.tmc.edu/pub/data/Rmacaque/fasta/" | at now
+{{
+echo "wget -r -l2 --no-parent -A.bz2 ftp://ftp.hgsc.bcm.tmc.edu/pub/data/Rmacaque/fasta/" | at now
+}}}
 
 You want to download all the GIFs from a directory on an HTTP server. You tried 
-<pre>wget http://www.server.com/dir/*.gif</pre>
+{{{
+wget http://www.server.com/dir/*.gif
+}}}
 but that didn't work because HTTP retrieval does not support globbing. In that case, use:
 
  wget -r -l1 --no-parent -A.gif http://www.server.com/dir/

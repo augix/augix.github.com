@@ -3,36 +3,52 @@
 download blatSrc.zip
 unzip blatSrc.zip
 
- echo $MACHTYPE
- MACHTYPE=i386
- export MACHTYPE
- mkdir ~/bin/$MACHTYPE
- make
- cd ~/bin/i386/
+{{
+echo $MACHTYPE
+MACHTYPE=i386
+export MACHTYPE
+mkdir ~/bin/$MACHTYPE
+make
+cd ~/bin/i386/
+}}}
 
- faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/hg18/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit
+{{
+faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/hg18/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit
+}}}
 
- faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/panTro2/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit
+{{
+faToTwoBit /mnt/biodata/mnt/expressions/augix/genomes/panTro2/*.fa /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit
+}}}
 
- gfServer start localhost 17779 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit &
- gfServer start localhost 17780 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit &
+{{
+gfServer start localhost 17779 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/hg18.2bit &
+gfServer start localhost 17780 /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/panTro2.2bit &
+}}}
 
- gfClient localhost 17779 \
+{{
+gfClient localhost 17779 \
+}}}
   /mnt/biodata/mnt/expressions/augix/blat_database/twoBit/ \
   probe_fa/3040440.fa blat.3040440.hg.psl
 
- more probe_fa/3040440.fa
+{{
+more probe_fa/3040440.fa
+}}}
   >3040440
   caagaggttgacagactcgatgacg
 
 in R:
-<R>
+{{{class="brush: R"
 library(seqinr)
 c2s(rev(comp(s2c("caagaggttgacagactcgatgacg"))))
 [1] "cgtcatcgagtctgtcaacctcttg"
-</R>
+}}}
 
- echo "16180964/50" | bc
+{{
+echo "16180964/50" | bc
+}}}
 
- cat /tmp/augix/hg18/chr19.fa | head -n 323623 | tail |\
+{{
+cat /tmp/augix/hg18/chr19.fa | head -n 323623 | tail |\
+}}}
   perl -pe "chomp;" | grep -i "cgtcatcgagtctgtcaacctcttg"

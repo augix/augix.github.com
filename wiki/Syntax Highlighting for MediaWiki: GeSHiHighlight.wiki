@@ -3,12 +3,26 @@ http://www.mediawiki.org/wiki/Extension:GeSHiHighlight
 
 = Demo =
 The codes writing in MediaWiki:
-<pre><perl>foreach(@myarr){print $_;}</perl> 
-<java>public class foo{ /* .... */ }</java>
-</pre>
+{{{class="brush: perl"
+<perl>
+foreach(@myarr){print $_;}
+</perl>
+}}} 
+
+{{{class="brush: java"
+<java>
+public class foo{ /* .... */ }
+</java>
+}}}
+
 The Highlighted codes:
-<perl>foreach(@myarr){print $_;}</perl> 
-<java>public class foo{ /* .... */ }</java>
+{{{class="brush: perl"
+foreach(@myarr){print $_;}
+}}} 
+
+{{{class="brush: java"
+public class foo{ /* .... */ }
+}}}
 
 = Installation =
 * Download GeSHi (found here: http://qbnz.com/highlighter/index.php)
@@ -16,10 +30,13 @@ The Highlighted codes:
 * Copy & paste the following code to a file called GeSHiHighlight.php
 * Put GeSHiHighlight.php in your MediaWiki installations' extensions folder
 ** this php file enables the tag, tag is much more convenient. this script also search the available syntax file in the geshi folder.
-* Add: <php>include("extensions/GeSHiHighlight.php");</php> to LocalSettings.php in your MediaWiki folder
+* Add following lines to LocalSettings.php in your MediaWiki folder
+{{{class="brush: php"
+include("extensions/GeSHiHighlight.php");
+}}}
 
 == GeSHiHighlight.php ==
-<php>
+{{{class="brush: php"
 <?php
 # GeSHiHighlight.php
 # 
@@ -86,7 +103,8 @@ function geshi_list_languages ( $path = 'geshi/' )
 	return $lang_list;
 } 
 ?>
-</php>
+
+}}}
 
 = for R =
 In this GeSHiHighlight library, there is a file name perl.php, based on this file, I wrote a file named R.php which help wiki to highlight a R script.
@@ -95,4 +113,3 @@ In this GeSHiHighlight library, there is a file name perl.php, based on this fil
 = Todo =
 Improving Highlighter, for example: display line number.
 
-[[Category:MediaWiki Configuration]]

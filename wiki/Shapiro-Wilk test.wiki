@@ -1,4 +1,4 @@
-In [[statistics]], the '''Shapiro-Wilk test''' tests the [[null hypothesis]] that a [[statistical sample|sample]] ''x''<sub>1</sub>, ..., ''x''<sub>''n''</sub> came from a [[normal distribution|normally distributed]] population. It was published in 1965 by [[Samuel Shapiro (statistician)|Samuel Shapiro]] and [[Martin Wilk]].
+In [[statistics]], the <b>Shapiro-Wilk test</b> tests the [[null hypothesis]] that a [[statistical sample|sample]] ''x''<sub>1</sub>, ..., ''x''<sub>''n''</sub> came from a [[normal distribution|normally distributed]] population. It was published in 1965 by [[Samuel Shapiro (statistician)|Samuel Shapiro]] and [[Martin Wilk]].
 
 The [[test statistic]] is{{Fact|date=December 2008}}
 

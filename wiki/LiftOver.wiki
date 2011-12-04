@@ -1,5 +1,7 @@
 liftOver program is installed in:
- /picb/home5/augix/bin/liftOver
+{{
+/picb/home5/augix/bin/liftOver
+}}}
 
 Directly run it, you'll see the help information.
 
@@ -11,7 +13,7 @@ the program need you specify the following things:
 
 
 Now it comes my bash code:
-<bash>
+{{{class="brush: bash"
 chain_h2c=/picb/compbio6/limingfeng/data/liftover/chain_file/hg18ToPanTro2.over.chain
 chain_h2r=/picb/compbio6/limingfeng/data/liftover/chain_file/hg18ToRheMac2.over.chain
 
@@ -25,10 +27,10 @@ newFile=$outdir/chimp.promoter.bed
 
 newFile=$outdir/rhesus.promoter.bed
 ~/bin/liftOver -minMatch=0.80 $oldFile $chain_h2r $newFile unMapped
-</bash>
+}}}
 
 I also provide an example of file in BED format.
-<pre>
+{{{
 $ head human.promoter.bed 
 chr7	157955020	157956019	ENSG00000208234	0	+
 chr17	15981912	15982911	ENSG00000199674	0	-
@@ -40,7 +42,7 @@ chr20	18187496	18188495	ENSG00000223135	0	-
 chr5	29983692	29984691	ENSG00000223136	0	+
 chr14	91340071	91341070	ENSG00000200159	0	-
 chr9	108481079	108482078	ENSG00000200131	0	+
-</pre>
+}}}
 
 the columns are: chromosome name, start, end, gene id, score, strand.
 NOTICE: the liftOver program would not modify gene id and score, liftOver only converts chromosome name, start, end, and strand.

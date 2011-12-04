@@ -1,6 +1,6 @@
 = Classes =
 == Exercise 1: import Sequence ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 from sequence import Sequence
 f = open('./ambiguous_sequences.seq','r')
@@ -10,10 +10,10 @@ for l in f.readlines():
     counts = s.letter_counts()
     for base, count in counts.items():
         print base, '=', count
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 Sequence has 1267 bases.
 A = 287
 C = 306
@@ -54,10 +54,10 @@ A = 465
 S = 1
 T = 462
 G = 497
-</pre>
+}}}
 
 == Exercise 2: Sequence.to_protein() ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 from sequence import Sequence
 DNA = raw_input('Enter DNA sequence: ').upper()
@@ -65,58 +65,66 @@ seq = Sequence(DNA)
 for frame in (1, 2, 3):
     protein = seq.to_protein(rf=frame)
     print 'Frame %d: %s' % (frame, protein)
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 $  python e2.py 
 Enter DNA sequence: ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA
 Frame 1: <START>PK<START>NSVEGF<STOP>
 Frame 2: CPS<STOP>IA<STOP>RGF
 Frame 3: AQAE<STOP>RRGVL
-</pre>
+}}}
 
 = Standard Library =
 == Exercise 1: find modules ==
 Which module or modules do you think would be useful if you were faced with the following problems?
 * You need to get a list of files in a particular directory?
- Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname)
+{{
+Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname)
+}}}
 
 * You need to grab a file from a website in an automated fashion?
- Answer: urllib.
-<python>
+{{
+Answer: urllib.
+{{{class="brush: python"
 import urllib
 res = urllib.urlopen('http://augix.com')
 res.read()
-</python>
+}}}
+}}}
 
 * You need to time how long a particular operation takes to complete?
- Answer: timeit.
-<python>
+{{
+Answer: timeit.
+{{{class="brush: python"
 import timeit
 timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
-</python>
+}}}
+}}}
 
 * You need to do calculations using rational numbers (i.e. numbers which are represented as fractions like 1/3)?
- Answer: module 'fractions', 'math'.
+{{
+Answer: module 'fractions', 'math'.
+}}}
 
 == Exercise 2: sys.argv ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 import sys
 print 'Argument 1 was:', sys.argv[1]
 print 'Argument 2 was:', sys.argv[2]
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 $ python e2.py sequences.seq motifs.txt
 Argument 1 was: sequences.seq
 Argument 2 was: motifs.txt
-</pre>
+}}}
 
 == Exercise 3 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 import sys
 f = open(sys.argv[1],'r')
@@ -129,41 +137,41 @@ for l in lines:
     print 'Sequence has', str(len(seq)), 'bases.'
     for key, value in counts.items():
         print key, '=', value
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 $ ./e3.py ../../Assignment2/1.Dict/ambiguous_sequences.seq 
 Sequence has 1267 bases.
 A = 287
 C = 306
 B = 1
 ...
-</pre>
+}}}
 
 = Using modules =
 == Exercise 1: csv module ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./numbers1.csv','r')
 import csv
 lines = csv.reader(f)
 for l in lines:
     print sum(map(int,l))
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 $ ./e1.py 
 716
 1139
 11
 1707
 1516
-</pre>
+}}}
 
 == Exercise 2: csv.Sniffer() ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 csvfile = open('./numbers2.csv','r')
 import csv
@@ -172,21 +180,21 @@ csvfile.seek(0)
 lines = csv.reader(csvfile,dialect)
 for l in lines:
     print sum(map(int,l))
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 $ ./e2.py 
 716
 1139
 11
 1707
 1516
-</pre>
+}}}
 
 = Regular expressions =
 == Exercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 
 import re
@@ -205,10 +213,10 @@ for S in match:
 for N in no_match:
   if regex.search(N):
     print "Your regex matches", N
-</python>
+}}}
 
 == Exercise 2: Sentence endings ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 
 import re
@@ -240,12 +248,12 @@ for S in match:
 for N in no_match:
   if regex.search(N):
     print "Your regex matches", N
-</python>
+}}}
 <br>
 
 
 == Exercise 3: ORF ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 def ORF(seq):
     import re
@@ -265,10 +273,10 @@ seq = 'ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA'
 ORF(seq)
 seq = 'ACGATGCTGCACATGCAACTTGACGACGAC'
 ORF(seq)
-</python>
+}}}
 <br>
 Result:
-<pre>
+{{{
 $ python e3.py 
 In sequence:
 ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA 
@@ -276,4 +284,4 @@ Frame 1 contains the longest open reading frame with 33 nucleotides.
 In sequence:
 ACGATGCTGCACATGCAACTTGACGACGAC 
 No ORF found!
-</pre>
+}}}

@@ -1,6 +1,23 @@
 <html>
 <head>
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
 	<title>Learning Python</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -13,8 +30,6 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<p>
-<a href="Category_ Python.html">Category: Python</a>
 <h1>TOC</h1>
 <div class="toc">
 <ul>
@@ -79,7 +94,6 @@
 </ul>
 </ul>
 </div>
-</p>
 
 <p>
 reference: <a href="http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chinese/index.html">http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chinese/index.html</a>
@@ -89,11 +103,9 @@ reference: <a href="http://www.woodpecker.org.cn:9081/doc/abyteofpython_cn/chine
 
 <h2 id="toc_1.1">Hello World!</h2>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 print 'Hello World!'
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_1.2">Quit python</h2>
 
@@ -103,11 +115,9 @@ Use &lt;tt&gt;control-D&lt;/tt&gt; to quit python.
 
 <h2 id="toc_1.3">Help</h2>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 help(str)
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 Press &lt;tt&gt;q&lt;/tt&gt; to exit help.
@@ -121,38 +131,46 @@ Press &lt;tt&gt;q&lt;/tt&gt; to exit help.
 
 </ul>
 
+<ul>
+<li>
+使用引号
+
+</ul>
 <p>
-*使用引号
 你可以用单引号指示字符串，就如同'Quote me on this'这样。所有的空白，即空格和制表符都照原样保留。
 </p>
 
+<ul>
+<li>
+使用三引号（'''或"""）
+
+</ul>
 <p>
-*使用三引号（'''或"""）
 利用三引号，你可以指示一个多行的字符串。你可以在三引号中自由的使用单引号和双引号。例如：
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 '''This is a multi-line string. This is the first line.
 This is the second line.
 "What's your name?," I asked.
 He said "Bond, James Bond."
 '''
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_1.5">语句行</h2>
 <p>
 分号表示一个逻辑行/语句的结束。
-&lt;python&gt;
-i = 5; print i;
-&lt;/python&gt;
 </p>
+<pre class="brush: python">
+i = 5; print i;
+</pre>
 
 <p>
 下面是一个在多个物理行中写一个逻辑行的例子。
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 print \
 i
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_1.6">缩进</h2>
 
@@ -169,26 +187,15 @@ i
 </p>
 
 <h2 id="toc_1.7">运算符</h2>
-<p>
-&lt;pre&gt;
+<pre>
 运算符	名称	说明	例子
 +	加	两个对象相加	3 + 5得到8。'a' + 'b'得到'ab'。
-</p>
-<ul>
-<li>
-减	得到负数或是一个数减去另一个数	-5.2得到一个负数。50 - 24得到26。
-
-<li>
-乘	两个数相乘或是返回一个被重复若干次的字符串	2 * 3得到6。'la' * 3得到'lalala'。
-
-</ul>
-<p>
-**	幂	
+-	减	得到负数或是一个数减去另一个数	-5.2得到一个负数。50 - 24得到26。
+*	乘	两个数相乘或是返回一个被重复若干次的字符串	2 * 3得到6。'la' * 3得到'lalala'。
+	*	幂	
 返回x的y次幂
-</p>
 
-<p>
-3 ** 4得到81（即3 * 3 * 3 * 3）
+3 	* 4得到81（即3 * 3 * 3 * 3）
 /	除	x除以y	4/3得到1（整数的除法得到整数结果）。4.0/3或4/3.0得到1.3333333333333333
 //	取整除	返回商的整数部分	4 // 3.0得到1.0
 %	取模	返回除法的余数	8%3得到2。-25.5%2.25得到1.5
@@ -196,7 +203,7 @@ i
 &gt;&gt;	右移	把一个数的比特向右移一定数目	11 &gt;&gt; 1得到5。——11按比特表示为1011，向右移动1比特后得到101，即十进制的5。
 &amp;	按位与	数的按位与	5 &amp; 3得到1。
 |	按位或	数的按位或	5 | 3得到7。
-<sup><small>	按位异或	数的按位异或	5 </small></sup> 3得到6
+^	按位异或	数的按位异或	5 ^ 3得到6
 ~	按位翻转	x的按位翻转是-(x+1)	~5得到6。
 &lt;	小于	返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。注意，这些变量名的大写。	5 &lt; 3返回0（即False）而3 &lt; 5返回1（即True）。比较可以被任意连接：3 &lt; 5 &lt; 7返回True。
 &gt;	大于	返回x是否大于y	5 &gt; 3返回True。如果两个操作数都是数字，它们首先被转换为一个共同的类型。否则，它总是返回False。
@@ -207,188 +214,110 @@ i
 not	布尔“非”	如果x为True，返回False。如果x为False，它返回True。	x = True; not y返回False。
 and	布尔“与”	如果x为False，x and y返回False，否则它返回y的计算值。	x = False; y = True; x and y，由于x是False，返回False。在这里，Python不会计算y，因为它知道这个表达式的值肯定是False（因为x是False）。这个现象称为短路计算。
 or	布尔“或”	如果x是True，它返回True，否则它返回y的计算值。	x = True; y = False; x or y返回True。短路计算在这里也适用。
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_1.8">除法</h2>
 <p>
 首先要说的是python中的除法运算，在python 2.5版本中存在两种除法运算，即所谓的true除法和floor除法。当使用x/y形式进行除法运算时，如果x和y都是整形，那么运算的会对结果进行截取，取运算的整数部分，比如2/3的运算结果是0；如果x和y中有一个是浮点数，那么会进行所谓的true除法，比如2.0/3的结果是 0.66666666666666663。
 </p>
 
-<p>
-&lt;python&gt;
-from _<em>future</em>_ import division  
+<pre class="brush: python">
+from __future__ import division  
 a=2/3                  
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 如果要更精确的出发，那就要用到decimal模块。
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 import decimal
 a = 1
 c = a/3
 print c
-</p>
-<ol>
-<li>
-0
+# 0
 
-</ol>
-
-<p>
 c = float(a)/3
 print c
-</p>
-<ol>
-<li>
-0.3333333333333333333333333333
+# 0.3333333333333333333333333333
 
-</ol>
-
-<p>
 type(c)
-</p>
-<ol>
-<li>
-&lt;type 'float'&gt;
+# &lt;type 'float'&gt;
 
-</ol>
-
-<p>
 c = decimal.Decimal(a)/3
 print c
-</p>
-<ol>
-<li>
-0.3333333333333333333333333333
+# 0.3333333333333333333333333333
 
-</ol>
-
-<p>
 type(c)
-</p>
-<ol>
-<li>
-&lt;class 'decimal.Decimal'&gt;
-
-</ol>
-<p>
-&lt;/python&gt;
-</p>
+# &lt;class 'decimal.Decimal'&gt;
+</pre>
 
 <h1 id="toc_2">控制流 control</h1>
 
 <h2 id="toc_2.1">if, elif, else</h2>
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 number = 23
 guess = int(raw_input('Enter an integer : '))
-</p>
 
-<p>
 if guess == number:
-</p>
-<blockquote>
-print 'Congratulations, you guessed it.' 
-print "(but you do not win any prizes!)" 
-</blockquote>
-<p>
+    print 'Congratulations, you guessed it.' 
+    print "(but you do not win any prizes!)" 
 elif guess &lt; number:
-</p>
-<blockquote>
-print 'No, it is a little higher than that'
-</blockquote>
-<p>
+    print 'No, it is a little higher than that'
 else:
-</p>
-<blockquote>
-print 'No, it is a little lower than that' 
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
+    print 'No, it is a little lower than that' 
+</pre>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 if True:
-</p>
-<blockquote>
-print 'Yes, it is true'
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
+    print 'Yes, it is true'
+</pre>
 
 <h2 id="toc_2.2">while</h2>
 <p>
 只要在一个条件为真的情况下，while语句允许你重复执行一块语句。while语句是所谓 循环 语句的一个例子。while语句有一个可选的else从句。
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 number = 23
 running = True
-</p>
 
-<p>
 while running:
-</p>
-<blockquote>
-guess = int(raw_input('Enter an integer : '))
-</blockquote>
-<blockquote>
-if guess == number:
-print 'Congratulations, you guessed it.' 
-running = False # this causes the while loop to stop
-elif guess &lt; number:
-print 'No, it is a little higher than that' 
-else:
-print 'No, it is a little lower than that' 
-</blockquote>
-<p>
-else:
-</p>
-<blockquote>
-print 'The while loop is over.' 
-</blockquote>
-<ol>
-<li>
-Do anything else you want to do here
+    guess = int(raw_input('Enter an integer : '))
 
-</ol>
-<p>
-&lt;/python&gt;
-</p>
+    if guess == number:
+        print 'Congratulations, you guessed it.' 
+        running = False # this causes the while loop to stop
+    elif guess &lt; number:
+        print 'No, it is a little higher than that' 
+    else:
+        print 'No, it is a little lower than that' 
+else:
+    print 'The while loop is over.' 
+    # Do anything else you want to do here
+</pre>
 
 
 <h2 id="toc_2.3">for循环</h2>
 <p>
 for..in是另外一个循环语句，它在一序列的对象上 递归 即逐一使用队列中的每个项目。for也可以有else相对应。
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 for i in range(1, 5):
-</p>
-<blockquote>
-print i
-</blockquote>
-<p>
+    print i
 else:
-</p>
-<blockquote>
-print 'The for loop is over'
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
+    print 'The for loop is over'
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python for.py
 1
 2
 3
 4
 The for loop is over
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_2.4">break</h2>
 <p>
@@ -403,37 +332,29 @@ break语句是用来 终止 循环语句的，即哪怕循环条件没有称为F
 
 <p>
 continue语句被用来告诉Python‘’‘跳过’‘’当前循环块中的剩余语句，然后 ‘’‘继续’‘’ 进行下一轮循环。
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 while True:
-</p>
-<blockquote>
-s = raw_input('Enter something : ')
-if s == 'quit':
-break
-if len(s) &lt; 3:
-continue
-print 'Input is of sufficient length'
-</blockquote>
-<ol>
-<li>
-Do other kinds of processing here...
-
-</ol>
-<p>
-&lt;/python&gt;
-</p>
+    s = raw_input('Enter something : ')
+    if s == 'quit':
+        break
+    if len(s) &lt; 3:
+        continue
+    print 'Input is of sufficient length'
+    # Do other kinds of processing here...
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python continue.py
 Enter something : a
 Enter something : 12
 Enter something : abc
 Input is of sufficient length
 Enter something : quit
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h1 id="toc_3">函数 function</h1>
 
@@ -442,78 +363,56 @@ Enter something : quit
 函数通过def关键字定义。def关键字后跟一个函数的 标识符 名称，然后跟一对圆括号。圆括号之中可以包括一些变量名，该行以冒号结尾。接下来是一块语句，它们是函数体。下面这个例子将说明这事实上是十分简单的：
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 def sayHello():
-</p>
-<blockquote>
-print 'Hello World!' # block belonging to the function
-</blockquote>
+    print 'Hello World!' # block belonging to the function
 
-<p>
 sayHello() # call the function
-&lt;/python&gt;
-</p>
+</pre>
 
 
 <h2 id="toc_3.2">传参数</h2>
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 def printMax(a, b):
-</p>
-<blockquote>
-if a &gt; b:
-print a, 'is maximum'
-else:
-print b, 'is maximum'
-</blockquote>
+    if a &gt; b:
+        print a, 'is maximum'
+    else:
+        print b, 'is maximum'
 
-<p>
 printMax(3, 4) # directly give literal values
-</p>
 
-<p>
 x = 5
 y = 7
-</p>
 
-<p>
 printMax(x, y) # give variables as arguments
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python func_param.py
 4 is maximum
 7 is maximum
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_3.3">默认参数值</h2>
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 def say(message, times = 1):
-</p>
-<blockquote>
-print message * times
-</blockquote>
+    print message * times
 
-<p>
 say('Hello')
 say('World', 5)
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python func_default.py
 Hello
 WorldWorldWorldWorldWorld
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_3.4">局部变量</h2>
 
@@ -521,31 +420,23 @@ WorldWorldWorldWorldWorld
 当你在函数定义内声明变量的时候，它们与函数外具有相同名称的其他变量没有任何关系，即变量名称对于函数来说是 局部 的。这称为变量的 作用域 。所有变量的作用域是它们被定义的块，从它们的名称被定义的那点开始。
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 def func(x):
-</p>
-<blockquote>
-print 'x is', x
-x = 2
-print 'Changed local x to', x
-</blockquote>
+    print 'x is', x
+    x = 2
+    print 'Changed local x to', x
 
-<p>
 x = 50
 func(x)
 print 'x is still', x
-&lt;/python&gt;
-</p>
+</pre>
 
-<p>
-&lt;pre&gt;
+<pre>
 $ python func_local.py
 x is 50
 Changed local x to 2
 x is still 50
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_3.5">全局变量</h2>
 <p>
@@ -556,187 +447,131 @@ x is still 50
 你可以使用定义在函数外的变量的值（假设在函数内没有同名的变量）。然而，我并不鼓励你这样做，并且你应该尽量避免这样做，因为这使得程序的读者会不清楚这个变量是在哪里定义的。使用global语句可以清楚地表明变量是在外面的块定义的。
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 def func():
-</p>
-<blockquote>
-global x
-</blockquote>
-<blockquote>
-print 'x is', x
-x = 2
-print 'Changed local x to', x
-</blockquote>
+    global x
 
-<p>
+    print 'x is', x
+    x = 2
+    print 'Changed local x to', x
+
 x = 50
 func()
 print 'Value of x is', x
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python func_global.py
 x is 50
 Changed global x to 2
 Value of x is 2
-&lt;/pre&gt;
-</p>
+</pre>
 
 <p>
-你可以使用同一个global语句指定多个全局变量。例如&lt;python&gt;global x, y, z&lt;/python&gt;
+你可以使用同一个global语句指定多个全局变量。例如{{{class="brush: python"
+global x, y, z
+}}}
 </p>
 
 <h2 id="toc_3.6">返回值</h2>
 <p>
 return语句用来从一个函数 返回 即跳出函数。我们也可选从函数 返回一个值 。
 python可以返回多个变量值
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 def myfunction(lines):
-</p>
-<blockquote>
-return dict,list
-</blockquote>
+    return dict,list
 
-<p>
 (dict,list) = myfunction(lines)
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_3.7">DocStrings函数</h2>
 <p>
 Python有一个很奇妙的特性，称为 文档字符串 ，它通常被简称为 docstrings 。DocStrings是一个重要的工具，它被调用的时候，函数的文档字符串将被打印出来。文档字符串的一般是函数里头的一个多行字符串。
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 def printMax(x, y):
-</p>
-<blockquote>
-'''Prints the maximum of two numbers.
-</blockquote>
-<blockquote>
-The two values must be integers.'''
-x = int(x) # convert to integers, if possible
-y = int(y)
-</blockquote>
-<blockquote>
-if x &gt; y:
-print x, 'is maximum'
-else:
-print y, 'is maximum'
-</blockquote>
+    '''Prints the maximum of two numbers.
 
-<p>
+    The two values must be integers.'''
+    x = int(x) # convert to integers, if possible
+    y = int(y)
+
+    if x &gt; y:
+        print x, 'is maximum'
+    else:
+        print y, 'is maximum'
+
 printMax(3, 5)
-print printMax._<em>doc</em>_
-&lt;/python&gt;
-</p>
+print printMax.__doc__
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python func_doc.py
 5 is maximum
 Prints the maximum of two numbers.
-</p>
-<blockquote>
-The two values must be integers.
-</blockquote>
-<p>
-&lt;/pre&gt;
-</p>
+
+        The two values must be integers.
+</pre>
 
 <h1 id="toc_4">模块 Module</h1>
 
 <h2 id="toc_4.1">导入模块</h2>
 <p>
 导入模块是python里面非常重要的一件事。使用模块的目的是为了使用你们的函数，完成某件事情。
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 import math
 math.log(2)
-</p>
-<ol>
-<li>
-0.69314718055994529
-
-</ol>
-<p>
-&lt;/python&gt;
-</p>
+# 0.69314718055994529
+</pre>
 
 <p>
 事实上，我们也可以导入模块里头的数据。比如导入string模块的一个数据：52个字母：
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 import string
 string.letters
 #'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_4.2">更多关于“导入 import”</h2>
 <ul>
 <li>
 import导入不只是可以导入系统安装的模块，还可以导入任何一个用户写的python脚本，里面的函数和变量都会被导入。使用储存器模块，更快速地导入（import）和输出（dump）。
-
-</ul>
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 #!/usr/bin/python
-</p>
-<ol>
-<li>
-Filename: pickling.py
+# Filename: pickling.py
 
-</ol>
-
-<p>
 import cPickle as p
 #import pickle as p
-</p>
 
-<p>
 shoplistfile = 'shoplist.data'
-</p>
-<ol>
-<li>
-the name of the file where we will store the object
+# the name of the file where we will store the object
 
-</ol>
-
-<p>
 shoplist = ['apple', 'mango', 'carrot']
-</p>
 
-<ol>
-<li>
-Write to the file
-
-</ol>
-<p>
+# Write to the file
 f = file(shoplistfile, 'w')
 p.dump(shoplist, f) # dump the object to a file
 f.close()
-</p>
 
-<p>
 del shoplist # remove the shoplist
-</p>
 
-<ol>
-<li>
-Read back from the storage
-
-</ol>
-<p>
+# Read back from the storage
 f = file(shoplistfile)
 storedlist = p.load(f)
 print storedlist
-&lt;/python&gt;
-</p>
+</pre>
+
+</ul>
 
 <ul>
 <li>
@@ -745,11 +580,11 @@ print storedlist
 </ul>
 <p>
 The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not set. You can modify it using standard list operations:
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 import sys
 sys.path.append('/ufs/guido/lib/python')
-&lt;/python&gt;
-</p>
+</pre>
 
 
 
@@ -759,134 +594,88 @@ sys.path.append('/ufs/guido/lib/python')
 每个模块都有一个名称，在模块中可以通过语句来找出模块的名称。
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 #!/usr/bin/python
-</p>
-<ol>
-<li>
-Filename: using_name.py
+# Filename: using_name.py
 
-</ol>
-
-<p>
-if _<em>name</em>_ == '_<em>main</em>_':
-</p>
-<blockquote>
-print 'This program is being run by itself'
-</blockquote>
-<p>
+if __name__ == '__main__':
+    print 'This program is being run by itself'
 else:
-</p>
-<blockquote>
-print 'I am being imported from another module'
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
+    print 'I am being imported from another module'
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python using_name.py
 This program is being run by itself
-</p>
 
-<p>
 $ python
 &gt;&gt;&gt; import using_name
 I am being imported from another module
 &gt;&gt;&gt;
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_4.4">_<em>init</em>_方法</h2>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 #!/usr/bin/python
-</p>
-<ol>
-<li>
-Filename: objvar.py
+# Filename: objvar.py
 
-</ol>
-
-<p>
 class Person:
-</p>
-<blockquote>
-'''Represents a person.'''
-population = 0
-</blockquote>
-<blockquote>
-def _<em>init</em>_(self, name):
-'''Initializes the person's data.'''
-self.name = name
-print '(Initializing %s)' % self.name
-</blockquote>
+    <b>Represents a person.</b>
+    population = 0
 
-<ol>
-<li>
-When this person is created, he/she
+    def __init__(self, name):
+        <b>Initializes the person's data.</b>
+        self.name = name
+        print '(Initializing %s)' % self.name
 
-<li>
-adds to the population
+        # When this person is created, he/she
+        # adds to the population
         Person.population += 1
 
-</ol>
-<blockquote>
-def _<em>del</em>_(self):
-'''I am dying.'''
-print '%s says bye.' % self.name
-</blockquote>
-<blockquote>
-Person.population -= 1
-</blockquote>
-<blockquote>
-if Person.population == 0:
-print 'I am the last one.'
-else:
-print 'There are still %d people left.' % Person.population
-</blockquote>
-<blockquote>
-def sayHi(self):
-'''Greeting by the person.
-</blockquote>
-<blockquote>
-Really, that's all it does.'''
-print 'Hi, my name is %s.' % self.name
-</blockquote>
-<blockquote>
-def howMany(self):
-'''Prints the current population.'''
-if Person.population == 1:
-print 'I am the only person here.'
-else:
-print 'We have %d persons here.' % Person.population
-</blockquote>
+    def __del__(self):
+        <b>I am dying.</b>
+        print '%s says bye.' % self.name
 
-<p>
+        Person.population -= 1
+
+        if Person.population == 0:
+            print 'I am the last one.'
+        else:
+            print 'There are still %d people left.' % Person.population
+
+    def sayHi(self):
+        '''Greeting by the person.
+
+        Really, that's all it does.'''
+        print 'Hi, my name is %s.' % self.name
+
+    def howMany(self):
+        <b>Prints the current population.</b>
+        if Person.population == 1:
+            print 'I am the only person here.'
+        else:
+            print 'We have %d persons here.' % Person.population
+
 swaroop = Person('Swaroop')
 swaroop.sayHi()
 swaroop.howMany()
-</p>
 
-<p>
 kalam = Person('Abdul Kalam')
 kalam.sayHi()
 kalam.howMany()
-</p>
 
-<p>
 swaroop.sayHi()
 swaroop.howMany()
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python objvar.py
 (Initializing Swaroop)
 Hi, my name is Swaroop.
@@ -900,103 +689,69 @@ Abdul Kalam says bye.
 There are still 1 people left.
 Swaroop says bye.
 I am the last one.
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_4.5">继承</h2>
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 #!/usr/bin/python
-</p>
-<ol>
-<li>
-Filename: inherit.py
+# Filename: inherit.py
 
-</ol>
-
-<p>
 class SchoolMember:
-</p>
-<blockquote>
-'''Represents any school member.'''
-def _<em>init</em>_(self, name, age):
-self.name = name
-self.age = age
-print '(Initialized SchoolMember: %s)' % self.name
-</blockquote>
-<blockquote>
-def tell(self):
-'''Tell my details.'''
-print 'Name:"%s" Age:"%s"' % (self.name, self.age),
-</blockquote>
+    <b>Represents any school member.</b>
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print '(Initialized SchoolMember: %s)' % self.name
 
-<p>
+    def tell(self):
+        <b>Tell my details.</b>
+        print 'Name:"%s" Age:"%s"' % (self.name, self.age),
+
 class Teacher(SchoolMember):
-</p>
-<blockquote>
-'''Represents a teacher.'''
-def _<em>init</em>_(self, name, age, salary):
-SchoolMember._<em>init</em>_(self, name, age)
-self.salary = salary
-print '(Initialized Teacher: %s)' % self.name
-</blockquote>
-<blockquote>
-def tell(self):
-SchoolMember.tell(self)
-print 'Salary: "%d"' % self.salary
-</blockquote>
+    <b>Represents a teacher.</b>
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print '(Initialized Teacher: %s)' % self.name
 
-<p>
+    def tell(self):
+        SchoolMember.tell(self)
+        print 'Salary: "%d"' % self.salary
+
 class Student(SchoolMember):
-</p>
-<blockquote>
-'''Represents a student.'''
-def _<em>init</em>_(self, name, age, marks):
-SchoolMember._<em>init</em>_(self, name, age)
-self.marks = marks
-print '(Initialized Student: %s)' % self.name
-</blockquote>
-<blockquote>
-def tell(self):
-SchoolMember.tell(self)
-print 'Marks: "%d"' % self.marks
-</blockquote>
+    <b>Represents a student.</b>
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print '(Initialized Student: %s)' % self.name
 
-<p>
+    def tell(self):
+        SchoolMember.tell(self)
+        print 'Marks: "%d"' % self.marks
+
 t = Teacher('Mrs. Shrividya', 40, 30000)
 s = Student('Swaroop', 22, 75)
-</p>
 
-<p>
 print # prints a blank line
-</p>
 
-<p>
 members = [t, s]
 for member in members:
-</p>
-<blockquote>
-member.tell() # works for both Teachers and Students
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
+    member.tell() # works for both Teachers and Students
+</pre>
 
 <p>
 output:
-&lt;pre&gt;
+</p>
+<pre>
 $ python inherit.py
 (Initialized SchoolMember: Mrs. Shrividya)
 (Initialized Teacher: Mrs. Shrividya)
 (Initialized SchoolMember: Swaroop)
 (Initialized Student: Swaroop)
-</p>
 
-<p>
 Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
 Name:"Swaroop" Age:"22" Marks: "75"
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h2 id="toc_4.6">dir()函数</h2>
 
@@ -1008,29 +763,27 @@ Name:"Swaroop" Age:"22" Marks: "75"
 当你为dir()提供一个模块名的时候，它返回模块定义的名称列表。如果不提供参数，它返回当前模块中定义的名称列表。
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 &gt;&gt;&gt; import sys
 &gt;&gt;&gt; dir(sys) # get list of attributes for sys module
-['_<em>displayhook</em><em>', '</em><em>doc</em><em>', '</em><em>excepthook</em><em>', '</em><em>name</em><em>', '</em><em>stderr</em>_',
-'_<em>stdin</em><em>', '</em><em>stdout</em>_', '_getframe', 'api_version', 'argv',
+['__displayhook__', '__doc__', '__excepthook__', '__name__', '__stderr__',
+'__stdin__', '__stdout__', '_getframe', 'api_version', 'argv',
 ......
 'copyright', 'displayhook', 'exc_clear', 'exc_info', 'exc_type',
 'version', 'version_info', 'warnoptions']
 &gt;&gt;&gt;
 &gt;&gt;&gt; dir() # get list of attributes for current module
-['_<em>builtins</em><em>', '</em><em>doc</em><em>', '</em><em>name</em>_', 'sys']
+['__builtins__', '__doc__', '__name__', 'sys']
 &gt;&gt;&gt;
 &gt;&gt;&gt; a = 5 # create a new variable 'a'
 &gt;&gt;&gt; dir()
-['_<em>builtins</em><em>', '</em><em>doc</em><em>', '</em><em>name</em>_', 'a', 'sys']
+['__builtins__', '__doc__', '__name__', 'a', 'sys']
 &gt;&gt;&gt;
 &gt;&gt;&gt; del a # delete/remove a name
 &gt;&gt;&gt;
 &gt;&gt;&gt; dir()
-['_<em>builtins</em><em>', '</em><em>doc</em><em>', '</em><em>name</em>_', 'sys']
-&lt;/python&gt;
-</p>
+['__builtins__', '__doc__', '__name__', 'sys']
+</pre>
 
 <h1 id="toc_5">数据类型</h1>
 <h2 id="toc_5.1">列表 List</h2>
@@ -1038,36 +791,20 @@ Name:"Swaroop" Age:"22" Marks: "75"
 Python从0开始计数，而非从1开始
 </p>
 
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 x = [1.2,4,'a',6]
 type(x)
-</p>
-<ol>
-<li>
-&lt;type 'list'&gt;
+# &lt;type 'list'&gt;
 
-</ol>
-
-<p>
 x.append(2)
 print x
-</p>
-<ol>
-<li>
-[1.2, 4, 'a', 6, 2]
+# [1.2, 4, 'a', 6, 2]
 
-</ol>
-
-<p>
 seq = ["A", "T", "G", "C"]
 L = list(nt+"1" for nt in seq)
-</p>
 
-<p>
 len(L) # get the list length
-&lt;/python&gt;
-</p>
+</pre>
 
 <p>
 ref: <a href="http://effbot.org/zone/python-list.htm">http://effbot.org/zone/python-list.htm</a>
@@ -1089,31 +826,20 @@ d = dict(zip(a,b))
 {'Bruce': 190, 'Eric': 170, 'Adam': 170, 'David': 180}
 </pre>
 
-
 <h1 id="toc_6">类 Class</h1>
 <h2 id="toc_6.1">新建类</h2>
-<p>
-&lt;python&gt;
+<pre class="brush: python">
 class Person:
-  def _<em>init</em>_(self,name,weight,height):
-</p>
-<blockquote>
-self.name=name
-self.weight=weight
-self.height=height
-</blockquote>
-<p>
+  def __init__(self,name,weight,height):
+    self.name=name
+    self.weight=weight
+    self.height=height
   def bmi(self):
-</p>
-<blockquote>
-return self.weight/self.height/self.height
-</blockquote>
-<p>
+    return self.weight/self.height/self.height
 p = Person("andrew",99,1.8)
 print(p.bmi())
 print(p.name)
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_6.2">实例 instance</h2>
 
@@ -1121,96 +847,69 @@ print(p.name)
 <h2 id="toc_7.1">The glob module</h2>
 <p>
 It provides a function for making file lists from dictionary wildcards search.
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 glob(path)
 &gt;&gt;&gt;import glob
 &gt;&gt;&gt;glob.glob('*.txt')
 ['mudlog.txt','\xc3\xc.txt']
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_7.2">os 模块</h2>
-<p>
-&lt;pre&gt;
+<pre>
 1．获得当前路径
 os.getcwd()   该函数不需要传递参数，它返回当前的目录。
-</p>
   
-<p>
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; print 'current directory is ',os.getcwd()
 current directory is  D:\Python25\Lib\site-packages\pythonwin
 #这里是PythonWin的安装目录
-</p>
 
-<p>
 2．获得目录中的内容
 os.listdir(path)     path：要获得内容目录的路径。
-</p>
 
-<p>
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; os.listdir(os.getcwd())    # 获得当前目录中的内容
 ['dde.pyd', 'license.txt', 'Pythonwin.exe', 'scintilla.dll', 'win32ui.pyd',
 'win32uiole.pyd', 'pywin']
-</p>
 
-<p>
 3．创建目录
 os.mkdir(path)    path：要创建目录的路径。
-</p>
 
-<p>
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; os.mkdir('E:\\book\\temp')   # 使用os.mkdir创建目录
-</p>
 
-<p>
 4．删除目录
 os.rmdir(path)   path：要删除的目录的路径。
-</p>
 
-<p>
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; os.rmdir('E:\\book\\temp')   # 删除目录
-</p>
 
-<p>
 需要说明的是，使用os.rmdir删除的目录必须为空目录，否则函数出错。
-</p>
 
-<p>
 若想删除非空目录，先删除目录下的文件，然后再删除目录，递归过程。
-</p>
 
-<p>
 5．判断是否是目录
 os.path.isdir(path)    path：要进行判断的路径。
-</p>
 
-<p>
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; os.path.isdir('E:\\book\\temp')  # 判断E:\book\temp是否为目录
 True           # 表E:\book\temp是目录
-</p>
 
-<p>
 6．判断是否为文件
 os.path.isfile(path)   path：要进行判断的路径。
-</p>
 
-<p>
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; os.path.isfile('E:\\book\\temp')  # 判断是否为文件
 False           # 表示E:\book\temp不是文件
-&lt;/pre&gt;
-</p>
+</pre>
 
 <h1 id="toc_8">其他内容</h1>
 <h2 id="toc_8.1">print</h2>
 <p>
 格式化输出浮点数(float)
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 import math
 #default
 print "PI = %f" % math.pi
@@ -1220,82 +919,73 @@ print "PI = %10.3f" % math.pi
 print "PI = %-10.3f" % math.pi
 #前面填充字符
 print "PI = %06d" % int(math.pi)
-</p>
  
-<p>
 #输出结果
 #PI = 3.141593
 #PI =      3.142
 #PI = 3.142
 #PI = 000003
 #浮点数的格式化，精度、度和
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_8.2">Python Path</h2>
 <p>
 Appending to Your Python Path 
-&lt;python&gt;
+</p>
+<pre class="brush: python">
 import sys
 sys.path.append("/home/me/mypy")
-&lt;/python&gt;
-</p>
+</pre>
 
 <h2 id="toc_8.3">Functional programming in Python</h2>
 <ul>
 <li>
 A function is an object.
- square = lambda x: x**2
+<pre>
+ square = lambda x: x	*2
+</pre>
 
 </ul>
 
 <ul>
 <li>
 Functions can be returned as objects
+<pre class="brush: python">
+def build_taxer(rate):
+    def taxer(amount):
+        return amount * (float(rate) / 100)
+    return taxer
+</pre>
 
 </ul>
-<p>
-&lt;python&gt;
-def build_taxer(rate):
-</p>
-<blockquote>
-def taxer(amount):
-return amount * (float(rate) / 100)
-return taxer
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
 
 <ul>
 <li>
 filter and lambda
+<pre>
  filter( lambda x: x%2==0, range(10))
+</pre>
 
 </ul>
 
 <ul>
 <li>
 list comprehensions can replace map and filter, but compute the whole list is slow
- [i**2 for i in range(10) if i%2==0]
+<pre>
+ [i	*2 for i in range(10) if i%2==0]
+</pre>
 
 </ul>
 
 <ul>
 <li>
 list is slow actually we only need to compute part of the list
+<pre class="brush: python">
+def is_prime(n):
+    retun not any(n%k==0 for k in xrange(2,n))
+</pre>
 
 </ul>
-<p>
-&lt;python&gt;
-def is_prime(n):
-</p>
-<blockquote>
-retun not any(n%k==0 for k in xrange(2,n))
-</blockquote>
-<p>
-&lt;/python&gt;
-</p>
 
 <ul>
 <li>

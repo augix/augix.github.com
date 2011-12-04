@@ -1,5 +1,5 @@
 [[Category:Perl]]
-<perl>
+{{{class="brush: perl"
 #!/usr/bin/perl -w
 use strict;
 
@@ -16,4 +16,4 @@ print $hash->bar, "\n";
 
 $hash->{baz}{quux} = 149;
 print $hash->baz->quux, "\n";
-</perl>
+}}}

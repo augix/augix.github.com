@@ -1,28 +1,28 @@
 Hide axis
-<R>
+{{{class="brush: R"
 par(xaxt='n')
-</R>
+}}}
 or
-<R>
+{{{class="brush: R"
 plot(...,xaxt='n')
-</R>
+}}}
 
 Show the axis
-<R>
+{{{class="brush: R"
 par(xaxt='s')
-</R>
+}}}
 
 Print the x axis
-<R>
+{{{class="brush: R"
 axis(1, at=at, labels=labels)
-</R>
+}}}
 
 
 Example:
-<R>
+{{{class="brush: R"
 par(xaxt='n')
 plot(1:10)
 x = c(1,3,7,10)
 par(xaxt='s')
 axis(1, at=x, labels=x)
-</R>
+}}}

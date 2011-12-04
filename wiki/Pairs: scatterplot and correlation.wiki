@@ -1,15 +1,14 @@
-[[Category: R]]
 Example:
-<R>
+{{{class="brush: R"
 data = USArrests
 pairs(data)
 source("~/Programming/R/pairs3.R")
 pairs3(data)
 pairs3.spearman(data)
-</R>
+}}}
 
-source of '''pairs3.R'''
-<R>
+source of <b>pairs3.R</b>
+{{{class="brush: R"
  ## panel.smooth
  panel.smooth <- function (x, y, col = par("col"), bg = NA, pch = par("pch"), 
     cex = 1, col.smooth = "red", span = 2/3, iter = 3, ...) 
@@ -74,4 +73,4 @@ source of '''pairs3.R'''
  ## with size proportional to the correlations.
  pairs3 <- function(x) pairs(x, lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
  pairs3.spearman <- function(x) pairs(x, lower.panel=panel.smooth, upper.panel=panel.cor.spearman, diag.panel=panel.hist)
-</R>
+}}}

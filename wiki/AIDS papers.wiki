@@ -1,19 +1,19 @@
 = Center Puts Hold on Mangabey Experiments =
 
-'''AIDS researchers study sooty mangabeys because SIV, HIV's cousin, naturally infects these African monkeys but rarely causes harm'''
+<b>AIDS researchers study sooty mangabeys because SIV, HIV's cousin, naturally infects these African monkeys but rarely causes harm</b>
 
 Sooty mangabeys have high levels of SIV in their blood but show no immune damage, mangabeys remain unharmed by SIV because, unlike humans, they do not "overactivate" their immune systems when confronted with the virus.
 
 = HIV discovery in primates points way for AIDS research =
 
-'''Scientists say they have discovered why some monkeys are resistant to infection with the AIDS virus.'''
+<b>Scientists say they have discovered why some monkeys are resistant to infection with the AIDS virus.</b>
 
 Normally, a virus spreads through the body by entering cells, hijacking their machinery, and using it to make new copies of itself.
 But monkeys have a protein called TRIM5-alpha that is somehow able to stop the virus from shedding its protective coat after it enters a healthy cell. The shedding of the coating is poorly understood but considered essential to the infection cycle.
 
 = HIV's ancient legacy =
 
-'''Lentiviruses may have vexed nonhuman primates for millions of years.'''
+<b>Lentiviruses may have vexed nonhuman primates for millions of years.</b>
 
 There were primate lentiviral epidemics five to ten million years ago
 The convergent evolution of TRIMCyp demonstrates the importance of retroviral defences during primate evolution, says Nathan Wolfe, an infectious disease researcher at the University of California, Los Angeles. “When you see evidence of convergent evolution in nature, it’s generally the sign of a pretty powerful selective force,” he says. “This really emphasizes how important retroviruses are to the evolution of nonhuman primates.”

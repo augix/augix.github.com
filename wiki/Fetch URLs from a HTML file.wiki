@@ -1,9 +1,11 @@
 
 * Fetch the URL list of mp3 files in a webpage:
- $ perl -pe 's/.*?(http\:\/\/.*?\.mp3).*?/\1\n/gi or s/.*\n//gi;' source.html
+{{
+$ perl -pe 's/.*?(http\:\/\/.*?\.mp3).*?/\1\n/gi or s/.*\n//gi;' source.html
+}}}
 
 * get_url.pl: simplify one html file into another one with only links inside.
-<perl>
+{{{class="brush: perl"
 #!/usr/bin/perl
 #use strict;
 #use warnings;
@@ -25,4 +27,4 @@ while ($line=<HTML>) {
 foreach $key(keys %print) {
         print OUTPUT $key."&nbsp;&nbsp;\n";
 }
-</perl>
+}}}

@@ -1,8 +1,10 @@
 = Progress Bar =
- [[progressBar.py]]
+{{
+[[progressBar.py]]
+}}}
 
 = enumerate =
-<python>
+{{{class="brush: python"
 >>> for i,w in enumerate('hello world'):
 ...   print i, w
 ... 
@@ -32,13 +34,13 @@
 (8, 'r')
 (9, 'l')
 (10, 'd')
-</python>
+}}}
 
 
 = make matrix =
 ref: http://stackoverflow.com/questions/974931/multiply-operator-applied-to-listdata-structure
 
-<python>
+{{{class="brush: python"
 def make_matrix(rows, columns):
 """
   >>> make_matrix(4, 2)
@@ -52,39 +54,42 @@ matrix = []
 for row in range(rows):
     matrix += [[0] * columns]
 return matrix
-</python>
+}}}
 
 = formated printing =
-<python>
+{{{class="brush: python"
 items = ['a', 'abcd', 'abcdefg', 'abcdefghijklmn']
 for i in items:
     print "Name: %s Price: %s" % (i, i)
 
 for i in items:
     print "Name: %-20s Price: %10.10s" % (i, i)
-</python>
+}}}
 
 formated printing:
-<pre>
+{{{
 Name: a                    Price:          a
 Name: abcd                 Price:       abcd
 Name: abcdefg              Price:    abcdefg
 Name: abcdefghijklmn       Price: abcdefghij
-</pre>
+}}}
 
 read file with while loop
-<python>
+{{{class="brush: python"
     f = open(file)
     while True:
         l = f.readline()
         print l
         if not l: break
     print "finished.\n"
-</python>
+}}}
 
 
 = uniquify a list =
 == elements hashable ==
- alist = list(set(alist))
+{{
+alist = list(set(alist))
+}}}
 == elements unhashable ==
- alist = [k for k,v in itertools.groupby(sorted(alist))]
+{{
+alist = [k for k,v in itertools.groupby(sorted(alist))]}}}

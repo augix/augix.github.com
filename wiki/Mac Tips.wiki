@@ -1,5 +1,5 @@
 = Move home directory =
-'''How to Move home directory to another volume of hard disk?'''
+<b>How to Move home directory to another volume of hard disk?</b>
 
 Only 1 lines of commands can finish this task, after the moving, every program works fine with files in the new directory.
 
@@ -7,9 +7,9 @@ If the user name is augix, we want to move augix' home directory /Users/augix/ t
 
 We just need to open Terminal, and type:
 
-<bash>
+{{{class="brush: bash"
 sudo niutil -createprop / /Users/augix home /Volumes/ExternalDisk/augix
-</bash>
+}}}
 
 Done, changes made, all you need to do is logging in and delete the original directory.
 
@@ -31,4 +31,5 @@ Done, changes made, all you need to do is logging in and delete the original dir
 
 http://www.macosxhints.com/article.php?story=20010328105037397
 
- chflags -R nouchg ~/
+{{
+chflags -R nouchg ~/}}}

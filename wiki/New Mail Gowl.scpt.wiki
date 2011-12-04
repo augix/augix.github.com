@@ -1,5 +1,5 @@
 * Write a file named New_Mail_Gowl.scpt in <tt>~/Programming/AppleScript/</tt>
-<applescript>
+{{{
 on perform_mail_action(info)
 	
 	tell application "Mail"
@@ -35,7 +35,8 @@ on perform_mail_action(info)
 	end tell
 end perform_mail_action
 
-</applescript>
+
+}}}
 
 * In Mail, add a new rule like:
 If any Recipient Contains augix DOT com AT gmail DOT com,

@@ -1,9 +1,9 @@
-<php>
+{{{class="brush: php"
 <?php
-/*************************************************************************************
+/		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*			*
  * R.php
  * --------
- ************************************************************************************/
+ 		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*		*/
 
 $language_data = array (
 	'LANG_NAME' => 'R',
@@ -96,14 +96,14 @@ $language_data = array (
 );
 
 ?>
-</php>
+}}}
 
 The R functions in the script can be linked to Rhelp webpage, this is done by a small part of the above php file, the small part is:
-<php>
+{{{class="brush: php"
 	'URLS' => array(
 		3 => 'http://www.math.montana.edu/Rweb/Rhelp/{FNAME}.html'
 		),
-</php>
+}}}
 
 The R functions' names are copied from this webpage:
 http://www.math.montana.edu/Rweb/Rhelp/00Index.html

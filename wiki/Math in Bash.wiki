@@ -11,7 +11,7 @@ a=$(( 2*100+1 ))
 # method 3: let
 let "z=5*3"
 let "z = 5 * 4"
-let "z=5**3"
+let "z=5	*3"
 let "z=z+1"
 let "z=$z+1"
 let "z++"
@@ -24,15 +24,14 @@ expr 37 % 2
 expr length "a_string"
  
 # operators
-+ - * / ** %
-** is the exponentiation
++ - * / 	* %
+	* is the exponentiation
 += -= *= /= %=
     let "var += 5"
 
 # decompose an integer into prime factors.
 $ factor 27417
 27417: 3 13 19 37
-
 }}}
 
 = References =

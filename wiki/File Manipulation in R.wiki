@@ -1,4 +1,4 @@
-<R>
+{{{class="brush: R"
 file.create(..., showWarnings = TRUE)
 file.exists(...)
 file.remove(...)
@@ -7,7 +7,7 @@ file.append(file1, file2)
 file.copy(from, to, overwrite = recursive, recursive = FALSE)
 file.symlink(from, to)
 dir.create("tmp")
-</R>
+}}}
 
 check if the file or directory exists.
 create the file or directory

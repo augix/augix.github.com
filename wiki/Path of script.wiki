@@ -1,5 +1,6 @@
 [[Category:Perl]]
-<perl>    
+{{{class="brush: perl"
+    
 use FindBin '$Bin';
 print "The script is located in $Bin.\n";
-</perl>
+}}}

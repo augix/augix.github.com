@@ -1,5 +1,5 @@
 [[Category:LaTeX]]
-<latex>
+{{{class="brush: latex"
 % Augix' LaTeX template
 \documentclass[11pt]{article}
 \usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
@@ -52,4 +52,4 @@ These results allow us, for the first time, to estimate the extent of splicing d
 \bibliography{AS}
 
 \end{document}
-</latex>
+}}}

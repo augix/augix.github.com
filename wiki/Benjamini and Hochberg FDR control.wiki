@@ -1,5 +1,5 @@
 * the R code
-<R>
+{{{class="brush: R"
 # this is a Benjamini and Hochberg 1995 FDR control
 # http://en.wikipedia.org/wiki/False_discovery_rate
 BH.FDR.control <- function(q=FDR, p.values) {
@@ -18,4 +18,4 @@ example.BH.control() {
 	plot(density(p.values))
 	abline(v=cutoff,col='red')
 }
-</R>
+}}}

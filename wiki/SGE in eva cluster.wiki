@@ -3,12 +3,14 @@ User  private  default  request  files  are  processed  under  the  locations $H
 
 = E-mail =
 send email when the job ends:
- -m e
- -M your@email
+{{
+-m e
+-M your@email
+}}}
 
 = sge script =
 job.sge
-<bash>
+{{{class="brush: bash"
 # IMPORTANT: specifies the interpreting shell for this job to be the Bash shell
 #$ -S /bin/sh
 
@@ -47,26 +49,36 @@ job.sge
 #$ -b y
 
 echo $1 | ./job.Rf
-</bash>
+}}}
 
 = submit script =
-<bash>
+{{{class="brush: bash"
 for i in `seq 1 100`; do qsub job.sge $i; done
-</bash>
+}}}
 
 = Other tips =
 == SGE command ==
 * submit jobs
- qsub
+{{
+qsub
+}}}
 
 * check the state of jobs
- qstat
+{{
+qstat
+}}}
 
 * check the state of a particular job
- qstat -j JOB_ID
+{{
+qstat -j JOB_ID
+}}}
 
 * check the state of severs
- qstat -g c
+{{
+qstat -g c
+}}}
 
 * delete jobs
- qdel -u augix
+{{
+qdel -u augix
+}}}

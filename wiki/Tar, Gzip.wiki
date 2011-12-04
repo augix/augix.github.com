@@ -1,21 +1,33 @@
- tar -czvf aps95.tar.gz aps95/
- tar -xzvf aps95.tar.gz
+{{
+tar -czvf aps95.tar.gz aps95/
+tar -xzvf aps95.tar.gz
+}}}
 
 or
 
- tar -cvf aps95.tar aps95/
- gzip aps95.tar
+{{
+tar -cvf aps95.tar aps95/
+gzip aps95.tar
+}}}
 
- gunzip aps95.tar.gz
- tar -xvf aps95.tar
+{{
+gunzip aps95.tar.gz
+tar -xvf aps95.tar
+}}}
 
 or 
 
- tar -cvf aps95.tar aps95/
+{{
+tar -cvf aps95.tar aps95/
+}}}
 
- tar -xvf aps95.tar
+{{
+tar -xvf aps95.tar
+}}}
 
- gunzip < file.tar.gz | tar xvf -
+{{
+gunzip < file.tar.gz | tar xvf -
+}}}
 
 = other =
 
@@ -23,7 +35,10 @@ or
 inside the compressed archive; this command will show you the contents,
 again without taking apart the whole thing:
 
- gunzip -c aps95.tar.gz | tar -tvf -
+{{
+gunzip -c aps95.tar.gz | tar -tvf -
+}}}
 
 * extract bz2 files
- tar xjvf cornbread.tar.bz2
+{{
+tar xjvf cornbread.tar.bz2}}}

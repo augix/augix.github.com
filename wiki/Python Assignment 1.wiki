@@ -1,6 +1,6 @@
 = Strings =
 == Excercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input("Enter a DNA sequence: ")
 print "It is", len(seq), "bases long."
@@ -10,19 +10,19 @@ print bases[0], seq.count('A')
 print bases[1], seq.count('T')
 print bases[2], seq.count('C')
 print bases[3], seq.count('G')
-</python>
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Enter a DNA sequence: ATTAC
 It is 5 bases long.
 adenine 2
 thymine 2
 cytosine 1
 guanine 0
-</pre>
+}}}
 
 == Exercise 2 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input("Enter a DNA sequence: ")
 seq = seq.upper()
@@ -33,19 +33,19 @@ print bases[0], seq.count('A')
 print bases[1], seq.count('T')
 print bases[2], seq.count('C')
 print bases[3], seq.count('G')
-</python>
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Enter a DNA sequence: ATTgtc
 It is 6 bases long.
 adenine 1
 thymine 3
 cytosine 1
 guanine 1
-</pre>
+}}}
 
 == Exercise 3 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input("Enter a DNA sequence: ")
 seq = seq.upper()
@@ -58,9 +58,9 @@ print bases[2], seq.count('C')
 print bases[3], seq.count('G')
 unknown = len(seq) - seq.count('A') - seq.count('T') - seq.count('C') - seq.count('G')
 print "unknown", str(unknown)
-</python>
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Enter a DNA sequence: ATTU*gtc
 It is 8 bases long.
 adenine 1
@@ -68,18 +68,18 @@ thymine 3
 cytosine 1
 guanine 1
 unknown 2
-</pre>
+}}}
 
 = 'for' loop =
 == Exercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input("Enter a DNA sequence: ")
 for i in range(10):
     print i, seq
-</python>
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Enter a DNA sequence: TACG
 0 TACG
 1 TACG
@@ -91,18 +91,18 @@ Enter a DNA sequence: TACG
 7 TACG
 8 TACG
 9 TACG
-</pre>
+}}}
 
 == Exercise 2 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input("Enter a DNA sequence: ")
 n = len(seq)
 for i in range(n):
     print 'base', i, 'is', seq[i]
-</python>
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Enter a DNA sequence: GTTCAG
 base 0 is G
 base 1 is T
@@ -110,10 +110,10 @@ base 2 is T
 base 3 is C
 base 4 is A
 base 5 is G
-</pre>
+}}}
 
 == Exercise 3 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 restriction_sites = [
         "GAATTC", # EcoRI
@@ -123,16 +123,16 @@ restriction_sites = [
 
 for site in restriction_sites:
     print site
-</python>
+}}}
 <br>
-Result:<pre>
+Result:{{{
 GAATTC
 GGATCC
 AAGCTT
-</pre>
+}}}
 
 == Exercise 4 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 site2name = {
     "GAATTC": "EcoRI",
@@ -147,19 +147,21 @@ for site in site2name.keys():
     else:
         print site2name[site], "(", site, ")", "is not present"
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Enter your sequence: GAATTCTTTTT
 EcoRI ( GAATTC ) is present
 BamHI ( GGATCC ) is not present
 HindIII ( AAGCTT ) is not present
 
-</pre>
+
+}}}
 
 = 'if' loop =
 == Exercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input("Enter your sequence: ")
 bases = "ACGT"
@@ -167,20 +169,22 @@ for b in bases:
     if b in seq:
         print b, 'count:', seq.count(b)
 
-</python>
+
+}}}
 
 
-result:<pre>
+result:{{{
 Enter your sequence: ACCAGGCA
 A count: 3
 C count: 3
 G count: 2
 
-</pre>
+
+}}}
 
 = Reading files =
 == Exercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 fn = './10_sequences.seq'
 f = open(fn,'r')
@@ -188,9 +192,10 @@ lines = f.readlines()
 for i,l in enumerate(lines):
     print i+1, l.rstrip()
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 1 CCTGTATTAGCAGCAGATTCGATTAGCTTTACAACAATTCAATAAAATAGCTTCGCGCTAA
 2 ATTTTTAACTTTTCTCTGTCGTCGCACAATCGACTTTCTCTGTTTTCTTGGGTTTACCGGAA
 3 TTGTTTCTGCTGCGATGAGGTATTGCTCGTCAGCCTGAGGCTGAAAATAAAATCCGTGGT
@@ -202,10 +207,11 @@ Result:<pre>
 9 TCTGAAAAGTGCAAAGAACGATGATGATGATGATAGAGGAACCTGAGCAGCCATGTCTGAACCTATAGC
 10 GTATTGGTCGTCGTGCGACTAAATTAGGTAAAAAAGTAGTTCTAAGAGATTTTGATGATTCAATGCAAAGTTCTATTAATCGTTCAATTG
 
-</pre>
+
+}}}
 
 == Exercise 2 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./10_sequences.seq','r')
 lines = f.readlines()
@@ -216,19 +222,21 @@ for i,l in enumerate(lines):
         print motif, 'is found in sequence', i+1, 'Position', pos, '(0 based)'
         print i+1, l.rstrip()
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 CTATA is found in sequence 8 Position 29 (0 based)
 8 CCACACCAAAAAAACTTTCCACGTGTGAACTATACTCCAAAAACGAAGTATTGGTTTATCATAA
 CTATA is found in sequence 9 Position 62 (0 based)
 9 TCTGAAAAGTGCAAAGAACGATGATGATGATGATAGAGGAACCTGAGCAGCCATGTCTGAACCTATAGC
 
-</pre>
+
+}}}
 
 = Advanced exercises =
 == Exercise 1: sum up, csv file ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./numbers1.csv','r')
 lines = f.readlines()
@@ -238,19 +246,21 @@ for l in lines:
     row_sum = sum(numbers)
     print row_sum
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 716
 1139
 11
 1707
 1516
 
-</pre>
+
+}}}
 
 == Exercise 2: sum up ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./numbers1.csv','r')
 lines = f.readlines()
@@ -263,9 +273,10 @@ for l in lines:
     total += row_sum
 print 'Total:', total
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 716
 1139
 11
@@ -273,10 +284,11 @@ Result:<pre>
 1516
 Total: 5089
 
-</pre>
+
+}}}
 
 == Exercise 3: sum up, csv file with quotes ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./numbers2.csv','r')
 lines = f.readlines()
@@ -291,9 +303,10 @@ for l in lines:
     total += row_sum
 print 'Total:', total
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 716
 1139
 11
@@ -301,10 +314,11 @@ Result:<pre>
 1516
 Total: 5089
 
-</pre>
+
+}}}
 
 == Exercise 4: parse FASTA ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./sample1.fa','r')
 lines = f.readlines()
@@ -318,16 +332,17 @@ for l in lines:
     else:
         s += l
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Header YL069W-1.334 refer to sequence CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACAACCCACTGCCACTTACCCTACCATTACCCTACCATCCACCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAA
 Header YAL068C-7235.2170 refer to sequence TACGAGAATAATTTCTCATCATCCAGCTTTAACACAAAATTCGCACAGTTTTCGTTAAGAGAACTTAACATTTTCTTATGACGTAAATGAAGTTTATATATAAATTTCCTTTTTATTGGATACATTACGTGCAACCAAAAGTGTAAAATGATTGGTTGCAATGTTTCACCTAAATTACTT
 Header YAL070W-223.3355 refer to sequence CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATCTAATATGCCT
-</pre>
+}}}
 
 == Exercise 5: FASTA file with blank lines ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./sample2.fa','r')
 lines = f.readlines()
@@ -344,10 +359,11 @@ for l in lines:
 for h,s in fasta.items():
     print 'Header', h, 'refer to sequence', s
 
-</python>
+
+}}}
 <br>
-Result:<pre>
+Result:{{{
 Header YAL070W-223.3355 refer to sequence CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATCTAATATGCCT
 Header YL069W-1.334 refer to sequence CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACAACCCACTGCCACTTACCCTACCATTACCCTACCATCCACCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAA
 Header YAL068C-7235.2170 refer to sequence TACGAGAATAATTTCTCATCATCCAGCTTTAACACAAAATTCGCACAGTTTTCGTTAAGAGAACTTAACATTTTCTTATGACGTAAATGAAGTTTATATATAAATTTCCTTTTTATTGGATACATTACGTGCAACCAAAAGTGTAAAATGATTGGTTGCAATGTTTCACCTAAATTACTT
-</pre>
+}}}

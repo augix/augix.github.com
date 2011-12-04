@@ -18,7 +18,6 @@ main = xmonad gnomeConfig
     , terminal = "urxvt"
     , normalBorderColor = "#cccccc"
     }
-
 }}}
 * modify .xsession
 {{{

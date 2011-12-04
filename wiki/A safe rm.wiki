@@ -1,6 +1,6 @@
 [[Category:bash]]
 write a file: <tt> ~/rm.sh </tt>
-<bash>
+{{{class="brush: bash"
 #!/bin/bash
 #
 #  A tiny script that moves files to a wastebasket, rather than deleting them
@@ -20,10 +20,10 @@ for file in $@; do
     else mv $file ~/Trash/
     fi
 done
-</bash>
+}}}
 
 modify <tt> ~/.bashrc </tt>
-<bash>
+{{{class="brush: bash"
 alias remove='/bin/rm'
 alias rm='~/rm.sh'
-</bash>
+}}}

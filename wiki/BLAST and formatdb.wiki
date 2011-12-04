@@ -1,15 +1,17 @@
 blastall and formatdb
 
 usage on PBIL:
- formatdb -p F -o F -a F -i xxx.cds
- blastall -p blastn -d xxx.cds -i yyy.cds -o output -F F -v 1 -b 1 -e 1e-14 -a 1
+{{
+formatdb -p F -o F -a F -i xxx.cds
+blastall -p blastn -d xxx.cds -i yyy.cds -o output -F F -v 1 -b 1 -e 1e-14 -a 1
+}}}
 
 [http://bioinformatics.ubc.ca/resources/tools/?name=formatdb formatdb]
 
 [http://bioinformatics.ubc.ca/resources/tools/?name=blastall blastall]
 
 = More =
-<pre>
+{{{
 
 Formatdb README
 ------------------
@@ -171,4 +173,5 @@ option and the -B option will produce that GI list in binary format. The
 binary file is smaller and BLAST does not need to convert it, so it can
 be read faster.
 
-</pre>
+
+}}}

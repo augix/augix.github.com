@@ -1,4 +1,4 @@
-<R>
+{{{class="brush: R"
 alpha = 0.5
 col = rgb(0,1,0,alpha)
 hist(rnorm(1000),nclass=50,col=col,xlim=c(-3,6))
@@ -6,6 +6,6 @@ hist(rnorm(1000),nclass=50,col=col,xlim=c(-3,6))
 alpha = 0.5
 col = rgb(1,0,0,alpha)
 hist(3+rnorm(1000),nclass=50,col=col,add=T)
-</R>
+}}}
 
 [[Image:Overlapped_Histograms.png]]

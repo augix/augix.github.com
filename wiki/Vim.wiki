@@ -4,11 +4,11 @@
 * [vim使用进阶: 目录 http://easwy.com/blog/archives/advanced-vim-skills-catalog/]
 
 * indent in multiple lines
-** way1: enter visual mode, use ">" or "<" to increase or decrease indent
-** way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
+	* way1: enter visual mode, use ">" or "<" to increase or decrease indent
+	* way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
 
-* '''#'''
-the '''#''' key create a motion jumping from the current word to the same word in the current buffer
+* <b>#</b>
+the <b>#</b> key create a motion jumping from the current word to the same word in the current buffer
 
 * [http://www.zinkwazi.com/unix/notes/vimtips.html Best of VIM tips]
 
@@ -27,7 +27,9 @@ CTRL-Y
 
 = Jumping =
 One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
- :ju
+{{
+:ju
+}}}
 to print the jump list.
 
 = Buffers =
@@ -42,11 +44,17 @@ gf	 open in the same window ("goto file")
 
 = Files and Tabs =
 * create a new tab
- :tabnew
+{{
+:tabnew
+}}}
 * switch to next tab
- gt
+{{
+gt
+}}}
 or
- :tabn
+{{
+:tabn
+}}}
 
 = Window =
 Move cursor to other windows.
@@ -83,17 +91,21 @@ Open the vba file with vim, and type the :source % command right there. The % re
 * folding: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
 
 * echo function: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
- $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
+{{
+$ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
+}}}
 
 * the ctgas command line I used in MPI-EVA
- $ ctags -R ./Programming/ ./Research/
+{{
+$ ctags -R ./Programming/ ./Research/
+}}}
 
 * gvim color scheme, in <tt>~/.gvimrc</tt>
-<pre>
+{{{
 " by augix
 " color scheme: desert
 colorscheme desert
-</pre>
+}}}
 
 * python debugger
 [http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290 runscript]
@@ -116,12 +128,12 @@ personal wiki with vim.
 
 = .vimrc file =
 * stop loading the current .vim file
-<pre>
+{{{
 " disable it in MacVim
 if has('gui_macvim')
 	finish
 endif
-</pre>
+}}}
 
 = VIMRUNTIME =
 set runtimepath=~/vim_local,$VIMRUNTIME
@@ -152,8 +164,11 @@ completeopt	whether to use a popup menu for Insert mode completion
 * show the key mappings `:map`
 
 * Show/Hide invisible characters
- :set list/nolist
+{{
+:set list/nolist
+}}}
 
 * Disable all blinking:
- :set guicursor+=a:blinkon0
-
+{{
+:set guicursor+=a:blinkon0
+}}}

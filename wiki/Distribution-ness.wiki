@@ -1,9 +1,9 @@
-'''checking distribution-nesses'''
+<b>checking distribution-nesses</b>
 
 * package vcd
 the function distplot() in the package vcd implements various plots for distribution-nesses that can be used for graphical checking. Ord_plot() is made for a similar purpose. 
 Finally, there is also a function goodfit() that computes goodness-of-fit tests for such hypotheses.
 
-** distplot()
-** Ord_plot()
-** goodfit()
+	* distplot()
+	* Ord_plot()
+	* goodfit()

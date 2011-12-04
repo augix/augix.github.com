@@ -1,14 +1,14 @@
-<R>
+{{{class="brush: R"
 plot(1:10)
 locator(n=2)
-</R>
+}}}
 
 then press the figure 2 times
 
-<pre>
+{{{
 $x
 [1] 3.002396 3.997682
 
 $y
 [1] 2.986207 4.015245
-</pre>
+}}}

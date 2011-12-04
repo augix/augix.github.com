@@ -1,25 +1,25 @@
 [[Category:Perl]]
-If you want to find the position of a match in an incoming string, simply check the length of '''$`''' (That's $PREMATCH if you've chosen to use English;) to check where it starts, and add the length of '''$&''' (that's $MATCH) to find where it ends.
+If you want to find the position of a match in an incoming string, simply check the length of <b>$`</b> (That's $PREMATCH if you've chosen to use English;) to check where it starts, and add the length of <b>$&</b> (that's $MATCH) to find where it ends.
 
 Let's say I want to find all the URLs refered to in a web page that's loaded into the variable $html. I could write:
 
-<perl>
+{{{class="brush: perl"
 push @section,[length($`),length($&),$1]
         while ($html =~ m/(https?://[^ >"]+)/g);
-</perl>
+}}}
 
 and that will give me a list of 3-element lists containing start point, length and actual string matched. Here's the code to display that list:
 
-<perl>
+{{{class="brush: perl"
 foreach $element(@section) {
         print (join(", ",@$element),"\n");       
 }
-</perl>
+}}}
 
 
 and here's some of the results from the sources of our resources index
 
-<pre>
+{{{
 5979, 36, http://www.wellho.net/forum/top.html
 
 6967, 36, http://www.wellho.net/net/mouth.html
@@ -35,19 +35,19 @@ and here's some of the results from the sources of our resources index
 9599, 59, http://www.livedepartureboards.co.uk/ldb/summary.aspx?T=MKM
 
 9861, 48, https://lightning.he.net/~wellho/net/secure.html
-</pre>
+}}}
 
 
 P.S. I loaded my whole web page into a single variable using the code
 
-<perl>
+{{{class="brush: perl"
 open (FH,"/Library/WebServer/live_html/resources/index.html");
 undef $/;
 $html = <FH>;
-</perl>
+}}}
 
 So, the whole script could be:
-<perl>
+{{{class="brush: perl"
 open FH,$ARGV[0] or die $!;
 undef $/;
 $html = <FH>;
@@ -58,4 +58,4 @@ push @section,[length($`),length($&),$1]
 foreach $element(@section) {
         print (join(", ",@$element),"\n");       
 }
-</perl>
+}}}

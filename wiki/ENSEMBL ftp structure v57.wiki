@@ -1,4 +1,4 @@
-<pre>
+{{{
 ftp.ensembl.org
 
 Ensembl Release 57 Databases.
@@ -96,4 +96,5 @@ The FTP directory has the following basic structure, although not all informatio
      |
      |-- vega_mart      Manually curated gene sets
 
-</pre>
+
+}}}

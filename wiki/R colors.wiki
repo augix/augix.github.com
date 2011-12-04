@@ -14,7 +14,9 @@ plot(1:n,pch=16,cex=1:n,col=1:n)
 }}}
 
 * beautiful combination of colors.
- cols = c('chocolate3', 'darkgreen', 'blue4', 'lightsalmon1', 'darkseagreen1', 'steelblue2')
+{{
+cols = c('chocolate3', 'darkgreen', 'blue4', 'lightsalmon1', 'darkseagreen1', 'steelblue2')
+}}}
  
 * transparent colors
 {{{

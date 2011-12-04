@@ -23,12 +23,12 @@ What we can do by TeXShop is following:
 #:Finally you get DNA.pdf
 
 We can also do it in terminal:
-<pre>
+{{{
 pdflatex DNA.tex
 bibtex DNA.aux
 pdflatex DNA.tex
 pdflatex DNA.tex
-</pre>
+}}}
 
 some explanation for the above procedures: http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html
 

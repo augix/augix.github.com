@@ -1,5 +1,5 @@
 [[Category: R]]
-<bash>
+{{{class="brush: bash"
 $ mkdir ~/Library/R/
 $ cd ~/Library/R/
 
@@ -11,10 +11,11 @@ $ R CMD INSTALL -l ~/Library/R/ seqinr_1.0-6.tar.gz
 $ R CMD INSTALL -l seqinr seqinr_1.0-6.tar.gz
 > library(seqinr, lib.loc="~/Library/R/seqinr")
 
-</bash>
 
-Don't have to specify '''lib.loc''' if the variable '''$R_LIBS''' is already set in the '''~/.bashrc''' like this:
-<bash>
+}}}
+
+Don't have to specify <b>lib.loc</b> if the variable <b>$R_LIBS</b> is already set in the <b>~/.bashrc</b> like this:
+{{{class="brush: bash"
 R_LIBS=~/Library/R/
 export R_LIBS 
-</bash>
+}}}

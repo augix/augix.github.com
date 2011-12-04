@@ -1,14 +1,18 @@
 [http://rdbi.sourceforge.net/ Rdbi Home Page]
 
 = Download =
- Rdbi
- RdbiPgSQL
+{{
+Rdbi
+RdbiPgSQL
+}}}
 these two packages from http://www.bioconductor.org/repository/release1.5/package/html/index.html
 
 = Install =
- R CMD INSTALL ~/Library/R/ rdbi.tar.gz
+{{
+R CMD INSTALL ~/Library/R/ rdbi.tar.gz
+}}}
 or
-<R>
+{{{class="brush: R"
 > install.packages("rdbi",lib="~/Library/R/")
 
 > library(Rdbi)
@@ -28,11 +32,11 @@ or
 8  4293462    2315102  (341,1677) tgtgatccaagtcggccgtcgtctt            TRUE
 9     5388    2315103     (267,2) ctgtctgtcgacccagctggaggca            TRUE
 10 6528805    2315103  (804,2550) ccctgtctgtcgacccagctggagg            TRUE
-</R>
+}}}
 
 
 Functions in Rdbi
-<pre>
+{{{
 Function	Description
 dbAppendTable	Appends data to a database table
 dbClearResult	Clears resources associated with a query result
@@ -48,6 +52,6 @@ dbReconnect	Reopens a connection to a database
 dbResultInfo	Returns information about a query result
 dbSendQuery	Submits a query string to the database backend
 dbWriteTable	Writes a data frame to a database table
-</pre>
+}}}
 
 [[Category:R]]

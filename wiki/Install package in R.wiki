@@ -2,7 +2,9 @@
 
 == in Shell ==
 * download package (source code, eg: gem_1.0.tar.gz)
- wget http://pbil.univ-lyon1.fr/gem/r_package/gem_1.0-0.tar.gz
+{{
+wget http://pbil.univ-lyon1.fr/gem/r_package/gem_1.0-0.tar.gz
+}}}
 
 * install gem package
 {{{
@@ -11,7 +13,7 @@ equivalent to
 > library(seqinr, lib.loc="~/Library/R/")
 }}}
 
-* Don't have to specify '''lib.loc''' if the variable '''$R_LIBS''' is already set in the '''~/.bashrc''' like this:
+* Don't have to specify <b>lib.loc</b> if the variable <b>$R_LIBS</b> is already set in the <b>~/.bashrc</b> like this:
 {{{
 R_LIBS=~/Library/R/
 export R_LIBS 
@@ -23,14 +25,18 @@ $ R CMD INSTALL -h
 }}}
 
 = in R ==
- install.packages("affy",lib="~/Library/R",dependencies=TRUE)
+{{
+install.packages("affy",lib="~/Library/R",dependencies=TRUE)
+}}}
 or
- install.packages("affy",lib="~/Library/R",dependencies=TRUE,contriburl="http://bioconductor.org/packages/2.1/bioc/src/contrib/")
+{{
+install.packages("affy",lib="~/Library/R",dependencies=TRUE,contriburl="http://bioconductor.org/packages/2.1/bioc/src/contrib/")
+}}}
 
 = Packages from Bioconductor =
 
 in R
-<R>
+{{{class="brush: R"
 source("http://bioconductor.org/biocLite.R")
 biocLite("affy")
-</R>
+}}}

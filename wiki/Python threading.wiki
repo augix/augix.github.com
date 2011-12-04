@@ -1,4 +1,4 @@
-<python>
+{{{class="brush: python"
 import threading
 
 def one_chr:
@@ -6,4 +6,4 @@ def one_chr:
 
 t = threading.Thread(target=one_chr, args=(infile, outdir, run_chr))
 t.start()
-</python>
+}}}

@@ -2,7 +2,7 @@
 * [[Hide axis]]
 
 * Place the labels at a given angle
-<R>
+{{{class="brush: R"
 x = 1:10
 y = x*x
 par(yaxt="n", xaxt="n")
@@ -16,4 +16,4 @@ text(x = seq(1, 10, by=1), par("usr")[3] - 0.2, labels = lablist.x, srt = 45, po
 
 axis(2, at=seq(0, 100, by=20), labels = FALSE)
 text(y = seq(0, 100, by=20), par("usr")[1], labels = lablist.y, srt = 45, pos = 2, xpd = TRUE)
-</R>
+}}}

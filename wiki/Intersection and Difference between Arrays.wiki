@@ -2,7 +2,7 @@
 
 Use a hash. Here's code to do both and more. It assumes that each element is unique in a given array:
 
-<perl>
+{{{class="brush: perl"
 sub difference {
     my ( @array1, @array2 ) = ( @{$_[0]}, @{$_[1]} );
     my @difference = (); my @intersection = 0;
@@ -13,7 +13,7 @@ sub difference {
     }
     return \@difference;
 }
-</perl>
+}}}
 
 [http://perldoc.perl.org/perlfaq4.html#How-do-I-compute-the-difference-of-two-arrays%3f--How-do-I-compute-the-intersection-of-two-arrays%3f http://perldoc.perl.org/perlfaq4.html]
 

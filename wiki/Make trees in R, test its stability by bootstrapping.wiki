@@ -1,6 +1,6 @@
 [[Category: R]]
 * my boot.tree.R
-<R>
+{{{class="brush: R"
 boot.tree <- function(data, B = 100, tree = "upgma") {
 	library(phangorn)
 	func <- function(x) upgma(dist(x, method = "euclidean"), method="average")
@@ -47,14 +47,14 @@ boot.tree(data, B=1000, tree='hclust')
 #	par(ask = TRUE)
 #	plot(hclust(dist(t(USJudgeRatings))))
 #	boot.tree(t(USJudgeRatings), 100) 
-</R>
+}}}
 
 [[Image:boot_tree.png]]
 
 
 
 * a script from ape package
-<R>
+{{{class="brush: R"
 install.packages("ape")
 library(ape)
 data(woodmouse)
@@ -63,4 +63,4 @@ tr <- nj(d)
 bp <- boot.phylo(tr, woodmouse, function(xx) nj(dist.dna(xx)))
 plot(tr)
 nodelabels(bp)
-</R>
+}}}

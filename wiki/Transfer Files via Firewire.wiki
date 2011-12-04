@@ -1,5 +1,5 @@
 * Boot one of the Macs (preferably the lesser model) as a firewire target disk.
-All you have to do is connect the two Macs via a firewire cable, boot the master (preferably the higher model), then boot the other and hold down the '''t''' key until you see a blue screen with a yellow firewire symbol. This Mac will now appear as a normal firewire hard disk on the master's desktop.
+All you have to do is connect the two Macs via a firewire cable, boot the master (preferably the higher model), then boot the other and hold down the <b>t</b> key until you see a blue screen with a yellow firewire symbol. This Mac will now appear as a normal firewire hard disk on the master's desktop.
 
 http://www.macmerc.com/images/articles/tuesday/target.gif
 

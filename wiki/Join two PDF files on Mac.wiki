@@ -1,3 +1,4 @@
 [http://www.macx.cn/a/a100I164426&q=2&r=55097.mac 将多个PDF文件合成为一个]
 
- python '/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py' -o '/path/to/output.pdf' '/path/to/input1.pdf' '/path/to/input2.pdf'
+{{
+python '/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py' -o '/path/to/output.pdf' '/path/to/input1.pdf' '/path/to/input2.pdf'}}}

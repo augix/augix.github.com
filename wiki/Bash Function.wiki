@@ -1,6 +1,7 @@
 = Define a function =
 {{{
-<bash>  
+{{{class="brush: bash"
+  
 #!/bin/bash 
 
 testfunc () { 
@@ -18,7 +19,8 @@ function e {
 e Hello
 e World
 
-</bash>
+
+}}}
 }}}
 
 = Send parameter =
@@ -26,7 +28,8 @@ e World
 [http://www.ibm.com/developerworks/library/l-bash-parameters.html?ca=drs- IBM: bash parameters] 
 
 {{{
-<bash>
+{{{class="brush: bash"
+
 [ian@pinguino ~]$ testfunc () { echo "$# parameters"; echo "$@"; }
 [ian@pinguino ~]$ testfunc
 0 parameters
@@ -45,12 +48,13 @@ a
 b
 c
 d
-</bash>
+}}}
 }}}
 
 = Return value =
 {{{
-<bash>
+{{{class="brush: bash"
+
 function myfunc()
 {
     local  myresult='some value'
@@ -59,7 +63,7 @@ function myfunc()
 
 result=$(myfunc)   # or result=`myfunc`
 echo $result
-</bash>
+}}}
 }}}
 
 [http://www.linuxjournal.com/content/return-values-bash-functions Ways to let function returns a value]

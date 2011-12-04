@@ -9,12 +9,14 @@
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
     <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
     </script> 
     <!-- SyntaxHighlighter end -->
+
 
 	<title>%title%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

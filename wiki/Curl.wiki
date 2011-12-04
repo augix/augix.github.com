@@ -1,22 +1,24 @@
- $ cat url.txt | xargs -n1 curl -O
+{{
+$ cat url.txt | xargs -n1 curl -O
+}}}
 
 or
 
- $ curl -K urls.txt
+{{
+$ curl -K urls.txt
+}}}
 
-<blockquote>
 where urls.txt is in this format
 <br>
 url = "http://......"
-</blockquote>
 
 or
  $ wget -i urls.txt
 
 
 Download files from a web which requires login
-<bash>
+{{{class="brush: bash"
 curl -D headers_and_cookies -d "logon=augix.com%40gmail.com&password=PASSWORD&x=0&y=0" http://www.affymetrix.com/site/processLogin.jsp
 
 curl -b headers_and_cookies http://www.affymetrix.com/Auth/support/downloads/demo_data/HuEx-1_0-st-v2.tissue-mixture-data-set.gcos-files.zip
-</bash>
+}}}

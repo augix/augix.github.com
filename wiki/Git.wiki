@@ -113,7 +113,7 @@ $ git commit -m 'initial commit'
 $ git add forgotten_file
 $ git commit --amend
 }}}
- The 2nd commit overwrite the 1st.
+The 2nd commit overwrite the 1st.
 
 * Git remote
 {{{
@@ -208,4 +208,3 @@ https://github.com/blog/272-github-pages
 * [http://progit.org/book/zh/ Pro Git 中文]
 * [http://www.linuxsir.org/main/doc/git/gittutorcn.htm Git中文教程]
 * [http://stackoverflow.com/questions/1960799/using-gitdropbox-together-effectively Git+Dropbox]
-

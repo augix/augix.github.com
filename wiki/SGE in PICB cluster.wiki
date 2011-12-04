@@ -1,11 +1,13 @@
 [[Category: R]]
 
 = How to submit simple jobs in PICB cluster =
- ls job*.sh | xargs -n1 qsub -q linux.q
+{{
+ls job*.sh | xargs -n1 qsub -q linux.q
+}}}
 
 = How to run R jobs in parallel in PICB cluster with SGE system =
 == qsub.sh ==
-<bash>
+{{{class="brush: bash"
 #!/bin/sh
 mkdir ./sge.out
 chmod u+x *
@@ -13,10 +15,10 @@ chmod u+x *
 for i in `seq 1 100`; do
   qsub -q linux.q test.sge $i;
 done
-</bash>
+}}}
 
 == test.sge ==
-<pre>
+{{{
 #!/bin/sh
 
 # Change to the current working directory upon starting of the job
@@ -43,16 +45,16 @@ dard output stream of the job.
 #$ -N test_sge_system_in_picb
 
 /picb/home5/augix/bin/R/bin/Rscript ./test.R $1
-</pre>
+}}}
 
 == test.R ==
-<R>
+{{{class="brush: R"
 args <- commandArgs(TRUE)
 flag<-args[1]
 print(flag)
 write.table(flag,file=paste(flag,".txt",sep=""))
 q(save="no")
-</R>
+}}}
 
 = See Also =
 [[SGE in eva cluster]]

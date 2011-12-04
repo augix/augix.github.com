@@ -1,6 +1,6 @@
 = Dictionaries =
 == Exercise 1: count bases ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 seq = raw_input('Enter DNA: ')
 counts = {}
@@ -8,18 +8,18 @@ for s in seq:
     counts[s] = counts.get(s, 0) + 1
 for key, value in counts.items():
     print key, '=', value
-</python>
+}}}
 <br>Result:
-<pre>
+{{{
 Enter DNA: ACRSAS
 A = 2
 C = 1
 R = 1
 S = 2
-</pre>
+}}}
 
 == Exercise 2: count for several sequences ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./ambiguous_sequences.seq')
 lines = f.readlines()
@@ -31,10 +31,10 @@ for l in lines:
     print 'Sequence has', str(len(seq)), 'bases.'
     for key, value in counts.items():
         print key, '=', value
-</python>
+}}}
 
 <br>Result:
-<pre>
+{{{
 Sequence has 1267 bases.
 A = 287
 C = 306
@@ -75,10 +75,10 @@ A = 465
 S = 1
 T = 462
 G = 497
-</pre>
+}}}
 
 == Exercise 3: sort keys ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 f = open('./ambiguous_sequences.seq')
 lines = f.readlines()
@@ -90,9 +90,9 @@ for l in lines:
     print 'Sequence has', str(len(seq)), 'bases.'
     for key in sorted(counts.keys()):
         print key, '=', counts[key]
-</python>
+}}}
 <br>Result:
-<pre>
+{{{
 Sequence has 1267 bases.
 A = 287
 B = 1
@@ -102,10 +102,10 @@ R = 1
 T = 282
 Y = 1
 ...
-</pre>
+}}}
 
 == Exercise 4: sum up ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 import sys
 counts = {}
@@ -117,10 +117,10 @@ for l in sys.stdin:
 print 'File has', str(sum(counts.values())), 'bases.'
 for key in sorted(counts.keys()):
     print key, '=', counts[key]
-</python>
+}}}
 
 <br>Result:
-<pre>
+{{{
 File has 24789 bases.
 A = 6504
 B = 1
@@ -135,10 +135,10 @@ S = 2
 T = 6878
 W = 1
 Y = 8
-</pre>
+}}}
 
 == Exercise 5: reverse complementary ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 import sys
 counts = {}
@@ -151,10 +151,10 @@ for line in sys.stdin:
     seq0 = line.rstrip()
     seq1 = revcomp(seq0)
     print seq0, '\n->\n', seq1, '\n'
-</python>
+}}}
 
 <br>Result:
-<pre>
+{{{
 $ python 5.py < 10_sequences.seq
 CCTGTATTAGCAGCAGATTCGATTAGCTTTACAACAATTCAATAAAATAGCTTCGCGCTAA 
 ->
@@ -164,10 +164,10 @@ ATTTTTAACTTTTCTCTGTCGTCGCACAATCGACTTTCTCTGTTTTCTTGGGTTTACCGGAA
 ->
 TTCCGGTAAACCCAAGAAAACAGAGAAAGTCGATTGTGCGACGACAGAGAAAAGTTAAAAAT 
 ...
-</pre>
+}}}
 
 == Exercise 6: ambiguous DNA complement ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 import sys
 counts = {}
@@ -181,20 +181,20 @@ for line in sys.stdin:
     seq0 = line.rstrip()
     seq1 = revcomp(seq0)
     print seq0, '\n->\n', seq1, '\n'
-</python>
+}}}
 <br>Result:
-<pre>
+{{{
 $ python 6.py
 AMCRGTH
 AMCRGTH 
 ->
 DACYGKT 
-</pre>
+}}}
 
 
 = Advanced exercises =
 == Exercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 input = open('./iupac_codes.txt')
 input.readline()    # remove header
@@ -212,19 +212,19 @@ output = open('iupac_out.txt','w')
 print >>output, 'Nucl.\tCodes'
 for key, value in d.items():
     print >>output, '\t'.join([key, value])
-</python>
+}}}
 <br>Result:
-<pre>
+{{{
 $ cat iupac_out.txt
 Nucl.	Codes
 A	A,M,R,W,V,H,D,N
 C	C,M,S,Y,V,H,B,N
 T	T,W,Y,K,H,D,B,N
 G	G,R,S,K,V,D,B,N
-</pre>
+}}}
 
 == Exercise 2: translate DNA to protein ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 codon_table = { 'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L',
 'TCT': 'S', 'TCC': 'S', 'TCA': 'S', 'TCG': 'S', 'TAT': 'Y',
@@ -241,7 +241,7 @@ codon_table = { 'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L',
 'GGA': 'G', 'GGG': 'G' }
 stop_codons = ['TAA', 'TAG', 'TGA']
 start_codons = ['TTG', 'CTG', 'ATG']
-more = dict(zip(stop_codons, '***'))
+more = dict(zip(stop_codons, '		*'))
 codon_table.update(more)
 
 seq = raw_input('Enter DNA sequence: ').upper()
@@ -251,10 +251,10 @@ codons = [seq[i*3:i*3+3] for i in range(len(seq)/3)]
 assert (codons[0] in start_codons), "First codon is not a start codon."
 acids = [codon_table.get(codon, '*') for codon in codons]
 print ''.join(acids)
-</python>
+}}}
 
 <br>Result:
-<pre>
+{{{
 Enter DNA sequence: atgcagtcagctagctagctagctagctagatcgtacgatcgacatagctcg
 MQSAS*LAS*IVRST*L
-</pre>
+}}}

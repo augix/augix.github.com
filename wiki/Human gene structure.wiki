@@ -2,7 +2,7 @@ In a human gene, in average, there are 9 exons, 8 introns, exon length is around
 
 In human chromosomes, the number of genes varies from 98 to 2,514, and the average is roughly 1000 genes per chromosome.
 
-<pre>
+{{{
 Chr #	Total # genes	Total # exons	Total # introns	Max # exons/gene	Chromosome size (determined)	Avg # of exons/gene	Avg length of exon (bp)	Avg length of intron	Shortest exon (bp)	Shortest intron (bp)	Shortest gene (bp)	Longest exon (bp)	Longest intron (bp)	Longest gene (bp)
 1	2514	22345	19831	107	226828929	8.89	167.01	4736.52	2	1	78	8449	476158	980961
 2	1354	12506	11152	148	238349289	9.24	163.98	5883.23	2	1	90	7572	483412	1897544
@@ -29,7 +29,7 @@ Chr #	Total # genes	Total # exons	Total # introns	Max # exons/gene	Chromosome si
 X	1048	8568	7520	79	152118949	8.18	185.33	7627.85	2	54	129	6102	493512	2217347
 Y	98	660	562	44	24649555	6.73	173.74	5288.54	3	67	228	2493	400349	681119
 AVERAGE	1107	9741	8639	88	125737527	9	171	5539	2	31	117	7057	397200	1181571
-</pre>
+}}}
 
 
 gene length

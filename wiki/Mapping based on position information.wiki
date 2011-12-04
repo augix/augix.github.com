@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 #!/usr/bin/perl
 open IN_b, "./first step/candidate_notmatchsanger.txt" or die $!;
 open IN_s, "pat_1_result26.txt" or die $!;
@@ -40,4 +40,5 @@ while(<IN_s>) {
   
 }
 
-</perl>
+
+}}}

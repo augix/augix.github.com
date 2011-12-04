@@ -1,6 +1,7 @@
-<bash>
-sudo /Applications/xampp/xamppfiles/mampp security</bash>
-<pre>
+{{{class="brush: bash"
+sudo /Applications/xampp/xamppfiles/mampp security
+}}}
+{{{
 Password:
 XAMPP: Quick security check...
 XAMPP: Your XAMPP pages are NOT secured by a password.
@@ -27,4 +28,4 @@ XAMPP: Password:
 XAMPP: Password (again): 
 XAMPP: Reload ProFTPD...
 XAMPP: Done.
-</pre>
+}}}

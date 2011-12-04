@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 use lib "/picb/home5/augix/Library/Perl/lib64/perl5/site_perl/5.8.5/x86_64-linux
 -thread-multi";
 use GD;
@@ -16,5 +16,5 @@ $image->dashedLine(175,165,1210,165,$blue);
 open(STDOUT,">pic.png");
 binmode STDOUT;
 print $image->png;
-</perl>
+}}}
 [[Category:Perl]]

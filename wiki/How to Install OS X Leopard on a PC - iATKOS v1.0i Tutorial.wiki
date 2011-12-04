@@ -1,7 +1,7 @@
 * http://www.peter-v.com/126/how-to-install-os-x-leopard-on-a-pc-iatkos-v10i-tutorial/
 * http://hearrain.cn/?p=320
 
-Do a quick search using your favorite torrent search portal for “iATKOS v1.0i” , download it, burn to DVD, pop that puppy into your test computer’s DVD drive and reboot**. During the install process there are a few extra steps so I will list what you need to do below:
+Do a quick search using your favorite torrent search portal for “iATKOS v1.0i” , download it, burn to DVD, pop that puppy into your test computer’s DVD drive and reboot	*. During the install process there are a few extra steps so I will list what you need to do below:
 
 # When the Welcome screen pops up click Continue
 # At the Terms & Conditions screen do not click Agree yet, click Utilities on the Apple bar at the top of your screen and then select Disk Utility from the drop down menu (Utilities > Disk Utility).

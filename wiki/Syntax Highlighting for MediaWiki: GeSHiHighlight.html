@@ -1,6 +1,23 @@
 <html>
 <head>
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
 	<title>Syntax Highlighting for MediaWiki: GeSHiHighlight</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -21,13 +38,29 @@
 <h1 id="toc_2">Demo</h1>
 <p>
 The codes writing in MediaWiki:
-&lt;pre&gt;&lt;perl&gt;foreach(@myarr){print $_;}&lt;/perl&gt; 
-&lt;java&gt;public class foo{ /* .... */ }&lt;/java&gt;
-&lt;/pre&gt;
-The Highlighted codes:
-&lt;perl&gt;foreach(@myarr){print $_;}&lt;/perl&gt; 
-&lt;java&gt;public class foo{ /* .... */ }&lt;/java&gt;
 </p>
+<pre class="brush: perl">
+&lt;perl&gt;
+foreach(@myarr){print $_;}
+&lt;/perl&gt;
+</pre>
+
+<pre class="brush: java">
+&lt;java&gt;
+public class foo{ /* .... */ }
+&lt;/java&gt;
+</pre>
+
+<p>
+The Highlighted codes:
+</p>
+<pre class="brush: perl">
+foreach(@myarr){print $_;}
+</pre>
+
+<pre class="brush: java">
+public class foo{ /* .... */ }
+</pre>
 
 <h1 id="toc_3">Installation</h1>
 <ul>
@@ -49,127 +82,61 @@ Put GeSHiHighlight.php in your MediaWiki installations' extensions folder
 </p>
 <ul>
 <li>
-Add: &lt;php&gt;include("extensions/GeSHiHighlight.php");&lt;/php&gt; to LocalSettings.php in your MediaWiki folder
+Add following lines to LocalSettings.php in your MediaWiki folder
+<pre class="brush: php">
+include("extensions/GeSHiHighlight.php");
+</pre>
 
 </ul>
 
 <h2 id="toc_3.1">GeSHiHighlight.php</h2>
-<p>
-&lt;php&gt;
+<pre class="brush: php">
 &lt;?php
-</p>
-<ol>
-<li>
-GeSHiHighlight.php
-
-<li>
-
-
-<li>
-By: E. Rogan Creswick (aka: Largos)
-
-<li>
-creswick@gmail.com
-
-<li>
-wiki.ciscavate.org
-
-</ol>
-<p>
+# GeSHiHighlight.php
+# 
+# By: E. Rogan Creswick (aka: Largos)
+# creswick@gmail.com
+# wiki.ciscavate.org
 #
-</p>
-<ol>
-<li>
-License: GeSHi Highlight is released under the Gnu Public License (GPL), and comes with no warranties.
+# License: GeSHi Highlight is released under the Gnu Public License (GPL), and comes with no warranties.
+# The text of the GPL can be found here: http://www.gnu.org/licenses/gpl.html
+# Loosely based on SyntaxHighlight.php by Coffman, (www.wickle.com)
 
-<li>
-The text of the GPL can be found here: <a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>
-
-<li>
-Loosely based on SyntaxHighlight.php by Coffman, (www.wickle.com)
-
-</ol>
-
-<ol>
-<li>
-you want to change the below two lines
-
-</ol>
-<p>
+# you want to change the below two lines
 require_once("geshi.php"); // i asume geshi.php is in the same directory as GeSHiHighlight.php (that is 'extensions' dir)
-</p>
 
-<p>
 define("GESHI_PATH","extensions/geshi");// definition where are stored geshi language parsing files
-</p>
 
 
-<ol>
-<li>
-ok, end of editing :)
-
-</ol>
+# ok, end of editing :)
 
 
-<p>
 class SyntaxSettings {};
-</p>
 				 
-<p>
 $wgSyntaxSettings = new SyntaxSettings; 
 $wgExtensionFunctions[] = "wfSyntaxExtension"; 
-</p>
 									 
-<p>
 function wfSyntaxExtension() { 
 	global $wgParser;
 	$langArray = geshi_list_languages(GESHI_PATH);
-</p>
-<ol>
-<li>
-$langArray = array("actionscript","ada","apache","asm","asp","bash",
-
-<li>
-"caddcl","cadlisp","c","cpp","css","delphi",
-
-<li>
-"html4strict","java","javascript","lisp", "lua",
-
-<li>
-"nsis","oobas","pascal","perl","php-brief","php",
-
-<li>
-"python","qbasic","sql","vb","visualfoxpro","xml");
+# $langArray = array("actionscript","ada","apache","asm","asp","bash",
+# "caddcl","cadlisp","c","cpp","css","delphi",
+# "html4strict","java","javascript","lisp", "lua",
+# "nsis","oobas","pascal","perl","php-brief","php",
+# "python","qbasic","sql","vb","visualfoxpro","xml");
 	foreach ( $langArray as $lang ){
 		if ($lang == "" || $lang == "div") continue; 
 		$wgParser-&gt;setHook( $lang, 
 		create_function( '$text', '$geshi = new GeSHi(rtrim(ltrim($text,"\n\r")), "' ."$lang". '", GESHI_PATH);
 		return $geshi-&gt;parse_code();')); 
 	} 
-
-</ol>
-<p>
 } 
-</p>
 
-<p>
 /**
-</p>
-<ul>
-<li>
-function: geshi_list_languages
-
-<li>
--------------------------
-
-<li>
-List supported languages by reading the files in the geshi/geshi subdirectory
-
-<li>
-(added by JeffK -- Jeff, any more contact info?) -- I haven't tested the code is is, will do that shortly. -Rogan
-
-</ul>
-<p>
+* function: geshi_list_languages
+* -------------------------
+* List supported languages by reading the files in the geshi/geshi subdirectory
+* (added by JeffK -- Jeff, any more contact info?) -- I haven't tested the code is is, will do that shortly. -Rogan
 *
 */
 function geshi_list_languages ( $path = 'geshi/' )
@@ -183,17 +150,15 @@ function geshi_list_languages ( $path = 'geshi/' )
 			$lang_list[]= substr($file, 0, strrpos($file, "."));
 			}
 		}
-</p>
 
-<p>
 		closedir($handle);
 	}
 	sort($lang_list); //sort the output, i like ordered lists in Wiki Version page :)
 	return $lang_list;
 } 
 ?&gt;
-&lt;/php&gt;
-</p>
+
+</pre>
 
 <h1 id="toc_4">for R</h1>
 <p>
@@ -208,10 +173,6 @@ In this GeSHiHighlight library, there is a file name perl.php, based on this fil
 <h1 id="toc_5">Todo</h1>
 <p>
 Improving Highlighter, for example: display line number.
-</p>
-
-<p>
-<a href="Category_MediaWiki Configuration.html">Category:MediaWiki Configuration</a>
 </p>
 
 	</div><!-- end of post -->

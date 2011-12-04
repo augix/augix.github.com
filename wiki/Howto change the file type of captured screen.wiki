@@ -1,16 +1,22 @@
 How to change the file type of screen capture photo ?
 
 PDF
- defaults write com.apple.screencapture type pdf
+{{
+defaults write com.apple.screencapture type pdf
+}}}
 
 
 jpg
 Code:
- defaults write com.apple.screencapture type jpg
+{{
+defaults write com.apple.screencapture type jpg
+}}}
 
 
 gif
- defaults write com.apple.screencapture type gif
+{{
+defaults write com.apple.screencapture type gif
+}}}
 
 
 然后注销再登陆即可
@@ -18,4 +24,5 @@ gif
 Command+shift+3 就会已你设置的格式保存图片.
 
 如果想恢复回png
- defaults write com.apple.screencapture type png
+{{
+defaults write com.apple.screencapture type png}}}

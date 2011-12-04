@@ -12,18 +12,18 @@ The source RSPerl_0.92-1.tar.gz http://www.omegahat.org/RSPerl/RSPerl_0.92-1.tar
 
 Note also that to use the R-in-Perl mechanism one must have built R as a shared library. (This is not necessary when calling Perl from R.) You can check if this has been done by checking to see if libR is in the directory $R_HOME/lib/. If this is not there, you are advised to clean the entire R distribution (with make distclean) so as to start from scratch and then configure and compile R using the—enable-R-shlib to R’s configuration script. The following sequence of commands should work.
 
-<pre>
+{{{
 cd $R_HOME
 make distclean
 ./configure --enable-R-shlib
 make
-</pre>
+}}}
 
 == Installation ==
 
-<pre>
+{{{
 R CMD INSTALL -c -l <wherever> --configure-args='--with-in-perl' RSPerl_0.92-1.tar.gz
-</pre>
+}}}
 
 == Configuratioin ==
 
@@ -40,17 +40,17 @@ As Michael Dondrup said, that’s a lot of environment variables to set. Typical
 So the main variables we might have to set are $LD_LIBRARY_PATH and $PERL5LIB if the Perl code is installed into the R package area, We provide two shell scripts to set these variables to the appropriate values. There is one for sh/bash-style shells and another for csh/tcsh-style shells named RSPerl.bsh and RSPerl.csh respectively. They are located in the RSPerl/scripts / directory of the installed package. These are not executable but rather intended to be sourced into an existing shell to set the variables for the remainder of that shell session. 
 
 Use 
-<pre>
+{{{
 . RSPerl/scripts/RSPerl.bsh 
-</pre>
+}}}
 or 
-<pre>
+{{{
 source RSPerl/scripts/RSPerl.csh
-</pre>
+}}}
 
 = How to use =
 == Launch R from Perl ==
-<perl>
+{{{class="brush: perl"
 use lib "/picb/home5/augix/Library/R/RSPerl/perl/x86_64-linux-thread-multi";   #indicate the path for RSPerl module
 use R;
 
@@ -58,5 +58,4 @@ use R;
 $x = &R::call("sum", (1,2,3));
 $y = &R::call("sum", (1,2,$x));
 print "Sum = $y\n";
-</perl>
-
+}}}

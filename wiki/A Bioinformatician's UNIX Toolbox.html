@@ -1,6 +1,23 @@
 <html>
 <head>
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
+
+    <!-- SyntaxHighlighter start -->
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+    <!-- SyntaxHighlighter end -->
+
 	<title>A Bioinformatician's UNIX Toolbox</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -13,36 +30,72 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
+
 <p>
 <a href="http://www.sanger.ac.uk/Users/lh3/biounix.shtml">ref</a>
 </p>
 
 <p>
-Most of bioinformaticians know how to analyze data with Perl or Python programming. However, not all of them realize that it is not always necessary to write programs. Sometimes, using UNIX commands is much more convenient and can save a lot of time spent on some trivial, yet tedious, routines.
-</p>
-
-<p>
-Here are some UNIX commands I frequently use in data analyses. I do not mean to give a complete reference to these commands, but aim to introduce their most useful bits with examples.
+Before writting a Python or Perl script, check if Unix commands can do the same job.
 </p>
 
 <h1 id="toc_1">Xargs</h1>
-<p>
-Xargs is one of my most frequently used UNIX commands. Unfortunately, many UNIX users overlook how powerful it is.
-</p>
 
-<p>
-*delete all *.txt files in a directory:
+<ul>
+<li>
+delete all *.txt files in a directory:
+<pre>
  find . -name "*.txt" | xargs rm
-*package all *.pl files in a directory:
+</pre>
+
+</ul>
+
+<ul>
+<li>
+package all *.pl files in a directory:
+<pre>
  find . -name "*.pl" | xargs tar -zcf pl.tar.gz
-*kill all processes that match "something":
- ps -u <code>whoami</code> | awk '/something/{print $1}' | xargs kill
-*rename all *.txt as *.bak:
+</pre>
+
+</ul>
+ 
+<ul>
+<li>
+kill all processes that match "something":
+<pre>
+ ps -u `whoami` | awk '/something/{print $1}' | xargs kill
+</pre>
+
+</ul>
+ 
+<ul>
+<li>
+rename all *.txt as *.bak:
+<pre>
  find . -name "*.txt" | sed "s/\.txt$//" | xargs -i echo mv {}.txt {}.bak | sh
-*run the same command for 100 times (in case of bootstraing, for example):
+</pre>
+
+</ul>
+ 
+<ul>
+<li>
+run the same command for 100 times (in case of bootstraing, for example):
+<pre>
  perl -e 'print "$_\n"for(1..100)' | xargs -i bsub echo bsub -o {}.out -e {}.err some_cmd | sh
-*submit all commands in a command file (one command per line):
+</pre>
+
+</ul>
+ 
+<ul>
+<li>
+submit all commands in a command file (one command per line):
+<pre>
  cat my_cmds.sh | xargs -i echo bsub {} | sh
+</pre>
+
+</ul>
+ 
+<p>
 The last three examples only work with GNU xargs. BSD xargs does not accept '-i'.
 </p>
 
@@ -53,55 +106,121 @@ In a directory, find command finds all the files that meet certain criteria. You
 
 <p>
 <strong>find all files with extension as "</strong>.txt" (files can exist in subdirectory):
- find . -name "*.txt"
-*find all directories:
- find . -type d
 </p>
+<pre>
+ find . -name "*.txt"
+</pre>
+<ul>
+<li>
+find all directories:
+<pre>
+ find . -type d
+</pre>
+
+</ul>
 
 <h1 id="toc_3">Awk</h1>
 <p>
 Awk is a programming language that is specifically designed for quickly manipulating space delimited data. Although you can achieve all its functionality with Perl, awk is simpler in many practical cases. You can find a lot of online tutorials, but here I will only show a few examples which cover most of my daily uses of awk.
 </p>
 
-<p>
-*choose rows where column 3 is larger than column 5:
+<ul>
+<li>
+choose rows where column 3 is larger than column 5:
+<pre>
  awk '$3&gt;$5' input.txt &gt; output.txt
-*extract column 2,4,5:
+</pre>
+
+<li>
+extract column 2,4,5:
+<pre>
  awk '{print $2,$4,$5}' input.txt &gt; output.txt
  awk 'BEGIN{OFS="\t"}{print $2,$4,$5}' input.txt
-*show rows between 20th and 80th:
+</pre>
+
+<li>
+show rows between 20th and 80th:
+<pre>
  awk 'NR&gt;=20&amp;&amp;NR&lt;=80' input.txt &gt; output.txt
-*calculate the average of column 2:
+</pre>
+
+<li>
+calculate the average of column 2:
+<pre>
  awk '{x+=$2}END{print x/NR}' input.txt
-*regex (egrep):
+</pre>
+
+<li>
+regex (egrep):
+<pre>
  awk '/^test[0-9]+/' input.txt
-*calculate the sum of column 2 and 3 and put it at the end of a row or replace the first column:
+</pre>
+
+<li>
+calculate the sum of column 2 and 3 and put it at the end of a row or replace the first column:
+<pre>
  awk '{print $0,$2+$3}' input.txt
  awk '{$1=$2+$3;print}' input.txt
-*join two files on column 1:
+</pre>
+
+<li>
+join two files on column 1:
+<pre>
  awk 'BEGIN{while((getline&lt;"file1.txt")&gt;0)l[$1]=$0}$1 in l{print $0"\t"l[$1]}' file2.txt &gt; output.txt
-*count number of occurrence of column 2 (uniq -c):
+</pre>
+
+<li>
+count number of occurrence of column 2 (uniq -c):
+<pre>
  awk '{l[$2]++}END{for (x in l) print x,l[x]}' input.txt
-*apply "uniq" on column 2, only printing the first occurrence (uniq):
+</pre>
+
+<li>
+apply "uniq" on column 2, only printing the first occurrence (uniq):
+<pre>
  awk '!($2 in l){print;l[$2]=1}' input.txt
-*count different words (wc):
+</pre>
+
+<li>
+count different words (wc):
+<pre>
  awk '{for(i=1;i!=NF;++i)c[$i]++}END{for (x in c) print x,c[x]}' input.txt
-*deal with simple CSV:
+</pre>
+
+<li>
+deal with simple CSV:
+<pre>
  awk -F, '{print $1,$2}'
-*substitution (sed is simpler in this case):
+</pre>
+
+<li>
+substitution (sed is simpler in this case):
+<pre>
  awk '{sub(/test/, "no", $0);print}' input.txt
-</p>
+</pre>
+
+</ul>
 
 <h1 id="toc_4">Cut</h1>
 <p>
 Cut cuts specified columns. The default delimiter is a single TAB.
 </p>
 
-<p>
-*cut the 1st, 2nd, 3rd, 5th, 7th and following columns:
+<ul>
+<li>
+cut the 1st, 2nd, 3rd, 5th, 7th and following columns:
+<pre>
  cut -f1-3,5,7- input.txt
-*cut the 3rd column with columns separated by a single space:
+</pre>
+
+<li>
+cut the 3rd column with columns separated by a single space:
+<pre>
  cut -d" " -f 3 input.txt
+</pre>
+
+</ul>
+<p>
 Note that awk, like Perl's split, takes continuous blank characters as the delimiter, but cut only takes a single character as the delimiter.
 </p>
 
@@ -113,7 +232,9 @@ Split a file into pieces.
 <ul>
 <li>
 split every 10 lines of '''input''' into several files with prefix '''output''' and numeric suffixes.
+<pre>
  split -l 10 -d input output
+</pre>
 
 </ul>
 
@@ -122,38 +243,87 @@ split every 10 lines of '''input''' into several files with prefix '''output''' 
 Almost all the scripting languages have built-in sort, but none of them are so flexible as sort command. In addition, GNU sort is also space efficient. I used to sort a 20Gb file with less than 2Gb memory. It is not trivial to implement so powerful a sort by yourself.
 </p>
 
-<p>
-*sort a space-delimited file based on its first column, then the second if the first is the same, and so on:
+<ul>
+<li>
+sort a space-delimited file based on its first column, then the second if the first is the same, and so on:
+<pre>
  sort input.txt
-*sort a huge file (GNU sort ONLY):
+</pre>
+
+<li>
+sort a huge file (GNU sort ONLY):
+<pre>
  sort -S 1500M -t $HOME/tmp input.txt &gt; sorted.txt
-*sort starting from the third column, skipping the first two columns:
+</pre>
+
+<li>
+sort starting from the third column, skipping the first two columns:
+<pre>
  sort +2 input.txt
-*sort the second column as numbers, descending order; if identical, sort the 3rd as strings, ascending order:
+</pre>
+
+<li>
+sort the second column as numbers, descending order; if identical, sort the 3rd as strings, ascending order:
+<pre>
  sort -k2,2nr -k3,3 input.txt
-*sort starting from the 4th character at column 2, as numbers:
+</pre>
+
+<li>
+sort starting from the 4th character at column 2, as numbers:
+<pre>
  sort -k2.4n input.txt
-</p>
+</pre>
+
+</ul>
 
 <h1 id="toc_7">Other Tips</h1>
-<p>
-*use brackets:
+<ul>
+<li>
+use brackets:
+<pre>
  (echo hello; echo world; cat foo.txt) &gt; output.txt
  (cd foo; ls bar.txt)
-*save stderr output to a file:
+</pre>
+
+<li>
+save stderr output to a file:
+<pre>
  some_cmd 2&gt; output.err
-*direct stderr output to stdout:
+</pre>
+
+<li>
+direct stderr output to stdout:
+<pre>
  some_cmd 2&gt;&amp;1 | more
  some_cmd &gt;output.outerr 2&gt;&amp;1
-*view a text file using 4 as a TAB size and without line wrapping:
+</pre>
+
+<li>
+view a text file using 4 as a TAB size and without line wrapping:
+<pre>
  less -S -x4 text.txt
-*[sed] substitute 'foo(\d+)' as "(\d+)bar":
+</pre>
+
+<li>
+[sed] substitute 'foo(\d+)' as "(\d+)bar":
+<pre>
  sed "s/foo\([0-9]*\)/\1bar/g"
  perl -pe 's/foo(\d+)/$1bar/g"
-*[uniq] count the occurrence of different strings at column 2:
+</pre>
+
+<li>
+[uniq] count the occurrence of different strings at column 2:
+<pre>
  cut -f2 input.txt | uniq -c
-*grep "--enable" in a file (use "--" to prevent grep from parsing command options):
-</p>
+</pre>
+
+<li>
+grep "--enable" in a file (use "--" to prevent grep from parsing command options):
+<pre>
+ grep -- "--enable" input.txt
+</pre>
+
+</ul>
 
 	</div><!-- end of post -->
 	<div class="backhome">

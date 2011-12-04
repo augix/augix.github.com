@@ -1,9 +1,13 @@
 Just create a file:
 
- $HOME/.ssh/config
+{{
+$HOME/.ssh/config
+}}}
 
 and put:
 
- ServerAliveInterval 60
+{{
+ServerAliveInterval 60
+}}}
 
 in it.

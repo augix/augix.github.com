@@ -15,24 +15,22 @@ document:createNewPageWithName(pageName)
 </lua>
 
 AppleScript:
-<applescript>
+{{{
 tell application "VoodooPad Pro"
 	tell document 1 to create page with title "title"
 end tell
-</applescript>
+}}}
 
 and, 
 there is an hyper link which calls applescript editor, you can put this code either in VoodooPad or in Safari as a bookmarklet.
 
-<code>
+{{{
 applescript://com.apple.scripteditor?action=new&script=%0D%0Atell%20application%20%22VoodooPad%20Pro%22%0D%0A%20%20tell%20document%201%20to%20create%20page%20with%20title%20%22title%22%20%0D%0Aend%20tell
-</code>
+}}}
 
 = NewPageTemplate =
-<pre>
+{{{
 $title$
 Description
 Created on $date$
 ↑  Up
-
-<pre>

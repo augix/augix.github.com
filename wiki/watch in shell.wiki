@@ -5,4 +5,3 @@
 Description from Linux User's Manual
 
     watch runs command repeatedly, displaying its output and errors (the first screenfull). This allows you to watch the program output change over time.
-

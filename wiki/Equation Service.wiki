@@ -10,7 +10,9 @@ http://www.tug.org/applications/pdftex/
 
 I installed gwTeX by i-installer, it contains pdflatex. [http://ii2.sourceforge.net/tex-index.html Link].
 
-By default, the pdflatex is installed in: <code>/usr/local/gwTeX/bin/i386-apple-darwin-current/pdflatex</code>.
+By default, the pdflatex is installed in: {{{
+/usr/local/gwTeX/bin/i386-apple-darwin-current/pdflatex
+}}}.
 
 == Install ==
 
@@ -21,6 +23,9 @@ but is not required).
 If you already have a copy of Equation Service 0.1B installed, then you will need to uninstall it first 
 by deleting the application, 
 
- ∼/Library/Preferences/edu.umn.space.rowland.EquationService.plist
+{{
+∼/Library/Preferences/edu.umn.space.rowland.EquationService.plist
+}}}
 and 
- ∼/Library/Application Support/Equation Service
+{{
+∼/Library/Application Support/Equation Service}}}

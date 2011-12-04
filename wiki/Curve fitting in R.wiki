@@ -14,5 +14,4 @@ plot(x,y,xlim=xlim)
 line.x = seq(xlim[1],xlim[2],length=100)
 line.y = predict(model, newdata=list(x=line.x))
 lines(line.x,line.y,col='red',lty='dotted')
-
 }}}

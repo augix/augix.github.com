@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 ##!/usr/bin/perl -w
 #use strict;
 
@@ -27,9 +27,9 @@ sub c {
 }
 
 1;
-</perl>
+}}}
 
-<pre>
+{{{
 I'm in main code, caller returns: 
 
 

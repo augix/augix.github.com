@@ -27,7 +27,6 @@ Example:
     
     X=1
     [ $X -ne 0 ] && echo "X isn't zero" || echo "X is zero"
-
 }}}
 
 = reference =

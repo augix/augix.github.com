@@ -1,6 +1,6 @@
 [http://genome.ucsc.edu/FAQ/FAQreleases ref]
 
-<pre>
+{{{
 SPECIES	UCSC VERSION	RELEASE DATE	RELEASE NAME	STATUS
 VERTEBRATES	 	 	 	 
 Human	hg19	Feb. 2009	Genome Reference Consortium GRCh37	Available
@@ -20,4 +20,4 @@ Human	hg19	Feb. 2009	Genome Reference Consortium GRCh37	Available
  	hg3	Jul. 2000	UCSC-assembled	Archived
  	hg2	Jun. 2000	UCSC-assembled	Archived (data set only)
  	hg1	May 2000	UCSC-assembled	Archived (data set only)
-</pre>
+}}}

@@ -1,6 +1,6 @@
 to run a shell command
 
-<perl>
+{{{class="brush: perl"
 system("ls > outfile");
 
 open(OF, "outfile") || die $!;
@@ -13,4 +13,4 @@ foreach (@dir) {
 }
 
 $dir=`ls`;
-</perl>
+}}}

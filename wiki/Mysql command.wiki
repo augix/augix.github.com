@@ -1,62 +1,84 @@
 = Login =
- mysql –u root –p 123456
+{{
+mysql –u root –p 123456
+}}}
 
 = SQL command =
 创建数据库
- create database dataBaseName;
+{{
+create database dataBaseName;
+}}}
 选择数据库
- use dataBaseName
+{{
+use dataBaseName
+}}}
 删除数据库
- drop database databaseName;
+{{
+drop database databaseName;
+}}}
 创建表
- create table tableName ( ID int  not null auto_increment,
+{{
+create table tableName ( ID int  not null auto_increment,
+}}}
                                                stuID int,
                                                courseID int ,
                                                RMTime TIMESTAMP,
                                                primary key (ID),
                                             );
 向表中插入信息
- INSERT INTO tableName VALUES (1,'admin','admin');
+{{
+INSERT INTO tableName VALUES (1,'admin','admin');
+}}}
 (注意字段类型为数字的就直接用数字，为字符的要加上单引号)
 选取信息
- select * from tableName;
- select itemName from tableName;
- select itemName1,itemName2 from tableName;
- select * from tableName where itemName = name; (注意要是字段为字符则要加单引号)
- select * from tableName where itemName1 = name1 and itemName2 = name2;
- SELECT t1.name, t2.salary FROM tableName1 AS t1, tableName2 AS t2 WHERE t1.name = t2.name;
- SELECT t1.name, t2.salary FROM tableName1  t1, tableName2 t2 WHERE t1.name = t2.name;
- Select itemName as name from tableName;(将输出项更名)
- Select itemName from tableName having name;(选取的条件为是否存在指定字段)
- Select itemName from tableName having name > 10;(选取条件为指定条件)
- select itemName from tableName limit m; m（为返回记录的最大数目）
- select itemName from tableName limit n,m;（n为要返回的记录的第一行的偏移量，m为返回记录的最大数目）
- select * into Outfile ‘fileName.sql’ from tableName;(从数据库中导出信息到文件中)
+{{
+select * from tableName;
+select itemName from tableName;
+select itemName1,itemName2 from tableName;
+select * from tableName where itemName = name; (注意要是字段为字符则要加单引号)
+select * from tableName where itemName1 = name1 and itemName2 = name2;
+SELECT t1.name, t2.salary FROM tableName1 AS t1, tableName2 AS t2 WHERE t1.name = t2.name;
+SELECT t1.name, t2.salary FROM tableName1  t1, tableName2 t2 WHERE t1.name = t2.name;
+Select itemName as name from tableName;(将输出项更名)
+Select itemName from tableName having name;(选取的条件为是否存在指定字段)
+Select itemName from tableName having name > 10;(选取条件为指定条件)
+select itemName from tableName limit m; m（为返回记录的最大数目）
+select itemName from tableName limit n,m;（n为要返回的记录的第一行的偏移量，m为返回记录的最大数目）
+select * into Outfile ‘fileName.sql’ from tableName;(从数据库中导出信息到文件中)
+}}}
 
 修改表结构
  
 
 删除表
- drop table tableName;
+{{
+drop table tableName;
+}}}
 恢复数据
- load data infile ‘fileName.sql’ into table tableName;(从文件导入信息到数据库表中)
- mysqladmin –u root –p 123456 create dataBaseName 
- mysql –u root –p 123456 dataBaseName  < backup-file.sql;
+{{
+load data infile ‘fileName.sql’ into table tableName;(从文件导入信息到数据库表中)
+mysqladmin –u root –p 123456 create dataBaseName 
+mysql –u root –p 123456 dataBaseName  < backup-file.sql;
+}}}
 
 = DOS =
 DOS进入MYSQL命令
- c:\>mysql -h 127.0.0.1 -u root -penter password 
- >***********
- mysql> 进入完成   
+{{
+c:\>mysql -h 127.0.0.1 -u root -penter password 
+>
+mysql> 进入完成   
+}}}
 
- 建立数据库：create database databasename; 
- 使用指定数据库进行操作： 方法1：use database databasename; 方法2：mysql> databsename; 
- 查询当前数据库名称：select database();   
- 查询所有数据库：show databases;   
- 建立数据表create table tablename(table description) 
- 查看数据表结构describe tablename;   
- 查询当前数据库名称：select database();
- 查询当前数据库所有数据表名称：show tables;
+{{
+建立数据库：create database databasename; 
+使用指定数据库进行操作： 方法1：use database databasename; 方法2：mysql> databsename; 
+查询当前数据库名称：select database();   
+查询所有数据库：show databases;   
+建立数据表create table tablename(table description) 
+查看数据表结构describe tablename;   
+查询当前数据库名称：select database();
+查询当前数据库所有数据表名称：show tables;
+}}}
 
 = Reference =
 [http://blog.csdn.net/yinxing1999/archive/2005/03/03/309465.aspx mysql实际操作]

@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 use List::Util 'shuffle';
 
 my $str = "TGCAAATAGACACCAAAAATGAGAAGGAATACCTAT";
@@ -8,6 +8,6 @@ my $new_str = join ("",@new_str);
 
 print "$new_str";
 print "\n";
-</perl>
+}}}
 
 [[Category: Perl]]

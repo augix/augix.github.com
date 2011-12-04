@@ -1,6 +1,6 @@
 [[Category:Network]] [[Category:Unix]]
 The Source of <tt>Proxy_EVA.pac</tt>
-<bash>
+{{{class="brush: bash"
 function FindProxyForURL(url, host)
 {
     // nur hostname angegeben
@@ -46,4 +46,4 @@ if (shExpMatch(url, "http://*.local")) { return "DIRECT"; }
     else
         return "DIRECT";
 }
-</bash>
+}}}

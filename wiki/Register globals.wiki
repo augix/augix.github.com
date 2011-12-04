@@ -1,5 +1,5 @@
 when the option register_globals is off, you can't use the variable name in FORM as the variable name in PHP. If you want to continue use it, you should add a line of script in every PHP program.
 
-<php>
+{{{class="brush: php"
 ?php if(!empty($_POST)) extract($_POST);  //added by augix
-</php>
+}}}

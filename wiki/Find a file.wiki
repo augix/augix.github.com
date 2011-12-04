@@ -30,19 +30,22 @@ find的使用实例：
 
 搜索当前目录中，所有过去10分钟中更新过的普通文件。如果不加-type f参数，则搜索普通文件+特殊文件+目录。
 
- find . -size +100M
+{{
+find . -size +100M
+}}}
 find any files bigger than a particular size 搜索当前目录中，所有大小大于100M的文件。
-<bash>
+{{{class="brush: bash"
 root@ubuntu# find /etc -size +100k -size -150k
 /etc/ssl/certs/ca-certificates.crt
 /etc/bash_completion
-</bash>
+}}}
 
 * find files modifed in less than n*24 hours
-<pre>       -mtime n
+{{{
+       -mtime n
               File's data was last modified n*24 hours ago.  See the comments for -atime to understand how rounding affects the interpretation of file modâ
               ification times.
-</pre>
+}}}
 
 2. locate
 

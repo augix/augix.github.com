@@ -1,3 +1,3 @@
-<bash>
+{{{class="brush: bash"
 for i in $(ls ./); do rm -rf ../$i; done
-</bash>
+}}}

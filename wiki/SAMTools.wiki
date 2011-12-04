@@ -10,7 +10,6 @@ samtools flagstat <bam file>
 samtools view -H <bam file>
     check if the bam files is sorted. 
     http://biostar.stackexchange.com/questions/5273/is-my-bam-file-sorted  
-
 }}}
 
 [http://samtools.sourceforge.net/samtools.shtml Manual Reference Pages  - samtools]

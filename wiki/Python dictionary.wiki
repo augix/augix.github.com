@@ -1,37 +1,39 @@
 * Python dictionary can only use immutable elements as keys, therefore list can not be used as keys, but tuples with immutable elements can.
 
 * create dictionary
- l = dict(a=1,b=2,c=3)
- l = dict(zip(['a','b','c'],[1,2,3]))
- dict(zip('abc',[1,2,3]))
+{{
+l = dict(a=1,b=2,c=3)
+l = dict(zip(['a','b','c'],[1,2,3]))
+dict(zip('abc',[1,2,3]))
+}}}
 
 * Iterating Through a Dictionary
-<python>
+{{{class="brush: python"
 >>> import os
 >>> for k, v in os.environ.items():     
 ...     print "%s=%s" % (k, v)
-</python>
+}}}
 
 
 * Double dictionary
 reference: [http://desk.stinkpot.org:8080/tricks/index.php/2006/04/create-a-double-dictionary-in-python/ create a double dictionary in python]
 
 the following WON'T work
-<python>
+{{{class="brush: python"
 >>> x = dict()
 >>> x[1][1] = “foo”
-</python>
+}}}
 instead, one can use this:
-<python>
+{{{class="brush: python"
 >>> x = dict()
 >>> x[1,1] = “foo”
-</python>
+}}}
 
 note that, tuple (1,1) is used as key.
 
 
 * find the key to the max and min value
 suppose d is the dict.
-<python>
+{{{class="brush: python"
 max(d,key = lambda a: d.get(a))
-</python>
+}}}

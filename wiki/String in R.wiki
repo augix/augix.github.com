@@ -1,59 +1,59 @@
 [[Category:R]]
 = split =
 split a string into a vector:
-<R>
+{{{class="brush: R"
 x = "string_x"
 strsplit(x, split="")
-</R>
-<pre>
+}}}
+{{{
 [[1]]
 [1] "s" "t" "r" "i" "n" "g" "_" "x"
-</pre>
+}}}
 
 = paste =
-<R>
+{{{class="brush: R"
 x = paste("Hello", "World", sep=", ")
 print(x)
-</R>
-<pre>
+}}}
+{{{
 [1] "Hello, World"
-</pre>
+}}}
 
-<R>
+{{{class="brush: R"
 chars = c("m", "e", "r", "g", "e", "d")
 paste(chars, collapse = "")
-</R>
+}}}
 
-<pre>
+{{{
 [1] "merged"
-</pre>
+}}}
 
 = toString =
-<R>
+{{{class="brush: R"
 x = c("Hello", "World")
 y = toString(x)
 print(y)
-</R>
-<pre>
+}}}
+{{{
 [1] "Hello, World"
-</pre>
+}}}
 
 ps: it seems "format" is also an useful function.
 
 = chartr =
-<R>
+{{{class="brush: R"
 x = "ACGTGTGACGT"
 y = chartr("acgtACGT","tgcaTGCA",x)
 print(x);print(y)
-</R>
+}}}
 
-<pre>
+{{{
 [1] "ACGTGTGACGT"
 [1] "TGCACACTGCA"
-</pre>
+}}}
 
 = DNA Reverse Complementary =
-<R>
+{{{class="brush: R"
 DNA.Rev.Comp <- function(x) {
 	if (is.character(x) && length(x) == 1) {
 		x = chartr("acgtACGT","tgcaTGCA",x)
@@ -69,8 +69,8 @@ DNA.Rev.Comp <- function(x) {
 }
 
 DNA.Rev.Comp("ACTGTGACCACGTCGTA")
-</R>
+}}}
 
-<pre>
+{{{
 [1] "TACGACGTGGTCACAGT"
-</pre>
+}}}

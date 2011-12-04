@@ -1,12 +1,17 @@
 Gnome
 
- $ gnome-session
+{{
+$ gnome-session
+}}}
 
 Kde
- $ startkde
+{{
+$ startkde
+}}}
 
 or
 
- $ kdesktop
- $ konqueror
- $ konsole
+{{
+$ kdesktop
+$ konqueror
+$ konsole}}}

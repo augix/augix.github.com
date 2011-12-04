@@ -4,7 +4,7 @@
 
 In probability theory and statistics, the expected value (or expectation value, or mathematical expectation, or mean, or first moment) of a random variable is the integral of the random variable with respect to its probability measure.
 
-The expected value operator (or '''expectation operator''') is linear.
+The expected value operator (or <b>expectation operator</b>) is linear.
 
 == 方差 variance, deviation ==
 

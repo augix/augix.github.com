@@ -1,13 +1,13 @@
 One can define his/her own operator
-<R>
+{{{class="brush: R"
 "%i%" <- intersect
 intersect(x,y)   # Only two arguments
 intersect( intersect(x,y), z )
 x %i% y %i% z
-</R>
+}}}
 
 other operators
-<R>
+{{{class="brush: R"
 '%d%' <- setdiff
 '%.%' <- function (x, y) paste (x, y, sep = '')
-</R>
+}}}

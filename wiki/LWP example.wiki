@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 #!/usr/bin/perl -w
  
 #use strict;
@@ -39,6 +39,7 @@ if($response->content =~ m/wiki/) {
 }
 exit;
 
-</perl>
+
+}}}
 
 [[Category:Perl]]

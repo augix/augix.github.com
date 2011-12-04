@@ -1,4 +1,4 @@
-<latex>
+{{{class="brush: latex"
 % XeLaTeX can use any Mac OS X font. See the setromanfont command below.
 % Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
 
@@ -163,4 +163,4 @@ $cov(x,y) = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} (x-EX) (y-EY) p(x,
 
 
 \end{document} 
-</latex>
+}}}

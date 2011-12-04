@@ -1,18 +1,18 @@
 * to get the full pathname to a script that python is executing
-<python>
+{{{class="brush: python"
 import os, sys
 os.path.abspath(sys.argv[0])
-</python>
+}}}
 
 * list all the files in given folder
-<python>
+{{{class="brush: python"
 import glob
 glob.glob(”/mypath/*.txt”)
-</python>
+}}}
 
 * create a folder if it does not exist
-<python>
+{{{class="brush: python"
 import os
 if not os.path.exists(dir):
   os.makedir(dir)
-</python>
+}}}

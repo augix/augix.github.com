@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 sub generator {
   $length = $_[0];
   
@@ -22,5 +22,5 @@ sub generator {
 @result = generator(5);
 $print = join (" ",@result);
 print ($print);
-</perl>
+}}}
 [[Category:Perl]]

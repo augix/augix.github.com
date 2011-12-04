@@ -1,21 +1,31 @@
 [http://www.amitu.com/blog/2004/12/screen-howto.html Anything Else: Screen Howto]
 = Start =
 * To start a fresh screen session:
- $ screen
+{{
+$ screen
+}}}
 
 * It is always a good idea to check the status of your sessions by means of 
- screen -list
+{{
+screen -list
+}}}
 
 * All screen commands start with 
- Ctrl-a
+{{
+Ctrl-a
+}}}
 
 = Help =
 Full list of available command can be obtained by doing
- Ctrl-a ?
+{{
+Ctrl-a ?
+}}}
 
 = Create =
 * To Open a new screen within the screen session:
- Ctrl-a c
+{{
+Ctrl-a c
+}}}
 
 = Switch =
 * to last accessed screen.
@@ -23,25 +33,35 @@ Full list of available command can be obtained by doing
 * to next
   Ctrl-a n 
 * to previous screens.
- Ctrl-a p
+{{
+Ctrl-a p
+}}}
 
 = Detach =
 To disconnect, leaving the session running in background: 
- Ctrl-a d.
+{{
+Ctrl-a d.
+}}}
 
 = Reattach =
- screen -r
+{{
+screen -r
+}}}
 
 = Info =
 show all window information
- Ctrl-a w
+{{
+Ctrl-a w
+}}}
 
 = Rename =
 rename the current screen to a more meaningful name do a 
- Ctrl-a A
+{{
+Ctrl-a A
+}}}
 
 = Screen Reference Card =
-<pre>
+{{{
 Basics: 
  -ctrl a c -> create new window 
  -ctrl a A -> set window name 
@@ -69,4 +89,4 @@ If you created a new split screen, the current window is empty. either select an
  -ctrl a X -> remove active window from split screen
  -ctrl a O -> logout active window (disable output)
  -ctrl a I -> login active window (enable output)
-</pre>
+}}}

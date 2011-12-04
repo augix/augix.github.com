@@ -18,4 +18,3 @@
 -mindepth
 }}}
 * [http://www.linux.ie/newusers/beginners-linux-guide/find.php Using the find command]
-

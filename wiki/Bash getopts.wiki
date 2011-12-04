@@ -22,4 +22,3 @@ OPTIND
 
 
 [http://www.mkssoftware.com/docs/man1/getopts.1.asp parse options from shell script command line]
-

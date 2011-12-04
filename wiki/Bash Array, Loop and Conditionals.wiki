@@ -1,16 +1,16 @@
 = For Loop =
-<bash>
+{{{class="brush: bash"
 jj=(1 4 15 16 32 40 41 58 61 72 73 74 97);
 for j in `seq 0 12`; do
   qsub 3way_4tissues.anova.sge.hugemem ${jj[$j]};
 done
-</bash>
+}}}
 
 * break, continue
 The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.
 
 = Case =
-<bash>
+{{{class="brush: bash"
 case word in
   pattern1) 
     list of command
@@ -19,11 +19,11 @@ case word in
     list of command
     ;;
 esac
-</bash>
+}}}
 [[bash case]]
 
 = For Array =
-<bash>
+{{{class="brush: bash"
 mm="2 4";
 dd="random normal X1 link";
 for m in $mm; do
@@ -31,10 +31,10 @@ for m in $mm; do
     echo $m.$d;
   done;
 done;
-</bash>
+}}}
 
 or
-<bash>
+{{{class="brush: bash"
 mm=(2 4);
 dd=(random normal X1 link);
 for m in "${mm[@]}"; do
@@ -42,13 +42,13 @@ for m in "${mm[@]}"; do
     echo $m.$d;
   done;
 done;
-</bash>
+}}}
 
 * convert string to array
-<bash>
+{{{class="brush: bash"
 str='1 2 3 a b c'
 array=($str)
-</bash>
+}}}
 
 reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
 
@@ -65,13 +65,13 @@ opposite to while, it does something repeatedly until the condition is ture.
 
 = If conditional =
 
-<bash>
+{{{class="brush: bash"
 if COMMANDS ; then 
 COMMANDS; 
 [ elif COMMANDS; then COMMANDS ; ]... 
 [ else COMMANDS; ] 
 fi
-</bash>
+}}}
 
 http://www.thegeekstuff.com/2010/06/bash-conditional-expression/
 
@@ -95,25 +95,25 @@ http://steve-parker.org/sh/test.shtml
 
 ps: == only works in bash, run 'bash script.sh' instead of 'sh script.sh'.
 
-<bash>
+{{{class="brush: bash"
 if [ -e chrX.idx ]; then
   echo "index file exist!";
 else 
   nohup ./segemehl.x -d chrX.fa -x chrX.idx
 fi
-</bash>
+}}}
 
-<bash>
+{{{class="brush: bash"
 if [ ! -d $outdir ]; then mkdir $outdir; fi
-</bash>
+}}}
 
 for directory:
-<bash>
+{{{class="brush: bash"
 if [ -d ./doc/ ]; then
-</bash>
+}}}
 
 == Nested If conditionals ==
-<bash>
+{{{class="brush: bash"
 	if condition
 	then
 		if condition
@@ -131,9 +131,9 @@ if [ -d ./doc/ ]; then
 		.....
 		do this
 	fi
-</bash>
+}}}
 
-<bash>
+{{{class="brush: bash"
 if [ condition ]
 then 
         action
@@ -149,10 +149,10 @@ then
 else
         actionx
 fi
-</bash>
+}}}
 
 = Condition and string comparison =
-<bash>
+{{{class="brush: bash"
 S1='name'
 S2='Name'
 if [ $S1 == $S2 ];    # NOTE [with spaces] 
@@ -168,4 +168,4 @@ then
 else
   echo "no file\n";
 fi
-</bash>
+}}}

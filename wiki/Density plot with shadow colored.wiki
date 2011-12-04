@@ -1,6 +1,6 @@
 [[Category:R]]
 
-<R>
+{{{class="brush: R"
 # transabi.R
 # statistics on abi expression data set
 #
@@ -106,4 +106,5 @@ nice.density <-function(df, ...) {
 nice.dnorm()
 nice.density(runif(1000))
 
-</R>
+
+}}}

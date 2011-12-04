@@ -1,4 +1,4 @@
-<R>
+{{{class="brush: R"
 DF <- data.frame(x = c(1, 2, 3), y = c(0, 10, NA))
 DF
 ## remove the lines with NA
@@ -6,4 +6,4 @@ na.omit(DF)
 ## remove the lines with 0
 DF[DF == 0] = NA
 na.omit(DF)
-</R>
+}}}

@@ -33,4 +33,3 @@ methods(plot) # methods of plot for different kinds of objects.
 rowSums(), colSums(), rowMeans(), colMeans() #
 xor() # logical switch
 }}}
-

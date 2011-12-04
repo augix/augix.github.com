@@ -1,6 +1,6 @@
 = Parsing a FASTA file with Biopython =
 == Exercise 1 ==
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 from Bio import SeqIO, SeqUtils
 import re
@@ -60,10 +60,10 @@ print '5. How many records have sequences which contain 20-nucleotide repeats (t
 print '6. Do any records contain 100% identical sequences?\nAnswer:', q6
 print '7. The records in the file represent exons. How many exons can you find for the gene with Ensembl id ENSG00000006831? What are their exon IDs?\nAnswer:', q7a, '\nAnswer', q7b
 print '8. Which of the exons of ENSG00000006831 has the highest GC content?\nAnswer:', q8
-</python>
+}}}
 <br>
 result:
-<pre>
+{{{
 [bionc01: Assignment5] python e1.py
 1. How many records are in the file?
 Answer: 212645
@@ -84,4 +84,4 @@ Answer: 8
 Answer ['ENSE00001426014', 'ENSE00001402644', 'ENSE00000712257', 'ENSE00001334428', 'ENSE00000816807', 'ENSE00000816806', 'ENSE00001334430', 'ENSE00000816808']
 8. Which of the exons of ENSG00000006831 has the highest GC content?
 Answer: [('ENSE00001426014', 76.36363636363636)]
-</pre>
+}}}

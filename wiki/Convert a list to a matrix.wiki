@@ -1,6 +1,6 @@
 [[Category:R]]
-<R>
+{{{class="brush: R"
 #How to convert a list to a matrix
 mat <- do.call("rbind", myList)
 mat <- matrix(unlist(lis), ncol=2, byrow=TRUE)
-</R>
+}}}

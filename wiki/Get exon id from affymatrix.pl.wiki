@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 #!/usr/bin/perl -w
 
 if(@ARGV!=1){ die "\nPlease input the chromosome name!\n\n";}
@@ -23,4 +23,4 @@ while(<EXON_LIST>){
 }
 
 close(EXON_LIST);
-</perl>
+}}}

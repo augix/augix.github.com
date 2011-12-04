@@ -19,4 +19,3 @@ vennDiagram(a)
 
 Reference:
 http://www.ats.ucla.edu/stat/r/faq/venn.htm
-

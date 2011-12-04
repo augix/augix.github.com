@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
     use GD;
 
     # create a new image
@@ -29,5 +29,5 @@
 
     # Convert the image to PNG and print it on standard output
     print $im->png;
-</perl>
+}}}
 [[Category:Perl]]

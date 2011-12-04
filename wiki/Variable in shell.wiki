@@ -1,9 +1,9 @@
 The braces are required for concatenation constructs.
 
-<pre>
+{{{
 $p_01
 The value of the variable "p_01".
 
 ${p}_01
 The value of the variable "p" with "_01" pasted onto the end.
-</pre>
+}}}

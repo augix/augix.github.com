@@ -1,24 +1,30 @@
 * A function is an object.
- square = lambda x: x**2
+{{
+square = lambda x: x	*2
+}}}
 
 * Functions can be returned as objects
-<python>
+{{{class="brush: python"
 def build_taxer(rate):
     def taxer(amount):
         return amount * (float(rate) / 100)
     return taxer
-</python>
+}}}
 
 * filter and lambda
- filter( lambda x: x%2==0, range(10))
+{{
+filter( lambda x: x%2==0, range(10))
+}}}
 
 * list comprehensions can replace map and filter, but compute the whole list is slow
- [i**2 for i in range(10) if i%2==0]
+{{
+[i	*2 for i in range(10) if i%2==0]
+}}}
 
 * list is slow actually we only need to compute part of the list
-<python>
+{{{class="brush: python"
 def is_prime(n):
     return not any(n%k==0 for k in xrange(2,n))
-</python>
+}}}
 
-** in contrast to any(seq), all(seq) returns true if all elements of the sequence are true
+	* in contrast to any(seq), all(seq) returns true if all elements of the sequence are true

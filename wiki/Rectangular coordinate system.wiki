@@ -1,4 +1,4 @@
-<R>
+{{{class="brush: R"
 x = c(-2,0,2)
 y = c(-2,0,2)
 plot(x,y,type="n", axes=F,xlab="",ylab="")
@@ -20,4 +20,4 @@ text(2,0,labels="x",pos=1)
 text(0,2,labels="y",pos=2)
 text(1.1,0,labels="1",pos=1)
 text(0,1,labels="1",pos=2)
-</R>
+}}}

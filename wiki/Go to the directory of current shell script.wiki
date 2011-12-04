@@ -1,4 +1,4 @@
-<bash>
+{{{class="brush: bash"
 dir_sh=`dirname $0`
 cd $dir_sh
-</bash>
+}}}

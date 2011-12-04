@@ -1,6 +1,6 @@
 [[Category:Perl]]
 DNA_Rev_Comp.pm
-<perl>
+{{{class="brush: perl"
 package DNA_Rev_Comp;
 use strict;
 use vars qw(@ISA @EXPORT $VERSION); 
@@ -17,10 +17,10 @@ sub DNA_Rev_Comp {
 }
 
 1;
-</perl>
+}}}
 
 DNA_Rev_Comp.pl
-<perl>
+{{{class="brush: perl"
 #!/usr/bin/perl
 #use lib "./";
 use DNA_Rev_Comp;
@@ -28,4 +28,4 @@ use DNA_Rev_Comp;
 $a = "CAGCTATCTATCAC";
 $b = DNA_Rev_Comp($a);
 warn $b;
-</perl>
+}}}

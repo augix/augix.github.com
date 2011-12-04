@@ -1,4 +1,4 @@
-<python>
+{{{class="brush: python"
 file = open("sample.txt", 'r')
 
 while True:
@@ -6,6 +6,6 @@ while True:
     if not line:
         break
     pass # do something
-</python>
+}}}
 
 [http://effbot.org/zone/readline-performance.htm Reference: Reading text files]

@@ -1,22 +1,22 @@
 * delete ":"
-<python>
+{{{class="brush: python"
 import string
 allchars = string.maketrans('','')
 options = options.translate(allchars, ':')
-</python>
+}}}
 
 * Replace 'e' with 'a', delete 'o'
-<python>
+{{{class="brush: python"
 import string
 aTob = string.maketrans('e','a') 
 s = 'hello python' 
 print s.translate(aTob, 'o') 
-</python>
+}}}
 
 Output:
-<pre>
+{{{
 hall pythn 
-</pre>
+}}}
 
 
 [http://blog.donews.com/tinylee/archive/2007/06/14/1175344.aspx Python Cook 1.9 简化使用string的translate方法]

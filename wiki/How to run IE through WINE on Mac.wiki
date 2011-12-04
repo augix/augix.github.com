@@ -2,4 +2,4 @@
 * Make sure that X11 is installed
 * Download and run Install_ies4osx (http://soft.macx.cn/soft2899.htm)
 * Downlaod a windows font file simsun.ttc (http://soft.macx.cn/soft1552.htm)
-** 点击应用程序的 IE 然后右键单击 显示包内容 拷贝simsun.ttc 到 contents - resources - ie6 - drive_c - windows - fonts 内
+	* 点击应用程序的 IE 然后右键单击 显示包内容 拷贝simsun.ttc 到 contents - resources - ie6 - drive_c - windows - fonts 内

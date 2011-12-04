@@ -2,13 +2,17 @@
 * [[.Xdefaults on mac]]
 * [http://developer.apple.com/opensource/tools/runningX11.html  An important reference about X11 on mac]
 * change font of xterm, by customize the xterm command
- xterm -fa Monaco -fs 10
+{{
+xterm -fa Monaco -fs 10
+}}}
 or
- xterm -fa "Andale mono" -fs 10
+{{
+xterm -fa "Andale mono" -fs 10
+}}}
 * change fullscreen background of X11 on Mac OS X
 reference: http://forums.macosxhints.com/showthread.php?t=32760
 write in your ~/.xinitrc file:
-<bash>
+{{{class="brush: bash"
 /usr/X11R6/bin/xsetroot -solid black &
 exec quartz-wm
-</bash>
+}}}

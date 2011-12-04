@@ -1,40 +1,40 @@
 * How to get all the positions of multiple matches
-<python>
+{{{class="brush: python"
 import re
 p = re.compile("ab", re.IGNORECASE)
 for m in p.finditer("abcdefgAbdc"):
     print m.start(), m.group()
-</python>
+}}}
 
-<pre>
+{{{
 0 ab
 7 ab
-</pre>
+}}}
 
 * Substitution
-<python>
+{{{class="brush: python"
 import re
 test = "<h1>title</h1>"
 test
 re.sub("\<.*?\>","",test)
-</python>
-<pre>
+}}}
+{{{
 >>> test = "<h1>title</h1>"
 >>> test
 '<h1>title</h1>'
 >>> re.sub("\<.*?\>","",test)
 'title'
-</pre>
+}}}
 
 * Minimal matching
-<python>
+{{{class="brush: python"
 import re
 test = "<h1>title</h1>"
 test
 re.sub("\<.*\>","",test)
 re.sub("\<.*?\>","",test)
-</python>
-<pre>
+}}}
+{{{
 >>> test = "<h1>title</h1>"
 >>> test
 '<h1>title</h1>'
@@ -42,4 +42,4 @@ re.sub("\<.*?\>","",test)
 ''
 >>> re.sub("\<.*?\>","",test)
 'title'
-</pre>
+}}}

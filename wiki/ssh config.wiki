@@ -1,2 +1,3 @@
- # Keep SSH connection alive
- ServerAliveInterval 60
+{{
+# Keep SSH connection alive
+ServerAliveInterval 60}}}

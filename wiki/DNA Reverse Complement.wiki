@@ -1,4 +1,4 @@
-<perl>
+{{{class="brush: perl"
 
 sub revdnacomp {
   my $dna = @_;
@@ -9,4 +9,5 @@ sub revdnacomp {
   return $revcomp;
 }
 
-</perl>
+
+}}}

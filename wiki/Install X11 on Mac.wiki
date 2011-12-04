@@ -2,7 +2,7 @@ Insert your OS X Install Disk #1.
 
 A finder window will open that will show you all the installers and folders on the disk.
 
-You have to double-click on the '''Optional Installs package'''. 
+You have to double-click on the <b>Optional Installs package</b>. 
 
 
 PS: However, due to the organization of the icons in the finder window, you must scroll down to find the Optional Install icon.

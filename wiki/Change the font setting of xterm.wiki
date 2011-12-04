@@ -2,7 +2,7 @@ http://lists.apple.com/archives/X11-users/2005/May/msg00112.html
 
 I have in my ~/.Xdefaults file...
 
-<pre>
+{{{
 XTerm*Tek*background: MintCream
 XTerm*jumpScroll: on
 XTerm*pointerShape: arrow
@@ -21,7 +21,7 @@ XTerm*saveLines: 500
 XTerm*loginShell: on
 XTerm*cursorColor: black
 XTerm*vt100*geometry: 80x36
-</pre>
+}}}
 
 After added the entries you want, you may have to do an xrdb -merge 
 ~/.Xdefaults

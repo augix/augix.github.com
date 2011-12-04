@@ -1,4 +1,4 @@
-<python>
+{{{class="brush: python"
 #!/usr/bin/env python
 '''An improved getopt module which only treat short options.
 '''
@@ -14,6 +14,6 @@ def short(options):
         values.append(a)
     values.append(args)
     return values
-</python>
+}}}
 
 [http://docs.python.org/library/getopt.html reference]

@@ -1,5 +1,5 @@
 [[Category:Perl]]
-<perl>
+{{{class="brush: perl"
 #!/bin/perl
 @animation = qw( \ | / - );
 
@@ -21,4 +21,4 @@ $arrow.="=";
 }
 
 print STDERR "\n";
-</perl>
+}}}

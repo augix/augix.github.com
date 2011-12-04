@@ -15,16 +15,16 @@
 = DNA Repeat types =
 DNA Repeat types: Tandemly repeated DNA & Interspersed repetitive DNA
 *Tandemly repeated DNA
-**Repeats often associated with disease syndromes
-**Telomeres
-***Contain long arrays of TTAGGG repeats
-***Repeats form nucleoprotein complex: Associate with TERF proteins  
-***Repeat function
+	*Repeats often associated with disease syndromes
+	*Telomeres
+		*Contain long arrays of TTAGGG repeats
+		*Repeats form nucleoprotein complex: Associate with TERF proteins  
+		*Repeat function
 *Interspersed repetitive DNA
-**Short Interspersed Nuclear Elements (SINEs)
-***Alu
-***Mariner (Mariner-like) elements
-**Long Interspersed Nuclear Elements (LINEs)
-**Transposable elements with Long Terminal Repeats
-**DNA Transposons
+	*Short Interspersed Nuclear Elements (SINEs)
+		*Alu
+		*Mariner (Mariner-like) elements
+	*Long Interspersed Nuclear Elements (LINEs)
+	*Transposable elements with Long Terminal Repeats
+	*DNA Transposons
 *Transposable repeat elements: Possible adverse effects

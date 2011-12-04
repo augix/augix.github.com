@@ -1,17 +1,17 @@
 = Examples =
-<bash>
+{{{class="brush: bash"
 diff -U 0 oldFile newFile
-</bash>
+}}}
 
 or compare corresponding files in both directories, in alphabetical order.
-<bash>
+{{{class="brush: bash"
 diff -U 0 oneDirectory anotherDirectory
-</bash>
+}}}
 
 = Options =
-<pre>
+{{{
 -B = Ignore changes that just insert or delete blank lines.
 -b = Ignore changes in amount of white space.
 -r = When comparing directories, recursively compare any subdirectories found.
 -q = Report only whether the files differ, not the details of the differences.
-</pre>
+}}}
