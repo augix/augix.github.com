@@ -28,4 +28,5 @@ by deleting the application,
 }}}
 and 
 {{{
-∼/Library/Application Support/Equation Service}}}
+∼/Library/Application Support/Equation Service
+}}}

@@ -41,4 +41,5 @@ gunzip -c aps95.tar.gz | tar -tvf -
 
 * extract bz2 files
 {{{
-tar xjvf cornbread.tar.bz2}}}
+tar xjvf cornbread.tar.bz2
+}}}

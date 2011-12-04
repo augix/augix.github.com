@@ -32,4 +32,5 @@ Done, changes made, all you need to do is logging in and delete the original dir
 http://www.macosxhints.com/article.php?story=20010328105037397
 
 {{{
-chflags -R nouchg ~/}}}
+chflags -R nouchg ~/
+}}}

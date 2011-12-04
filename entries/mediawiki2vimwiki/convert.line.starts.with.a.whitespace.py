@@ -48,7 +48,7 @@ def convert(lines):
                     pass
         else: pass
         outs.append(l)
-    if openState: outs.append("}}}\n")
+    if openState: outs.append("\n}}}")
     return outs
 
 # main

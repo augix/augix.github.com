@@ -18,4 +18,5 @@ create a user wikiuser with certain privileges
 
 import
 {{{
-/Applications/xampp/xamppfiles/bin/mysql wikidb -u root -p < /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql}}}
+/Applications/xampp/xamppfiles/bin/mysql wikidb -u root -p < /Volumes/mac/augix/Private/Backup/MediaWiki/wikidb.sql
+}}}

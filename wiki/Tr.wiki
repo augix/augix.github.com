@@ -6,4 +6,5 @@ tr 'stuff_to_be_replaced' 'replacement'
 = Squeeze =
 * squeeze multiple consecutive blanks to a single one
 {{{
-tr -s '[:blank:]'}}}
+tr -s '[:blank:]'
+}}}

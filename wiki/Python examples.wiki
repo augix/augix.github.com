@@ -92,4 +92,5 @@ alist = list(set(alist))
 }}}
 == elements unhashable ==
 {{{
-alist = [k for k,v in itertools.groupby(sorted(alist))]}}}
+alist = [k for k,v in itertools.groupby(sorted(alist))]
+}}}

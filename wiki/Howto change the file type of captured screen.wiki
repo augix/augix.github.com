@@ -25,4 +25,5 @@ Command+shift+3 就会已你设置的格式保存图片.
 
 如果想恢复回png
 {{{
-defaults write com.apple.screencapture type png}}}
+defaults write com.apple.screencapture type png
+}}}

@@ -30,4 +30,5 @@ $ tree
 
 only display the folders with depth < 3
 {{{
-tree | perl -pe "s/^.*\|-{5,}[^-].*\n//;" | grep "-"}}}
+tree | perl -pe "s/^.*\|-{5,}[^-].*\n//;" | grep "-"
+}}}
