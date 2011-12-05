@@ -38,11 +38,11 @@
 <p>
 I usually use "mail" for sending plain emails and "mutt" for sending attachments.
 </p>
-<pre class="brush bash">
+<pre class="brush: bash">
 echo "This is a message" | mail -s "Subject" foo@bar.com
 </pre>
 
-<pre class="brush bash">
+<pre class="brush: bash">
 echo "This is a message w/ attachment" | mutt -a file.gz -s "Subject" foo@bar.com
 </pre>
 
@@ -53,7 +53,7 @@ echo "This is a message w/ attachment" | mutt -a file.gz -s "Subject" foo@bar.co
 <p>
 Select whatever you like, each of the belowing does more or less what you want:
 </p>
-<pre class="brush bash">
+<pre class="brush: bash">
 metasend -t you@to.tld -s metasend -f yourfile -b -m text/plain -e base64
 pine you@to.tld -attach file -I^X
 elm -s ok you@to.tld -A y 

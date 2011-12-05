@@ -5,32 +5,34 @@ background job.
 
 You can pass parameters to scripts via additional arguments on the command line: for example
 
-{{{
+{{{class="brush: bash"
 R CMD BATCH --args arg1 arg2 foo.R &
 }}}
-<p style="color:red">It seems this command does not work.</p>
+
+PS: It seems this command does not work.
 
 will pass arguments to a script which can be retrieved as a character vector by
 
-{{{
+{{{class="brush: r"
 args <- commandArgs(TRUE)
 }}}
 
 This is made simpler by the alternative front-end Rscript, which can be invoked by
 
-{{{
+{{{class="brush: bash"
 Rscript foo.R arg1 arg2
 }}}
-<p style="color:red">This works.</p>
 
 and this can also be used to write executable script files like (at least on Unix-alikes, and in
 some Windows shells)
+
 {{{class="brush: bash"
 #! /path/to/Rscript
 args <- commandArgs(TRUE)
 ...
 q(status=<exit status code>)
 }}}
+
 If this is entered into a text file `runfoo' and this is made executable (by chmod 755 runfoo),
 it can be invoked for different arguments by
 
@@ -48,4 +50,3 @@ q(save="no")
 = Another way: Rf =
 [[Rf]]
 
-[[Category:R]]

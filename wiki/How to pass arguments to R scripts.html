@@ -42,18 +42,19 @@ background job.
 You can pass parameters to scripts via additional arguments on the command line: for example
 </p>
 
-<pre>
+<pre class="brush: bash">
 R CMD BATCH --args arg1 arg2 foo.R &amp;
 </pre>
+
 <p>
-&lt;p style="color:red"&gt;It seems this command does not work.&lt;/p&gt;
+PS: It seems this command does not work.
 </p>
 
 <p>
 will pass arguments to a script which can be retrieved as a character vector by
 </p>
 
-<pre>
+<pre class="brush: r">
 args &lt;- commandArgs(TRUE)
 </pre>
 
@@ -61,23 +62,22 @@ args &lt;- commandArgs(TRUE)
 This is made simpler by the alternative front-end Rscript, which can be invoked by
 </p>
 
-<pre>
+<pre class="brush: bash">
 Rscript foo.R arg1 arg2
 </pre>
-<p>
-&lt;p style="color:red"&gt;This works.&lt;/p&gt;
-</p>
 
 <p>
 and this can also be used to write executable script files like (at least on Unix-alikes, and in
 some Windows shells)
 </p>
+
 <pre class="brush: bash">
 #! /path/to/Rscript
 args &lt;- commandArgs(TRUE)
 ...
 q(status=&lt;exit status code&gt;)
 </pre>
+
 <p>
 If this is entered into a text file `runfoo' and this is made executable (by chmod 755 runfoo),
 it can be invoked for different arguments by
@@ -97,10 +97,6 @@ q(save="no")
 <h1 id="toc_2">Another way: Rf</h1>
 <p>
 <a href="Rf.html">Rf</a>
-</p>
-
-<p>
-<a href="Category_R.html">Category:R</a>
 </p>
 
 	</div><!-- end of post -->
