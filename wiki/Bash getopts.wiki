@@ -1,6 +1,6 @@
 %template disqus
 
-{{{
+{{{class="brush: bash"
 while getopts d:s options
 do	case "$options" in
 	d)	seplist="$OPTARG";;
