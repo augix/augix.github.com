@@ -36,7 +36,7 @@ q(status=<exit status code>)
 If this is entered into a text file `runfoo' and this is made executable (by chmod 755 runfoo),
 it can be invoked for different arguments by
 
-{{{
+{{{class="brush: bash"
 runfoo arg1 arg2
 }}}
 

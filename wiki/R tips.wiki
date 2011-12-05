@@ -1,6 +1,6 @@
 
 * [[File Manipulation in R| File Manipulation]]
-* [[How to pass arguments to R scripts]]
+= * [[How to pass arguments to R scripts]] =
 * [[Matrix]]
 * [[R list]]
 * [[Density plot with shadow colored]]
