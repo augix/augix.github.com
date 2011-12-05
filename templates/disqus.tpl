@@ -47,7 +47,7 @@
 	%content%
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="%root_path%index.html">Main Page</a><br>
+		<a href="http://wiki.augix.com">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: %title%" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

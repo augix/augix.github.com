@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://wiki.augix.com/</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Programming.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bioinformatics.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/IT%20Notes.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Biology%20Notes.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Statistics.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Foreign%20Language.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Main%20Page.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/index.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Learning%20Shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Learning%20Perl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20tips.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/AppleScript.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/SQL.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Regular%20expression.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Vim.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Git.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Mapping%20based%20on%20position%20information.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Fetch%20URLs%20from%20a%20HTML%20file.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Curl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Wget.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/VoodooPad.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Register%20globals.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/BLAST%20and%20formatdb.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Blat.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Tophat.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/SAMTools.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/SGE%20in%20eva%20cluster.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/SGE%20in%20PICB%20cluster.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/RNA-Seq.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Vimwiki.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Share%20mouse%20and%20keyboard.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Configuration%20on%20Mac%20OS%20X%20Leopard.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Mac%20Tips.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/How%20to%20run%20IE%20through%20WINE%20on%20Mac.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Transfer%20Files%20via%20Firewire.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Howto%20change%20the%20file%20type%20of%20captured%20screen.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Join%20two%20PDF%20files%20on%20Mac.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Watch%20TV%20on%20Mac.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Change%20the%20font%20setting%20of%20xterm.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/X11%20on%20Mac.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/TeX%20on%20Mac%20OS%20X.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/TeX%20templates.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Draw%20Mathematical%20Formula.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Setting%20up%20HTTP%20proxy.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Password-less%20SSH.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Keep%20ssh%20connection%20alive.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/SSH%20Tunelling.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/XMonad.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Leopard%20on%20PC.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Useful%20app%20in%20Android.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Human%20Evolution.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Population%20Genetics.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Biotechnology.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ENSEMBL%20ftp%20structure.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ENSEMBL%20ftp%20structure%20v57.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Biochemistry.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/CpG%20island.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Neutral%20Evolution.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Human%20gene%20structure.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Repeat%20class.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/List%20of%20UCSC%20genome%20releases.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Unbalanced%20ANOVA.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Shapiro-Wilk%20test.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/希腊字母读法.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Statistics%20course%20in%20SIBS.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Benjamini%20and%20Hochberg%20FDR%20control.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/English%20Sentences.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Projects.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Life.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Music.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Chinese.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Change%20File%20Name%20by%20Shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Get%20file%20name%20in%20Shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Compare%20two%20files%20line%20by%20line.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Create%20a%20file%20of%20specified%20size.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/How%20to%20Convert%20DOS%20and%20UNIX%20text%20files.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Kill%20all%20your%20process.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Launch%20KDE%20and%20GNOME.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Print%20Directory%20tree.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Remove%20a%20certain%20list%20of%20files.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Split%20a%20file.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Send%20email%20attahment.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Pass%20an%20argument%20into%20shell%20script.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Go%20to%20the%20directory%20of%20current%20shell%20script.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Convert%20newline%20between%20systems.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Process%20ID.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Randomize%20lines%20in%20file.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Time%20difference%20in%20bash.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Unix%20Command%20Summary.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ls.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/A%20safe%20rm.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Grep.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Awk.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Sed.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Tar,%20Gzip.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Cut%20paste%20join.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Tr.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Find.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Join%20in%20UNIX.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Printf%20in%20shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Screen%20in%20Shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ln.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/script%20command.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/watch%20in%20shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Arrays%20in%20Bash.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20Array,%20Loop%20and%20Conditionals.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20Function.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/How%20to%20Backup%20with%20date,%20find,%20tar%20and%20gzip.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Math%20in%20Bash.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Schedule%20jobs%20in%20Unix.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Variable%20in%20shell.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Find%20a%20file.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/String%20in%20Bash.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20operators.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20getopts.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20redirections.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20read%20file.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20print%20specific%20line%20of%20file.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20prompt.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20combinations.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Bash%20random%20number.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Clustalw.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Learning%20Python.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Regular%20expression%20in%20Python.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20modules.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20reading%20text%20files.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20string.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20Books.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20threading.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20files.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20system%20call.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20dictionary.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20functional%20programming.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20examples.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/IMPRS%20Python%20Course.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Perl%20&amp;%20LWP.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Perl%20&amp;%20GD.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Min%20and%20Max%20in%20Perl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Progress%20Bar.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Path%20of%20script.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Debugging%20Perl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Special%20Variables%20in%20Perl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Hash%20of%20arrays.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Multi-level%20Hash.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Run%20unix%20command%20in%20Perl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Generate%20DNA%20sequences.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Shuffle%20a%20sequence.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/DNA%20Reverse%20Complement.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Install%20Perl%20Module.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Write%20Perl%20Module.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Intersection%20and%20Difference%20between%20Arrays.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/File%20Manipulation%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/How%20to%20pass%20arguments%20to%20R%20scripts.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Matrix.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20list.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Density%20plot%20with%20shadow%20colored.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Install%20package%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Write%20a%20R%20package.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20Graphics.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/String%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Rdbi%20-%20database%20access%20for%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Error%20Bar%20&amp;%20Confidence%20Interval.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Statistical%20Tests.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Math%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Data%20Manipulation%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Export%20screen%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/PCA%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20programming.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/RData%20and%20Rhistory.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/file%20and%20folders%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20cheat%20sheet.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Curve%20fitting%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Notes%20on%20Michael's%20R%20course.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20debugging.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/How%20to%20use%20RSPerl.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Learning%20AppleScript.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Mysql%20command.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Matching%20repetitions.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Start%20position%20of%20a%20match.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Minimum%20matching.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/git-vim.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ssh%20config.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Backup%20Mail%20Preferences.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Fix%20XAMPP%20security%20weaknesses.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Move%20MediaWiki%20from%20Boulo.local%20to%20the%20new%20machine.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Install%20X11%20on%20Mac.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/A%20simple%20TeX%20example.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Biostatistics%20on%20TeX.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Equation%20Service.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/G-Parted.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Leopard%20on%20AMD%20PC.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Human%20Chimp%20Divergence.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Human%20Chimp%20Genome%20Size.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ChIP-Sequencing.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Exon%20array.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/AIDS.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Hotpot%20recipe.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/修身养性.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/美国乡村音乐.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/909熟语.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/bash%20case.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/getoption.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python_%20Split%20String%20into%20n-size%20pieces.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/String.replace.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20translate.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ProgressBar_py.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20Assignment%201.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20Assignment%202.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20Assignment%203.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20Assignment%204.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Python%20Assignment%205.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/LWP%20example.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Rf.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Convert%20a%20list%20to%20a%20matrix.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Margin%20in%20par.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Axis%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Barplot.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Heatmap.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Overlapped%20Histograms.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Mouse%20position.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Make%20trees%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Make%20trees%20in%20R,%20test%20its%20stability%20by%20bootstrapping.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Pause%20between%20plots.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Rectangular%20coordinate%20system.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20colors.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20graphics%20for%20publication.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/3D%20scatterplot.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/ggplot.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Add%20text%20in%20R%20plot.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Venn%20Diagram%20in%20R.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/R%20operator.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/AIDS%20papers.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/AIDS%20proposal.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Strings%20plotted%20perpendicular%20to%20the%20axis.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://wiki.augix.com/wiki/Hide%20axis.html</loc>
+  <lastmod>2011-12-05T23:06:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.33</priority>
+</url>
+</urlset>

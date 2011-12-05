@@ -1,14 +1,46 @@
-* http://tolstoy.newcastle.edu.au/R/help/06/08/33529.html
+* Quotes from [http://tolstoy.newcastle.edu.au/R/help/06/08/33529.html Type II and III sum of square in Anova]
 
-(1) In balanced designs, so-called "Type I," "II," and "III" sums of squares are identical. If the STATA manual says that Type II tests are only appropriate in balanced designs, then that doesn't make a whole lot of sense (unless one believes that Type-II tests are nonsense, which is not the case).
+(1) In balanced designs, so-called "Type I," "II," and "III" sums of squares
+are identical. If the STATA manual says that Type II tests are only appropriate
+in balanced designs, then that doesn't make a whole lot of sense (unless one
+believes that Type-II tests are nonsense, which is not the case).
 
-(2) One should concentrate not directly on different "types" of sums of squares, but on the hypotheses to be tested. Sums of squares and F-tests should follow from the hypotheses. Type-II and Type-III tests (if the latter are properly formulated) test hypotheses that are reasonably construed as tests of main effects and interactions in unbalanced designs. In unbalanced designs, Type-I sums of squares usually test hypotheses of interest only by accident.
+(2) One should concentrate not directly on different "types" of sums of
+squares, but on the hypotheses to be tested. Sums of squares and F-tests should
+follow from the hypotheses. Type-II and Type-III tests (if the latter are
+properly formulated) test hypotheses that are reasonably construed as tests of
+main effects and interactions in unbalanced designs. In unbalanced designs,
+Type-I sums of squares usually test hypotheses of interest only by accident.
 
-(3) Type-II sums of squares are constructed obeying the principle of marginality, so the kinds of contrasts employed to represent factors are irrelevant to the sums of squares produced. You get the same answer for any full set of contrasts for each factor. In general, the hypotheses tested assume that terms to which a particular term is marginal are zero. So, for example, in a three-way ANOVA with factors A, B, and C, the Type-II test for the AB interaction assumes that the ABC interaction is absent, and the test for the A main effect assumes that the ABC, AB, and AC interaction are absent (but not necessarily the BC interaction, since the A main effect is not marginal to this term). A general justification is that we're usually not interested, e.g., in a main effect that's marginal to a nonzero interaction.
+(3) Type-II sums of squares are constructed obeying the principle of
+marginality, so the kinds of contrasts employed to represent factors are
+irrelevant to the sums of squares produced. You get the same answer for any
+full set of contrasts for each factor. In general, the hypotheses tested assume
+that terms to which a particular term is marginal are zero. So, for example, in
+a three-way ANOVA with factors A, B, and C, the Type-II test for the AB
+interaction assumes that the ABC interaction is absent, and the test for the A
+main effect assumes that the ABC, AB, and AC interaction are absent (but not
+necessarily the BC interaction, since the A main effect is not marginal to this
+term). A general justification is that we're usually not interested, e.g., in a
+main effect that's marginal to a nonzero interaction.
 
-(4) Type-III tests do not assume that terms higher-order to the term in question are zero. For example, in a two-way design with factors A and B, the type-III test for the A main effect tests whether the population marginal means at the levels of A (i.e., averaged across the levels of B) are the same. One can test this hypothesis whether or not A and B interact, since the marginal means can be formed whether or not the profiles of means for A within levels of B are parallel. Whether the hypothesis is of interest in the presence of interaction is another matter, however. To compute Type-III tests using incremental F-tests, one needs contrasts that are orthogonal in the row-basis of the model matrix. In R, this means, e.g., using contr.sum, contr.helmert, or contr.poly (all of which will give you the same SS), but not contr.treatment. Failing to be careful here will result in testing hypotheses that are not reasonably construed, e.g., as hypotheses concerning main effects.
+(4) Type-III tests do not assume that terms higher-order to the term in
+question are zero. For example, in a two-way design with factors A and B, the
+type-III test for the A main effect tests whether the population marginal means
+at the levels of A (i.e., averaged across the levels of B) are the same. One
+can test this hypothesis whether or not A and B interact, since the marginal
+means can be formed whether or not the profiles of means for A within levels of
+B are parallel. Whether the hypothesis is of interest in the presence of
+interaction is another matter, however. To compute Type-III tests using
+incremental F-tests, one needs contrasts that are orthogonal in the row-basis
+of the model matrix. In R, this means, e.g., using contr.sum, contr.helmert, or
+contr.poly (all of which will give you the same SS), but not contr.treatment.
+Failing to be careful here will result in testing hypotheses that are not
+reasonably construed, e.g., as hypotheses concerning main effects.
 
-(5) The same considerations apply to linear models that include quantitative predictors -- e.g., ANCOVA. Most software will not automatically produce sensible Type-III tests, however.
+(5) The same considerations apply to linear models that include quantitative
+predictors -- e.g., ANCOVA. Most software will not automatically produce
+sensible Type-III tests, however.
 
 
 = How to do unbalanced anova in R =
@@ -18,4 +50,3 @@ mod <- lm(value~factor1*factor2, contrasts=list(factor1=contr.sum, factor2=contr
 anova.result <- Anova(mod,type="III")
 }}}
 
-[[Category:R]]
