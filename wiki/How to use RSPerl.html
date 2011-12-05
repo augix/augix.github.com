@@ -91,7 +91,7 @@ Perl also needs to find the Perl code, i.e. the R.pm, RReferences.pm and the R.s
 </p>
 
 <p>
-Additionally, we need to know where the R package is located if it is not installed into $R_HOME/library/. This is done via $R_LIBS
+Additionally, we need to know where the R package is located if it is not installed into \(R_HOME/library/. This is done via \)R_LIBS
 </p>
 
 <p>
@@ -99,11 +99,11 @@ And if we are running R from within Perl we also need to tell the R engine where
 </p>
 
 <p>
-As Michael Dondrup said, that’s a lot of environment variables to set. Typically we don’t have to set them all. If we install the R package into a personal library, that library is typically where we put lots of R packages and so it is in our $R_LIBS variable already. Similarly, if we install the Perl code into a local Perl library, we will have that specified in our $PERL5LIB environment variable. And if we are running Perl inside R, $R_HOME is already set when we start R and also finding libR.so is done for us.
+As Michael Dondrup said, that’s a lot of environment variables to set. Typically we don’t have to set them all. If we install the R package into a personal library, that library is typically where we put lots of R packages and so it is in our \(R_LIBS variable already. Similarly, if we install the Perl code into a local Perl library, we will have that specified in our \)PERL5LIB environment variable. And if we are running Perl inside R, $R_HOME is already set when we start R and also finding libR.so is done for us.
 </p>
 
 <p>
-So the main variables we might have to set are $LD_LIBRARY_PATH and $PERL5LIB if the Perl code is installed into the R package area, We provide two shell scripts to set these variables to the appropriate values. There is one for sh/bash-style shells and another for csh/tcsh-style shells named RSPerl.bsh and RSPerl.csh respectively. They are located in the RSPerl/scripts / directory of the installed package. These are not executable but rather intended to be sourced into an existing shell to set the variables for the remainder of that shell session. 
+So the main variables we might have to set are \(LD_LIBRARY_PATH and \)PERL5LIB if the Perl code is installed into the R package area, We provide two shell scripts to set these variables to the appropriate values. There is one for sh/bash-style shells and another for csh/tcsh-style shells named RSPerl.bsh and RSPerl.csh respectively. They are located in the RSPerl/scripts / directory of the installed package. These are not executable but rather intended to be sourced into an existing shell to set the variables for the remainder of that shell session. 
 </p>
 
 <p>
