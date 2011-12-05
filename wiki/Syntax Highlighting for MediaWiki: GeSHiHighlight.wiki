@@ -3,13 +3,15 @@ http://www.mediawiki.org/wiki/Extension:GeSHiHighlight
 
 = Demo =
 The codes writing in MediaWiki:
-{{{
 {{{class="brush: perl"
+<perl>
 foreach(@myarr){print $_;}
+</prel>
 }}} 
 {{{class="brush: java"
+<java>
 public class foo{ /* .... */ }
-}}}
+</java>
 }}}
 
 The Highlighted codes:
@@ -26,9 +28,11 @@ public class foo{ /* .... */ }
 * Copy & paste the following code to a file called GeSHiHighlight.php
 * Put GeSHiHighlight.php in your MediaWiki installations' extensions folder
 	* this php file enables the tag, tag is much more convenient. this script also search the available syntax file in the geshi folder.
-* Add: {{{class="brush: php"
+* Add: 
+{{{class="brush: php"
 include("extensions/GeSHiHighlight.php");
-}}} to LocalSettings.php in your MediaWiki folder
+}}} 
+to LocalSettings.php in your MediaWiki folder
 
 == GeSHiHighlight.php ==
 {{{class="brush: php"
@@ -102,7 +106,7 @@ function geshi_list_languages ( $path = 'geshi/' )
 
 = for R =
 In this GeSHiHighlight library, there is a file name perl.php, based on this file, I wrote a file named R.php which help wiki to highlight a R script.
-* [[R.php]]
+* [[R_php|R.php]]
 
-= Todo =
+= To do =
 Improving Highlighter, for example: display line number.

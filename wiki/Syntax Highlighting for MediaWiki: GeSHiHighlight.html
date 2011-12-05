@@ -54,16 +54,16 @@
 <p>
 The codes writing in MediaWiki:
 </p>
-<pre>
-{{{class="brush: perl"
+<pre class="brush: perl">
+&lt;perl&gt;
 foreach(@myarr){print $_;}
+&lt;/prel&gt;
 </pre>
 <pre class="brush: java">
+&lt;java&gt;
 public class foo{ /* .... */ }
+&lt;/java&gt;
 </pre>
-<p>
-}}}
-</p>
 
 <p>
 The Highlighted codes:
@@ -95,12 +95,14 @@ this php file enables the tag, tag is much more convenient. this script also sea
 
 </ul>
 <li>
-Add: {{{class="brush: php"
+Add: 
+<pre class="brush: php">
+include("extensions/GeSHiHighlight.php");
+</pre>
 
 </ul>
 <p>
-include("extensions/GeSHiHighlight.php");
-}}} to LocalSettings.php in your MediaWiki folder
+to LocalSettings.php in your MediaWiki folder
 </p>
 
 <h2 id="toc_3.1">GeSHiHighlight.php</h2>
@@ -179,11 +181,11 @@ In this GeSHiHighlight library, there is a file name perl.php, based on this fil
 </p>
 <ul>
 <li>
-<a href="R.php">R.php</a>
+<a href="R_php.html">R.php</a>
 
 </ul>
 
-<h1 id="toc_5">Todo</h1>
+<h1 id="toc_5">To do</h1>
 <p>
 Improving Highlighter, for example: display line number.
 </p>

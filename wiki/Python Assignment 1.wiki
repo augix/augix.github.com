@@ -11,9 +11,9 @@ print bases[1], seq.count('T')
 print bases[2], seq.count('C')
 print bases[3], seq.count('G')
 }}}
-<br>
 
-Result:{{{
+Result:
+{{{class="brush: text"
 Enter a DNA sequence: ATTAC
 It is 5 bases long.
 adenine 2
@@ -35,8 +35,9 @@ print bases[1], seq.count('T')
 print bases[2], seq.count('C')
 print bases[3], seq.count('G')
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Enter a DNA sequence: ATTgtc
 It is 6 bases long.
 adenine 1
@@ -60,8 +61,9 @@ print bases[3], seq.count('G')
 unknown = len(seq) - seq.count('A') - seq.count('T') - seq.count('C') - seq.count('G')
 print "unknown", str(unknown)
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Enter a DNA sequence: ATTU*gtc
 It is 8 bases long.
 adenine 1
@@ -79,8 +81,9 @@ seq = raw_input("Enter a DNA sequence: ")
 for i in range(10):
     print i, seq
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Enter a DNA sequence: TACG
 0 TACG
 1 TACG
@@ -102,8 +105,9 @@ n = len(seq)
 for i in range(n):
     print 'base', i, 'is', seq[i]
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Enter a DNA sequence: GTTCAG
 base 0 is G
 base 1 is T
@@ -125,8 +129,9 @@ restriction_sites = [
 for site in restriction_sites:
     print site
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 GAATTC
 GGATCC
 AAGCTT
@@ -147,17 +152,14 @@ for site in site2name.keys():
         print site2name[site], "(", site, ")", "is present"
     else:
         print site2name[site], "(", site, ")", "is not present"
-
-
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Enter your sequence: GAATTCTTTTT
 EcoRI ( GAATTC ) is present
 BamHI ( GGATCC ) is not present
 HindIII ( AAGCTT ) is not present
-
-
 }}}
 
 = 'if' loop =
@@ -169,18 +171,15 @@ bases = "ACGT"
 for b in bases:
     if b in seq:
         print b, 'count:', seq.count(b)
-
-
 }}}
 
 
-result:{{{
+Result:
+{{{class="brush: text"
 Enter your sequence: ACCAGGCA
 A count: 3
 C count: 3
 G count: 2
-
-
 }}}
 
 = Reading files =
@@ -192,11 +191,10 @@ f = open(fn,'r')
 lines = f.readlines()
 for i,l in enumerate(lines):
     print i+1, l.rstrip()
-
-
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 1 CCTGTATTAGCAGCAGATTCGATTAGCTTTACAACAATTCAATAAAATAGCTTCGCGCTAA
 2 ATTTTTAACTTTTCTCTGTCGTCGCACAATCGACTTTCTCTGTTTTCTTGGGTTTACCGGAA
 3 TTGTTTCTGCTGCGATGAGGTATTGCTCGTCAGCCTGAGGCTGAAAATAAAATCCGTGGT
@@ -207,8 +205,6 @@ Result:{{{
 8 CCACACCAAAAAAACTTTCCACGTGTGAACTATACTCCAAAAACGAAGTATTGGTTTATCATAA
 9 TCTGAAAAGTGCAAAGAACGATGATGATGATGATAGAGGAACCTGAGCAGCCATGTCTGAACCTATAGC
 10 GTATTGGTCGTCGTGCGACTAAATTAGGTAAAAAAGTAGTTCTAAGAGATTTTGATGATTCAATGCAAAGTTCTATTAATCGTTCAATTG
-
-
 }}}
 
 == Exercise 2 ==
@@ -222,17 +218,14 @@ for i,l in enumerate(lines):
     if pos != -1:
         print motif, 'is found in sequence', i+1, 'Position', pos, '(0 based)'
         print i+1, l.rstrip()
-
-
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 CTATA is found in sequence 8 Position 29 (0 based)
 8 CCACACCAAAAAAACTTTCCACGTGTGAACTATACTCCAAAAACGAAGTATTGGTTTATCATAA
 CTATA is found in sequence 9 Position 62 (0 based)
 9 TCTGAAAAGTGCAAAGAACGATGATGATGATGATAGAGGAACCTGAGCAGCCATGTCTGAACCTATAGC
-
-
 }}}
 
 = Advanced exercises =
@@ -246,18 +239,15 @@ for l in lines:
     numbers = [ int(i) for i in numbers ]
     row_sum = sum(numbers)
     print row_sum
-
-
 }}}
 <br>
-Result:{{{
+Result:
+{{{class="brush: text"
 716
 1139
 11
 1707
 1516
-
-
 }}}
 
 == Exercise 2: sum up ==
@@ -273,19 +263,17 @@ for l in lines:
     print row_sum
     total += row_sum
 print 'Total:', total
-
-
 }}}
-<br>
-Result:{{{
+
+
+Result:
+{{{class="brush: text"
 716
 1139
 11
 1707
 1516
 Total: 5089
-
-
 }}}
 
 == Exercise 3: sum up, csv file with quotes ==
@@ -303,19 +291,17 @@ for l in lines:
     print row_sum
     total += row_sum
 print 'Total:', total
-
-
 }}}
-<br>
-Result:{{{
+
+
+Result:
+{{{class="brush: text"
 716
 1139
 11
 1707
 1516
 Total: 5089
-
-
 }}}
 
 == Exercise 4: parse FASTA ==
@@ -332,11 +318,10 @@ for l in lines:
         s = ''
     else:
         s += l
-
-
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Header YL069W-1.334 refer to sequence CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACAACCCACTGCCACTTACCCTACCATTACCCTACCATCCACCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAA
 Header YAL068C-7235.2170 refer to sequence TACGAGAATAATTTCTCATCATCCAGCTTTAACACAAAATTCGCACAGTTTTCGTTAAGAGAACTTAACATTTTCTTATGACGTAAATGAAGTTTATATATAAATTTCCTTTTTATTGGATACATTACGTGCAACCAAAAGTGTAAAATGATTGGTTGCAATGTTTCACCTAAATTACTT
 Header YAL070W-223.3355 refer to sequence CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATCTAATATGCCT
@@ -359,11 +344,10 @@ for l in lines:
         fasta[header] += l
 for h,s in fasta.items():
     print 'Header', h, 'refer to sequence', s
-
-
 }}}
-<br>
-Result:{{{
+
+Result:
+{{{class="brush: text"
 Header YAL070W-223.3355 refer to sequence CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATCTAATATGCCT
 Header YL069W-1.334 refer to sequence CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACAACCCACTGCCACTTACCCTACCATTACCCTACCATCCACCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAA
 Header YAL068C-7235.2170 refer to sequence TACGAGAATAATTTCTCATCATCCAGCTTTAACACAAAATTCGCACAGTTTTCGTTAAGAGAACTTAACATTTTCTTATGACGTAAATGAAGTTTATATATAAATTTCCTTTTTATTGGATACATTACGTGCAACCAAAAGTGTAAAATGATTGGTTGCAATGTTTCACCTAAATTACTT

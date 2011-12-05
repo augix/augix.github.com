@@ -45,76 +45,46 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<pre>
-grep --colour
-grep -i pattern files ：不区分大小写地搜索，默认情况区分大小写。  
-</pre>
+<h1 id="toc_1">Examples:</h1>
 
-<pre>
-grep -v pattern files ：查找不包括pattern的行。  grep -n pattern files ：显示行号
-</pre>
-
-<pre>
-grep -C number pattern files ：匹配的上下文分别显示[number]行。 
-</pre>
-
-<ul>
-<li>
-查询多个文件
-
-</ul>
-<p>
-在当前目录下所有.doc文件中查找字符串“sort”
-命令为：
-</p>
-<pre>
-grep -l "sort" *.doc
-</pre>
-
-<ul>
-<li>
-在一个data.list文件中查询其行首不是48的行，
-
-</ul>
-<p>
-命令为：
-</p>
-<pre>
-grep -v "^48" data.list
-</pre>
-
-<ul>
-<li>
-抽取包含数字4至少重复出现两次的所有行
-
-</ul>
-<p>
-命令为：
-</p>
-<pre>
-grep "4.*4" data.list
-</pre>
-
-<ul>
-<li>
-空行,结合使用^和$可查询空行。使用-n参数显示实际行数
-
-</ul>
-<p>
-命令为：
-</p>
-<pre>
+<pre class="brush: bash">
+# Search blank lines, print line number.
 grep -nv ^$ data.list
-</pre>
 
-<ul>
-<li>
-匹配多个关键字
-<pre>
+# Search multiple keywords.
 grep -E 'perl|java|python|sql' ./ebooks/*
 </pre>
 
-</ul>
+<h1 id="toc_2">Linux Manuel:</h1>
+
+<pre class="brush: text">
+Synopsis:
+
+    grep [options] PATTERN [FILE...]
+
+Options:
+
+-C NUM
+    print NUM lines of output context.
+    
+--colour 
+    highlight the match part.
+    
+-i
+    ignore case.
+    
+-L
+    only list the name of each file where pattern matched.
+    
+-n
+    Prefix each line of output with the line number within its input file.
+
+-o
+    Show only the part of a matching line that matches PATTERN.
+
+-v
+    invert the sense of matching, to select non-mating lines.
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">

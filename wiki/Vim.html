@@ -45,61 +45,50 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<h1 id="toc_1">Learning Vim</h1>
+<h1 id="toc_1">Table of Content</h1>
+<div class="toc">
+<ul>
+<li><a href="#toc_1">Table of Content</a>
+<li><a href="#toc_2">Tutorials</a>
+<li><a href="#toc_3">Moving</a>
+<li><a href="#toc_4">Jumping</a>
+<li><a href="#toc_5">Buffers</a>
+<li><a href="#toc_6">Open file</a>
+<li><a href="#toc_7">Files and Tabs</a>
+<li><a href="#toc_8">Window</a>
+<li><a href="#toc_9">Word under cursor</a>
+<li><a href="#toc_10">Folding</a>
+<li><a href="#toc_11">Plugins</a>
+<li><a href="#toc_12">+Python</a>
+<li><a href="#toc_13">.vimrc file</a>
+<li><a href="#toc_14">VIMRUNTIME</a>
+<li><a href="#toc_15">Colours</a>
+<li><a href="#toc_16">Send selected lines</a>
+<li><a href="#toc_17">Completion</a>
+<li><a href="#toc_18">Others</a>
+</ul>
+</div>
+
+<h1 id="toc_2">Tutorials</h1>
 <ul>
 <li>
 <a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">Graphical vi-vim Cheat Sheet and Tutorial</a>
 
-</ul>
-
-<ul>
 <li>
 <a href="http://easwy.com/blog/archives/advanced-vim-skills-catalog/">vim使用进阶: 目录</a>
 
-</ul>
-
-<ul>
-<li>
-indent in multiple lines
-
-<ul>
-<li>
-way1: enter visual mode, use "&gt;" or "&lt;" to increase or decrease indent
-
-<li>
-way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
-
-</ul>
-</ul>
-
-<ul>
-<li>
-<b>#</b>
-
-</ul>
-<p>
-the <b>#</b> key create a motion jumping from the current word to the same word in the current buffer
-</p>
-
-<ul>
 <li>
 <a href="http://www.zinkwazi.com/unix/notes/vimtips.html">Best of VIM tips</a>
 
-</ul>
-
-<ul>
 <li>
 <a href="http://rosenfeld.heroku.com/en/articles/2010-12-26-achieving-productivity-with-vim-as-ide">Achieving Productivity with Vim as IDE</a>
 
-</ul>
- 
-<ul>
 <li>
 <a href="http://www.adp-gmbh.ch/vim/vars.html">Programming in Vim Variables</a>
 
 </ul>
 
-<h1 id="toc_2">Moving</h1>
+<h1 id="toc_3">Moving</h1>
 <ul>
 <li>
 Moving around, scroll up and down the screen
@@ -114,32 +103,37 @@ CTRL-Y
 
 </ul>
 
-<h1 id="toc_3">Jumping</h1>
-<p>
-One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
-</p>
+<h1 id="toc_4">Jumping</h1>
+<ul>
+<li>
+One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can print the jump list by:
 <pre>
 :ju
 </pre>
+
+<li>
+<b>#</b>
+
+</ul>
 <p>
-to print the jump list.
+the <b>#</b> key create a motion jumping from the current word to the same word in the current buffer
 </p>
 
-<h1 id="toc_4">Buffers</h1>
+<h1 id="toc_5">Buffers</h1>
 <ul>
 <li>
 switch to previous buffer: <code>&lt;c-6&gt;</code>
 
 </ul>
 
-<h1 id="toc_5">Open file</h1>
+<h1 id="toc_6">Open file</h1>
 <pre>
 gf	 open in the same window ("goto file")
 &lt;c-w&gt;f	 open in a new window (Ctrl-w f)
 &lt;c-w&gt;gf	 open in a new tab (Ctrl-w gf)
 </pre>
 
-<h1 id="toc_6">Files and Tabs</h1>
+<h1 id="toc_7">Files and Tabs</h1>
 <ul>
 <li>
 create a new tab
@@ -161,7 +155,7 @@ or
 :tabn
 </pre>
 
-<h1 id="toc_7">Window</h1>
+<h1 id="toc_8">Window</h1>
 <p>
 Move cursor to other windows.
 </p>
@@ -171,7 +165,7 @@ CTRL-W j,k,h,l                      Move down, up, lfet, right
 CTRL-W &lt;Down&gt;,&lt;Up&gt;,&lt;Left&gt;,&lt;Right&gt;   Move down, up, lfet, right
 </pre>
 
-<h1 id="toc_8">Word under cursor</h1>
+<h1 id="toc_9">Word under cursor</h1>
 <pre>
 yaw        yank a word, include leading or trailing white space
 yiw        yank a inner word 
@@ -179,7 +173,7 @@ daw        delete
 diw        delete
 </pre>
 
-<h1 id="toc_9">Folding</h1>
+<h1 id="toc_10">Folding</h1>
 <pre>
 zi         switch on/off folding
 za         fold/unfold current block
@@ -187,7 +181,7 @@ zr, zm
 zR, zM
 </pre>
 
-<h1 id="toc_10">Plugins</h1>
+<h1 id="toc_11">Plugins</h1>
 <ul>
 <li>
 How to install a Vimball plugin (with .vba extension)?
@@ -196,7 +190,6 @@ How to install a Vimball plugin (with .vba extension)?
 <p>
 Open the vba file with vim, and type the :source % command right there. The % refers to the current file
 </p>
-
 <ul>
 <li>
 install Taglist plugin: <a href="http://vim-taglist.sourceforge.net/installation.html">http://vim-taglist.sourceforge.net/installation.html</a>
@@ -205,33 +198,21 @@ install Taglist plugin: <a href="http://vim-taglist.sourceforge.net/installation
 to use TagList correctly, one has to correctly point out the folder contain 'ctags'. For example:
      let g:Tlist_Ctags_Cmd='~/bin/ctags/bin/ctags'
 
-</ul>
-
-<ul>
 <li>
 folding: <a href="http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx">http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx</a>
 
-</ul>
-
-<ul>
 <li>
 echo function: <a href="http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx">http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx</a>
 <pre>
 $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
 </pre>
 
-</ul>
-
-<ul>
 <li>
 the ctgas command line I used in MPI-EVA
 <pre>
 $ ctags -R ./Programming/ ./Research/
 </pre>
 
-</ul>
-
-<ul>
 <li>
 gvim color scheme, in ~/.gvimrc
 <pre>
@@ -240,43 +221,21 @@ gvim color scheme, in ~/.gvimrc
 colorscheme desert
 </pre>
 
-</ul>
-
-<ul>
 <li>
-python debugger
+python debugger: <a href="http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290">runscript</a>
 
-</ul>
-<p>
-<a href="http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290">runscript</a>
-</p>
-
-<ul>
 <li>
-VOoM
+VOoM: Show outline table on the left
 
-</ul>
-<p>
-Show outline table on the left
-</p>
-
-<ul>
 <li>
-VimWiki
+VimWiki: personal wiki with vim.
 
-</ul>
-
-<p>
-personal wiki with vim.
-</p>
-
-<ul>
 <li>
 <a href="git-vim.html">git-vim</a>
 
 </ul>
  
-<h1 id="toc_11">+Python</h1>
+<h1 id="toc_12">+Python</h1>
 <ul>
 <li>
 <a href="http://python.ubuntu.org.cn/viewtopic.php?f=165&amp;t=180331">增强gvim适合python开发的相关配置</a>
@@ -295,7 +254,7 @@ checking errors: <a href="http://www.vim.org/scripts/script.php?script_id=2441">
 
 </ul>
 
-<h1 id="toc_12">.vimrc file</h1>
+<h1 id="toc_13">.vimrc file</h1>
 <ul>
 <li>
 stop loading the current .vim file
@@ -308,17 +267,17 @@ endif
 
 </ul>
 
-<h1 id="toc_13">VIMRUNTIME</h1>
+<h1 id="toc_14">VIMRUNTIME</h1>
 <p>
 set runtimepath=~/vim_local,$VIMRUNTIME
 </p>
 
-<h1 id="toc_14">Colours</h1>
+<h1 id="toc_15">Colours</h1>
 <p>
 <a href="http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html">screenshots of colorscheme</a>
 </p>
 
-<h1 id="toc_15">Send selected lines</h1>
+<h1 id="toc_16">Send selected lines</h1>
 <ul>
 <li>
 Install
@@ -341,41 +300,43 @@ One only need to copy send.vim and send2screen.py to the right directory.
 </p>
 
 
-<h1 id="toc_16">Completion</h1>
+<h1 id="toc_17">Completion</h1>
 <pre>
 completeopt	whether to use a popup menu for Insert mode completion
  	set cot=menu
 </pre>
 
-<h1 id="toc_17">Others</h1>
+<h1 id="toc_18">Others</h1>
 <ul>
 <li>
 change to the directory of the current file: <code>:cd %:h</code>
 
-</ul>
-
-<ul>
 <li>
 show the key mappings <code>:map</code>
 
-</ul>
-
-<ul>
 <li>
 Show/Hide invisible characters
 <pre>
 :set list/nolist
 </pre>
 
-</ul>
-
-<ul>
 <li>
 Disable all blinking:
 <pre>
 :set guicursor+=a:blinkon0
 </pre>
 
+<li>
+indent in multiple lines
+
+<ul>
+<li>
+way1: enter visual mode, use "&gt;" or "&lt;" to increase or decrease indent
+
+<li>
+way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
+
+</ul>
 </ul>
 
 	</div><!-- end of post -->

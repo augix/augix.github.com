@@ -23,9 +23,8 @@ $wgFileExtensions[] = 'ppt';
 == Permissions ==
 to block all the visitors from modifying the wiki or creating account.
 
-in {{{
-/Applications/xampp/htdocs/wk/includes/DefaultSettings.php
-}}}
+in /Applications/xampp/htdocs/wk/includes/DefaultSettings.php
+
 {{{
 $wgGroupPermissions['*'    ]['createaccount']   = false;
 $wgGroupPermissions['*'    ]['read']            = true;
@@ -35,23 +34,19 @@ $wgGroupPermissions['*'    ]['createtalk']      = false;
 }}}
 
 == Upload files ==
-in {{{
-/Applications/xampp/xamppfiles/etc/php.ini
-}}}
+in /Applications/xampp/xamppfiles/etc/php.ini
+
 {{{
 ; Maximum allowed size for uploaded files.
 upload_max_filesize = 20M
 }}}
 
 = Export MediaWiki pages =
-*[[mw2html]]
-:http://barnesc.blogspot.com/2005/10/mw2html-export-mediawiki-to-static.html
-* [[Special:Export]]
+* mw2html: http://barnesc.blogspot.com/2005/10/mw2html-export-mediawiki-to-static.html
 
 = Other configuration =
 [[Enable Tex in Wiki]]
 
 = See also =
 * [http://www.mediawiki.org/wiki/Help:Configuration_settings Configuration settings list]
-
-[[Category:MediaWiki Configuration]]
+ 

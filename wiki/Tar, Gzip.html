@@ -45,7 +45,7 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<pre>
+<pre class="brush: bash">
 tar -czvf aps95.tar.gz aps95/
 tar -xzvf aps95.tar.gz
 </pre>
@@ -54,12 +54,12 @@ tar -xzvf aps95.tar.gz
 or
 </p>
 
-<pre>
+<pre class="brush: bash">
 tar -cvf aps95.tar aps95/
 gzip aps95.tar
 </pre>
 
-<pre>
+<pre class="brush: bash">
 gunzip aps95.tar.gz
 tar -xvf aps95.tar
 </pre>
@@ -68,15 +68,15 @@ tar -xvf aps95.tar
 or 
 </p>
 
-<pre>
+<pre class="brush: bash">
 tar -cvf aps95.tar aps95/
 </pre>
 
-<pre>
+<pre class="brush: bash">
 tar -xvf aps95.tar
 </pre>
 
-<pre>
+<pre class="brush: bash">
 gunzip &lt; file.tar.gz | tar xvf -
 </pre>
 
@@ -84,26 +84,23 @@ gunzip &lt; file.tar.gz | tar xvf -
 
 <ul>
 <li>
-if you don't remember what is
+if you don't remember what is inside the compressed archive; this command will show you the contents, again without taking apart the whole thing: 
 
 </ul>
-<p>
-inside the compressed archive; this command will show you the contents,
-again without taking apart the whole thing:
-</p>
 
-<pre>
+<pre class="brush: bash">
 gunzip -c aps95.tar.gz | tar -tvf -
 </pre>
 
 <ul>
 <li>
 extract bz2 files
-<pre>
-tar xjvf cornbread.tar.bz2
-</pre>
 
 </ul>
+
+<pre class="brush: bash">
+tar xjvf cornbread.tar.bz2
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">

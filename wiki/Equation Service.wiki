@@ -10,9 +10,10 @@ http://www.tug.org/applications/pdftex/
 
 I installed gwTeX by i-installer, it contains pdflatex. [http://ii2.sourceforge.net/tex-index.html Link].
 
-By default, the pdflatex is installed in: {{{
+By default, the pdflatex is installed in: 
+{{{
 /usr/local/gwTeX/bin/i386-apple-darwin-current/pdflatex
-}}}.
+}}}
 
 == Install ==
 
@@ -26,7 +27,9 @@ by deleting the application,
 {{{
 ∼/Library/Preferences/edu.umn.space.rowland.EquationService.plist
 }}}
+
 and 
+
 {{{
 ∼/Library/Application Support/Equation Service
 }}}

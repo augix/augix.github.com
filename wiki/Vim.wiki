@@ -1,19 +1,11 @@
-= Learning Vim=
+= Table of Content =
+%toc
+
+= Tutorials =
 * [http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html Graphical vi-vim Cheat Sheet and Tutorial]
-
 * [http://easwy.com/blog/archives/advanced-vim-skills-catalog/ vim使用进阶: 目录]
-
-* indent in multiple lines
-	* way1: enter visual mode, use ">" or "<" to increase or decrease indent
-	* way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
-
-* <b>#</b>
-the <b>#</b> key create a motion jumping from the current word to the same word in the current buffer
-
 * [http://www.zinkwazi.com/unix/notes/vimtips.html Best of VIM tips]
-
 * [http://rosenfeld.heroku.com/en/articles/2010-12-26-achieving-productivity-with-vim-as-ide Achieving Productivity with Vim as IDE]
- 
 * [http://www.adp-gmbh.ch/vim/vars.html Programming in Vim Variables]
 
 = Moving =
@@ -28,11 +20,12 @@ CTRL-Y
 }}}
 
 = Jumping =
-One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can also use
+* One can use CTRL-O or CTRL-I jumping to older cursor position or newer position. One can print the jump list by:
 {{{
 :ju
 }}}
-to print the jump list.
+* <b>#</b>
+the <b>#</b> key create a motion jumping from the current word to the same word in the current buffer
 
 = Buffers =
 * switch to previous buffer: `<c-6>`
@@ -85,40 +78,27 @@ zR, zM
 = Plugins =
 * How to install a Vimball plugin (with .vba extension)?
 Open the vba file with vim, and type the :source % command right there. The % refers to the current file
-
 * install Taglist plugin: http://vim-taglist.sourceforge.net/installation.html
 * to use TagList correctly, one has to correctly point out the folder contain 'ctags'. For example:
      let g:Tlist_Ctags_Cmd='~/bin/ctags/bin/ctags'
-
 * folding: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
-
 * echo function: http://blog.csdn.net/wooin/archive/2007/12/30/2004470.aspx
 {{{
 $ ctags -R --fields=+lS . /picb/home5/augix/Programming/ /picb/compbio5/augix/cDNA/
 }}}
-
 * the ctgas command line I used in MPI-EVA
 {{{
 $ ctags -R ./Programming/ ./Research/
 }}}
-
 * gvim color scheme, in ~/.gvimrc
 {{{
 " by augix
 " color scheme: desert
 colorscheme desert
 }}}
-
-* python debugger
-[http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290 runscript]
-
-* VOoM
-Show outline table on the left
-
-* VimWiki
-
-personal wiki with vim.
-
+* python debugger: [http://www.2maomao.com/blog/win32-vim-debug-python/comment-page-1/#comment-5290 runscript]
+* VOoM: Show outline table on the left
+* VimWiki: personal wiki with vim.
 * [[git-vim]]
  
 = +Python =
@@ -162,15 +142,16 @@ completeopt	whether to use a popup menu for Insert mode completion
 
 = Others =
 * change to the directory of the current file: `:cd %:h`
-
 * show the key mappings `:map`
-
 * Show/Hide invisible characters
 {{{
 :set list/nolist
 }}}
-
 * Disable all blinking:
 {{{
 :set guicursor+=a:blinkon0
 }}}
+* indent in multiple lines
+	* way1: enter visual mode, use ">" or "<" to increase or decrease indent
+	* way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
+

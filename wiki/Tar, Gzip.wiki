@@ -1,45 +1,44 @@
-{{{
+{{{class="brush: bash"
 tar -czvf aps95.tar.gz aps95/
 tar -xzvf aps95.tar.gz
 }}}
 
 or
 
-{{{
+{{{class="brush: bash"
 tar -cvf aps95.tar aps95/
 gzip aps95.tar
 }}}
 
-{{{
+{{{class="brush: bash"
 gunzip aps95.tar.gz
 tar -xvf aps95.tar
 }}}
 
 or 
 
-{{{
+{{{class="brush: bash"
 tar -cvf aps95.tar aps95/
 }}}
 
-{{{
+{{{class="brush: bash"
 tar -xvf aps95.tar
 }}}
 
-{{{
+{{{class="brush: bash"
 gunzip < file.tar.gz | tar xvf -
 }}}
 
 = other =
 
-* if you don't remember what is
-inside the compressed archive; this command will show you the contents,
-again without taking apart the whole thing:
+* if you don't remember what is inside the compressed archive; this command will show you the contents, again without taking apart the whole thing: 
 
-{{{
+{{{class="brush: bash"
 gunzip -c aps95.tar.gz | tar -tvf -
 }}}
 
 * extract bz2 files
-{{{
+
+{{{class="brush: bash"
 tar xjvf cornbread.tar.bz2
 }}}
