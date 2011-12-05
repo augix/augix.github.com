@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Minimum matching</title>
+	<title>Regular Expression</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
@@ -41,58 +41,29 @@
 <a name='top'></a>
 <div class="container">
     <div class="header">
-		<h1>Minimum matching</h1> 
+		<h1>Regular Expression</h1> 
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<p>
-<a href="http://www.zdnet.com.cn/developer/webdevelop/story/0,3800067013,39252123,00.htm">Builder.com.cn-Web技术-perl理解贪婪匹配和最小匹配之间的区别</a>
-</p>
+<ul>
+<li>
+<a href="Matching repetitions.html">Matching repetitions</a>
 
-<p>
-正则表达式的新手经常将贪婪匹配和最小匹配理解错误。默认情况下，Perl 的正则表达式是“贪婪地”，也就是说它们将尽可能多地匹配字符。
-</p>
-        
-<p>
-下面的脚本打印出“matched defgabcdef”，因为它尽可能多地匹配模式，直至结尾的‘g’。
-</p>
+<li>
+<a href="Start position of a match.html">Start position of a match</a>
 
-<pre class="brush: perl">
-$data = 'abcdefgabcdefg';
-$data =~ /abc(.+)g/i;
-print "matched $1\n"; 
-</pre>
+<li>
+<a href="Minimum matching.html">Minimum matching</a>
 
-<p>
-要改变匹配特点，只须简单地在量词（加号[+]或星号[*]）后面加一个问号（?）即可。在上面的程序中把模式改为在‘+’之后包含一个‘?’。
-</p>
+<li>
+<a href="http://hi.baidu.com/afantihome/blog/item/c22f50a4a2b66df99152ee6e.html">grep、sed、awk、perl等对正则表达式的支持的差别</a>
 
-<pre class="brush: perl">
-$data =~ /abc(.+?)g/i;
-</pre>
-
-<p>
-输出变成“matched def”，因为模式不再贪婪，而在允许模式匹配的同时匹配最少数目的字符。
-</p>
-
-<p>
-对于可能得到的匹配多于期望的匹配的情况，最小匹配是必要的。下面是一个例子：
-</p>
-
-<pre class="brush: perl">
-$data = 'MSFT +5% $86 IBM +2% $124';
-print "matched $1 $2\n"  while ($data =~
-/(\w+).+\$(\d+)/g); 
-</pre>
-
-<p>
-你可能期望这段代码给出两行输出，一行是 MSFT，另外一行是 IBM。但是它的输出却只有（不正确的）一行，“MSFT $124”。‘+’模式匹配它能匹配的所有字符，也就是“+5% $86 IBM +2%”。加一个‘?’将模式改为最小匹配就可以得到期望的结果。
-</p>
+</ul>
 
 	</div><!-- end of post -->
 	<div class="backhome">
 		<a href="../index.html">Main Page</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Minimum matching" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Regular Expression" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -138,7 +109,7 @@ function showHide(shID) {
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "vimwiki: Minimum matching";
+    var disqus_identifier = "vimwiki: Regular Expression";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
