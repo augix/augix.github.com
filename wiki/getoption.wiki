@@ -1,4 +1,4 @@
-{{{
+{{{class="brush: python"
 #!/usr/bin/env python
 '''An improved getopt module which only treat short options.
 '''
