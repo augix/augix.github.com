@@ -12,6 +12,7 @@ print bases[2], seq.count('C')
 print bases[3], seq.count('G')
 }}}
 <br>
+
 Result:{{{
 Enter a DNA sequence: ATTAC
 It is 5 bases long.

@@ -47,7 +47,7 @@
 	
 
 <h1 id="toc_1">read specific line in a file</h1>
-<pre>
+<pre class="brush: bash">
 awk NR==3 file1
 
 # or
@@ -57,7 +57,7 @@ sed -n "${line_number}p" file_name
 </pre>
 
 <h1 id="toc_2">iterate through every line in a file</h1>
-<pre>
+<pre class="brush: bash">
 while read -r LINE ; do printf "$LINE\n" ; done &lt; some-text-file
 </pre>
 

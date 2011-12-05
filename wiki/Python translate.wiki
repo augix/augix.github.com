@@ -14,7 +14,7 @@ print s.translate(aTob, 'o')
 }}}
 
 Output:
-{{{
+{{{class="brush: text"
 hall pythn 
 }}}
 

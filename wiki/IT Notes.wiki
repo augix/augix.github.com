@@ -24,10 +24,12 @@
 = Unix =
 == Network ==
 * [[Setting up HTTP proxy]]
+
 == SSH ==
 * [[Password-less SSH]]
 * [[Keep ssh connection alive]]
 * [[SSH Tunelling]]
+
 == Graphics ==
 * [[XMonad]]
  

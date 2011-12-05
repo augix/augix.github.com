@@ -58,20 +58,8 @@
 The makefile requires <b>GNU make</b>.
 
 <li>
-Rasterization is done via <b>LaTeX</b>, <b>dvips</b>, <b>ImageMagick</b>, and <b>Ghostscript</b>. These need to be installed (probably available in your Linux distribution) and in the PATH: the commands {{{
+Rasterization is done via <b>LaTeX</b>, <b>dvips</b>, <b>ImageMagick</b>, and <b>Ghostscript</b>. These need to be installed (probably available in your Linux distribution) and in the PATH: the commands <b>latex</b>, <b>dvips</b>, <b>convert</b>, <b>gs</b> should all work on the command line.
 
-</ul>
-<p>
-latex
-}}}, {{{
-dvips
-}}}, {{{
-convert
-}}}, {{{
-gs
-}}} should all work on the command line.
-</p>
-<ul>
 <li>
 To work properly with rendering non-ASCII Unicode characters, a <b>supplemental TeX package</b> is needed ("cjk-latex" in Debian)
 
@@ -79,18 +67,39 @@ To work properly with rendering non-ASCII Unicode characters, a <b>supplemental 
 
 
 <h2 id="toc_0.2">Getting</h2>
-<p>
-; texvc : Should be in your MediaWiki distribution (in the sub-directory math/).
-; OCaml (<b>I haven't installed it yet</b>) : <a href="http://caml.inria.fr/ocaml/release.en.html">Latest Objective Caml release</a> (must be installed in the sub-directory math/ of your wiki)
-; GNU make : On Linux, you should have it.
-:Under Windows, you can use <a href="http://www.mingw.org/">MinGW</a> or <a href="http://www.cygwin.com/">Cygwin</a>.
-:All others: see <a href="http://www.gnu.org/software/make/make.html">GNU Make - GNU Project - Free Software Foundation (FSF)</a>
-; LaTeX and dvips : see <a href="http://www.tug.org/texlive/">TeX Live - TeX Users Group</a> (It's large and a pain to get.)
-:Many Linux systems have LaTeX already installed.
-; ImageMagick : <a href="http://www.imagemagick.org/script/binary-releases.php">ImageMagick: Install from Binary Distribution</a> (a <a href="http://www.entropy.ch/software/macosx/welcome.html#imagemagick:">binary distribution for MacOSX</a> is provided by <a href="http://www.entropy.ch:">Entropy</a>)
-; Ghostscript : On Linux, you may have it. It is easiest to install from packages for your distribution.
-:<a href="http://sourceforge.net/projects/ghostscript/">Source files</a> are available from SourceForge.net
-</p>
+<dl>
+<dt>texvc </dt>
+<dd>Should be in your MediaWiki distribution (in the sub-directory math/).</dd>
+</dl>
+
+<dl>
+<dt>OCaml (<b>I haven't installed it yet</b>) </dt>
+<dd><a href="http://caml.inria.fr/ocaml/release.en.html">Latest Objective Caml release</a> (must be installed in the sub-directory math/ of your wiki)</dd>
+</dl>
+
+<dl>
+<dt>GNU make </dt>
+<dd>On Linux, you should have it.</dd>
+<dd>Under Windows, you can use <a href="http://www.mingw.org/">MinGW</a> or <a href="http://www.cygwin.com/">Cygwin</a>.</dd>
+<dd>All others: see <a href="http://www.gnu.org/software/make/make.html">GNU Make - GNU Project - Free Software Foundation (FSF)</a></dd>
+</dl>
+
+<dl>
+<dt>LaTeX and dvips </dt>
+<dd>see <a href="http://www.tug.org/texlive/">TeX Live - TeX Users Group</a> (It's large and a pain to get.)</dd>
+<dd>Many Linux systems have LaTeX already installed.</dd>
+</dl>
+
+<dl>
+<dt>ImageMagick </dt>
+<dd><a href="http://www.imagemagick.org/script/binary-releases.php">ImageMagick: Install from Binary Distribution</a> (a <a href="http://www.entropy.ch/software/macosx/welcome.html#imagemagick:">binary distribution for MacOSX</a> is provided by <a href="http://www.entropy.ch:">Entropy</a>)</dd>
+</dl>
+
+<dl>
+<dt>Ghostscript </dt>
+<dd>On Linux, you may have it. It is easiest to install from packages for your distribution.</dd>
+<dd><a href="http://sourceforge.net/projects/ghostscript/">Source files</a> are available from SourceForge.net</dd>
+</dl>
 
 <h2 id="toc_0.3">Installation</h2>
 
@@ -108,21 +117,27 @@ Enable $wgUseTeX in your LocalSettings.php and everything should work.
 
 <h2 id="toc_0.4">Notes</h2>
 
-<p>
-*Remember that Tex code is rendered during saving, but only changed data is rerendered and saved:)
-*More information is included in the "README" file in the "math" directory.
-*For Debian there is a neat <a href="Help_Running_MediaWiki_on_Debian_GNU/Linux#TeX_Support.html">Debian-howto</a> going through the whole procedure step by step, also pointing out some possible traps and problems.
-</p>
+<ul>
+<li>
+Remember that Tex code is rendered during saving, but only changed data is rerendered and saved:)
+
+<li>
+More information is included in the "README" file in the "math" directory.
+
+<li>
+For Debian there is a neat <a href="Help_Running_MediaWiki_on_Debian_GNU/Linux#TeX_Support.html">Debian-howto</a> going through the whole procedure step by step, also pointing out some possible traps and problems.
+
+</ul>
 
 <h2 id="toc_0.5">See also</h2>
-<p>
-*<a href="Problems with texvc.html">Problems with texvc</a>
-*<a href="LaTex on a shared host.html">LaTex on a shared host</a>
-</p>
+<ul>
+<li>
+<a href="Problems with texvc.html">Problems with texvc</a>
 
-<p>
-<a href="Category_MediaWiki Configuration.html">Category:MediaWiki Configuration</a>
-</p>
+<li>
+<a href="LaTex on a shared host.html">LaTex on a shared host</a>
+
+</ul>
 
 	</div><!-- end of post -->
 	<div class="backhome">

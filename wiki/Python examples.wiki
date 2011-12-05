@@ -1,7 +1,5 @@
 = Progress Bar =
-{{{
-[[progressBar.py]]
-}}}
+[[ProgressBar_py]]
 
 = enumerate =
 {{{class="brush: python"

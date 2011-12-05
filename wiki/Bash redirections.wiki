@@ -2,7 +2,7 @@
 
 Write error messages to a file.
 
-{{{
+{{{class="brush: bash"
 some_program 2> stderr.txt
 }}}
 

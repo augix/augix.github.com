@@ -1,6 +1,6 @@
 The braces are required for concatenation constructs.
 
-{{{
+{{{class="brush: bash"
 $p_01
 The value of the variable "p_01".
 

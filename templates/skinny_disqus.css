@@ -31,14 +31,16 @@ p, ul, ol, pre, table {
     margin-bottom: 16px; 
 }
 
+p.author {
+	text-align: right;
+	font-size: 80%;
+	margin-top: -10px;
+}
+
 code, pre {
     font-size: 80%;
     line-height: 150%;
     font-family: Monaco, monospace;
-}
-
-li {
-    margin-bottom: 5px;
 }
 
 blockquote { 
@@ -49,20 +51,22 @@ blockquote {
     border-left:1px solid #ccc;
 }
 
-p.author {
-	text-align: right;
-	font-size: 80%;
-	margin-top: -10px;
-}
-
 ul {
     list-style-type: square;
-    margin-left: 1em;
+    margin-left: 2em;
+}
+
+li {
+    margin-bottom: 3px;
 }
 
 ol {
-    margin-left: 1em;
+    margin-left: 2em;
 }
+
+dl { margin-top: 3px; }
+dt { font-weight: bold }
+dd { margin-left: 4em; }
 
 /*
 @font-face {
@@ -74,7 +78,6 @@ font-family:"Graublau Web";src:local("Graublau Web"),local("Graublau Web Regular
 h1, h2, h3 {
    font-family: "Georgia", "Lucida Grande", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
 }
-
 
 h1 { 
 	font-weight: bold;

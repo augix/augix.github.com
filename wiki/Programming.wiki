@@ -9,10 +9,10 @@
 * [[Regular expression]]
 
 = Editor =
-[[Vim]]
+* [[Vim]]
 
 = Version control =
-[[Git]]
+* [[Git]]
 
 = Algorithm =
 * [[Mapping based on position information]]

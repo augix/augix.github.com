@@ -4,6 +4,6 @@ id = string.replace(id, old='_', new=':')
 id = string.replace(id, old=':random', new='_random')
 }}}
 
-{{{
+{{{class="brush: text"
 'ENSG292782:hg18:chr2_random:23838-3838:-'
 }}}

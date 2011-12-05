@@ -15,13 +15,10 @@ done
 When you want change file names in the Unix Shell, you can use <b>#</b> and <b>%</b> to match a part of the file name and replace this part with other strings you want.
 
 = Principle =
-<b>#</b> does the match from the <b>left</b> part of our string variable, and it simply remove the matched part. (minimum matching)
-
-<b>##</b> does the match from the <b>left</b> part of our string variable, and it simply remove the matched part. (maximum matching)
-
-<b>%</b> does the match from the <b>right</b> part of our string variable, and it simply remove the matched part. (minimum matching)
-
-<b>%%</b> does the match from the <b>right</b> part of our string variable, and it simply remove the matched part. (maximum matching)
+* <b>#</b> does the match from the <b>left</b> part of our string variable, and it simply remove the matched part. (minimum matching)
+* <b>##</b> does the match from the <b>left</b> part of our string variable, and it simply remove the matched part. (maximum matching)
+* <b>%</b> does the match from the <b>right</b> part of our string variable, and it simply remove the matched part. (minimum matching)
+* <b>%%</b> does the match from the <b>right</b> part of our string variable, and it simply remove the matched part. (maximum matching)
 
 {{{class="brush: bash"
 old="human.fa"

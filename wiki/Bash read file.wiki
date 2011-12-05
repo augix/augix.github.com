@@ -1,7 +1,7 @@
 %template disqus
 
 = read specific line in a file =
-{{{
+{{{class="brush: bash"
 awk NR==3 file1
 
 # or
@@ -11,6 +11,6 @@ sed -n "${line_number}p" file_name
 }}}
 
 = iterate through every line in a file =
-{{{
+{{{class="brush: bash"
 while read -r LINE ; do printf "$LINE\n" ; done < some-text-file
 }}}

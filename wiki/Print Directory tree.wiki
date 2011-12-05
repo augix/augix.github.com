@@ -1,6 +1,6 @@
 [http://www.centerkey.com/tree/ Reference Link]
 
-{{{
+{{{class="brush: bash"
 $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 }}}
 
@@ -17,18 +17,18 @@ $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 
 }}}
 
 One may also save this command line as ~/bin/tree then one can just type
-{{{
+{{{class="brush: bash"
 $ tree ./
 }}}
 
 What I did is making an alias:
-{{{
+{{{class="brush: bash"
 $ vi ~/.bashrc
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 $ tree
 }}}
 
 only display the folders with depth < 3
-{{{
+{{{class="brush: bash"
 tree | perl -pe "s/^.*\|-{5,}[^-].*\n//;" | grep "-"
 }}}

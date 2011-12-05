@@ -12,7 +12,7 @@ done
 shift $OPTIND-1
 }}}
 
-{{{
+{{{class="brush: text"
 OPTARG 
     stores the value of the option argument found by getopts.
 

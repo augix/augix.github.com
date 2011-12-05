@@ -49,7 +49,7 @@
 <a href="http://www.centerkey.com/tree/">Reference Link</a>
 </p>
 
-<pre>
+<pre class="brush: bash">
 $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 </pre>
 
@@ -68,14 +68,14 @@ $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 
 <p>
 One may also save this command line as ~/bin/tree then one can just type
 </p>
-<pre>
+<pre class="brush: bash">
 $ tree ./
 </pre>
 
 <p>
 What I did is making an alias:
 </p>
-<pre>
+<pre class="brush: bash">
 $ vi ~/.bashrc
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 $ tree
@@ -84,7 +84,7 @@ $ tree
 <p>
 only display the folders with depth &lt; 3
 </p>
-<pre>
+<pre class="brush: bash">
 tree | perl -pe "s/^.*\|-{5,}[^-].*\n//;" | grep "-"
 </pre>
 

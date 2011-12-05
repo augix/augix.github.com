@@ -1,5 +1,5 @@
 * A function is an object.
-{{{
+{{{class="brush: python"
 square = lambda x: x	*2
 }}}
 
@@ -12,12 +12,12 @@ def build_taxer(rate):
 }}}
 
 * filter and lambda
-{{{
+{{{class="brush: python"
 filter( lambda x: x%2==0, range(10))
 }}}
 
 * list comprehensions can replace map and filter, but compute the whole list is slow
-{{{
+{{{class="brush: python"
 [i	*2 for i in range(10) if i%2==0]
 }}}
 
