@@ -45,7 +45,7 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<h1 id="toc_1">For Loop</h1>
+<h1 id="toc_1">for Loop</h1>
 <pre class="brush: bash">
 jj=(1 4 15 16 32 40 41 58 61 72 73 74 97);
 for j in `seq 0 12`; do
@@ -53,16 +53,12 @@ for j in `seq 0 12`; do
 done
 </pre>
 
-<ul>
-<li>
-break, continue
+<dl>
+<dt>break, continue </dt>
+<dd>The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.</dd>
+</dl>
 
-</ul>
-<p>
-The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.
-</p>
-
-<h1 id="toc_2">Case</h1>
+<h1 id="toc_2">case</h1>
 <pre class="brush: bash">
 case word in
   pattern1) 
@@ -77,45 +73,7 @@ esac
 <a href="bash case.html">bash case</a>
 </p>
 
-<h1 id="toc_3">For Array</h1>
-<pre class="brush: bash">
-mm="2 4";
-dd="random normal X1 link";
-for m in $mm; do
-  for d in $dd; do
-    echo $m.$d;
-  done;
-done;
-</pre>
-
-<p>
-or
-</p>
-<pre class="brush: bash">
-mm=(2 4);
-dd=(random normal X1 link);
-for m in "${mm[@]}"; do
-  for d in "${dd[@]}"; do
-    echo $m.$d;
-  done;
-done;
-</pre>
-
-<ul>
-<li>
-convert string to array
-<pre class="brush: bash">
-str='1 2 3 a b c'
-array=($str)
-</pre>
-
-</ul>
-
-<p>
-reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a>
-</p>
-
-<h1 id="toc_4">while</h1>
+<h1 id="toc_3">while</h1>
 <pre>
     while [ -e $trash_dir/$newfile ]; do
 		random_suffix=$RANDOM
@@ -123,12 +81,12 @@ reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">Th
 	done
 </pre>
 
-<h1 id="toc_5">until</h1>
+<h1 id="toc_4">until</h1>
 <p>
 opposite to while, it does something repeatedly until the condition is ture.
 </p>
 
-<h1 id="toc_6">If conditional</h1>
+<h1 id="toc_5">If conditional</h1>
 
 <pre class="brush: bash">
 if COMMANDS ; then 
@@ -187,7 +145,7 @@ for directory:
 if [ -d ./doc/ ]; then
 </pre>
 
-<h2 id="toc_6.1">Nested If conditionals</h2>
+<h2 id="toc_5.1">Nested If conditionals</h2>
 <pre class="brush: bash">
 	if condition
 	then
@@ -226,7 +184,7 @@ else
 fi
 </pre>
 
-<h1 id="toc_7">Condition and string comparison</h1>
+<h1 id="toc_6">Condition and string comparison</h1>
 <pre class="brush: bash">
 S1='name'
 S2='Name'
@@ -245,9 +203,48 @@ else
 fi
 </pre>
 
+
+<h1 id="toc_7">Array</h1>
+<pre class="brush: bash">
+mm="2 4";
+dd="random normal X1 link";
+for m in $mm; do
+  for d in $dd; do
+    echo $m.$d;
+  done;
+done;
+</pre>
+
+<p>
+or
+</p>
+<pre class="brush: bash">
+mm=(2 4);
+dd=(random normal X1 link);
+for m in "${mm[@]}"; do
+  for d in "${dd[@]}"; do
+    echo $m.$d;
+  done;
+done;
+</pre>
+
+<ul>
+<li>
+convert string to array
+<pre class="brush: bash">
+str='1 2 3 a b c'
+array=($str)
+</pre>
+
+</ul>
+
+<p>
+reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a>
+</p>
+
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Bash Array, Loop and Conditionals" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

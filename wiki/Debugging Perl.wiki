@@ -29,9 +29,8 @@ sub c {
 1;
 }}}
 
-{{{
+{{{class="brush: text"
 I'm in main code, caller returns: 
-
 
 Call a()
 caller( ) returns: main, caller.pl, 6
@@ -39,19 +38,15 @@ caller(1) returns:
 caller(2) returns: 
 caller(3) returns: 
 
-
-
 Call b()->a()
 caller( ) returns: main, caller.pl, 21
 caller(1) returns: main, caller.pl, 8, main::b, 1, , , , 0, 
 caller(2) returns: 
 caller(3) returns: 
 
-
-
 Call c()->b()->a()
 caller( ) returns: main, caller.pl, 21
 caller(1) returns: main, caller.pl, 25, main::b, 1, , , , 0, 
 caller(2) returns: main, caller.pl, 10, main::c, 1, , , , 0, 
 caller(3) returns: 
-</per>
+}}}

@@ -1,14 +1,14 @@
 * [[Learning Python]]: Basic stuff
-* [[Regular expression in Python| Regular expression]]
-* [[Python modules| Modules]]
-* [[Python reading text files| Reading text files]]
 * [[Python string| String]]
-* [[Python Books| Books]]
-* [[Python threading]]
+* [[Regular expression in Python| Regular expression]]
+* [[Python dictionary| Dictionary]]
+* [[Python reading text files| Reading text files]]
 * [[Python files| Files and Folders]]
 * [[Python system call| System call]]
-* [[Python dictionary| Dictionary]]
 * [[Python functional programming| Functional Programming]]
+* [[Python modules| Modules]]
+* [[Python threading]]
 * [[Python examples| Other Examples]]
-
+ 
+* [[Python Books| Books]]
 * [[IMPRS Python Course]]

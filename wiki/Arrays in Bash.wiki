@@ -33,3 +33,20 @@ echo ${b[@]}
 names=`ls ./`
 for name in $names; do echo $name; done
 }}}
+
+* convert string to array
+{{{class="brush: bash"
+str='1 2 3 a b c'
+array=($str)
+}}}
+
+* or 
+{{{class="brush: bash"
+dd="random normal X1 link";
+for d in $dd; do
+    echo $d;
+done;
+}}}
+
+reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
+

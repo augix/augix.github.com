@@ -1,62 +1,80 @@
-= Tips = 
+%toc
+
+= File names =
+* [[ls]]
 * [[Change File Name by Shell]]
 * [[Get file name in Shell|Get file's base name]]
-* [[Compare two files line by line]]
-* [[Create a file of specified size]]
-* [[How to Convert DOS and UNIX text files]]
-* [[Kill all your process]]
-* [[Launch KDE and GNOME]]
-* [[Print Directory tree]]
-* [[Remove a certain list of files]]
-* [[Split a file]]
-* [[Send email attahment]]
-* [[Password-less SSH]]
-* [[Pass an argument into shell script]]
-* [[Go to the directory of current shell script]]
-* [[Convert newline between systems]]
-* [[Process ID|Proces ID: $$]]
-* [[Randomize lines in file]]
-* [[Time difference in bash]]
+* [[Find|find]]
+* [[Find a file]]
 
-= Commands =
-* [[Unix Command Summary]]
-* [[ls]]
-* [[A safe rm]]
+= File content =
 * [[Grep|grep]]
 * [[Awk|awk]]
 * [[Sed|sed]]
-* [[Tar, Gzip|tar, gzip]]
 * [[Cut paste join|cut, paste, join]]
-* [[Tr|tr]]
-* [[Find|find]]
 * [[Join in UNIX|join]]
+* [[Tr|tr - translate characters]]
 * [[Printf in shell|printf]]
-* [[Screen in Shell|screen]]
+* [[Bash print specific line of file]]
+* [[Convert newline between systems]]
+* [[How to Convert DOS and UNIX text files]]
+* [[Randomize lines in file]]
+* [[Split a file]]
+* [[Compare two files line by line]]
+ 
+= Manipilate Files =
+* [[Remove a certain list of files]]
+* [[Create a file of specified size]]
 * [[ln]]
+* [[Tar, Gzip|tar, gzip]]
+* [[How to Backup with date, find, tar and gzip]]
+ 
+= Directory =
+* [[Print Directory tree]]
+
+= Job control =
+* [[Kill all your process]]
+* [[Process ID|Proces ID: $$]]
+* [[Schedule jobs in Unix]]
+* [[Screen in Shell|screen]]
 * [[script command]]
 * [[watch in shell]]
  
-= Topics = 
-* [[A Bioinformatician's UNIX Toolbox]]
-* [[Arrays in Bash]]
-* [[Bash Array, Loop and Conditionals]]
-* [[Bash Function]]
-* [[How to Backup with date, find, tar and gzip]]
-* [[Math in Bash]]
-* [[Schedule jobs in Unix]]
-* [[Variable in shell]]
-* [[Find a file]]
+= Data structure =
 * [[String in Bash]]
-* [[Bash operators]]
-* [[Bash getopts]]
-* [[Bash redirections]]
-* [[Bash read file]]
-* [[Bash print specific line of file]]
-* [[Bash prompt]]
-* [[Bash combinations]]
+* [[Arrays in Bash]]
+
+= Variables =
+* [[Variable in shell]]
 * [[Bash random number]]
 
+= Programming =
+* [[Bash Array, Loop and Conditionals| Loop and Conditionals]]
+* [[Bash operators|Logical operators and simple flow control]]
+* [[Bash Function]]
+* [[Bash getopts]]
+* [[Pass an argument into shell script]]
+* [[Go to the directory of current shell script]]
+
+= I/O Redirection =
+* [[Bash redirections]]
+* [[Bash read file]]
+* [[Bash prompt]]
+
+= Math =
+* [[Math in Bash]]
+* [[Bash combinations]]
+
+= Network =
+* [[Send email attahment]]
+* [[Password-less SSH]]
+
+= Other commands =
+* [[Unix Command Summary]]
+* [[Time difference in bash]]
+
 = Scripts = 
+* [[A safe rm]]
 * [[Clustalw|Clustalw.sh]]
 
 = References and Tutorials =
@@ -64,3 +82,5 @@
 * [http://mercury.chem.pitt.edu/~sasha/LinuxFocus/English/September2001/article216.shtml lf216, UNIX Basics: Shell Programming]
 * [http://www.grymoire.com/Unix/Sh.html Sh - the Bourne Shell]
 * [http://tldp.org/LDP/abs/html/ Advanced Bash-Scripting Guide by Mendel Cooper]
+* [http://www.freeos.com/guides/lsst/ Linux Shell Scripting Tutorial v1.05r3 A Beginner's handbook]
+* [[A Bioinformatician's UNIX Toolbox]]

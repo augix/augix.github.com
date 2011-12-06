@@ -46,10 +46,10 @@
 	<div class="post"><!-- start of post -->
 	
 <p>
-Case can determine the range of variable belongs to.
+case can determine the range of variable belongs to.
 </p>
 
-<pre>
+<pre class="brush: bash">
 # This script does a very simple test for checking disk space.
 
 space=`df -h | awk '{print $5}' | grep % | grep -v Use | sort -n | tail -1 | cut -d "%" -f1 -`
@@ -81,7 +81,7 @@ echo $Message | mail -s "disk report `date`" anny
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: bash case" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

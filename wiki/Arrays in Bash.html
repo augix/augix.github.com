@@ -93,9 +93,35 @@ for name in $names; do echo $name; done
 
 </ul>
 
+<ul>
+<li>
+convert string to array
+<pre class="brush: bash">
+str='1 2 3 a b c'
+array=($str)
+</pre>
+
+</ul>
+
+<ul>
+<li>
+or 
+<pre class="brush: bash">
+dd="random normal X1 link";
+for d in $dd; do
+    echo $d;
+done;
+</pre>
+
+</ul>
+
+<p>
+reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a>
+</p>
+
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Arrays in Bash" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

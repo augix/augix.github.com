@@ -1,5 +1,5 @@
 * find
-{{{
+{{{class="brush: text"
 -atime n
 	Files accessed n*24 hours ago. +n: at least n*24 hours. -n: at most n*24 hours.
 	

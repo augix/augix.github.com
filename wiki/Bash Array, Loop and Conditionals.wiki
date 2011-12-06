@@ -1,4 +1,4 @@
-= For Loop =
+= for Loop =
 {{{class="brush: bash"
 jj=(1 4 15 16 32 40 41 58 61 72 73 74 97);
 for j in `seq 0 12`; do
@@ -6,10 +6,10 @@ for j in `seq 0 12`; do
 done
 }}}
 
-* break, continue
-The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.
+break, continue ::
+:: The break command terminates the loop (breaks out of it), while continue causes a jump to the next iteration of the loop, skipping all the remaining commands in that particular loop cycle.
 
-= Case =
+= case =
 {{{class="brush: bash"
 case word in
   pattern1) 
@@ -21,36 +21,6 @@ case word in
 esac
 }}}
 [[bash case]]
-
-= For Array =
-{{{class="brush: bash"
-mm="2 4";
-dd="random normal X1 link";
-for m in $mm; do
-  for d in $dd; do
-    echo $m.$d;
-  done;
-done;
-}}}
-
-or
-{{{class="brush: bash"
-mm=(2 4);
-dd=(random normal X1 link);
-for m in "${mm[@]}"; do
-  for d in "${dd[@]}"; do
-    echo $m.$d;
-  done;
-done;
-}}}
-
-* convert string to array
-{{{class="brush: bash"
-str='1 2 3 a b c'
-array=($str)
-}}}
-
-reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
 
 = while =
 {{{
@@ -169,3 +139,35 @@ else
   echo "no file\n";
 fi
 }}}
+
+
+= Array =
+{{{class="brush: bash"
+mm="2 4";
+dd="random normal X1 link";
+for m in $mm; do
+  for d in $dd; do
+    echo $m.$d;
+  done;
+done;
+}}}
+
+or
+{{{class="brush: bash"
+mm=(2 4);
+dd=(random normal X1 link);
+for m in "${mm[@]}"; do
+  for d in "${dd[@]}"; do
+    echo $m.$d;
+  done;
+done;
+}}}
+
+* convert string to array
+{{{class="brush: bash"
+str='1 2 3 a b c'
+array=($str)
+}}}
+
+reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
+

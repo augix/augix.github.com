@@ -1,25 +1,38 @@
-
-* [[File Manipulation in R| File Manipulation]]
-* [[How to pass arguments to R scripts]] 
+%title R
+= Data structure =
+* [[String in R]]
 * [[Matrix]]
 * [[R list]]
+* [[Data Manipulation in R]]
+
+= Files and folders =
+* [[File Manipulation in R| File Manipulation]]
+* [[file and folders in R]]
+
+= Programming =
+* [[R programming]]
+* [[R debugging]]
+* [[How to pass arguments to R scripts]] 
+* [[Rdbi - database access for R]]
+* [[R cheat sheet]]
+* [[Export screen in R]]
+* [[RData and Rhistory]]
+* [[How to use RSPerl]]
+
+= Graphics =
+* [[R Graphics]]
 * [[Density plot with shadow colored]]
+* [[Error Bar & Confidence Interval]]
+* [[Curve fitting in R]]
+
+= Math and Statistics =
+* [[Math in R]]
+* [[Statistical Tests]]
+* [[PCA in R]]
+ 
+= Packages =
 * [[Install package in R]]
 * [[Write a R package]]
-* [[R Graphics]]
-* [[String in R]]
-* [[Rdbi - database access for R]]
-* [[Error Bar & Confidence Interval]]
-* [[Statistical Tests]]
-* [[Math in R]]
-* [[Data Manipulation in R]]
-* [[Export screen in R]]
-* [[PCA in R]]
-* [[R programming]]
-* [[RData and Rhistory]]
-* [[file and folders in R]]
-* [[R cheat sheet]]
-* [[Curve fitting in R]]
+
+= Other =
 * [[Notes on Michael's R course]]
-* [[R debugging]]
-* [[How to use RSPerl]]

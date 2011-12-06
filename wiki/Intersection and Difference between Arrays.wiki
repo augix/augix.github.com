@@ -17,4 +17,3 @@ sub difference {
 
 [http://perldoc.perl.org/perlfaq4.html#How-do-I-compute-the-difference-of-two-arrays%3f--How-do-I-compute-the-intersection-of-two-arrays%3f http://perldoc.perl.org/perlfaq4.html]
 
-[[Category:Perl]]

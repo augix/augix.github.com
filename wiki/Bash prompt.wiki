@@ -4,7 +4,7 @@
 
 {{{class="brush: bash"
 read -e -p "Enter the path to the file: " -i "/usr/local/etc/" FILEPATH
-
+ 
 # one can also use "select"
 }}}
 

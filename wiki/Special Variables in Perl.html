@@ -45,26 +45,22 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<p>
-<a href="Category_Perl.html">Category:Perl</a>
-</p>
-
 <h1 id="toc_1">Special Variables</h1>
-<pre>
- SPECIAL VARIABLES
- $_    default variable
- $0    program name
- $/    input separator
- $\    output separator
- $|    autoflush
- $!    sys/libcall error
- $@    eval error
- $$    process ID
- $.    line number
- @ARGV command line args
- @INC  include paths
- @_    subroutine args
- %ENV  environment
+<pre class="brush: text">
+SPECIAL VARIABLES
+$_    default variable
+$0    program name
+$/    input separator
+$\    output separator
+$|    autoflush
+$!    sys/libcall error
+$@    eval error
+$$    process ID
+$.    line number
+@ARGV command line args
+@INC  include paths
+@_    subroutine args
+%ENV  environment
 </pre>
 
 <p>
@@ -76,14 +72,13 @@ ref: <a href="http://docs.rinet.ru/ProPauk/ch8.htm">http://docs.rinet.ru/ProPauk
 Short Name:          $/
 </b>
 </p>
-<h2 id="toc_2.1">Definition</h2>
 
+<h2 id="toc_2.1">Definition</h2>
 <p>
 By default, an input file is split into records, each of which comprises one line. The input-record separator is a newline character. This variable can be set to have no value (in which case entire input files are read in at the same time) or to have other values, as required.
 </p>
 
 <h2 id="toc_2.2">Example</h2>
-
 <pre class="brush: perl">
 undef $/;
 open(INFILE,"infile.tst");
@@ -97,14 +92,13 @@ print "$buffer\n";
 Short Name:          $. 
 </b>
 </p>
-<h2 id="toc_3.1">Definition</h2>
 
+<h2 id="toc_3.1">Definition</h2>
 <p>
 This variable counts the number of lines of input from a file and is reset when the file is closed. The variable counts lines cumulatively across all input files read with the &lt;&gt; construct because these are not closed explicitly.
 </p>
 
 <h2 id="toc_3.2">Example</h2>
-
 <pre class="brush: perl">
 print "The last file read had $. lines\n";
 </pre>

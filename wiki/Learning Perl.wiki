@@ -1,36 +1,34 @@
-
-* [[Regular Expression]]
-
-* [[Perl & LWP]]
-
-* [[Perl & GD]]
-
-* [[Min and Max in Perl]]
-
-* [[Progress Bar]]
-
-* [[Path of script]]
-
-* [[Debugging Perl]]
-
-* [[Special Variables in Perl]]
-
-* [[Hash of arrays]]
-
-* [[Multi-level Hash]]
-
-* [[Run unix command in Perl]]
-
+= String =
 * [[Generate DNA sequences]]
-
+* [[DNA Reverse Complement]]
 * [[Shuffle a sequence]]
 
-* [[DNA Reverse Complement]]
+= Regular expression =
+* [[Matching repetitions]]
+* [[Start position of a match]]
+* [[Minimum matching]]
+* [http://hi.baidu.com/afantihome/blog/item/c22f50a4a2b66df99152ee6e.html grep、sed、awk、perl等对正则表达式的支持的差别]
 
-* [[Install Perl Module]]
-
-* [[Write Perl Module]]
-
+= Data structure =
+* [[Hash of arrays]]
+* [[Multi-level Hash]]
 * [[Intersection and Difference between Arrays]]
 
+= System =
+* [[Path of script]]
+* [[Run unix command in Perl]]
 * [[mkdir in perl]]
+
+= Network =
+* [[Perl & LWP]]
+* [[Perl & GD]]
+
+= Module =
+* [[Install Perl Module]]
+* [[Write Perl Module]]
+
+= Others =
+* [[Debugging Perl]]
+* [[Special Variables in Perl]]
+* [[Min and Max in Perl]]
+* [[Progress Bar]]

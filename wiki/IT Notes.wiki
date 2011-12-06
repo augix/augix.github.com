@@ -31,6 +31,7 @@
 * [[SSH Tunelling]]
 
 == Graphics ==
+* [[Launch KDE and GNOME]]
 * [[XMonad]]
  
 = PC =

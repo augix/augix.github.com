@@ -1,12 +1,10 @@
-%template disqus
 = Programming Language =
 * [[Learning Shell|Shell]]
 * [[Python]]
 * [[Learning Perl|Perl]]
-* [[R tips]]
+* [[R tips|R]]
 * [[AppleScript]]
 * [[SQL]]
-* [[Regular expression]]
 
 = Editor =
 * [[Vim]]
