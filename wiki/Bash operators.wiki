@@ -1,7 +1,7 @@
 %template disqus
 
 = logical operators =
-{{{class="brush: text"
+{{{class="brush: bash"
 && 
 
     and (logical)
@@ -22,9 +22,10 @@
 
     if [[ $condition1 || $condition2 ]]    # Also works.
     # Note that || operator not permitted within [ ... ] construct.
+}}}
 
 Example:
-    
+{{{class="brush: bash"
     X=1
     [ $X -ne 0 ] && echo "X isn't zero" || echo "X is zero"
 }}}

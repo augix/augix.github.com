@@ -2,7 +2,7 @@
 %% 
 
 = Usage =
-{{{
+{{{class="brush: bash"
 ln source_file hardlink
 ln -s source_file symlink
 }}}

@@ -4,7 +4,7 @@ input=$1
 output=$2
 }}}
 
-{{{
+{{{class="brush: text"
 $*
 	Returns a single string (``$1, $2 ... $n'') comprising all of the
 	positional parameters separated by the internal field separator character

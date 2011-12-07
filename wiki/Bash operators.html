@@ -47,7 +47,7 @@
 	
 
 <h1 id="toc_1">logical operators</h1>
-<pre class="brush: text">
+<pre class="brush: bash">
 &amp;&amp; 
 
     and (logical)
@@ -68,9 +68,12 @@
 
     if [[ $condition1 || $condition2 ]]    # Also works.
     # Note that || operator not permitted within [ ... ] construct.
+</pre>
 
+<p>
 Example:
-    
+</p>
+<pre class="brush: bash">
     X=1
     [ $X -ne 0 ] &amp;&amp; echo "X isn't zero" || echo "X is zero"
 </pre>
@@ -88,7 +91,7 @@ Example:
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Bash operators" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

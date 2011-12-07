@@ -47,18 +47,20 @@
 	
 
 <p>
-If received an error message, one can use taceback function to find out in which function the bug is:
+If received an error message, one can use taceback function to find out in
+which function the bug is:
 </p>
 
-<pre>
+<pre class="brush: r">
 &gt; traceback()
 </pre>
 
 <p>
-After located the specific function, one can use debug funtion to find the specific line of code containing bug. For example, the function name is SS.
+After located the specific function, one can use debug funtion to find the
+specific line of code containing bug. For example, the function name is SS.
 </p>
 
-<pre>
+<pre class="brush: r">
 &gt; debug(SS)
 &gt; SS(2, x)
 
@@ -66,22 +68,34 @@ Browser[1]&gt;
 </pre>
 
 <p>
-One is now in what is called the "browser". Here one can enter 1 of 4 basic debug commands (n, c, where, Q).
+One is now in what is called the "browser". Here one can enter 1 of 4 basic
+debug commands (n, c, where, Q).
 </p>
 
-<pre>
-n 
-    executes the current line and prints the next one. 
-c
-    executes the rest of the function without stopping and causes the function to return. 
-    This is useful if you are done debugging in the middle of a function and don't want 
-    to step throught the rest of the lines. 
-Q 
-    quits debugging and completely halts execution of the function. 
+<pre class="brush: text">
+&lt;Enter&gt;
+    Go to the next statement if the function is being debugged. Continue
+    execution if the browser was invoked.
+
+c or cont
+    Continue execution without single stepping.
+
+n
+    Execute the next statement in the function. This works from the browser as
+    well.
+
 where
-    you can type where to show where you are in the function call stack.
+    Show the call stack.
+
+Q
+    Halt execution and jump to the top-level immediately.  To view the value of
+    a variable whose name matches one of these commands, use the print()
+    function, e.g. print(n).
 </pre>
 
+<p>
+One can use debug(the_2nd_level_function) to go deeper.
+</p>
 
 <h1 id="toc_1">References</h1>
 <ul>
@@ -95,7 +109,7 @@ where
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: R debugging" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

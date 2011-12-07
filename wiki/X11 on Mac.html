@@ -45,10 +45,10 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<p>
-*<a href="Install X11 on Mac.html">Install X11 on Mac</a>
-</p>
 <ul>
+<li>
+<a href="Install X11 on Mac.html">Install X11 on Mac</a>
+
 <li>
 <a href=".Xdefaults on mac.html">.Xdefaults on mac</a>
 
@@ -57,34 +57,29 @@
 
 <li>
 change font of xterm, by customize the xterm command
-<pre>
+<pre class="brush: bash">
 xterm -fa Monaco -fs 10
 </pre>
-
-</ul>
-<p>
-or
-</p>
-<pre>
+    or
+<pre class="brush: bash">
 xterm -fa "Andale mono" -fs 10
 </pre>
-<ul>
-<li>
-change fullscreen background of X11 on Mac OS X
 
-</ul>
-<p>
-reference: <a href="http://forums.macosxhints.com/showthread.php?t=32760">http://forums.macosxhints.com/showthread.php?t=32760</a>
-write in your ~/.xinitrc file:
-</p>
+<li>
+change fullscreen background of X11 on Mac OS X, write in your ~/.xinitrc file:
 <pre class="brush: bash">
 /usr/X11R6/bin/xsetroot -solid black &amp;
 exec quartz-wm
 </pre>
 
+<li>
+reference: <a href="http://forums.macosxhints.com/showthread.php?t=32760">http://forums.macosxhints.com/showthread.php?t=32760</a>
+
+</ul>
+
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: X11 on Mac" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
