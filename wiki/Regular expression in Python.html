@@ -54,13 +54,12 @@ p = re.compile("ab", re.IGNORECASE)
 for m in p.finditer("abcdefgAbdc"):
     print m.start(), m.group()
 </pre>
-
-</ul>
-
-<pre>
+<pre class="brush: python">
 0 ab
 7 ab
 </pre>
+
+</ul>
 
 <ul>
 <li>
@@ -71,7 +70,7 @@ test = "&lt;h1&gt;title&lt;/h1&gt;"
 test
 re.sub("\&lt;.*?\&gt;","",test)
 </pre>
-<pre>
+<pre class="brush: python">
 &gt;&gt;&gt; test = "&lt;h1&gt;title&lt;/h1&gt;"
 &gt;&gt;&gt; test
 '&lt;h1&gt;title&lt;/h1&gt;'
@@ -91,7 +90,7 @@ test
 re.sub("\&lt;.*\&gt;","",test)
 re.sub("\&lt;.*?\&gt;","",test)
 </pre>
-<pre>
+<pre class="brush: python">
 &gt;&gt;&gt; test = "&lt;h1&gt;title&lt;/h1&gt;"
 &gt;&gt;&gt; test
 '&lt;h1&gt;title&lt;/h1&gt;'
@@ -105,7 +104,7 @@ re.sub("\&lt;.*?\&gt;","",test)
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Regular expression in Python" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

@@ -73,6 +73,7 @@
 = Other commands =
 * [[Unix Command Summary]]
 * [[Time difference in bash]]
+* [[convert a PDF file to images]]
 
 = Scripts = 
 * [[A safe rm]]

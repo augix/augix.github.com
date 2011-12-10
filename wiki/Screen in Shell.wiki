@@ -1,4 +1,5 @@
-[http://www.amitu.com/blog/2004/12/screen-howto.html Anything Else: Screen Howto]
+Use screen instead of nohup.
+
 = Start =
 * To start a fresh screen session:
 {{{
@@ -90,3 +91,6 @@ If you created a new split screen, the current window is empty. either select an
  -ctrl a O -> logout active window (disable output)
  -ctrl a I -> login active window (enable output)
 }}}
+
+= Reference =
+[http://www.amitu.com/blog/2004/12/screen-howto.html Anything Else: Screen Howto]

@@ -21,4 +21,3 @@
 Useful links:
 * [http://addictedtor.free.fr/graphiques/ R Graph Gallery]
 
-[[Category:R]]

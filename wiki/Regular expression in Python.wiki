@@ -5,8 +5,7 @@ p = re.compile("ab", re.IGNORECASE)
 for m in p.finditer("abcdefgAbdc"):
     print m.start(), m.group()
 }}}
-
-{{{
+{{{class="brush: python"
 0 ab
 7 ab
 }}}
@@ -18,7 +17,7 @@ test = "<h1>title</h1>"
 test
 re.sub("\<.*?\>","",test)
 }}}
-{{{
+{{{class="brush: python"
 >>> test = "<h1>title</h1>"
 >>> test
 '<h1>title</h1>'
@@ -34,7 +33,7 @@ test
 re.sub("\<.*\>","",test)
 re.sub("\<.*?\>","",test)
 }}}
-{{{
+{{{class="brush: python"
 >>> test = "<h1>title</h1>"
 >>> test
 '<h1>title</h1>'
