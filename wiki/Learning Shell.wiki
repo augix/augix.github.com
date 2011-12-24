@@ -86,3 +86,4 @@
 * [http://tldp.org/LDP/abs/html/ Advanced Bash-Scripting Guide by Mendel Cooper]
 * [http://www.freeos.com/guides/lsst/ Linux Shell Scripting Tutorial v1.05r3 A Beginner's handbook]
 * [[A Bioinformatician's UNIX Toolbox]]
+* [http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts]

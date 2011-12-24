@@ -47,7 +47,7 @@
 	
 <h1 id="toc_1">Profile</h1>
 <p>
-User  private  default  request  files  are  processed  under  the  locations \(HOME/.sge_request  and  \)cwd/.sge_request.  The  working  directory  local default request file has the highest precedence
+User  private  default  request  files  are  processed  under  the  locations $HOME/.sge_request  and  $cwd/.sge_request.  The  working  directory  local default request file has the highest precedence
 </p>
 
 <h1 id="toc_2">E-mail</h1>
@@ -88,8 +88,7 @@ job.sge
 
 # Defines or redefines the path used for the standard error  stream 
 # and the standard output stream of the job. 
-#$ -o ./sge.out/
-#$ -e ./sge.out/
+#$ -o ~/tmp/sge/$(date +"%b%d.%H%M")
 
 # name of the job
 #$ -N mapping_simulation
@@ -158,7 +157,7 @@ qdel -u augix
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: SGE in eva cluster" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

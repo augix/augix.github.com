@@ -45,69 +45,49 @@
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<ul>
-<li>
+<p>
 Python dictionary can only use immutable elements as keys, therefore list can not be used as keys, but tuples with immutable elements can.
+</p>
 
-</ul>
-
-<ul>
-<li>
-create dictionary
-<pre>
+<h1 id="toc_1">Create dictionary</h1>
+<pre class="brush: python">
 l = dict(a=1,b=2,c=3)
 l = dict(zip(['a','b','c'],[1,2,3]))
 dict(zip('abc',[1,2,3]))
 </pre>
 
-</ul>
-
-<ul>
-<li>
-Iterating Through a Dictionary
+<h1 id="toc_2">Iterating Through a Dictionary</h1>
 <pre class="brush: python">
 &gt;&gt;&gt; import os
 &gt;&gt;&gt; for k, v in os.environ.items():     
 ...     print "%s=%s" % (k, v)
 </pre>
 
-</ul>
-
-
+<h1 id="toc_3">Double dictionary</h1>
 <ul>
 <li>
-Double dictionary
-
-</ul>
-<p>
 reference: <a href="http://desk.stinkpot.org:8080/tricks/index.php/2006/04/create-a-double-dictionary-in-python/">create a double dictionary in python</a>
-</p>
 
-<p>
+<li>
 the following WON'T work
-</p>
 <pre class="brush: python">
 &gt;&gt;&gt; x = dict()
 &gt;&gt;&gt; x[1][1] = “foo”
 </pre>
-<p>
+
+<li>
 instead, one can use this:
-</p>
 <pre class="brush: python">
 &gt;&gt;&gt; x = dict()
 &gt;&gt;&gt; x[1,1] = “foo”
 </pre>
 
-<p>
-note that, tuple (1,1) is used as key.
-</p>
-
-
-<ul>
 <li>
-find the key to the max and min value
+note that, tuple (1,1) is used as key.
 
 </ul>
+
+<h1 id="toc_4">find the key to the max and min value</h1>
 <p>
 suppose d is the dict.
 </p>
@@ -117,7 +97,7 @@ max(d,key = lambda a: d.get(a))
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Python dictionary" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

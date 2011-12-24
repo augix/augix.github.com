@@ -2,10 +2,17 @@ With linux command convert, I can convert a PDF file to other image format. For 
 
 * convert foo.pdf to foo.png (or foo1.png, foo2.png.. etc if there are multiple pages in foo.pdf):
 {{{class="brush: bash"
-$ convert foo.pdf foo.png
+$ convert -resize 1024x1024 foo.pdf foo.png
 }}}
 
 * One can specify file format by the file extension.
 {{{class="brush: bash"
 $ convert foo.pdf foo.jpg
 }}}
+ 
+* one can specify the output size
+{{{class="brush: bash"
+$ convert -resize 1024x1024 foo.pdf foo.png
+}}}
+
+

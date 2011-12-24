@@ -62,7 +62,7 @@ for l in f.readlines():
 <br>
 Result:
 </p>
-<pre>
+<pre class="brush: text">
 Sequence has 1267 bases.
 A = 287
 C = 306
@@ -119,7 +119,7 @@ for frame in (1, 2, 3):
 <br>
 Result:
 </p>
-<pre>
+<pre class="brush: text">
 $  python e2.py 
 Enter DNA sequence: ATGCCCAAGCTGAATAGCGTAGAGGGGTTTTAA
 Frame 1: &lt;START&gt;PK&lt;START&gt;NSVEGF&lt;STOP&gt;
@@ -144,33 +144,29 @@ Answer: module 'os' or 'glob'. For example: os.listdir(path), glob.glob(pathname
 <ul>
 <li>
 You need to grab a file from a website in an automated fashion?
-<pre>
+
+</ul>
+<p>
 Answer: urllib.
-{{{class="brush: python"
+</p>
+<pre class="brush: python">
 import urllib
 res = urllib.urlopen('http://augix.com')
 res.read()
 </pre>
 
-</ul>
-<p>
-}}}
-</p>
-
 <ul>
 <li>
 You need to time how long a particular operation takes to complete?
-<pre>
-Answer: timeit.
-{{{class="brush: python"
-import timeit
-timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
-</pre>
 
 </ul>
 <p>
-}}}
+Answer: timeit.
 </p>
+<pre class="brush: python">
+import timeit
+timeit.Timer('for i in xrange(10): oct(i)', 'gc.enable()').timeit()
+</pre>
 
 <ul>
 <li>
@@ -330,9 +326,6 @@ for N in no_match:
   if regex.search(N):
     print "Your regex matches", N
 </pre>
-<p>
-<br>
-</p>
 
 
 <h2 id="toc_4.3">Exercise 3: ORF</h2>
@@ -373,7 +366,7 @@ No ORF found!
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Python Assignment 4" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

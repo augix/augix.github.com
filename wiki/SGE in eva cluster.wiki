@@ -35,8 +35,7 @@ job.sge
 
 # Defines or redefines the path used for the standard error  stream 
 # and the standard output stream of the job. 
-#$ -o ./sge.out/
-#$ -e ./sge.out/
+#$ -o ~/tmp/sge/$(date +"%b%d.%H%M")
 
 # name of the job
 #$ -N mapping_simulation
