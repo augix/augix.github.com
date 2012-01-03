@@ -17,6 +17,7 @@
 * [[ggplot]]
 * [[Add text in R plot]]
 * [[Venn Diagram in R]]
+* [[googleVis| Google Visulisation API on R]]
 
 Useful links:
 * [http://addictedtor.free.fr/graphiques/ R Graph Gallery]

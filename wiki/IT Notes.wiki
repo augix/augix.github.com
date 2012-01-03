@@ -2,6 +2,7 @@
 = Cross-platform =
 * [[Vimwiki]]: a personal wiki on VIM
 * [[Share mouse and keyboard]]
+* [[Beautiful fonts]]
 
 = Mac =
 == General ==

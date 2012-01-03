@@ -7,6 +7,8 @@
 * [http://www.zinkwazi.com/unix/notes/vimtips.html Best of VIM tips]
 * [http://rosenfeld.heroku.com/en/articles/2010-12-26-achieving-productivity-with-vim-as-ide Achieving Productivity with Vim as IDE]
 * [http://www.adp-gmbh.ch/vim/vars.html Programming in Vim Variables]
+* [http://www.appinn.com/vim-tutorials-pic/ Vim 键盘图中文版]
+* [http://www.appinn.com/online-vim-tutorial/ 在线 VIM 交互教程]
 
 = Moving =
 * Moving around, scroll up and down the screen
