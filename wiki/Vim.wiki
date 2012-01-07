@@ -138,8 +138,14 @@ http://users.physik.fu-berlin.de/~mgoerz/blog/2008/09/integrating-vim-with-ipyth
 
 = Completion =
 {{{
-completeopt	whether to use a popup menu for Insert mode completion
- 	set cot=menu
+set cot=menu
+    completeopt	whether to use a popup menu for Insert mode completion
+}}}
+
+= Help =
+* Can not find the help files?
+{{{
+:helptags $VIMRUNTIME/doc/
 }}}
 
 = Others =

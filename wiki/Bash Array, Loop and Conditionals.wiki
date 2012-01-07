@@ -45,7 +45,7 @@ fi
 
 http://www.thegeekstuff.com/2010/06/bash-conditional-expression/
 
-In the above web page, example 6 explains the difference between [ and [[ (single square bracket and double square bracket). The [[ is an enhanced version of [, in contrast to [ which is a command like "test", [[ is a keyword, it is only recognized in korn and bash.
+In the above web page, example 6 explains the difference between [ and [[ (single square bracket and double square bracket). The [[ is an enhanced version of [, normally we do NOT need to use [[ unless we want to use globbing feature and etc. In contrast to [ which is a command like "test", [[ is a keyword, and [[ is only recognized in korn and bash.
 
 http://steve-parker.org/sh/test.shtml
 

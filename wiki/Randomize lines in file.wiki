@@ -2,14 +2,21 @@
 
 There are many ways in Bash in randomizing lines in a file.
 
-{{{class="brush: bash"
+{{{class="brush: bash" 
+
 $ shuf origin.txt > randomized.txt
 
 $ sort -R origin.txt > randomized.txt
 
-sort -R will only work if the lines are unique.
-
 $ cat -n origin.txt | sort -R | cut -f 2-
 
-$ for i in `cat origin.txt`; do echo "$RANDOM $i"; done | sort | sed -r 's/^[0-9]+ //' > randomized.txt
+$ for i in `cat origin.txt`; do echo "$RANDOM $i"; done | sort | sed -r
+'s/^[0-9]+ //' > randomized.txt 
+
 }}}
+
+sort -R will only work if the lines are unique.
+
+shuf on the other hand will sufficiently randomize a list, including NOT
+putting duplicate lines next to each other. [http://hivearchive.com/2007/10/18/bash-one-liner-to-randomize-lines-in-file/ Reference]
+

@@ -51,20 +51,30 @@ There are many ways in Bash in randomizing lines in a file.
 </p>
 
 <pre class="brush: bash">
+
 $ shuf origin.txt &gt; randomized.txt
 
 $ sort -R origin.txt &gt; randomized.txt
 
-sort -R will only work if the lines are unique.
-
 $ cat -n origin.txt | sort -R | cut -f 2-
 
-$ for i in `cat origin.txt`; do echo "$RANDOM $i"; done | sort | sed -r 's/^[0-9]+ //' &gt; randomized.txt
+$ for i in `cat origin.txt`; do echo "$RANDOM $i"; done | sort | sed -r
+'s/^[0-9]+ //' &gt; randomized.txt 
+
 </pre>
+
+<p>
+sort -R will only work if the lines are unique.
+</p>
+
+<p>
+shuf on the other hand will sufficiently randomize a list, including NOT
+putting duplicate lines next to each other. <a href="http://hivearchive.com/2007/10/18/bash-one-liner-to-randomize-lines-in-file/">Reference</a>
+</p>
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Randomize lines in file" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

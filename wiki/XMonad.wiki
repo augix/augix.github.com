@@ -30,6 +30,9 @@ Use gnome-terminal with colorscheme "green on black". Color palette scheme 'tang
 = Floating window =
 to float a window (or move an already-floating window), click and drag it with the mod and left-mouse-button held down. Floating windows can be resized by dragging the window with mod and right-mouse-button.
 
+= Key mapping =
+[[../img/Xmbindings.png| Key mapping chart]]
+
 reference:
 * http://versia.com/2009/10/xmonad-metacity-gnome/
 * http://upsilon.cc/~zack/blog/posts/2009/04/xmonad_+_gnome_on_Debian/

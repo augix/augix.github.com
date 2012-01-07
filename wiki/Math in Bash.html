@@ -46,16 +46,13 @@
 	<div class="post"><!-- start of post -->
 	
 <pre class="brush: bash">
-# method 1
-i=5000
- 
-# method 2: ((
+# method 1: ((
 (( n=10 ))
 (( n = n + 10 ))
 (( n = $n + 10 ))
 a=$(( 2*100+1 ))
 
-# method 3: let
+# method 2: let
 let "z=5*3"
 let "z = 5 * 4"
 let "z=5	*3"
@@ -63,8 +60,8 @@ let "z=z+1"
 let "z=$z+1"
 let "z++"
 
-# method 4: expr
-expr 37 + 2     # space required
+# method 3: expr
+expr 37 + 2    # space required
 expr 37 \* 2
 expr 37 / 2
 expr 37 % 2

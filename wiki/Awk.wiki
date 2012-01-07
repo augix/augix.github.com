@@ -2,7 +2,7 @@
 * [http://www.ibm.com/developerworks/linux/library/l-awk1/index.html Common threads: Awk by example]
 * [http://www.cs.hmc.edu/qref/awk.html Getting Start with awk]
 
-= Usage =
+= Synopsis =
 {{{class="brush: bash"
 awk '$1 > $2 {print $1,$2,$1-$2}' filename
 }}}
@@ -13,6 +13,11 @@ The part outside the curly braces is called the "pattern", and the part inside i
 }}}
 If no pattern is given, then the action applies to all lines.
 
+= Usage =
+* pass shell variables to awk
+{{{class="brush: bash"
+awk -v var=$var 'pattern {program}'
+}}}
 
 = Examples =
 

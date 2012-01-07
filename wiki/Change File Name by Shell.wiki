@@ -1,7 +1,7 @@
 %template disqus
 = Update 2011 Dec. 14 =
 {{{class="brush: text"
-replace jpg with JPG with ${i/jpg}JPG
+replace jpg with JPG using ${i/jpg}JPG
 }}}
 
 {{{class="brush: bash"
