@@ -5,6 +5,6 @@
 
 [[img/p9.gif]]
 
-[[img/S1.JPG]]
+%% [[img/S1.JPG]]
 
-[[img/S1-b.JPG]]
+%% [[img/S1-b.JPG]]
