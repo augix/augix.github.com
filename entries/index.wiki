@@ -4,4 +4,7 @@
 
 [[./mediawiki2vimwiki/|Convert Mediawiki pages to Vimwiki]]
 
+[[Build a House/]]
+
+[[EVA computation resource/]]
 
