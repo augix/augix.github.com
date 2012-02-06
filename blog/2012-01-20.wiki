@@ -1,0 +1,16 @@
+%title Paper: Intercalation of a new tier of transcription regulation into an ancient circuit 
+= Paper: Intercalation of a new tier of transcription regulation into an ancient circuit =
+== Background ==
+=== Yeast cell types and reproduction ===
+* Some yeast species have 3 cell types: a, alpha and the product of their mating (a/alpha) which is mating-incompetent. 
+* The a and alpha cell types are haploid, the a/alpha cell is diploid.
+* The a/alpha cell can undergo meiosis and sporulation when nutritionally starved.
+
+=== Mating mechanism ===
+* The a cells produce an extracellular peptide, a-factor, which acts on a receptor produced only by alpha cells; alpha cells likewise produce an extracellular peptide, alpha-factor, that acts on a receptor produced only by the a cells. (quote from 'A regulatory hierarchy for cell specialization in yeast)
+* The a/alpha cells produce a heterodimer (Mata1-Metalpha2) that directly represses genes that are required for mating.
+
+== Evolution of regulatory circuit in K. lactis ==
+* In K. lactis, the heterodimer Mata1-Metalpha2 does not regulate mating genes directly, but does so through an intermediate regulatory protein, Rme1. A new phynotype was produced though out this rewiring. Unlike S. cerevisiae and C. albicans, K. lactis integrates nutritional signals, by means of Rme1, into the decidsion of whether or not to mate.
+
+

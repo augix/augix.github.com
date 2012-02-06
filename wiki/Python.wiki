@@ -9,6 +9,7 @@
 * [[Python modules| Modules]]
 * [[Python threading]]
 * [[Python examples| Other Examples]]
+* [[Python network| Networking]]
  
 * [[Python Books| Books]]
 * [[IMPRS Python Course]]

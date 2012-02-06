@@ -1,9 +1,13 @@
 = for Loop =
 {{{class="brush: bash"
-jj=(1 4 15 16 32 40 41 58 61 72 73 74 97);
-for j in `seq 0 12`; do
-  qsub 3way_4tissues.anova.sge.hugemem ${jj[$j]};
+ii=(1 4 15 16 32 40 41 58 61 72 73 74 97);
+for i in ${ii[@]}; do
+    echo $i;
 done
+
+for i in {1..12}; do echo $i; done
+for i in {1..12..2}; do echo $i; done
+for i in `seq 0 12`; do echo $i; done
 }}}
 
 break, continue ::

@@ -57,10 +57,19 @@ Initial results from the Consensus CDS (CCDS) project are now available through 
 == Next-Gen Sequencing  ==
 * [[Tophat]]
 * [[SAMTools]]
+* [[Pysam]]
 
 == Computing ==
 * [[SGE in eva cluster]]
 * [[SGE in PICB cluster]]
+
+== Phylogenetic tree ==
+=== R package: phangorn ===
+* [http://cran.r-project.org/web/packages/phangorn/index.html Souce code]
+* Estimating phylogenetic trees with phangorn [http://cran.univ-lyon1.fr/web/packages/phangorn/vignettes/Trees.pdf PDF]
+* Special features of phangorn [http://cran.r-project.org/web/packages/phangorn/vignettes/phangorn-specials.pdf PDF]
+* Paper: [http://bioinformatics.oxfordjournals.org/content/27/4/592 phangorn: phylogenetic analysis in R]
+* Presentation [http://rug.mnhn.fr/semin-r/PDF/semin-R_phylogenetics_KSchliep_180310.pdf PDF]
 
 == Other ==
 * [http://evolution.genetics.washington.edu/phylip.html PHYLIP]

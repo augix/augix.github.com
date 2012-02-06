@@ -1,8 +1,15 @@
 %template disqus
 
+= package: VennDiagram =
+{{{class="brush: r"
+grid.obj = venn.diagram(list(A=1:53, B=3:23, C=33:70), filename=NULL)
+grid.draw(grid.obj)
+}}}
+
+= package: limma =
 One can use functions in limma pacakge to plot a Venn diagram in R.
 
-{{{
+{{{class="brush: r"
 biocLite("limma")
 library(limma)
 hsb2<-read.table("http://www.ats.ucla.edu/stat/R/notes/hsb2.csv", sep=',', header=T)

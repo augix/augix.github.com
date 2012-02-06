@@ -162,4 +162,7 @@ set cot=menu
 * indent in multiple lines
 	* way1: enter visual mode, use ">" or "<" to increase or decrease indent
 	* way2: use "==" to give indent to the current line, use "n==", n is a number: to give indent to the following lines until line number n.
-
+* [http://tips.webdesign10.com/how-to-convert-code-to-html-with-vim How to Convert Code to HTML With Vim]
+{{{
+:TOhtml
+}}}

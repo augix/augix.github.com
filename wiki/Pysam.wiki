@@ -1,0 +1,7 @@
+
+= install =
+install without root permission.
+
+{{{class="brush: bash"
+python setup.py install --user
+}}}

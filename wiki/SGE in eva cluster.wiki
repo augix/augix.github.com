@@ -12,7 +12,7 @@ send email when the job ends:
 job.sge
 {{{class="brush: bash"
 # IMPORTANT: specifies the interpreting shell for this job to be the Bash shell
-#$ -S /bin/sh
+#$ -S /bin/bash
 
 # execute the job for the current working directory.
 #$ -cwd
