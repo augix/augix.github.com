@@ -166,3 +166,6 @@ set cot=menu
 {{{
 :TOhtml
 }}}
+
+* [http://ubuntu-tutorials.com/2008/07/14/use-vim-as-a-syntax-highlighting-pager/ Work with less in order to print a script with syntax highlighted]
+

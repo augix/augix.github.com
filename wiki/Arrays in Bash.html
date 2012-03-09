@@ -85,6 +85,18 @@ echo ${b[@]}
 
 <ul>
 <li>
+slice
+<pre class="brush: bash">
+a=(1 0 7 3)
+echo ${a[0]}
+echo ${a[@]:1}  # from the 2nd till the end
+</pre>
+
+</ul>
+
+
+<ul>
+<li>
 get a list of file names
 <pre class="brush: bash">
 names=`ls ./`
@@ -114,6 +126,7 @@ done;
 </pre>
 
 </ul>
+
 
 <p>
 reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a>

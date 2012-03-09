@@ -1,4 +1,8 @@
 {{{
+printf "Surname: %s\nName: %s\n" "$SURNAME" "$LASTNAME"
+}}}
+
+{{{
 $ seq 1000010 612 1004910
 1.00001e+06
 1.00062e+06
