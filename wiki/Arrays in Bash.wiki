@@ -28,6 +28,14 @@ echo ${b[@]}
 #1 0 7 3 8
 }}}
 
+* slice
+{{{class="brush: bash"
+a=(1 0 7 3)
+echo ${a[0]}
+echo ${a[@]:1}  # from the 2nd till the end
+}}}
+
+
 * get a list of file names
 {{{class="brush: bash"
 names=`ls ./`
@@ -47,6 +55,7 @@ for d in $dd; do
     echo $d;
 done;
 }}}
+
 
 reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
 

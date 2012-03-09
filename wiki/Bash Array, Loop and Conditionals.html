@@ -242,9 +242,21 @@ array=($str)
 
 </ul>
 
-<p>
-reference: <a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a>
-</p>
+<ul>
+<li>
+push array
+<pre class="brush: bash">
+array=()
+for i in `seq 1 8`; do 
+    array=(${array[@]} $i)
+done
+
+
+
+reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
+
+</ul>
+</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">
