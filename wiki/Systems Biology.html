@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>SAMTools</title>
+	<title>Systems Biology</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
@@ -41,49 +41,72 @@
 <a name='top'></a>
 <div class="container">
     <div class="header">
-		<h1>SAMTools</h1> 
+		<h1>Systems Biology</h1> 
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
+<h1 id="toc_1">Books on complexity and biology</h1>
+<ul>
+<li>
+QH 301 THE 1992
 
-<pre>
-samtools view -X &lt;bam file&gt;
-    Convert bitwise FLAG to human readable FLAG.
-    
-samtools flagstat &lt;bam file&gt;
-    Print number of mapped reads and so on.
-    
-samtools view -H &lt;bam file&gt;
-    check if the bam files is sorted. 
-    http://biostar.stackexchange.com/questions/5273/is-my-bam-file-sorted  
-</pre>
-
+</ul>
 <p>
-<a href="http://samtools.sourceforge.net/samtools.shtml">Manual Reference Pages - samtools</a>
+Theoretical biology : epigenetic and evolutionary order from complex systems
 </p>
+<ul>
+<li>
+QH 366 .2 GOO 2001
 
-<h1 id="toc_1">how to extract unique hits from bam files</h1>
-<pre>
-samtools view -q 1 &lt;bam file&gt;
-
-        You can use samtools view -q 1 to only output uniquely mapped reads
-        (and omit both unmapped and ambiguous ones). Ambiguous reads that can
-        be mapped to different locations with the same score have mapping
-        quality 0 in BWA.
-        
-samtools view bwa.bam | grep "XT:A:U" 
-
-        BWA outputs have XT tag set to "U". 
-</pre>
-
+</ul>
 <p>
-<a href="http://seqanswers.com/forums/showthread.php?t=8334">http://seqanswers.com/forums/showthread.php?t=8334</a>
+How the leopard changed its spots : the evolution of complexity
+</p>
+<ul>
+<li>
+GN 360 HAN - 2
+
+</ul>
+<p>
+¬The¬ evolution of living systems (including hominids) : the evolution of living systems (including hominids)
+</p>
+<ul>
+<li>
+QH 390 WAG 2005
+
+</ul>
+<p>
+Robustness and evolvability in living systems
+</p>
+<ul>
+<li>
+QH 366 .2 MOD 2005
+
+</ul>
+<p>
+Modularity : understanding the development and evolution of natural complex systems
+</p>
+<ul>
+<li>
+QH 308 .2 KLI 2009
+
+</ul>
+<p>
+Systems biology : a textbook
+</p>
+<ul>
+<li>
+QH 390 CAE 2010
+
+</ul>
+<p>
+Evolutionary genomics and systems biology
 </p>
 
 	</div><!-- end of post -->
 	<div class="backhome">
 		<a href="../index.html">Back Home</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="vimwiki: SAMTools" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Systems Biology" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -129,7 +152,7 @@ function showHide(shID) {
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "vimwiki: SAMTools";
+    var disqus_identifier = "vimwiki: Systems Biology";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
