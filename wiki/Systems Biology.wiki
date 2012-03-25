@@ -1,0 +1,16 @@
+= Books on complexity and biology =
+* QH 301 THE 1992
+Theoretical biology : epigenetic and evolutionary order from complex systems
+* QH 366 .2 GOO 2001
+How the leopard changed its spots : the evolution of complexity
+* GN 360 HAN - 2
+¬The¬ evolution of living systems (including hominids) : the evolution of living systems (including hominids)
+* QH 390 WAG 2005
+Robustness and evolvability in living systems
+* QH 366 .2 MOD 2005
+Modularity : understanding the development and evolution of natural complex systems
+* QH 308 .2 KLI 2009
+Systems biology : a textbook
+* QH 390 CAE 2010
+Evolutionary genomics and systems biology
+

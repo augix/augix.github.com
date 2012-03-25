@@ -52,9 +52,21 @@ col = redgreen(100)
 heatmap(as.matrix(USJudgeRatings),Colv=NA,col=col)
 </pre>
 
+<ul>
+<li>
+Draw horizontal or vertial line in heatmap
+<pre>
+library(gplots)
+data(mtcars)
+x  &lt;- as.matrix(mtcars)
+heatmap.2(x, trace='none',Rowv=F,Colv=F, add.expr=c(abline(h=c(2,3,4)), mtext(side=2,text='text')))
+</pre>
+
+</ul>
+
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Heatmap" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
