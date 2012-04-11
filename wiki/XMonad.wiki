@@ -19,7 +19,7 @@ main = xmonad gnomeConfig
     , normalBorderColor = "#cccccc"
     }
 }}}
-* modify .xsession
+* modify .xsession, very important
 {{{
 killall metacity ; xmonad &
 }}}

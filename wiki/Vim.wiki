@@ -27,7 +27,10 @@ CTRL-Y
 :ju
 }}}
 * <b>#</b>
-the <b>#</b> key create a motion jumping from the current word to the same word in the current buffer
+the <b>#</b> key create a backward motion jumping from the current word to the same word in the current buffer
+* <b>N</b>
+the <b>N</b> key create a forward motion jumping from the current word to the same word in the current buffer
+
 
 = Buffers =
 * switch to previous buffer: `<c-6>`
