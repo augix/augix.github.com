@@ -56,6 +56,25 @@ for d in $dd; do
 done;
 }}}
 
+* Join elements of an array
+http://stackoverflow.com/questions/1527049/bash-join-elements-of-an-array
+{{{class="brush: bash"
+FOO=( a b c )
+SAVE_IFS=$IFS
+IFS=","
+FOOJOIN="${FOO[*]}"
+IFS=$SAVE_IFS
+echo $FOOJOIN
+}}}
+
+{{{class="brush: bash"
+#/!bin/bash
+foo=('foo bar' 'foo baz' 'bar baz')
+bar=$(printf ",%s" "${foo[@]}")
+bar=${bar:1}
+echo $bar
+}}}
+
 
 reference: [http://www.thegeekstuff.com/2010/06/bash-array-tutorial/ The Ultimate Bash Array Tutorial with 15 Examples]
 

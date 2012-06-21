@@ -44,6 +44,7 @@
 = Data structure =
 * [[String in Bash]]
 * [[Arrays in Bash]]
+* [[Dictionary in Bash]]
 
 = Variables =
 * [[Variable in shell]]
