@@ -1,0 +1,13 @@
+= Example =
+{{{class="brush: bash"
+declare -A animals
+animals=( ["moo"]="cow" )
+echo "${animals["moo"]}"
+for sound in "${!animals[@]}"; do echo "$sound - ${animals["$sound"]}"; done
+
+}}}
+
+
+= Reference =
+* [http://stackoverflow.com/questions/1494178/how-to-define-hash-tables-in-bash How to define hash tables in bash?]
+

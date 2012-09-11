@@ -1,0 +1,40 @@
+%title Object-oriented Programming in R
+
+= Commands =
+attributes, attr, class, methods, UseMethod, getAnywhere
+
+{{{
+attributes
+    Print attributes of an object.
+    
+attr
+    change attributes of an object.
+
+class
+    change class of an object.
+    
+methods
+    Print methods in a generic function.
+
+UseMethod
+    Constructing a generic function.
+    GF <- function(x, ...) UseMethod('GF')
+    
+getAnywhere
+    find a function
+}}}
+
+= Golden rule =
+* eveything is an object, a vector
+* DO NOT call methods directly, instead use a generic function, which dispatches methods to objects according to their classes.
+
+= Concepts =
+* Inheritance: A way to form new classes using classes that have already been defined.
+{{{
+class(x) = c('newClass', class(x))
+}}}
+
+= References =
+http://www.ibm.com/developerworks/linux/library/l-r3/index.html#resources
+http://brainimaging.waisman.wisc.edu/~perlman/R/A1%20Introduction%20to%20object-oriented%20programming.pdf
+
