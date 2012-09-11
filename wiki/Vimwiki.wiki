@@ -120,7 +120,7 @@ Create folder of wiki file ::
 referece: http://gvimmanual.blogspot.com/2010/12/vimwiki-option-nestedsyntaxes.html
 in vimrc:
 {{{
-let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+let wiki.nested_syntaxes = {'python': 'python', 'R': 'R', 'bash': 'sh', 'perl': 'perl'}
 }}}
 
 in .wiki file:

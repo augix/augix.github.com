@@ -64,3 +64,5 @@ bp <- boot.phylo(tr, woodmouse, function(xx) nj(dist.dna(xx)))
 plot(tr)
 nodelabels(bp)
 }}}
+
+[http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter5.html]

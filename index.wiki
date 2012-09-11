@@ -3,15 +3,18 @@
 
 Welcome to [http://augix.com augix.com], this website covers the following subjects, they might be useful for computational biologists:
 
-= Subjects =
+= Selected subjects =
 * [[wiki/Programming|Programming]]
 * [[wiki/Bioinformatics|Bioinformatics]]
-* [[wiki/IT Notes|OS]]
+* [[wiki/IT Notes|Operating Systems]]
 
 * [[wiki/Biology Notes|Biology]]
 * [[wiki/Statistics|Statistics]]
 * [[wiki/Foreign Language|Foreign Languages]]
+ 
+= All subjects =
 * [[wiki/Main Page|All subjects]]
 
+%% Hidden subjects
 %% [[./blog/Blog]]
 %% [[./entries/]] 

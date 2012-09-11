@@ -12,6 +12,7 @@
 = Programming =
 * [[R programming]]
 * [[R debugging]]
+* [[OOP in R]]
 * [[How to pass arguments to R scripts]] 
 * [[Rdbi - database access for R]]
 * [[R cheat sheet]]

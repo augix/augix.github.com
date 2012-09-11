@@ -50,62 +50,96 @@
 There is an option called <code>-g/--max-multihits &lt;int&gt;</code>, it instructs TopHat to allow up to this many alignments to the reference for a given read, and suppresses <strong>all alignments</strong> for reads with more than this many alignments.
 </p>
 
-
 <h1 id="toc_2">Calculate MAPQ</h1>
 <p>
 This is the formule Tophat used for MAPQ calculation. i is the number of hits, m is the MAPQ score. This formule is found in tophat source code tophat_reports.cpp.
 </p>
 <pre>
-for (i in 1:40) {
-+   e = 1-(1/i)
-+   m = round(-10*log(e)/log(10))
-+   print(c(i,m))
-+ }
-[1]   1 Inf
-[1] 2 3
-[1] 3 2
-[1] 4 1
-[1] 5 1
-[1] 6 1
-[1] 7 1
-[1] 8 1
-[1] 9 1
-[1] 10  0
-[1] 11  0
-[1] 12  0
-[1] 13  0
-[1] 14  0
-[1] 15  0
-[1] 16  0
-[1] 17  0
-[1] 18  0
-[1] 19  0
-[1] 20  0
-[1] 21  0
-[1] 22  0
-[1] 23  0
-[1] 24  0
-[1] 25  0
-[1] 26  0
-[1] 27  0
-[1] 28  0
-[1] 29  0
-[1] 30  0
-[1] 31  0
-[1] 32  0
-[1] 33  0
-[1] 34  0
-[1] 35  0
-[1] 36  0
-[1] 37  0
-[1] 38  0
-[1] 39  0
-[1] 40  0
+	int mapQ=255;
+	if (grade.num_alignments &gt; 1)  {
+        double err_prob = 1 - (1.0 / grade.num_alignments);
+        mapQ = (int)(-10.0 * log(err_prob) / log(10.0));
+    }
+    # grad.num_alignments is the number of equally best hits
 </pre>
+
+<pre>
+    for (i in 1:40) {
+    +   e = 1-(1/i)
+    +   m = round(-10*log(e)/log(10))
+    +   print(c(i,m))
+    + }
+    [1]   1 Inf
+    [1] 2 3
+    [1] 3 2
+    [1] 4 1
+    [1] 5 1
+    [1] 6 1
+    [1] 7 1
+    [1] 8 1
+    [1] 9 1
+    [1] 10  0
+    [1] 11  0
+    [1] 12  0
+    [1] 13  0
+    [1] 14  0
+    [1] 15  0
+    [1] 16  0
+    [1] 17  0
+    [1] 18  0
+    [1] 19  0
+    [1] 20  0
+    [1] 21  0
+    [1] 22  0
+    [1] 23  0
+    [1] 24  0
+    [1] 25  0
+    [1] 26  0
+    [1] 27  0
+    [1] 28  0
+    [1] 29  0
+    [1] 30  0
+    [1] 31  0
+    [1] 32  0
+    [1] 33  0
+    [1] 34  0
+    [1] 35  0
+    [1] 36  0
+    [1] 37  0
+    [1] 38  0
+    [1] 39  0
+    [1] 40  0
+</pre>
+
+<p>
+so: 
+255 = unique mapping
+</p>
+
+<p>
+3 = maps to 2 locations in the target
+</p>
+
+<p>
+2 = maps to 3 locations
+</p>
+
+<p>
+1 = maps to 4-9 locations
+</p>
+
+<p>
+0 = maps to 10 or more locations.
+</p>
+
+<p>
+but in reality, tophat report 1 for 3-location mapping.
+reference: <a href="http://user.list.galaxyproject.org/about-Mapping-Quality-td4366680.html">http://user.list.galaxyproject.org/about-Mapping-Quality-td4366680.html</a>
+</p>
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="http://wiki.augix.com">Back Home</a><br>
+		<a href="../index.html">Back Home</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: Tophat" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>

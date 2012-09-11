@@ -65,6 +65,7 @@ http://steve-parker.org/sh/test.shtml
 ==      same string
 !=      not same string
 -z      true if string size is zero
+=~      regular expression
 }}}
 
 ps: == only works in bash, run 'bash script.sh' instead of 'sh script.sh'.
