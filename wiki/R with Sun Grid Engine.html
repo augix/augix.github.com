@@ -53,7 +53,7 @@ Use Rsge package to perfom paralle computing with SGE.
 <pre class="brush: r">
 library(Rsge)
 index = 1:100
-func1 &lt;- function(x) x+1
+func1 &lt;- function(x, arg) x + arg
 func &lt;- function(x, arg) func1(x, arg)
 
 jobs = lapply(index, function(x) sge.submit(func=func, x=x, arg=arg, function.savelist=c('func1')))
