@@ -1,22 +1,22 @@
 <html>
 <head>
-	<title>%title%</title>
+	<title>R programming with Sun Grid Engine</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<link rel="Stylesheet" type="text/css" href="%root_path%templates/skinny_disqus.css" />
+	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
 
     <!-- SyntaxHighlighter start -->
-    <link type="text/css" rel="stylesheet" href="%root_path%templates/SyntaxHighlighter/styles/shCore.css" /> 
-    <link type="text/css" rel="stylesheet" href="%root_path%templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shCore.js"></script> 
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
-    <script type="text/javascript" src="%root_path%templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="../templates/SyntaxHighlighter/styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushR.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../templates/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <script type="text/javascript">
       SyntaxHighlighter.all();
     </script> 
@@ -41,14 +41,35 @@
 <a name='top'></a>
 <div class="container">
     <div class="header">
-		<h1>%title%</h1> 
+		<h1>R programming with Sun Grid Engine</h1> 
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
-	%content%
+	
+
+<p>
+Use Rsge package to perfom paralle computing with SGE.
+</p>
+
+<pre class="brush: r">
+index = 1:100
+func1 &lt;- function(x) x+1
+func &lt;- function(x, arg) func1(x, arg)
+
+jobs = lapply(index, function(x) sge.submit(func=func, x=x, arg=arg, function.savelist=c('func1')))
+status = lapply(jobs, sge.job.status)
+
+while(any(status==1)) {
+    Sys.sleep(4)
+    status = lapply(jobs, sge.job.status)
+}
+
+results = lapply(jobs, sge.list.get.result)
+</pre>
+
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="%root_path%index.html">Homepage</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="vimwiki: %title%" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+		<a href="../index.html">Homepage</a><br>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: R programming with Sun Grid Engine" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -94,7 +115,7 @@ function showHide(shID) {
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "vimwiki: %title%";
+    var disqus_identifier = "vimwiki: R programming with Sun Grid Engine";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */

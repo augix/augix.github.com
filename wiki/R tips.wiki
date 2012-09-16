@@ -13,6 +13,7 @@
 * [[R programming]]
 * [[R debugging]]
 * [[OOP in R]]
+* [[R with Sun Grid Engine]]
 * [[How to pass arguments to R scripts]] 
 * [[Rdbi - database access for R]]
 * [[R cheat sheet]]

@@ -196,7 +196,11 @@ $ git config format.pretty oneline
 
 
 = Git on Mac OS X =
-[http://shiningthrough.co.uk/Mac-OS-X-Git-Clients-Roundup Mac OS Git Clients Roundup]
+* gitx
+* [http://shiningthrough.co.uk/Mac-OS-X-Git-Clients-Roundup Mac OS Git Clients Roundup]
+
+= Git on Linux =
+* gitg, gitk
 
 = github web hosting =
 http://pages.github.com/
