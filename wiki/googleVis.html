@@ -49,103 +49,11 @@
 <li>
 example
 
-<!-- GeoChart generated in R 2.12.1 by googleVis 0.2.13 package -->
-<!-- Sun Dec 25 17:58:41 2011 -->
-
-
-<!-- jsHeader -->
-<script type="text/javascript" src="http://www.google.com/jsapi">
-</script>
-<script type="text/javascript">
-
-
-// jsData 
-function gvisDataGeoChart_US ()
-{
-  var data = new google.visualization.DataTable();
-  var datajson =
-[
- [
- "New York",
-        200 
-],
-[
- "Boston",
-        300 
-],
-[
- "Miami",
-        400 
-],
-[
- "Chicago",
-        500 
-],
-[
- "Los Angeles",
-        600 
-],
-[
- "Houston",
-        700 
-] 
-];
-data.addColumn('string','City');
-data.addColumn('number','Popularity');
-data.addRows(datajson);
-return(data);
-}
-
-
-// jsDrawChart
-function drawChartGeoChart_US() {
-  var data = gvisDataGeoChart_US();
-  var options = {};
-options["width"] =    556;
-options["height"] =    347;
-options["displayMode"] = "markers";
-options["region"] = "US";
-options["resolution"] = "metros";
-
-     var chart = new google.visualization.GeoChart(
-       document.getElementById('GeoChart_US')
-     );
-     chart.draw(data,options);
-    
-
-}
-  
-
-
-// jsDisplayChart 
-function displayChartGeoChart_US()
-{
-  google.load("visualization", "1", { packages:["geochart"] }); 
-  google.setOnLoadCallback(drawChartGeoChart_US);
-}
-
-
-// jsChart 
-displayChartGeoChart_US()
-
-
-<!-- jsFooter -->  
-//-->
-</script>
-
-
-<!-- divChart -->
-  
-<div id="GeoChart_US"
-  style="width: 556px; height: 347px;">
-</div>
-
-
 </ul>
 
 	</div><!-- end of post -->
 	<div class="backhome">
-		<a href="../index.html">Back Home</a><br>
+		<a href="../index.html">Homepage</a><br>
         <a href="#disqus_thread" data-disqus_identifier="vimwiki: googleVis" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
