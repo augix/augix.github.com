@@ -1,5 +1,4 @@
-= Table of Content =
-%toc
+%toc Table of Content
 
 = Tutorials =
 * [http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html Graphical vi-vim Cheat Sheet and Tutorial]

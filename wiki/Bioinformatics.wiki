@@ -1,4 +1,4 @@
-%toc TOC
+%toc Table of Content
 
 = Databases =
 == Genome Browser ==

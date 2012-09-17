@@ -1,7 +1,7 @@
 %title Augix.com - Computational Biology
-%% they are published to internet
+%% Published to internet
 
-Welcome to [http://augix.com augix.com], this website covers the following subjects, they might be useful for computational biologists:
+Welcome!
 
 = Selected subjects =
 * [[wiki/Programming|Programming]]
@@ -12,8 +12,9 @@ Welcome to [http://augix.com augix.com], this website covers the following subje
 * [[wiki/Statistics|Statistics]]
 * [[wiki/Foreign Language|Foreign Languages]]
  
-= All subjects =
+= Other =
 * [[wiki/Main Page|All subjects]]
+* [http://weibo.com/augix weibo.com/augix]
 
 %% Hidden subjects
 %% [[./blog/Blog]]
