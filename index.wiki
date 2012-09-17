@@ -1,4 +1,4 @@
-%title Home
+%title Augix.com - Computational Biology
 %% they are published to internet
 
 Welcome to [http://augix.com augix.com], this website covers the following subjects, they might be useful for computational biologists:
