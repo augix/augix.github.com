@@ -44,12 +44,12 @@ root@ubuntu# find /etc -size +100k -size -150k
 /etc/bash_completion
 }}}
 
-* find files modifed in less than n*24 hours
+* find files modifed in the last n*24 hours
 {{{
        -mtime n
               File's data was last modified n*24 hours ago.  See the comments
               for -atime to understand how rounding affects the interpretation
-              of file modâ ification times.
+              of file modification times.
 }}}
 
 2. locate

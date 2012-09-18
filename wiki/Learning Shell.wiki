@@ -5,7 +5,7 @@
 * [[ls]]
 * [[Change File Name by Shell]]
 * [[Get file name in Shell|Get file's base name]]
-* [[Find|find]]
+* [[Find|find command]]
 * [[Find a file]]
 
 = File content =
