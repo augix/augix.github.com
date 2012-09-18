@@ -13,9 +13,9 @@ Welcome!
 * [[wiki/Foreign Language|Foreign Languages]]
  
 = Other =
+* [[./blog/Blog|Blog]]
 * [[wiki/Main Page|All subjects]]
 * [http://weibo.com/augix weibo.com/augix]
 
 %% Hidden subjects
-%% [[./blog/Blog]]
 %% [[./entries/]] 

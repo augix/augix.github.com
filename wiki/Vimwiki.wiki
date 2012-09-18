@@ -1,17 +1,53 @@
 %toc Table of Content 
 
 = Install =
-Download the latest source code of Vimwiki with Mercurial:
+== Method 1 ==
+# Download and unpack vimwiki_N_N_vba.zip (N_N is version number ie 0_8).
+# Open vimwiki_N_N.vba with Vim.
+# Source it with :so % command
 
+== Method 2 ==
+# Download the latest source code of Vimwiki with Mercurial:
 {{{
 hg clone https://code.google.com/p/vimwiki/
 }}}
+# This will create a folder named 'vimwiki' in the current directory, and download files into that folder.
+# Copy content of vimwiki folder into ~/.vim/.
 
-This will create a folder named 'vimwiki' in the current directory, and download files into that folder.
+= Keyboard shortcuts =
+{{{
+\ww                     open index file of main/the n-th wiki
+\ws                     list available wiki
+:VimwikiSearch          search current wiki
+                        *vimwiki_=*
++                       create link for the word under cursor
+=                       Add header level. Create if needed.
+                        There is nothing to indent with '==' command in
+                        vimwiki, so it should be ok to use '=' here.
 
-Copy content of vimwiki folder into ~/.vim/.
+                        *vimwiki_-*
+-                       Remove header level.
+ 
+<C-Up>                  Open the previous day's diary link if available.
+                        See |:VimwikiDiaryPrevDay|
 
-= Syntax =
+                        *vimwiki_<C-Down>*
+<C-Down>                Open the next day's diary link if available.
+                        See |:VimwikiDiaryNextDay|
+
+<2-LeftMouse> or <Enter>   
+                        Follow wiki link (create target wiki page if needed).
+
+<S-2-LeftMouse> or <S-Enter>        
+                        Split and follow wiki link (create target wiki page if
+                        needed).
+                        
+<C-2-LeftMouse> or <C-Enter>
+                        Vertical split and follow wiki link (create target
+                        wiki page if needed).
+}}}
+
+= wiki Syntax =
 http://code.google.com/p/vimwiki/wiki/Syntax
 
 == font ==
@@ -201,37 +237,28 @@ percentage of toggled child items(see also |g:vimwiki_listsyms|): >
 == table of content ==
 添加目录到wiki页面 %toc 
 
-= Keyboard shortcuts =
+= Diary =
+To generate diary section with all available links one can use
+|:VimwikiDiaryGenerateLinks| or <Leader>w<Leader>i .
 
-{{{
-                        *vimwiki_=*
-=                       Add header level. Create if needed.
-                        There is nothing to indent with '==' command in
-                        vimwiki, so it should be ok to use '=' here.
+Note: it works only for diary index file.
 
-                        *vimwiki_-*
--                       Remove header level.
- 
-<C-Up>                  Open the previous day's diary link if available.
-                        See |:VimwikiDiaryPrevDay|
+= Back Links =
+*:VimwikiBacklinks*
+*:VWB*
+    Search for wikilinks to the [[current wiki page]]
+    in all files of current wiki.
+    To display all matches use |:lopen| command.
 
-                        *vimwiki_<C-Down>*
-<C-Down>                Open the next day's diary link if available.
-                        See |:VimwikiDiaryNextDay|
 
-<2-LeftMouse> or <Enter>   
-                        Follow wiki link (create target wiki page if needed).
 
-<S-2-LeftMouse> or <S-Enter>        
-                        Split and follow wiki link (create target wiki page if
-                        needed).
-                        
-<C-2-LeftMouse> or <C-Enter>
-                        Vertical split and follow wiki link (create target
-                        wiki page if needed).
-}}}
 
 = Other =
+== Outline window ==
+{{{
+:Voom vimwiki
+}}}
+
 == jump ==
 {{{
 <TAB>, S-<TAB>        jump among links within a page

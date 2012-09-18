@@ -49,64 +49,117 @@
 <div class="toc">
 <ul>
 <li><a href="#toc_1">Install</a>
-<li><a href="#toc_2">Syntax</a>
 <ul>
-<li><a href="#toc_2.1">font</a>
-<li><a href="#toc_2.2">link</a>
-<ul>
-<li><a href="#toc_2.2.1">外部链接</a>
-<li><a href="#toc_2.2.2">内部链接</a>
-<li><a href="#toc_2.2.3">图片及图片链接</a>
+<li><a href="#toc_1.1">Method 1</a>
+<li><a href="#toc_1.2">Method 2</a>
 </ul>
-<li><a href="#toc_2.3">title</a>
-<li><a href="#toc_2.4">list</a>
+<li><a href="#toc_2">Keyboard shortcuts</a>
+<li><a href="#toc_3">wiki Syntax</a>
 <ul>
-<li><a href="#toc_2.4.1">无序列表</a>
-<li><a href="#toc_2.4.2">有序列表</a>
-<li><a href="#toc_2.4.3">定义列表</a>
-</ul>
-<li><a href="#toc_2.5">table</a>
-<li><a href="#toc_2.6">预定于化文本</a>
-<li><a href="#toc_2.7">code</a>
-<li><a href="#toc_2.8">Syntax Highlighting</a>
-<li><a href="#toc_2.9">quote</a>
-<li><a href="#toc_2.10">Comments</a>
-<li><a href="#toc_2.11">To do list</a>
-<li><a href="#toc_2.12">table of content</a>
-</ul>
-<li><a href="#toc_3">Keyboard shortcuts</a>
-<li><a href="#toc_4">Other</a>
+<li><a href="#toc_3.1">font</a>
+<li><a href="#toc_3.2">link</a>
 <ul>
-<li><a href="#toc_4.1">jump</a>
-<li><a href="#toc_4.2">Turn off saving message</a>
-<li><a href="#toc_4.3">Accepted HTML code</a>
+<li><a href="#toc_3.2.1">外部链接</a>
+<li><a href="#toc_3.2.2">内部链接</a>
+<li><a href="#toc_3.2.3">图片及图片链接</a>
+</ul>
+<li><a href="#toc_3.3">title</a>
+<li><a href="#toc_3.4">list</a>
+<ul>
+<li><a href="#toc_3.4.1">无序列表</a>
+<li><a href="#toc_3.4.2">有序列表</a>
+<li><a href="#toc_3.4.3">定义列表</a>
+</ul>
+<li><a href="#toc_3.5">table</a>
+<li><a href="#toc_3.6">预定于化文本</a>
+<li><a href="#toc_3.7">code</a>
+<li><a href="#toc_3.8">Syntax Highlighting</a>
+<li><a href="#toc_3.9">quote</a>
+<li><a href="#toc_3.10">Comments</a>
+<li><a href="#toc_3.11">To do list</a>
+<li><a href="#toc_3.12">table of content</a>
+</ul>
+<li><a href="#toc_4">Diary</a>
+<li><a href="#toc_5">Back Links</a>
+<li><a href="#toc_6">Other</a>
+<ul>
+<li><a href="#toc_6.1">Outline window</a>
+<li><a href="#toc_6.2">jump</a>
+<li><a href="#toc_6.3">Turn off saving message</a>
+<li><a href="#toc_6.4">Accepted HTML code</a>
 </ul>
 </ul>
 </div>
 
 <h1 id="toc_1">Install</h1>
-<p>
-Download the latest source code of Vimwiki with Mercurial:
-</p>
+<h2 id="toc_1.1">Method 1</h2>
+<ol>
+<li>
+Download and unpack vimwiki_N_N_vba.zip (N_N is version number ie 0_8).
 
+<li>
+Open vimwiki_N_N.vba with Vim.
+
+<li>
+Source it with :so % command
+
+</ol>
+
+<h2 id="toc_1.2">Method 2</h2>
+<ol>
+<li>
+Download the latest source code of Vimwiki with Mercurial:
 <pre>
 hg clone https://code.google.com/p/vimwiki/
 </pre>
 
-<p>
+<li>
 This will create a folder named 'vimwiki' in the current directory, and download files into that folder.
-</p>
 
-<p>
+<li>
 Copy content of vimwiki folder into ~/.vim/.
-</p>
 
-<h1 id="toc_2">Syntax</h1>
+</ol>
+
+<h1 id="toc_2">Keyboard shortcuts</h1>
+<pre>
+\ww                     open index file of main/the n-th wiki
+\ws                     list available wiki
+:VimwikiSearch          search current wiki
+                        *vimwiki_=*
++                       create link for the word under cursor
+=                       Add header level. Create if needed.
+                        There is nothing to indent with '==' command in
+                        vimwiki, so it should be ok to use '=' here.
+
+                        *vimwiki_-*
+-                       Remove header level.
+ 
+&lt;C-Up&gt;                  Open the previous day's diary link if available.
+                        See |:VimwikiDiaryPrevDay|
+
+                        *vimwiki_&lt;C-Down&gt;*
+&lt;C-Down&gt;                Open the next day's diary link if available.
+                        See |:VimwikiDiaryNextDay|
+
+&lt;2-LeftMouse&gt; or &lt;Enter&gt;   
+                        Follow wiki link (create target wiki page if needed).
+
+&lt;S-2-LeftMouse&gt; or &lt;S-Enter&gt;        
+                        Split and follow wiki link (create target wiki page if
+                        needed).
+                        
+&lt;C-2-LeftMouse&gt; or &lt;C-Enter&gt;
+                        Vertical split and follow wiki link (create target
+                        wiki page if needed).
+</pre>
+
+<h1 id="toc_3">wiki Syntax</h1>
 <p>
 <a href="http://code.google.com/p/vimwiki/wiki/Syntax">http://code.google.com/p/vimwiki/wiki/Syntax</a>
 </p>
 
-<h2 id="toc_2.1">font</h2>
+<h2 id="toc_3.1">font</h2>
 
 <table>
 <tr>
@@ -150,19 +203,19 @@ Copy content of vimwiki folder into ~/.vim/.
 </td>
 </tr>
 </table>
-<h2 id="toc_2.2">link</h2>
+<h2 id="toc_3.2">link</h2>
 
-<h3 id="toc_2.2.1">外部链接</h3>
+<h3 id="toc_3.2.1">外部链接</h3>
 
 <p>
 <code>[http://www.augix.com augix的主页]</code>
 </p>
 
 <p>
-<a href="http://www.augix.com">augix的主页</a>
+[<a href="http://www.augix.com">http://www.augix.com</a> augix的主页]
 </p>
 
-<h3 id="toc_2.2.2">内部链接</h3>
+<h3 id="toc_3.2.2">内部链接</h3>
 <dl>
 <dt>Write relative path </dt>
 <dd>Remember that the paths (absolute or relative) written in wiki file will be extactly the same in the resulting html file.</dd>
@@ -195,18 +248,18 @@ Copy content of vimwiki folder into ~/.vim/.
 <a href="链接源地址.html">链接描述</a>
 </p>
 
-<h3 id="toc_2.2.3">图片及图片链接</h3>
+<h3 id="toc_3.2.3">图片及图片链接</h3>
 
 <p>
 <code>[[../img/eva.jpg|A photo taken in institute]]</code>
 </p>
 
 <p>
-<a href="../img/eva.jpg">A photo taken in institute</a>
+<a href="../img/eva.jpg.html">A photo taken in institute</a>
 </p>
 
 <p>
-<a href="../img/eva.jpg">hey</a>
+<a href="../img/eva.jpg][hey][height:10px.html">../img/eva.jpg][hey][height:10px</a>
 </p>
 
 <p>
@@ -214,17 +267,17 @@ Copy content of vimwiki folder into ~/.vim/.
 </p>
 
 <p>
-<a href="../img/eva.jpg"><img src="../img/eva.jpg" /></a>
+<a href="../img/eva.jpg.html">../img/eva.jpg</a>
 </p>
 
-<h2 id="toc_2.3">title</h2>
+<h2 id="toc_3.3">title</h2>
 <p>
 <code>%title Tips on VimWiki</code>
 </p>
 
-<h2 id="toc_2.4">list</h2>
+<h2 id="toc_3.4">list</h2>
 
-<h3 id="toc_2.4.1">无序列表</h3>
+<h3 id="toc_3.4.1">无序列表</h3>
 <pre>
 * 列表项 1 
 * 列表项 2
@@ -239,7 +292,7 @@ Copy content of vimwiki folder into ~/.vim/.
 
 </ul>
 
-<h3 id="toc_2.4.2">有序列表</h3>
+<h3 id="toc_3.4.2">有序列表</h3>
 <pre>
 # 编号列表项 1
 # 编号列表项 2
@@ -255,7 +308,7 @@ Copy content of vimwiki folder into ~/.vim/.
 </ol>
 
 
-<h3 id="toc_2.4.3">定义列表</h3>
+<h3 id="toc_3.4.3">定义列表</h3>
 <pre>
 术语 1 :: 定义 1
 
@@ -275,14 +328,14 @@ Copy content of vimwiki folder into ~/.vim/.
 <dd>定义 3 </dd>
 </dl>
 
-<h2 id="toc_2.5">table</h2>
+<h2 id="toc_3.5">table</h2>
 <pre>
 | 表格 | 表格 | 表格 |
 | 表格 | 表格 | 表格 |
 | 表格 | 表格 | 表格 |
 </pre>
 
-<h2 id="toc_2.6">预定于化文本</h2>
+<h2 id="toc_3.6">预定于化文本</h2>
 
 <pre>
 {{{
@@ -294,7 +347,7 @@ Copy content of vimwiki folder into ~/.vim/.
 }}}
 </p>
 
-<h2 id="toc_2.7">code</h2>
+<h2 id="toc_3.7">code</h2>
 <p>
 referece: <a href="http://gvimmanual.blogspot.com/2010/12/vimwiki-option-nestedsyntaxes.html">http://gvimmanual.blogspot.com/2010/12/vimwiki-option-nestedsyntaxes.html</a>
 in vimrc:
@@ -320,7 +373,7 @@ for i in range(5):
     print i
 </pre>
 
-<h2 id="toc_2.8">Syntax Highlighting</h2>
+<h2 id="toc_3.8">Syntax Highlighting</h2>
 <ul>
 <li>
 Download SyntaxHighlighter <a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a>
@@ -359,7 +412,7 @@ modify template file
 </ul>
 
 
-<h2 id="toc_2.9">quote</h2>
+<h2 id="toc_3.9">quote</h2>
 <blockquote>
 四个以上空格开始的文本，就是一个应用块
 </blockquote>
@@ -367,12 +420,12 @@ modify template file
 我就是块级引用～～ 
 </blockquote>
 
-<h2 id="toc_2.10">Comments</h2>
+<h2 id="toc_3.10">Comments</h2>
 <p>
 Use %% to leave comment in the wiki files.
 </p>
 
-<h2 id="toc_2.11">To do list</h2>
+<h2 id="toc_3.11">To do list</h2>
 <p>
 Pressing &lt;C-Space&gt; on the third list item will toggle it and all of it's
 </p>
@@ -397,50 +450,49 @@ percentage of toggled child items(see also |g:vimwiki_listsyms|): &gt;
     [X] -- 100%
 </pre>
 
-<h2 id="toc_2.12">table of content</h2>
+<h2 id="toc_3.12">table of content</h2>
 <p>
 添加目录到wiki页面 %toc 
 </p>
 
-<h1 id="toc_3">Keyboard shortcuts</h1>
+<h1 id="toc_4">Diary</h1>
+<p>
+To generate diary section with all available links one can use
+|:VimwikiDiaryGenerateLinks| or &lt;Leader&gt;w&lt;Leader&gt;i .
+</p>
 
+<p>
+Note: it works only for diary index file.
+</p>
+
+<h1 id="toc_5">Back Links</h1>
+<p>
+<strong>:VimwikiBacklinks</strong>
+<strong>:VWB</strong>
+</p>
+<blockquote>
+Search for wikilinks to the <a href="current wiki page.html">current wiki page</a>
+in all files of current wiki.
+To display all matches use |:lopen| command.
+</blockquote>
+
+
+
+
+<h1 id="toc_6">Other</h1>
+<h2 id="toc_6.1">Outline window</h2>
 <pre>
-                        *vimwiki_=*
-=                       Add header level. Create if needed.
-                        There is nothing to indent with '==' command in
-                        vimwiki, so it should be ok to use '=' here.
-
-                        *vimwiki_-*
--                       Remove header level.
- 
-&lt;C-Up&gt;                  Open the previous day's diary link if available.
-                        See |:VimwikiDiaryPrevDay|
-
-                        *vimwiki_&lt;C-Down&gt;*
-&lt;C-Down&gt;                Open the next day's diary link if available.
-                        See |:VimwikiDiaryNextDay|
-
-&lt;2-LeftMouse&gt; or &lt;Enter&gt;   
-                        Follow wiki link (create target wiki page if needed).
-
-&lt;S-2-LeftMouse&gt; or &lt;S-Enter&gt;        
-                        Split and follow wiki link (create target wiki page if
-                        needed).
-                        
-&lt;C-2-LeftMouse&gt; or &lt;C-Enter&gt;
-                        Vertical split and follow wiki link (create target
-                        wiki page if needed).
+:Voom vimwiki
 </pre>
 
-<h1 id="toc_4">Other</h1>
-<h2 id="toc_4.1">jump</h2>
+<h2 id="toc_6.2">jump</h2>
 <pre>
 &lt;TAB&gt;, S-&lt;TAB&gt;        jump among links within a page
 &lt;BS&gt;                  back to previous page
 &lt;C-o&gt;, &lt;C-i&gt;          
 </pre>
 
-<h2 id="toc_4.2">Turn off saving message</h2>
+<h2 id="toc_6.3">Turn off saving message</h2>
 <p>
 comment line 195 in ~/.vim/ftplugin/vimwiki.vim
 </p>
@@ -448,14 +500,14 @@ comment line 195 in ~/.vim/ftplugin/vimwiki.vim
 "\ echo 'HTML conversion is done.'
 </pre>
 
-<h2 id="toc_4.3">Accepted HTML code</h2>
+<h2 id="toc_6.4">Accepted HTML code</h2>
 <pre class="brush: xml">
-<br>
-<hr>
-<u>underline</u>
-<sup>2</sup>
-<sub>0</sub>
-<b>bold</b> 
+&lt;br&gt;
+&lt;hr&gt;
+&lt;u&gt;underline&lt;/u&gt;
+&lt;sup&gt;2&lt;/sup&gt;
+&lt;sub&gt;0&lt;/sub&gt;
+&lt;b&gt;bold&lt;/b&gt; 
 </pre>
 
 	</div><!-- end of post -->

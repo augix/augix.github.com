@@ -1,6 +1,3 @@
-%template default
-This wiki covers the following subjects:
-
 = Subjects =
 * [[Programming]]
 * [[IT Notes]]
@@ -13,5 +10,3 @@ This wiki covers the following subjects:
 * [[Music]]
 * [[Chinese]]
 
-= Links =
-* [http://www.augix.com Augix.com]

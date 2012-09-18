@@ -1,7 +1,0 @@
-= Why we need more companies in the 1st industry but not in the finiancial industry - Insights from the gene regulatory network? =
-
-reference 1: comparing genomes to computer operating systems in terms of the topology and evolution of their regulatory control networks.
-
-reference 2: http://www.wired.com/wiredscience/2010/11/economics-of-network-collapse/
-
-Quote: "I've often wondered why, in biology, cells don't fail when a few reactions go wrong. They don't, because biology has built things in a very modular way. When failures occur, they don't neccessarilly prove catastrophic."
