@@ -1,5 +1,5 @@
 * [[Learning Python]]: Basic stuff
-* [[Python string| String]]
+* [[Python string|String]]
 * [[Regular expression in Python| Regular expression]]
 * [[Python dictionary| Dictionary]]
 * [[Python reading text files| Reading text files]]
