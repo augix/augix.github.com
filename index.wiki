@@ -3,19 +3,20 @@
 
 Welcome!
 
-= Selected subjects =
-* [[wiki/Programming|Programming]]
+= Subjects =
+* [[./blog/Blog|Blog]]
 * [[wiki/Bioinformatics|Bioinformatics]]
-* [[wiki/IT Notes|Operating Systems]]
-
 * [[wiki/Biology Notes|Biology]]
+* [[wiki/Foreign Language|Languages]]
+* [[wiki/IT Notes|IT]] (Many pages)
+* [[wiki/Life|Lifestyle]]
+* [[wiki/Programming|Programming]] (Many pages)
 * [[wiki/Statistics|Statistics]]
-* [[wiki/Foreign Language|Foreign Languages]]
  
 = Other =
-* [[./blog/Blog|Blog]]
-* [[wiki/Main Page|All subjects]]
 * [[http://weibo.com/augix|weibo.com/augix]]
 
 %% Hidden subjects
 %% [[./entries/]] 
+%% [[wiki/Chinese]]
+%% [[wiki/Projects]]

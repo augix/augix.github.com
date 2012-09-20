@@ -4,9 +4,8 @@
 * [[Biology Notes]]
 * [[Bioinformatics]]
 * [[Statistics]]
-* [[Projects]]
 * [[Foreign Language]]
 * [[Life]]
 * [[Music]]
 * [[Chinese]]
-
+* [[Projects]]
