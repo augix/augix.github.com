@@ -9,5 +9,5 @@
 
 = Cuisine =
 * [[Hotpot recipe]]
-* [[Simple chinese dishes]]
+* [[中国菜]]
 * [http://news.dahangzhou.com/193551.html 杭州传统名菜做法]
