@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Venn Diagram in R</title>
+	<title>2012-10-21</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
@@ -41,48 +41,25 @@
 <a name='top'></a>
 <div class="container">
     <div class="header">
-		<h1>Venn Diagram in R</h1> 
+		<h1>2012-10-21</h1> 
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-
-<h1 id="toc_1">package: VennDiagram</h1>
-<pre class="brush: r">
-pdf('./venn.pdf')
-grid.obj = venn.diagram(list(A=1:53, B=3:23, C=33:70), filename=NULL)
-grid.draw(grid.obj)
-dev.off()
-</pre>
-
-<h1 id="toc_2">package: limma</h1>
+<h1 id="toc_1">于自然中享有其奥妙</h1>
 <p>
-One can use functions in limma pacakge to plot a Venn diagram in R.
+今日，与同学法布瑞丘，以及哈桑，去公园学习。秋叶满地，我们席地而坐，讨论某书的一章。此书介绍随机过程。我们时而于纸上推演数学公式，时而抬头辩论树枝之生长过程。相对于课堂或书房，这样的学习方式，令人轻松愉悦，知识也变得更生动有趣。无论天文地理，自然人文，学习的目的在于探求万物，和谐生养。回归自然才是学习的诉求，何不于自然中享有自然的奥妙。
 </p>
 
-<pre class="brush: r">
-biocLite("limma")
-library(limma)
-hsb2&lt;-read.table("http://www.ats.ucla.edu/stat/R/notes/hsb2.csv", sep=',', header=T)
-attach(hsb2)
-
-hw&lt;-(write&gt;=60)
-hm&lt;-(math &gt;=60)
-hr&lt;-(read &gt;=60)
-c3&lt;-cbind(hw, hm, hr)
-# c3 is a matrix with logical values.
-a &lt;- vennCounts(c3)
-vennDiagram(a)
-</pre>
-
 <p>
-Reference:
-<a href="http://www.ats.ucla.edu/stat/r/faq/venn.htm">http://www.ats.ucla.edu/stat/r/faq/venn.htm</a>
+<img src="images/2012-10-21-a.jpg" />
+<img src="images/2012-10-21-b.jpg" />
+<img src="images/2012-10-21-c.jpg" />
 </p>
 
 	</div><!-- end of post -->
 	<div class="backhome">
 		<a href="../index.html">Homepage</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Venn Diagram in R" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: 2012-10-21" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -128,7 +105,7 @@ function showHide(shID) {
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "vimwiki: Venn Diagram in R";
+    var disqus_identifier = "vimwiki: 2012-10-21";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */

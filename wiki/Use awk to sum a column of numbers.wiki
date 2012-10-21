@@ -1,0 +1,10 @@
+{{{class="brush: bash"
+cat count.txt | awk '{ sum+=$1} END {print sum}'
+
+# or
+
+numsum count.txt
+}}}
+
+
+Reference: http://www.commandlinefu.com/commands/view/1497/using-awk-to-sumcount-a-column-of-numbers.

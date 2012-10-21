@@ -2,8 +2,10 @@
 
 = package: VennDiagram =
 {{{class="brush: r"
+pdf('./venn.pdf')
 grid.obj = venn.diagram(list(A=1:53, B=3:23, C=33:70), filename=NULL)
 grid.draw(grid.obj)
+dev.off()
 }}}
 
 = package: limma =

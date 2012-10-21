@@ -66,6 +66,7 @@
 = Math =
 * [[Math in Bash]]
 * [[Bash combinations]]
+* [[Use awk to sum a column of numbers]]
 
 = Network =
 * [[Send email attahment]]

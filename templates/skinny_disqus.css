@@ -18,7 +18,7 @@ body {
     text-align: center;
     font-size: 14px;
     line-height: 20px;
-    font-family: "Gill Sans", "Georgia", "Lucida Grande", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
+    font-family: "Gill Sans", "Lucida Grande", "Georgia", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
 }
 
 img#wpstats { width:0px; height:0px; overflow:hidden; }
@@ -76,7 +76,7 @@ font-family:"Graublau Web";src:local("Graublau Web"),local("Graublau Web Regular
 */
 
 h1, h2, h3 {
-    font-family: "Gill Sans", "Georgia", "Lucida Grande", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
+    font-family: "Gill Sans", "Lucida Grande", "Georgia", Helvetica, 'Hiragino Sans GB', "Hiragino Sans GB W6", sans-serif;
 }
 
 h1 { 
