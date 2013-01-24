@@ -1,7 +1,10 @@
 <html>
 <head>
-	<title>Install package in R</title>
+	<title>cp</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- begin: google translate -->
+    <meta name="google-translate-customization" content="a823da2043518374-127fc1ebae28644a-ge15821623259edd4-d"></meta>
+    <!-- end: google translate -->
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
 
@@ -41,78 +44,23 @@
 <a name='top'></a>
 <div class="container">
     <div class="header">
-		<h1>Install package in R</h1> 
+		<h1>cp</h1> 
 	</div><!-- end of header -->
 	<div class="post"><!-- start of post -->
 	
-<h1 id="toc_1">Regular packages</h1>
-
-<h2 id="toc_1.1">in Shell</h2>
 <ul>
 <li>
-download package (source code, eg: gem_1.0.tar.gz)
+keep folder structure
 <pre>
-wget http://pbil.univ-lyon1.fr/gem/r_package/gem_1.0-0.tar.gz
+cp --parent src/code.js img/pic.png destination/
 </pre>
 
 </ul>
-
-<ul>
-<li>
-install gem package
-<pre>
-$ R CMD INSTALL -l ~/Library/R/ seqinr_1.0-6.tar.gz
-equivalent to
-&gt; library(seqinr, lib.loc="~/Library/R/")
-</pre>
-
-</ul>
-
-<ul>
-<li>
-Don't have to specify <b>lib.loc</b> if the variable <b>$R_LIBS</b> is already set in the <b>~/.bashrc</b> like this:
-<pre>
-R_LIBS=~/Library/R/
-export R_LIBS 
-</pre>
-
-</ul>
-
-<ul>
-<li>
-for help
-<pre>
-$ R CMD INSTALL -h
-</pre>
-
-</ul>
-
-<h1 id="toc_2">in R</h1>
-<pre>
-install.packages("affy",lib="~/Library/R",dependencies=TRUE)
-</pre>
-<p>
-or
-</p>
-<pre>
-install.packages("affy",lib="~/Library/R",dependencies=TRUE,contriburl="http://bioconductor.org/packages/2.1/bioc/src/contrib/")
-install.packages('ape',repos='http://cran.us.r-project.org')
-</pre>
-
-<h1 id="toc_3">Packages from Bioconductor</h1>
-
-<p>
-in R
-</p>
-<pre class="brush: r">
-source("http://bioconductor.org/biocLite.R")
-biocLite("affy")
-</pre>
 
 	</div><!-- end of post -->
 	<div class="backhome">
 		<a href="../index.html">Homepage</a><br>
-        <a href="#disqus_thread" data-disqus_identifier="vimwiki: Install package in R" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
+        <a href="#disqus_thread" data-disqus_identifier="vimwiki: cp" id="disqus_thread-show" class="showLink" onclick="showHide('disqus_thread');return true;">Comments</a>
 	</div>
 <br>
 
@@ -158,7 +106,7 @@ function showHide(shID) {
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     // var disqus_identifier = 'unique_dynamic_id_1234';
-    var disqus_identifier = "vimwiki: Install package in R";
+    var disqus_identifier = "vimwiki: cp";
     // var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */

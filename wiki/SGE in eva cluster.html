@@ -59,7 +59,18 @@ send email when the job ends:
 -M your@email
 </pre>
 
-<h1 id="toc_3">sge script</h1>
+<h1 id="toc_3">sge template</h1>
+<pre>
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -b y
+#$ -j yes
+#$ -N sge_example
+#$ -o /tmp/
+</pre>
+
+<h1 id="toc_4">sge script</h1>
 <p>
 job.sge
 </p>
@@ -102,13 +113,13 @@ job.sge
 echo $1 | ./job.Rf
 </pre>
 
-<h1 id="toc_4">submit script</h1>
+<h1 id="toc_5">submit script</h1>
 <pre class="brush: bash">
 for i in `seq 1 100`; do qsub job.sge $i; done
 </pre>
 
-<h1 id="toc_5">Other tips</h1>
-<h2 id="toc_5.1">SGE command</h2>
+<h1 id="toc_6">Other tips</h1>
+<h2 id="toc_6.1">SGE command</h2>
 <ul>
 <li>
 submit jobs

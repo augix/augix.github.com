@@ -4,11 +4,12 @@ Use Rsge package to perfom paralle computing with SGE.
 
 {{{class="brush: r"
 library(Rsge)
-index = 1:100
-func1 <- function(x, arg) x + arg
-func <- function(x, arg) func1(x, arg)
 
-jobs = lapply(index, function(x) sge.submit(func=func, x=x, arg=arg, function.savelist=c('func1')))
+sub_func <- function(x, arg) x + arg
+main_func <- function(x, arg) sub_func(x, arg)
+
+index = 1:100
+jobs = lapply(index, function(x) sge.submit(func=main_func, x=x, arg=arg, function.savelist=c('sub_func')))
 status = lapply(jobs, sge.job.status)
 
 while(any(status==1)) {
@@ -18,5 +19,4 @@ while(any(status==1)) {
 
 results = lapply(jobs, sge.list.get.result)
 }}}
-
 

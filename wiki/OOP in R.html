@@ -46,7 +46,7 @@
 	<div class="post"><!-- start of post -->
 	
 
-<h1 id="toc_1">Commands</h1>
+<h1 id="toc_1">Summary</h1>
 <p>
 attributes, attr, class, methods, UseMethod, getAnywhere
 </p>
@@ -72,7 +72,30 @@ getAnywhere
     find a function
 </pre>
 
-<h1 id="toc_2">Golden rule</h1>
+<h1 id="toc_2">Examples</h1>
+<pre class="brush: r">
+#------------- Create a generic method
+&gt; whoami &lt;- function(x, ...) UseMethod("whoami")
+&gt; whoami.foo &lt;- function(x) print("I am a foo")
+&gt; whoami.bar &lt;- function(x) print("I am a bar")
+&gt; whoami.default &lt;- function(x) print("I don't know who I am")
+
+&gt; a = 1:10
+&gt; b = 2:20
+&gt; whoami(a)                 # No class assigned
+[1] "I don't know who I am"
+&gt; attr(a,'class') &lt;- 'foo'
+&gt; attr(b,'class') &lt;- c('baz','bam','bar')
+&gt; whoami(a)
+[1] "I am a foo"
+&gt; whoami(b)                 # Search MRO for defined method
+[1] "I am a bar"
+&gt; attr(a,'class') &lt;- 'bar'  # Change the class of 'a'
+&gt; whoami(a)
+[1] "I am a bar"
+</pre>
+
+<h1 id="toc_3">Golden rule</h1>
 <ul>
 <li>
 eveything is an object, a vector
@@ -82,7 +105,7 @@ DO NOT call methods directly, instead use a generic function, which dispatches m
 
 </ul>
 
-<h1 id="toc_3">Concepts</h1>
+<h1 id="toc_4">Concepts</h1>
 <ul>
 <li>
 Inheritance: A way to form new classes using classes that have already been defined.
@@ -92,9 +115,9 @@ class(x) = c('newClass', class(x))
 
 </ul>
 
-<h1 id="toc_4">References</h1>
+<h1 id="toc_5">References</h1>
 <p>
-<a href="http://www.ibm.com/developerworks/linux/library/l-r3/index.html#resources">http://www.ibm.com/developerworks/linux/library/l-r3/index.html#resources</a>
+<a href="http://www.ibm.com/developerworks/linux/library/l-r3/index.html#N10139">http://www.ibm.com/developerworks/linux/library/l-r3/index.html#N10139</a>
 <a href="http://brainimaging.waisman.wisc.edu/~perlman/R/A1%20Introduction%20to%20object-oriented%20programming.pdf">http://brainimaging.waisman.wisc.edu/~perlman/R/A1%20Introduction%20to%20object-oriented%20programming.pdf</a>
 </p>
 

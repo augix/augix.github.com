@@ -8,6 +8,17 @@ send email when the job ends:
 -M your@email
 }}}
 
+= sge template =
+{{{
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -b y
+#$ -j yes
+#$ -N sge_example
+#$ -o /tmp/
+}}}
+
 = sge script =
 job.sge
 {{{class="brush: bash"

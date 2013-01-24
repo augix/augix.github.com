@@ -1,6 +1,6 @@
 %title Object-oriented Programming in R
 
-= Commands =
+= Summary =
 attributes, attr, class, methods, UseMethod, getAnywhere
 
 {{{
@@ -24,6 +24,29 @@ getAnywhere
     find a function
 }}}
 
+= Examples =
+{{{class="brush: r"
+#------------- Create a generic method
+> whoami <- function(x, ...) UseMethod("whoami")
+> whoami.foo <- function(x) print("I am a foo")
+> whoami.bar <- function(x) print("I am a bar")
+> whoami.default <- function(x) print("I don't know who I am")
+
+> a = 1:10
+> b = 2:20
+> whoami(a)                 # No class assigned
+[1] "I don't know who I am"
+> attr(a,'class') <- 'foo'
+> attr(b,'class') <- c('baz','bam','bar')
+> whoami(a)
+[1] "I am a foo"
+> whoami(b)                 # Search MRO for defined method
+[1] "I am a bar"
+> attr(a,'class') <- 'bar'  # Change the class of 'a'
+> whoami(a)
+[1] "I am a bar"
+}}}
+
 = Golden rule =
 * eveything is an object, a vector
 * DO NOT call methods directly, instead use a generic function, which dispatches methods to objects according to their classes.
@@ -35,6 +58,6 @@ class(x) = c('newClass', class(x))
 }}}
 
 = References =
-http://www.ibm.com/developerworks/linux/library/l-r3/index.html#resources
+http://www.ibm.com/developerworks/linux/library/l-r3/index.html#N10139
 http://brainimaging.waisman.wisc.edu/~perlman/R/A1%20Introduction%20to%20object-oriented%20programming.pdf
 

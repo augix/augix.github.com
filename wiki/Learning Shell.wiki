@@ -29,6 +29,7 @@
 * [[ln]]
 * [[Tar, Gzip|tar, gzip]]
 * [[How to Backup with date, find, tar and gzip]]
+* [[cp]]
  
 = Directory =
 * [[Print Directory tree]]

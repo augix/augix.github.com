@@ -1,0 +1,5 @@
+* keep folder structure
+{{{
+cp --parent src/code.js img/pic.png destination/
+}}}
+

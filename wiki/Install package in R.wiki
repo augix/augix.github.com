@@ -31,6 +31,7 @@ install.packages("affy",lib="~/Library/R",dependencies=TRUE)
 or
 {{{
 install.packages("affy",lib="~/Library/R",dependencies=TRUE,contriburl="http://bioconductor.org/packages/2.1/bioc/src/contrib/")
+install.packages('ape',repos='http://cran.us.r-project.org')
 }}}
 
 = Packages from Bioconductor =
