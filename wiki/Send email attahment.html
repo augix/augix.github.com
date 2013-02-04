@@ -2,6 +2,9 @@
 <head>
 	<title>Send email attahment</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- begin: google translate -->
+    <meta name="google-translate-customization" content="a823da2043518374-127fc1ebae28644a-ge15821623259edd4-d"></meta>
+    <!-- end: google translate -->
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
 
@@ -46,7 +49,7 @@
 	<div class="post"><!-- start of post -->
 	
 <p>
-<a href="http://episteme.arstechnica.com/eve/forums/a/tpc/f/6330927813/m/312004411831">Shell Script - Sending email attachment - Topic Powered by eve community</a>
+[<a href="http://episteme.arstechnica.com/eve/forums/a/tpc/f/6330927813/m/312004411831">http://episteme.arstechnica.com/eve/forums/a/tpc/f/6330927813/m/312004411831</a> Shell Script - Sending email attachment - Topic Powered by eve community]
 </p>
 
 <p>
@@ -61,7 +64,7 @@ echo "This is a message w/ attachment" | mutt -a file.gz -s "Subject" foo@bar.co
 </pre>
 
 <p>
-<a href="http://www.experts-exchange.com/Programming/Programming_Platforms/Unix_Programming/Q_21930761.html">Unix Programming: How to Attach file to email sent from shell</a>
+[<a href="http://www.experts-exchange.com/Programming/Programming_Platforms/Unix_Programming/Q_21930761.html">http://www.experts-exchange.com/Programming/Programming_Platforms/Unix_Programming/Q_21930761.html</a> Unix Programming: How to Attach file to email sent from shell]
 </p>
 
 <p>
@@ -74,6 +77,20 @@ elm -s ok you@to.tld -A y
 echo `cat yourfile`| mutt -a y -s mutt you@to.tld
 echo "attached file: xxx.txt"|uuenview -b -a -m you@to.tld -s subjet xxx.txt
 mpack -s "file" yourfile you@to.tld
+</pre>
+
+<p>
+Another example from: <a href="http://www.simplehelp.net/2008/12/01/how-to-send-email-from-the-linux-command-line/#2gQlzZyDAtBCvzhd.99">http://www.simplehelp.net/2008/12/01/how-to-send-email-from-the-linux-command-line/#2gQlzZyDAtBCvzhd.99</a> 
+</p>
+<pre>
+And if you want mail to read the content from a file:
+# mail -s “Hello world” you@youremailid.com &lt; /home/calvin/application.log
+Some other useful options in the mail command are:
+-s subject (The subject of the mail)
+-c email-address (Mark a copy to this “email-address”, or CC)
+-b email-address (Mark a blind carbon copy to this “email-address”, or BCC)
+Here’s how you might use these options:
+# echo “Welcome to the world of Calvin n Hobbes” | mail -s “Hello world” calvin@cnh.com -c hobbes@cnh.com -b susie.derkins@cnh.com
 </pre>
 
 	</div><!-- end of post -->

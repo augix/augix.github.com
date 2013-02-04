@@ -1,3 +1,5 @@
+[[photos_to_print/| Photos to print]]
+
 [[China_US_values/| China-US value comparison]]
 
 [[./mediawiki2vimwiki/|Convert Mediawiki pages to Vimwiki]]

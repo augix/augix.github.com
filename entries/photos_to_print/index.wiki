@@ -1,0 +1,5 @@
+{{local:./1.png|1|style='width:800px'}}
+{{local:./2.jpg|2|style='width:800px'}}
+{{local:./3.jpg|3|style='width:800px'}}
+{{local:./4.jpg|4|style='width:800px'}}
+

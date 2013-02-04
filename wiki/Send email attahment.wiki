@@ -20,3 +20,15 @@ echo `cat yourfile`| mutt -a y -s mutt you@to.tld
 echo "attached file: xxx.txt"|uuenview -b -a -m you@to.tld -s subjet xxx.txt
 mpack -s "file" yourfile you@to.tld
 }}}
+
+Another example from: http://www.simplehelp.net/2008/12/01/how-to-send-email-from-the-linux-command-line/#2gQlzZyDAtBCvzhd.99 
+{{{
+And if you want mail to read the content from a file:
+# mail -s “Hello world” you@youremailid.com < /home/calvin/application.log
+Some other useful options in the mail command are:
+-s subject (The subject of the mail)
+-c email-address (Mark a copy to this “email-address”, or CC)
+-b email-address (Mark a blind carbon copy to this “email-address”, or BCC)
+Here’s how you might use these options:
+# echo “Welcome to the world of Calvin n Hobbes” | mail -s “Hello world” calvin@cnh.com -c hobbes@cnh.com -b susie.derkins@cnh.com
+}}}
