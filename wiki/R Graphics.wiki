@@ -19,6 +19,11 @@
 * [[Venn Diagram in R]]
 * [[googleVis| Google Visulisation API on R]]
 
+= Style =
+* theEconomist.theme
+http://latticeextra.r-forge.r-project.org/man/theEconomist.theme.html
+
+
 Useful links:
 * [http://addictedtor.free.fr/graphiques/ R Graph Gallery]
 
