@@ -71,5 +71,6 @@ so:
 
 0 = maps to 10 or more locations.
 
-but in reality, tophat report 1 for 3-location mapping.
+But in reality, tophat report 1 for 3-location mapping.
+
 reference: http://user.list.galaxyproject.org/about-Mapping-Quality-td4366680.html
