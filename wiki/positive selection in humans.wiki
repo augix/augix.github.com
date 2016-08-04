@@ -1,0 +1,10 @@
+= genomic categories =
+
+= gene groups =
+
+= Examples =
+
+= methods =
+* how to distinguish positive selection with relaxed selection?
+    * smaller population size may have relaxed selection, that may prepare combinations of mutations that later being advantagous. Thus slightly deleterious mutations may go together with beneficial mutations. 
+

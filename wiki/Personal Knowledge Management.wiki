@@ -1,0 +1,10 @@
+= List of softwares =
+== frequently used ==
+* Vimwiki
+* Evernote
+* Circus Notebook
+
+== not tested ==
+* Jekyll
+* Markdoc
+* leanote

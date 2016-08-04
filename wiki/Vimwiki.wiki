@@ -1,5 +1,10 @@
 %toc Table of Content 
 
+= Source =
+https://github.com/vimwiki/vimwiki
+
+https://code.google.com/p/vimwiki/
+
 = Install =
 == Method 1 ==
 # Download and unpack vimwiki_N_N_vba.zip (N_N is version number ie 0_8).
@@ -246,7 +251,7 @@ Note: it works only for diary index file.
 = Back Links =
 *:VimwikiBacklinks*
 *:VWB*
-    Search for wikilinks to the [[current wiki page]]
+    Search for wikilinks to the current wiki page
     in all files of current wiki.
     To display all matches use |:lopen| command.
 
@@ -258,6 +263,15 @@ Note: it works only for diary index file.
 {{{
 :Voom vimwiki
 }}}
+
+== folding ==
+Enable Voom folding by:
+`:Voom vimwiki`
+
+Standard vim folding commands: 
+`zm, zM, zr, zR, za`
+
+see also: section folding in [[vim]] 
 
 == jump ==
 {{{

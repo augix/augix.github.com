@@ -7,8 +7,16 @@ http://genome.ucsc.edu/
 length information of human chromosomes
 
 http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&chromInfoPage=
+ 
+* [[List of UCSC genome releases]]
+
+* [http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&chromInfoPage= Lengths of human chromosomes] 
 
 == Ensembl ==
+=== general ===
+* [[ENSEMBL ftp structure]]
+* [[ENSEMBL ftp structure v57]]
+
 === biomart ===
 Automatic fetching of gene annotation, structure, function. Comparative genomics analysis.
 
@@ -62,6 +70,7 @@ Initial results from the Consensus CDS (CCDS) project are now available through 
 == Computing ==
 * [[SGE in eva cluster]]
 * [[SGE in PICB cluster]]
+* [[parallele processing]]
 
 == Phylogenetic tree ==
 === R package: phangorn ===

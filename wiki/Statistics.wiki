@@ -6,3 +6,4 @@
 * [[Statistics course in SIBS| Statistics course in SIBS 2010]]
 * [[Benjamini and Hochberg FDR control]]
 * [http://www.r-bloggers.com/fitting-distributions-with-r/ Fitting distributions with R]
+* [[non-parametric tests]]

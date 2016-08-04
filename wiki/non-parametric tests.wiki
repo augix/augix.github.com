@@ -1,0 +1,6 @@
+* non-parametric equivalent to simple t-test
+    * Wilcoxon rank sum test
+    * is non-parametric equivalent of the independent sample t-test
+    * is equivalent to Mann-Whitney U test
+* non-parametric equivalent to paired t-test
+    * Wilcoxon signed-rank test

@@ -2,6 +2,9 @@
 <head>
 	<title>Vim</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- begin: google translate -->
+    <meta name="google-translate-customization" content="a823da2043518374-127fc1ebae28644a-ge15821623259edd4-d"></meta>
+    <!-- end: google translate -->
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
 
@@ -52,8 +55,8 @@
 <li><a href="#toc_2">Moving</a>
 <li><a href="#toc_3">Jumping</a>
 <li><a href="#toc_4">Buffers</a>
-<li><a href="#toc_5">Open file</a>
-<li><a href="#toc_6">Files and Tabs</a>
+<li><a href="#toc_5">Files</a>
+<li><a href="#toc_6">Tabs</a>
 <li><a href="#toc_7">Window</a>
 <li><a href="#toc_8">Word under cursor</a>
 <li><a href="#toc_9">Folding</a>
@@ -141,14 +144,25 @@ switch to previous buffer: <code>&lt;c-6&gt;</code>
 
 </ul>
 
-<h1 id="toc_5">Open file</h1>
+<h1 id="toc_5">Files</h1>
+<ul>
+<li>
+open
 <pre>
 gf	 open in the same window ("goto file")
 &lt;c-w&gt;f	 open in a new window (Ctrl-w f)
 &lt;c-w&gt;gf	 open in a new tab (Ctrl-w gf)
 </pre>
 
-<h1 id="toc_6">Files and Tabs</h1>
+<li>
+remove/delete current file
+<pre>
+:!rm %
+</pre>
+
+</ul>
+
+<h1 id="toc_6">Tabs</h1>
 <ul>
 <li>
 create a new tab

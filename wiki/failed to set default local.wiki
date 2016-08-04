@@ -1,0 +1,10 @@
+= Problem =
+error message from R.app on Mac OS X: Failed to set default local
+
+= Solution =
+run the following in Terminal
+
+     defaults write org.R-project.R force.LANG en_US.UTF-8
+
+= Reference =
+https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html#Internationalization-of-the-R_002eapp

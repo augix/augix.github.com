@@ -54,7 +54,13 @@ More verbose, but the effect is the same. `-r -l1' means to retrieve recursively
  wget -r -p -np -k url
 
 
-= Reference =
-[http://www.lifehacker.com/software/top/geek-to-live--mastering-wget-161202.php Mastering Wget - Lifehacker.com]
 
-[http://ftp.gnu.org/gnu/Manuals/wget-1.8.1/html_chapter/wget_7.html]
+= Avoid disruption =
+- 在~/.wgetrc中加入 continue = on
+ 
+= Reference =
+[[http://www.lifehacker.com/software/top/geek-to-live--mastering-wget-161202.php|Mastering Wget - Lifehacker.com]]
+
+http://ftp.gnu.org/gnu/Manuals/wget-1.8.1/html_chapter/wget_7.html
+
+

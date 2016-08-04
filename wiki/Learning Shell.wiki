@@ -52,7 +52,7 @@
 * [[Bash random number]]
 
 = Programming =
-* [[Bash Array, Loop and Conditionals| Loop and Conditionals]]
+* [[Bash Array, Loop and Conditionals|Loop and Conditionals]]
 * [[Bash operators|Logical operators and simple flow control]]
 * [[Bash Function]]
 * [[Bash getopts]]
@@ -72,6 +72,7 @@
 = Network =
 * [[Send email attahment]]
 * [[Password-less SSH]]
+* iftop for monitoring network traffic
 
 = Other commands =
 * [[Unix Command Summary]]

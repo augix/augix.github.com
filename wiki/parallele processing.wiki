@@ -1,0 +1,9 @@
+Parallel computing
+= ppss =
+`ppss -f command_lines -c '$ITEM'`
+see https://code.google.com/p/ppss/wiki/Manual1
+
+= ref =
+https://github.com/louwrentius/PPSS
+http://serverfault.com/questions/374131/how-to-run-multiple-shell-scripts-in-parallels
+
