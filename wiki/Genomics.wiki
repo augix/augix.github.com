@@ -1,0 +1,6 @@
+= Functional elements =
+* [[Human gene structure]]
+* [[Repeat class]]
+* [[CpG island]]
+
+

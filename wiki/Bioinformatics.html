@@ -2,6 +2,9 @@
 <head>
 	<title>Bioinformatics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- begin: google translate -->
+    <meta name="google-translate-customization" content="a823da2043518374-127fc1ebae28644a-ge15821623259edd4-d"></meta>
+    <!-- end: google translate -->
 
 	<link rel="Stylesheet" type="text/css" href="../templates/skinny_disqus.css" />
 
@@ -53,12 +56,13 @@
 <li><a href="#toc_1.1">Genome Browser</a>
 <li><a href="#toc_1.2">Ensembl</a>
 <ul>
-<li><a href="#toc_1.2.1">biomart</a>
+<li><a href="#toc_1.2.1">general</a>
+<li><a href="#toc_1.2.2">biomart</a>
 <ul>
-<li><a href="#toc_1.2.1.1">R package</a>
+<li><a href="#toc_1.2.2.1">R package</a>
 </ul>
-<li><a href="#toc_1.2.2">genebuild</a>
-<li><a href="#toc_1.2.3">Regulatory Build</a>
+<li><a href="#toc_1.2.3">genebuild</a>
+<li><a href="#toc_1.2.4">Regulatory Build</a>
 </ul>
 <li><a href="#toc_1.3">VEGA database</a>
 <li><a href="#toc_1.4">Consensus CDS (CCDS) project</a>
@@ -91,23 +95,45 @@ length information of human chromosomes
 <p>
 <a href="http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&amp;chromInfoPage=">http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&amp;chromInfoPage=</a>
 </p>
+ 
+<ul>
+<li>
+<a href="List of UCSC genome releases.html">List of UCSC genome releases</a>
+
+</ul>
+
+<ul>
+<li>
+[<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&amp;chromInfoPage=">http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&amp;chromInfoPage=</a> Lengths of human chromosomes] 
+
+</ul>
 
 <h2 id="toc_1.2">Ensembl</h2>
-<h3 id="toc_1.2.1">biomart</h3>
+<h3 id="toc_1.2.1">general</h3>
+<ul>
+<li>
+<a href="ENSEMBL ftp structure.html">ENSEMBL ftp structure</a>
+
+<li>
+<a href="ENSEMBL ftp structure v57.html">ENSEMBL ftp structure v57</a>
+
+</ul>
+
+<h3 id="toc_1.2.2">biomart</h3>
 <p>
 Automatic fetching of gene annotation, structure, function. Comparative genomics analysis.
 </p>
 
-<h4 id="toc_1.2.1.1">R package</h4>
+<h4 id="toc_1.2.2.1">R package</h4>
 <pre>
 mart = useMart("ensembl", dataset="hsapiens_gene_ensembl")
 getGene(id = 'CD44', type = "hgnc_symbol", mart = mart)
 </pre>
 
-<h3 id="toc_1.2.2">genebuild</h3>
+<h3 id="toc_1.2.3">genebuild</h3>
 
 <p>
-<a href="http://www.ensembl.org/info/docs/genebuild/genome_annotation.html">reference</a>
+[<a href="http://www.ensembl.org/info/docs/genebuild/genome_annotation.html">http://www.ensembl.org/info/docs/genebuild/genome_annotation.html</a> reference]
 </p>
 
 <p>
@@ -122,7 +148,7 @@ All Ensembl transcripts are based on experimental evidence and thus the automate
 Exonerate is a tool for pairwise sequence comparison, used in the Ensembl genebuild to align mRNA to the assembly.
 </p>
 
-<h3 id="toc_1.2.3">Regulatory Build</h3>
+<h3 id="toc_1.2.4">Regulatory Build</h3>
 
 <p>
 Promoters are not available for most genes in Ensembl.
@@ -191,41 +217,44 @@ Initial results from the Consensus CDS (CCDS) project are now available through 
 <li>
 <a href="SGE in PICB cluster.html">SGE in PICB cluster</a>
 
+<li>
+<a href="parallele processing.html">parallele processing</a>
+
 </ul>
 
 <h2 id="toc_2.4">Phylogenetic tree</h2>
 <h3 id="toc_2.4.1">R package: phangorn</h3>
 <ul>
 <li>
-<a href="http://cran.r-project.org/web/packages/phangorn/index.html">Souce code</a>
+[<a href="http://cran.r-project.org/web/packages/phangorn/index.html">http://cran.r-project.org/web/packages/phangorn/index.html</a> Souce code]
 
 <li>
-Estimating phylogenetic trees with phangorn <a href="http://cran.univ-lyon1.fr/web/packages/phangorn/vignettes/Trees.pdf">PDF</a>
+Estimating phylogenetic trees with phangorn [<a href="http://cran.univ-lyon1.fr/web/packages/phangorn/vignettes/Trees.pdf">http://cran.univ-lyon1.fr/web/packages/phangorn/vignettes/Trees.pdf</a> PDF]
 
 <li>
-Special features of phangorn <a href="http://cran.r-project.org/web/packages/phangorn/vignettes/phangorn-specials.pdf">PDF</a>
+Special features of phangorn [<a href="http://cran.r-project.org/web/packages/phangorn/vignettes/phangorn-specials.pdf">http://cran.r-project.org/web/packages/phangorn/vignettes/phangorn-specials.pdf</a> PDF]
 
 <li>
-Paper: <a href="http://bioinformatics.oxfordjournals.org/content/27/4/592">phangorn: phylogenetic analysis in R</a>
+Paper: [<a href="http://bioinformatics.oxfordjournals.org/content/27/4/592">http://bioinformatics.oxfordjournals.org/content/27/4/592</a> phangorn: phylogenetic analysis in R]
 
 <li>
-Presentation <a href="http://rug.mnhn.fr/semin-r/PDF/semin-R_phylogenetics_KSchliep_180310.pdf">PDF</a>
+Presentation [<a href="http://rug.mnhn.fr/semin-r/PDF/semin-R_phylogenetics_KSchliep_180310.pdf">http://rug.mnhn.fr/semin-r/PDF/semin-R_phylogenetics_KSchliep_180310.pdf</a> PDF]
 
 </ul>
 
 <h2 id="toc_2.5">Other</h2>
 <ul>
 <li>
-<a href="http://evolution.genetics.washington.edu/phylip.html">PHYLIP</a>
+[<a href="http://evolution.genetics.washington.edu/phylip.html">http://evolution.genetics.washington.edu/phylip.html</a> PHYLIP]
 
 <li>
-<a href="http://discover.nci.nih.gov/matchminer/index.jsp">MatchMiner</a> is a set of tools that enables the user to translate between disparate ids for the same gene.
+[<a href="http://discover.nci.nih.gov/matchminer/index.jsp">http://discover.nci.nih.gov/matchminer/index.jsp</a> MatchMiner] is a set of tools that enables the user to translate between disparate ids for the same gene.
 
 <li>
-<a href="http://main.g2.bx.psu.edu/">Galaxy</a>
+[<a href="http://main.g2.bx.psu.edu/">http://main.g2.bx.psu.edu/</a> Galaxy]
 
 <li>
-<a href="http://genometools.org/index.html">GenomeTools: versatile open source genome analysis software</a>
+[<a href="http://genometools.org/index.html">http://genometools.org/index.html</a> GenomeTools: versatile open source genome analysis software]
 
 </ul>
 

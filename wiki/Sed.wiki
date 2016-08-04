@@ -61,6 +61,11 @@ $ sed -n '/line3/p' test
 $ sed -n '1,2d' test
 }}}
 
+= edit specific line =
+{{{
+sed '32s/old/new/' < oldfile > newfile
+}}}
+
 = 其他 =
 {{{
 sed编辑命令 

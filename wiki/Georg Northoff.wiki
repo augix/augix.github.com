@@ -1,0 +1,61 @@
+= Meeting 2016-04-06 =
+* 'mental fountain' project
+    * his model 
+        * depression, optimal, schizophrinia distributed on inverted *U shape* curve
+        * *spatial-temporal structures* (process structures) underlying brain states (and brain phenotypes)
+        * *excitation-inhibition balance* underlying spatial-temporal dynamics of brain
+    * my 'DNA model'
+        * excitation and inhibition inbalance are like the changes of translation rates of transcription factors
+    * evolutionary explanation
+    * facts
+        * power-law exponents of distribution of neurons with different firing rates differ between normal and schizophrinia
+            * schizophrinia has fewer slow-firing neurons in prefrontal cortex  
+                * these neurons are important for what? 
+            * data obtained from fMRI: the dynamic pattern of voxels 
+    * questions and projects
+        * behavior level
+            * length of binding window as trait  
+                * schizophrinia has long binding window 
+        * 3 levels:
+            * gene level, cellular level, and brain region level
+            * how to integrate knownledge from 3 levels 
+        * cell level
+            * what can we learn from intermediate level (cellular level)?
+            * idea: study neuron populations with electrophysiology, check the distribution of firing patterns in normal monkey at resting states
+            * temporal patterns of cells
+                * idea: single cell gene expression analysis, check the distribution of gene expression patterns in cell populations
+        * gene level
+            * how to identify genes associated with excitation-inhibition balance and neurodiveristy (brain phenotypes)
+            * how to construct excitation-inhibition ratio based on sets of genes involved in excitation and inhibition
+                * litterature-search required
+        * does it happen that an excitatory neuron become an inhibitory neuron? 
+    
+
+= Meeting 2016-04-12 =
+* his model
+    * balance is essential.
+    * molecular level balance, regional balance, etc.
+    * U shape is the result of excitation-inhibition competition
+        * if forces are inbalanced, the system goes to extremes.
+        * one can make U shape based on genes too.
+* my idea
+    * his theory is similar to imprinted brain theory
+    * every system is a control system, a regulatory system. Every systems have competing components/forces, to make the system at the optimal point. For a (political) system to reach an optimal decision, we need forces in competition.
+* imprinted brain theory
+    * what if the mother gives less care to any of her kids? how do the kids adapt to that, they become more independent, less demanding, less coorperative, they work alone, that's autism.  
+
+= His schedule =
+* Come back to Hangzhou in June
+
+
+= To do =
+* check the price for gene expression analysis
+* check gene locus with relaxed negative selection
+    * ratioinal
+        * negative selection leads to stabilizing selection in which extreme trait values are removed and the mean value of population is stabilized around optimal.
+        * genotypes that underlie mental abnormality might be under relaxed negative selection
+        * review on relaxed selection in humans {Varki:2008kt}
+
+= Other =
+* Working through skype
+* has post-docs in Canada and other places

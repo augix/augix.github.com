@@ -1,0 +1,132 @@
+= Purpose =
+* create new note titled as the selected text
+* add forward and backward links
+
+= Set up =
+* create a service called 'wikify' with applescript
+* Applescript
+{{{
+on run {input, parameters}
+	
+	set note2 to {}
+	set link2 to missing value
+	
+	tell application "Evernote"
+		set note1 to (item 1 of selection)		
+		set title1 to (title of note1)
+		set link1 to (note link of note1)
+		
+		--TEST TO SEE IF EVERNOTE IS CURRENTLY SYNCHRONIZING...
+		repeat until isSynchronizing is false
+			--THIS EMPTY LOOP WILL PAUSE SCRIPT UNTIL PREVIOUS SYNC IS FINISHED
+		end repeat
+		
+		--CREATE THE NOTE
+		set note2 to create note title input with html "Back to <a href=\"" & link1 & "\">" & title1 & "</a>"
+		
+		--SYNCHRONIZE WITH EVERNOTE'S SERVERS
+		synchronize
+		
+		--PAUSE UNTIL THERE IS A VALUE FOR NOTE LINK
+		repeat while link2 is missing value
+			--GET THE NOTE LINK FOR THE CURRENT NOTE
+			set link2 to (note link of note2)
+			-- set the clipboard to link2
+		end repeat
+		tell note1 to append html "<a href=\"" & link2 & "\">" & input & "</strong>"
+		
+	end tell
+	
+end run
+
+}}}
+
+a better script found online: https://gist.github.com/smargh/7668654
+{{{
+on run {input, parameters}
+	
+	tell application id "com.evernote.Evernote"
+		set Evernote_Selection to selection
+		if Evernote_Selection is {} then display dialog "Please select a note."
+		repeat with i from 1 to the count of Evernote_Selection
+			--get appropriate note data from current note
+			set noteURL to note link of item i of Evernote_Selection
+			set noteName to title of item i of Evernote_Selection
+			set noteNB to name of notebook of item i of Evernote_Selection
+			set noteHTML to HTML content of item i of Evernote_Selection
+			--generate the hyperlink
+			set html_ref to "<a href=\"" & noteURL & "\">" & noteName & "</a>"
+			
+			--get the selected text from the clipboard
+			set newTitle to input
+			--create the new note, with the hyperlink back
+			set newNote to create note title newTitle with html html_ref notebook noteNB
+			
+			--synchronize to assign server data to new note
+			repeat until isSynchronizing is false
+			end repeat
+			synchronize
+			repeat until isSynchronizing is false
+			end repeat
+			
+			--get appropriate data of the new note
+			set newURL to note link of newNote
+			set newName to title of newNote
+			set newhtml_ref to "<a href=\"" & newURL & "\">" & newName & "</a>"
+			
+			--replace the selected text with a hyperlink
+			set newHTML to my replaceString(noteHTML, newTitle, newhtml_ref)
+			set HTML content of item i of Evernote_Selection to newHTML
+			
+			--synchronize again to finalize everything
+			repeat until isSynchronizing is false
+			end repeat
+			synchronize
+			repeat until isSynchronizing is false
+			end repeat
+			
+		end repeat
+	end tell
+	
+end run
+
+(* HANDLERS *)
+
+on replaceString(theText, oldString, newString)
+	-- ljr (http://applescript.bratis-lover.net/library/string/)
+	local ASTID, theText, oldString, newString, lst
+	set ASTID to AppleScript's text item delimiters
+	try
+		considering case
+			set AppleScript's text item delimiters to oldString
+			set lst to every text item of theText
+			set AppleScript's text item delimiters to newString
+			set theText to lst as string
+		end considering
+		set AppleScript's text item delimiters to ASTID
+		return theText
+	on error eMsg number eNum
+		set AppleScript's text item delimiters to ASTID
+		error "Can't replaceString: " & eMsg number eNum
+	end try
+end replaceString
+}}}
+
+* create keyboard shorcut 'apple+control+i' to service 'wikify'
+
+= Operation =
+* select text in note1
+* type 'apple+control+i' to create note2 in the background
+* type 'apple+k' to add link to selected text
+* wait till synchnization finished
+* type 'apple+v' to add link of note2
+
+= References =
+- Tools: code for evernote: create evernote note title to selected text https://discussion.evernote.com/topic/55564-set-note-title-to-selected-text/
+- https://gist.github.com/smargh/7668654
+- http://veritrope.com/code/get-note-links-in-evernote-for-newly-created-notes/
+- http://veritrope.com/code/mediawiki-evernote-links/
+- https://discussion.evernote.com/topic/38682-wikify-evernote-via-applescript/
+- http://www.tuicool.com/articles/YBRjAff
+- https://dev.evernote.com/doc/articles/applescript.php
+- http://www.alfredforum.com/topic/4146-wikify-evernote-wiki-helper/

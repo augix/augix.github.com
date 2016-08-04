@@ -1,0 +1,20 @@
+* Read xlsx file
+{{{class='brush: R'
+library(gdata)
+dat = read.xls('test.xlsx')
+}}}
+
+* Convert date
+{{{class='brush: R'
+## So for recent dates from Windows Excel
+as.Date(35981, origin="1899-12-30") # 1998-07-05
+## and Mac Excel
+as.Date(34519, origin="1904-01-01") # 1998-07-05
+
+# this works for me between Mac Excel and R
+weekdays(as.Date(41820, origin="1899-12-30"))
+}}}
+
+The above works for gdata 2.13.3, but not higher versions. For better solutions, read the following page about 'unambiguous date format:
+
+http://stackoverflow.com/questions/14755425/what-are-the-standard-unambiguous-date-formats

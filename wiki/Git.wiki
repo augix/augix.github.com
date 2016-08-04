@@ -207,6 +207,19 @@ http://pages.github.com/
 
 https://github.com/blog/272-github-pages
 
+= git over ssh =
+The following 2 methods are the same.
+Method 1
+{{{
+git push ssh://user@server:file.git master
+}}}
+
+Method 2
+{{{
+git remote add origin ssh://user@server:file.git
+git push origin master
+}}}
+
 = References =
 
 * [http://progit.org/book/zh/ Pro Git 中文]

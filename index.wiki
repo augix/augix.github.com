@@ -3,15 +3,20 @@
 
 Welcome!
 
-= Subjects =
-* [[./blog/Blog|Blog]]
+= Work =
 * [[wiki/Bioinformatics|Bioinformatics]]
 * [[wiki/Biology Notes|Biology]]
-* [[wiki/Foreign Language|Languages]]
-* [[wiki/IT Notes|IT]] (Many pages)
-* [[wiki/Life|Lifestyle]]
+* [[wiki/Neuroscience|Neuroscience]]
 * [[wiki/Programming|Programming]] (Many pages)
+
+= Growth =
+* [[wiki/IT Notes|IT]] (Many pages)
 * [[wiki/Statistics|Statistics]]
+
+= Relation =
+* [[./blog/Blog|Blog]]
+* [[wiki/Foreign Language|Languages]]
+* [[wiki/Life|Lifestyle]]
  
 = Other =
 * [[http://weibo.com/augix|weibo.com/augix]]
@@ -20,3 +25,6 @@ Welcome!
 %% [[./entries/]] 
 %% [[wiki/Chinese]]
 %% [[wiki/Projects]]
+
+%% help 
+%% [[wiki/Vimwiki]]

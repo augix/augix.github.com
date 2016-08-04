@@ -1,23 +1,11 @@
-* [[Systems Biology]]
-* [[Molecular and Cellular Biology]]
+= Important topics =
 * [[Human Evolution]]
+* [[Genomics]]
+* [[Systems Biology]]
 * [[Population Genetics]]
+* [[Molecular and Cellular Biology]]
+* [[Biochemistry]]
 * [[Biotechnology]]
 
-<hr>
-
-* [[ENSEMBL ftp structure]]
-* [[ENSEMBL ftp structure v57]]
-* [[Biochemistry]]
-* [[CpG island]]
+= Others =
 * [http://ocw.mit.edu/OcwWeb/Biology/index.htm MIT Open Course: Biology]
-
-* [[Neutral Evolution]]
-
-* [[Human gene structure]]
-* [[Repeat class]]
-
-* [[List of UCSC genome releases]]
-
-* [http://genome.ucsc.edu/cgi-bin/hgTracks?hgsid=1230&chromInfoPage= Lengths of human chromosomes] 
-

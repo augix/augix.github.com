@@ -1,0 +1,3 @@
+In Mac OS X, one can manuually add an individual file or folder to the search index.
+
+mdimport /path/to/file_or_folder

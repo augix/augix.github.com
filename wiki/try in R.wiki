@@ -1,0 +1,9 @@
+{{{
+    repeat {
+        Sys.sleep(0.34)
+        a = sample(list(1,'ok'),1)[[1]]
+        s=try(log(a),T)
+        if (! 'try-error' %in% class(s)) break
+        print(s)
+    }
+}}}

@@ -1,6 +1,8 @@
 %template disqus
 = Cross-platform =
 * [[Vimwiki]]: a personal wiki on VIM
+* [[Markdown]]
+* [[Personal Knowledge Management]]
 * [[Share mouse and keyboard]]
 * [[Beautiful fonts]]
 * [[Remote control]]
@@ -16,16 +18,22 @@
 * [[Watch TV on Mac]]
 * [[Change the font setting of xterm]]
 * [[X11 on Mac]]
+* [[Spotlight]]
+* [[Wikify Evernote]]
+* [[Apple Darwin]]
+
 == Tex ==
 * [[TeX on Mac OS X]]
 * [[TeX templates]]
 * [[Draw Mathematical Formula]]
+
 == Useful Applications ==
 * [[VoodooPad]]
 
 = Unix =
 == Network ==
 * [[Setting up HTTP proxy]]
+* [[wget]]
 
 == SSH ==
 * [[Password-less SSH]]

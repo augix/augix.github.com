@@ -1,4 +1,4 @@
-%title R
+%Bioconductor 3.2title R
 = Data structure =
 * [[String in R]]
 * [[Matrix]]
@@ -35,6 +35,14 @@
 = Packages =
 * [[Install package in R]]
 * [[Write a R package]]
+
+= with other software =
+* [[R and Excel]]
+*
+
+= Troubleshooting =
+* [[failed to set default local]]
+* [[try in R]]
 
 = Other =
 * [[Notes on Michael's R course]]
