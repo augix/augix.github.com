@@ -5,6 +5,7 @@
 * [[R tips|R]]
 * [[AppleScript]]
 * [[SQL]]
+* [[Matlab]]
 
 = Editor =
 * [[Vim]]

@@ -1,5 +1,7 @@
 %title Git
 
+This page is comprehensive. It may has everything I need to know about Git.
+
 = Basic topics =
 {{{class="brush: text"
 # Initiate a repository.

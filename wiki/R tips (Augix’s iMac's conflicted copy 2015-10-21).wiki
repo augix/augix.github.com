@@ -1,0 +1,44 @@
+%title R
+= Data structure =
+* [[String in R]]
+* [[Matrix]]
+* [[R list]]
+* [[Data Manipulation in R]]
+
+= Files and folders =
+* [[File Manipulation in R|File Manipulation]]
+* [[file and folders in R]]
+
+= Programming =
+* [[R programming]]
+* [[R debugging]]
+* [[OOP in R]]
+* [[R with Sun Grid Engine]]
+* [[How to pass arguments to R scripts]] 
+* [[Rdbi - database access for R]]
+* [[R cheat sheet]]
+* [[Export screen in R]]
+* [[RData and Rhistory]]
+* [[How to use RSPerl]]
+
+= Graphics =
+* [[R Graphics]]
+* [[Density plot with shadow colored]]
+* [[Error Bar & Confidence Interval]]
+* [[Curve fitting in R]]
+
+= Math and Statistics =
+* [[Math in R]]
+* [[Statistical Tests]]
+* [[PCA in R]]
+ 
+= Packages =
+* [[Install package in R]]
+* [[Write a R package]]
+
+= with other software =
+* [[R and Excel]]
+*
+
+= Other =
+* [[Notes on Michael's R course]]

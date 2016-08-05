@@ -1,0 +1,6 @@
+= function =
+* v=V(:) # from matrix to vector
+* numel   # total number of elements in a matrix
+* meshgrid
+* ndgrid  # prepare a mesh of x y z coordiante values
+
