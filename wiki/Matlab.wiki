@@ -37,3 +37,7 @@
 = paralle computing =
 * Run matlab on SGE
     * http://wangyufeng222.blog.163.com/blog/static/128222070201352892134516/
+* 
+= issues =
+* slow startup
+    * answer: https://cn.mathworks.com/matlabcentral/answers/98599-why-will-matlab-not-start-up-properly-on-my-linux-or-unix-based-system

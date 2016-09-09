@@ -60,6 +60,9 @@ git ls
 find . -name "*.wiki" -print0 | xargs -0 git add --all
 find . -name "*.wiki" -print0 | xargs -0 git add -u
 
+* Remove files from git index but keep them in the file system
+git rm --cached filename
+
 * Remove files from index but keep them in working tree.
 find . -name "*.html" -print0 | xargs -0 git rm --cached
 
@@ -192,6 +195,11 @@ $ git config format.pretty oneline
   # Show files ignored by git:
   ign = ls-files -o -i --exclude-standard
 }}}
+
+.gitignore
+    indicating which files should be ignored by git indexing.
+    .git/info/exclude has the save function as the .gitignore
+
 
 = Branch specific configuration =
 [http://stackoverflow.com/questions/1836742/using-git-how-do-i-ignore-a-file-in-one-branch-but-have-it-committed-in-another how do I ignore a file in one branch but have it committed in another branch?]
