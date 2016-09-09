@@ -1,6 +1,39 @@
-= function =
+= matrix =
 * v=V(:) # from matrix to vector
 * numel   # total number of elements in a matrix
+    * use numel instead of length
 * meshgrid
 * ndgrid  # prepare a mesh of x y z coordiante values
+* sparse    # full to sparse matrix
+* full  # sparse to full matrix
+* reshape
+    * use [] to represent the total number of elements
+* repmat: replicat and tile an array
 
+= string =
+* strrep # replace string
+* int2str
+
+= digital signal processing =
+* filter
+* conv, conv2
+
+= statistical estimation =
+* polyfit & polyval
+* autocorr
+
+= Graphics = 
+* get: get properties of a variable
+* set: set properties of a variable
+* imshow, imshowpair
+* ksdensity: for R-style density plot
+* medfilt1
+* medfilt2
+* figure properties
+    * http://cn.mathworks.com/help/matlab/ref/figure-properties.html
+    * Position — Location and size of figure's drawable area
+    * [left bottom width height]
+
+= paralle computing =
+* Run matlab on SGE
+    * http://wangyufeng222.blog.163.com/blog/static/128222070201352892134516/

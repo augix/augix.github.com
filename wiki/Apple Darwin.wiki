@@ -1,2 +1,5 @@
 = Network =
 * nettop for monitoring network traffic 
+
+= Text =
+* command 'say' for text-to-speech

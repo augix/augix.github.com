@@ -10,7 +10,7 @@ Welcome!
 * [[wiki/Programming|Programming]] (Many pages)
 
 = Growth =
-* [[wiki/IT Notes|IT]] (Many pages)
+* [[wiki/IT Notes|IT, Computer]] (Many pages)
 * [[wiki/Statistics|Statistics]]
 
 = Relation =

@@ -1,2 +1,6 @@
-= Meeting =
+= fMRI =
+== SPM ==
+* [[spm]]
+
+= Post-doc projects =
 * [[Georg Northoff]]

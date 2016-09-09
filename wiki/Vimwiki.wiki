@@ -256,7 +256,10 @@ Note: it works only for diary index file.
     To display all matches use |:lopen| command.
 
 
-
+= Markdown =
+* http://blog.csdn.net/mikewootc/article/details/9001880
+* syntax: vimwiki and markdown http://mikewootc.com/wiki/tool/sitebuild/markdown_syntax.html
+* 
 
 = Other =
 == Outline window ==
