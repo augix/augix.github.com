@@ -3,4 +3,7 @@
 * numel   # total number of elements in a matrix
 * meshgrid
 * ndgrid  # prepare a mesh of x y z coordiante values
-
+* 
+= issues =
+* slow startup
+    * answer: https://cn.mathworks.com/matlabcentral/answers/98599-why-will-matlab-not-start-up-properly-on-my-linux-or-unix-based-system
