@@ -1,1 +1,0 @@
-spm_select doesn't like '~' as the home directory.

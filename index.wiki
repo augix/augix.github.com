@@ -6,7 +6,6 @@ Welcome!
 = Work =
 * [[wiki/Bioinformatics|Bioinformatics]]
 * [[wiki/Biology Notes|Biology]]
-* [[wiki/Neuroscience|Neuroscience]]
 * [[wiki/Programming|Programming]] (Many pages)
 
 = Growth =
