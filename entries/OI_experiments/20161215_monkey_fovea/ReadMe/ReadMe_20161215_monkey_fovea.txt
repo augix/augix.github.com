@@ -275,5 +275,6 @@
          1 2 3
          4 5 6
          7 8 9
+    * actually only 8 dots were shown, maybe I didn't put stim id 9 in VDAQ
     * program: nine_dots(fovea_x=1,fovea_y=-11.05, step=2)
     * 2 trials, no signal.
