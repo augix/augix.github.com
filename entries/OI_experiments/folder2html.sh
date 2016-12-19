@@ -1,7 +1,7 @@
 #!/bin/bash
-ROOT='./20161215_monkey_fovea/'
+ROOT='./ana.oi12_20161209_cat_laser_success/'
 HTTP_ROOT='.'
-OUTPUT="./20161215_monkey_fovea/index.html" 
+OUTPUT="$ROOT/index.html" 
 
 i=0
 echo "<UL>" > $OUTPUT

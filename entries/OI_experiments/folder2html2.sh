@@ -5,7 +5,7 @@ ROOT="./"
 LABEL="foldername.txt"
 MAXDEPTH=5
 DEPTH=0
-HTTP="http://www.somewhere.com"
+HTTP=""
 exec > "$ROOT/Menu-test.html"
 
 #functions for indentation, definition and printing tags
@@ -24,7 +24,6 @@ DEPchk() { [ "$DEPTH" -gt "0" ] && ${1} ;}
 Dive()
 {
     local DPATH="$1"
-
 
     if [ "$( echo */$LABEL )" = "*/$LABEL" ] || [ $DEPTH -gt $MAXDEPTH ]
     then
@@ -46,3 +45,4 @@ Dive()
 cd $ROOT
 Dive "$ROOT"
 echo "</UL>"
+
