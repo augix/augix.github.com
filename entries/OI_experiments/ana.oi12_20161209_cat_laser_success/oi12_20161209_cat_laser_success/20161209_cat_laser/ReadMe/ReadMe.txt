@@ -2,6 +2,8 @@
 	* my stim
 	* grating for area 17 (g17): SF=1; TF=3;
 	* grating for area 18 (g18): SF=0.2; TF=6;
+
+
 	* stim id	condition
 		0	blank
 		1	g17; 0 degree;

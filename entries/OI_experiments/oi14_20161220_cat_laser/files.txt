@@ -1,0 +1,161 @@
+.//decide on laser tip/border.bmp
+.//decide on laser tip/border2.bmp
+.//decide on laser tip/border3.bmp
+.//decide on laser tip/border_run01.bmp
+.//decide on laser tip/border_run02.bmp
+.//decide on laser tip/laser_tip_a17_s1.bmp
+.//decide on laser tip/laser_tip_run10.bmp
+.//decide on laser tip/run09_found_a21_spot.bmp
+.//decide on tracer/chosen_laser_spot_1.bmp
+.//decide on tracer/chosen_laser_spot_2.bmp
+.//decide on tracer/run05.bmp
+.//decide on tracer/run06.bmp
+.//decide on tracer/run07.bmp
+.//decide on tracer/run08.bmp
+.//decide on tracer/run09.bmp
+.//decide on tracer/run10.bmp
+.//decide on tracer/run11.bmp
+.//decide on tracer/run12.bmp
+.//decide on tracer/vessel_for_laser_spot_1.bmp
+.//decide on tracer/vessel_for_laser_spot_2.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_2.bmp
+.//run00_identify_border/g0.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_0.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_1.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_10.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_3.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_4.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_5.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_6.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_7.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_8.bmp
+.//run00_identify_border/border_cat17_18_E0_map0_9.bmp
+.//run00_identify_border/g0_roi1x1.bmp
+.//run00_identify_border/r0.bmp
+.//run00_identify_border/r0_roi1x1.bmp
+.//run01_border/border_cat17_18_E0_map0_9.bmp
+.//run01_border/border_cat17_18_E0_map0_0.bmp
+.//run01_border/border_cat17_18_E0_map0_1.bmp
+.//run01_border/border_cat17_18_E0_map0_10.bmp
+.//run01_border/border_cat17_18_E0_map0_2.bmp
+.//run01_border/border_cat17_18_E0_map0_3.bmp
+.//run01_border/border_cat17_18_E0_map0_4.bmp
+.//run01_border/border_cat17_18_E0_map0_5.bmp
+.//run01_border/border_cat17_18_E0_map0_6.bmp
+.//run01_border/border_cat17_18_E0_map0_7.bmp
+.//run01_border/border_cat17_18_E0_map0_8.bmp
+.//run01_border/g0.bmp
+.//run01_border/g0_roi1x1.bmp
+.//run01_border/r0.bmp
+.//run01_border/r0_roi1x1.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_6.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_0.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_1.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_10.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_2.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_3.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_4.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_5.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_7.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_8.bmp
+.//run02_border_song_stim2/border_cat17_18_E0_map0_9.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_3.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_0.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_1.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_10.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_2.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_4.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_5.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_6.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_7.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_8.bmp
+.//run03_border_song_stim1/border_cat17_18_E0_map0_9.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_10.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_0.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_1.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_2.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_3.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_4.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_5.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_6.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_7.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_8.bmp
+.//run04_test_2TFs/border_cat17_18_E0_map0_9.bmp
+.//run05_laser_a17_s1/g0.bmp
+.//run05_laser_a17_s1/g0_roi1x1.bmp
+.//run05_laser_a17_s1/laser_E1_map1_0.bmp
+.//run05_laser_a17_s1/laser_E1_map1_1.bmp
+.//run05_laser_a17_s1/laser_E1_map1_2.bmp
+.//run05_laser_a17_s1/r0.bmp
+.//run05_laser_a17_s1/r0_roi1x1.bmp
+.//run06_0.3J/laser_E1_map1_0.bmp
+.//run06_0.3J/laser_E1_map1_1.bmp
+.//run06_0.3J/laser_E1_map1_2.bmp
+.//run07_0.7J/laser_E1_map1_0.bmp
+.//run07_0.7J/laser_E1_map1_1.bmp
+.//run07_0.7J/laser_E1_map1_2.bmp
+.//run08_a17_s2_0.3J/g0.bmp
+.//run08_a17_s2_0.3J/g0_roi1x1.bmp
+.//run08_a17_s2_0.3J/laser_E1_map1_0.bmp
+.//run08_a17_s2_0.3J/laser_E1_map1_1.bmp
+.//run08_a17_s2_0.3J/laser_E1_map1_2.bmp
+.//run08_a17_s2_0.3J/r0.bmp
+.//run08_a17_s2_0.3J/run08_0_roi1x1.bmp
+.//run09_0.5J/laser_E1_map1_0.bmp
+.//run09_0.5J/laser_E1_map1_1.bmp
+.//run09_0.5J/laser_E1_map1_2.bmp
+.//run10_spot3_0.3J/g0.bmp
+.//run10_spot3_0.3J/g0_roi1x1.bmp
+.//run10_spot3_0.3J/laser_E1_map1_0.bmp
+.//run10_spot3_0.3J/laser_E1_map1_1.bmp
+.//run10_spot3_0.3J/laser_E1_map1_2.bmp
+.//run10_spot3_0.3J/r0.bmp
+.//run10_spot3_0.3J/r0_roi1x1.bmp
+.//run11/g0.bmp
+.//run11/g0_roi1x1.bmp
+.//run11/laser_E1_map1_0.bmp
+.//run11/laser_E1_map1_1.bmp
+.//run11/laser_E1_map1_2.bmp
+.//run11/r0.bmp
+.//run11/r0_roi1x1.bmp
+.//run12/laser_E1_map1_0.bmp
+.//run12/laser_E1_map1_1.bmp
+.//run12/laser_E1_map1_2.bmp
+.//run13/g0.bmp
+.//run13/g0_roi1x1.bmp
+.//run13/laser_E1_map1_0.bmp
+.//run13/laser_E1_map1_1.bmp
+.//run13/laser_E1_map1_2.bmp
+.//run13/r0.bmp
+.//run13/r0_roi1x1.bmp
+.//run14/laser_E1_map1_0.bmp
+.//run14/laser_E1_map1_1.bmp
+.//run14/laser_E1_map1_2.bmp
+.//run15/g0.bmp
+.//run15/g0_roi1x1.bmp
+.//run15/laser_E1_map1_0.bmp
+.//run15/laser_E1_map1_1.bmp
+.//run15/laser_E1_map1_2.bmp
+.//run15/r0.bmp
+.//run15/r0_roi1x1.bmp
+.//run16/g0.bmp
+.//run16/g0_roi1x1.bmp
+.//run16/laser_E1_map1_0.bmp
+.//run16/laser_E1_map1_1.bmp
+.//run16/laser_E1_map1_2.bmp
+.//run16/r0.bmp
+.//run16/r0_roi1x1.bmp
+.//run17/laser_E1_map1_0.bmp
+.//run17/laser_E1_map1_1.bmp
+.//run17/laser_E1_map1_2.bmp
+.//run18_laser_n_eletrod/laser_E1_map1_0.bmp
+.//run18_laser_n_eletrod/laser_E1_map1_1.bmp
+.//run18_laser_n_eletrod/laser_E1_map1_2.bmp
+.//run18_laser_n_eletrod/laser_E2_map2_0.bmp
+.//run18_laser_n_eletrod/laser_E2_map2_1.bmp
+.//run18_laser_n_eletrod/laser_E2_map2_2.bmp
+.//run18_laser_n_eletrod/laser_E3_map3_0.bmp
+.//run18_laser_n_eletrod/laser_E3_map3_1.bmp
+.//run18_laser_n_eletrod/laser_E3_map3_2.bmp
+.//speculation/connections_goes_from_a17_and_18_to_a21_never_betwee_17and18.bmp
+.//ReadMe.txt.txt
